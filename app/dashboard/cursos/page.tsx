@@ -4,14 +4,15 @@ import { useState, useEffect } from 'react';
 import { BookOpen, CheckCircle2, PlayCircle, Sparkles, FileText, Tag, ShoppingBag, ChevronDown, ChevronUp, Search, RotateCcw, BarChart2, Sun, Moon } from 'lucide-react';
 import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
+import { useTheme } from '@/context/theme-context';
 
 export default function CursosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
   const [nombres, setNombres] = useState<string>('Estudiante');
   const [loading, setLoading] = useState(true);
 
-  // Estado para el Modo Oscuro / Claro
-  const [esOscuro, setEsOscuro] = useState(true);
+  // Estado para el Modo Oscuro / Claro desde el ThemeContext global
+  const { esOscuro } = useTheme();
 
   // Control del despliegue del catálogo
   const [mostrarCatalogoAdicional, setMostrarCatalogoAdicional] = useState(false);
@@ -236,18 +237,6 @@ export default function CursosPage() {
               Bienvenido, {nombres}. Accede a tus cursos matriculados con seguimiento de avance o adquiere nuevas especializaciones.
             </p>
           </div>
-
-          <button
-            onClick={() => setEsOscuro(!esOscuro)}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs font-bold transition-all shadow-sm border ${
-              esOscuro 
-                ? 'bg-slate-900 text-amber-400 border-slate-800 hover:bg-slate-800' 
-                : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-100'
-            }`}
-          >
-            {esOscuro ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4 text-indigo-600" />}
-            <span>{esOscuro ? 'Modo Claro' : 'Modo Oscuro'}</span>
-          </button>
         </header>
 
         {/* SECCIÓN 1: TUS CURSOS HABILITADOS */}
