@@ -1,12 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { 
   PlayCircle, 
   CheckCircle2, 
   FileText, 
   ChevronDown, 
   ChevronUp, 
+  ChevronLeft,
+  ChevronRight,
   ArrowLeft, 
   Download,
   Send,
@@ -16,56 +18,36 @@ import {
   Eye,
   Award
 } from 'lucide-react';
-import Link from 'next/link';
 import { useParams, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
+import { getDiplomadoBySlug } from '@/lib/data/diplomadosData';
 
-// DATA DINÁMICA FUERA DEL COMPONENTE
-const diplomadosData: Record<string, any> = {
-  'derecho-minero': {
-    titulo: "Diplomado de Alta Especialización en Derecho Minero",
-    avance: "45%",
-    modulos: [
-      {
-        id: 'modulo-1',
-        titulo: "MÓDULO I: LEGISLACIÓN MINERA Y MARCO LEGAL",
-        lecciones: [
-          { id: 'l1', titulo: '1.1 Evolución del marco legal minero peruano', duracion: '45 min', completada: true, videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-          { id: 'l2', titulo: '1.2 Sistemas de concesiones y propiedad', duracion: '55 min', completada: true, videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-        ]
-      },
-      {
-        id: 'modulo-2',
-        titulo: "MÓDULO II: JURISDICCIÓN, REGULACIÓN LABORAL Y SSOMA",
-        lecciones: [
-          { id: 'l3', titulo: '2.1 Normativa laboral en regímenes atípicos', duracion: '50 min', completada: false, videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-          { id: 'l4', titulo: '2.2 Fiscalización, SUNAFIL y OSINERGMIN', duracion: '60 min', completada: false, videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-        ]
-      },
-      {
-        id: 'modulo-3',
-        titulo: "MÓDULO III: GESTIÓN CONTRACTUAL Y RESPONSABILIDADES",
-        lecciones: [
-          { id: 'l5', titulo: '3.1 Tipos de contratos en la industria minera', duracion: '48 min', completada: false, videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-          { id: 'l6', titulo: '3.2 Responsabilidad civil y penal de titulares', duracion: '52 min', completada: false, videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-        ]
-      }
-    ]
-  },
-  'default': {
+function obtenerDatosDiplomado(id: string) {
+  const dip = getDiplomadoBySlug(id) || getDiplomadoBySlug('derecho-minero');
+  if (dip) {
+    return {
+      titulo: dip.titulo,
+      avance: "45%",
+      modulos: dip.modulos.map((mod, modIdx) => ({
+        id: mod.codigo,
+        titulo: `${mod.codigo}: ${mod.nombre}`,
+        docente: mod.docente,
+        lecciones: (mod.clases && mod.clases.length > 0 ? mod.clases : ['Sesión Magistral de Introducción', 'Casuística Aplicada']).map((claseTitle, claseIdx) => ({
+          id: `${mod.codigo}-l${claseIdx + 1}`,
+          titulo: `${claseIdx + 1}. ${claseTitle}`,
+          duracion: '45 min',
+          completada: modIdx === 0 && claseIdx === 0,
+          videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        }))
+      }))
+    };
+  }
+  return {
     titulo: "Diplomado de Alta Especialización Edumin",
     avance: "0%",
-    modulos: [
-      {
-        id: 'modulo-1',
-        titulo: "MÓDULO I: FUNDAMENTOS Y CONCEPTOS CLAVE",
-        lecciones: [
-          { id: 'd1', titulo: '1.1 Sesión Magistral de Introducción', duracion: '45 min', completada: false, videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-          { id: 'd2', titulo: '1.2 Casuística Aplicada', duracion: '50 min', completada: false, videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ' },
-        ]
-      }
-    ]
-  }
-};
+    modulos: []
+  };
+}
 
 export default function ReproductorClasesPage() {
   const params = useParams();
@@ -73,7 +55,8 @@ export default function ReproductorClasesPage() {
   const diplomadoId = params.id as string;
   const moduloQuery = searchParams.get('modulo');
 
-  const diplomadoActual = diplomadosData[diplomadoId] || diplomadosData['derecho-minero'] || diplomadosData['default'];
+  // Memorizar la data del diplomado para evitar la recreación de objetos en cada renderizado
+  const diplomadoActual = useMemo(() => obtenerDatosDiplomado(diplomadoId), [diplomadoId]);
 
   // Estados de navegación
   const [moduloActivo, setModuloActivo] = useState<string>('');
@@ -90,15 +73,30 @@ export default function ReproductorClasesPage() {
     { autor: 'Carlos Mendoza', texto: 'Excelente explicación sobre los plazos y marcos normativos.', fecha: 'Hace 2 horas' }
   ]);
 
-  // Inicialización (Lee la URL para abrir el módulo correcto)
+  // Lista plana de todas las lecciones para navegación Secuencial (Anterior / Siguiente)
+  const todasLasLecciones = useMemo(() => {
+    if (!diplomadoActual || !diplomadoActual.modulos) return [];
+    return diplomadoActual.modulos.flatMap((m: any) => 
+      m.lecciones.map((l: any) => ({ ...l, moduloId: m.id, moduloTitulo: m.titulo }))
+    );
+  }, [diplomadoActual]);
+
+  const indiceActual = todasLasLecciones.findIndex((l: any) => l.id === leccionActual?.id);
+  const leccionAnterior = indiceActual > 0 ? todasLasLecciones[indiceActual - 1] : null;
+  const leccionSiguiente = indiceActual >= 0 && indiceActual < todasLasLecciones.length - 1 ? todasLasLecciones[indiceActual + 1] : null;
+
+  // Inicialización (Lee la URL para abrir el módulo y la clase correcta)
   useEffect(() => {
+    if (!diplomadoActual || !diplomadoActual.modulos || diplomadoActual.modulos.length === 0) return;
+
     let modInicial = diplomadoActual.modulos.find((m: any) => m.id === moduloQuery);
     if (!modInicial) modInicial = diplomadoActual.modulos[0];
 
     setModuloActivo(modInicial.id);
-    setLeccionActual(modInicial.lecciones[0]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [moduloQuery, diplomadoActual]);
+    if (!leccionActual && modInicial.lecciones && modInicial.lecciones.length > 0) {
+      setLeccionActual(modInicial.lecciones[0]);
+    }
+  }, [diplomadoId, moduloQuery, diplomadoActual]);
 
   const publicarComentario = (e: React.FormEvent) => {
     e.preventDefault();
@@ -107,13 +105,32 @@ export default function ReproductorClasesPage() {
     setComentario('');
   };
 
-  const seleccionarLeccion = (leccion: any) => {
+  const seleccionarLeccion = (moduloId: string, leccion: any) => {
+    setModuloActivo(moduloId);
     setLeccionActual(leccion);
     setContenidoPrincipal('video_clase');
     setRecursoActivoInfo('Clase principal en video');
   };
 
-  if (!leccionActual) return null; // Evitar renderizado prematuro
+  const irALeccionAnterior = () => {
+    if (leccionAnterior) {
+      setModuloActivo(leccionAnterior.moduloId);
+      setLeccionActual(leccionAnterior);
+      setContenidoPrincipal('video_clase');
+      setRecursoActivoInfo('Clase principal en video');
+    }
+  };
+
+  const irALeccionSiguiente = () => {
+    if (leccionSiguiente) {
+      setModuloActivo(leccionSiguiente.moduloId);
+      setLeccionActual(leccionSiguiente);
+      setContenidoPrincipal('video_clase');
+      setRecursoActivoInfo('Clase principal en video');
+    }
+  };
+
+  if (!leccionActual) return null;
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col">
@@ -238,7 +255,7 @@ export default function ReproductorClasesPage() {
 
           </div>
 
-          {/* Info y Paginación */}
+          {/* Info y Controles de Navegación de Clases */}
           <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
             <div>
               <span className="text-xs font-bold text-indigo-400 uppercase tracking-widest">Visualizando: {recursoActivoInfo}</span>
@@ -442,7 +459,7 @@ export default function ReproductorClasesPage() {
                     {mod.lecciones.map((lec: any) => (
                       <div 
                         key={lec.id}
-                        onClick={() => seleccionarLeccion(lec)}
+                        onClick={() => seleccionarLeccion(mod.id, lec)}
                         className={`p-3.5 flex items-center justify-between cursor-pointer transition-colors ${
                           leccionActual?.id === lec.id ? 'bg-indigo-600/10 border-l-4 border-indigo-500' : 'hover:bg-slate-800/30 border-l-4 border-transparent'
                         }`}

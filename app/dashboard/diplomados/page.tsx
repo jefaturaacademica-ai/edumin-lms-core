@@ -5,30 +5,28 @@ import {
   BookOpen, 
   Award, 
   CheckCircle2, 
-  PlayCircle, 
   Sparkles, 
   ShieldCheck, 
   Tag, 
   ArrowUpRight, 
-  Sun, 
-  Moon, 
   ShoppingBag, 
   ChevronUp, 
   ChevronDown, 
   Search, 
   RotateCcw, 
   BarChart2, 
-  Layers, 
   Clock, 
   ArrowRight,
   X,
   FileText,
   Wrench,
-  GraduationCap
+  GraduationCap,
+  UserCheck
 } from 'lucide-react';
 import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
+import { ALL_DIPLOMADOS, getDiplomadoBySlug, DiplomadoCompleto } from '@/lib/data/diplomadosData';
 
 export default function DiplomadosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
@@ -40,40 +38,44 @@ export default function DiplomadosPage() {
   const [mostrarCatalogoAdicional, setMostrarCatalogoAdicional] = useState(false);
 
   // Modal para ver detalles y temario de un diplomado
-  const [modalDiplomado, setModalDiplomado] = useState<any | null>(null);
+  const [modalDiplomado, setModalDiplomado] = useState<DiplomadoCompleto | null>(null);
 
   // ESTADO DE SIMULACIÓN DEV (SOLO DESARROLLO INTERNO)
   const [estadoSimuladoDev, setEstadoSimuladoDev] = useState<'sin_diplomado' | 'curso' | 'completado' | 'dos_diplomados'>('curso');
   const [mostrarPanelDev, setMostrarPanelDev] = useState(true);
 
-  // Filtros interactivos y buscador superior
+  // Filtros interactivos y buscador superior del catálogo
   const [busqueda, setBusqueda] = useState<string>('');
   const [categoriaFiltro, setCategoriaFiltro] = useState<string>('Todas');
   const [nivelFiltro, setNivelFiltro] = useState<string>('Todos');
 
-  // Construcción dinámica de diplomados activos según el Simulador Dev
+  // Datos completos de los diplomados habilitados activados desde los JSONs
+  const derechoMineroData = getDiplomadoBySlug('derecho-minero');
+  const bigDataData = getDiplomadoBySlug('gestion-estrategica-para-empresas-utilizando-big-data-y-analisis-predictivo');
+
+  // Construcción dinámica de diplomados activos según el Simulador Dev usando los JSONs
   const diplomadosActivosSimulados = [
     {
       id: 'derecho-minero',
-      titulo: '1. DERECHO MINERO & NORMATIVA',
+      titulo: derechoMineroData?.titulo || 'DERECHO MINERO',
       avance: estadoSimuladoDev === 'completado' ? 100 : 45,
-      imagen: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
-      modulos: [
-        { id: 'modulo-1', titulo: 'MÓDULO I: LEGISLACIÓN MINERA Y MARCO LEGAL' },
-        { id: 'modulo-2', titulo: 'MÓDULO II: JURISDICCIÓN MINERA Y REGULACIÓN LABORAL' },
-        { id: 'modulo-3', titulo: 'MÓDULO III: GESTIÓN CONTRACTUAL Y CONCESIONES' }
-      ]
+      imagen: derechoMineroData?.imagen || "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
+      modulos: (derechoMineroData?.modulos || []).map((m) => ({
+        id: m.codigo,
+        titulo: `${m.codigo}: ${m.nombre}`,
+        docente: m.docente
+      }))
     },
-    ...(estadoSimuladoDev === 'dos_diplomados' ? [{
-      id: 'big-data-gestion',
-      titulo: '12. GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO',
+    ...(estadoSimuladoDev === 'dos_diplomados' && bigDataData ? [{
+      id: bigDataData.slug,
+      titulo: bigDataData.titulo,
       avance: 20,
-      imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
-      modulos: [
-        { id: 'modulo-1', titulo: 'MÓDULO I: FUNDAMENTOS DE BIG DATA Y ANÁLISIS DE DATOS MASIVOS' },
-        { id: 'modulo-2', titulo: 'MÓDULO II: MODELOS PREDICTIVOS Y MACHINE LEARNING APLICADO' },
-        { id: 'modulo-3', titulo: 'MÓDULO III: TOMA DE DECISIONES ESTRATÉGICAS Y BUSINESS INTELLIGENCE' }
-      ]
+      imagen: bigDataData.imagen,
+      modulos: bigDataData.modulos.map((m) => ({
+        id: m.codigo,
+        titulo: `${m.codigo}: ${m.nombre}`,
+        docente: m.docente
+      }))
     }] : [])
   ];
 
@@ -87,22 +89,6 @@ export default function DiplomadosPage() {
   ];
 
   const listaNiveles = ['Todos', 'Especialización', 'Avanzado', 'Gerencial'];
-
-  // Lista oficial de los diplomados adicionales
-  const listaDiplomadosAdicionales = [
-    { id: 2, idRuta: 'comercio-internacional', titulo: "ESPECIALISTA EN COMERCIO INTERNACIONAL: GESTIÓN ADUANERA Y LOGÍSTICA", modulos: "03 Módulos", categoria: "Logística & Cadena de Suministro", nivel: "Especialización", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" },
-    { id: 3, idRuta: 'geologia-minera', titulo: "GEOLOGÍA MINERA", modulos: "03 Módulos", categoria: "Minería & Geología", nivel: "Especialización", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" },
-    { id: 4, idRuta: 'geometalurgia', titulo: "GEOMETALURGIA", modulos: "03 Módulos", categoria: "Minería & Geología", nivel: "Avanzado", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" },
-    { id: 5, idRuta: 'geomecanica', titulo: "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL", modulos: "03 Módulos", categoria: "Minería & Geología", nivel: "Avanzado", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" },
-    { id: 6, idRuta: 'geotecnia-minera', titulo: "GEOTECNIA MINERA", modulos: "03 Módulos", categoria: "Minería & Geología", nivel: "Avanzado", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" },
-    { id: 7, idRuta: 'gerencia-hseq', titulo: "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ", modulos: "03 Módulos", categoria: "Seguridad & SSOMA", nivel: "Gerencial", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" },
-    { id: 8, idRuta: 'liderazgo-mineria', titulo: "GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA", modulos: "05 Módulos", categoria: "Gestión & Operaciones", nivel: "Gerencial", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80" },
-    { id: 9, idRuta: 'gestion-ambiental', titulo: "GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL", modulos: "03 Módulos", categoria: "Seguridad & SSOMA", nivel: "Especialización", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600&q=80" },
-    { id: 10, idRuta: 'control-operativo', titulo: "GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS", modulos: "03 Módulos", categoria: "Gestión & Operaciones", nivel: "Avanzado", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" },
-    { id: 11, idRuta: 'operaciones-industriales', titulo: "GESTIÓN DE OPERACIONES INDUSTRIALES", modulos: "03 Módulos", categoria: "Gestión & Operaciones", nivel: "Avanzado", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=600&q=80" },
-    { id: 12, idRuta: 'big-data-gestion', titulo: "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO", modulos: "03 Módulos", categoria: "Gestión & Operaciones", nivel: "Avanzado", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" },
-    { id: 13, idRuta: 'logistica-compras', titulo: "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES", modulos: "05 Módulos", categoria: "Logística & Cadena de Suministro", nivel: "Gerencial", precioRegular: 1200, precioOferta: 400, imagen: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" },
-  ];
 
   useEffect(() => {
     async function cargarPerfil() {
@@ -137,7 +123,7 @@ export default function DiplomadosPage() {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   };
 
-  let diplomadosFiltrados = listaDiplomadosAdicionales.filter(dip => {
+  const diplomadosFiltrados = ALL_DIPLOMADOS.filter(dip => {
     const tituloNormalizado = normalizarTexto(dip.titulo);
     const busquedaNormalizada = normalizarTexto(busqueda);
     
@@ -162,7 +148,7 @@ export default function DiplomadosPage() {
     <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-300 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
       <div className="max-w-6xl mx-auto space-y-12">
         
-        {/* Encabezado Limpio (Estilo Certificados / Pagos) */}
+        {/* Encabezado Limpio */}
         <header className="mb-10">
           <h1 className={`text-3xl font-bold tracking-tight flex items-center gap-3 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
             <GraduationCap className={`w-8 h-8 ${esIlimitado ? 'text-amber-500' : 'text-indigo-600'}`} />
@@ -277,30 +263,37 @@ export default function DiplomadosPage() {
                         </div>
                       </div>
 
-                    <div className="space-y-3 mt-6">
-                      {diplomado.modulos.map((modulo) => (
-                        <div key={modulo.id} className={`flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-2xl border transition-all gap-3 ${esOscuro ? 'bg-slate-950/60 border-slate-800 hover:bg-slate-800/60' : 'bg-slate-50 border-slate-200 hover:bg-slate-100'}`}>
-                          <div className="flex items-center gap-3">
-                            <BookOpen className={`w-5 h-5 shrink-0 ${esIlimitado ? 'text-amber-500' : 'text-indigo-500'}`} />
-                            <span className={`font-semibold text-xs sm:text-sm ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>
-                              {modulo.titulo}
-                            </span>
+                      <div className="space-y-3 mt-6">
+                        {diplomado.modulos.map((modulo) => (
+                          <div key={modulo.id} className={`flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-2xl border transition-all gap-3 ${esOscuro ? 'bg-slate-950/60 border-slate-800 hover:bg-slate-800/60' : 'bg-slate-50 border-slate-200 hover:bg-slate-100'}`}>
+                            <div className="flex items-center gap-3">
+                              <BookOpen className={`w-5 h-5 shrink-0 ${esIlimitado ? 'text-amber-500' : 'text-indigo-500'}`} />
+                              <div>
+                                <span className={`font-semibold text-xs sm:text-sm block ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>
+                                  {modulo.titulo}
+                                </span>
+                                {modulo.docente && (
+                                  <span className={`text-[10px] font-medium block mt-0.5 ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
+                                    👨‍🏫 Docente: {modulo.docente}
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                            <Link 
+                              href={`/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}`} 
+                              className={`text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all inline-flex items-center gap-1.5 shadow-sm shrink-0 justify-center ${esIlimitado ? 'bg-amber-600 hover:bg-amber-500' : 'bg-indigo-600 hover:bg-indigo-500'}`}
+                            >
+                              <span>Ver clases</span>
+                              <ArrowRight className="w-4 h-4" />
+                            </Link>
                           </div>
-                          <Link 
-                            href={`/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}`} 
-                            className={`text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all inline-flex items-center gap-1.5 shadow-sm shrink-0 justify-center ${esIlimitado ? 'bg-amber-600 hover:bg-amber-500' : 'bg-indigo-600 hover:bg-indigo-500'}`}
-                          >
-                            <span>Ver clases</span>
-                            <ArrowRight className="w-4 h-4" />
-                          </Link>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
           </div>
         )}
 
@@ -310,7 +303,7 @@ export default function DiplomadosPage() {
             <div>
               <span className={`text-xs font-bold uppercase tracking-widest block mb-1 ${esIlimitado ? 'text-amber-400' : 'text-indigo-400'}`}>Catálogo Ampliado EDUMIN</span>
               <h3 className="text-xl font-bold">{esIlimitado ? 'Aprovecha tus beneficios ilimitados' : '¿Deseas adquirir más Diplomados especializados?'}</h3>
-              <p className="text-xs text-slate-300 mt-1">Explora nuestra oferta completa con los 21 programas oficiales de alta especialización.</p>
+              <p className="text-xs text-slate-300 mt-1">Explora nuestra oferta completa con los 22 programas oficiales de alta especialización.</p>
             </div>
             
             <button
@@ -430,12 +423,12 @@ export default function DiplomadosPage() {
                             {dip.nivel}
                           </span>
                           <span className={`text-xs font-bold ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                            {dip.modulos}
+                            {String(dip.modulosCount).padStart(2, '0')} Módulos
                           </span>
                         </div>
 
                         <h3 className={`text-sm font-bold leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                          {dip.id}. {dip.titulo}
+                          {dip.titulo}
                         </h3>
 
                         <div className="mt-4 flex items-baseline gap-2">
@@ -519,7 +512,7 @@ export default function DiplomadosPage() {
                     {modalDiplomado.nivel}
                   </span>
                   <span className="text-[10px] font-bold text-amber-300 bg-amber-500/20 border border-amber-500/30 backdrop-blur-md px-3 py-1 rounded-full">
-                    {modalDiplomado.modulos}
+                    {String(modalDiplomado.modulosCount).padStart(2, '0')} Módulos
                   </span>
                 </div>
                 <h2 className="text-xl sm:text-2xl font-black text-white uppercase leading-tight">
@@ -533,18 +526,18 @@ export default function DiplomadosPage() {
               
               {/* Bloque de Inversión y Acción */}
               <div className={`p-4 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4 ${
-                esOscuro ? 'bg-slate-950/60 border-slate-800' : 'bg-slate-50 border-slate-200'
+                esOscuro ? 'bg-slate-950/60 border-slate-800' : 'bg-slate-100/80 border-slate-200'
               }`}>
                 <div>
                   <span className={`text-[10px] font-bold uppercase tracking-widest block ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>Inversión / Programa</span>
                   {esIlimitado ? (
-                    <span className="text-base font-black text-amber-400 flex items-center gap-1.5 mt-0.5">
+                    <span className="text-base font-black text-amber-500 flex items-center gap-1.5 mt-0.5">
                       <Sparkles className="size-4" /> Incluido en tu Plan Ilimitado
                     </span>
                   ) : (
                     <div className="flex items-baseline gap-2 mt-0.5">
                       <span className="text-xs text-slate-400 line-through">S/ {modalDiplomado.precioRegular}</span>
-                      <span className="text-2xl font-black text-emerald-400">S/ {modalDiplomado.precioOferta}</span>
+                      <span className="text-2xl font-black text-emerald-600 dark:text-emerald-400">S/ {modalDiplomado.precioOferta}</span>
                     </div>
                   )}
                 </div>
@@ -568,62 +561,51 @@ export default function DiplomadosPage() {
                 )}
               </div>
 
-              {/* Sección de Temario Oficial */}
+              {/* Sección de Temario Oficial extraído dinámicamente del JSON */}
               <div>
                 <h3 className={`text-base font-bold flex items-center gap-2 mb-4 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  <FileText className="size-5 text-indigo-500" /> Temario Oficial y Estructura por Módulos
+                  <FileText className="size-5 text-indigo-600 dark:text-indigo-400" /> Temario Oficial y Estructura por Módulos
                 </h3>
 
                 <div className="space-y-4">
-                  
-                  {/* Módulo I */}
-                  <div className={`p-4 rounded-2xl border space-y-2 ${esOscuro ? 'bg-slate-950/40 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
-                    <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-black text-indigo-500 uppercase tracking-widest bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20">
-                        MÓDULO I
-                      </span>
-                      <span className={`text-[11px] font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>20 Horas Lectivas</span>
-                    </div>
-                    <h4 className={`text-sm font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                      Marco Normativo, Legislación Aplicada y Fundamentos
-                    </h4>
-                    <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}>
-                      Análisis detallado del marco regulatorio del sector, estándares de cumplimiento obligatorio, código de ética institucional y normativas nacionales vigentes.
-                    </p>
-                  </div>
-
-                  {/* Módulo II */}
-                  <div className={`p-4 rounded-2xl border space-y-2 ${esOscuro ? 'bg-slate-950/40 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
-                    <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-black text-indigo-500 uppercase tracking-widest bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20">
-                        MÓDULO II
-                      </span>
-                      <span className={`text-[11px] font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>25 Horas Lectivas</span>
-                    </div>
-                    <h4 className={`text-sm font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                      Gestión Operativa, Instrumental y Casos Prácticos
-                    </h4>
-                    <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}>
-                      Desarrollo de metodologías aplicadas, instrumental técnico para el control de procesos, gestión de riesgos operativos y resolución de proyectos reales.
-                    </p>
-                  </div>
-
-                  {/* Módulo III */}
-                  <div className={`p-4 rounded-2xl border space-y-2 ${esOscuro ? 'bg-slate-950/40 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
-                    <div className="flex items-center justify-between">
-                      <span className="text-[10px] font-black text-indigo-500 uppercase tracking-widest bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20">
-                        MÓDULO III
-                      </span>
-                      <span className={`text-[11px] font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>25 Horas Lectivas</span>
-                    </div>
-                    <h4 className={`text-sm font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                      Estrategia Ejecutiva, Proyecto Integrador y Certificación
-                    </h4>
-                    <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}>
-                      Elaboración del trabajo práctico integrador, auditoría de resultados, preparación para evaluación ejecutiva y sustentación final del diplomado.
-                    </p>
-                  </div>
-
+                  {modalDiplomado.modulos && modalDiplomado.modulos.length > 0 ? (
+                    modalDiplomado.modulos.map((mod, idx) => (
+                      <div key={idx} className={`p-4 rounded-2xl border space-y-2.5 ${esOscuro ? 'bg-slate-950/40 border-slate-800' : 'bg-slate-50 border-slate-200 shadow-sm'}`}>
+                        <div className="flex flex-wrap items-center justify-between gap-2">
+                          <span className="text-[10px] font-black text-indigo-600 dark:text-indigo-400 uppercase tracking-widest bg-indigo-500/10 px-2.5 py-1 rounded-md border border-indigo-500/20">
+                            {mod.codigo || `MÓDULO ${idx + 1}`}
+                          </span>
+                          {mod.docente && (
+                            <span className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1 ${
+                              esOscuro 
+                                ? 'bg-slate-800 text-indigo-300 border border-slate-700' 
+                                : 'bg-indigo-50 text-indigo-700 border border-indigo-200'
+                            }`}>
+                              <UserCheck className="size-3 text-indigo-600 dark:text-indigo-400" /> Docente: {mod.docente}
+                            </span>
+                          )}
+                        </div>
+                        <h4 className={`text-sm font-bold leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                          {mod.nombre}
+                        </h4>
+                        {mod.clases && mod.clases.length > 0 && (
+                          <div className={`mt-3 pt-2.5 border-t space-y-1.5 ${esOscuro ? 'border-slate-800/60' : 'border-slate-200'}`}>
+                            <span className={`text-[10px] font-bold uppercase tracking-wider block mb-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                              Sesiones y Clases Incluidas:
+                            </span>
+                            {mod.clases.map((clase, cIdx) => (
+                              <div key={cIdx} className={`text-xs flex items-start gap-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>
+                                <span className="size-1.5 rounded-full bg-indigo-600 dark:bg-indigo-400 mt-1.5 shrink-0" />
+                                <span className="leading-snug">{clase}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))
+                  ) : (
+                    <p className={`text-xs italic ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>No hay información de módulos registrada para este diplomado.</p>
+                  )}
                 </div>
               </div>
 
@@ -688,7 +670,7 @@ export default function DiplomadosPage() {
                 estadoSimuladoDev === 'curso' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
               }`}
             >
-              <span>1 Diplomado en Progreso (45%)</span>
+              <span>1 Diplomado en Progreso (Derecho Minero 45%)</span>
               {estadoSimuladoDev === 'curso' && <CheckCircle2 className="size-3.5 text-white" />}
             </button>
 
@@ -708,7 +690,7 @@ export default function DiplomadosPage() {
                 estadoSimuladoDev === 'dos_diplomados' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
               }`}
             >
-              <span>2 Diplomados Habilitados (Big Data)</span>
+              <span>2 Diplomados (Derecho Minero + Big Data)</span>
               {estadoSimuladoDev === 'dos_diplomados' && <CheckCircle2 className="size-3.5 text-white" />}
             </button>
           </div>
