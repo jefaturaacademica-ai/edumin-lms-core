@@ -1,0 +1,35 @@
+{
+  "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
+  "modulos": [
+    {
+      "codigo": "M01",
+      "nombre": "TRANSFORMACIÓN DIGITAL EN LA MINERÍA: TECNOLOGÍAS EMERGENTES, TENDENCIAS Y NUEVAS OPORTUNIDADES",
+      "docente": "José Chávez",
+      "clases": [
+        "INTRODUCCIÓN A LA TRANSFORMACIÓN DIGITAL EN LA MINERÍA",
+        "TECNOLOGÍAS EMERGENTES QUE REVOLUCIONAN LA MINERÍA",
+        "AUTOMATIZACIÓN EN LA MINERÍA: OPORTUNIDADES Y DESAFÍOS"
+      ]
+    },
+    {
+      "codigo": "M02",
+      "nombre": "",
+      "docente": "José Chávez MÓDULO 02 - DIGITALIZACIÓN DE PROCESOS MINEROS",
+      "clases": [
+        "GESTIÓN DE DATOS Y ANÁLISIS PARA LA TOMA DE DECISIONES ESTRATÉGICAS EN MINERÍA",
+        "TECNOLOGÍAS CLAVE PARA LA DIGITALIZACIÓN DE PROCESOS MINEROS",
+        "SOSTENIBILIDAD Y RESPONSABILIDAD SOCIAL EN LA MINERÍA DIGITALIZADA"
+      ]
+    },
+    {
+      "codigo": "M03",
+      "nombre": "GESTIÓN Y TOMA DE DECISIONES BASADA EN DATOS",
+      "docente": "José Chávez",
+      "clases": [
+        "COMPONENTES CLAVE DE LA GESTIÓN BASADA EN DATOS EN MINERÍA",
+        "DESAFÍOS DE LA GESTIÓN BASADA EN DATOS EN EL SECTOR MINERO",
+        "IMPORTANCIA DE LA GESTIÓN BASADA EN DATOS EN MINERÍA"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
+  "modulos": [
+    {
+      "codigo": "M01",
+      "nombre": "INTRODUCCIÓN A LOS SISTEMAS DE GESTIÓN HSEQ",
+      "docente": "María Jesús Burga",
+      "clases": [
+        "CICLO PHVA: EL CORAZÓN DE LA MEJORA CONTINUA",
+        "GESTIÓN POR PROCESOS: EFICIENCIA, CONTROL Y TRAZABILIDAD",
+        "HERRAMIENTAS DE ANÁLISIS Y MEJORA CONTINUA",
+        "LIDERAZGO, CULTURA ORGANIZACIONAL Y SOSTENIBILIDAD"
+      ]
+    },
+    {
+      "codigo": "M02",
+      "nombre": "INTERPRETACIÓN DE LAS NORMAS ISO 9001, ISO 45001 E ISO 14001",
+      "docente": "Javier Rivera",
+      "clases": [
+        "SISTEMA DE GESTIÓN DE CALIDAD (ISO 9001:2015)",
+        "SISTEMA DE GESTIÓN DE SEGURIDAD Y SALUD EN EL TRABAJO (ISO 45001:2018)",
+        "SISTEMA DE GESTIÓN AMBIENTAL (ISO 14001:2015)",
+        "TALLERES PRÁCTICOS DE AUDITORÍAS INTERNAS HSEQ"
+      ]
+    },
+    {
+      "codigo": "M03",
+      "nombre": "Docentes: María Jesús Burga MÓDULO 03 - DOCUMENTACIÓN DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
+      "docente": "",
+      "clases": [
+        "CONCEPTOS Y NORMAS DE REFERENCIA HSEQ",
+        "MÉTODOS PARA LA INTEGRACIÓN DE SISTEMAS DE GESTIÓN",
+        "ALINEACIÓN DE REQUISITOS DEL SISTEMA HSEQ",
+        "CASO DE ESTUDIO INTEGRAL Y PREGUNTAS FRECUENTES"
+      ]
+    }
+  ]
+}

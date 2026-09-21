@@ -1,0 +1,37 @@
+{
+  "diplomado": "GESTIÓN DE OPERACIONES INDUSTRIALES",
+  "modulos": [
+    {
+      "codigo": "M01",
+      "nombre": "",
+      "docente": "Aida Ramirez MÓDULO 01 - SOFT SKILLS EN LA INDUSTRIA",
+      "clases": [
+        "INTELIGENCIA EMOCIONAL APLICADA A LA GESTIÓN INDUSTRIAL Y MINERA",
+        "LIDERAZGO INDUSTRIAL, MINERO Y GESTIÓN DEL CAPITAL HUMANO",
+        "COMUNICACIÓN EFECTIVA Y RESOLUCIÓN DE CONFLICTOS EN ENTORNOS INDUSTRIALES Y MINEROS"
+      ]
+    },
+    {
+      "codigo": "M02",
+      "nombre": "",
+      "docente": "Javier Rivera MÓDULO 02 - LA GESTIÓN DE OPERACIONES INDUSTRIALES",
+      "clases": [
+        "PLANIFICACIÓN Y PROGRAMACIÓN DE LA PRODUCCIÓN",
+        "CONTROL DE PRODUCCIÓN Y GESTIÓN DE CALIDAD EN TIEMPO REAL",
+        "GESTIÓN DE RESIDUOS INDUSTRIALES Y SOSTENIBILIDAD",
+        "TECNOLOGÍAS EMERGENTES, AUTOMATIZACIÓN E INTELIGENCIA ARTIFICIAL EN LA MINERÍA"
+      ]
+    },
+    {
+      "codigo": "M03",
+      "nombre": "",
+      "docente": "Mario Hilasaca MÓDULO 03 - PLANEACIÓN Y CONTROL DE LA PRODUCCIÓN",
+      "clases": [
+        "PLANEACIÓN DE LA CAPACIDAD PRODUCTIVA Y OPTIMIZACIÓN DE RECURSOS",
+        "GESTIÓN DE LA CALIDAD Y MEJORA CONTINUA",
+        "INNOVACIÓN Y TECNOLOGÍA EN LA GESTIÓN DE OPERACIONES",
+        "REDES NEURONALES Y DEEP LEARNING"
+      ]
+    }
+  ]
+}

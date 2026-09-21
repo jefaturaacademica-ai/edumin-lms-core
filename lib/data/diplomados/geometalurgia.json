@@ -1,0 +1,35 @@
+{
+  "diplomado": "GEOMETALURGIA",
+  "modulos": [
+    {
+      "codigo": "M01",
+      "nombre": "MÉTODOS DE SEPARACIÓN Y CONCENTRACIÓN DE MINERALES",
+      "docente": "Manuel Aucapuri",
+      "clases": [
+        "SMART MINING EN LAS OPERACIONES MINERAS",
+        "OPTIMIZACIÓN DE TÉCNICAS AVANZADAS DEL PROCESAMIENTO DE MINERALES",
+        "PROCESOS METALÚRGICOS EN LAS OPERACIONES MINERALÓGICAS"
+      ]
+    },
+    {
+      "codigo": "M02",
+      "nombre": "INNOVACIÓN EN GEOESTADÍSTICA Y METALURGIA AVANZADA: DE LA TEORÍA A LA PRÁCTICA",
+      "docente": "Manuel Aucapuri",
+      "clases": [
+        "GEOESTADÍSTICA APLICADA A LA PREDICCIÓN Y MODELADO",
+        "METALURGIA EXTRACTIVA",
+        "TÉCNICAS ESPECIALIZADAS EN HIDROMETALURGIA"
+      ]
+    },
+    {
+      "codigo": "M03",
+      "nombre": "ESTRATEGIAS GEOMETALÚRGICAS Y REDUCCIÓN DE COSTOS EN OPERACIONES MINERAS",
+      "docente": "Manuel Aucapuri",
+      "clases": [
+        "UNIDADES GEOMETALÚRGICAS (UGM) EN LA OPTIMIZACIÓN",
+        "MODELOS GEOMETALÚRGICOS",
+        "OPTIMIZACIÓN EN LOS COSTOS DE OPERACIONES MINERAS"
+      ]
+    }
+  ]
+}

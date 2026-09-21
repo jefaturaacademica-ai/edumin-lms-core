@@ -1,0 +1,35 @@
+{
+  "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
+  "modulos": [
+    {
+      "codigo": "M01",
+      "nombre": "GESTIÓN LOGÍSTICA INTEGRAL EN MINERÍA",
+      "docente": "Mario Hilasaca",
+      "clases": [
+        "FUNDAMENTOS DE LA LOGÍSTICA MINERA",
+        "PLANIFICACIÓN Y CONTROL DE OPERACIONES LOGÍSTICAS",
+        "TRANSPORTE Y DISTRIBUCIÓN MINERA"
+      ]
+    },
+    {
+      "codigo": "M02",
+      "nombre": "GESTIÓN ESTRATÉGICA DE ALMACENES EN ENTORNOS MINEROS",
+      "docente": "Mario Hilasaca",
+      "clases": [
+        "DISEÑO Y OPERACIÓN DE ALMACENES EN MINERÍA",
+        "CONTROL DE INVENTARIOS Y SISTEMAS DE GESTIÓN",
+        "SEGURIDAD, SOSTENIBILIDAD Y CUMPLIMIENTO"
+      ]
+    },
+    {
+      "codigo": "M03",
+      "nombre": "TECNOLOGÍA, INNOVACIÓN Y SOSTENIBILIDAD EN LOGÍSTICA MINERA",
+      "docente": "Gonzalo González",
+      "clases": [
+        "TRANSFORMACIÓN DIGITAL EN LA CADENA LOGÍSTICA MINERA",
+        "GESTIÓN DEL RIESGO, CONTINUIDAD OPERATIVA",
+        "ESTRATEGIAS SOSTENIBLES Y RESPONSABILIDAD SOCIAL"
+      ]
+    }
+  ]
+}

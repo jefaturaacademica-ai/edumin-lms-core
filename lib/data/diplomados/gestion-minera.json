@@ -1,0 +1,37 @@
+{
+  "diplomado": "GESTIÓN MINERA",
+  "modulos": [
+    {
+      "codigo": "M01",
+      "nombre": "Docentes: Manuel Aucapuri Gonzalo González MÓDULO 01 - OPERACIONES MINERAS: GEOLOGÍA, LOGÍSTICA Y PLANTA",
+      "docente": "",
+      "clases": [
+        "OPERACIONES EN MINERÍA: GEOLOGÍA",
+        "OPERACIONES EN MINERÍA: PLANTA",
+        "OPERACIONES EN MINERÍA: LOGÍSTICA",
+        "INNOVACIÓN Y TRANSFORMACIÓN DIGITAL EN LA MINERÍA"
+      ]
+    },
+    {
+      "codigo": "M02",
+      "nombre": "MEDIO AMBIENTE, RESPONSABILIDAD SOCIAL Y SEGURIDAD EN LA MINERÍA",
+      "docente": "Juan Briones",
+      "clases": [
+        "MEDIO AMBIENTE Y NORMATIVA RELACIONADA A LA MINERÍA",
+        "RESPONSABILIDAD SOCIAL, RELACIONES COMUNITARIAS Y MANEJO DE CONFLICTOS",
+        "SEGURIDAD Y PREVENCIÓN DE RIESGOS EN LA MINERÍA",
+        "RECURSO HUMANO EN MINERÍA"
+      ]
+    },
+    {
+      "codigo": "M03",
+      "nombre": "GESTIÓN DE PROYECTOS Y FINANZAS EN LA MINERÍA",
+      "docente": "Mario Hilasaca",
+      "clases": [
+        "PLANIFICACIÓN Y GESTIÓN DE PROYECTOS MINEROS",
+        "CONTROL PRESUPUESTAL Y GESTIÓN DE COSTOS",
+        "FINANCIAMIENTO Y MARCO NORMATIVO FINANCIERO"
+      ]
+    }
+  ]
+}

@@ -44,6 +44,7 @@ export default function DiplomadosPage() {
 
   // ESTADO DE SIMULACIÓN DEV (SOLO DESARROLLO INTERNO)
   const [estadoSimuladoDev, setEstadoSimuladoDev] = useState<'sin_diplomado' | 'curso' | 'completado' | 'dos_diplomados'>('curso');
+  const [mostrarPanelDev, setMostrarPanelDev] = useState(true);
 
   // Filtros interactivos y buscador superior
   const [busqueda, setBusqueda] = useState<string>('');
@@ -238,7 +239,7 @@ export default function DiplomadosPage() {
                             ) : (
                               <Clock className="size-3.5 animate-pulse" />
                             )}
-                            {esCompletado ? 'Estado: Completado' : 'Estado: En Curso'}
+                            {esCompletado ? 'Estado: Completado' : 'Estado: En Progreso'}
                           </span>
                         </div>
                         <h3 className={`text-xl sm:text-2xl font-black uppercase leading-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
@@ -648,60 +649,71 @@ export default function DiplomadosPage() {
       )}
 
       {/* PANEL FLOTANTE DE SIMULACIÓN DEV (DESARROLLO INTERNO) */}
-      <aside className="fixed bottom-5 right-5 z-40 bg-slate-900/95 text-white border border-slate-700/80 backdrop-blur-md p-4 rounded-2xl shadow-2xl max-w-xs space-y-3">
-        <div className="flex items-center justify-between pb-2 border-b border-slate-800">
-          <span className="text-xs font-bold text-amber-400 flex items-center gap-1.5">
-            <Wrench className="size-3.5" /> Simulador Dev (Interno)
-          </span>
-          <span className="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded-md font-mono">v1.0</span>
-        </div>
+      {mostrarPanelDev && (
+        <aside className="fixed bottom-5 right-5 z-40 bg-slate-900/95 text-white border border-slate-700/80 backdrop-blur-md p-4 rounded-2xl shadow-2xl max-w-xs space-y-3">
+          <div className="flex items-center justify-between pb-2 border-b border-slate-800">
+            <span className="text-xs font-bold text-amber-400 flex items-center gap-1.5">
+              <Wrench className="size-3.5" /> Simulador Dev (Interno)
+            </span>
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded-md font-mono">v1.0</span>
+              <button 
+                onClick={() => setMostrarPanelDev(false)}
+                className="text-slate-400 hover:text-white transition p-0.5 rounded-lg hover:bg-slate-800 cursor-pointer"
+                title="Cerrar panel de simulación"
+              >
+                <X className="size-4" />
+              </button>
+            </div>
+          </div>
 
-        <p className="text-[11px] text-slate-300">
-          Cambia de estado para probar la vista de diplomados:
-        </p>
+          <p className="text-[11px] text-slate-300">
+            Cambia de estado para probar la vista de diplomados:
+          </p>
 
-        <div className="space-y-1.5 text-xs">
-          <button
-            onClick={() => setEstadoSimuladoDev('sin_diplomado')}
-            className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between ${
-              estadoSimuladoDev === 'sin_diplomado' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-            }`}
-          >
-            <span>0 Diplomados (Sin fijar)</span>
-            {estadoSimuladoDev === 'sin_diplomado' && <CheckCircle2 className="size-3.5 text-white" />}
-          </button>
+          <div className="space-y-1.5 text-xs">
+            <button
+              onClick={() => setEstadoSimuladoDev('sin_diplomado')}
+              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
+                estadoSimuladoDev === 'sin_diplomado' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
+              }`}
+            >
+              <span>0 Diplomados (Sin fijar)</span>
+              {estadoSimuladoDev === 'sin_diplomado' && <CheckCircle2 className="size-3.5 text-white" />}
+            </button>
 
-          <button
-            onClick={() => setEstadoSimuladoDev('curso')}
-            className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between ${
-              estadoSimuladoDev === 'curso' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-            }`}
-          >
-            <span>1 Diplomado en Curso (45%)</span>
-            {estadoSimuladoDev === 'curso' && <CheckCircle2 className="size-3.5 text-white" />}
-          </button>
+            <button
+              onClick={() => setEstadoSimuladoDev('curso')}
+              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
+                estadoSimuladoDev === 'curso' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
+              }`}
+            >
+              <span>1 Diplomado en Progreso (45%)</span>
+              {estadoSimuladoDev === 'curso' && <CheckCircle2 className="size-3.5 text-white" />}
+            </button>
 
-          <button
-            onClick={() => setEstadoSimuladoDev('completado')}
-            className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between ${
-              estadoSimuladoDev === 'completado' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-            }`}
-          >
-            <span>1 Diplomado Completado (100%)</span>
-            {estadoSimuladoDev === 'completado' && <CheckCircle2 className="size-3.5 text-white" />}
-          </button>
+            <button
+              onClick={() => setEstadoSimuladoDev('completado')}
+              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
+                estadoSimuladoDev === 'completado' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
+              }`}
+            >
+              <span>1 Diplomado Completado (100%)</span>
+              {estadoSimuladoDev === 'completado' && <CheckCircle2 className="size-3.5 text-white" />}
+            </button>
 
-          <button
-            onClick={() => setEstadoSimuladoDev('dos_diplomados')}
-            className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between ${
-              estadoSimuladoDev === 'dos_diplomados' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-            }`}
-          >
-            <span>2 Diplomados Habilitados (Big Data)</span>
-            {estadoSimuladoDev === 'dos_diplomados' && <CheckCircle2 className="size-3.5 text-white" />}
-          </button>
-        </div>
-      </aside>
+            <button
+              onClick={() => setEstadoSimuladoDev('dos_diplomados')}
+              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
+                estadoSimuladoDev === 'dos_diplomados' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
+              }`}
+            >
+              <span>2 Diplomados Habilitados (Big Data)</span>
+              {estadoSimuladoDev === 'dos_diplomados' && <CheckCircle2 className="size-3.5 text-white" />}
+            </button>
+          </div>
+        </aside>
+      )}
 
     </main>
   );

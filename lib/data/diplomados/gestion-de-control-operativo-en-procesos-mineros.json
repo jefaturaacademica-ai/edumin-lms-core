@@ -1,0 +1,37 @@
+{
+  "diplomado": "GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS",
+  "modulos": [
+    {
+      "codigo": "M01",
+      "nombre": "GESTIÓN EN OPERACIONES MINERAS PRODUCTIVAS",
+      "docente": "Aida Ramirez",
+      "clases": [
+        "ASPECTOS CLAVE EN LA GESTIÓN DE OPERACIONES MINERAS",
+        "GESTIÓN EFICIENTE DE LA PRODUCCIÓN EN TIEMPO REAL",
+        "OPTIMIZACIÓN DE MONITOREO Y ANALÍTICA EN MINERÍA"
+      ]
+    },
+    {
+      "codigo": "M02",
+      "nombre": "OPTIMIZACIÓN Y AUTOMATIZACIÓN DE LOS PROCESOS EN LAS OPERACIONES MINERAS",
+      "docente": "Javier Rivera",
+      "clases": [
+        "METODOLOGÍAS DE OPTIMIZACIÓN DE PROCESOS MINEROS",
+        "HERRAMIENTAS DE MEJORA CONTINUA",
+        "INNOVACIÓN Y TÉCNICAS AVANZADAS PARA LA EFICIENCIA OPERATIVA",
+        "TECNOLOGÍAS EMERGENTES, AUTOMATIZACIÓN E INTELIGENCIA ARTIFICIAL EN LA MINERÍA"
+      ]
+    },
+    {
+      "codigo": "M03",
+      "nombre": "PLANIFICACIÓN ESTRATÉGICA Y GESTIÓN DE RIESGOS EN LAS OPERACIONES MINERAS",
+      "docente": "Mario Hilasaca",
+      "clases": [
+        "IMPLEMENTACIÓN Y GESTIÓN DE PROYECTOS DE AUTOMATIZACIÓN",
+        "MODIFICACIÓN DE PROYECTOS",
+        "GESTIÓN DE RIESGOS EN PROYECTOS DE AUTOMATIZACIÓN",
+        "REDES NEURONALES Y DEEP LEARNING"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "diplomado": "GEOTECNIA MINERA",
+  "modulos": [
+    {
+      "codigo": "M01",
+      "nombre": "",
+      "docente": "Diego Astuyauri MÓDULO 01 - GEOTECNIA DE SUELOS Y ROCAS",
+      "clases": [
+        "PRINCIPIOS FUNDAMENTALES DE LA GEOTECNIA",
+        "MODELOS DE COMPORTAMIENTOS DE SUELOS",
+        "MECÁNICA DE ROCAS",
+        "DINÁMICA DE ROCAS"
+      ]
+    },
+    {
+      "codigo": "M02",
+      "nombre": "",
+      "docente": "Diego Astuyauri MÓDULO 02 - MONITOREO GEOTÉCNICO",
+      "clases": [
+        "ESTUDIO GEOTÉCNICO",
+        "PENETRACIÓN ESTÁTICA Y DINÁMICA",
+        "INVESTIGACIÓN GEOFÍSICA",
+        "INSTRUMENTACIÓN GEOTÉCNICA"
+      ]
+    },
+    {
+      "codigo": "M03",
+      "nombre": "",
+      "docente": "Juan Briones MÓDULO 03 - ANÁLISIS HIDROGEOLÓGICO",
+      "clases": [
+        "GESTIÓN DEL AGUA EN MINERÍA",
+        "SATURACIÓN DE SUELOS",
+        "PROCESOS DE SATURACIÓN",
+        "DRENAJE DE SUELOS"
+      ]
+    }
+  ]
+}

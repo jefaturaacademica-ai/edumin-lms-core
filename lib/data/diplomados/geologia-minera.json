@@ -1,0 +1,35 @@
+{
+  "diplomado": "GEOLOGÍA MINERA",
+  "modulos": [
+    {
+      "codigo": "M01",
+      "nombre": "",
+      "docente": "Juan Briones MÓDULO 01 - FUNDAMENTOS DE GEOLOGÍA MINERA",
+      "clases": [
+        "MINERALOGÍA Y PETROLOGÍA",
+        "PROCESOS GEOLÓGICOS EN DEPÓSITOS MINERALES",
+        "GEOLOGÍA DE YACIMIENTOS MINERALES"
+      ]
+    },
+    {
+      "codigo": "M02",
+      "nombre": "EXPLORACIÓN GEOLÓGICA Y EVALUACIÓN DE RECURSOS MINERALES",
+      "docente": "Mauricio Riveros",
+      "clases": [
+        "MÉTODOS DE EXPLORACIÓN GEOLÓGICA",
+        "MUESTREO Y ANÁLISIS DE MUESTRAS: INTERPRETACIÓN DE DATOS GEOLÓGICOS",
+        "MODELADO DE RECURSOS MINERALES"
+      ]
+    },
+    {
+      "codigo": "M03",
+      "nombre": "Docentes: Mauricio Riveros Manuel Aucapuri MÓDULO 03 - OPERACIONES MINERAS Y GESTIÓN AMBIENTAL",
+      "docente": "",
+      "clases": [
+        "MÉTODOS DE EXPLOTACIÓN MINERA",
+        "TECNOLOGÍA Y MAQUINARIA MINERA",
+        "SEGURIDAD EN OPERACIONES MINERAS"
+      ]
+    }
+  ]
+}
