@@ -60,7 +60,7 @@ export default function SuperAdminDashboard() {
 
   const mockEstudiantes = [
     { id: 1, dni: '76543210', nombre: 'Roger Sanalea Calcina', email: 'roger@edumin.pe', paquete: 'FULL', avance: '85%', estado: 'Activo', becado: false, enRiesgo: false },
-    { id: 2, dni: '45678912', nombre: 'Lucero Martinez', email: 'lucero@gmail.com', paquete: 'COMPLETO', avance: '12%', estado: 'Activo', becado: false, enRiesgo: true }, // Alerta por bajo avance
+    { id: 2, dni: '45678912', nombre: 'Lucero Martinez', email: 'lucero@gmail.com', paquete: 'COMPLETO', avance: '12%', estado: 'Activo', becado: false, enRiesgo: true }, 
     { id: 3, dni: '12345678', nombre: 'Carlos Mendoza', email: 'carlos.m@hotmail.com', paquete: 'ILIMITADO', avance: '100%', estado: 'Egresado', becado: false, enRiesgo: false },
     { id: 4, dni: '09876543', nombre: 'Ana Fernandez', email: 'ana.f@gmail.com', paquete: 'NINGUNO', avance: '5%', estado: 'Activo', becado: true, enRiesgo: true },
   ];
@@ -278,6 +278,63 @@ export default function SuperAdminDashboard() {
           )}
 
           {/* ========================================================= */}
+          {/* TAB 2: CATÁLOGÓ & MÓDULOS ACADÉMICOS */}
+          {/* ========================================================= */}
+          {activeTab === 'academico' && (
+            <div className="space-y-6">
+              <div className="flex flex-col sm:flex-row justify-between items-center bg-white p-6 rounded-3xl shadow-sm border border-slate-200 gap-4">
+                <div>
+                  <h3 className="font-bold text-slate-900 text-lg">Estructura Curricular y Diplomados</h3>
+                  <p className="text-xs text-slate-500">Gestión de 22 Diplomados (3-5 unidades) y 76 Cursos Cortos.</p>
+                </div>
+                <div className="flex gap-3">
+                  <button 
+                    onClick={() => alert('Abriendo asistente de plantilla CSV para el catálogo...')}
+                    className="bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 px-4 py-2.5 rounded-xl font-bold text-xs transition-all flex items-center gap-2 shadow-sm"
+                  >
+                    <UploadCloud className="w-4 h-4 text-indigo-600" /> Carga Masiva CSV
+                  </button>
+                  <button 
+                    onClick={() => alert('Formulario de creación de producto académico')}
+                    className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl font-bold text-xs transition-all shadow-md flex items-center gap-2"
+                  >
+                    <Plus className="w-4 h-4" /> Nuevo Producto
+                  </button>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-3xl shadow-sm border border-slate-200 overflow-hidden">
+                <div className="p-6 border-b border-slate-100 flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Programas Oficiales Registrados</span>
+                  <span className="text-xs bg-emerald-50 text-emerald-600 px-3 py-1 rounded-full font-bold">Sincronizado con Supabase</span>
+                </div>
+                <table className="w-full text-left text-sm whitespace-nowrap">
+                  <thead className="bg-slate-50 text-slate-500 font-bold uppercase tracking-wider text-[10px]">
+                    <tr>
+                      <th className="px-6 py-3">ID / Código</th>
+                      <th className="px-6 py-3">Título del Diplomado / Curso</th>
+                      <th className="px-6 py-3">Estructura</th>
+                      <th className="px-6 py-3 text-right">Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100 text-xs">
+                    {catalogoDiplomados.map((dip) => (
+                      <tr key={dip.id} className="hover:bg-slate-50">
+                        <td className="px-6 py-3 font-mono text-indigo-600 font-bold">{dip.id}</td>
+                        <td className="px-6 py-3 font-bold text-slate-800">{dip.titulo}</td>
+                        <td className="px-6 py-3 text-slate-500">Diplomado (3-5 Unidades)</td>
+                        <td className="px-6 py-3 text-right">
+                          <button className="text-indigo-600 font-bold hover:underline">Editar Módulos</button>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
+          {/* ========================================================= */}
           {/* TAB 3: BASE DE ESTUDIANTES & ALUMNOS EN RIESGO */}
           {/* ========================================================= */}
           {activeTab === 'estudiantes' && (
@@ -399,7 +456,7 @@ export default function SuperAdminDashboard() {
           )}
 
           {/* ========================================================= */}
-          {/* TAB 5: AUDITORÍA & ESTADO DE WEBHOOKS N8N (NUEVO) */}
+          {/* TAB 5: AUDITORÍA & ESTADO DE WEBHOOKS N8N */}
           {/* ========================================================= */}
           {activeTab === 'auditoria' && (
             <div className="space-y-6">
@@ -499,14 +556,6 @@ export default function SuperAdminDashboard() {
                   </div>
                 </div>
               </div>
-            </div>
-          )}
-
-          {/* Mantengo placeholder seguro para Catálogo */}
-          {activeTab === 'academico' && (
-             <div className="bg-white p-12 rounded-2xl shadow-sm border border-slate-100 text-center">
-               <BookOpen className="w-16 h-16 text-indigo-200 mx-auto mb-4" />
-               <h3 className="text-xl font-bold text-slate-800">Catálogo de 22 Diplomados y 76 Cursos Activo en Memoria</h3>
             </div>
           )}
 
