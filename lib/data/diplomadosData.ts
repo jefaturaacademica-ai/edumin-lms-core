@@ -121,7 +121,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: derechoMineroJson as RawDiplomadoJSON,
     categoria: 'Minería & Legal',
     nivel: 'Especialización',
-    imagen: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/derecho-minero.webp',
     descripcion: 'Marco legal, concesiones, permisos ambientales y normatividad del sector minero.'
   },
   {
@@ -130,7 +130,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: comercioInternacionalJson as RawDiplomadoJSON,
     categoria: 'Logística & Cadena de Suministro',
     nivel: 'Especialización',
-    imagen: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/comercio-internacional-y-aduanas.webp',
     descripcion: 'Procesos aduaneros, importación, exportación y cadena logística global.'
   },
   {
@@ -139,7 +139,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: geologiaMineraJson as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Especialización',
-    imagen: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/geologia-minera.webp',
     descripcion: 'Evaluación de yacimientos, mineralogía, modelamiento y exploración geológica.'
   },
   {
@@ -148,7 +148,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: geomecanicaJson as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Avanzado',
-    imagen: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/geomecanica-minera.webp',
     descripcion: 'Estabilidad de taludes, comportamiento de rocas y control geomecánico en labores mineras.'
   },
   {
@@ -157,7 +157,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: geometalurgiaJson as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Avanzado',
-    imagen: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/geometalurgia.webp',
     descripcion: 'Optimización de la recuperación metálica, variabilidad mineralógica y geoestadística.'
   },
   {
@@ -166,7 +166,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: geotecniaMineraJson as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Avanzado',
-    imagen: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/geomecanica-minera.webp',
     descripcion: 'Mecánica de suelos y rocas, monitoreo geotécnico e hidrogeología aplicada a proyectos mineros.'
   },
   {
@@ -175,7 +175,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: gerenciaHseqJson as RawDiplomadoJSON,
     categoria: 'Seguridad & SSOMA',
     nivel: 'Gerencial',
-    imagen: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/sistemas-integrados-hseq.webp',
     descripcion: 'Implementación y auditoría de sistemas ISO 9001, ISO 14001 e ISO 45001.'
   },
   {
@@ -184,7 +184,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: liderazgoMineriaJson as RawDiplomadoJSON,
     categoria: 'Gestión & Operaciones',
     nivel: 'Gerencial',
-    imagen: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/gestion-minera.webp',
     descripcion: 'Dirección de equipos de alto rendimiento, estrategia gerencial y compras en minería.'
   },
   {
@@ -193,7 +193,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: gestionAmbientalJson as RawDiplomadoJSON,
     categoria: 'Seguridad & SSOMA',
     nivel: 'Especialización',
-    imagen: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/gestion-ambiental-minera.webp',
     descripcion: 'Mitigación de impactos, planes de manejo, fiscalización y sostenibilidad ambiental.'
   },
   {
@@ -202,7 +202,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: controlOperativoJson as RawDiplomadoJSON,
     categoria: 'Gestión & Operaciones',
     nivel: 'Avanzado',
-    imagen: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/control-operativo-minero.webp',
     descripcion: 'Eficiencia operativa, optimización de procesos y control de cuellos de botella en plantas.'
   },
   {
@@ -211,7 +211,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: operacionesIndustrialesJson as RawDiplomadoJSON,
     categoria: 'Gestión & Operaciones',
     nivel: 'Avanzado',
-    imagen: 'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/operaciones-industriales.webp',
     descripcion: 'Productividad, planeación de la producción, manufactura esbelta y mejora continua.'
   },
   {
@@ -220,7 +220,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: bigDataGestionJson as RawDiplomadoJSON,
     categoria: 'Gestión & Operaciones',
     nivel: 'Avanzado',
-    imagen: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/big-data-y-analisis-predictivo.webp',
     descripcion: 'Toma de decisiones gerenciales basadas en Big Data, Machine Learning y análisis predictivo.'
   },
   {
@@ -229,7 +229,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: logisticaComprasJson as RawDiplomadoJSON,
     categoria: 'Logística & Cadena de Suministro',
     nivel: 'Gerencial',
-    imagen: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/logistica-y-proveedores.webp',
     descripcion: 'Estrategias de abastecimiento, control presupuestario y negociación en minería.'
   },
   {
@@ -238,7 +238,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: logisticaAlmacenesJson as RawDiplomadoJSON,
     categoria: 'Logística & Cadena de Suministro',
     nivel: 'Especialización',
-    imagen: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/logistica-y-almacenes-mineros.webp',
     descripcion: 'Gestión estratégica de almacenes, tecnología y logística integral en entornos mineros.'
   },
   {
@@ -247,7 +247,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: logisticaProveedoresJson as RawDiplomadoJSON,
     categoria: 'Logística & Cadena de Suministro',
     nivel: 'Especialización',
-    imagen: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/logistica-y-proveedores.webp',
     descripcion: 'Costos de almacenes, compras internacionales y gestión avanzada de riesgos logísticos.'
   },
   {
@@ -256,7 +256,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: gestionMineraJson as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Gerencial',
-    imagen: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/gestion-minera.webp',
     descripcion: 'Operaciones mineras, gestión ambiental, responsabilidad social y finanzas mineras.'
   },
   {
@@ -265,7 +265,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: legislacionLaboralJson as RawDiplomadoJSON,
     categoria: 'Legal & Negocios',
     nivel: 'Especialización',
-    imagen: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/derecho-minero.webp',
     descripcion: 'Normativa laboral peruana, elaboración de planillas, T-Registro y PLAME.'
   },
   {
@@ -274,7 +274,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: mineria40Json as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Avanzado',
-    imagen: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/mineria-4-0.webp',
     descripcion: 'Transformación digital, IoT, automatización y decisiones basadas en datos en minería.'
   },
   {
@@ -283,7 +283,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: prevencionConflictividadJson as RawDiplomadoJSON,
     categoria: 'Seguridad & SSOMA',
     nivel: 'Especialización',
-    imagen: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/riesgos-sociales-y-responsabilidad-minera.webp',
     descripcion: 'Relacionamiento comunitario, prevención de conflictos y construcción de consensos.'
   },
   {
@@ -292,7 +292,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: seguridadIndustrialJson as RawDiplomadoJSON,
     categoria: 'Seguridad & SSOMA',
     nivel: 'Especialización',
-    imagen: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/seguridad-y-salud-ocupacional.webp',
     descripcion: 'Prevención de riesgos, salud ocupacional, trabajos de alto riesgo y auditoría ambiental.'
   },
   {
@@ -301,7 +301,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: seguridadSaludJson as RawDiplomadoJSON,
     categoria: 'Seguridad & SSOMA',
     nivel: 'Especialización',
-    imagen: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/seguridad-y-salud-ocupacional.webp',
     descripcion: 'Ley 29783, inspección, investigación de accidentes y respuesta a emergencias.'
   },
   {
@@ -310,7 +310,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
     json: supplyChainJson as RawDiplomadoJSON,
     categoria: 'Logística & Cadena de Suministro',
     nivel: 'Gerencial',
-    imagen: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80',
+    imagen: '/assets/images/daem/supply-chain-minero.webp',
     descripcion: 'Gestión estratégica de la cadena de suministro, abastecimiento e internacionalización.'
   }
 ];
