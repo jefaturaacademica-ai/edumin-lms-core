@@ -31,10 +31,9 @@ export default function CursosPage() {
   // Estado para el Modo Oscuro / Claro desde el ThemeContext global
   const { esOscuro } = useTheme();
 
-  // Control del despliegue del catálogo y secciones
+  // Control del despliegue del catálogo y filtro por píldoras de estado
   const [mostrarCatalogoAdicional, setMostrarCatalogoAdicional] = useState(false);
-  const [mostrarCursosEnProgreso, setMostrarCursosEnProgreso] = useState(true);
-  const [mostrarCursosCompletados, setMostrarCursosCompletados] = useState(false);
+  const [filtroEstadoMatriculados, setFiltroEstadoMatriculados] = useState<'todos' | 'progreso' | 'completados'>('todos');
 
   // ESTADO DE SIMULACIÓN DEV (SOLO DESARROLLO INTERNO)
   const [estadoSimuladoDev, setEstadoSimuladoDev] = useState<'sin_cursos' | 'un_curso' | 'todos'>('todos');
@@ -107,9 +106,15 @@ export default function CursosPage() {
         ? [listaBaseCursosMatriculados[0]]
         : listaBaseCursosMatriculados);
 
-  // Separación por estado
+  // Separación por estado y filtrado activo según píldora seleccionada
   const cursosEnProgreso = listaCursosMatriculados.filter(c => c.avance < 100);
   const cursosCompletados = listaCursosMatriculados.filter(c => c.avance >= 100);
+
+  const cursosMatriculadosMostrar = listaCursosMatriculados.filter(c => {
+    if (filtroEstadoMatriculados === 'progreso') return c.avance < 100;
+    if (filtroEstadoMatriculados === 'completados') return c.avance >= 100;
+    return true;
+  });
 
   // 2. Catálogo completo con los 76 cursos oficiales
   const catalogoGeneralCursos = [
@@ -308,216 +313,157 @@ export default function CursosPage() {
             </div>
           </div>
         ) : (
-          <div className="space-y-10">
-            {/* SECCIÓN 1: CURSOS EN PROGRESO (ACORDEÓN DESPLEGABLE) */}
-            {cursosEnProgreso.length > 0 && (
-              <div className={`rounded-3xl border overflow-hidden transition-all ${
-                esOscuro ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'
-              }`}>
-                <button
-                  onClick={() => setMostrarCursosEnProgreso(!mostrarCursosEnProgreso)}
-                  className="w-full p-6 flex items-center justify-between transition hover:bg-white/5 text-left cursor-pointer"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="size-10 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 grid place-items-center">
-                      <BookOpen className="size-5" />
-                    </div>
-                    <div>
-                      <h2 className={`text-lg font-bold flex items-center gap-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                        Cursos en progreso
-                      </h2>
-                      <p className={`text-xs mt-0.5 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                        Accede a tus cursos matriculados activos con seguimiento de avance.
-                      </p>
-                    </div>
-                  </div>
+          <div className="space-y-6">
+            {/* BARRA DE PÍLDORAS/TABS SUPERIORES */}
+            <div className="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-200 dark:border-slate-800">
+              <button
+                onClick={() => setFiltroEstadoMatriculados('todos')}
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                  filtroEstadoMatriculados === 'todos'
+                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+                    : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
+                }`}
+              >
+                <BookOpen className="w-3.5 h-3.5" />
+                <span>Todos los cursos</span>
+                <span className={`px-2 py-0.5 rounded-full text-[10px] ${
+                  filtroEstadoMatriculados === 'todos' ? 'bg-white/20 text-white' : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+                }`}>
+                  {listaCursosMatriculados.length}
+                </span>
+              </button>
 
-                  <div className="flex items-center gap-3">
-                    <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                      {cursosEnProgreso.length} Cursos activos
-                    </span>
-                    {mostrarCursosEnProgreso ? (
-                      <ChevronUp className="w-5 h-5 text-slate-400" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-slate-400" />
-                    )}
-                  </div>
-                </button>
+              <button
+                onClick={() => setFiltroEstadoMatriculados('progreso')}
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                  filtroEstadoMatriculados === 'progreso'
+                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+                    : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
+                }`}
+              >
+                <Clock className="w-3.5 h-3.5" />
+                <span>En progreso</span>
+                <span className={`px-2 py-0.5 rounded-full text-[10px] ${
+                  filtroEstadoMatriculados === 'progreso' ? 'bg-white/20 text-white' : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+                }`}>
+                  {cursosEnProgreso.length}
+                </span>
+              </button>
 
-                {mostrarCursosEnProgreso && (
-                  <div className={`p-6 border-t grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all animate-fadeIn ${
-                    esOscuro ? 'border-slate-800 bg-slate-950/40' : 'border-slate-100 bg-slate-50/50'
-                  }`}>
-                    {cursosEnProgreso.map((curso) => (
-                      <div 
-                        key={curso.id}
-                        className={`rounded-3xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md ${
-                          esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
-                        }`}
-                      >
-                        <div className="relative h-44 w-full bg-slate-800">
-                          <img 
-                            src={curso.imagen} 
-                            alt={curso.titulo}
-                            className="object-cover w-full h-full opacity-90"
-                          />
-                          <div className="absolute top-3 left-3">
-                            <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
-                              {curso.categoria}
-                            </span>
-                          </div>
-                          <div className="absolute top-3 right-3">
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-indigo-500/90 text-white backdrop-blur-md border-indigo-400/30">
-                              <Clock className="size-3 animate-pulse" /> Estado: En Progreso
-                            </span>
-                          </div>
-                        </div>
+              <button
+                onClick={() => setFiltroEstadoMatriculados('completados')}
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                  filtroEstadoMatriculados === 'completados'
+                    ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
+                    : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
+                }`}
+              >
+                <CheckCircle2 className="w-3.5 h-3.5" />
+                <span>Completados</span>
+                <span className={`px-2 py-0.5 rounded-full text-[10px] ${
+                  filtroEstadoMatriculados === 'completados' ? 'bg-white/20 text-white' : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+                }`}>
+                  {cursosCompletados.length}
+                </span>
+              </button>
+            </div>
 
-                        <div className="p-6 space-y-4">
-                          <h3 className={`text-base font-bold leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                            {curso.titulo}
-                          </h3>
-                          <p className={`text-xs flex items-center gap-1.5 font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                            <FileText className="w-4 h-4 text-indigo-400" /> {curso.duracion}
-                          </p>
-
-                          <div className="space-y-1.5 pt-2">
-                            <div className="flex justify-between text-xs font-bold">
-                              <span className={`flex items-center gap-1 ${esOscuro ? 'text-slate-300' : 'text-slate-600'}`}>
-                                <BarChart2 className="w-3.5 h-3.5 text-indigo-500" /> Progreso del curso
-                              </span>
-                              <span className="text-indigo-400">{curso.avance}%</span>
-                            </div>
-                            <div className={`w-full h-2.5 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
-                              <div 
-                                className="bg-indigo-600 h-full rounded-full transition-all duration-500" 
-                                style={{ width: `${curso.avance}%` }}
-                              />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-between ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                          <span className="text-xs font-semibold text-indigo-400 flex items-center gap-1.5">
-                            <Clock className="w-4 h-4" /> En desarrollo
-                          </span>
-                          <Link 
-                            href={`/dashboard/cursos/${curso.id}`}
-                            className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors inline-flex items-center gap-1.5 shadow-sm"
-                          >
-                            <PlayCircle className="w-4 h-4" /> Ir a la clase
-                          </Link>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                )}
+            {/* GRILLA DE CURSOS FILTRADOS POR LA PÍLDORA SELECCIONADA */}
+            {cursosMatriculadosMostrar.length === 0 ? (
+              <div className={`rounded-3xl p-10 text-center border ${esOscuro ? 'bg-slate-900 border-slate-800 text-slate-400' : 'bg-white border-slate-200 text-slate-500'}`}>
+                <p className="text-sm font-medium">
+                  No tienes cursos en la sección &quot;{filtroEstadoMatriculados === 'progreso' ? 'En progreso' : 'Completados'}&quot;.
+                </p>
               </div>
-            )}
-
-            {/* SECCIÓN 2: CURSOS COMPLETADOS (ACORDEÓN DESPLEGABLE) */}
-            {cursosCompletados.length > 0 && (
-              <div className={`rounded-3xl border overflow-hidden transition-all ${
-                esOscuro ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'
-              }`}>
-                <button
-                  onClick={() => setMostrarCursosCompletados(!mostrarCursosCompletados)}
-                  className="w-full p-6 flex items-center justify-between transition hover:bg-white/5 text-left cursor-pointer"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="size-10 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 grid place-items-center">
-                      <CheckCircle2 className="size-5" />
-                    </div>
-                    <div>
-                      <h2 className={`text-lg font-bold flex items-center gap-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                        Cursos completados
-                      </h2>
-                      <p className={`text-xs mt-0.5 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                        Cursos finalizados con 100% de avance y certificados oficiales listos.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                      {cursosCompletados.length} Completados
-                    </span>
-                    {mostrarCursosCompletados ? (
-                      <ChevronUp className="w-5 h-5 text-slate-400" />
-                    ) : (
-                      <ChevronDown className="w-5 h-5 text-slate-400" />
-                    )}
-                  </div>
-                </button>
-
-                {mostrarCursosCompletados && (
-                  <div className={`p-6 border-t grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all animate-fadeIn ${
-                    esOscuro ? 'border-slate-800 bg-slate-950/40' : 'border-slate-100 bg-slate-50/50'
-                  }`}>
-                    {cursosCompletados.map((curso) => (
-                      <div 
-                        key={curso.id}
-                        className={`rounded-3xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md ${
-                          esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
-                        }`}
-                      >
-                        <div className="relative h-44 w-full bg-slate-800">
-                          <img 
-                            src={curso.imagen} 
-                            alt={curso.titulo}
-                            className="object-cover w-full h-full opacity-90"
-                          />
-                          <div className="absolute top-3 left-3">
-                            <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
-                              {curso.categoria}
-                            </span>
-                          </div>
-                          <div className="absolute top-3 right-3">
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
+                {cursosMatriculadosMostrar.map((curso) => {
+                  const esCompletado = curso.avance >= 100;
+                  return (
+                    <div 
+                      key={curso.id}
+                      className={`rounded-3xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md ${
+                        esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
+                      }`}
+                    >
+                      <div className="relative h-44 w-full bg-slate-800">
+                        <img 
+                          src={curso.imagen} 
+                          alt={curso.titulo}
+                          className="object-cover w-full h-full opacity-90"
+                        />
+                        <div className="absolute top-3 left-3">
+                          <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+                            {curso.categoria}
+                          </span>
+                        </div>
+                        <div className="absolute top-3 right-3">
+                          {esCompletado ? (
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-emerald-600 text-white backdrop-blur-md border-emerald-400/30">
                               <CheckCircle2 className="size-3" /> Estado: Completado
                             </span>
-                          </div>
-                        </div>
-
-                        <div className="p-6 space-y-4">
-                          <h3 className={`text-base font-bold leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                            {curso.titulo}
-                          </h3>
-                          <p className={`text-xs flex items-center gap-1.5 font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                            <FileText className="w-4 h-4 text-emerald-400" /> {curso.duracion}
-                          </p>
-
-                          <div className="space-y-1.5 pt-2">
-                            <div className="flex justify-between text-xs font-bold">
-                              <span className={`flex items-center gap-1 ${esOscuro ? 'text-slate-300' : 'text-slate-600'}`}>
-                                <BarChart2 className="w-3.5 h-3.5 text-emerald-500" /> Progreso del curso
-                              </span>
-                              <span className="text-emerald-400 font-extrabold">100%</span>
-                            </div>
-                            <div className={`w-full h-2.5 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
-                              <div 
-                                className="bg-emerald-500 h-full rounded-full transition-all duration-500" 
-                                style={{ width: '100%' }}
-                              />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-between ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                          <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
-                            <Award className="w-4 h-4" /> Certificado listo
-                          </span>
-                          <Link 
-                            href={`/dashboard/cursos/${curso.id}`}
-                            className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors inline-flex items-center gap-1.5 shadow-sm"
-                          >
-                            <PlayCircle className="w-4 h-4" /> Repasar clase
-                          </Link>
+                          ) : (
+                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-indigo-500/90 text-white backdrop-blur-md border-indigo-400/30">
+                              <Clock className="size-3 animate-pulse" /> Estado: En Progreso
+                            </span>
+                          )}
                         </div>
                       </div>
-                    ))}
-                  </div>
-                )}
+
+                      <div className="p-6 space-y-4">
+                        <h3 className={`text-base font-bold leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                          {curso.titulo}
+                        </h3>
+                        <p className={`text-xs flex items-center gap-1.5 font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                          <FileText className={`w-4 h-4 ${esCompletado ? 'text-emerald-400' : 'text-indigo-400'}`} /> {curso.duracion}
+                        </p>
+
+                        <div className="space-y-1.5 pt-2">
+                          <div className="flex justify-between text-xs font-bold">
+                            <span className={`flex items-center gap-1 ${esOscuro ? 'text-slate-300' : 'text-slate-600'}`}>
+                              <BarChart2 className={`w-3.5 h-3.5 ${esCompletado ? 'text-emerald-500' : 'text-indigo-500'}`} /> Progreso del curso
+                            </span>
+                            <span className={esCompletado ? 'text-emerald-400 font-extrabold' : 'text-indigo-400'}>{curso.avance}%</span>
+                          </div>
+                          <div className={`w-full h-2.5 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
+                            <div 
+                              className={`h-full rounded-full transition-all duration-500 ${esCompletado ? 'bg-emerald-500' : 'bg-indigo-600'}`} 
+                              style={{ width: `${curso.avance}%` }}
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-between ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
+                        {esCompletado ? (
+                          <>
+                            <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
+                              <Award className="w-4 h-4" /> Certificado listo
+                            </span>
+                            <Link 
+                              href={`/dashboard/cursos/${curso.id}`}
+                              className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors inline-flex items-center gap-1.5 shadow-sm"
+                            >
+                              <PlayCircle className="w-4 h-4" /> Repasar clase
+                            </Link>
+                          </>
+                        ) : (
+                          <>
+                            <span className="text-xs font-semibold text-indigo-400 flex items-center gap-1.5">
+                              <Clock className="w-4 h-4" /> En desarrollo
+                            </span>
+                            <Link 
+                              href={`/dashboard/cursos/${curso.id}`}
+                              className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors inline-flex items-center gap-1.5 shadow-sm"
+                            >
+                              <PlayCircle className="w-4 h-4" /> Ir a la clase
+                            </Link>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
