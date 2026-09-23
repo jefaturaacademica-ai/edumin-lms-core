@@ -6,11 +6,13 @@ import { usePathname, useRouter } from 'next/navigation';
 import { Home, BookOpen, Award, User, LogOut, GraduationCap, Wallet, Sun, Moon, Menu, X } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { ThemeProvider, useTheme } from '@/context/theme-context';
+import { ProfileProvider, useProfile } from '@/context/profile-context';
 
 function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
   const { esOscuro, toggleTema } = useTheme();
+  const { nombres, apellidos, iniciales, paqueteContratado, fotoPerfil } = useProfile();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const supabase = createBrowserClient(
@@ -30,12 +32,15 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
 
   const menuItems = [
     { name: 'Inicio', path: '/dashboard', icon: Home },
-    { name: 'Mis Diplomados', path: '/dashboard/diplomados', icon: GraduationCap },
-    { name: 'Mis Cursos', path: '/dashboard/cursos', icon: BookOpen },
-    { name: 'Mis Certificados', path: '/dashboard/certificados', icon: Award },
-    { name: 'Mis Pagos', path: '/dashboard/pagos', icon: Wallet },
-    { name: 'Mi Perfil', path: '/dashboard/perfil', icon: User },
+    { name: 'Mis diplomados', path: '/dashboard/diplomados', icon: GraduationCap },
+    { name: 'Mis cursos', path: '/dashboard/cursos', icon: BookOpen },
+    { name: 'Mis certificados', path: '/dashboard/certificados', icon: Award },
+    { name: 'Mis pagos', path: '/dashboard/pagos', icon: Wallet },
+    { name: 'Mi perfil', path: '/dashboard/perfil', icon: User },
   ];
+
+  const primerNombre = nombres.trim().split(' ')[0] || 'Juan';
+  const primerApellido = apellidos.trim().split(' ')[0] || 'Quispe';
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row">
@@ -50,13 +55,6 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
         </Link>
 
         <div className="flex items-center gap-2">
-          <button
-            onClick={toggleTema}
-            title={esOscuro ? "Cambiar a Modo Claro" : "Cambiar a Modo Oscuro"}
-            className="p-2 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors border border-white/5"
-          >
-            {esOscuro ? <Sun className="w-5 h-5 text-amber-400" /> : <Moon className="w-5 h-5 text-indigo-400" />}
-          </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Abrir menú"
@@ -81,18 +79,43 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
           mobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="p-5 flex items-center justify-between border-b border-white/5 shrink-0">
-          <img 
-            src="https://raw.githubusercontent.com/videoconferenciasdiplomado-alt/imagenes/main/logo/logo%20blanco.png" 
-            alt="Edumin Logo" 
-            className="h-10 w-auto object-contain" 
-          />
-          <button
+        {/* Header / Logo + Avatar Opción 2 */}
+        <div className="p-4 border-b border-white/5 shrink-0 flex flex-col gap-3">
+          <div className="flex items-center justify-between">
+            <img 
+              src="https://raw.githubusercontent.com/videoconferenciasdiplomado-alt/imagenes/main/logo/logo%20blanco.png" 
+              alt="Edumin Logo" 
+              className="h-9 w-auto object-contain" 
+            />
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="p-2 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
+          <Link 
+            href="/dashboard/perfil"
             onClick={() => setMobileMenuOpen(false)}
-            className="p-2 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors"
+            className="flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors border border-white/5 group"
           >
-            <X className="w-5 h-5" />
-          </button>
+            <div className="relative size-10 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30 shrink-0 overflow-hidden">
+              {fotoPerfil ? (
+                <img src={fotoPerfil} alt="Foto de perfil" className="w-full h-full object-cover" />
+              ) : (
+                iniciales
+              )}
+            </div>
+            <div className="min-w-0 flex-1">
+              <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
+                {primerNombre} {primerApellido}
+              </h4>
+              <span className="inline-block mt-0.5 px-2 py-0.5 text-[10px] font-semibold text-indigo-300 bg-indigo-500/15 rounded-md border border-indigo-500/20 truncate max-w-full">
+                {paqueteContratado || 'Estudiante'}
+              </span>
+            </div>
+          </Link>
         </div>
 
         <nav className="flex-1 py-4 px-4 space-y-2 overflow-y-auto">
@@ -118,27 +141,28 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
           })}
         </nav>
 
+        {/* Footer del Drawer Móvil */}
         <div className="p-4 border-t border-white/5 shrink-0 flex items-center gap-2">
           <button 
             onClick={() => {
               setMobileMenuOpen(false);
               handleLogout();
             }}
-            className="flex-1 flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 transition-colors text-sm font-medium"
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 transition-colors text-xs font-medium"
           >
-            <LogOut className="w-5 h-5" />
-            <span>Cerrar Sesión</span>
+            <LogOut className="w-4 h-4" />
+            <span>Cerrar sesión</span>
           </button>
 
           <button
             onClick={toggleTema}
-            title={esOscuro ? "Cambiar a Modo Claro" : "Cambiar a Modo Oscuro"}
-            className="p-3 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors border border-white/5 flex items-center justify-center"
+            title={esOscuro ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+            className="p-2.5 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors border border-white/5 flex items-center justify-center shrink-0"
           >
             {esOscuro ? (
-              <Sun className="w-5 h-5 text-amber-400" />
+              <Sun className="w-4 h-4 text-amber-400" />
             ) : (
-              <Moon className="w-5 h-5 text-indigo-400" />
+              <Moon className="w-4 h-4 text-indigo-400" />
             )}
           </button>
         </div>
@@ -146,13 +170,36 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
 
       {/* Sidebar Oscuro Fijo en Pantalla para Escritorio (Desktop) */}
       <aside className="w-64 h-screen bg-slate-950 text-slate-300 flex flex-col hidden md:flex border-r border-slate-900 sticky top-0 shrink-0">
-        {/* Header / Logo */}
-        <div className="p-6 flex items-center justify-center border-b border-white/5 shrink-0">
-          <img 
-            src="https://raw.githubusercontent.com/videoconferenciasdiplomado-alt/imagenes/main/logo/logo%20blanco.png" 
-            alt="Edumin Logo" 
-            className="h-14 w-auto object-contain" 
-          />
+        {/* Header / Logo + Avatar Opción 2 */}
+        <div className="p-5 flex flex-col gap-4 border-b border-white/5 shrink-0">
+          <div className="flex items-center justify-center">
+            <img 
+              src="https://raw.githubusercontent.com/videoconferenciasdiplomado-alt/imagenes/main/logo/logo%20blanco.png" 
+              alt="Edumin Logo" 
+              className="h-12 w-auto object-contain" 
+            />
+          </div>
+          
+          <Link 
+            href="/dashboard/perfil"
+            className="flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 hover:bg-white/10 transition-all border border-white/5 group shadow-sm"
+          >
+            <div className="relative size-10 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30 shrink-0 overflow-hidden">
+              {fotoPerfil ? (
+                <img src={fotoPerfil} alt="Foto de perfil" className="w-full h-full object-cover" />
+              ) : (
+                iniciales
+              )}
+            </div>
+            <div className="min-w-0 flex-1">
+              <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
+                {primerNombre} {primerApellido}
+              </h4>
+              <span className="inline-block mt-0.5 px-2 py-0.5 text-[10px] font-semibold text-indigo-300 bg-indigo-500/15 rounded-md border border-indigo-500/20 truncate max-w-full">
+                {paqueteContratado || 'Estudiante'}
+              </span>
+            </div>
+          </Link>
         </div>
         
         {/* Links de Navegación Scrollable */}
@@ -178,25 +225,25 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
           })}
         </nav>
 
-        {/* Footer del Sidebar Fijo Abajo (Cerrar Sesión + Cambio de Tema) */}
+        {/* Footer del Sidebar Desktop */}
         <div className="p-4 border-t border-white/5 shrink-0 flex items-center gap-2">
           <button 
             onClick={handleLogout}
-            className="flex-1 flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 transition-colors text-sm font-medium"
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 transition-colors text-xs font-medium"
           >
-            <LogOut className="w-5 h-5" />
-            <span>Cerrar Sesión</span>
+            <LogOut className="w-4 h-4" />
+            <span>Cerrar sesión</span>
           </button>
 
           <button
             onClick={toggleTema}
-            title={esOscuro ? "Cambiar a Modo Claro" : "Cambiar a Modo Oscuro"}
-            className="p-3 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors border border-white/5 flex items-center justify-center"
+            title={esOscuro ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+            className="p-2.5 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors border border-white/5 flex items-center justify-center shrink-0"
           >
             {esOscuro ? (
-              <Sun className="w-5 h-5 text-amber-400" />
+              <Sun className="w-4 h-4 text-amber-400" />
             ) : (
-              <Moon className="w-5 h-5 text-indigo-400" />
+              <Moon className="w-4 h-4 text-indigo-400" />
             )}
           </button>
         </div>
@@ -215,7 +262,9 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider>
-      <DashboardLayoutContent>{children}</DashboardLayoutContent>
+      <ProfileProvider>
+        <DashboardLayoutContent>{children}</DashboardLayoutContent>
+      </ProfileProvider>
     </ThemeProvider>
   );
 }
