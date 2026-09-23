@@ -209,12 +209,7 @@ export default function PerfilEstudiante() {
   };
 
   if (cargando) {
-    return (
-      <DashboardLoader 
-        title="Cargando información del perfil..." 
-        subtitle="Consultando datos personales y de residencia institucionales" 
-      />
-    );
+    return <DashboardLoader />;
   }
 
   return (

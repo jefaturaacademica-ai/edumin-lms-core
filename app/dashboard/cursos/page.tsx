@@ -232,12 +232,7 @@ export default function CursosPage() {
   }, []);
 
   if (loading) {
-    return (
-      <DashboardLoader 
-        title="Cargando cursos académicos..." 
-        subtitle="Preparando tus programas y catálogo de especialización" 
-      />
-    );
+    return <DashboardLoader />;
   }
 
   const resetearFiltros = () => {

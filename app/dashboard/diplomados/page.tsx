@@ -160,12 +160,7 @@ export default function DiplomadosPage() {
   const esIlimitado = paquete === 'ILIMITADO';
 
   if (loading) {
-    return (
-      <DashboardLoader 
-        title="Cargando experiencia académica..." 
-        subtitle="Consultando tus diplomados y programas de especialización" 
-      />
-    );
+    return <DashboardLoader />;
   }
 
   return (
