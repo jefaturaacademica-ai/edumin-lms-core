@@ -26,6 +26,7 @@ import {
 import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
+import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { ALL_DIPLOMADOS, getDiplomadoBySlug, DiplomadoCompleto } from '@/lib/data/diplomadosData';
 
 export default function DiplomadosPage() {
@@ -160,9 +161,10 @@ export default function DiplomadosPage() {
 
   if (loading) {
     return (
-      <div className={`min-h-screen grid place-items-center p-10 ${esOscuro ? 'bg-slate-950' : 'bg-slate-50'}`}>
-        <p className="text-indigo-500 font-medium animate-pulse">Cargando experiencia académica...</p>
-      </div>
+      <DashboardLoader 
+        title="Cargando experiencia académica..." 
+        subtitle="Consultando tus diplomados y programas de especialización" 
+      />
     );
   }
 

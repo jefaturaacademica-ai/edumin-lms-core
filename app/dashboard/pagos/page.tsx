@@ -15,10 +15,15 @@ import {
   SlidersHorizontal,
   Award,
   Building2,
-  GripVertical
+  GripVertical,
+  Lock
 } from 'lucide-react';
+import { useTheme } from '@/context/theme-context';
+import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 
 export default function PagosEstudiantePage() {
+  const { esOscuro } = useTheme();
+
   // Estados de simulación dev: 'al_dia' | 'completado' | 'bloqueo'
   const [modoPrueba, setModoPrueba] = useState<'al_dia' | 'completado' | 'bloqueo'>('al_dia');
   const [devToolbarVisible, setDevToolbarVisible] = useState(true);
@@ -83,143 +88,248 @@ export default function PagosEstudiantePage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-50 p-6 sm:p-10 lg:p-16 text-slate-900 relative pb-28">
+    <main className={`min-h-screen p-6 sm:p-10 lg:p-16 relative pb-28 transition-colors ${
+      esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
+    }`}>
       <div className="max-w-6xl mx-auto">
         
         {/* Cabecera Principal */}
-        <div className="mb-10">
-          <h1 className="text-3xl font-bold tracking-tight text-slate-900 flex items-center gap-3">
-            <Wallet className="w-8 h-8 text-indigo-600" />
+        <div className="mb-8">
+          <h1 className={`text-2xl sm:text-3xl font-bold tracking-tight flex items-center gap-3 ${
+            esOscuro ? 'text-white' : 'text-slate-900'
+          }`}>
+            <Wallet className={`w-7 h-7 ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`} />
             Estado de Cuenta y Tesorería
           </h1>
-          <p className="mt-2 text-slate-500">
+          <p className={`mt-1.5 text-sm ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
             Consulta tus cuotas pagadas, historial de transacciones, recibos de pago y estado financiero actual.
           </p>
         </div>
 
-        {/* CONTENIDO SEGÚN ESTADO DE SIMULACIÓN */}
+        {/* BANNERS DE ESTADO COMPACTOS (UNIFICADOS) */}
         {modoPrueba === 'al_dia' && (
-          <>
-            <div className="bg-emerald-50 border border-emerald-200 rounded-3xl p-6 mb-8 flex items-center gap-4 text-emerald-900 shadow-sm">
-              <div className="size-12 rounded-2xl bg-emerald-500 text-white grid place-items-center shrink-0 shadow-md">
-                <CheckCircle2 className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg">¡Tu cuenta está en orden!</h3>
-                <p className="text-sm text-emerald-700">Gracias por tu puntualidad. Tus beneficios y módulos académicos están completamente habilitados.</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-white rounded-3xl p-7 shadow-sm border border-slate-200">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Monto Total del Paquete</span>
-                <h3 className="text-3xl font-bold text-slate-900 mt-2">S/ 900.00</h3>
-                <p className="text-xs text-slate-500 mt-1">Paquete Full (3 cuotas programadas)</p>
-              </div>
-
-              <div className="bg-white rounded-3xl p-7 shadow-sm border border-slate-200">
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-600">Total Pagado</span>
-                <h3 className="text-3xl font-bold text-emerald-600 mt-2">S/ 600.00</h3>
-                <p className="text-xs text-emerald-700 mt-1">2 cuotas validadas por tesorería</p>
-              </div>
-
-              <div className="bg-white rounded-3xl p-7 shadow-sm border border-slate-200">
-                <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">Saldo Pendiente</span>
-                <h3 className="text-3xl font-bold text-indigo-600 mt-2">S/ 300.00</h3>
-                <p className="text-xs text-slate-500 mt-1">1 cuota restante por vencer</p>
-              </div>
-            </div>
-          </>
-        )}
-
-        {modoPrueba === 'completado' && (
-          <>
-            {/* Banner de Pagos Completados 100% */}
-            <div className="bg-gradient-to-r from-emerald-900 via-teal-900 to-slate-950 rounded-3xl p-8 sm:p-10 text-white shadow-2xl mb-8 border border-emerald-500/30 relative overflow-hidden">
-              <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 size-64 bg-emerald-500/10 rounded-full blur-3xl" />
-              
-              <div className="relative flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                <div className="space-y-3 max-w-2xl">
-                  <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 px-3.5 py-1.5 rounded-full text-xs font-bold">
-                    <Award className="w-4 h-4 text-emerald-400" /> ¡Pago 100% Completado!
-                  </div>
-                  <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                    ¡Has completado la totalidad de tus cuotas!
-                  </h2>
-                  <p className="text-emerald-100/80 text-sm leading-relaxed">
-                    Felicitaciones, tu estado de cuenta se encuentra <span className="font-bold text-white underline decoration-emerald-400">Libre de Deudas</span>. Tus certificados y constancias oficiales están 100% habilitados para emisión digital.
-                  </p>
+          <div className={`rounded-2xl p-5 sm:p-6 text-white shadow-xl mb-6 border relative overflow-hidden transition-all ${
+            esOscuro 
+              ? 'bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 border-indigo-500/30' 
+              : 'bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-950 border-indigo-500/30'
+          }`}>
+            <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 size-40 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-1.5 max-w-2xl">
+                <div className="inline-flex items-center gap-1.5 bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 px-3 py-1 rounded-full text-xs font-bold">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-indigo-400" /> Estado Financiero al Día
                 </div>
-
-                <div className="bg-white/10 backdrop-blur-md border border-white/10 p-6 rounded-2xl flex flex-col items-center justify-center shrink-0 w-full md:w-auto text-center">
-                  <ShieldCheck className="w-12 h-12 text-emerald-400 mb-2" />
-                  <span className="text-xs font-bold text-slate-300 uppercase tracking-widest">Estado Financiero</span>
-                  <span className="text-lg font-extrabold text-emerald-300 mt-0.5">COMPLETO Y AL DÍA</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-              <div className="bg-white rounded-3xl p-7 shadow-sm border border-slate-200">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Monto Total del Paquete</span>
-                <h3 className="text-3xl font-bold text-slate-900 mt-2">S/ 900.00</h3>
-                <p className="text-xs text-slate-500 mt-1">Paquete Full (3 cuotas liquidadas)</p>
+                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  ¡Tu cuenta se encuentra al día y en orden!
+                </h2>
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  Gracias por tu puntualidad. Tus beneficios académicos y módulos de clase están <span className="font-bold text-white underline decoration-indigo-400">100% habilitados</span>.
+                </p>
               </div>
 
-              <div className="bg-white rounded-3xl p-7 shadow-sm border border-emerald-200 bg-emerald-50/20">
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-600">Total Pagado</span>
-                <h3 className="text-3xl font-bold text-emerald-600 mt-2">S/ 900.00</h3>
-                <p className="text-xs text-emerald-700 font-semibold mt-1">✓ 100% Cancelado (3/3 cuotas)</p>
-              </div>
-
-              <div className="bg-white rounded-3xl p-7 shadow-sm border border-slate-200">
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Saldo Pendiente</span>
-                <h3 className="text-3xl font-bold text-slate-400 mt-2">S/ 0.00</h3>
-                <p className="text-xs text-emerald-600 font-bold mt-1">Sin deudas ni saldos pendientes</p>
-              </div>
-            </div>
-          </>
-        )}
-
-        {modoPrueba === 'bloqueo' && (
-          <div className="bg-gradient-to-br from-rose-950 via-rose-900 to-slate-950 rounded-3xl p-8 sm:p-12 text-white shadow-2xl mb-10 border border-rose-800/50">
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 bg-rose-500/20 border border-rose-500/30 text-rose-300 px-3.5 py-1.5 rounded-full text-xs font-bold mb-6">
-                <AlertCircle className="w-4 h-4" /> Notificación de Tesorería
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Acceso pausado temporalmente por cuotas pendientes</h2>
-              <p className="mt-4 text-slate-300 text-base leading-relaxed">
-                Hemos detectado cuotas vencidas en tu cuenta. Tu navegación a las clases y contenidos ha sido restringida hasta regularizar el pago de tu saldo pendiente.
-              </p>
-              
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <a 
-                  href="https://wa.me/51900000000?text=Hola,%20deseo%20regularizar%20mi%20pago%20pendiente%20en%20EDUMIN" 
-                  target="_blank" 
-                  rel="noreferrer"
-                  className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 text-sm"
-                >
-                  <PhoneCall className="w-4 h-4" /> Hablar con Cobranzas (WhatsApp)
-                </a>
-                <button 
-                  onClick={() => alert('Redirigiendo a pasarela de pago segura...')}
-                  className="bg-white hover:bg-slate-100 text-slate-950 font-bold px-8 py-4 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 text-sm"
-                >
-                  Pagar Cuota Ahora <ArrowUpRight className="w-4 h-4" />
-                </button>
+              <div className="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shrink-0 text-center flex flex-col items-center justify-center min-w-[160px] w-full sm:w-auto">
+                <CheckCircle2 className="w-6 h-6 text-indigo-400 mb-1" />
+                <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Próximo Vencimiento</span>
+                <span className="text-xs font-bold text-indigo-300 mt-0.5">15 DE OCTUBRE</span>
               </div>
             </div>
           </div>
         )}
 
-        {/* TABLA DE HISTORIAL DE COMPROBANTES CON ÚNICO TÉRMINO: RECIBO */}
-        <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200">
-          <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center justify-between">
+        {modoPrueba === 'completado' && (
+          <div className={`rounded-2xl p-5 sm:p-6 text-white shadow-xl mb-6 border relative overflow-hidden transition-all ${
+            esOscuro 
+              ? 'bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 border-emerald-500/30' 
+              : 'bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-950 border-emerald-500/30'
+          }`}>
+            <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 size-40 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-1.5 max-w-2xl">
+                <div className="inline-flex items-center gap-1.5 bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 px-3 py-1 rounded-full text-xs font-bold">
+                  <Award className="w-3.5 h-3.5 text-emerald-400" /> ¡Pago 100% Completado!
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  ¡Has completado la totalidad de tus cuotas!
+                </h2>
+                <p className="text-emerald-100/80 text-xs sm:text-sm leading-relaxed">
+                  Felicitaciones, tu cuenta está <span className="font-bold text-white underline decoration-emerald-400">Libre de Deudas</span>. Certificados habilitados para emisión digital.
+                </p>
+              </div>
+
+              <div className="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shrink-0 text-center flex flex-col items-center justify-center min-w-[160px] w-full sm:w-auto">
+                <ShieldCheck className="w-6 h-6 text-emerald-400 mb-1" />
+                <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Estado Financiero</span>
+                <span className="text-xs font-bold text-emerald-300 mt-0.5">COMPLETO Y AL DÍA</span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {modoPrueba === 'bloqueo' && (
+          <div className={`rounded-2xl p-5 sm:p-6 text-white shadow-xl mb-6 border relative overflow-hidden transition-all ${
+            esOscuro 
+              ? 'bg-gradient-to-r from-slate-900 via-rose-950/40 to-slate-950 border-rose-500/40' 
+              : 'bg-gradient-to-r from-rose-950 via-rose-900 to-slate-950 border-rose-800/50'
+          }`}>
+            <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 size-40 bg-rose-500/10 rounded-full blur-3xl pointer-events-none" />
+            
+            <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="space-y-1.5 max-w-2xl">
+                <div className="inline-flex items-center gap-1.5 bg-rose-500/20 border border-rose-500/30 text-rose-300 px-3 py-1 rounded-full text-xs font-bold">
+                  <AlertCircle className="w-3.5 h-3.5 text-rose-400" /> Notificación de Tesorería
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  Acceso pausado temporalmente por cuotas pendientes
+                </h2>
+                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                  Hemos detectado cuotas vencidas en tu cuenta. Tu navegación a las clases y contenidos ha sido restringida hasta regularizar el pago de tu saldo pendiente.
+                </p>
+              </div>
+
+              {/* Caja de Insignia Lateral Derecha para Estado de Deuda */}
+              <div className="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shrink-0 text-center flex flex-col items-center justify-center min-w-[160px] w-full sm:w-auto">
+                <Lock className="w-6 h-6 text-rose-400 mb-1 animate-pulse" />
+                <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Estado Financiero</span>
+                <span className="text-xs font-bold text-rose-300 mt-0.5">ACCESO RESTRINGIDO</span>
+              </div>
+            </div>
+
+            {/* Botones desplegados en la siguiente línea */}
+            <div className="relative mt-4 pt-3 border-t border-rose-500/20 flex flex-wrap items-center gap-3">
+              <a 
+                href="https://wa.me/51900000000?text=Hola,%20deseo%20regularizar%20mi%20pago%20pendiente%20en%20EDUMIN" 
+                target="_blank" 
+                rel="noreferrer"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-5 py-2.5 rounded-xl transition-all text-xs flex items-center gap-2 shadow-md"
+              >
+                <PhoneCall className="w-3.5 h-3.5" /> Hablar con Cobranzas (WhatsApp)
+              </a>
+              <button 
+                onClick={() => alert('Redirigiendo a pasarela de pago segura...')}
+                className="bg-white hover:bg-slate-100 text-slate-950 font-semibold px-5 py-2.5 rounded-xl transition-all text-xs flex items-center gap-2 shadow-md"
+              >
+                Pagar Cuota Ahora <ArrowUpRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* BLOQUES DE MÉTRICAS ADAPTABLES AL TEMA (ORDEN: Monto Total -> Total Pagado -> Saldo Pendiente) */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+          {/* KPI 1: Monto Total (Identidad Cromática Cyan / Sky) */}
+          <div className={`rounded-2xl p-6 transition-all ${
+            esOscuro 
+              ? 'bg-cyan-950/20 border border-cyan-500/30 shadow-sm' 
+              : 'bg-cyan-50/60 border border-cyan-200 shadow-sm'
+          }`}>
+            <span className={`text-xs font-bold uppercase tracking-wider ${
+              esOscuro ? 'text-cyan-400' : 'text-cyan-600'
+            }`}>Monto Total del Paquete</span>
+            <h3 className={`text-2xl sm:text-3xl font-bold mt-1.5 ${
+              esOscuro ? 'text-cyan-300' : 'text-cyan-700'
+            }`}>S/ 900.00</h3>
+            <p className={`text-xs font-medium mt-1 ${
+              esOscuro ? 'text-cyan-400/80' : 'text-cyan-800'
+            }`}>
+              {modoPrueba === 'completado' ? '✓ Paquete Full (3 cuotas liquidadas)' : 'Paquete Full (3 cuotas programadas)'}
+            </p>
+          </div>
+
+          {/* KPI 2: Total Pagado (Identidad Cromática Emerald) */}
+          <div className={`rounded-2xl p-6 transition-all ${
+            esOscuro 
+              ? 'bg-emerald-950/20 border border-emerald-500/30 shadow-sm' 
+              : 'bg-emerald-50/60 border border-emerald-200 shadow-sm'
+          }`}>
+            <span className={`text-xs font-bold uppercase tracking-wider ${
+              esOscuro ? 'text-emerald-400' : 'text-emerald-600'
+            }`}>Total Pagado</span>
+            <h3 className={`text-2xl sm:text-3xl font-bold mt-1.5 ${
+              esOscuro ? 'text-emerald-400' : 'text-emerald-600'
+            }`}>
+              {modoPrueba === 'completado' && 'S/ 900.00'}
+              {modoPrueba === 'al_dia' && 'S/ 600.00'}
+              {modoPrueba === 'bloqueo' && 'S/ 300.00'}
+            </h3>
+            <p className={`text-xs font-medium mt-1 ${
+              esOscuro ? 'text-emerald-300/80' : 'text-emerald-800'
+            }`}>
+              {modoPrueba === 'completado' && '✓ 100% Cancelado (3/3 cuotas)'}
+              {modoPrueba === 'al_dia' && '2 cuotas validadas por tesorería'}
+              {modoPrueba === 'bloqueo' && '1 cuota validada de 3'}
+            </p>
+          </div>
+
+          {/* KPI 3: Saldo Pendiente (Identidad Cromática Indigo / Rose / Slate) */}
+          <div className={`rounded-2xl p-6 transition-all ${
+            modoPrueba === 'bloqueo' 
+              ? esOscuro ? 'bg-rose-950/25 border border-rose-500/30 shadow-sm' : 'bg-rose-50/60 border border-rose-200 shadow-sm'
+              : modoPrueba === 'al_dia'
+                ? esOscuro ? 'bg-indigo-950/20 border border-indigo-500/30 shadow-sm' : 'bg-indigo-50/60 border border-indigo-200 shadow-sm'
+                : esOscuro ? 'bg-slate-900/90 border border-slate-800 shadow-sm' : 'bg-slate-100/60 border border-slate-200 shadow-sm'
+          }`}>
+            <span className={`text-xs font-bold uppercase tracking-wider ${
+              modoPrueba === 'bloqueo' 
+                ? esOscuro ? 'text-rose-400' : 'text-rose-600'
+                : modoPrueba === 'al_dia' 
+                  ? esOscuro ? 'text-indigo-400' : 'text-indigo-600'
+                  : 'text-slate-400'
+            }`}>
+              Saldo Pendiente
+            </span>
+            <h3 className={`text-2xl sm:text-3xl font-bold mt-1.5 ${
+              modoPrueba === 'bloqueo' 
+                ? esOscuro ? 'text-rose-400 font-extrabold' : 'text-rose-600 font-extrabold'
+                : modoPrueba === 'al_dia' 
+                  ? esOscuro ? 'text-indigo-400' : 'text-indigo-600'
+                  : esOscuro ? 'text-slate-400' : 'text-slate-400'
+            }`}>
+              {modoPrueba === 'completado' && 'S/ 0.00'}
+              {modoPrueba === 'al_dia' && 'S/ 300.00'}
+              {modoPrueba === 'bloqueo' && 'S/ 600.00'}
+            </h3>
+            <div className="mt-1">
+              {modoPrueba === 'completado' && (
+                <p className={`text-xs font-semibold ${esOscuro ? 'text-emerald-400' : 'text-emerald-600'}`}>
+                  Sin deudas ni saldos pendientes
+                </p>
+              )}
+              {modoPrueba === 'al_dia' && (
+                <p className={`text-xs font-medium ${esOscuro ? 'text-indigo-300/80' : 'text-indigo-800'}`}>
+                  1 cuota restante por vencer
+                </p>
+              )}
+              {modoPrueba === 'bloqueo' && (
+                <span className={`inline-flex items-center gap-1 text-xs font-bold px-2.5 py-0.5 rounded-full border ${
+                  esOscuro 
+                    ? 'text-rose-300 bg-rose-500/20 border-rose-500/30' 
+                    : 'text-rose-700 bg-rose-100 border-rose-200'
+                }`}>
+                  ⚠️ 2 cuotas vencidas
+                </span>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* TABLA DE HISTORIAL DE COMPROBANTES ADAPTABLE AL TEMA */}
+        <div className={`rounded-2xl p-6 sm:p-8 transition-all ${
+          esOscuro 
+            ? 'bg-slate-900/90 border border-slate-800' 
+            : 'bg-white border border-slate-200 shadow-sm'
+        }`}>
+          <h3 className={`text-lg font-bold mb-6 flex items-center justify-between ${
+            esOscuro ? 'text-white' : 'text-slate-900'
+          }`}>
             <span className="flex items-center gap-2">
-              <FileText className="w-5 h-5 text-indigo-600" />
+              <FileText className={`w-5 h-5 ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`} />
               Historial de Comprobantes Registrados
             </span>
-            <span className="text-xs font-semibold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">
+            <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${
+              esOscuro ? 'text-slate-400 bg-slate-800 border-slate-700' : 'text-slate-500 bg-slate-100 border-slate-200'
+            }`}>
               {historialActual.length} registro(s) verificado(s)
             </span>
           </h3>
@@ -227,7 +337,9 @@ export default function PagosEstudiantePage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="border-b border-slate-100 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                <tr className={`border-b text-xs font-bold uppercase tracking-wider ${
+                  esOscuro ? 'border-slate-800 text-slate-400' : 'border-slate-100 text-slate-400'
+                }`}>
                   <th className="py-3 px-4">Concepto</th>
                   <th className="py-3 px-4">Monto</th>
                   <th className="py-3 px-4">Fecha de Validación</th>
@@ -236,29 +348,47 @@ export default function PagosEstudiantePage() {
                   <th className="py-3 px-4 text-right">Recibo</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 text-sm">
+              <tbody className={`divide-y text-sm ${
+                esOscuro ? 'divide-slate-800/60' : 'divide-slate-100'
+              }`}>
                 {historialActual.map((pago) => (
-                  <tr key={pago.id} className="hover:bg-slate-50/70 transition-colors">
-                    <td className="py-4 px-4 font-semibold text-slate-800">
+                  <tr key={pago.id} className={`transition-colors ${
+                    esOscuro ? 'hover:bg-slate-800/40' : 'hover:bg-slate-50/70'
+                  }`}>
+                    <td className={`py-4 px-4 font-semibold ${
+                      esOscuro ? 'text-slate-200' : 'text-slate-800'
+                    }`}>
                       <div>{pago.cuota}</div>
                       <div className="text-xs text-slate-400 font-normal">{pago.concepto}</div>
                     </td>
-                    <td className="py-4 px-4 font-bold text-slate-900">S/ {pago.monto}.00</td>
-                    <td className="py-4 px-4 text-slate-500 text-xs">{pago.fecha}</td>
+                    <td className={`py-4 px-4 font-bold ${
+                      esOscuro ? 'text-white' : 'text-slate-900'
+                    }`}>S/ {pago.monto}.00</td>
+                    <td className="py-4 px-4 text-slate-400 text-xs">{pago.fecha}</td>
                     <td className="py-4 px-4">
-                      <div className="font-mono text-xs text-indigo-600 font-bold">{pago.comprobante}</div>
+                      <div className={`font-mono text-xs font-bold ${
+                        esOscuro ? 'text-indigo-400' : 'text-indigo-600'
+                      }`}>{pago.comprobante}</div>
                       <div className="text-[11px] text-slate-400">{pago.medio}</div>
                     </td>
                     <td className="py-4 px-4">
-                      <span className="bg-emerald-50 text-emerald-700 border border-emerald-200 font-bold px-3 py-1 rounded-full text-xs inline-flex items-center gap-1">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                      <span className={`font-bold px-3 py-1 rounded-full text-xs inline-flex items-center gap-1 ${
+                        esOscuro 
+                          ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' 
+                          : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                      }`}>
+                        <CheckCircle2 className={`w-3.5 h-3.5 ${esOscuro ? 'text-emerald-400' : 'text-emerald-600'}`} />
                         {pago.estado}
                       </span>
                     </td>
                     <td className="py-4 px-4 text-right">
                       <button
                         onClick={() => setReciboSeleccionado(pago)}
-                        className="inline-flex items-center gap-1.5 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 font-semibold px-3.5 py-2 rounded-xl text-xs transition-colors border border-indigo-200/60 shadow-sm"
+                        className={`inline-flex items-center gap-1.5 font-semibold px-3.5 py-2 rounded-xl text-xs transition-colors border shadow-sm ${
+                          esOscuro 
+                            ? 'bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border-indigo-500/20' 
+                            : 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-200/60'
+                        }`}
                       >
                         <Eye className="w-3.5 h-3.5" /> Ver Recibo
                       </button>
@@ -272,76 +402,94 @@ export default function PagosEstudiantePage() {
 
       </div>
 
-      {/* MODAL DE RECIBO INTERNO */}
+      {/* MODAL DE RECIBO INTERNO (ADAPTABLE AL TEMA) */}
       {reciboSeleccionado && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-md animate-in fade-in duration-200">
-          <div className="bg-white rounded-3xl w-full max-w-xl p-8 shadow-2xl relative border border-slate-200 overflow-hidden animate-in zoom-in-95 duration-200 text-slate-900">
+        <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-md animate-in fade-in duration-200 ${
+          esOscuro ? 'bg-slate-950/80' : 'bg-slate-900/60'
+        }`}>
+          <div className={`rounded-3xl w-full max-w-xl p-6 sm:p-8 shadow-2xl relative border overflow-hidden animate-in zoom-in-95 duration-200 ${
+            esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900'
+          }`}>
             
             {/* Botón de Cierre */}
             <button 
               onClick={() => setReciboSeleccionado(null)}
-              className="absolute right-6 top-6 text-slate-400 hover:text-slate-700 transition-colors p-2 rounded-full hover:bg-slate-100"
+              className={`absolute right-6 top-6 transition-colors p-2 rounded-full ${
+                esOscuro ? 'text-slate-400 hover:text-white hover:bg-slate-800' : 'text-slate-400 hover:text-slate-700 hover:bg-slate-100'
+              }`}
             >
               <X className="w-6 h-6" />
             </button>
 
             {/* Cabecera de Recibo Interno */}
-            <div className="border-b border-slate-200 pb-6 mb-6">
+            <div className={`border-b pb-5 mb-5 ${esOscuro ? 'border-slate-800' : 'border-slate-200'}`}>
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2.5 bg-slate-950 text-white rounded-xl">
-                  <Building2 className="w-6 h-6" />
+                <div className={`p-2.5 rounded-xl ${esOscuro ? 'bg-indigo-600 text-white' : 'bg-slate-950 text-white'}`}>
+                  <Building2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg text-slate-900">EDUMIN ACADEMY LMS</h3>
-                  <p className="text-xs text-slate-500">Recibo de Pago Interno e Historial Institucional</p>
+                  <h3 className={`font-bold text-lg ${esOscuro ? 'text-white' : 'text-slate-900'}`}>EDUMIN ACADEMY LMS</h3>
+                  <p className={`text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>Recibo de Pago Interno e Historial Institucional</p>
                 </div>
               </div>
-              <div className="mt-4 flex items-center justify-between text-xs bg-slate-50 p-3 rounded-xl border border-slate-200">
-                <span className="font-mono text-slate-500">N° RECIBO: <strong className="text-slate-800">REC-2026-00{reciboSeleccionado.id}89</strong></span>
-                <span className="font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-200">VALIDADO EN SISTEMA</span>
+              <div className={`mt-4 flex items-center justify-between text-xs p-3 rounded-xl border ${
+                esOscuro ? 'bg-slate-950 border-slate-800' : 'bg-slate-50 border-slate-200'
+              }`}>
+                <span className={`font-mono ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>N° RECIBO: <strong className={esOscuro ? 'text-slate-200' : 'text-slate-800'}>REC-2026-00{reciboSeleccionado.id}89</strong></span>
+                <span className={`font-bold px-2.5 py-1 rounded-md border ${
+                  esOscuro ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : 'text-emerald-600 bg-emerald-50 border-emerald-200'
+                }`}>VALIDADO EN SISTEMA</span>
               </div>
             </div>
 
             {/* Detalles del Recibo */}
             <div className="space-y-4 text-sm mb-6">
-              <div className="grid grid-cols-2 gap-4 bg-slate-50/70 p-4 rounded-2xl border border-slate-100">
+              <div className={`grid grid-cols-2 gap-4 p-4 rounded-2xl border ${
+                esOscuro ? 'bg-slate-950/60 border-slate-800/60' : 'bg-slate-50/70 border-slate-100'
+              }`}>
                 <div>
                   <span className="text-xs text-slate-400 block font-medium">Estudiante:</span>
-                  <span className="font-bold text-slate-800">Juan Carlos Quispe Mamani</span>
+                  <span className={`font-bold ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>Juan Carlos Quispe Mamani</span>
                 </div>
                 <div>
                   <span className="text-xs text-slate-400 block font-medium">DNI / CE:</span>
-                  <span className="font-mono font-semibold text-slate-800">73849201</span>
+                  <span className={`font-mono font-semibold ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>73849201</span>
                 </div>
                 <div>
                   <span className="text-xs text-slate-400 block font-medium">Fecha de Emisión:</span>
-                  <span className="font-medium text-slate-700">{reciboSeleccionado.fecha}</span>
+                  <span className={`font-medium ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>{reciboSeleccionado.fecha}</span>
                 </div>
                 <div>
                   <span className="text-xs text-slate-400 block font-medium">Operación Bancaria:</span>
-                  <span className="font-mono font-bold text-indigo-600">{reciboSeleccionado.comprobante}</span>
+                  <span className={`font-mono font-bold ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>{reciboSeleccionado.comprobante}</span>
                 </div>
               </div>
 
               {/* Desglose del Pago */}
-              <div className="border border-slate-200 rounded-2xl p-4">
+              <div className={`border rounded-2xl p-4 ${
+                esOscuro ? 'border-slate-800 bg-slate-950/40' : 'border-slate-200 bg-white'
+              }`}>
                 <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Desglose de Concepto</div>
-                <div className="flex justify-between items-center py-2 border-b border-slate-100">
+                <div className={`flex justify-between items-center py-2 border-b ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
                   <div>
-                    <span className="font-semibold text-slate-800">{reciboSeleccionado.cuota}</span>
-                    <p className="text-xs text-slate-500">{reciboSeleccionado.concepto}</p>
+                    <span className={`font-semibold ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>{reciboSeleccionado.cuota}</span>
+                    <p className={`text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>{reciboSeleccionado.concepto}</p>
                   </div>
-                  <span className="font-bold text-slate-900">S/ {reciboSeleccionado.monto}.00</span>
+                  <span className={`font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>S/ {reciboSeleccionado.monto}.00</span>
                 </div>
                 <div className="flex justify-between items-center pt-3 text-base">
-                  <span className="font-bold text-slate-900">Total Abonado:</span>
-                  <span className="font-extrabold text-xl text-emerald-600">S/ {reciboSeleccionado.monto}.00 PEN</span>
+                  <span className={`font-bold ${esOscuro ? 'text-slate-200' : 'text-slate-900'}`}>Total Abonado:</span>
+                  <span className={`font-extrabold text-xl ${esOscuro ? 'text-emerald-400' : 'text-emerald-600'}`}>S/ {reciboSeleccionado.monto}.00 PEN</span>
                 </div>
               </div>
 
               {/* Sello de Seguridad */}
-              <div className="flex items-center gap-3 bg-emerald-50 text-emerald-900 p-3 rounded-xl border border-emerald-200 text-xs">
-                <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
+              <div className={`flex items-center gap-3 p-3 rounded-xl border text-xs ${
+                esOscuro 
+                  ? 'bg-emerald-950/30 text-emerald-300 border-emerald-500/30' 
+                  : 'bg-emerald-50 text-emerald-900 border-emerald-200'
+              }`}>
+                <ShieldCheck className={`w-5 h-5 shrink-0 ${esOscuro ? 'text-emerald-400' : 'text-emerald-600'}`} />
                 <span>
                   Documento digital verificado por la Oficina de Tesorería EDUMIN. Código Hash: <strong className="font-mono">8f92a110b49c</strong>
                 </span>
@@ -352,13 +500,15 @@ export default function PagosEstudiantePage() {
             <div className="flex gap-3 pt-2">
               <button 
                 onClick={() => window.print()} 
-                className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl text-sm transition-colors flex items-center justify-center gap-2 shadow-md"
+                className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-xl text-sm transition-colors flex items-center justify-center gap-2 shadow-md"
               >
                 <Printer className="w-4 h-4" /> Imprimir / Guardar PDF
               </button>
               <button 
                 onClick={() => setReciboSeleccionado(null)}
-                className="bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold px-5 py-3 rounded-xl text-sm transition-colors"
+                className={`font-bold px-5 py-3 rounded-xl text-sm transition-colors ${
+                  esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-slate-300' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
+                }`}
               >
                 Cerrar
               </button>
@@ -377,7 +527,9 @@ export default function PagosEstudiantePage() {
         className="fixed z-50 touch-none select-none"
       >
         {devToolbarVisible ? (
-          <div className="bg-slate-950 text-slate-100 p-4 rounded-3xl shadow-2xl border border-slate-800 backdrop-blur-xl w-72 animate-in slide-in-from-bottom-5 duration-300">
+          <div className={`p-4 rounded-3xl shadow-2xl border backdrop-blur-xl w-72 animate-in slide-in-from-bottom-5 duration-300 ${
+            esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-slate-950 border-slate-800 text-slate-100'
+          }`}>
             {/* Header del Simulador con Manija de Arrastre */}
             <div className="flex items-center justify-between border-b border-slate-800 pb-2.5 mb-3 cursor-grab active:cursor-grabbing">
               <div className="flex items-center gap-2">
@@ -406,7 +558,7 @@ export default function PagosEstudiantePage() {
                 className={`w-full text-left px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-between ${
                   modoPrueba === 'al_dia' 
                     ? 'bg-indigo-600 text-white shadow-md ring-1 ring-indigo-400/50' 
-                    : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800'
+                    : 'bg-slate-900/80 text-slate-300 hover:bg-slate-800 border border-slate-800'
                 }`}
               >
                 <span>1. Al Día (Parcial 2/3)</span>
@@ -418,7 +570,7 @@ export default function PagosEstudiantePage() {
                 className={`w-full text-left px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-between ${
                   modoPrueba === 'completado' 
                     ? 'bg-emerald-600 text-white shadow-md ring-1 ring-emerald-400/50' 
-                    : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800'
+                    : 'bg-slate-900/80 text-slate-300 hover:bg-slate-800 border border-slate-800'
                 }`}
               >
                 <span>2. 100% Pagado (Libre de Deuda)</span>
@@ -430,7 +582,7 @@ export default function PagosEstudiantePage() {
                 className={`w-full text-left px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-between ${
                   modoPrueba === 'bloqueo' 
                     ? 'bg-rose-600 text-white shadow-md ring-1 ring-rose-400/50' 
-                    : 'bg-slate-900 text-slate-300 hover:bg-slate-800 border border-slate-800'
+                    : 'bg-slate-900/80 text-slate-300 hover:bg-slate-800 border border-slate-800'
                 }`}
               >
                 <span>3. Con Deuda (Bloqueo)</span>

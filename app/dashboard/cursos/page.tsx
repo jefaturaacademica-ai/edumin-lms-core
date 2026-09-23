@@ -22,6 +22,7 @@ import {
 import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
+import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 
 export default function CursosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
@@ -232,9 +233,10 @@ export default function CursosPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-slate-50 grid place-items-center p-10">
-        <p className="text-slate-500 font-medium">Cargando cursos académicos...</p>
-      </div>
+      <DashboardLoader 
+        title="Cargando cursos académicos..." 
+        subtitle="Preparando tus programas y catálogo de especialización" 
+      />
     );
   }
 
