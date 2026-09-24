@@ -3,92 +3,65 @@
 import React, { useState, useEffect } from 'react';
 import { 
   BookOpen, Users, Settings, LogOut, 
-  ShieldCheck, Activity, X, Layers, ChevronRight, UploadCloud, Plus, Loader2, AlertCircle, CheckCircle2, FileSpreadsheet, Download, Search, Edit3, Trash2 
+  ShieldCheck, Activity, X, Layers, ChevronRight, UploadCloud, Plus, Loader2, AlertCircle, CheckCircle2, FileSpreadsheet, Download, Search, Edit3, Trash2, Code, Sparkles
 } from 'lucide-react';
-import { useRouter } from 'next/navigation';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 
 export default function CatalogoAdminPage() {
-  const [activeTab, setActiveTab] = useState<'diplomados' | 'cursos'>('diplomados');
+  const [activeTab, setActiveTab] = useState<'diplomados' | 'cursos' | 'talleres'>('diplomados');
   
-  // Estados para modales y búsqueda
+  // Modales
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [showCsvModal, setShowCsvModal] = useState(false);
+  const [showEditModal, setShowEditModal] = useState(false);
+  const [showBulkModulesModal, setShowBulkModulesModal] = useState(false);
+  
+  // Filtro de búsqueda
   const [busqueda, setBusqueda] = useState('');
   
-  // Estados para edición
-  const [showEditModal, setShowEditModal] = useState(false);
+  // Objeto en edición (Diplomado, Curso o Taller)
   const [itemEditando, setItemEditando] = useState<any>(null);
+  const [bulkModulesJson, setBulkModulesJson] = useState('');
 
-  // Estados para selección múltiple (Eliminación en lote)
+  // Selección múltiple para eliminación en lote
   const [seleccionados, setSeleccionados] = useState<string[]>([]);
   
-  // Estados para visor y notificaciones
-  const [diplomadoSeleccionado, setDiplomadoSeleccionado] = useState<any>(null);
-  const [cargandoJson, setCargandoJson] = useState(false);
+  // Estado de carga y mensajes
   const [cargandoSupabase, setCargandoSupabase] = useState(true);
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
 
-  // Estados del formulario de creación
+  // Formulario de creación
+  const [nuevoTipo, setNuevoTipo] = useState<'diplomado' | 'curso' | 'taller'>('diplomado');
   const [nuevoCodigo, setNuevoCodigo] = useState('DIP-23');
+  const [nuevaVersion, setNuevaVersion] = useState('Versión 1');
+  const [nuevoAno, setNuevoAno] = useState('2026');
   const [nuevoTitulo, setNuevoTitulo] = useState('');
-  const [nuevoTipo, setNuevoTipo] = useState<'diplomado' | 'curso'>('diplomado');
+  const [nuevoDocente, setNuevoDocente] = useState('Ing. Mario Hilasaca');
+  const [nuevoNumModulos, setNuevoNumModulos] = useState('3');
+  const [nuevoTallerAplicable, setNuevoTallerAplicable] = useState('Ninguno');
   const [nuevoPrecio, setNuevoPrecio] = useState('150.00');
 
-  // Estado para el archivo importado
+  // Estado para archivo CSV
   const [archivoImportado, setArchivoImportado] = useState<File | null>(null);
 
-  // Conteo real de módulos extraídos de cada JSON
-  const [modulosCounts, setModulosCounts] = useState<Record<string, number>>({});
-
-  // 22 Diplomados Oficiales (con códigos DIP-01 al DIP-22)
-  const [catalogoDiplomados, setCatalogoDiplomados] = useState([
-    { id: 'derecho-minero', codigo: 'DIP-01', titulo: "1. DERECHO MINERO" },
-    { id: 'especialista-en-comercio-internacional-gestion-aduanera-y-logistica', codigo: 'DIP-02', titulo: "2. ESPECIALISTA EN COMERCIO INTERNACIONAL: GESTIÓN ADUANERA Y LOGÍSTICA" },
-    { id: 'geologia-minera', codigo: 'DIP-03', titulo: "3. GEOLOGÍA MINERA" },
-    { id: 'geomecanica-subterranea-y-superficial', codigo: 'DIP-04', titulo: "4. GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL" },
-    { id: 'geometalurgia', codigo: 'DIP-05', titulo: "5. GEOMETALURGIA" },
-    { id: 'geotecnia-minera', codigo: 'DIP-06', titulo: "6. GEOTECNIA MINERA" },
-    { id: 'gerencia-de-sistemas-integrados-de-gestion-hseq', codigo: 'DIP-07', titulo: "7. GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ" },
-    { id: 'gerencia-estrategica-y-liderazgo-de-equipos-en-la-mineria', codigo: 'DIP-08', titulo: "8. GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA" },
-    { id: 'gestion-ambiental-para-el-sector-minero-e-industrial', codigo: 'DIP-09', titulo: "9. GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL" },
-    { id: 'gestion-de-control-operativo-en-procesos-mineros', codigo: 'DIP-10', titulo: "10. GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS" },
-    { id: 'gestion-de-operaciones-industriales', codigo: 'DIP-11', titulo: "11. GESTIÓN DE OPERACIONES INDUSTRIALES" },
-    { id: 'gestion-estrategica-para-empresas-utilizando-big-data-y-analisis-predictivo', codigo: 'DIP-12', titulo: "12. GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO" },
-    { id: 'gestion-logistica-compras-inventarios-y-manejo-de-proveedores', codigo: 'DIP-13', titulo: "13. GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES" },
-    { id: 'gestion-logistica-y-almacenes-en-mineria', codigo: 'DIP-14', titulo: "14. GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA" },
-    { id: 'gestion-logistica-y-proveedores-en-industria-y-mineria', codigo: 'DIP-15', titulo: "15. GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA" },
-    { id: 'gestion-minera', codigo: 'DIP-16', titulo: "16. GESTIÓN MINERA" },
-    { id: 'legislacion-laboral-y-elaboracion-de-planillas', codigo: 'DIP-17', titulo: "17. LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS" },
-    { id: 'mineria-4-0-y-digitalizacion-minera', codigo: 'DIP-18', titulo: "18. MINERÍA 4.0 Y DIGITALIZACIÓN MINERA" },
-    { id: 'prevencion-de-la-conflictividad-riesgos-sociales-y-responsabilidad-social-minera', codigo: 'DIP-19', titulo: "19. PREVENCIÓN DE LA CONFLICTIVIDAD, RIESGOS SOCIALES Y RESPONSABILIDAD SOCIAL MINERA" },
-    { id: 'seguridad-industrial', codigo: 'DIP-20', titulo: "20. SEGURIDAD INDUSTRIAL" },
-    { id: 'seguridad-y-salud-ocupacional-en-la-industria-y-mineria', codigo: 'DIP-21', titulo: "21. SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA" },
-    { id: 'supply-chain-management-en-industria-y-mineria', codigo: 'DIP-22', titulo: "22. SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA" },
-  ]);
-
-  // Cursos desde Supabase public.cursos
+  // Catálogos desde Supabase public.cursos
+  const [catalogoDiplomados, setCatalogoDiplomados] = useState<any[]>([]);
   const [catalogoCursos, setCatalogoCursos] = useState<any[]>([]);
+  const [catalogoTalleres, setCatalogoTalleres] = useState<any[]>([]);
 
   useEffect(() => {
     cargarCatalogoSupabase();
   }, []);
 
   const cargarCatalogoSupabase = async () => {
+    setCargandoSupabase(true);
     try {
       const res = await fetch('/api/admin/catalogo');
       if (res.ok) {
         const data = await res.json();
-        if (Array.isArray(data.cursos) && data.cursos.length > 0) {
-          const cursosFormateados = data.cursos.map((c: any, index: number) => ({
-            id: c.id,
-            codigo: `CUR-${index + 1}`,
-            titulo: c.titulo,
-            duracion: c.duracion,
-            precio: c.precio
-          }));
-          setCatalogoCursos(cursosFormateados);
-        }
+        setCatalogoDiplomados(data.diplomados || []);
+        setCatalogoCursos(data.cursosEspecializacion || []);
+        setCatalogoTalleres(data.talleres || []);
       }
     } catch (err) {
       console.error('Error al cargar catálogo de Supabase:', err);
@@ -97,64 +70,51 @@ export default function CatalogoAdminPage() {
     }
   };
 
-  const abrirDiplomado = async (item: any) => {
-    setCargandoJson(true);
-    setDiplomadoSeleccionado({ titulo: item.titulo, modulos: [], id: item.id, errorMsg: null });
-    
-    try {
-      const res = await fetch(`/api/admin/diplomados/${item.id}`);
-      const data = await res.json();
-
-      if (res.ok) {
-        const mods = Array.isArray(data.modulos) ? data.modulos : [];
-        setModulosCounts(prev => ({ ...prev, [item.id]: mods.length }));
-        setDiplomadoSeleccionado({ titulo: data.diplomado || item.titulo, modulos: mods, id: item.id, errorMsg: null });
-      } else {
-        setDiplomadoSeleccionado({ titulo: item.titulo, modulos: [], id: item.id, errorMsg: data.error || 'Error al leer archivo.' });
-      }
-    } catch (error: any) {
-      setDiplomadoSeleccionado({ titulo: item.titulo, modulos: [], id: item.id, errorMsg: error.message });
-    } finally {
-      setCargandoJson(false);
-    }
-  };
-
   const handleCrearProducto = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!nuevoTitulo.trim() || !nuevoCodigo.trim()) return;
 
-    const idGenerado = nuevoTitulo.toLowerCase().replace(/[^a-z0-9]/g, '-');
+    const idGenerado = `${nuevoTipo}-${nuevoCodigo.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
     
     try {
-      // Guardar en Supabase a través del API /api/admin/catalogo
+      const categoriaMap = {
+        diplomado: 'Diplomados Oficiales',
+        curso: 'Cursos de Alta Especialización',
+        taller: 'Talleres'
+      };
+
       const res = await fetch('/api/admin/catalogo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           id: idGenerado,
           codigo: nuevoCodigo.toUpperCase(),
+          version: nuevaVersion,
+          ano: Number(nuevoAno) || 2026,
           titulo: nuevoTitulo.toUpperCase(),
           tipo: nuevoTipo,
-          precio: Number(nuevoPrecio)
+          categoria: categoriaMap[nuevoTipo],
+          num_modulos: nuevoTipo === 'diplomado' ? Number(nuevoNumModulos) || 3 : 1,
+          taller_aplicable: nuevoTipo === 'diplomado' ? nuevoTallerAplicable : 'Ninguno',
+          docente: nuevoDocente,
+          precio: Number(nuevoPrecio) || 150.00,
+          modulos: nuevoTipo === 'diplomado' ? Array.from({ length: Number(nuevoNumModulos) || 3 }, (_, i) => ({
+            codigo: `M${(i + 1).toString().padStart(2, '0')}`,
+            nombre: `MÓDULO ${i + 1}`,
+            docente: nuevoDocente,
+            clases: [`Clase 1 del Módulo ${i + 1}`, `Clase 2 del Módulo ${i + 1}`]
+          })) : []
         })
       });
 
       const data = await res.json();
 
       if (res.ok) {
-        if (nuevoTipo === 'diplomado') {
-          const nuevoItem = { id: idGenerado, codigo: nuevoCodigo.toUpperCase(), titulo: nuevoTitulo.toUpperCase() };
-          setCatalogoDiplomados([nuevoItem, ...catalogoDiplomados]);
-          setActiveTab('diplomados');
-        } else {
-          const nuevoItem = { id: idGenerado, codigo: nuevoCodigo.toUpperCase(), titulo: nuevoTitulo.toUpperCase(), precio: Number(nuevoPrecio) };
-          setCatalogoCursos([nuevoItem, ...catalogoCursos]);
-          setActiveTab('cursos');
-        }
-
+        await cargarCatalogoSupabase();
+        setActiveTab(nuevoTipo === 'diplomado' ? 'diplomados' : nuevoTipo === 'taller' ? 'talleres' : 'cursos');
         setNuevoTitulo('');
         setShowCreateModal(false);
-        setMensajeExito(`¡Producto [${nuevoCodigo.toUpperCase()}] guardado exitosamente en Supabase!`);
+        setMensajeExito(`¡Producto [${nuevoCodigo.toUpperCase()}] registrado exitosamente en Supabase!`);
         setTimeout(() => setMensajeExito(null), 4000);
       } else {
         alert(`Error al guardar en Supabase: ${data.error}`);
@@ -174,27 +134,126 @@ export default function CatalogoAdminPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           id: itemEditando.id,
+          codigo: itemEditando.codigo,
+          version: itemEditando.version,
+          ano: itemEditando.ano,
           titulo: itemEditando.titulo,
-          precio: itemEditando.precio
+          num_modulos: itemEditando.num_modulos,
+          taller_aplicable: itemEditando.taller_aplicable,
+          docente: itemEditando.docente,
+          precio: itemEditando.precio,
+          modulos: itemEditando.modulos || []
         })
       });
 
       if (res.ok) {
-        if (activeTab === 'diplomados') {
-          setCatalogoDiplomados(prev => prev.map(item => item.id === itemEditando.id ? itemEditando : item));
-        } else {
-          setCatalogoCursos(prev => prev.map(item => item.id === itemEditando.id ? itemEditando : item));
-        }
-
+        await cargarCatalogoSupabase();
         setShowEditModal(false);
         setItemEditando(null);
-        setMensajeExito("¡Producto actualizado correctamente en Supabase!");
+        setMensajeExito("¡Producto y módulos actualizados correctamente en Supabase!");
         setTimeout(() => setMensajeExito(null), 4000);
       } else {
         alert("No se pudo actualizar en Supabase.");
       }
     } catch (err: any) {
       alert(`Error de conexión: ${err.message}`);
+    }
+  };
+
+  // Funciones para manipular Módulos y Clases dentro del Modal de Edición de Diplomados
+  const agregarModuloEditando = () => {
+    if (!itemEditando) return;
+    const actualMods = itemEditando.modulos || [];
+    const nuevoNum = actualMods.length + 1;
+    const nuevoMod = {
+      codigo: `M${nuevoNum.toString().padStart(2, '0')}`,
+      nombre: `MÓDULO ${nuevoNum}: NUEVO MÓDULO`,
+      docente: 'Reginaldo Andía',
+      clases: ['Clase 1 de Introducción']
+    };
+    setItemEditando({
+      ...itemEditando,
+      modulos: [...actualMods, nuevoMod],
+      num_modulos: actualMods.length + 1
+    });
+  };
+
+  const eliminarModuloEditando = (mIdx: number) => {
+    if (!itemEditando) return;
+    const actualMods = itemEditando.modulos.filter((_: any, idx: number) => idx !== mIdx);
+    setItemEditando({
+      ...itemEditando,
+      modulos: actualMods,
+      num_modulos: actualMods.length
+    });
+  };
+
+  const actualizarModuloEditando = (mIdx: number, campo: string, valor: any) => {
+    if (!itemEditando) return;
+    const nuevosMods = [...itemEditando.modulos];
+    nuevosMods[mIdx] = { ...nuevosMods[mIdx], [campo]: valor };
+    setItemEditando({ ...itemEditando, modulos: nuevosMods });
+  };
+
+  const agregarClaseAModulo = (mIdx: number) => {
+    if (!itemEditando) return;
+    const nuevosMods = [...itemEditando.modulos];
+    const clasesActuales = nuevosMods[mIdx].clases || [];
+    nuevosMods[mIdx].clases = [...clasesActuales, `Nueva Clase ${clasesActuales.length + 1}`];
+    setItemEditando({ ...itemEditando, modulos: nuevosMods });
+  };
+
+  const actualizarNombreClase = (mIdx: number, cIdx: number, valor: string) => {
+    if (!itemEditando) return;
+    const nuevosMods = [...itemEditando.modulos];
+    nuevosMods[mIdx].clases[cIdx] = valor;
+    setItemEditando({ ...itemEditando, modulos: nuevosMods });
+  };
+
+  const eliminarClaseDeModulo = (mIdx: number, cIdx: number) => {
+    if (!itemEditando) return;
+    const nuevosMods = [...itemEditando.modulos];
+    nuevosMods[mIdx].clases = nuevosMods[mIdx].clases.filter((_: any, idx: number) => idx !== cIdx);
+    setItemEditando({ ...itemEditando, modulos: nuevosMods });
+  };
+
+  const procesarCargaMasivaModulos = () => {
+    if (!bulkModulesJson.trim() || !itemEditando) return;
+
+    try {
+      const parsed = JSON.parse(bulkModulesJson);
+      let modsFormateados: any[] = [];
+
+      if (Array.isArray(parsed)) {
+        modsFormateados = parsed.map((m: any, idx: number) => ({
+          codigo: m.codigo || `M${(idx + 1).toString().padStart(2, '0')}`,
+          nombre: m.nombre || `MÓDULO ${idx + 1}`,
+          docente: m.docente || 'Reginaldo Andía',
+          clases: Array.isArray(m.clases) ? m.clases : []
+        }));
+      } else if (parsed.modulos && Array.isArray(parsed.modulos)) {
+        modsFormateados = parsed.modulos.map((m: any, idx: number) => ({
+          codigo: m.codigo || `M${(idx + 1).toString().padStart(2, '0')}`,
+          nombre: m.nombre || `MÓDULO ${idx + 1}`,
+          docente: m.docente || 'Reginaldo Andía',
+          clases: Array.isArray(m.clases) ? m.clases : []
+        }));
+      }
+
+      if (modsFormateados.length > 0) {
+        setItemEditando({
+          ...itemEditando,
+          modulos: modsFormateados,
+          num_modulos: modsFormateados.length
+        });
+        setShowBulkModulesModal(false);
+        setBulkModulesJson('');
+        alert(`¡Se cargaron masivamente ${modsFormateados.length} módulos!`);
+      } else {
+        alert('El JSON proporcionado no contiene una lista válida de módulos.');
+      }
+    } catch (e: any) {
+      alert(`Error al procesar JSON: ${e.message}`);
     }
   };
 
@@ -227,12 +286,7 @@ export default function CatalogoAdminPage() {
       });
 
       if (res.ok) {
-        if (activeTab === 'diplomados') {
-          setCatalogoDiplomados(prev => prev.filter(item => !seleccionados.includes(item.id)));
-        } else {
-          setCatalogoCursos(prev => prev.filter(item => !seleccionados.includes(item.id)));
-        }
-
+        await cargarCatalogoSupabase();
         setSeleccionados([]);
         setMensajeExito("¡Productos eliminados correctamente de Supabase!");
         setTimeout(() => setMensajeExito(null), 4000);
@@ -245,11 +299,11 @@ export default function CatalogoAdminPage() {
   };
 
   const descargarPlantillaCsv = () => {
-    const csvContent = "data:text/csv;charset=utf-8,codigo,tipo,titulo,precio\nDIP-23,diplomado,GESTIÓN AVANZADA DE PROYECTOS MINEROS,150\nCUR-77,curso,IMPLEMENTACIÓN DE NORMAS DE SEGURIDAD,150";
+    const csvContent = "data:text/csv;charset=utf-8,codigo,tipo,titulo,docente,precio\nDIP-23,diplomado,GESTIÓN AVANZADA DE PROYECTOS MINEROS,Reginaldo Andía,150\nCUR-77,curso,IMPLEMENTACIÓN DE NORMAS DE SEGURIDAD,Ing. Mario Hilasaca,150\nTAL-03,taller,TALLER DE LIDERAZGO TÁCTICO,Mg. María Jesús Burga,100";
     const encodedUri = encodeURI(csvContent);
     const link = document.createElement("a");
     link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "plantilla_productos_edumin.csv");
+    link.setAttribute("download", "plantilla_catalogo_edumin.csv");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -273,12 +327,13 @@ export default function CatalogoAdminPage() {
       for (let i = 1; i < lineas.length; i++) {
         const partes = lineas[i].split(',').map(val => val ? val.trim().replace(/^"|"$/g, '') : '');
         const codigo = partes[0];
-        const tipo = partes[1];
+        const tipo = partes[1] || 'curso';
         const titulo = partes[2];
-        const precio = partes[3] || '150';
+        const docente = partes[3] || 'Por asignar';
+        const precio = partes[4] || '150';
 
         if (codigo && titulo) {
-          const idGen = titulo.toLowerCase().replace(/[^a-z0-9]/g, '-');
+          const idGen = `${tipo}-${codigo.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
           try {
             await fetch('/api/admin/catalogo', {
               method: 'POST',
@@ -286,8 +341,11 @@ export default function CatalogoAdminPage() {
               body: JSON.stringify({
                 id: idGen,
                 codigo: codigo.toUpperCase(),
+                version: 'Versión 1',
+                ano: 2026,
                 titulo: titulo.toUpperCase(),
-                tipo: tipo || 'curso',
+                tipo,
+                docente,
                 precio: Number(precio)
               })
             });
@@ -299,7 +357,7 @@ export default function CatalogoAdminPage() {
       await cargarCatalogoSupabase();
       setShowCsvModal(false);
       setArchivoImportado(null);
-      setMensajeExito(`¡Se guardaron ${countAgregados} productos correctamente en Supabase!`);
+      setMensajeExito(`¡Se importaron ${countAgregados} productos a Supabase!`);
       setTimeout(() => setMensajeExito(null), 5000);
     };
 
@@ -307,13 +365,18 @@ export default function CatalogoAdminPage() {
   };
 
   const limpiarTexto = (texto: string) => {
-    return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    return (texto || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   };
 
-  const listaBase = activeTab === 'diplomados' ? catalogoDiplomados : catalogoCursos;
+  const listaBase = activeTab === 'diplomados' 
+    ? catalogoDiplomados 
+    : activeTab === 'talleres' 
+    ? catalogoTalleres 
+    : catalogoCursos;
+
   const listaActual = listaBase.filter(item => {
-    const textoBusqueda = limpiarTexto(busqueda);
-    return limpiarTexto(item.titulo).includes(textoBusqueda) || limpiarTexto(item.codigo).includes(textoBusqueda);
+    const q = limpiarTexto(busqueda);
+    return limpiarTexto(item.titulo).includes(q) || limpiarTexto(item.codigo).includes(q) || limpiarTexto(item.docente).includes(q);
   });
 
   return (
@@ -336,10 +399,10 @@ export default function CatalogoAdminPage() {
           <div className="flex justify-between items-center mb-8">
             <div>
               <div className="flex items-center gap-2">
-                <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">Supabase Sincronizado</span>
-                <span className="text-slate-400 text-xs font-mono">• Tabla public.cursos</span>
+                <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">Catálogo Sincronizado</span>
+                <span className="text-slate-400 text-xs font-mono">• Supabase public.cursos</span>
               </div>
-              <h1 className="text-3xl font-bold text-slate-900 mt-1">Gestión de Catálogo & Cursos en Supabase</h1>
+              <h1 className="text-3xl font-bold text-slate-900 mt-1">Gestión del Catálogo Académico</h1>
             </div>
             <div className="flex gap-3">
               {seleccionados.length > 0 && (
@@ -356,11 +419,15 @@ export default function CatalogoAdminPage() {
                 onClick={() => setShowCsvModal(true)} 
                 className="bg-white border border-slate-200 text-slate-700 px-4 py-2.5 rounded-xl font-bold text-xs hover:bg-slate-50 transition shadow-sm flex items-center gap-2 cursor-pointer"
               >
-                <UploadCloud className="w-4 h-4 text-indigo-600" /> Carga Masiva a Supabase (CSV)
+                <UploadCloud className="w-4 h-4 text-indigo-600" /> Carga Masiva (CSV)
               </button>
               <button 
                 type="button"
-                onClick={() => setShowCreateModal(true)} 
+                onClick={() => {
+                  setNuevoTipo(activeTab === 'diplomados' ? 'diplomado' : activeTab === 'talleres' ? 'taller' : 'curso');
+                  setNuevoCodigo(activeTab === 'diplomados' ? `DIP-${catalogoDiplomados.length + 1}` : activeTab === 'talleres' ? `TAL-03` : `CUR-${catalogoCursos.length + 1}`);
+                  setShowCreateModal(true);
+                }} 
                 className="bg-indigo-600 text-white px-5 py-2.5 rounded-xl font-bold text-xs hover:bg-indigo-700 transition shadow-md flex items-center gap-2 cursor-pointer"
               >
                 <Plus className="w-4 h-4" /> Agregar Producto a Supabase
@@ -368,13 +435,26 @@ export default function CatalogoAdminPage() {
             </div>
           </div>
 
+          {/* Navegación por Pestañas */}
           <div className="flex border-b border-slate-200 mb-6 justify-between items-center">
             <div className="flex">
-              <button onClick={() => { setActiveTab('diplomados'); setSeleccionados([]); }} className={`pb-3 px-4 font-bold text-sm transition border-b-2 cursor-pointer ${activeTab === 'diplomados' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}>
+              <button 
+                onClick={() => { setActiveTab('diplomados'); setSeleccionados([]); }} 
+                className={`pb-3 px-5 font-bold text-sm transition border-b-2 cursor-pointer ${activeTab === 'diplomados' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+              >
                 Diplomados Oficiales ({catalogoDiplomados.length})
               </button>
-              <button onClick={() => { setActiveTab('cursos'); setSeleccionados([]); }} className={`pb-3 px-4 font-bold text-sm transition border-b-2 cursor-pointer ${activeTab === 'cursos' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}>
+              <button 
+                onClick={() => { setActiveTab('cursos'); setSeleccionados([]); }} 
+                className={`pb-3 px-5 font-bold text-sm transition border-b-2 cursor-pointer ${activeTab === 'cursos' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+              >
                 Cursos de Alta Especialización ({catalogoCursos.length})
+              </button>
+              <button 
+                onClick={() => { setActiveTab('talleres'); setSeleccionados([]); }} 
+                className={`pb-3 px-5 font-bold text-sm transition border-b-2 cursor-pointer ${activeTab === 'talleres' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+              >
+                Talleres ({catalogoTalleres.length})
               </button>
             </div>
 
@@ -384,7 +464,7 @@ export default function CatalogoAdminPage() {
               </span>
               <input 
                 type="text"
-                placeholder="Buscar (ej. logistica o cur-1)..."
+                placeholder="Buscar por código, nombre o docente..."
                 value={busqueda}
                 onChange={(e) => setBusqueda(e.target.value)}
                 className="w-full pl-10 pr-4 py-2 bg-white border border-slate-200 rounded-xl text-xs font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800 shadow-sm"
@@ -406,10 +486,24 @@ export default function CatalogoAdminPage() {
                       />
                     </th>
                     <th className="pb-3 px-4">Código</th>
-                    <th className="pb-3 px-4">Nº Módulos</th>
-                    <th className="pb-3 px-4">Nombre del Programa</th>
-                    <th className="pb-3 px-4">Origen Data</th>
-                    <th className="pb-3 px-4 text-right">Acciones Supabase</th>
+                    
+                    {activeTab === 'diplomados' ? (
+                      <>
+                        <th className="pb-3 px-4">Versión</th>
+                        <th className="pb-3 px-4">Año</th>
+                        <th className="pb-3 px-4">Nombre del Diplomado</th>
+                        <th className="pb-3 px-4 text-center"># Módulos</th>
+                        <th className="pb-3 px-4">Taller Aplicable</th>
+                      </>
+                    ) : (
+                      <>
+                        <th className="pb-3 px-4">Año</th>
+                        <th className="pb-3 px-4">Nombre del Programable</th>
+                        <th className="pb-3 px-4">Docente Asignado</th>
+                      </>
+                    )}
+
+                    <th className="pb-3 px-4 text-right">Acción</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-xs">
@@ -425,40 +519,45 @@ export default function CatalogoAdminPage() {
                           />
                         </td>
                         <td className="py-4 px-4 font-mono font-black text-indigo-700 bg-indigo-50/40 rounded-lg">{item.codigo}</td>
-                        <td className="py-4 px-4 font-bold text-slate-700 text-center">
-                          {activeTab === 'diplomados' 
-                            ? (modulosCounts[item.id] !== undefined ? `${modulosCounts[item.id]} Módulos` : '4 Módulos') 
-                            : '1 Módulo'}
-                        </td>
-                        <td className="py-4 px-4 font-bold text-slate-800">{item.titulo}</td>
-                        <td className="py-4 px-4 text-slate-500 font-semibold">
-                          <span className="bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded text-[10px] font-bold border border-emerald-200">
-                            Supabase DB
-                          </span>
-                        </td>
-                        <td className="py-4 px-4 text-right space-x-2">
+
+                        {activeTab === 'diplomados' ? (
+                          <>
+                            <td className="py-4 px-4 font-bold text-slate-600">{item.version || 'Versión 1'}</td>
+                            <td className="py-4 px-4 font-mono text-slate-600">{item.ano || 2026}</td>
+                            <td className="py-4 px-4 font-bold text-slate-800">{item.titulo}</td>
+                            <td className="py-4 px-4 font-bold text-slate-700 text-center">
+                              <span className="bg-slate-100 px-2.5 py-1 rounded-md text-[11px]">
+                                {Array.isArray(item.modulos) && item.modulos.length > 0 ? `${item.modulos.length} Módulos` : `${item.num_modulos || 3} Módulos`}
+                              </span>
+                            </td>
+                            <td className="py-4 px-4">
+                              <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${item.taller_aplicable && item.taller_aplicable !== 'Ninguno' ? 'bg-amber-100 text-amber-800 border border-amber-200' : 'bg-slate-100 text-slate-500'}`}>
+                                {item.taller_aplicable || 'Ninguno'}
+                              </span>
+                            </td>
+                          </>
+                        ) : (
+                          <>
+                            <td className="py-4 px-4 font-mono text-slate-600">{item.ano || 2026}</td>
+                            <td className="py-4 px-4 font-bold text-slate-800">{item.titulo}</td>
+                            <td className="py-4 px-4 font-semibold text-indigo-600">{item.docente || 'Por asignar'}</td>
+                          </>
+                        )}
+
+                        <td className="py-4 px-4 text-right">
                           <button 
-                            onClick={() => { setItemEditando({ ...item }); setShowEditModal(true); }}
-                            className="bg-slate-100 text-slate-700 hover:bg-slate-200 px-2.5 py-1.5 rounded-xl font-bold text-xs transition-all inline-flex items-center gap-1 cursor-pointer"
-                            title="Editar en Supabase"
+                            onClick={() => { setItemEditando({ ...item, modulos: item.modulos || [] }); setShowEditModal(true); }}
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-1.5 rounded-xl font-bold text-xs transition-all inline-flex items-center gap-1.5 shadow-sm cursor-pointer"
                           >
                             <Edit3 className="size-3.5" /> Editar
                           </button>
-                          {activeTab === 'diplomados' && (
-                            <button 
-                              onClick={() => abrirDiplomado(item)}
-                              className="bg-indigo-50 text-indigo-600 hover:bg-indigo-600 hover:text-white px-3 py-1.5 rounded-xl font-bold text-xs transition-all inline-flex items-center gap-1.5 shadow-sm cursor-pointer"
-                            >
-                              <Layers className="size-3.5" /> Leer Temario
-                            </button>
-                          )}
                         </td>
                       </tr>
                     ))
                   ) : (
                     <tr>
-                      <td colSpan={6} className="text-center py-10 text-slate-400 font-medium">
-                        No se encontraron resultados para "{busqueda}"
+                      <td colSpan={activeTab === 'diplomados' ? 8 : 6} className="text-center py-12 text-slate-400 font-medium">
+                        {cargandoSupabase ? 'Cargando catálogo desde Supabase...' : `No se encontraron registros para "${busqueda}".`}
                       </td>
                     </tr>
                   )}
@@ -470,60 +569,314 @@ export default function CatalogoAdminPage() {
         </div>
       </main>
 
+      {/* ========================================================= */}
       {/* MODAL: EDITAR PRODUCTO EN SUPABASE */}
+      {/* ========================================================= */}
       {showEditModal && itemEditando && (
         <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
-            <div className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
-              <h3 className="text-base font-bold text-slate-900">Editar en Supabase</h3>
-              <button onClick={() => setShowEditModal(false)} className="p-1.5 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">
+          <div className="bg-white w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
+            <div className="px-8 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-wider text-indigo-600 bg-indigo-50 px-2.5 py-0.5 rounded-full border border-indigo-200">
+                  Edición de Catálogo Supabase
+                </span>
+                <h3 className="text-xl font-bold text-slate-900 mt-1">{itemEditando.titulo}</h3>
+              </div>
+              <button onClick={() => setShowEditModal(false)} className="p-2 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">
                 <X className="w-5 h-5" />
               </button>
             </div>
             
-            <form onSubmit={handleGuardarEdicion} className="p-6 space-y-4">
-              <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Código Único</label>
-                <input 
-                  type="text" 
-                  disabled
-                  value={itemEditando.codigo}
-                  className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-mono font-bold bg-slate-100 text-slate-500 uppercase cursor-not-allowed"
-                />
+            <form onSubmit={handleGuardarEdicion} className="p-8 overflow-y-auto flex-1 space-y-6">
+              
+              {/* Campos Básicos */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                <div>
+                  <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Código</label>
+                  <input 
+                    type="text" 
+                    value={itemEditando.codigo}
+                    onChange={(e) => setItemEditando({ ...itemEditando, codigo: e.target.value.toUpperCase() })}
+                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900"
+                  />
+                </div>
+
+                {itemEditando.tipo === 'diplomado' ? (
+                  <>
+                    <div>
+                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Versión</label>
+                      <input 
+                        type="text" 
+                        value={itemEditando.version || 'Versión 1'}
+                        onChange={(e) => setItemEditando({ ...itemEditando, version: e.target.value })}
+                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Año</label>
+                      <input 
+                        type="number" 
+                        value={itemEditando.ano || 2026}
+                        onChange={(e) => setItemEditando({ ...itemEditando, ano: Number(e.target.value) })}
+                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900"
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div>
+                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Año</label>
+                      <input 
+                        type="number" 
+                        value={itemEditando.ano || 2026}
+                        onChange={(e) => setItemEditando({ ...itemEditando, ano: Number(e.target.value) })}
+                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Docente Asignado</label>
+                      <input 
+                        type="text" 
+                        value={itemEditando.docente || ''}
+                        onChange={(e) => setItemEditando({ ...itemEditando, docente: e.target.value })}
+                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-indigo-700"
+                      />
+                    </div>
+                  </>
+                )}
+
+                <div className="md:col-span-3">
+                  <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Nombre del Programa</label>
+                  <input 
+                    type="text" 
+                    required
+                    value={itemEditando.titulo}
+                    onChange={(e) => setItemEditando({ ...itemEditando, titulo: e.target.value.toUpperCase() })}
+                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
+                  />
+                </div>
+
+                {itemEditando.tipo === 'diplomado' && (
+                  <>
+                    <div>
+                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Taller Aplicable</label>
+                      <select 
+                        value={itemEditando.taller_aplicable || 'Ninguno'}
+                        onChange={(e) => setItemEditando({ ...itemEditando, taller_aplicable: e.target.value })}
+                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
+                      >
+                        <option value="Ninguno">Ninguno</option>
+                        <option value="Taller 1">Taller 1: Softskills en la Industria y Minería</option>
+                        <option value="Taller 2">Taller 2: Seguridad Basada en el Comportamiento</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1"># Módulos Registrados</label>
+                      <input 
+                        type="number" 
+                        readOnly
+                        value={itemEditando.modulos ? itemEditando.modulos.length : 3}
+                        className="w-full px-3 py-2 bg-slate-100 border border-slate-200 rounded-xl text-xs font-bold text-slate-700"
+                      />
+                    </div>
+                  </>
+                )}
+
               </div>
 
-              <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Título del Programa <span className="text-red-500">*</span></label>
-                <input 
-                  type="text" 
-                  required
-                  value={itemEditando.titulo}
-                  onChange={(e) => setItemEditando({ ...itemEditando, titulo: e.target.value.toUpperCase() })}
-                  className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800"
-                />
-              </div>
+              {/* Sección de Módulos y Clases (Solo para Diplomados) */}
+              {itemEditando.tipo === 'diplomado' && (
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center border-b border-slate-200 pb-3">
+                    <div>
+                      <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
+                        <Layers className="w-4 h-4 text-indigo-600" /> Estructura de Módulos y Clases ({itemEditando.modulos ? itemEditando.modulos.length : 0})
+                      </h4>
+                      <p className="text-[11px] text-slate-500">Edita los nombres de módulo, asigna docentes y configura las clases.</p>
+                    </div>
+
+                    <div className="flex gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setShowBulkModulesModal(true)}
+                        className="bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 cursor-pointer"
+                      >
+                        <Code className="size-3.5" /> Carga Masiva Módulos (JSON)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={agregarModuloEditando}
+                        className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-sm cursor-pointer"
+                      >
+                        <Plus className="size-3.5" /> + Agregar Módulo
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Lista de Módulos */}
+                  <div className="space-y-4">
+                    {itemEditando.modulos && itemEditando.modulos.length > 0 ? (
+                      itemEditando.modulos.map((mod: any, mIdx: number) => (
+                        <div key={mIdx} className="bg-slate-50 border border-slate-200 p-5 rounded-2xl space-y-3">
+                          <div className="flex justify-between items-center gap-3">
+                            <div className="flex items-center gap-2 flex-1">
+                              <span className="bg-indigo-600 text-white font-mono font-bold px-2.5 py-1 rounded-lg text-xs">
+                                {mod.codigo || `M${(mIdx + 1).toString().padStart(2, '0')}`}
+                              </span>
+                              <input 
+                                type="text"
+                                placeholder="Nombre del Módulo..."
+                                value={mod.nombre || ''}
+                                onChange={(e) => actualizarModuloEditando(mIdx, 'nombre', e.target.value)}
+                                className="flex-1 px-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
+                              />
+                            </div>
+                            
+                            <div className="w-48">
+                              <input 
+                                type="text"
+                                placeholder="Docente del Módulo..."
+                                value={mod.docente || ''}
+                                onChange={(e) => actualizarModuloEditando(mIdx, 'docente', e.target.value)}
+                                className="w-full px-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs font-semibold text-indigo-700"
+                              />
+                            </div>
+
+                            <button
+                              type="button"
+                              onClick={() => eliminarModuloEditando(mIdx)}
+                              className="text-red-500 hover:bg-red-50 p-1.5 rounded-lg transition cursor-pointer"
+                              title="Eliminar este módulo"
+                            >
+                              <Trash2 className="size-4" />
+                            </button>
+                          </div>
+
+                          {/* Lista de Clases del Módulo */}
+                          <div className="bg-white p-4 rounded-xl border border-slate-200 space-y-2">
+                            <div className="flex justify-between items-center mb-1">
+                              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                                Clases ({mod.clases ? mod.clases.length : 0})
+                              </span>
+                              <button
+                                type="button"
+                                onClick={() => agregarClaseAModulo(mIdx)}
+                                className="text-[10px] font-bold text-indigo-600 hover:underline flex items-center gap-1 cursor-pointer"
+                              >
+                                <Plus className="size-3" /> Agregar Clase
+                              </button>
+                            </div>
+
+                            <div className="space-y-2">
+                              {mod.clases && mod.clases.length > 0 ? (
+                                mod.clases.map((clase: string, cIdx: number) => (
+                                  <div key={cIdx} className="flex items-center gap-2">
+                                    <span className="text-[10px] font-mono text-slate-400 w-5">{cIdx + 1}.</span>
+                                    <input 
+                                      type="text"
+                                      value={clase}
+                                      onChange={(e) => actualizarNombreClase(mIdx, cIdx, e.target.value)}
+                                      className="flex-1 px-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800"
+                                    />
+                                    <button
+                                      type="button"
+                                      onClick={() => eliminarClaseDeModulo(mIdx, cIdx)}
+                                      className="text-slate-400 hover:text-red-500 p-1 transition cursor-pointer"
+                                    >
+                                      <X className="size-3.5" />
+                                    </button>
+                                  </div>
+                                ))
+                              ) : (
+                                <p className="text-[10px] text-slate-400 italic">No hay clases agregadas aún a este módulo.</p>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="text-center py-8 bg-slate-50 border border-slate-200 rounded-2xl">
+                        <p className="text-xs text-slate-500 font-medium">Este diplomado aún no tiene módulos configurados.</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
 
               <div className="pt-4 flex justify-end gap-3 border-t border-slate-100">
                 <button 
                   type="button" 
                   onClick={() => setShowEditModal(false)}
-                  className="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100 transition cursor-pointer"
+                  className="px-5 py-2.5 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100 transition cursor-pointer"
                 >
                   Cancelar
                 </button>
                 <button 
                   type="submit"
-                  className="bg-indigo-600 text-white px-5 py-2 rounded-xl text-xs font-bold hover:bg-indigo-700 transition shadow-md cursor-pointer"
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-xl text-xs font-bold transition shadow-md cursor-pointer"
                 >
-                  Guardar en Supabase
+                  Guardar Cambios en Supabase
                 </button>
               </div>
+
             </form>
           </div>
         </div>
       )}
 
+      {/* ========================================================= */}
+      {/* MODAL: CARGA MASIVA DE MÓDULOS (JSON) */}
+      {/* ========================================================= */}
+      {showBulkModulesModal && itemEditando && (
+        <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[10000] flex items-center justify-center p-4">
+          <div className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
+            <div className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
+              <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
+                <Code className="w-5 h-5 text-indigo-600" /> Carga Masiva de Módulos (JSON)
+              </h3>
+              <button onClick={() => setShowBulkModulesModal(false)} className="p-1.5 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            
+            <div className="p-6 space-y-4">
+              <p className="text-xs text-slate-500">
+                Pega aquí la estructura JSON de módulos y clases para reemplazarlos masivamente en el diplomado <strong>{itemEditando.titulo}</strong>:
+              </p>
+
+              <textarea 
+                rows={10}
+                placeholder={`[\n  {\n    "codigo": "M01",\n    "nombre": "LEGISLACIÓN MINERA",\n    "docente": "Reginaldo Andía",\n    "clases": ["Clase 1: Marco Legal", "Clase 2: Catastro"]\n  }\n]`}
+                value={bulkModulesJson}
+                onChange={(e) => setBulkModulesJson(e.target.value)}
+                className="w-full p-4 bg-slate-900 text-emerald-400 font-mono text-xs rounded-2xl border border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+              />
+
+              <div className="flex justify-end gap-3 pt-2">
+                <button 
+                  type="button" 
+                  onClick={() => setShowBulkModulesModal(false)}
+                  className="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 hover:bg-slate-100 transition cursor-pointer"
+                >
+                  Cancelar
+                </button>
+                <button 
+                  type="button"
+                  onClick={procesarCargaMasivaModulos}
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-xl text-xs font-bold shadow-md transition cursor-pointer"
+                >
+                  Importar Módulos
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ========================================================= */}
       {/* MODAL: CREAR NUEVO PRODUCTO EN SUPABASE */}
+      {/* ========================================================= */}
       {showCreateModal && (
         <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4">
           <div className="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
@@ -539,37 +892,102 @@ export default function CatalogoAdminPage() {
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Tipo de Programa</label>
                 <select 
                   value={nuevoTipo} 
-                  onChange={(e) => setNuevoTipo(e.target.value as any)}
+                  onChange={(e) => {
+                    const tipo = e.target.value as any;
+                    setNuevoTipo(tipo);
+                    setNuevoCodigo(tipo === 'diplomado' ? `DIP-${catalogoDiplomados.length + 1}` : tipo === 'taller' ? `TAL-03` : `CUR-${catalogoCursos.length + 1}`);
+                  }}
                   className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800"
                 >
                   <option value="diplomado">Diplomado Oficial</option>
                   <option value="curso">Curso de Alta Especialización</option>
+                  <option value="taller">Taller Práctico</option>
                 </select>
               </div>
 
-              <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Código Único (Ej: DIP-23 / CUR-77) <span className="text-red-500">*</span></label>
-                <input 
-                  type="text" 
-                  required
-                  placeholder="DIP-23" 
-                  value={nuevoCodigo}
-                  onChange={(e) => setNuevoCodigo(e.target.value)}
-                  className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-mono font-bold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-900 uppercase"
-                />
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Código Único</label>
+                  <input 
+                    type="text" 
+                    required
+                    value={nuevoCodigo}
+                    onChange={(e) => setNuevoCodigo(e.target.value.toUpperCase())}
+                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-mono font-bold bg-slate-50 text-slate-900 uppercase"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Año</label>
+                  <input 
+                    type="number" 
+                    required
+                    value={nuevoAno}
+                    onChange={(e) => setNuevoAno(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-mono font-bold bg-slate-50 text-slate-900"
+                  />
+                </div>
               </div>
 
+              {nuevoTipo === 'diplomado' && (
+                <div className="grid grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Versión</label>
+                    <input 
+                      type="text" 
+                      value={nuevaVersion}
+                      onChange={(e) => setNuevaVersion(e.target.value)}
+                      className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-bold bg-slate-50 text-slate-900"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5"># Módulos Iniciales</label>
+                    <input 
+                      type="number" 
+                      value={nuevoNumModulos}
+                      onChange={(e) => setNuevoNumModulos(e.target.value)}
+                      className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-bold bg-slate-50 text-slate-900"
+                    />
+                  </div>
+                </div>
+              )}
+
               <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Título del Programa <span className="text-red-500">*</span></label>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Nombre del Programa <span className="text-red-500">*</span></label>
                 <input 
                   type="text" 
                   required
-                  placeholder="Ej: GESTIÓN AVANZADA DE YACIMIENTOS" 
+                  placeholder="Ej: GESTIÓN MINERA AVANZADA" 
                   value={nuevoTitulo}
                   onChange={(e) => setNuevoTitulo(e.target.value)}
                   className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800"
                 />
               </div>
+
+              {nuevoTipo !== 'diplomado' ? (
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Docente Asignado</label>
+                  <input 
+                    type="text" 
+                    value={nuevoDocente}
+                    onChange={(e) => setNuevoDocente(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-bold bg-slate-50 text-indigo-700"
+                  />
+                </div>
+              ) : (
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Taller Aplicable</label>
+                  <select 
+                    value={nuevoTallerAplicable} 
+                    onChange={(e) => setNuevoTallerAplicable(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800"
+                  >
+                    <option value="Ninguno">Ninguno</option>
+                    <option value="Taller 1">Taller 1: Softskills en la Industria y Minería</option>
+                    <option value="Taller 2">Taller 2: Seguridad Basada en el Comportamiento</option>
+                  </select>
+                </div>
+              )}
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Precio de Venta (S/)</label>
@@ -591,7 +1009,7 @@ export default function CatalogoAdminPage() {
                 </button>
                 <button 
                   type="submit"
-                  className="bg-indigo-600 text-white px-5 py-2 rounded-xl text-xs font-bold hover:bg-indigo-700 transition shadow-md cursor-pointer"
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-xl text-xs font-bold shadow-md transition cursor-pointer"
                 >
                   Guardar en Supabase
                 </button>
@@ -601,7 +1019,9 @@ export default function CatalogoAdminPage() {
         </div>
       )}
 
-      {/* MODAL: CARGA MASIVA A SUPABASE */}
+      {/* ========================================================= */}
+      {/* MODAL: CARGA MASIVA A SUPABASE (CSV) */}
+      {/* ========================================================= */}
       {showCsvModal && (
         <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4">
           <div className="bg-white w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
@@ -654,78 +1074,6 @@ export default function CatalogoAdminPage() {
                 </button>
               </div>
             </form>
-          </div>
-        </div>
-      )}
-
-      {/* MODAL: VISOR DE MÓDULOS (JSON) */}
-      {diplomadoSeleccionado && (
-        <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4">
-          <div className="bg-white w-full max-w-4xl rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh] border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
-            <div className="px-8 py-6 border-b border-slate-100 flex items-center justify-between bg-slate-50">
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-600">
-                  lib/data/diplomados/{diplomadoSeleccionado.id}.json
-                </span>
-                <h3 className="text-xl font-bold text-slate-900 mt-0.5">{diplomadoSeleccionado.titulo}</h3>
-              </div>
-              <button onClick={() => setDiplomadoSeleccionado(null)} className="p-2 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            <div className="p-8 overflow-y-auto flex-1 space-y-6 bg-slate-50/50">
-              {cargandoJson ? (
-                <div className="text-center py-16 flex flex-col items-center justify-center">
-                  <Loader2 className="w-10 h-10 text-indigo-600 animate-spin mb-3" />
-                  <p className="text-xs font-bold text-slate-600">Buscando archivo en disco...</p>
-                </div>
-              ) : diplomadoSeleccionado.errorMsg ? (
-                <div className="text-center py-12 bg-white border border-red-200 rounded-2xl p-6">
-                  <AlertCircle className="w-10 h-10 text-red-500 mx-auto mb-3" />
-                  <h4 className="font-bold text-slate-800 text-base">Fallo de lectura en el servidor</h4>
-                  <p className="text-xs text-red-600 mt-1 font-mono">{diplomadoSeleccionado.errorMsg}</p>
-                </div>
-              ) : diplomadoSeleccionado.modulos && diplomadoSeleccionado.modulos.length > 0 ? (
-                diplomadoSeleccionado.modulos.map((mod: any, idx: number) => (
-                  <div key={idx} className="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm space-y-4">
-                    <div className="flex justify-between items-start border-b border-slate-100 pb-3">
-                      <div>
-                        <span className="bg-indigo-100 text-indigo-800 text-[10px] font-black px-2.5 py-1 rounded-md font-mono">{mod.codigo}</span>
-                        <h4 className="font-bold text-slate-900 text-base mt-2">{mod.nombre}</h4>
-                      </div>
-                      <span className="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
-                        Docente: {mod.docente || 'No especificado'}
-                      </span>
-                    </div>
-
-                    <div>
-                      <h5 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Clases / Temas Registrados:</h5>
-                      <div className="space-y-2">
-                        {mod.clases.map((clase: string, cIdx: number) => (
-                          <div key={cIdx} className="bg-slate-50 border border-slate-100 rounded-xl px-4 py-2.5 text-xs font-medium text-slate-700 flex items-center gap-2">
-                            <ChevronRight className="size-4 text-indigo-500 shrink-0" />
-                            <span>{clase}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <div className="text-center py-12 bg-white border border-slate-200 rounded-2xl">
-                  <BookOpen className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-                  <h4 className="font-bold text-slate-800 text-base">Archivo JSON vacío o sin módulos</h4>
-                  <p className="text-xs text-slate-500 mt-1">El archivo existe pero aún no contiene el arreglo de módulos escrito en disco.</p>
-                </div>
-              )}
-            </div>
-
-            <div className="p-6 bg-white border-t border-slate-100 flex justify-end">
-              <button onClick={() => setDiplomadoSeleccionado(null)} className="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-xs cursor-pointer">
-                Cerrar Visor
-              </button>
-            </div>
           </div>
         </div>
       )}
