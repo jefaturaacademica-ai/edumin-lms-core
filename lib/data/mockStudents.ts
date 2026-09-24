@@ -5,7 +5,7 @@ export interface EstudianteCompleto {
   apellidos: string;
   email: string;
   telefono: string;
-  paquete_adquirido: 'COMPLETO' | 'FULL' | 'ILIMITADO';
+  paquete_adquirido: 'COMPLETO' | 'FULL' | 'ILIMITADO' | '100% CONTADO' | 'CONTADO' | string;
   cuotas_pagadas: number;
   cuotas_totales: number;
   monto_cuota: number;
@@ -13,32 +13,34 @@ export interface EstudianteCompleto {
   deuda_total_pendiente: number;
   cupos_diplomados: number;
   diplomado_actual: string;
-  mes_inscripcion: 'julio' | 'agosto' | 'septiembre';
-  estado: 'Al Día' | 'Deuda Activa' | 'Prórroga Activa' | 'Prórroga Vencida' | 'Bloqueado por Sistema';
+  diplomado_2?: string;
+  mes_inscripcion: string;
+  estado: string;
   bloqueado: boolean;
   prorroga_hasta: string | null;
-  solicitud_cip: 'Ninguna' | 'Pendiente' | 'Aprobado' | 'Emitido';
-  solicitud_datos: 'Ninguna' | 'Pendiente' | 'Aprobada' | 'Rechazada';
+  solicitud_cip?: string;
+  solicitud_datos?: string;
   // Métricas 360° Académicas, Marketing y Churn
   ultima_conexion: string;
   dias_inactivo: number;
   avance_porcentaje: number;
-  modulos_completados: number;
-  modulos_totales: number;
+  modulos_completados?: number;
+  modulos_totales?: number;
   nota_promedio: number;
-  nivel_riesgo_churn: 'BAJO' | 'MEDIO' | 'ALTO' | 'CRÍTICO';
-  canal_adquisicion: 'Facebook Ads' | 'Google Search' | 'WhatsApp Directo' | 'Recomendación';
+  nivel_riesgo_churn: 'BAJO' | 'MEDIO' | 'ALTO' | 'CRÍTICO' | string;
+  canal_adquisicion: string;
+  historial_pagos?: any[];
   datos_solicitados?: {
     nombres_nuevos: string;
     apellidos_nuevos: string;
     dni_nuevo: string;
     sustento_url: string;
   };
-  cronograma_pagos: {
+  cronograma_pagos?: {
     cuota: number;
     monto: number;
     vencimiento: string;
-    estado: 'PAGADO' | 'PENDIENTE' | 'VENCIDO';
+    estado: 'PAGADO' | 'PENDIENTE' | 'VENCIDO' | string;
   }[];
 }
 
