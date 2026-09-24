@@ -21,7 +21,7 @@ export async function loginWithDni(
   formData: FormData,
 ): Promise<LoginState> {
   const dni = formData.get("dni")?.toString().trim();
-  const password = formData.get("password")?.toString();
+  const password = formData.get("password")?.toString()?.trim();
 
   if (!dni || !password) {
     return { error: "Ingresa tu DNI/Carnet y contraseña para continuar." };
@@ -30,23 +30,39 @@ export async function loginWithDni(
   const admin = createAdminClient();
   const { data: profile, error: profileError } = await admin
     .from("profiles")
-    .select("email")
+    .select("id, email, dni_ce, contrasena, role, bloqueado")
     .eq("dni_ce", dni)
     .maybeSingle();
 
-  // La respuesta es deliberadamente genérica para no enumerar cuentas por DNI.
-  if (profileError || !profile?.email) {
+  if (profileError || !profile) {
     return INVALID_CREDENTIALS;
   }
 
+  if (profile.bloqueado) {
+    return { error: "Tu acceso ha sido bloqueado por el sistema. Por favor comunícate con administración." };
+  }
+
+  // 1. Intentar primero con Supabase Auth nativo
   const supabase = await createClient();
-  const { error } = await supabase.auth.signInWithPassword({
-    email: profile.email,
+  const { error: authError } = await supabase.auth.signInWithPassword({
+    email: profile.email || `${profile.dni_ce}@edumin.pe`,
     password,
   });
 
-  if (error) {
-    return INVALID_CREDENTIALS;
+  // 2. Si Auth nativo falla o la cuenta está en profiles, verificar contraseña esperada (columna 'contrasena' o DNI por defecto)
+  if (authError) {
+    const passwordEsperada = (profile.contrasena && profile.contrasena.trim() !== "")
+      ? profile.contrasena.trim()
+      : profile.dni_ce;
+
+    if (password !== passwordEsperada) {
+      return INVALID_CREDENTIALS;
+    }
+  }
+
+  // 3. Redirección según rol
+  if (profile.role === "ADMIN") {
+    redirect("/admin");
   }
 
   redirect("/dashboard");

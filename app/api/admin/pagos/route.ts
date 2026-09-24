@@ -71,6 +71,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: `Error al actualizar cuotas: ${updateError.message}` }, { status: 500 });
     }
 
+    const nroCuota = body.nro_cuota || body.concepto || `Cuota ${nuevasCuotas}`;
+
     // 3. Insertar registro en tabla pagos
     try {
       await admin.from("pagos").insert({
@@ -78,6 +80,9 @@ export async function POST(request: Request) {
         dni_ce: student.dni_ce,
         monto,
         metodo,
+        comprobante,
+        concepto: nroCuota,
+        nro_cuota: nroCuota,
         estado: "Completado"
       });
     } catch (err: any) {
@@ -95,7 +100,8 @@ export async function POST(request: Request) {
           cuotas_pagadas: nuevasCuotas,
           monto,
           metodo,
-          comprobante
+          comprobante,
+          concepto: nroCuota
         }
       });
     } catch (err: any) {
@@ -118,7 +124,8 @@ export async function POST(request: Request) {
             paquete_actual: updatedProfile.paquete_adquirido,
             cuotas_pagadas: updatedProfile.cuotas_pagadas,
             monto,
-            comprobante
+            comprobante,
+            concepto: nroCuota
           }),
           cache: "no-store",
           signal: AbortSignal.timeout(10_000),
@@ -142,5 +149,157 @@ export async function POST(request: Request) {
       { error: error.message || "Ocurrió un error interno al registrar el pago." },
       { status: 500 }
     );
+  }
+}
+
+export async function PATCH(request: Request) {
+  try {
+    const body = await request.json();
+    const admin = createAdminClient();
+
+    // ACCIÓN 1: ANULAR PAGO CON JUSTIFICACIÓN Y NOTIFICAR A N8N
+    if (body.action === "anular") {
+      const { pago_id, dni_ce, motivo_anulacion } = body;
+
+      if (!motivo_anulacion || !motivo_anulacion.trim()) {
+        return NextResponse.json({ error: "Debe ingresar una justificación/motivo obligatorio para anular el pago." }, { status: 400 });
+      }
+
+      // 1. Marcar el pago como Anulado en Supabase public.pagos
+      let { data: pagoActual, error: errorPago } = await admin
+        .from("pagos")
+        .update({ 
+          estado: "Anulado",
+          motivo_anulacion: motivo_anulacion.trim()
+        })
+        .eq("id", pago_id)
+        .select()
+        .single();
+
+      if (errorPago) {
+        // Fallback si la columna id es numérica o string
+        const { data: fallbackPago } = await admin
+          .from("pagos")
+          .update({ estado: "Anulado" })
+          .eq("dni_ce", dni_ce)
+          .order("created_at", { ascending: false })
+          .limit(1)
+          .select()
+          .single();
+        pagoActual = fallbackPago;
+      }
+
+      // 2. Decrementar cuotas_pagadas en profiles si aplica
+      const { data: student } = await admin
+        .from("profiles")
+        .select("id, dni_ce, nombres, apellidos, cuotas_pagadas")
+        .eq("dni_ce", dni_ce)
+        .maybeSingle();
+
+      if (student && student.cuotas_pagadas > 0) {
+        const cuotasDisminuidas = Math.max(0, student.cuotas_pagadas - 1);
+        await admin
+          .from("profiles")
+          .update({ cuotas_pagadas: cuotasDisminuidas })
+          .eq("id", student.id);
+      }
+
+      // 3. Registrar auditoría forense
+      try {
+        await admin.from("audit_logs").insert({
+          usuario_email: "admin@edumin.pe",
+          accion: "ANULACION_PAGO_CON_JUSTIFICACION",
+          detalles: {
+            pago_id,
+            dni_ce,
+            estudiante: student ? `${student.nombres} ${student.apellidos}` : dni_ce,
+            motivo_anulacion: motivo_anulacion.trim(),
+            monto_anulado: pagoActual?.monto || 150.00
+          }
+        });
+      } catch (e) {
+        console.error(e);
+      }
+
+      // 4. Disparar Webhook n8n notificando la anulación
+      const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL;
+      let webhookDelivered = false;
+      if (webhookUrl) {
+        try {
+          const webhookRes = await fetch(webhookUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              evento: "pago_anulado",
+              dni_ce,
+              estudiante: student ? `${student.nombres} ${student.apellidos}` : dni_ce,
+              pago_id,
+              motivo_anulacion: motivo_anulacion.trim(),
+              monto_anulado: pagoActual?.monto || 150.00,
+              timestamp: new Date().toISOString()
+            }),
+            cache: "no-store",
+            signal: AbortSignal.timeout(10_000)
+          });
+          webhookDelivered = webhookRes.ok;
+        } catch (e) {
+          console.error("Error notificando anulación a n8n:", e);
+        }
+      }
+
+      return NextResponse.json({
+        success: true,
+        message: "Pago anulado correctamente con justificación y notificado a n8n.",
+        webhookDelivered
+      });
+    }
+
+    // ACCIÓN 2: EDITAR CRONOGRAMA DE CUOTAS Y MÚLTIPLES CRONOGRAMAS EN SUPABASE
+    if (body.action === "editar_cronograma") {
+      const { student_id, dni_ce, cuotas_totales, monto_cuota, cronogramas } = body;
+
+      const query = student_id ? admin.from("profiles").update({
+        cuotas_totales: Number(cuotas_totales) || 3,
+        monto_cuota: Number(monto_cuota) || 150.00,
+        cronogramas: cronogramas || []
+      }).eq("id", student_id) : admin.from("profiles").update({
+        cuotas_totales: Number(cuotas_totales) || 3,
+        monto_cuota: Number(monto_cuota) || 150.00,
+        cronogramas: cronogramas || []
+      }).eq("dni_ce", dni_ce);
+
+      const { data: updated, error } = await query.select().single();
+
+      if (error) {
+        return NextResponse.json({ error: `Error al actualizar cronograma en BD: ${error.message}` }, { status: 500 });
+      }
+
+      // Auditoría
+      try {
+        await admin.from("audit_logs").insert({
+          usuario_email: "admin@edumin.pe",
+          accion: "EDITAR_CRONOGRAMA_PAGOS",
+          detalles: {
+            student_id,
+            dni_ce,
+            cuotas_totales,
+            monto_cuota,
+            cronogramas
+          }
+        });
+      } catch (e) {
+        console.error(e);
+      }
+
+      return NextResponse.json({
+        success: true,
+        message: "Cronograma de pagos actualizado exitosamente en Supabase.",
+        estudiante: updated
+      });
+    }
+
+    return NextResponse.json({ error: "Acción no reconocida" }, { status: 400 });
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message || "Error inesperado" }, { status: 500 });
   }
 }
