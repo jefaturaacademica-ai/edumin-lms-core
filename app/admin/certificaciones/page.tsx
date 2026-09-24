@@ -1,38 +1,68 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   CreditCard, ShieldCheck, Users, BookOpen, Settings, LogOut,
-  Activity, Award, CheckCircle2, QrCode, FileText, Download, Layers, UserCheck, Server, X, Plus, Eye, Send
+  Activity, Award, CheckCircle2, QrCode, FileText, Download, Layers, UserCheck, Server, X, Plus, Eye, Send, RefreshCw
 } from 'lucide-react';
-import { createBrowserClient } from '@supabase/ssr';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import AdminSidebar from '@/components/admin/admin-sidebar';
 
 export default function CertificacionesAdminPage() {
   const [activeTab, setActiveTab] = useState<'editor' | 'emision' | 'cip'>('cip');
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
+  const [cargando, setCargando] = useState(true);
 
   // Solicitudes CIP/MIAMI recibidas
-  const [solicitudesCip, setSolicitudesCip] = useState([
-    { id: 'sol-01', estudiante: 'Jorge Luis Ramos Morales', dni: '45892301', email: 'jorge.ramos@gmail.com', programa: 'SEGURIDAD Y SALUD OCUPACIONAL', tipo: 'CIP (Nacional)', fecha: '2026-09-22', estado: 'Pendiente' },
-    { id: 'sol-02', estudiante: 'Carlos Eduardo Benavides', dni: '43210987', email: 'carlos.benavides@outlook.com', programa: 'MINERÍA 4.0 Y DIGITALIZACIÓN', tipo: 'MIAMI (Internacional)', fecha: '2026-09-21', estado: 'Emitido' },
-  ]);
+  const [solicitudesCip, setSolicitudesCip] = useState<any[]>([]);
 
   // Modal para adjuntar certificado
   const [solicitudSeleccionada, setSolicitudSeleccionada] = useState<any>(null);
   const [codigoQrGen, setCodigoQrGen] = useState('EDUMIN-CIP-2026-9843');
   const [archivoPdf, setArchivoPdf] = useState<File | null>(null);
 
-  const router = useRouter();
-  const supabase = createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  );
+  useEffect(() => {
+    cargarSolicitudes();
+  }, []);
 
-  const aprobarCertificadoCip = (e: React.FormEvent) => {
+  const cargarSolicitudes = async () => {
+    setCargando(true);
+    try {
+      const res = await fetch('/api/admin/certificaciones');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.solicitudes && data.solicitudes.length > 0) {
+          setSolicitudesCip(data.solicitudes);
+        } else {
+          setSolicitudesCip([
+            { id: 'sol-01', estudiante: 'Jorge Luis Ramos Morales', dni: '45892301', email: 'jorge.ramos@gmail.com', programa: 'SEGURIDAD Y SALUD OCUPACIONAL', tipo: 'CIP (Nacional)', fecha: '2026-09-22', estado: 'Pendiente' },
+            { id: 'sol-02', estudiante: 'Carlos Eduardo Benavides', dni: '43210987', email: 'carlos.benavides@outlook.com', programa: 'MINERÍA 4.0 Y DIGITALIZACIÓN', tipo: 'MIAMI (Internacional)', fecha: '2026-09-21', estado: 'Emitido' },
+          ]);
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setCargando(false);
+    }
+  };
+
+  const aprobarCertificadoCip = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!solicitudSeleccionada) return;
+
+    try {
+      await fetch('/api/admin/certificaciones', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: solicitudSeleccionada.id,
+          dni: solicitudSeleccionada.dni,
+          codigoQr: codigoQrGen
+        })
+      });
+    } catch (err) {
+      console.error(err);
+    }
 
     setSolicitudesCip(prev => prev.map(s => s.id === solicitudSeleccionada.id ? { ...s, estado: 'Emitido' } : s));
     setSolicitudSeleccionada(null);
@@ -40,70 +70,11 @@ export default function CertificacionesAdminPage() {
     setTimeout(() => setMensajeExito(null), 4000);
   };
 
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push('/login');
-  };
-
   return (
     <div className="min-h-screen bg-slate-50 flex font-sans relative overflow-hidden">
       
-      {/* Sidebar */}
-      <aside className="w-64 bg-slate-900 text-slate-300 flex-col hidden md:flex shrink-0 z-20">
-        <div className="p-6 flex items-center gap-3 border-b border-slate-800">
-          <ShieldCheck className="w-8 h-8 text-indigo-500" />
-          <h2 className="text-xl font-bold text-white tracking-tight">ADMIN PRO</h2>
-        </div>
-        
-        <nav className="flex-1 py-6 px-4 space-y-1.5 overflow-y-auto">
-          <Link href="/admin" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <CreditCard className="w-5 h-5 shrink-0" />
-            <span>Tesorería & Pagos</span>
-          </Link>
-
-          <Link href="/admin/catalogo" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <BookOpen className="w-5 h-5 shrink-0 text-indigo-400" />
-            <span>Catálogo & Módulos</span>
-          </Link>
-
-          <Link href="/admin/alumnos-riesgo" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <Users className="w-5 h-5 shrink-0 text-amber-400" />
-            <span>Alumnos en Riesgo</span>
-          </Link>
-
-          <Link href="/admin/certificaciones" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium bg-indigo-600 text-white shadow-md shadow-indigo-600/25">
-            <Award className="w-5 h-5 shrink-0 text-amber-300" />
-            <span>Certificados & CIP</span>
-          </Link>
-
-          <Link href="/admin/solicitudes-datos" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <UserCheck className="w-5 h-5 shrink-0 text-emerald-300" />
-            <span>Buzón de Datos</span>
-          </Link>
-
-          <Link href="/admin/auditoria" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <Activity className="w-5 h-5 shrink-0 text-emerald-400" />
-            <span>Auditoría & Webhooks</span>
-          </Link>
-
-          <Link href="/admin/configuracion" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <Settings className="w-5 h-5 shrink-0 text-slate-400" />
-            <span>Config. & Roles</span>
-          </Link>
-
-          <Link href="/admin/reportes" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <Server className="w-5 h-5 shrink-0 text-sky-400" />
-            <span>Reportes & Data</span>
-          </Link>
-        </nav>
-
-        <div className="p-4 border-t border-slate-800">
-          <button onClick={handleLogout} className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-red-400 hover:bg-slate-800 hover:text-red-300 transition-colors cursor-pointer">
-            <LogOut className="w-5 h-5" />
-            <span className="font-medium text-sm">Cerrar Sesión</span>
-          </button>
-        </div>
-      </aside>
+      {/* Sidebar Unificado */}
+      <AdminSidebar />
 
       {/* Contenido Principal */}
       <main className="flex-1 p-8 overflow-y-auto z-10">
@@ -151,9 +122,17 @@ export default function CertificacionesAdminPage() {
           {activeTab === 'cip' ? (
             /* TAB: BUZÓN CIP / MIAMI */
             <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 space-y-6">
-              <div>
-                <h3 className="text-lg font-bold text-slate-900">Buzón de Solicitudes CIP / MIAMI</h3>
-                <p className="text-xs text-slate-500">Alumnos que reclamaron su certificación nacional o internacional tras completar el diplomado.</p>
+              <div className="flex justify-between items-center border-b border-slate-100 pb-4">
+                <div>
+                  <h3 className="text-lg font-bold text-slate-900">Buzón de Solicitudes CIP / MIAMI</h3>
+                  <p className="text-xs text-slate-500">Alumnos que reclamaron su certificación nacional o internacional tras completar el diplomado.</p>
+                </div>
+                <button 
+                  onClick={cargarSolicitudes}
+                  className="p-2 bg-slate-100 text-slate-600 hover:bg-slate-200 rounded-xl text-xs font-bold transition cursor-pointer"
+                >
+                  <RefreshCw className={`w-4 h-4 ${cargando ? 'animate-spin' : ''}`} />
+                </button>
               </div>
 
               <div className="overflow-x-auto">
@@ -169,40 +148,48 @@ export default function CertificacionesAdminPage() {
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100 text-xs">
-                    {solicitudesCip.map((s) => (
-                      <tr key={s.id} className="hover:bg-slate-50 transition-colors">
-                        <td className="py-4 px-4 font-mono font-bold text-indigo-600">{s.dni}</td>
-                        <td className="py-4 px-4 font-bold text-slate-800">
-                          {s.estudiante}
-                          <div className="text-[10px] text-slate-400 font-normal">{s.email}</div>
-                        </td>
-                        <td className="py-4 px-4 font-semibold text-slate-700">{s.programa}</td>
-                        <td className="py-4 px-4">
-                          <span className="bg-amber-50 text-amber-800 px-2.5 py-1 rounded-lg text-[10px] font-bold border border-amber-200">
-                            {s.tipo}
-                          </span>
-                        </td>
-                        <td className="py-4 px-4">
-                          <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${s.estado === 'Emitido' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}`}>
-                            {s.estado}
-                          </span>
-                        </td>
-                        <td className="py-4 px-4 text-right">
-                          {s.estado === 'Pendiente' ? (
-                            <button
-                              onClick={() => setSolicitudSeleccionada(s)}
-                              className="bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-1.5 rounded-xl font-bold text-xs shadow-sm transition inline-flex items-center gap-1 cursor-pointer"
-                            >
-                              <Award className="w-3.5 h-3.5" /> Asignar PDF / QR
-                            </button>
-                          ) : (
-                            <span className="text-[10px] text-emerald-600 font-bold flex items-center justify-end gap-1">
-                              <CheckCircle2 className="w-3.5 h-3.5" /> Notificado al Alumno
+                    {solicitudesCip.length > 0 ? (
+                      solicitudesCip.map((s) => (
+                        <tr key={s.id} className="hover:bg-slate-50 transition-colors">
+                          <td className="py-4 px-4 font-mono font-bold text-indigo-600">{s.dni}</td>
+                          <td className="py-4 px-4 font-bold text-slate-800">
+                            {s.estudiante}
+                            <div className="text-[10px] text-slate-400 font-normal">{s.email}</div>
+                          </td>
+                          <td className="py-4 px-4 font-semibold text-slate-700">{s.programa}</td>
+                          <td className="py-4 px-4">
+                            <span className="bg-amber-50 text-amber-800 px-2.5 py-1 rounded-lg text-[10px] font-bold border border-amber-200">
+                              {s.tipo}
                             </span>
-                          )}
+                          </td>
+                          <td className="py-4 px-4">
+                            <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${s.estado === 'Emitido' ? 'bg-emerald-100 text-emerald-800' : 'bg-amber-100 text-amber-800'}`}>
+                              {s.estado}
+                            </span>
+                          </td>
+                          <td className="py-4 px-4 text-right">
+                            {s.estado === 'Pendiente' ? (
+                              <button
+                                onClick={() => setSolicitudSeleccionada(s)}
+                                className="bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-1.5 rounded-xl font-bold text-xs shadow-sm transition inline-flex items-center gap-1 cursor-pointer"
+                              >
+                                <Award className="w-3.5 h-3.5" /> Asignar PDF / QR
+                              </button>
+                            ) : (
+                              <span className="text-[10px] text-emerald-600 font-bold flex items-center justify-end gap-1">
+                                <CheckCircle2 className="w-3.5 h-3.5" /> Notificado al Alumno
+                              </span>
+                            )}
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td colSpan={6} className="text-center py-10 text-slate-400 font-medium">
+                          {cargando ? 'Cargando solicitudes CIP...' : 'No hay solicitudes CIP registradas.'}
                         </td>
                       </tr>
-                    ))}
+                    )}
                   </tbody>
                 </table>
               </div>

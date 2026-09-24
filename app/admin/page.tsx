@@ -12,7 +12,9 @@ import { MOCK_ESTUDIANTES, EstudianteCompleto } from '@/lib/data/mockStudents';
 
 export default function AdminDashboard360() {
   const [activeTab, setActiveTab] = useState<'analitica' | 'tesoreria'>('analitica');
-  
+  const [estudiantes, setEstudiantes] = useState<EstudianteCompleto[]>(MOCK_ESTUDIANTES);
+  const [cargandoEstudiantes, setCargandoEstudiantes] = useState(true);
+
   // Filtros Cruzados / Múltiples
   const [filtroMes, setFiltroMes] = useState<string>('todos');
   const [filtroPaquete, setFiltroPaquete] = useState<string>('todos');
@@ -36,8 +38,29 @@ export default function AdminDashboard360() {
   // Webhook de Retención / Wasapi
   const [enviandoAlertaWhatsApp, setEnviandoAlertaWhatsApp] = useState(false);
 
+  useEffect(() => {
+    cargarEstudiantesDeSupabase();
+  }, []);
+
+  const cargarEstudiantesDeSupabase = async () => {
+    setCargandoEstudiantes(true);
+    try {
+      const res = await fetch('/api/admin/estudiantes');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.estudiantes && data.estudiantes.length > 0) {
+          setEstudiantes(data.estudiantes);
+        }
+      }
+    } catch (e) {
+      console.error('Error cargando estudiantes de Supabase:', e);
+    } finally {
+      setCargandoEstudiantes(false);
+    }
+  };
+
   // Filtrado cruzado de estudiantes
-  const estudiantesFiltrados = MOCK_ESTUDIANTES.filter(e => {
+  const estudiantesFiltrados = estudiantes.filter(e => {
     // 1. Filtro Texto
     const q = busqueda.toLowerCase().trim();
     const coincideTexto = !q || (
@@ -102,9 +125,12 @@ export default function AdminDashboard360() {
           tipo: 'exito',
           webhookStatus: data.webhookStatus
         });
+        
+        // Actualizar en el estado local y recargar de Supabase
         alumnoSeleccionado.cuotas_pagadas += 1;
         alumnoSeleccionado.estado = 'Al Día';
         alumnoSeleccionado.bloqueado = false;
+        cargarEstudiantesDeSupabase();
       } else {
         setMensaje({ texto: `Error: ${data.error || 'No se pudo procesar la cuota'}`, tipo: 'error' });
       }
@@ -178,7 +204,7 @@ export default function AdminDashboard360() {
           </header>
 
           {/* ========================================================= */}
-          {/* BARRA DE FILTROS CRUZADOS Y MÚLTIPLES (CRITICAL REQUIREMENT)*/}
+          {/* BARRA DE FILTROS CRUZADOS Y MÚLTIPLES */}
           {/* ========================================================= */}
           <div className="bg-white rounded-3xl p-6 shadow-sm border border-slate-200 space-y-4">
             <div className="flex items-center justify-between border-b border-slate-100 pb-3">
@@ -285,7 +311,7 @@ export default function AdminDashboard360() {
           </div>
 
           {/* ========================================================= */}
-          {/* TARJETAS DE KPIS GLOBALES 360°                            */}
+          {/* TARJETAS DE KPIS GLOBALES 360° */}
           {/* ========================================================= */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-white p-6 rounded-3xl shadow-sm border border-slate-200">
@@ -336,7 +362,7 @@ export default function AdminDashboard360() {
           </div>
 
           {/* ========================================================= */}
-          {/* TABLA PRINCIPAL DE FICHA 360° DEL ALUMNO (ENTERPRISE)     */}
+          {/* TABLA PRINCIPAL DE FICHA 360° DEL ALUMNO */}
           {/* ========================================================= */}
           <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 space-y-6">
             <div className="flex justify-between items-center border-b border-slate-100 pb-4">
@@ -344,7 +370,8 @@ export default function AdminDashboard360() {
                 <h3 className="text-xl font-bold text-slate-900">Consolidado Estudiantil 360° & Control de Deserción</h3>
                 <p className="text-xs text-slate-500">Haz clic en cualquier alumno para abrir su Ficha 360° (Académica, Financiera y Retención).</p>
               </div>
-              <span className="text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
+              <span className="text-xs font-bold text-slate-500 bg-slate-100 px-3 py-1 rounded-full flex items-center gap-1.5">
+                {cargandoEstudiantes && <RefreshCw className="w-3 h-3 animate-spin text-indigo-600" />}
                 {estudiantesFiltrados.length} Alumnos Encontrados
               </span>
             </div>
@@ -415,7 +442,7 @@ export default function AdminDashboard360() {
                   ) : (
                     <tr>
                       <td colSpan={8} className="text-center py-12 text-slate-400 font-medium">
-                        No se encontraron estudiantes para la combinación de filtros seleccionada.
+                        {cargandoEstudiantes ? 'Cargando estudiantes desde Supabase...' : 'No se encontraron estudiantes para la combinación de filtros seleccionada.'}
                       </td>
                     </tr>
                   )}
@@ -429,7 +456,7 @@ export default function AdminDashboard360() {
       </main>
 
       {/* ========================================================= */}
-      {/* MODAL FICHA 360° DEL ALUMNO (ENTERPRISE DASHBOARD)        */}
+      {/* MODAL FICHA 360° DEL ALUMNO */}
       {/* ========================================================= */}
       {alumnoSeleccionado && (
         <div className="fixed inset-0 bg-slate-950/70 backdrop-blur-md z-[9999] flex items-center justify-center p-4">

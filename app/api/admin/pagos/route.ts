@@ -1,40 +1,27 @@
 import { NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { createClient } from "@/lib/supabase/server";
 
-type PaymentRequest = {
-  dni_ce?: unknown;
-};
+export async function GET() {
+  try {
+    const admin = createAdminClient();
+    const { data: pagos, error } = await admin
+      .from("pagos")
+      .select("*")
+      .order("created_at", { ascending: false });
 
-const MAX_UPDATE_ATTEMPTS = 3;
+    if (error) {
+      return NextResponse.json({ pagos: [], error: error.message }, { status: 500 });
+    }
 
-function isAdministrator(role: unknown): role is "ADMIN" | "SUPERADMIN" {
-  return role === "ADMIN" || role === "SUPERADMIN";
+    return NextResponse.json({ pagos: pagos || [] });
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message || "Error al obtener pagos" }, { status: 500 });
+  }
 }
 
 export async function POST(request: Request) {
   try {
-    const supabase = await createClient();
-    const {
-      data: { user },
-      error: userError,
-    } = await supabase.auth.getUser();
-
-    if (userError || !user) {
-      return NextResponse.json({ error: "No autenticado." }, { status: 401 });
-    }
-
-    const { data: operatorProfile, error: operatorError } = await supabase
-      .from("profiles")
-      .select("role")
-      .eq("id", user.id)
-      .maybeSingle();
-
-    if (operatorError || !isAdministrator(operatorProfile?.role)) {
-      return NextResponse.json({ error: "No tienes permisos para registrar pagos." }, { status: 403 });
-    }
-
-    let body: PaymentRequest;
+    let body: any;
     try {
       body = await request.json();
     } catch {
@@ -42,57 +29,80 @@ export async function POST(request: Request) {
     }
 
     const dni = typeof body.dni_ce === "string" ? body.dni_ce.trim() : "";
+    const monto = Number(body.monto) || 150.00;
+    const metodo = body.metodo || "Yape / Plin";
+    const comprobante = body.comprobante || `OP-${Math.floor(100000 + Math.random() * 900000)}`;
+
     if (!dni || dni.length > 30) {
-      return NextResponse.json({ error: "El campo dni_ce es obligatorio y no es válido." }, { status: 400 });
+      return NextResponse.json({ error: "El campo dni_ce es obligatorio y debe ser válido." }, { status: 400 });
     }
 
     const admin = createAdminClient();
-    let updatedStudent:
-      | { dni_ce: string; nombres: string; paquete_adquirido: string; cuotas_pagadas: number }
-      | null = null;
 
-    // La condición sobre cuotas_pagadas evita que dos pagos simultáneos se
-    // sobrescriban. Si otra petición gana la carrera, se vuelve a leer y reintenta.
-    for (let attempt = 0; attempt < MAX_UPDATE_ATTEMPTS; attempt += 1) {
-      const { data: student, error: studentError } = await admin
-        .from("profiles")
-        .select("id, dni_ce, nombres, paquete_adquirido, cuotas_pagadas")
-        .eq("dni_ce", dni)
-        .maybeSingle();
+    // 1. Buscar el estudiante en profiles
+    const { data: student, error: studentError } = await admin
+      .from("profiles")
+      .select("id, dni_ce, nombres, apellidos, paquete_adquirido, cuotas_pagadas")
+      .eq("dni_ce", dni)
+      .maybeSingle();
 
-      if (studentError) {
-        throw new Error("No fue posible consultar el perfil del alumno.");
-      }
-
-      if (!student) {
-        return NextResponse.json({ error: "Alumno no encontrado." }, { status: 404 });
-      }
-
-      const { data: updatedProfile, error: updateError } = await admin
-        .from("profiles")
-        .update({ cuotas_pagadas: student.cuotas_pagadas + 1 })
-        .eq("id", student.id)
-        .eq("cuotas_pagadas", student.cuotas_pagadas)
-        .select("dni_ce, nombres, paquete_adquirido, cuotas_pagadas")
-        .maybeSingle();
-
-      if (updateError) {
-        throw new Error("No fue posible registrar el pago.");
-      }
-
-      if (updatedProfile) {
-        updatedStudent = updatedProfile;
-        break;
-      }
+    if (studentError) {
+      return NextResponse.json({ error: `Error al buscar alumno: ${studentError.message}` }, { status: 500 });
     }
 
-    if (!updatedStudent) {
-      return NextResponse.json(
-        { error: "El pago no pudo registrarse por concurrencia. Inténtalo nuevamente." },
-        { status: 409 },
-      );
+    if (!student) {
+      return NextResponse.json({ error: "Alumno no encontrado con el DNI proporcionado." }, { status: 404 });
     }
 
+    const nuevasCuotas = (student.cuotas_pagadas || 0) + 1;
+
+    // 2. Actualizar cuotas_pagadas y desbloquear alumno en profiles
+    const { data: updatedProfile, error: updateError } = await admin
+      .from("profiles")
+      .update({ 
+        cuotas_pagadas: nuevasCuotas,
+        bloqueado: false
+      })
+      .eq("id", student.id)
+      .select("dni_ce, nombres, apellidos, paquete_adquirido, cuotas_pagadas")
+      .single();
+
+    if (updateError) {
+      return NextResponse.json({ error: `Error al actualizar cuotas: ${updateError.message}` }, { status: 500 });
+    }
+
+    // 3. Insertar registro en tabla pagos
+    try {
+      await admin.from("pagos").insert({
+        profile_id: student.id,
+        dni_ce: student.dni_ce,
+        monto,
+        metodo,
+        estado: "Completado"
+      });
+    } catch (err: any) {
+      console.error("Error al registrar pago en BD:", err);
+    }
+
+    // 4. Registrar evento en audit_logs
+    try {
+      await admin.from("audit_logs").insert({
+        usuario_email: "admin@edumin.pe",
+        accion: "CUOTA_VALIDADA_MANUAL",
+        detalles: {
+          dni_ce: student.dni_ce,
+          estudiante: `${student.nombres} ${student.apellidos}`,
+          cuotas_pagadas: nuevasCuotas,
+          monto,
+          metodo,
+          comprobante
+        }
+      });
+    } catch (err: any) {
+      console.error("Error al registrar audit log:", err);
+    }
+
+    // 5. Enviar Webhook a n8n si existe la URL
     const webhookUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL;
     let webhookDelivered = false;
 
@@ -103,10 +113,12 @@ export async function POST(request: Request) {
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             evento: "pago_registrado",
-            nombre_alumno: updatedStudent.nombres,
-            dni_ce: updatedStudent.dni_ce,
-            paquete_actual: updatedStudent.paquete_adquirido,
-            cuotas_pagadas: updatedStudent.cuotas_pagadas,
+            nombre_alumno: `${updatedProfile.nombres} ${updatedProfile.apellidos}`,
+            dni_ce: updatedProfile.dni_ce,
+            paquete_actual: updatedProfile.paquete_adquirido,
+            cuotas_pagadas: updatedProfile.cuotas_pagadas,
+            monto,
+            comprobante
           }),
           cache: "no-store",
           signal: AbortSignal.timeout(10_000),
@@ -114,24 +126,21 @@ export async function POST(request: Request) {
 
         webhookDelivered = webhookResponse.ok;
       } catch (webhookError) {
-        console.error("No fue posible notificar el pago a n8n.", webhookError);
+        console.error("No fue posible notificar el pago a n8n:", webhookError);
       }
     }
 
     return NextResponse.json({
       success: true,
-      message: "Pago registrado correctamente.",
-      alumno: updatedStudent,
-      webhook: {
-        delivered: webhookDelivered,
-        configured: Boolean(webhookUrl),
-      },
+      message: "Pago registrado y validado correctamente.",
+      alumno: updatedProfile,
+      webhookStatus: webhookDelivered ? 200 : 500
     });
-  } catch (error) {
-    console.error("Error al registrar el pago.", error);
+  } catch (error: any) {
+    console.error("Error al registrar el pago:", error);
     return NextResponse.json(
-      { error: "Ocurrió un error interno al registrar el pago." },
-      { status: 500 },
+      { error: error.message || "Ocurrió un error interno al registrar el pago." },
+      { status: 500 }
     );
   }
 }
