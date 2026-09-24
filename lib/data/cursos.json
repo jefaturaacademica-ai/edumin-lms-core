@@ -1,0 +1,382 @@
+[
+  {
+    "id": 1,
+    "curso": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 2,
+    "curso": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 3,
+    "curso": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 4,
+    "curso": "MARCO JURÍDICO Y NORMATIVO DE LA MINERÍA",
+    "categoria": "Legislación y normativa"
+  },
+  {
+    "id": 5,
+    "curso": "GESTIÓN DE PROVEEDORES EN MINERÍA",
+    "categoria": "Logística y almacenes"
+  },
+  {
+    "id": 6,
+    "curso": "CONTROL DE COSTOS EN ALMACENES MINEROS",
+    "categoria": "Logística y almacenes"
+  },
+  {
+    "id": 7,
+    "curso": "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA",
+    "categoria": "Logística y almacenes"
+  },
+  {
+    "id": 8,
+    "curso": "CONTRATOS EN LA INDUSTRIA MINERA",
+    "categoria": "Legislación y normativa"
+  },
+  {
+    "id": 9,
+    "curso": "DERECHOS HUMANOS EN MINERÍA",
+    "categoria": "Legislación y normativa"
+  },
+  {
+    "id": 10,
+    "curso": "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 11,
+    "curso": "RESPONSABILIDAD PENAL EN MINERÍA",
+    "categoria": "Legislación y normativa"
+  },
+  {
+    "id": 12,
+    "curso": "DERECHO LABORAL EN MINERÍA",
+    "categoria": "Legislación y normativa"
+  },
+  {
+    "id": 13,
+    "curso": "TIPOS DE CONCESIONES MINERAS",
+    "categoria": "Legislación y normativa"
+  },
+  {
+    "id": 14,
+    "curso": "GESTIÓN DE CONTRATOS LOGÍSTICOS EN LA INDUSTRIA Y MINERÍA",
+    "categoria": "Logística y almacenes"
+  },
+  {
+    "id": 15,
+    "curso": "CURSO DE PREVENCIÓN DE RIESGOS",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 16,
+    "curso": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 17,
+    "curso": "GESTIÓN DE EMERGENCIAS EN INDUSTRIA Y MINERÍA",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 18,
+    "curso": "GESTIÓN DE INVENTARIOS EN INDUSTRIA Y MINERÍA",
+    "categoria": "Logística y almacenes"
+  },
+  {
+    "id": 19,
+    "curso": "CONTROL FINANCIERO EN ALMACENES",
+    "categoria": "Logística y almacenes"
+  },
+  {
+    "id": 20,
+    "curso": "LOGÍSTICA INTERNA EN CONTROL DE ALMACENES",
+    "categoria": "Logística y almacenes"
+  },
+  {
+    "id": 21,
+    "curso": "FUNDAMENTOS DE BIG DATA",
+    "categoria": "Inteligencia de datos"
+  },
+  {
+    "id": 22,
+    "curso": "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA",
+    "categoria": "Inteligencia de datos"
+  },
+  {
+    "id": 23,
+    "curso": "TENDENCIAS 2025-2026: CLAVES DE BIG DATA",
+    "categoria": "Inteligencia de datos"
+  },
+  {
+    "id": 24,
+    "curso": "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)",
+    "categoria": "Inteligencia de datos"
+  },
+  {
+    "id": 25,
+    "curso": "MINERÍA 4.0 ESSENTIALS (NUEVAS HERRAMIENTAS)",
+    "categoria": "Tecnología e innovación"
+  },
+  {
+    "id": 26,
+    "curso": "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL",
+    "categoria": "Tecnología e innovación"
+  },
+  {
+    "id": 27,
+    "curso": "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS",
+    "categoria": "Tecnología e innovación"
+  },
+  {
+    "id": 28,
+    "curso": "CADENA DE SUMINISTRO LOGÍSTICA Y DISTRIBUCIÓN",
+    "categoria": "Logística y almacenes"
+  },
+  {
+    "id": 29,
+    "curso": "MEJORA DE LOS MÉTODOS Y MEDICIÓN DE LOS RECURSOS",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 30,
+    "curso": "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 31,
+    "curso": "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES",
+    "categoria": "Inteligencia de datos"
+  },
+  {
+    "id": 32,
+    "curso": "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES",
+    "categoria": "Inteligencia de datos"
+  },
+  {
+    "id": 33,
+    "curso": "INTRODUCCIÓN A MACHINE LEARNING PARA BIG DATA",
+    "categoria": "Inteligencia de datos"
+  },
+  {
+    "id": 34,
+    "curso": "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA",
+    "categoria": "Tecnología e innovación"
+  },
+  {
+    "id": 35,
+    "curso": "INTRODUCCIÓN A MACHINE LEARNING EN MINERÍA",
+    "categoria": "Tecnología e innovación"
+  },
+  {
+    "id": 36,
+    "curso": "TIPOS DE INTELIGENCIA ARTIFICIAL APLICADAS A LA MINERÍA",
+    "categoria": "Tecnología e innovación"
+  },
+  {
+    "id": 37,
+    "curso": "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA",
+    "categoria": "Inteligencia de datos"
+  },
+  {
+    "id": 38,
+    "curso": "GESTIÓN AVANZADA DE OPERACIONES INDUSTRIALES",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 39,
+    "curso": "BIG DATA APLICADA A PROCESOS INDUSTRIALES",
+    "categoria": "Inteligencia de datos"
+  },
+  {
+    "id": 40,
+    "curso": "CONTROL DE COSTOS EN PRODUCCIÓN INDUSTRIAL O EN ÁREAS DE PRODUCCIÓN",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 41,
+    "curso": "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO",
+    "categoria": "Comercio exterior"
+  },
+  {
+    "id": 42,
+    "curso": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 43,
+    "curso": "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026",
+    "categoria": "Comercio exterior"
+  },
+  {
+    "id": 44,
+    "curso": "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO",
+    "categoria": "Comercio exterior"
+  },
+  {
+    "id": 45,
+    "curso": "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA",
+    "categoria": "Tecnología e innovación"
+  },
+  {
+    "id": 46,
+    "curso": "GESTIÓN DE OPERACIONES Y PROCESOS EN LA MINERÍA",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 47,
+    "curso": "PIRÁMIDE DE PROCESOS: TÉCNICAS DE CONTROL EN MINERÍA",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 48,
+    "curso": "PROCESO DE OPTIMIZACIÓN DE MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0",
+    "categoria": "Mantenimiento industrial"
+  },
+  {
+    "id": 49,
+    "curso": "SISTEMAS INTEGRADOS PARA LA GESTIÓN DE MANTENIMIENTO",
+    "categoria": "Mantenimiento industrial"
+  },
+  {
+    "id": 50,
+    "curso": "ESTÁNDARES Y SISTEMA DE CALIDAD DEL MANTENIMIENTO",
+    "categoria": "Mantenimiento industrial"
+  },
+  {
+    "id": 51,
+    "curso": "DOCUMENTACIÓN Y TRÁMITES ADUANEROS",
+    "categoria": "Comercio exterior"
+  },
+  {
+    "id": 52,
+    "curso": "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS",
+    "categoria": "Comercio exterior"
+  },
+  {
+    "id": 53,
+    "curso": "PLANIFICACIÓN DE RIESGOS PARA IMPORTACIÓN Y EXPORTACIÓN",
+    "categoria": "Comercio exterior"
+  },
+  {
+    "id": 54,
+    "curso": "CONTROL DE CALIDAD EN PROCESOS MINEROS",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 55,
+    "curso": "MONITOREO Y CONTROL EN LA OPERACIÓN DE PLANTAS MINERAS",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 56,
+    "curso": "SOSTENIBILIDAD Y SEGURIDAD EN CAMPAMENTOS MINEROS",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 57,
+    "curso": "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS",
+    "categoria": "Inteligencia de datos"
+  },
+  {
+    "id": 58,
+    "curso": "SEGURIDAD Y CONTROL AMBIENTAL EN EL MANTENIMIENTO",
+    "categoria": "Mantenimiento industrial"
+  },
+  {
+    "id": 59,
+    "curso": "GERENCIA DE PROYECTOS DEL MANTENIMIENTO",
+    "categoria": "Mantenimiento industrial"
+  },
+  {
+    "id": 60,
+    "curso": "GESTIÓN DE COSTOS DEL MANTENIMIENTO EN LA INDUSTRIA 4.0",
+    "categoria": "Mantenimiento industrial"
+  },
+  {
+    "id": 61,
+    "curso": "SOSTENIBILIDAD Y MINERÍA RESPONSABLE",
+    "categoria": "Medio ambiente"
+  },
+  {
+    "id": 62,
+    "curso": "PRIMEROS AUXILIOS EN MINERÍA",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 63,
+    "curso": "INDICADORES CLAVE (KPIS) PARA LA CADENA DE ABASTECIMIENTOS",
+    "categoria": "Logística y almacenes"
+  },
+  {
+    "id": 64,
+    "curso": "EXPLORACIÓN MINERA Y EVALUACIÓN DE YACIMIENTOS",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 65,
+    "curso": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
+    "categoria": "Medio ambiente"
+  },
+  {
+    "id": 66,
+    "curso": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
+    "categoria": "Legislación y normativa"
+  },
+  {
+    "id": 67,
+    "curso": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
+    "categoria": "Legislación y normativa"
+  },
+  {
+    "id": 68,
+    "curso": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 69,
+    "curso": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
+    "categoria": "Medio ambiente"
+  },
+  {
+    "id": 70,
+    "curso": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
+    "categoria": "Logística y almacenes"
+  },
+  {
+    "id": 71,
+    "curso": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
+    "categoria": "Legislación y normativa"
+  },
+  {
+    "id": 72,
+    "curso": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 73,
+    "curso": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
+    "categoria": "Operaciones y procesos"
+  },
+  {
+    "id": 74,
+    "curso": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
+    "categoria": "Seguridad y prevención"
+  },
+  {
+    "id": 75,
+    "curso": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
+    "categoria": "Mantenimiento industrial"
+  },
+  {
+    "id": 76,
+    "curso": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+    "categoria": "Medio ambiente"
+  }
+]

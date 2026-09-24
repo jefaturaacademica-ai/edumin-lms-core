@@ -354,7 +354,7 @@ export default function PagosEstudiantePage() {
 
         {/* CONTENIDO SEGÚN LA PESTAÑA SELECCIONADA */}
         {pestanaActiva === 'cronograma' ? (
-          /* TABLA 1: CRONOGRAMA DE CUOTAS */
+          /* TABLA 1: CRONOGRAMA DE CUOTAS (4 Columnas Limpias) */
           <div className={`rounded-2xl p-6 sm:p-8 transition-all ${
             esOscuro ? 'bg-slate-900/90 border border-slate-800' : 'bg-white border border-slate-200 shadow-sm'
           }`}>
@@ -381,8 +381,7 @@ export default function PagosEstudiantePage() {
                     <th className="py-3 px-4">N° cuota / concepto</th>
                     <th className="py-3 px-4">Fecha de vencimiento</th>
                     <th className="py-3 px-4">Monto</th>
-                    <th className="py-3 px-4">Estado</th>
-                    <th className="py-3 px-4 text-right">Acción</th>
+                    <th className="py-3 px-4 text-right">Estado / Acción</th>
                   </tr>
                 </thead>
                 <tbody className={`divide-y text-sm ${
@@ -402,7 +401,7 @@ export default function PagosEstudiantePage() {
                       <td className={`py-4 px-4 font-bold ${
                         esOscuro ? 'text-white' : 'text-slate-900'
                       }`}>S/ {item.monto}.00</td>
-                      <td className="py-4 px-4">
+                      <td className="py-4 px-4 text-right">
                         {item.estado === 'Pagado' && (
                           <span className={`font-bold px-3 py-1 rounded-full text-xs inline-flex items-center gap-1 ${
                             esOscuro ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
@@ -411,36 +410,17 @@ export default function PagosEstudiantePage() {
                           </span>
                         )}
                         {item.estado === 'Por vencer' && (
-                          <span className={`font-bold px-3 py-1 rounded-full text-xs inline-flex items-center gap-1 ${
-                            esOscuro ? 'bg-indigo-500/10 text-indigo-400 border border-indigo-500/20' : 'bg-indigo-50 text-indigo-700 border border-indigo-200'
-                          }`}>
-                            <Clock className="w-3.5 h-3.5" /> Por vencer
-                          </span>
-                        )}
-                        {item.estado === 'Vencido' && (
-                          <span className={`font-bold px-3 py-1 rounded-full text-xs inline-flex items-center gap-1 ${
-                            esOscuro ? 'bg-rose-500/10 text-rose-400 border border-rose-500/20' : 'bg-rose-50 text-rose-700 border border-rose-200'
-                          }`}>
-                            <AlertCircle className="w-3.5 h-3.5" /> Vencido
-                          </span>
-                        )}
-                      </td>
-                      <td className="py-4 px-4 text-right">
-                        {item.estado === 'Pagado' ? (
-                          <button
-                            onClick={() => setReciboSeleccionado(item)}
-                            className={`inline-flex items-center gap-1.5 font-semibold px-3.5 py-2 rounded-xl text-xs transition-colors border shadow-sm ${
-                              esOscuro 
-                                ? 'bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border-indigo-500/20' 
-                                : 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-200/60'
-                            }`}
-                          >
-                            <Eye className="w-3.5 h-3.5" /> Ver recibo
-                          </button>
-                        ) : (
                           <button
                             onClick={() => alert('Redirigiendo a pasarela de pago segura...')}
                             className="inline-flex items-center gap-1.5 font-semibold px-3.5 py-2 rounded-xl text-xs transition-colors bg-indigo-600 hover:bg-indigo-500 text-white shadow-sm"
+                          >
+                            Pagar cuota <ArrowUpRight className="w-3.5 h-3.5" />
+                          </button>
+                        )}
+                        {item.estado === 'Vencido' && (
+                          <button
+                            onClick={() => alert('Redirigiendo a pasarela de pago segura...')}
+                            className="inline-flex items-center gap-1.5 font-semibold px-3.5 py-2 rounded-xl text-xs transition-colors bg-rose-600 hover:bg-rose-500 text-white shadow-sm"
                           >
                             Pagar cuota <ArrowUpRight className="w-3.5 h-3.5" />
                           </button>

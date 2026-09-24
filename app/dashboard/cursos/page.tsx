@@ -34,7 +34,7 @@ export default function CursosPage() {
 
   // Control del despliegue del catálogo y filtro por píldoras de estado
   const [mostrarCatalogoAdicional, setMostrarCatalogoAdicional] = useState(false);
-  const [filtroEstadoMatriculados, setFiltroEstadoMatriculados] = useState<'todos' | 'progreso' | 'completados'>('todos');
+  const [filtroEstadoMatriculados, setFiltroEstadoMatriculados] = useState<'todos' | 'progreso' | 'completados'>('progreso');
 
   // ESTADO DE SIMULACIÓN DEV (SOLO DESARROLLO INTERNO)
   const [estadoSimuladoDev, setEstadoSimuladoDev] = useState<'sin_cursos' | 'un_curso' | 'todos'>('todos');
@@ -272,12 +272,9 @@ export default function CursosPage() {
     <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-300 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
       <div className="max-w-7xl mx-auto space-y-10">
         
-        {/* CABECERA CON PAQUETE ACTIVO */}
+        {/* CABECERA */}
         <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 bg-indigo-600 text-white px-4 py-1.5 rounded-full text-xs font-bold shadow-sm mb-4">
-              <Sparkles className="w-3.5 h-3.5" /> Paquete Activo: {paquete}
-            </div>
             <h1 className={`text-3xl font-bold tracking-tight flex items-center gap-3 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
               <BookOpen className="w-8 h-8 text-indigo-600" />
               Cursos Cortos Asincrónicos
@@ -314,23 +311,6 @@ export default function CursosPage() {
             {/* BARRA DE PÍLDORAS/TABS SUPERIORES */}
             <div className="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-200 dark:border-slate-800">
               <button
-                onClick={() => setFiltroEstadoMatriculados('todos')}
-                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
-                  filtroEstadoMatriculados === 'todos'
-                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
-                    : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
-                }`}
-              >
-                <BookOpen className="w-3.5 h-3.5" />
-                <span>Todos los cursos</span>
-                <span className={`px-2 py-0.5 rounded-full text-[10px] ${
-                  filtroEstadoMatriculados === 'todos' ? 'bg-white/20 text-white' : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
-                }`}>
-                  {listaCursosMatriculados.length}
-                </span>
-              </button>
-
-              <button
                 onClick={() => setFiltroEstadoMatriculados('progreso')}
                 className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
                   filtroEstadoMatriculados === 'progreso'
@@ -363,6 +343,23 @@ export default function CursosPage() {
                   {cursosCompletados.length}
                 </span>
               </button>
+
+              <button
+                onClick={() => setFiltroEstadoMatriculados('todos')}
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                  filtroEstadoMatriculados === 'todos'
+                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+                    : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
+                }`}
+              >
+                <BookOpen className="w-3.5 h-3.5" />
+                <span>Todos los cursos</span>
+                <span className={`px-2 py-0.5 rounded-full text-[10px] ${
+                  filtroEstadoMatriculados === 'todos' ? 'bg-white/20 text-white' : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+                }`}>
+                  {listaCursosMatriculados.length}
+                </span>
+              </button>
             </div>
 
             {/* GRILLA DE CURSOS FILTRADOS POR LA PÍLDORA SELECCIONADA */}
@@ -389,19 +386,17 @@ export default function CursosPage() {
                           alt={curso.titulo}
                           className="object-cover w-full h-full opacity-90"
                         />
-                        <div className="absolute top-3 left-3">
-                          <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+                        <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none">
+                          <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 shrink-0">
                             {curso.categoria}
                           </span>
-                        </div>
-                        <div className="absolute top-3 right-3">
                           {esCompletado ? (
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-emerald-600 text-white backdrop-blur-md border-emerald-400/30">
-                              <CheckCircle2 className="size-3" /> Estado: Completado
+                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-emerald-600/90 text-white backdrop-blur-md border-emerald-400/30 shrink-0">
+                              <CheckCircle2 className="size-3" /> Completado
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-indigo-500/90 text-white backdrop-blur-md border-indigo-400/30">
-                              <Clock className="size-3 animate-pulse" /> Estado: En Progreso
+                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-indigo-500/90 text-white backdrop-blur-md border-indigo-400/30 shrink-0">
+                              <Clock className="size-3 animate-pulse" /> En Progreso
                             </span>
                           )}
                         </div>
@@ -416,11 +411,10 @@ export default function CursosPage() {
                         </p>
 
                         <div className="space-y-1.5 pt-2">
-                          <div className="flex justify-between text-xs font-bold">
-                            <span className={`flex items-center gap-1 ${esOscuro ? 'text-slate-300' : 'text-slate-600'}`}>
-                              <BarChart2 className={`w-3.5 h-3.5 ${esCompletado ? 'text-emerald-500' : 'text-indigo-500'}`} /> Progreso del curso
+                          <div className="flex justify-end text-xs font-bold">
+                            <span className={esCompletado ? 'text-emerald-400 font-extrabold' : (esOscuro ? 'text-indigo-400 font-bold' : 'text-indigo-600 font-bold')}>
+                              {curso.avance}% completado
                             </span>
-                            <span className={esCompletado ? 'text-emerald-400 font-extrabold' : 'text-indigo-400'}>{curso.avance}%</span>
                           </div>
                           <div className={`w-full h-2.5 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
                             <div 
@@ -592,13 +586,11 @@ export default function CursosPage() {
                           alt={curso.titulo}
                           className="object-cover w-full h-full opacity-90"
                         />
-                        <div className="absolute top-3 left-3 flex gap-2">
-                          <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10">
+                        <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none">
+                          <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 shrink-0">
                             {curso.categoria}
                           </span>
-                        </div>
-                        <div className="absolute top-3 right-3">
-                          <span className="text-[10px] font-bold text-amber-300 bg-amber-500/20 border border-amber-500/30 backdrop-blur-md px-2.5 py-1 rounded-full">
+                          <span className="text-[10px] font-bold text-amber-300 bg-amber-500/20 border border-amber-500/30 backdrop-blur-md px-2.5 py-1 rounded-full shrink-0">
                             {curso.estado}
                           </span>
                         </div>

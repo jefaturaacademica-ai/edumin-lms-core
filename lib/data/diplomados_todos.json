@@ -1,0 +1,893 @@
+{
+  "total": 22,
+  "diplomados": [
+    {
+      "diplomado": "DERECHO MINERO",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR",
+          "docente": "Reginaldo Andía",
+          "clases": [
+            "REGULACIÓN AMBIENTAL Y GESTIÓN DEL CATASTRO MINERO: ÁREAS RESTRINGIDAS Y SU IMPACTO",
+            "MARCO LEGAL Y PERMISOLOGÍA AMBIENTAL EN MINERÍA",
+            "RESPONSABILIDAD SOCIAL, DERECHOS DE LAS COMUNIDADES Y RESOLUCIÓN DE CONFLICTOS"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "JURISDICCIÓN MINERA, REGULACIÓN LABORAL Y NORMATIVAS DE SEGURIDAD",
+          "docente": "Reginaldo Andía",
+          "clases": [
+            "LEGISLACIÓN EN SEGURIDAD MINERA: NORMATIVAS Y SISTEMAS DE GESTIÓN AVANZADOS",
+            "JURISDICCIÓN MINERA: MARCO LEGAL Y RESOLUCIÓN DE CONFLICTOS EN CONCESIONES MINERAS",
+            "ARBITRAJE Y FISCALIZACIÓN EN EL SECTOR MINERO"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "GESTIÓN CONTRACTUAL, CONCESIONES Y RESPONSABILIDADES DE LOS TITULARES MINEROS",
+          "docente": "Andrea Tejada",
+          "clases": [
+            "DERECHOS Y OBLIGACIONES DE LOS TITULARES DE LA ACTIVIDAD MINERA: MARCO LEGAL Y ESTRATEGIAS DE CUMPLIMIENTO",
+            "CONCESIONES MINERAS: LEGISLACIÓN, REQUISITOS Y GESTIÓN ESTRATÉGICA",
+            "CONCESIONES MINERAS Y GESTIÓN CONTRACTUAL: TIPOS, REQUISITOS Y RESOLUCIÓN DE DISPUTAS"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "ESPECIALISTA EN COMERCIO INTERNACIONAL GESTIÓN ADUANERA Y LOGÍSTICA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "REGULACIÓN DEL COMERCIO INTERNACIONAL EN EE. UU. Y CHINA: NORMATIVA Y DESAFÍOS LEGALES",
+          "docente": "Ivette Alvarez",
+          "clases": [
+            "PERSPECTIVAS Y DINÁMICAS DEL COMERCIO EXTERIOR: IMPORTACIONES Y EXPORTACIONES",
+            "NORMATIVAS DEL COMERCIO INTERNACIONAL: PERSPECTIVAS DE EE. UU. Y CHINA",
+            "REGULACIÓN, NORMAS Y PROCEDIMIENTOS EN EL COMERCIO EXTERIOR"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "OPTIMIZACIÓN DE LA GESTIÓN ADUANERA EN EL PROCESO DE IMPORTACIÓN",
+          "docente": "Gabriel Rosaperez",
+          "clases": [
+            "GESTIÓN ADUANERA: PROCEDIMIENTOS EN ESTADOS UNIDOS Y CHINA",
+            "CLASIFICACIÓN Y TRAMITACIÓN ADUANERA",
+            "OPTIMIZACIÓN DE LA CLASIFICACIÓN Y TRAMITACIÓN ADUANERA",
+            "APLICACIÓN DE PLATAFORMAS Y HERRAMIENTAS UTILIZADAS EN EL COMERCIO EXTERIOR"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "GESTIÓN INTEGRAL DE LA LOGÍSTICA EN EL COMERCIO INTERNACIONAL",
+          "docente": "Gabriel Rosaperez",
+          "clases": [
+            "OPERACIONES INTERNACIONALES DE IMPORTACIÓN Y EXPORTACIÓN",
+            "GESTIÓN LOGÍSTICA DE LAS IMPORTACIONES",
+            "GESTIÓN DE COSTOS, PRECIOS Y FINANCIAMIENTO",
+            "ESTRATEGIAS AVANZADAS EN IMPORTACIONES, EXPORTACIONES E INCOTERMS"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GEOLOGÍA MINERA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "",
+          "docente": "Juan Briones MÓDULO 01 - FUNDAMENTOS DE GEOLOGÍA MINERA",
+          "clases": [
+            "MINERALOGÍA Y PETROLOGÍA",
+            "PROCESOS GEOLÓGICOS EN DEPÓSITOS MINERALES",
+            "GEOLOGÍA DE YACIMIENTOS MINERALES"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "EXPLORACIÓN GEOLÓGICA Y EVALUACIÓN DE RECURSOS MINERALES",
+          "docente": "Mauricio Riveros",
+          "clases": [
+            "MÉTODOS DE EXPLORACIÓN GEOLÓGICA",
+            "MUESTREO Y ANÁLISIS DE MUESTRAS: INTERPRETACIÓN DE DATOS GEOLÓGICOS",
+            "MODELADO DE RECURSOS MINERALES"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "Docentes: Mauricio Riveros Manuel Aucapuri MÓDULO 03 - OPERACIONES MINERAS Y GESTIÓN AMBIENTAL",
+          "docente": "",
+          "clases": [
+            "MÉTODOS DE EXPLOTACIÓN MINERA",
+            "TECNOLOGÍA Y MAQUINARIA MINERA",
+            "SEGURIDAD EN OPERACIONES MINERAS"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "PRINCIPIOS Y APLICACIONES DE LA GEOMECÁNICA EN MINERÍA",
+          "docente": "Mauricio Riveros",
+          "clases": [
+            "INTRODUCCIÓN A LA GEOMECÁNICA APLICADA AL SECTOR MINERO",
+            "COMPORTAMIENTO MECÁNICO DE ROCAS Y SUELOS EN OPERACIONES MINERAS",
+            "MÉTODOS Y TÉCNICAS DE INVESTIGACIÓN GEOMECÁNICA",
+            "FACTORES GEOMECÁNICOS CLAVE EN LA EXPLORACIÓN Y EXPLOTACIÓN MINERA"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "GEOMECÁNICA SUBTERRÁNEA: COMPORTAMIENTO DE ROCAS Y SUELOS EN MINERÍA",
+          "docente": "Diego Astuyauri",
+          "clases": [
+            "CARACTERIZACIÓN GEOMECÁNICA DEL MACIZO ROCOSO",
+            "ANÁLISIS DE TENSIONES Y COMPORTAMIENTO DEL SUBSUELO",
+            "ESTABILIDAD DE EXCAVACIONES SUBTERRÁNEAS: EVALUACIÓN Y CONTROL",
+            "DISEÑO Y SELECCIÓN DE SOSTENIMIENTO SUBTERRÁNEO"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "GEOTECNIA APLICADA EN MINERÍA A CIELO ABIERTO",
+          "docente": "Mauricio Riveros",
+          "clases": [
+            "DISEÑO GEOTÉCNICO DE BANCOS Y TALUDES EN MINERÍA SUPERFICIAL",
+            "CONSIDERACIONES GEOTÉCNICAS EN OPERACIONES DE EXPLOTACIÓN",
+            "CONTROL DE LA EROSIÓN Y DRENAJE EN MINERÍA A CIELO ABIERTO",
+            "DRENAJE SUPERFICIAL Y SUBTERRÁNEO EN MINERÍA A CIELO ABIERTO"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GEOMETALURGIA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "MÉTODOS DE SEPARACIÓN Y CONCENTRACIÓN DE MINERALES",
+          "docente": "Manuel Aucapuri",
+          "clases": [
+            "SMART MINING EN LAS OPERACIONES MINERAS",
+            "OPTIMIZACIÓN DE TÉCNICAS AVANZADAS DEL PROCESAMIENTO DE MINERALES",
+            "PROCESOS METALÚRGICOS EN LAS OPERACIONES MINERALÓGICAS"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "INNOVACIÓN EN GEOESTADÍSTICA Y METALURGIA AVANZADA: DE LA TEORÍA A LA PRÁCTICA",
+          "docente": "Manuel Aucapuri",
+          "clases": [
+            "GEOESTADÍSTICA APLICADA A LA PREDICCIÓN Y MODELADO",
+            "METALURGIA EXTRACTIVA",
+            "TÉCNICAS ESPECIALIZADAS EN HIDROMETALURGIA"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "ESTRATEGIAS GEOMETALÚRGICAS Y REDUCCIÓN DE COSTOS EN OPERACIONES MINERAS",
+          "docente": "Manuel Aucapuri",
+          "clases": [
+            "UNIDADES GEOMETALÚRGICAS (UGM) EN LA OPTIMIZACIÓN",
+            "MODELOS GEOMETALÚRGICOS",
+            "OPTIMIZACIÓN EN LOS COSTOS DE OPERACIONES MINERAS"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GEOTECNIA MINERA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "",
+          "docente": "Diego Astuyauri MÓDULO 01 - GEOTECNIA DE SUELOS Y ROCAS",
+          "clases": [
+            "PRINCIPIOS FUNDAMENTALES DE LA GEOTECNIA",
+            "MODELOS DE COMPORTAMIENTOS DE SUELOS",
+            "MECÁNICA DE ROCAS",
+            "DINÁMICA DE ROCAS"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "",
+          "docente": "Diego Astuyauri MÓDULO 02 - MONITOREO GEOTÉCNICO",
+          "clases": [
+            "ESTUDIO GEOTÉCNICO",
+            "PENETRACIÓN ESTÁTICA Y DINÁMICA",
+            "INVESTIGACIÓN GEOFÍSICA",
+            "INSTRUMENTACIÓN GEOTÉCNICA"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "",
+          "docente": "Juan Briones MÓDULO 03 - ANÁLISIS HIDROGEOLÓGICO",
+          "clases": [
+            "GESTIÓN DEL AGUA EN MINERÍA",
+            "SATURACIÓN DE SUELOS",
+            "PROCESOS DE SATURACIÓN",
+            "DRENAJE DE SUELOS"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "INTRODUCCIÓN A LOS SISTEMAS DE GESTIÓN HSEQ",
+          "docente": "María Jesús Burga",
+          "clases": [
+            "CICLO PHVA: EL CORAZÓN DE LA MEJORA CONTINUA",
+            "GESTIÓN POR PROCESOS: EFICIENCIA, CONTROL Y TRAZABILIDAD",
+            "HERRAMIENTAS DE ANÁLISIS Y MEJORA CONTINUA",
+            "LIDERAZGO, CULTURA ORGANIZACIONAL Y SOSTENIBILIDAD"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "INTERPRETACIÓN DE LAS NORMAS ISO 9001, ISO 45001 E ISO 14001",
+          "docente": "Javier Rivera",
+          "clases": [
+            "SISTEMA DE GESTIÓN DE CALIDAD (ISO 9001:2015)",
+            "SISTEMA DE GESTIÓN DE SEGURIDAD Y SALUD EN EL TRABAJO (ISO 45001:2018)",
+            "SISTEMA DE GESTIÓN AMBIENTAL (ISO 14001:2015)",
+            "TALLERES PRÁCTICOS DE AUDITORÍAS INTERNAS HSEQ"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "Docentes: María Jesús Burga MÓDULO 03 - DOCUMENTACIÓN DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
+          "docente": "",
+          "clases": [
+            "CONCEPTOS Y NORMAS DE REFERENCIA HSEQ",
+            "MÉTODOS PARA LA INTEGRACIÓN DE SISTEMAS DE GESTIÓN",
+            "ALINEACIÓN DE REQUISITOS DEL SISTEMA HSEQ",
+            "CASO DE ESTUDIO INTEGRAL Y PREGUNTAS FRECUENTES"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "PANORAMA DE LA INDUSTRIA MINERA",
+          "docente": "",
+          "clases": [
+            "PANORAMA ACTUAL DE LA INDUSTRIA MINERA A NIVEL MUNDIAL Y EN EL PERÚ",
+            "MARCO LEGAL Y REGULATORIO DE LA MINERÍA",
+            "COMERCIALIZACIÓN DE LA MINERÍA",
+            "TENDENCIAS TECNOLÓGICAS E INNOVACIÓN EN LA INDUSTRIA MINERA",
+            "RSC: RESPONSABILIDAD SOCIAL CORPORATIVA"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "LIDERAZGO GERENCIAL EN LA INDUSTRIA MINERA",
+          "docente": "",
+          "clases": [
+            "TEORÍAS Y ENFOQUES DE LIDERAZGO APLICADOS A LA MINERÍA",
+            "LIDERAZGO Y TOMA DE DECISIONES",
+            "COMPORTAMIENTO EMOCIONALMENTE INTELIGENTE",
+            "GESTIÓN DEL TALENTO Y EQUIPOS DE TRABAJO EN OPERACIONES MINERAS",
+            "COMUNICACIÓN EFECTIVA EN ENTORNOS MINEROS"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "GESTIÓN ESTRATÉGICA Y CADENA DE SUMINISTRO",
+          "docente": "",
+          "clases": [
+            "PLANIFICACIÓN ESTRATÉGICA EN EMPRESAS MINERAS",
+            "SISTEMAS DE GESTIÓN DE ALMACENES (WMS) Y HERRAMIENTAS APLICADAS A LA MINERÍA",
+            "ANÁLISIS PRESUPUESTARIO Y DE LA GESTIÓN DE COMPRAS",
+            "FUNDAMENTOS DE LA GESTIÓN DE DISTRIBUCIÓN MINERA",
+            "LOGÍSTICA MINERA E IDENTIFICACIÓN DE KPIS EN LA CADENA DE ABASTECIMIENTO",
+            "ANÁLISIS DE COSTOS EN LA CADENA DE SUMINISTRO MINERA",
+            "LICITACIONES CAPEX Y OPEX EN LA MINERÍA"
+          ]
+        },
+        {
+          "codigo": "M04",
+          "nombre": "GESTIÓN DE COMPRAS Y COMERCIO INTERNACIONAL",
+          "docente": "",
+          "clases": [
+            "IMPORTACIONES, EXPORTACIONES, IMPUESTOS E INCOTERMS",
+            "CONSIDERACIONES ÉTICAS Y SOCIALES EN LA GESTIÓN DE COMPRAS",
+            "PRÁCTICAS DE COMPRAS SOSTENIBLES EN LA MINERÍA"
+          ]
+        },
+        {
+          "codigo": "M05",
+          "nombre": "EVALUACIÓN Y AUDITORÍA DE PROVEEDORES",
+          "docente": "",
+          "clases": [
+            "AUDITORÍA Y REPORTE DE SOSTENIBILIDAD EN COMPRAS",
+            "TENDENCIAS FUTURAS EN LA GESTIÓN DE COMPRAS EN LA MINERÍA"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "GESTIÓN AMBIENTAL APLICADA A ENTORNOS INDUSTRIALES Y MINEROS",
+          "docente": "Juan Briones",
+          "clases": [
+            "FUNDAMENTOS ESTRATÉGICOS DE LA GESTIÓN AMBIENTAL INDUSTRIAL Y MINERA",
+            "NORMATIVA Y LEGISLACIÓN AMBIENTAL VIGENTE",
+            "SISTEMAS DE GESTIÓN AMBIENTAL (ISO 14001 Y OTROS ESTÁNDARES)"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "HERRAMIENTAS TÉCNICAS DE CONTROL Y GESTIÓN AMBIENTAL OPERATIVA",
+          "docente": "Raul Jacinto",
+          "clases": [
+            "MANEJO INTEGRAL DE RESIDUOS SÓLIDOS Y RESIDUOS PELIGROSOS",
+            "GESTIÓN SOSTENIBLE DEL AGUA Y CONTROL DE EFLUENTES",
+            "CONTROL DE EMISIONES ATMOSFÉRICAS Y CALIDAD DEL AIRE",
+            "REHABILITACIÓN AMBIENTAL Y CIERRE DE PASIVOS"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "ESTRATEGIAS DE SOSTENIBILIDAD Y MEJORA AMBIENTAL CONTINUA",
+          "docente": "Juan Briones",
+          "clases": [
+            "ECONOMÍA CIRCULAR Y PRODUCCIÓN MÁS LIMPIA",
+            "CAMBIO CLIMÁTICO, ADAPTACIÓN Y HUELLA DE CARBONO",
+            "RELACIÓN COMUNITARIA, GESTIÓN SOCIAL Y LICENCIA SOCIAL PARA OPERAR",
+            "AUDITORÍA AMBIENTAL Y MONITOREO PARA LA MEJORA CONTINUA"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "GESTIÓN EN OPERACIONES MINERAS PRODUCTIVAS",
+          "docente": "Aida Ramirez",
+          "clases": [
+            "ASPECTOS CLAVE EN LA GESTIÓN DE OPERACIONES MINERAS",
+            "GESTIÓN EFICIENTE DE LA PRODUCCIÓN EN TIEMPO REAL",
+            "OPTIMIZACIÓN DE MONITOREO Y ANALÍTICA EN MINERÍA"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "OPTIMIZACIÓN Y AUTOMATIZACIÓN DE LOS PROCESOS EN LAS OPERACIONES MINERAS",
+          "docente": "Javier Rivera",
+          "clases": [
+            "METODOLOGÍAS DE OPTIMIZACIÓN DE PROCESOS MINEROS",
+            "HERRAMIENTAS DE MEJORA CONTINUA",
+            "INNOVACIÓN Y TÉCNICAS AVANZADAS PARA LA EFICIENCIA OPERATIVA",
+            "TECNOLOGÍAS EMERGENTES, AUTOMATIZACIÓN E INTELIGENCIA ARTIFICIAL EN LA MINERÍA"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "PLANIFICACIÓN ESTRATÉGICA Y GESTIÓN DE RIESGOS EN LAS OPERACIONES MINERAS",
+          "docente": "Mario Hilasaca",
+          "clases": [
+            "IMPLEMENTACIÓN Y GESTIÓN DE PROYECTOS DE AUTOMATIZACIÓN",
+            "MODIFICACIÓN DE PROYECTOS",
+            "GESTIÓN DE RIESGOS EN PROYECTOS DE AUTOMATIZACIÓN",
+            "REDES NEURONALES Y DEEP LEARNING"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GESTIÓN DE OPERACIONES INDUSTRIALES",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "",
+          "docente": "Aida Ramirez MÓDULO 01 - SOFT SKILLS EN LA INDUSTRIA",
+          "clases": [
+            "INTELIGENCIA EMOCIONAL APLICADA A LA GESTIÓN INDUSTRIAL Y MINERA",
+            "LIDERAZGO INDUSTRIAL, MINERO Y GESTIÓN DEL CAPITAL HUMANO",
+            "COMUNICACIÓN EFECTIVA Y RESOLUCIÓN DE CONFLICTOS EN ENTORNOS INDUSTRIALES Y MINEROS"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "",
+          "docente": "Javier Rivera MÓDULO 02 - LA GESTIÓN DE OPERACIONES INDUSTRIALES",
+          "clases": [
+            "PLANIFICACIÓN Y PROGRAMACIÓN DE LA PRODUCCIÓN",
+            "CONTROL DE PRODUCCIÓN Y GESTIÓN DE CALIDAD EN TIEMPO REAL",
+            "GESTIÓN DE RESIDUOS INDUSTRIALES Y SOSTENIBILIDAD",
+            "TECNOLOGÍAS EMERGENTES, AUTOMATIZACIÓN E INTELIGENCIA ARTIFICIAL EN LA MINERÍA"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "",
+          "docente": "Mario Hilasaca MÓDULO 03 - PLANEACIÓN Y CONTROL DE LA PRODUCCIÓN",
+          "clases": [
+            "PLANEACIÓN DE LA CAPACIDAD PRODUCTIVA Y OPTIMIZACIÓN DE RECURSOS",
+            "GESTIÓN DE LA CALIDAD Y MEJORA CONTINUA",
+            "INNOVACIÓN Y TECNOLOGÍA EN LA GESTIÓN DE OPERACIONES",
+            "REDES NEURONALES Y DEEP LEARNING"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "BIG DATA: DESDE LA RECOLECCIÓN DE DATOS A LA VISUALIZACIÓN DE INFORMES",
+          "docente": "José Chávez",
+          "clases": [
+            "ESTRATEGIAS AVANZADAS DE RECOLECCIÓN Y CAPTURA DE DATOS",
+            "ALMACENAMIENTO INTELIGENTE Y ARQUITECTURA DE DATOS MODERNA",
+            "ANÁLISIS DE DATOS PARA LA TOMA DE DECISIONES ESTRATÉGICAS",
+            "APLICACIÓN PRÁCTICA Y ZONA DE PREGUNTAS"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "ANÁLISIS PREDICTIVO PARA LA TOMA DE DECISIONES ESTRATÉGICAS",
+          "docente": "Carlos Gauret",
+          "clases": [
+            "DOMINANDO EL ANÁLISIS PREDICTIVO PARA DECISIONES INTELIGENTES",
+            "MACHINE LEARNING ESTRATÉGICO PARA EMPRESAS",
+            "OPTIMIZACIÓN DE PROCESOS EMPRESARIALES"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "",
+          "docente": "José Chávez MÓDULO 03 - REDES NEURONALES Y DEEP LEARNING",
+          "clases": [
+            "FUNDAMENTOS AVANZADOS DE REDES NEURONALES",
+            "CIENCIA DE DATOS PARA LA TOMA DE DECISIONES ESTRATÉGICAS",
+            "MACHINE LEARNING APLICADO A SECTORES EMPRESARIALES CLAVE",
+            "APLICACIÓN PRÁCTICA Y ZONA DE PREGUNTAS"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GESTIÓN LOGÍSTICA COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "INTRODUCCIÓN A LA GESTIÓN DE COMPRAS EN LA MINERÍA",
+          "docente": "",
+          "clases": [
+            "IMPORTANCIA DE LA GESTIÓN DE COMPRAS EN LA INDUSTRIA MINERA",
+            "PROCESOS DE ADQUISICIÓN Y APROVISIONAMIENTO EN MINERÍA",
+            "NORMATIVAS Y REGULACIONES EN COMPRAS PARA LA MINERÍA",
+            "SELECCIÓN DE PROVEEDORES Y EVALUACIÓN DE RIESGOS"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "ESTRATEGIAS DE COMPRAS Y NEGOCIACIÓN EN MINERÍA",
+          "docente": "",
+          "clases": [
+            "DESARROLLO DE ESTRATEGIAS DE COMPRAS EN MINERÍA",
+            "TÉCNICAS DE NEGOCIACIÓN Y GESTIÓN DE CONTRATOS",
+            "COMPRAS ESTRATÉGICAS Y GESTIÓN DE COSTOS",
+            "GESTIÓN DE PROVEEDORES GLOBALES Y LOCALES"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "ANÁLISIS PRESUPUESTARIO Y DE LA GESTIÓN DE COMPRAS",
+          "docente": "",
+          "clases": [
+            "PRESUPUESTO Y CONTROL DE COSTOS EN LA LOGÍSTICA MINERA",
+            "INDICADORES CLAVE DE DESEMPEÑO (KPIS) PARA PROVEEDORES LOGÍSTICOS Y PARA EL ÁREA DE ABASTECIMIENTO",
+            "ANÁLISIS DE COSTOS EN LA CADENA DE SUMINISTRO MINERA",
+            "LICITACIONES CAPEX Y OPEX EN LA MINERÍA",
+            "IMPORTACIONES, EXPORTACIONES, IMPUESTOS E INCOTERMS"
+          ]
+        },
+        {
+          "codigo": "M04",
+          "nombre": "LOGÍSTICA Y GESTIÓN DE INVENTARIOS EN MINERÍA",
+          "docente": "",
+          "clases": [
+            "GESTIÓN DE LA DEMANDA, PLANIFICACIÓN Y OPTIMIZACIÓN DE LA CADENA DE SUMINISTRO EN MINERÍA",
+            "GESTIÓN DE INVENTARIOS",
+            "GESTIÓN DE ALMACÉN Y MANEJO DE INVENTARIOS EN OPERACIONES MINERAS",
+            "GESTIÓN DE LA DISTRIBUCIÓN",
+            "CASOS PRÁCTICOS"
+          ]
+        },
+        {
+          "codigo": "M05",
+          "nombre": "RESPONSABILIDAD SOCIAL Y SOSTENIBILIDAD EN COMPRAS MINERAS",
+          "docente": "",
+          "clases": [
+            "CONSIDERACIONES ÉTICAS Y SOCIALES EN LA GESTIÓN DE COMPRAS",
+            "PRÁCTICAS DE COMPRAS SOSTENIBLES EN LA MINERÍA",
+            "AUDITORÍA Y REPORTE DE SOSTENIBILIDAD EN COMPRAS",
+            "TENDENCIAS FUTURAS EN LA GESTIÓN DE COMPRAS EN LA MINERÍA"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "GESTIÓN LOGÍSTICA INTEGRAL EN MINERÍA",
+          "docente": "Mario Hilasaca",
+          "clases": [
+            "FUNDAMENTOS DE LA LOGÍSTICA MINERA",
+            "PLANIFICACIÓN Y CONTROL DE OPERACIONES LOGÍSTICAS",
+            "TRANSPORTE Y DISTRIBUCIÓN MINERA"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "GESTIÓN ESTRATÉGICA DE ALMACENES EN ENTORNOS MINEROS",
+          "docente": "Mario Hilasaca",
+          "clases": [
+            "DISEÑO Y OPERACIÓN DE ALMACENES EN MINERÍA",
+            "CONTROL DE INVENTARIOS Y SISTEMAS DE GESTIÓN",
+            "SEGURIDAD, SOSTENIBILIDAD Y CUMPLIMIENTO"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "TECNOLOGÍA, INNOVACIÓN Y SOSTENIBILIDAD EN LOGÍSTICA MINERA",
+          "docente": "Gonzalo González",
+          "clases": [
+            "TRANSFORMACIÓN DIGITAL EN LA CADENA LOGÍSTICA MINERA",
+            "GESTIÓN DEL RIESGO, CONTINUIDAD OPERATIVA",
+            "ESTRATEGIAS SOSTENIBLES Y RESPONSABILIDAD SOCIAL"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "COSTOS Y PRESUPUESTOS DE ALMACENES EN INDUSTRIA Y MINERIA",
+          "docente": "Mario Hilasaca",
+          "clases": [
+            "ESTRATEGIAS DE COSTOS EN ALMACENAMIENTO PARA LA INDUSTRIA Y MINERÍA",
+            "HERRAMIENTAS AVANZADAS PARA LA GESTIÓN DE COSTOS Y PRESUPUESTOS",
+            "IMPACTO ESTRATÉGICO DE LA GESTIÓN DE COSTOS EN ALMACENES",
+            "SESIÓN PRÁCTICA"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "ESTRATEGIAS GLOBALES EN COMPRAS INTERNACIONALES",
+          "docente": "Gonzalo González",
+          "clases": [
+            "ESTRATEGIAS AVANZADAS EN IMPORTACIONES, EXPORTACIONES E INCOTERMS",
+            "DECISIONES ESTRATÉGICAS EN LOGÍSTICA MINERA: LICITACIONES CAPEX",
+            "TOMA DE DECISIONES DE ALTO IMPACTO: LICITACIONES OPEX EN LOGÍSTICA MINERA",
+            "SESIÓN PRÁCTICA"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "IDENTIFICACIÓN Y GESTIÓN AVANZADA DE RIESGOS EN LA LOGÍSTICA MINERA",
+          "docente": "Gonzalo González",
+          "clases": [
+            "IDENTIFICACIÓN Y MITIGACIÓN DE RIESGOS EN LA CADENA DE SUMINISTRO MINERA",
+            "SISTEMAS AVANZADOS DE GESTIÓN DE ALMACENES (WMS) APLICADOS A LA MINERÍA",
+            "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIOS Y LOGÍSTICA MINERA",
+            "SESIÓN PRÁCTICA"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "GESTIÓN MINERA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "Docentes: Manuel Aucapuri Gonzalo González MÓDULO 01 - OPERACIONES MINERAS: GEOLOGÍA, LOGÍSTICA Y PLANTA",
+          "docente": "",
+          "clases": [
+            "OPERACIONES EN MINERÍA: GEOLOGÍA",
+            "OPERACIONES EN MINERÍA: PLANTA",
+            "OPERACIONES EN MINERÍA: LOGÍSTICA",
+            "INNOVACIÓN Y TRANSFORMACIÓN DIGITAL EN LA MINERÍA"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "MEDIO AMBIENTE, RESPONSABILIDAD SOCIAL Y SEGURIDAD EN LA MINERÍA",
+          "docente": "Juan Briones",
+          "clases": [
+            "MEDIO AMBIENTE Y NORMATIVA RELACIONADA A LA MINERÍA",
+            "RESPONSABILIDAD SOCIAL, RELACIONES COMUNITARIAS Y MANEJO DE CONFLICTOS",
+            "SEGURIDAD Y PREVENCIÓN DE RIESGOS EN LA MINERÍA",
+            "RECURSO HUMANO EN MINERÍA"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "GESTIÓN DE PROYECTOS Y FINANZAS EN LA MINERÍA",
+          "docente": "Mario Hilasaca",
+          "clases": [
+            "PLANIFICACIÓN Y GESTIÓN DE PROYECTOS MINEROS",
+            "CONTROL PRESUPUESTAL Y GESTIÓN DE COSTOS",
+            "FINANCIAMIENTO Y MARCO NORMATIVO FINANCIERO"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "INTRODUCCIÓN A LA LEGISLACIÓN LABORAL EN PERÚ",
+          "docente": "",
+          "clases": [
+            "INTRODUCCIÓN A LA LEGISLACIÓN LABORAL PERUANA",
+            "DERECHOS Y OBLIGACIONES DE EMPLEADORES Y TRABAJADORES",
+            "JORNADA LABORAL Y DESCANSOS EN PERÚ",
+            "BENEFICIOS LABORALES, REMUNERACIONES Y PRESTACIONES"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "REGULACIÓN ESPECÍFICA EN LA LEGISLACIÓN LABORAL PERUANA",
+          "docente": "",
+          "clases": [
+            "REGULACIÓN DE TRABAJO DE MENORES Y ADOLESCENTES, TRABAJO DE EXTRANJEROS EN EL PERÚ",
+            "REGULACIÓN DEL TRABAJO A EMPLEADAS EN ESTADO DE GESTACIÓN Y PERSONAS CON DISCAPACIDAD",
+            "SEGURIDAD Y SALUD EN EL TRABAJO: ANÁLISIS DE LA LEY N.º 29783 Y DS N.º 005-2012-TR"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "TEMAS AVANZADOS DE LEGISLACIÓN LABORAL",
+          "docente": "",
+          "clases": [
+            "REGÍMENES LABORALES ESPECIALES EN PERÚ",
+            "NEGOCIACIÓN COLECTIVA Y SINDICATOS EN PERÚ",
+            "POLÍTICAS DE RECURSOS HUMANOS Y SU RELACIÓN CON LA LEGISLACIÓN LABORAL",
+            "SISTEMA DE INSPECCIONES Y SUNAFIL"
+          ]
+        },
+        {
+          "codigo": "M04",
+          "nombre": "PLANILLAS Y OBLIGACIONES LABORALES",
+          "docente": "",
+          "clases": [
+            "CONCEPTOS BÁSICOS DE PLANILLAS DE REMUNERACIONES",
+            "DEDUCCIONES LEGALES Y BENEFICIOS SOCIALES EN LAS PLANILLAS",
+            "CTS (COMPENSACIÓN POR TIEMPO DE SERVICIOS)",
+            "PLAZOS Y OBLIGACIONES EN LA ELABORACIÓN DE PLANILLAS",
+            "HERRAMIENTAS TECNOLÓGICAS PARA LA GESTIÓN DE PLANILLAS",
+            "DESPIDO Y LIQUIDACIÓN DE BENEFICIOS SOCIALES"
+          ]
+        },
+        {
+          "codigo": "M05",
+          "nombre": "ELABORACIÓN DE PLANILLA Y REGISTRO EN PLAME, T-REGISTRO Y AFPNET",
+          "docente": "",
+          "clases": [
+            "ELABORACIÓN DE PLANILLA: DESARROLLO PRÁCTICO",
+            "PLAME, T-REGISTRO, AFPNET Y ONP",
+            "ANÁLISIS Y DESARROLLO DE CASOS PRÁCTICOS"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "TRANSFORMACIÓN DIGITAL EN LA MINERÍA: TECNOLOGÍAS EMERGENTES, TENDENCIAS Y NUEVAS OPORTUNIDADES",
+          "docente": "José Chávez",
+          "clases": [
+            "INTRODUCCIÓN A LA TRANSFORMACIÓN DIGITAL EN LA MINERÍA",
+            "TECNOLOGÍAS EMERGENTES QUE REVOLUCIONAN LA MINERÍA",
+            "AUTOMATIZACIÓN EN LA MINERÍA: OPORTUNIDADES Y DESAFÍOS"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "",
+          "docente": "José Chávez MÓDULO 02 - DIGITALIZACIÓN DE PROCESOS MINEROS",
+          "clases": [
+            "GESTIÓN DE DATOS Y ANÁLISIS PARA LA TOMA DE DECISIONES ESTRATÉGICAS EN MINERÍA",
+            "TECNOLOGÍAS CLAVE PARA LA DIGITALIZACIÓN DE PROCESOS MINEROS",
+            "SOSTENIBILIDAD Y RESPONSABILIDAD SOCIAL EN LA MINERÍA DIGITALIZADA"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "GESTIÓN Y TOMA DE DECISIONES BASADA EN DATOS",
+          "docente": "José Chávez",
+          "clases": [
+            "COMPONENTES CLAVE DE LA GESTIÓN BASADA EN DATOS EN MINERÍA",
+            "DESAFÍOS DE LA GESTIÓN BASADA EN DATOS EN EL SECTOR MINERO",
+            "IMPORTANCIA DE LA GESTIÓN BASADA EN DATOS EN MINERÍA"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "PREVENCIÓN DE LA CONFLICTIVIDAD, RIESGOS SOCIALES Y RESPONSABILIDAD SOCIAL MINERA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "PREVENCIÓN EFECTIVA DE CONFLICTOS SOCIALES Y GESTIÓN DE RIESGOS SOCIALES EN PROYECTOS",
+          "docente": "Javier Rivera",
+          "clases": [
+            "TEORÍA DEL CONFLICTO E IDENTIFICACIÓN Y EVALUACIÓN DE RIESGOS SOCIALES",
+            "DIÁLOGO Y PRINCIPALES MECANISMOS DE RESOLUCIÓN DE CONFLICTOS",
+            "LA COMUNICACIÓN EFICAZ"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "COMUNICACIÓN EFECTIVA PARA LA PREVENCIÓN DE CONFLICTOS Y LA CONSTRUCCIÓN DE CONSENSOS",
+          "docente": "Javier Rivera",
+          "clases": [
+            "BARRERAS DE LA COMUNICACIÓN EFICAZ",
+            "BARRERAS CULTURALES Y LENGUAJE UTILIZADO",
+            "LA COMUNICACIÓN EFICAZ: TÉCNICAS"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "GESTIÓN DE RELACIONES COMUNITARIAS Y RESOLUCIÓN DE CONFLICTOS",
+          "docente": "Raul Jacinto",
+          "clases": [
+            "GESTIÓN DE LAS RELACIONES COMUNITARIAS DESDE EL ENFOQUE DE LA RESPONSABILIDAD SOCIAL",
+            "RELACIONES COMUNITARIAS Y GRUPOS DE INTERÉS",
+            "DISEÑO Y EJECUCIÓN DE PROYECTOS DE DESARROLLO COMUNITARIO SOSTENIBLE",
+            "NEGOCIACIÓN, GESTIÓN SOCIAL Y RESOLUCIÓN DE CONFLICTOS EN ENTORNOS MINEROS"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "SEGURIDAD INDUSTRIAL",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "",
+          "docente": "Alberto Mendoza MÓDULO 01 - GESTIÓN DE OPERACIONES INDUSTRIALES",
+          "clases": [
+            "PLANIFICACIÓN Y PROGRAMACIÓN DE LA PRODUCCIÓN",
+            "CONTROL DE LA PRODUCCIÓN Y GESTIÓN DE CALIDAD EN TIEMPO REAL",
+            "MANTENIMIENTO INDUSTRIAL",
+            "GESTIÓN DE RESIDUOS INDUSTRIALES Y SOSTENIBILIDAD"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "",
+          "docente": "Esteban Hermoza MÓDULO 02 - SEGURIDAD INDUSTRIAL Y PREVENCIÓN DE RIESGOS",
+          "clases": [
+            "LEY DE SEGURIDAD Y SALUD EN EL TRABAJO (LEY N.º 29783) Y SU REGLAMENTO (D. S. N.º 005-2012-TR)",
+            "NORMA INTERNACIONAL ISO 45001:2018",
+            "IDENTIFICACIÓN DE PELIGROS Y EVALUACIÓN DE RIESGOS",
+            "INVESTIGACIÓN DE ACCIDENTES, INCIDENTES Y ENFERMEDADES OCUPACIONALES",
+            "MATERIALES PELIGROSOS",
+            "TRABAJOS CRÍTICOS",
+            "IMPLEMENTACIÓN DE LA ISO 18001",
+            "ERGONOMÍA APLICADA EN LA ORGANIZACIÓN"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "",
+          "docente": "Raul Jacinto MÓDULO 03 - NORMATIVA DE SEGURIDAD Y MEDIO AMBIENTE",
+          "clases": [
+            "LEGISLACIÓN AMBIENTAL Y COMPETENCIAS DEL OEFA",
+            "NORMATIVIDAD SOBRE LA PROTECCIÓN Y CALIDAD AMBIENTAL DEL AGUA, EL AIRE, EL SUELO, EL RUIDO Y LA CONTAMINACIÓN LUMÍNICA",
+            "REGLAMENTO DEL SISTEMA DE EVALUACIÓN DE IMPACTO AMBIENTAL",
+            "ISO 14001 EN LA IDENTIFICACIÓN DE REQUISITOS LEGALES",
+            "TRAIN THE TRAINERS"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "",
+          "docente": "Alberto Mendoza MÓDULO 01 - NORMATIVA EN INDUSTRIA Y MINERÍA",
+          "clases": [
+            "LEY N.º 29783: MARCO LEGAL DE SEGURIDAD Y SALUD EN EL TRABAJO Y ACTUALIZACIONES RECIENTES",
+            "DECRETO SUPREMO N.º 024-2016-EM: REGLAMENTO DE SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA Y SUS MODIFICATORIAS",
+            "COMITÉS DE SEGURIDAD Y SALUD EN EL TRABAJO (SST) Y ACOSO LABORAL: ESTRATEGIAS Y GESTIÓN",
+            "APLICACIÓN PRÁCTICA Y ZONA DE PREGUNTAS"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "NORMATIVA INTERNACIONAL Y GESTIÓN DEL MEDIO AMBIENTE",
+          "docente": "Esteban Hermoza",
+          "clases": [
+            "GESTIÓN AVANZADA DE LA SEGURIDAD Y SALUD EN MINERÍA: NORMATIVAS INTERNACIONALES Y SOLUCIONES PRÁCTICAS",
+            "TRINORMA ISO APLICADA A LA MINERÍA BAJO EL ENFOQUE HSEQ",
+            "GESTIÓN AMBIENTAL Y RESPONSABILIDAD SOCIAL CORPORATIVA EN EL SECTOR MINERO",
+            "APLICACIÓN PRÁCTICA Y ZONA DE PREGUNTAS"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "Docentes: Carlos Dominguez MÓDULO 03 - INSPECCIÓN, INVESTIGACIÓN Y RESPUESTA A EMERGENCIAS EN MINERÍA",
+          "docente": "",
+          "clases": [
+            "AUDITORÍA Y FISCALIZACIÓN DE CUMPLIMIENTO EN LA INDUSTRIA MINERA: ENFOQUES AVANZADOS EN INSPECCIÓN Y CONTROL",
+            "INVESTIGACIÓN DE ACCIDENTES EN MINERÍA: TÉCNICAS DE VANGUARDIA Y PREVENCIÓN DE RIESGOS",
+            "RESPUESTAS ESPECIALIZADAS A EMERGENCIAS EN MINERÍA: DISEÑO, PLANIFICACIÓN Y CAPACITACIÓN DE ALTO NIVEL",
+            "PLAN DE FORMACIÓN Y CAPACITACIÓN",
+            "APLICACIÓN PRÁCTICA Y ZONA DE PREGUNTAS"
+          ]
+        }
+      ]
+    },
+    {
+      "diplomado": "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA",
+      "modulos": [
+        {
+          "codigo": "M01",
+          "nombre": "GESTIÓN ESTRATÉGICA DE LA LOGÍSTICA Y LA CADENA DE SUMINISTRO EN MINERÍA",
+          "docente": "Javier Rivera",
+          "clases": [
+            "FUNDAMENTOS DE LA LOGÍSTICA Y GESTIÓN DE LA CADENA DE SUMINISTROS",
+            "PLANIFICACIÓN ESTRATÉGICA EN LA CADENA DE SUMINISTRO",
+            "ADMINISTRACIÓN DE LOS RIESGOS DE LA CADENA DE SUMINISTRO",
+            "MEJORA CONTINUA Y GESTIÓN EFICIENTE DE PROCESOS LOGÍSTICOS"
+          ]
+        },
+        {
+          "codigo": "M02",
+          "nombre": "GESTIÓN ESTRATÉGICA DE LA LOGÍSTICA Y LA CADENA DE SUMINISTRO EN MINERÍA",
+          "docente": "Gonzalo González",
+          "clases": [
+            "ROL ESTRATÉGICO DE LA GESTIÓN DE COMPRAS EN LA INDUSTRIA MINERA",
+            "PROCESOS DE ADQUISICIÓN Y APROVISIONAMIENTO PARA OPERACIONES MINERAS",
+            "NORMATIVAS, CONTRATOS Y REGULACIONES EN COMPRAS DEL SECTOR MINERO"
+          ]
+        },
+        {
+          "codigo": "M03",
+          "nombre": "EL ENTORNO INTERNACIONAL, TENDENCIAS Y MEJORES PRÁCTICAS",
+          "docente": "Gonzalo González",
+          "clases": [
+            "SUPPLY CHAIN GLOBAL: DESAFÍOS, OPORTUNIDADES Y ENTORNO COMPETITIVO",
+            "TRANSFORMACIÓN DIGITAL Y TECNOLOGÍAS EMERGENTES EN SUPPLY CHAIN",
+            "MEJORES PRÁCTICAS INTERNACIONALES EN SUPPLY CHAIN MANAGEMENT",
+            "DISEÑO DE CADENAS DE SUMINISTRO SOSTENIBLES, ÁGILES Y RESILIENTES"
+          ]
+        }
+      ]
+    }
+  ]
+}

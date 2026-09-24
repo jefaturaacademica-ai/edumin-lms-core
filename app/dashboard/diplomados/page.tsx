@@ -17,6 +17,7 @@ import {
   BarChart2, 
   Clock, 
   ArrowRight,
+  PlayCircle,
   X,
   FileText,
   Wrench,
@@ -37,7 +38,7 @@ export default function DiplomadosPage() {
 
   // Control del despliegue del catálogo y filtro por píldoras de estado
   const [mostrarCatalogoAdicional, setMostrarCatalogoAdicional] = useState(false);
-  const [filtroEstadoMatriculados, setFiltroEstadoMatriculados] = useState<'todos' | 'progreso' | 'completados'>('todos');
+  const [filtroEstadoMatriculados, setFiltroEstadoMatriculados] = useState<'todos' | 'progreso' | 'completados'>('progreso');
 
   // Modal para ver detalles y temario de un diplomado
   const [modalDiplomado, setModalDiplomado] = useState<DiplomadoCompleto | null>(null);
@@ -165,7 +166,7 @@ export default function DiplomadosPage() {
 
   return (
     <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-300 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
-      <div className="max-w-6xl mx-auto space-y-12">
+      <div className="max-w-7xl mx-auto space-y-12">
         
         {/* Encabezado Limpio */}
         <header className="mb-10">
@@ -212,23 +213,6 @@ export default function DiplomadosPage() {
             {/* BARRA DE PÍLDORAS/TABS SUPERIORES */}
             <div className="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-200 dark:border-slate-800">
               <button
-                onClick={() => setFiltroEstadoMatriculados('todos')}
-                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
-                  filtroEstadoMatriculados === 'todos'
-                    ? (esIlimitado ? 'bg-amber-600 text-white shadow-md shadow-amber-600/20' : 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20')
-                    : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
-                }`}
-              >
-                <GraduationCap className="w-3.5 h-3.5" />
-                <span>Todos los diplomados</span>
-                <span className={`px-2 py-0.5 rounded-full text-[10px] ${
-                  filtroEstadoMatriculados === 'todos' ? 'bg-white/20 text-white' : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
-                }`}>
-                  {diplomadosActivosSimulados.length}
-                </span>
-              </button>
-
-              <button
                 onClick={() => setFiltroEstadoMatriculados('progreso')}
                 className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
                   filtroEstadoMatriculados === 'progreso'
@@ -261,6 +245,23 @@ export default function DiplomadosPage() {
                   {diplomadosCompletados.length}
                 </span>
               </button>
+
+              <button
+                onClick={() => setFiltroEstadoMatriculados('todos')}
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                  filtroEstadoMatriculados === 'todos'
+                    ? (esIlimitado ? 'bg-amber-600 text-white shadow-md shadow-amber-600/20' : 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20')
+                    : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
+                }`}
+              >
+                <GraduationCap className="w-3.5 h-3.5" />
+                <span>Todos los diplomados</span>
+                <span className={`px-2 py-0.5 rounded-full text-[10px] ${
+                  filtroEstadoMatriculados === 'todos' ? 'bg-white/20 text-white' : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+                }`}>
+                  {diplomadosActivosSimulados.length}
+                </span>
+              </button>
             </div>
 
             {/* LISTA DE DIPLOMADOS FILTRADOS */}
@@ -271,97 +272,160 @@ export default function DiplomadosPage() {
                 </p>
               </div>
             ) : (
-              <div className="space-y-8 animate-fadeIn">
+              <div className="space-y-12 animate-fadeIn">
                 {diplomadosMatriculadosMostrar.map((diplomado) => {
                   const esCompletado = diplomado.avance >= 100;
                   return (
-                    <div 
-                      key={diplomado.id} 
-                      className={`rounded-3xl overflow-hidden shadow-sm border ${esOscuro ? 'bg-slate-900/90 border-slate-800' : 'bg-white border-slate-200'}`}
-                    >
-                      <div className="flex flex-col md:flex-row">
-                        
-                        <div className="relative w-full md:w-2/5 lg:w-1/3 min-h-[250px] bg-slate-800">
-                          <img 
-                            src={diplomado.imagen} 
-                            alt={diplomado.titulo} 
-                            className="absolute inset-0 w-full h-full object-cover opacity-90"
-                          />
-                          <div className="absolute top-4 left-4">
-                            <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 flex items-center gap-1.5">
-                              <ShieldCheck className="size-3.5" /> Acceso Completo
+                    <div key={diplomado.id} className="space-y-6">
+                      
+                      {/* Cabecera Principal del Diplomado */}
+                      <div className={`p-6 sm:p-8 rounded-3xl border flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all ${
+                        esOscuro ? 'bg-slate-900/90 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+                      }`}>
+                        <div className="space-y-1.5 max-w-2xl">
+                          <div className="flex items-center gap-2">
+                            <span className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full border ${
+                              esIlimitado 
+                                ? (esOscuro ? 'bg-amber-500/10 border-amber-500/20 text-amber-400' : 'bg-amber-50 border-amber-200 text-amber-700')
+                                : (esOscuro ? 'bg-indigo-500/10 border-indigo-500/20 text-indigo-400' : 'bg-indigo-50 border-indigo-200 text-indigo-700')
+                            }`}>
+                              Diplomado de Especialización
                             </span>
-                          </div>
-                          <div className="absolute top-4 right-4">
-                            {esCompletado ? (
-                              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md shadow-md bg-emerald-600/90 text-white border-emerald-400/30">
-                                <CheckCircle2 className="size-3.5 text-white" /> Estado: Completado
-                              </span>
-                            ) : (
-                              <span className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md shadow-md ${
-                                esIlimitado ? 'bg-amber-500/90 text-white border-amber-400/30' : 'bg-indigo-600/90 text-white border-indigo-400/30'
-                              }`}>
-                                <Clock className="size-3.5 animate-pulse" /> Estado: En Progreso
+                            {esCompletado && (
+                              <span className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                                100% Completado
                               </span>
                             )}
                           </div>
+                          <h2 className={`text-xl sm:text-2xl font-black uppercase tracking-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                            {diplomado.titulo}
+                          </h2>
                         </div>
 
-                        <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
-                          <div>
-                            <h3 className={`text-xl sm:text-2xl font-black uppercase leading-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                              {diplomado.titulo}
-                            </h3>
-                            
-                            <div className="mt-5 space-y-2 max-w-sm">
-                              <div className="flex justify-between text-xs font-bold">
-                                <span className={`flex items-center gap-1.5 ${esOscuro ? 'text-slate-300' : 'text-slate-600'}`}>
-                                  <BarChart2 className={`size-4 ${esCompletado ? 'text-emerald-500' : (esIlimitado ? 'text-amber-500' : 'text-indigo-500')}`} /> 
-                                  Avance del Diplomado
-                                </span>
-                                <span className={esCompletado ? (esOscuro ? 'text-emerald-400' : 'text-emerald-600') : (esIlimitado ? 'text-amber-500' : 'text-indigo-500')}>
-                                  {diplomado.avance}%
-                                </span>
-                              </div>
-                              <div className={`w-full h-2.5 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
-                                <div 
-                                  className={`h-full rounded-full transition-all duration-500 ${esCompletado ? 'bg-emerald-500' : (esIlimitado ? 'bg-amber-500' : 'bg-indigo-600')}`}
-                                  style={{ width: `${diplomado.avance}%` }}
-                                />
-                              </div>
-                            </div>
+                        {/* Barra de Progreso Global del Diplomado */}
+                        <div className="w-full md:w-64 space-y-1.5 shrink-0">
+                          <div className="flex justify-between items-center text-xs font-bold">
+                            <span className={`text-[11px] font-semibold ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                              Progreso global
+                            </span>
+                            <span className={esCompletado ? 'text-emerald-400 font-extrabold' : (esIlimitado ? 'text-amber-500 font-bold' : (esOscuro ? 'text-indigo-400 font-bold' : 'text-indigo-600 font-bold'))}>
+                              {diplomado.avance}% completado
+                            </span>
                           </div>
-
-                          <div className="space-y-3 mt-6">
-                            {diplomado.modulos.map((modulo) => (
-                              <div key={modulo.id} className={`flex flex-col sm:flex-row sm:items-center justify-between p-3.5 rounded-2xl border transition-all gap-3 ${esOscuro ? 'bg-slate-950/60 border-slate-800 hover:bg-slate-800/60' : 'bg-slate-50 border-slate-200 hover:bg-slate-100'}`}>
-                                <div className="flex items-center gap-3">
-                                  <BookOpen className={`w-5 h-5 shrink-0 ${esCompletado ? 'text-emerald-500' : (esIlimitado ? 'text-amber-500' : 'text-indigo-500')}`} />
-                                  <div>
-                                    <span className={`font-semibold text-xs sm:text-sm block ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>
-                                      {modulo.titulo}
-                                    </span>
-                                    {modulo.docente && (
-                                      <span className={`text-[10px] font-medium block mt-0.5 ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
-                                        👨‍🏫 Docente: {modulo.docente}
-                                      </span>
-                                    )}
-                                  </div>
-                                </div>
-                                <Link 
-                                  href={`/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}`} 
-                                  className={`text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-all inline-flex items-center gap-1.5 shadow-sm shrink-0 justify-center ${
-                                    esCompletado ? 'bg-emerald-600 hover:bg-emerald-500' : (esIlimitado ? 'bg-amber-600 hover:bg-amber-500' : 'bg-indigo-600 hover:bg-indigo-500')
-                                  }`}
-                                >
-                                  <span>{esCompletado ? 'Repasar clases' : 'Ver clases'}</span>
-                                  <ArrowRight className="w-4 h-4" />
-                                </Link>
-                              </div>
-                            ))}
+                          <div className={`w-full h-2.5 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
+                            <div 
+                              className={`h-full rounded-full transition-all duration-500 ${esCompletado ? 'bg-emerald-500' : (esIlimitado ? 'bg-amber-500' : 'bg-indigo-600')}`}
+                              style={{ width: `${diplomado.avance}%` }}
+                            />
                           </div>
                         </div>
                       </div>
+
+                      {/* Grilla de Tarjetitas por Módulo (Estilo Cursos) */}
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {diplomado.modulos.map((modulo, idx) => {
+                          const esModuloCompletado = esCompletado || (diplomado.avance > 40 && idx === 0);
+                          const esModuloEnProgreso = !esCompletado && ((diplomado.avance > 0 && idx === 1) || (diplomado.avance <= 40 && idx === 0));
+                          const avanceModulo = esModuloCompletado ? 100 : (esModuloEnProgreso ? 50 : 0);
+
+                          return (
+                            <div 
+                              key={modulo.id} 
+                              className={`rounded-3xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md ${
+                                esOscuro ? 'bg-slate-900 border-slate-800 hover:border-slate-700' : 'bg-white border-slate-200 hover:border-slate-300'
+                              }`}
+                            >
+                              {/* Portada del Módulo (Usa la foto de portada del Diplomado) */}
+                              <div className="relative h-44 w-full bg-slate-800">
+                                <img 
+                                  src={diplomado.imagen} 
+                                  alt={modulo.titulo}
+                                  className="object-cover w-full h-full opacity-90"
+                                />
+                                <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none">
+                                  <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 shrink-0">
+                                    Módulo {idx + 1}
+                                  </span>
+                                  {esModuloCompletado ? (
+                                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-emerald-600/90 text-white backdrop-blur-md border-emerald-400/30 shrink-0">
+                                      <CheckCircle2 className="size-3 text-white" /> Completado
+                                    </span>
+                                  ) : esModuloEnProgreso ? (
+                                    <span className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border backdrop-blur-md shadow-md shrink-0 ${
+                                      esIlimitado ? 'bg-amber-500/90 text-white border-amber-400/30' : 'bg-indigo-600/90 text-white border-indigo-400/30'
+                                    }`}>
+                                      <Clock className="size-3 animate-pulse" /> En Progreso
+                                    </span>
+                                  ) : (
+                                    <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-slate-800/90 text-slate-300 backdrop-blur-md border-slate-700 shrink-0">
+                                      Por Iniciar
+                                    </span>
+                                  )}
+                                </div>
+                              </div>
+
+                              {/* Cuerpo de la Tarjetita */}
+                              <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                                <div>
+                                  <span className={`text-[10px] font-bold uppercase tracking-widest block mb-1 ${
+                                    esOscuro ? 'text-indigo-400' : 'text-indigo-600'
+                                  }`}>
+                                    {diplomado.titulo}
+                                  </span>
+                                  <h3 className={`text-base font-bold leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                                    {modulo.titulo}
+                                  </h3>
+                                </div>
+
+                                {/* Barra de Progreso del Módulo Individual */}
+                                <div className="space-y-1.5 pt-2">
+                                  <div className="flex justify-between items-center text-xs font-bold">
+                                    <span className={`text-[11px] font-semibold ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                                      Avance
+                                    </span>
+                                    <span className={esModuloCompletado ? 'text-emerald-400 font-extrabold' : (esModuloEnProgreso ? (esIlimitado ? 'text-amber-500 font-bold' : 'text-indigo-400 font-bold') : 'text-slate-500')}>
+                                      {avanceModulo}% completado
+                                    </span>
+                                  </div>
+                                  <div className={`w-full h-2 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
+                                    <div 
+                                      className={`h-full rounded-full transition-all duration-500 ${
+                                        esModuloCompletado 
+                                          ? 'bg-emerald-500' 
+                                          : (esModuloEnProgreso ? (esIlimitado ? 'bg-amber-500' : 'bg-indigo-600') : 'bg-slate-700')
+                                      }`} 
+                                      style={{ width: `${avanceModulo}%` }}
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Pie de Tarjetita con Botón de Acción */}
+                              <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-between gap-3 ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
+                                <span className={`text-xs font-semibold flex items-center gap-1.5 ${
+                                  esModuloCompletado ? 'text-emerald-400' : (esModuloEnProgreso ? (esIlimitado ? 'text-amber-400' : 'text-indigo-400') : 'text-slate-500')
+                                }`}>
+                                  {esModuloCompletado ? <CheckCircle2 className="w-4 h-4" /> : <PlayCircle className="w-4 h-4" />}
+                                  {esModuloCompletado ? 'Módulo culminado' : (esModuloEnProgreso ? 'En desarrollo' : 'Acceso disponible')}
+                                </span>
+
+                                <Link 
+                                  href={`/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}`}
+                                  className={`text-xs font-bold px-4 py-2.5 rounded-xl transition-all inline-flex items-center gap-1.5 shadow-sm shrink-0 ${
+                                    esModuloCompletado 
+                                      ? 'bg-emerald-600 hover:bg-emerald-500 text-white' 
+                                      : (esIlimitado ? 'bg-amber-600 hover:bg-amber-500 text-white' : 'bg-indigo-600 hover:bg-indigo-500 text-white')
+                                  }`}
+                                >
+                                  <PlayCircle className="w-4 h-4" />
+                                  <span>{esModuloCompletado ? 'Repasar clase' : 'Ir a la clase'}</span>
+                                </Link>
+                              </div>
+                            </div>
+                          );
+                        })}
+                      </div>
+
                     </div>
                   );
                 })}
