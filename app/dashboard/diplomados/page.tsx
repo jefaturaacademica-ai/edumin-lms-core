@@ -278,47 +278,13 @@ export default function DiplomadosPage() {
                   return (
                     <div key={diplomado.id} className="space-y-6">
                       
-                      {/* Cabecera Principal del Diplomado */}
-                      <div className={`p-6 sm:p-8 rounded-3xl border flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all ${
+                      {/* Cabecera Principal del Diplomado (Solo el Nombre del Diplomado) */}
+                      <div className={`p-6 sm:p-7 rounded-3xl border transition-all ${
                         esOscuro ? 'bg-slate-900/90 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
                       }`}>
-                        <div className="space-y-1.5 max-w-2xl">
-                          <div className="flex items-center gap-2">
-                            <span className={`text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full border ${
-                              esIlimitado 
-                                ? (esOscuro ? 'bg-amber-500/10 border-amber-500/20 text-amber-400' : 'bg-amber-50 border-amber-200 text-amber-700')
-                                : (esOscuro ? 'bg-indigo-500/10 border-indigo-500/20 text-indigo-400' : 'bg-indigo-50 border-indigo-200 text-indigo-700')
-                            }`}>
-                              Diplomado de Especialización
-                            </span>
-                            {esCompletado && (
-                              <span className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-                                100% Completado
-                              </span>
-                            )}
-                          </div>
-                          <h2 className={`text-xl sm:text-2xl font-black uppercase tracking-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                            {diplomado.titulo}
-                          </h2>
-                        </div>
-
-                        {/* Barra de Progreso Global del Diplomado */}
-                        <div className="w-full md:w-64 space-y-1.5 shrink-0">
-                          <div className="flex justify-between items-center text-xs font-bold">
-                            <span className={`text-[11px] font-semibold ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                              Progreso global
-                            </span>
-                            <span className={esCompletado ? 'text-emerald-400 font-extrabold' : (esIlimitado ? 'text-amber-500 font-bold' : (esOscuro ? 'text-indigo-400 font-bold' : 'text-indigo-600 font-bold'))}>
-                              {diplomado.avance}% completado
-                            </span>
-                          </div>
-                          <div className={`w-full h-2.5 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
-                            <div 
-                              className={`h-full rounded-full transition-all duration-500 ${esCompletado ? 'bg-emerald-500' : (esIlimitado ? 'bg-amber-500' : 'bg-indigo-600')}`}
-                              style={{ width: `${diplomado.avance}%` }}
-                            />
-                          </div>
-                        </div>
+                        <h2 className={`text-xl sm:text-2xl font-black uppercase tracking-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                          {diplomado.titulo}
+                        </h2>
                       </div>
 
                       {/* Grilla de Tarjetitas por Módulo (Estilo Cursos) */}
@@ -364,25 +330,17 @@ export default function DiplomadosPage() {
                                 </div>
                               </div>
 
-                              {/* Cuerpo de la Tarjetita */}
+                              {/* Cuerpo de la Tarjetita (Sin subtítulo del diplomado) */}
                               <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
                                 <div>
-                                  <span className={`text-[10px] font-bold uppercase tracking-widest block mb-1 ${
-                                    esOscuro ? 'text-indigo-400' : 'text-indigo-600'
-                                  }`}>
-                                    {diplomado.titulo}
-                                  </span>
                                   <h3 className={`text-base font-bold leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
                                     {modulo.titulo}
                                   </h3>
                                 </div>
 
-                                {/* Barra de Progreso del Módulo Individual */}
+                                {/* Barra de Progreso del Módulo (Sin la palabra 'Avance') */}
                                 <div className="space-y-1.5 pt-2">
-                                  <div className="flex justify-between items-center text-xs font-bold">
-                                    <span className={`text-[11px] font-semibold ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                                      Avance
-                                    </span>
+                                  <div className="flex justify-end text-xs font-bold">
                                     <span className={esModuloCompletado ? 'text-emerald-400 font-extrabold' : (esModuloEnProgreso ? (esIlimitado ? 'text-amber-500 font-bold' : 'text-indigo-400 font-bold') : 'text-slate-500')}>
                                       {avanceModulo}% completado
                                     </span>
@@ -400,25 +358,18 @@ export default function DiplomadosPage() {
                                 </div>
                               </div>
 
-                              {/* Pie de Tarjetita con Botón de Acción */}
-                              <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-between gap-3 ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                                <span className={`text-xs font-semibold flex items-center gap-1.5 ${
-                                  esModuloCompletado ? 'text-emerald-400' : (esModuloEnProgreso ? (esIlimitado ? 'text-amber-400' : 'text-indigo-400') : 'text-slate-500')
-                                }`}>
-                                  {esModuloCompletado ? <CheckCircle2 className="w-4 h-4" /> : <PlayCircle className="w-4 h-4" />}
-                                  {esModuloCompletado ? 'Módulo culminado' : (esModuloEnProgreso ? 'En desarrollo' : 'Acceso disponible')}
-                                </span>
-
+                              {/* Pie de Tarjetita con 1 Solo Botón Limpio */}
+                              <div className={`px-6 pb-6 pt-3 border-t ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
                                 <Link 
                                   href={`/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}`}
-                                  className={`text-xs font-bold px-4 py-2.5 rounded-xl transition-all inline-flex items-center gap-1.5 shadow-sm shrink-0 ${
+                                  className={`w-full text-xs font-bold px-4 py-2.5 rounded-xl transition-all inline-flex items-center justify-center gap-2 shadow-sm ${
                                     esModuloCompletado 
                                       ? 'bg-emerald-600 hover:bg-emerald-500 text-white' 
                                       : (esIlimitado ? 'bg-amber-600 hover:bg-amber-500 text-white' : 'bg-indigo-600 hover:bg-indigo-500 text-white')
                                   }`}
                                 >
-                                  <PlayCircle className="w-4 h-4" />
                                   <span>{esModuloCompletado ? 'Repasar clase' : 'Ir a la clase'}</span>
+                                  <ArrowRight className="w-4 h-4" />
                                 </Link>
                               </div>
                             </div>
