@@ -5,10 +5,11 @@ export async function GET() {
   try {
     const admin = createAdminClient();
     
-    // Consultar todos los perfiles de Supabase
+    // Consultar solo perfiles con rol ESTUDIANTE de Supabase
     const { data: profiles, error } = await admin
       .from('profiles')
       .select('*')
+      .eq('role', 'ESTUDIANTE')
       .order('nombres', { ascending: true });
 
     if (error) {
