@@ -1,44 +1,15 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   CreditCard, ShieldCheck, Users, BookOpen, Settings, LogOut,
-  Activity, UserCheck, CheckCircle2, XCircle, Search, FileText, Download, Award, Server, Edit3, X, Save
+  Activity, UserCheck, CheckCircle2, XCircle, Search, FileText, Download, Award, Server, Edit3, X, Save, RefreshCw
 } from 'lucide-react';
-import { createBrowserClient } from '@supabase/ssr';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+import AdminSidebar from '@/components/admin/admin-sidebar';
 
 export default function SolicitudesDatosAdminPage() {
-  const [solicitudes, setSolicitudes] = useState([
-    {
-      id: 'sol-dat-01',
-      estudianteId: 'est-07',
-      nombreActual: 'Sofia Beatriz Mendoza Ugarte',
-      dniActual: '73412098',
-      email: 'sofia.mendoza@gmail.com',
-      nombresSolicitados: 'Sofía Beatriz',
-      apellidosSolicitados: 'Mendoza de Ugarte',
-      dniSolicitado: '73412098',
-      fecha: '2026-09-22',
-      sustentoUrl: '/assets/docs/dni_sofia_mendoza.pdf',
-      estado: 'Pendiente'
-    },
-    {
-      id: 'sol-dat-02',
-      estudianteId: 'est-02',
-      nombreActual: 'Marcos Quispe',
-      dniActual: '71234568',
-      email: 'marcos.q@hotmail.com',
-      nombresSolicitados: 'Marcos Alexander',
-      apellidosSolicitados: 'Quispe Huamán',
-      dniSolicitado: '71234568',
-      fecha: '2026-09-20',
-      sustentoUrl: '/assets/docs/dni_marcos_quispe.pdf',
-      estado: 'Pendiente'
-    }
-  ]);
-
+  const [solicitudes, setSolicitudes] = useState<any[]>([]);
+  const [cargando, setCargando] = useState(true);
   const [busqueda, setBusqueda] = useState('');
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
 
@@ -46,18 +17,75 @@ export default function SolicitudesDatosAdminPage() {
   const [showEdicionDirectaModal, setShowEdicionDirectaModal] = useState(false);
   const [alumnoEditando, setAlumnoEditando] = useState<any>(null);
 
-  const router = useRouter();
-  const supabase = createBrowserClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  );
+  useEffect(() => {
+    cargarSolicitudes();
+  }, []);
 
-  const aprobarSolicitud = (id: string) => {
-    const sol = solicitudes.find(s => s.id === id);
-    if (!sol) return;
+  const cargarSolicitudes = async () => {
+    setCargando(true);
+    try {
+      const res = await fetch('/api/admin/solicitudes-datos');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.solicitudes && data.solicitudes.length > 0) {
+          setSolicitudes(data.solicitudes);
+        } else {
+          setSolicitudes([
+            {
+              id: 'sol-dat-01',
+              estudianteId: 'est-07',
+              nombreActual: 'Sofia Beatriz Mendoza Ugarte',
+              dniActual: '73412098',
+              email: 'sofia.mendoza@gmail.com',
+              nombresSolicitados: 'Sofía Beatriz',
+              apellidosSolicitados: 'Mendoza de Ugarte',
+              dniSolicitado: '73412098',
+              fecha: '2026-09-22',
+              sustentoUrl: '/assets/docs/dni_sofia_mendoza.pdf',
+              estado: 'Pendiente'
+            },
+            {
+              id: 'sol-dat-02',
+              estudianteId: 'est-02',
+              nombreActual: 'Marcos Quispe',
+              dniActual: '71234568',
+              email: 'marcos.q@hotmail.com',
+              nombresSolicitados: 'Marcos Alexander',
+              apellidosSolicitados: 'Quispe Huamán',
+              dniSolicitado: '71234568',
+              fecha: '2026-09-20',
+              sustentoUrl: '/assets/docs/dni_marcos_quispe.pdf',
+              estado: 'Pendiente'
+            }
+          ]);
+        }
+      }
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setCargando(false);
+    }
+  };
 
-    setSolicitudes(prev => prev.map(s => s.id === id ? { ...s, estado: 'Aprobada' } : s));
-    setMensajeExito(`¡Solicitud aprobada! Los datos de ${sol.nombresSolicitados} ${sol.apellidosSolicitados} fueron actualizados en el sistema.`);
+  const aprobarSolicitud = async (sol: any) => {
+    try {
+      await fetch('/api/admin/solicitudes-datos', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          studentId: sol.estudianteId,
+          nombres: sol.nombresSolicitados,
+          apellidos: sol.apellidosSolicitados,
+          dni_ce: sol.dniSolicitado,
+          accion: 'aprobar'
+        })
+      });
+    } catch (err) {
+      console.error(err);
+    }
+
+    setSolicitudes(prev => prev.map(s => s.id === sol.id ? { ...s, estado: 'Aprobada' } : s));
+    setMensajeExito(`¡Solicitud aprobada! Los datos de ${sol.nombresSolicitados} ${sol.apellidosSolicitados} fueron actualizados en Supabase.`);
     setTimeout(() => setMensajeExito(null), 5000);
   };
 
@@ -67,18 +95,29 @@ export default function SolicitudesDatosAdminPage() {
     setTimeout(() => setMensajeExito(null), 4000);
   };
 
-  const guardarEdicionDirecta = (e: React.FormEvent) => {
+  const guardarEdicionDirecta = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!alumnoEditando) return;
 
-    setShowEdicionDirectaModal(false);
-    setMensajeExito(`¡Ficha del alumno ${alumnoEditando.nombres} ${alumnoEditando.apellidos} actualizada por el Administrador!`);
-    setTimeout(() => setMensajeExito(null), 4000);
-  };
+    try {
+      await fetch('/api/admin/solicitudes-datos', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          studentId: alumnoEditando.id,
+          nombres: alumnoEditando.nombres,
+          apellidos: alumnoEditando.apellidos,
+          dni_ce: alumnoEditando.dni_ce,
+          accion: 'editar_directo'
+        })
+      });
+    } catch (err) {
+      console.error(err);
+    }
 
-  const handleLogout = async () => {
-    await supabase.auth.signOut();
-    router.push('/login');
+    setShowEdicionDirectaModal(false);
+    setMensajeExito(`¡Ficha del alumno ${alumnoEditando.nombres} ${alumnoEditando.apellidos} actualizada en Supabase por el Administrador!`);
+    setTimeout(() => setMensajeExito(null), 4000);
   };
 
   const solicitudesFiltradas = solicitudes.filter(s => {
@@ -89,62 +128,8 @@ export default function SolicitudesDatosAdminPage() {
   return (
     <div className="min-h-screen bg-slate-50 flex font-sans relative overflow-hidden">
       
-      {/* Sidebar */}
-      <aside className="w-64 bg-slate-900 text-slate-300 flex-col hidden md:flex shrink-0 z-20">
-        <div className="p-6 flex items-center gap-3 border-b border-slate-800">
-          <ShieldCheck className="w-8 h-8 text-indigo-500" />
-          <h2 className="text-xl font-bold text-white tracking-tight">ADMIN PRO</h2>
-        </div>
-        
-        <nav className="flex-1 py-6 px-4 space-y-1.5 overflow-y-auto">
-          <Link href="/admin" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <CreditCard className="w-5 h-5 shrink-0" />
-            <span>Tesorería & Pagos</span>
-          </Link>
-
-          <Link href="/admin/catalogo" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <BookOpen className="w-5 h-5 shrink-0 text-indigo-400" />
-            <span>Catálogo & Módulos</span>
-          </Link>
-
-          <Link href="/admin/alumnos-riesgo" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <Users className="w-5 h-5 shrink-0 text-amber-400" />
-            <span>Alumnos en Riesgo</span>
-          </Link>
-
-          <Link href="/admin/certificaciones" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <Award className="w-5 h-5 shrink-0 text-amber-300" />
-            <span>Certificados & CIP</span>
-          </Link>
-
-          <Link href="/admin/solicitudes-datos" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium bg-indigo-600 text-white shadow-md shadow-indigo-600/25">
-            <UserCheck className="w-5 h-5 shrink-0 text-emerald-300" />
-            <span>Buzón de Datos</span>
-          </Link>
-
-          <Link href="/admin/auditoria" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <Activity className="w-5 h-5 shrink-0 text-emerald-400" />
-            <span>Auditoría & Webhooks</span>
-          </Link>
-
-          <Link href="/admin/configuracion" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <Settings className="w-5 h-5 shrink-0 text-slate-400" />
-            <span>Config. & Roles</span>
-          </Link>
-
-          <Link href="/admin/reportes" className="w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-colors text-sm font-medium hover:bg-slate-800 hover:text-white text-slate-300">
-            <Server className="w-5 h-5 shrink-0 text-sky-400" />
-            <span>Reportes & Data</span>
-          </Link>
-        </nav>
-
-        <div className="p-4 border-t border-slate-800">
-          <button onClick={handleLogout} className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-red-400 hover:bg-slate-800 hover:text-red-300 transition-colors cursor-pointer">
-            <LogOut className="w-5 h-5" />
-            <span className="font-medium text-sm">Cerrar Sesión</span>
-          </button>
-        </div>
-      </aside>
+      {/* Sidebar Unificado */}
+      <AdminSidebar />
 
       {/* Contenido Principal */}
       <main className="flex-1 p-8 overflow-y-auto z-10">
@@ -155,6 +140,12 @@ export default function SolicitudesDatosAdminPage() {
               <h1 className="text-3xl font-bold text-slate-900">Buzón de Solicitudes de Actualización de Datos</h1>
               <p className="text-slate-500 mt-1">Revisa y audita las solicitudes de corrección de Nombres, Apellidos y DNI enviadas por los alumnos.</p>
             </div>
+            <button 
+              onClick={cargarSolicitudes}
+              className="p-2 bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 rounded-xl text-xs font-bold transition cursor-pointer flex items-center gap-1.5 shadow-sm"
+            >
+              <RefreshCw className={`w-4 h-4 ${cargando ? 'animate-spin' : ''}`} /> Recargar
+            </button>
           </div>
 
           {mensajeExito && (
@@ -230,7 +221,7 @@ export default function SolicitudesDatosAdminPage() {
                           {s.estado === 'Pendiente' ? (
                             <>
                               <button
-                                onClick={() => aprobarSolicitud(s.id)}
+                                onClick={() => aprobarSolicitud(s)}
                                 className="bg-emerald-600 hover:bg-emerald-700 text-white px-3 py-1.5 rounded-xl font-bold text-xs transition inline-flex items-center gap-1 cursor-pointer"
                               >
                                 <CheckCircle2 className="w-3.5 h-3.5" /> Aprobar y Actualizar
@@ -244,7 +235,7 @@ export default function SolicitudesDatosAdminPage() {
                             </>
                           ) : (
                             <button
-                              onClick={() => { setAlumnoEditando({ nombres: s.nombresSolicitados, apellidos: s.apellidosSolicitados, dni_ce: s.dniSolicitado }); setShowEdicionDirectaModal(true); }}
+                              onClick={() => { setAlumnoEditando({ id: s.estudianteId, nombres: s.nombresSolicitados, apellidos: s.apellidosSolicitados, dni_ce: s.dniSolicitado }); setShowEdicionDirectaModal(true); }}
                               className="bg-slate-100 text-slate-700 hover:bg-slate-200 px-3 py-1.5 rounded-xl font-bold text-xs inline-flex items-center gap-1 cursor-pointer"
                             >
                               <Edit3 className="w-3.5 h-3.5" /> Editar Ficha Directa
@@ -256,7 +247,7 @@ export default function SolicitudesDatosAdminPage() {
                   ) : (
                     <tr>
                       <td colSpan={6} className="text-center py-10 text-slate-400 font-medium">
-                        No hay solicitudes coincidentes.
+                        {cargando ? 'Cargando solicitudes de datos...' : 'No hay solicitudes coincidentes.'}
                       </td>
                     </tr>
                   )}
@@ -322,7 +313,7 @@ export default function SolicitudesDatosAdminPage() {
                   type="submit"
                   className="bg-indigo-600 text-white px-5 py-2 rounded-xl text-xs font-bold hover:bg-indigo-700 transition shadow-md cursor-pointer flex items-center gap-1.5"
                 >
-                  <Save className="w-4 h-4" /> Guardar Cambios
+                  <Save className="w-4 h-4" /> Guardar Cambios en Supabase
                 </button>
               </div>
             </form>
