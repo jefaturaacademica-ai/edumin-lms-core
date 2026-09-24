@@ -8,6 +8,7 @@ export async function GET() {
     const { data: profiles, error } = await admin
       .from('profiles')
       .select('*')
+      .eq('role', 'ESTUDIANTE')
       .order('nombres', { ascending: true });
 
     if (error) {
