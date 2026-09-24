@@ -9,6 +9,7 @@ export interface EstudianteCompleto {
   cuotas_pagadas: number;
   cuotas_totales: number;
   monto_cuota: number;
+  monto_total_programa?: number;
   monto_total_pagado: number;
   deuda_total_pendiente: number;
   cupos_diplomados: number;

@@ -42,26 +42,59 @@ export async function loginWithDni(
     return { error: "Tu acceso ha sido bloqueado por el sistema. Por favor comunícate con administración." };
   }
 
-  // 1. Intentar primero con Supabase Auth nativo
-  const supabase = await createClient();
-  const { error: authError } = await supabase.auth.signInWithPassword({
-    email: profile.email || `${profile.dni_ce}@edumin.pe`,
-    password,
-  });
+  // Verificar la contraseña proporcionada contra 'contrasena' (si existe) o contra el DNI
+  const hasCustomPassword = Boolean(profile.contrasena && profile.contrasena.trim() !== "");
+  const isMatchCustom = hasCustomPassword && password === profile.contrasena!.trim();
+  const isMatchDni = password === profile.dni_ce;
 
-  // 2. Si Auth nativo falla o la cuenta está en profiles, verificar contraseña esperada (columna 'contrasena' o DNI por defecto)
-  if (authError) {
-    const passwordEsperada = (profile.contrasena && profile.contrasena.trim() !== "")
-      ? profile.contrasena.trim()
-      : profile.dni_ce;
+  if (!isMatchCustom && !isMatchDni) {
+    return INVALID_CREDENTIALS;
+  }
 
-    if (password !== passwordEsperada) {
-      return INVALID_CREDENTIALS;
+  // Sincronizar o asegurar la existencia del usuario en auth.users de Supabase
+  const userEmail = profile.email || `${profile.dni_ce}@edumin.pe`;
+  const { data: authUserData, error: getUserError } = await admin.auth.admin.getUserById(profile.id);
+
+  if (getUserError || !authUserData?.user) {
+    // Si no existe el usuario en auth.users con profile.id, lo creamos
+    const { error: createError } = await admin.auth.admin.createUser({
+      id: profile.id,
+      email: userEmail,
+      password: password,
+      email_confirm: true,
+      user_metadata: { dni_ce: profile.dni_ce },
+    });
+
+    if (createError) {
+      console.error("Error al crear usuario en Supabase Auth:", createError.message);
+    }
+  } else {
+    // Si ya existe el usuario en auth.users, actualizamos su contraseña al password ingresado
+    const { error: updateError } = await admin.auth.admin.updateUserById(profile.id, {
+      password: password,
+      email: userEmail,
+      email_confirm: true,
+    });
+
+    if (updateError) {
+      console.error("Error al actualizar contraseña en Supabase Auth:", updateError.message);
     }
   }
 
-  // 3. Redirección según rol
-  if (profile.role === "ADMIN") {
+  // Iniciar sesión con Supabase Auth nativo para escribir las cookies de sesión (HTTP-only)
+  const supabase = await createClient();
+  const { error: signInError } = await supabase.auth.signInWithPassword({
+    email: userEmail,
+    password: password,
+  });
+
+  if (signInError) {
+    console.error("Error en signInWithPassword:", signInError.message);
+    return INVALID_CREDENTIALS;
+  }
+
+  // Redirección según rol
+  if (profile.role === "ADMIN" || profile.role === "SUPERADMIN") {
     redirect("/admin");
   }
 
@@ -100,7 +133,7 @@ export async function updatePassword(
   const admin = createAdminClient();
   const { error: profileError } = await admin
     .from("profiles")
-    .update({ debe_cambiar_password: false })
+    .update({ debe_cambiar_password: false, contrasena: password })
     .eq("id", user.id);
 
   if (profileError) {
