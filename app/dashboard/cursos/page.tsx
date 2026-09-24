@@ -17,7 +17,9 @@ import {
   Clock, 
   Award,
   Wrench,
-  X
+  X,
+  CircleDashed,
+  ArrowRight
 } from 'lucide-react';
 import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
@@ -55,7 +57,7 @@ export default function CursosPage() {
       id: 'manejo-epps', 
       titulo: "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783", 
       categoria: "Seguridad & SSOMA", 
-      duracion: "20 Horas Académicas", 
+      duracion: "20 horas académicas", 
       avance: 75,
       imagen: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80"
     },
@@ -63,7 +65,7 @@ export default function CursosPage() {
       id: 'big-data', 
       titulo: "FUNDAMENTOS DE BIG DATA", 
       categoria: "Tecnología & Minería 4.0", 
-      duracion: "25 Horas Académicas", 
+      duracion: "25 horas académicas", 
       avance: 40,
       imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
     },
@@ -71,7 +73,7 @@ export default function CursosPage() {
       id: 'logistica-minera', 
       titulo: "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA", 
       categoria: "Logística & Suministro", 
-      duracion: "30 Horas Académicas", 
+      duracion: "30 horas académicas", 
       avance: 20,
       imagen: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80"
     },
@@ -79,7 +81,7 @@ export default function CursosPage() {
       id: 'riesgos-criticos', 
       titulo: "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA", 
       categoria: "Seguridad & SSOMA", 
-      duracion: "15 Horas Académicas", 
+      duracion: "15 horas académicas", 
       avance: 100,
       imagen: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80"
     },
@@ -87,15 +89,23 @@ export default function CursosPage() {
       id: 'sistemas-hseq', 
       titulo: "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)", 
       categoria: "Seguridad & SSOMA", 
-      duracion: "40 Horas Académicas", 
+      duracion: "40 horas académicas", 
       avance: 100,
       imagen: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80"
+    },
+    { 
+      id: 'iso-14001', 
+      titulo: "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA", 
+      categoria: "Ambiental", 
+      duracion: "30 horas académicas", 
+      avance: 0,
+      imagen: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80"
     },
     { 
       id: 'iso-9001', 
       titulo: "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015", 
       categoria: "Legal & Negocios", 
-      duracion: "30 Horas Académicas", 
+      duracion: "30 horas académicas", 
       avance: 100,
       imagen: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
     }
@@ -277,10 +287,10 @@ export default function CursosPage() {
           <div>
             <h1 className={`text-3xl font-bold tracking-tight flex items-center gap-3 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
               <BookOpen className="w-8 h-8 text-indigo-600" />
-              Cursos Cortos Asincrónicos
+              Mis cursos y talleres
             </h1>
             <p className={`mt-2 text-sm ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-              Bienvenid@, <span className={`font-semibold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>{nombres}</span>. Accede a tus cursos matriculados con seguimiento de avance o adquiere nuevas especializaciones.
+              Accede a tus cursos matriculados con seguimiento de avance o adquiere nuevas especializaciones.
             </p>
           </div>
         </header>
@@ -308,54 +318,63 @@ export default function CursosPage() {
           </div>
         ) : (
           <div className="space-y-6">
-            {/* BARRA DE PÍLDORAS/TABS SUPERIORES */}
-            <div className="flex flex-wrap items-center gap-2 pb-2 border-b border-slate-200 dark:border-slate-800">
+            {/* BARRA DE PÍLDORAS/TABS SUPERIORES DESLIZABLE EN MÓVIL */}
+            <div className="flex items-center gap-2 overflow-x-auto max-w-full touch-pan-x pb-2 pr-4 border-b border-slate-200 dark:border-slate-800 no-scrollbar shrink-0">
+              {/* EN PROGRESO (ÍNDIGO AL ACTIVAR) */}
               <button
                 onClick={() => setFiltroEstadoMatriculados('progreso')}
-                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
                   filtroEstadoMatriculados === 'progreso'
                     ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
                     : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
                 }`}
               >
-                <Clock className="w-3.5 h-3.5" />
+                <Clock className="w-3.5 h-3.5 shrink-0" />
                 <span>En progreso</span>
-                <span className={`px-2 py-0.5 rounded-full text-[10px] ${
-                  filtroEstadoMatriculados === 'progreso' ? 'bg-white/20 text-white' : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+                <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                  filtroEstadoMatriculados === 'progreso' 
+                    ? 'bg-white/20 text-white' 
+                    : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
                 }`}>
                   {cursosEnProgreso.length}
                 </span>
               </button>
 
+              {/* COMPLETADOS (ESMERALDA AL ACTIVAR) */}
               <button
                 onClick={() => setFiltroEstadoMatriculados('completados')}
-                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
                   filtroEstadoMatriculados === 'completados'
                     ? 'bg-emerald-600 text-white shadow-md shadow-emerald-600/20'
                     : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
                 }`}
               >
-                <CheckCircle2 className="w-3.5 h-3.5" />
+                <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
                 <span>Completados</span>
-                <span className={`px-2 py-0.5 rounded-full text-[10px] ${
-                  filtroEstadoMatriculados === 'completados' ? 'bg-white/20 text-white' : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+                <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                  filtroEstadoMatriculados === 'completados' 
+                    ? 'bg-white/20 text-white' 
+                    : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
                 }`}>
                   {cursosCompletados.length}
                 </span>
               </button>
 
+              {/* TODOS (SLATE/NEUTRO AL ACTIVAR) */}
               <button
                 onClick={() => setFiltroEstadoMatriculados('todos')}
-                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                className={`px-4 py-2.5 rounded-2xl text-xs font-bold transition-all flex items-center gap-2 cursor-pointer whitespace-nowrap shrink-0 ${
                   filtroEstadoMatriculados === 'todos'
-                    ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20'
+                    ? 'bg-slate-800 text-white dark:bg-slate-700 shadow-md shadow-slate-900/20'
                     : (esOscuro ? 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200')
                 }`}
               >
-                <BookOpen className="w-3.5 h-3.5" />
-                <span>Todos los cursos</span>
-                <span className={`px-2 py-0.5 rounded-full text-[10px] ${
-                  filtroEstadoMatriculados === 'todos' ? 'bg-white/20 text-white' : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
+                <BookOpen className="w-3.5 h-3.5 shrink-0" />
+                <span>Todos</span>
+                <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                  filtroEstadoMatriculados === 'todos' 
+                    ? 'bg-white/20 text-white' 
+                    : (esOscuro ? 'bg-slate-800 text-slate-300' : 'bg-slate-100 text-slate-700')
                 }`}>
                   {listaCursosMatriculados.length}
                 </span>
@@ -373,86 +392,97 @@ export default function CursosPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
                 {cursosMatriculadosMostrar.map((curso) => {
                   const esCompletado = curso.avance >= 100;
+                  const esPorIniciar = curso.avance === 0;
+
                   return (
-                    <div 
+                    <Link
                       key={curso.id}
-                      className={`rounded-3xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md ${
+                      href={`/dashboard/cursos/${curso.id}`}
+                      className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
                         esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
                       }`}
                     >
-                      <div className="relative h-44 w-full bg-slate-800">
+                      {/* PORTADA CON ETIQUETAS */}
+                      <div className="relative h-44 w-full bg-slate-800 overflow-hidden">
                         <img 
                           src={curso.imagen} 
                           alt={curso.titulo}
-                          className="object-cover w-full h-full opacity-90"
+                          className="object-cover w-full h-full opacity-90 transition-transform duration-300 group-hover:scale-105"
                         />
                         <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none">
-                          <span className="text-[10px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/10 shrink-0">
+                          <span className="text-[11px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0">
                             {curso.categoria}
                           </span>
                           {esCompletado ? (
-                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-emerald-600/90 text-white backdrop-blur-md border-emerald-400/30 shrink-0">
-                              <CheckCircle2 className="size-3" /> Completado
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border bg-emerald-600/90 text-white backdrop-blur-md border-emerald-400/30 shrink-0">
+                              <CheckCircle2 className="size-3.5" /> Completado
+                            </span>
+                          ) : esPorIniciar ? (
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border bg-amber-500/90 text-white backdrop-blur-md border-amber-400/30 shrink-0">
+                              <CircleDashed className="size-3.5" /> Por iniciar
                             </span>
                           ) : (
-                            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border bg-indigo-500/90 text-white backdrop-blur-md border-indigo-400/30 shrink-0">
-                              <Clock className="size-3 animate-pulse" /> En Progreso
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border bg-indigo-500/90 text-white backdrop-blur-md border-indigo-400/30 shrink-0">
+                              <Clock className="size-3.5" /> En progreso
                             </span>
                           )}
                         </div>
                       </div>
 
-                      <div className="p-6 space-y-4">
-                        <h3 className={`text-base font-bold leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                          {curso.titulo}
-                        </h3>
-                        <p className={`text-xs flex items-center gap-1.5 font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                          <FileText className={`w-4 h-4 ${esCompletado ? 'text-emerald-400' : 'text-indigo-400'}`} /> {curso.duracion}
-                        </p>
+                      {/* CUERPO CON ALINEACIÓN VERTICAL UNIFORME DE TODOS LOS ELEMENTOS */}
+                      <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <div className="space-y-3">
+                          <div className="h-12 flex items-start overflow-hidden">
+                            <h3 className={`text-base font-bold leading-snug line-clamp-2 text-balance ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                              {curso.titulo}
+                            </h3>
+                          </div>
+                          <p className={`text-xs flex items-center gap-1.5 font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                            <Clock className={`w-4 h-4 ${esCompletado ? 'text-emerald-400' : esPorIniciar ? 'text-amber-400' : 'text-indigo-400'}`} /> {curso.duracion}
+                          </p>
+                        </div>
 
+                        {/* BLOQUE DE AVANCE CON PORCENTAJE ARRIBA DE LA BARRA */}
                         <div className="space-y-1.5 pt-2">
-                          <div className="flex justify-end text-xs font-bold">
-                            <span className={esCompletado ? 'text-emerald-400 font-extrabold' : (esOscuro ? 'text-indigo-400 font-bold' : 'text-indigo-600 font-bold')}>
+                          <div className="flex items-center justify-between text-xs font-bold">
+                            <span className={esOscuro ? 'text-slate-400 font-medium' : 'text-slate-500 font-medium'}>
+                              Avance
+                            </span>
+                            <span className={esCompletado ? 'text-emerald-400 font-extrabold' : (esPorIniciar ? (esOscuro ? 'text-slate-400 font-medium' : 'text-slate-500 font-medium') : (esOscuro ? 'text-indigo-400 font-bold' : 'text-indigo-600 font-bold'))}>
                               {curso.avance}% completado
                             </span>
                           </div>
-                          <div className={`w-full h-2.5 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
+                          <div className={`w-full h-2 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
                             <div 
-                              className={`h-full rounded-full transition-all duration-500 ${esCompletado ? 'bg-emerald-500' : 'bg-indigo-600'}`} 
+                              className={`h-full rounded-full transition-all duration-500 ${
+                                esCompletado 
+                                  ? 'bg-emerald-500' 
+                                  : esPorIniciar 
+                                  ? 'bg-slate-300 dark:bg-slate-700' 
+                                  : 'bg-indigo-600'
+                              }`} 
                               style={{ width: `${curso.avance}%` }}
                             />
                           </div>
                         </div>
                       </div>
 
-                      <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-between ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                        {esCompletado ? (
-                          <>
-                            <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1.5">
-                              <Award className="w-4 h-4" /> Certificado listo
-                            </span>
-                            <Link 
-                              href={`/dashboard/cursos/${curso.id}`}
-                              className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors inline-flex items-center gap-1.5 shadow-sm"
-                            >
-                              <PlayCircle className="w-4 h-4" /> Repasar clase
-                            </Link>
-                          </>
-                        ) : (
-                          <>
-                            <span className="text-xs font-semibold text-indigo-400 flex items-center gap-1.5">
-                              <Clock className="w-4 h-4" /> En desarrollo
-                            </span>
-                            <Link 
-                              href={`/dashboard/cursos/${curso.id}`}
-                              className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition-colors inline-flex items-center gap-1.5 shadow-sm"
-                            >
-                              <PlayCircle className="w-4 h-4" /> Ir a la clase
-                            </Link>
-                          </>
-                        )}
+                      {/* BOTÓN ALINEADO CON ÍCONO ÚNICO UNIFORME */}
+                      <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-end ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
+                        <div 
+                          className={`w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-sm ${
+                            esCompletado
+                              ? 'bg-emerald-600 group-hover:bg-emerald-700 text-white shadow-emerald-600/20'
+                              : esPorIniciar
+                              ? 'bg-amber-600 group-hover:bg-amber-700 text-white shadow-amber-600/20'
+                              : 'bg-indigo-600 group-hover:bg-indigo-700 text-white shadow-indigo-600/20'
+                          }`}
+                        >
+                          <span>{esCompletado ? 'Repasar curso' : esPorIniciar ? 'Iniciar curso' : 'Continuar curso'}</span>
+                          <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5" />
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   );
                 })}
               </div>
