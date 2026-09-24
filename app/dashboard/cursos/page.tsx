@@ -383,16 +383,66 @@ export default function CursosPage() {
 
             {/* GRILLA DE CURSOS FILTRADOS POR LA PÍLDORA SELECCIONADA */}
             {cursosMatriculadosMostrar.length === 0 ? (
-              <div className={`rounded-3xl p-10 text-center border ${esOscuro ? 'bg-slate-900 border-slate-800 text-slate-400' : 'bg-white border-slate-200 text-slate-500'}`}>
-                <p className="text-sm font-medium">
-                  No tienes cursos en la sección &quot;{filtroEstadoMatriculados === 'progreso' ? 'En progreso' : 'Completados'}&quot;.
+              <div className={`rounded-3xl p-8 sm:p-10 text-center border shadow-sm ${esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
+                <div className="size-14 mx-auto rounded-2xl bg-indigo-500/10 border border-indigo-500/20 text-indigo-500 grid place-items-center mb-4">
+                  <ShoppingBag className="size-7" />
+                </div>
+                <h3 className={`text-lg sm:text-xl font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                  {filtroEstadoMatriculados === 'progreso' ? '¡No tienes cursos pendientes en desarrollo!' : 'Aún no posees cursos completados'}
+                </h3>
+                <p className={`mt-2 max-w-md mx-auto text-xs sm:text-sm leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                  Explora nuestra oferta completa con los 76 cursos oficiales de alta especialización y adquiere nuevos programas para continuar tu ruta de aprendizaje.
                 </p>
+                <div className="mt-6 flex justify-center gap-3">
+                  <button
+                    onClick={() => setMostrarCatalogoAdicional(true)}
+                    className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-5 py-3 rounded-xl transition shadow-sm inline-flex items-center gap-2 cursor-pointer"
+                  >
+                    <ShoppingBag className="size-4" /> Explorar catálogo de cursos
+                  </button>
+                </div>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeIn">
                 {cursosMatriculadosMostrar.map((curso) => {
                   const esCompletado = curso.avance >= 100;
                   const esPorIniciar = curso.avance === 0;
+
+                  // Centralización de estilos e información de estado
+                  const infoEstado = esCompletado
+                    ? {
+                        label: 'Completado',
+                        Icono: CheckCircle2,
+                        badgeBg: 'bg-emerald-600/90 border-emerald-400/30 text-white',
+                        duracionIconColor: 'text-emerald-400',
+                        porcentajeColor: esOscuro ? 'text-emerald-400' : 'text-emerald-600',
+                        barraBg: 'bg-emerald-600',
+                        botonBg: 'bg-emerald-600 group-hover:bg-emerald-700 shadow-emerald-600/20 text-white',
+                        botonTexto: 'Repasar curso'
+                      }
+                    : esPorIniciar
+                    ? {
+                        label: 'Por iniciar',
+                        Icono: CircleDashed,
+                        badgeBg: 'bg-amber-500/90 border-amber-400/30 text-white',
+                        duracionIconColor: 'text-amber-400',
+                        porcentajeColor: esOscuro ? 'text-slate-400' : 'text-slate-500',
+                        barraBg: 'bg-slate-300 dark:bg-slate-700',
+                        botonBg: 'bg-amber-600 group-hover:bg-amber-700 shadow-amber-600/20 text-white',
+                        botonTexto: 'Iniciar curso'
+                      }
+                    : {
+                        label: 'En progreso',
+                        Icono: Clock,
+                        badgeBg: 'bg-indigo-500/90 border-indigo-400/30 text-white',
+                        duracionIconColor: 'text-indigo-400',
+                        porcentajeColor: esOscuro ? 'text-indigo-400' : 'text-indigo-600',
+                        barraBg: 'bg-indigo-600',
+                        botonBg: 'bg-indigo-600 group-hover:bg-indigo-700 shadow-indigo-600/20 text-white',
+                        botonTexto: 'Continuar curso'
+                      };
+
+                  const IconoEstado = infoEstado.Icono;
 
                   return (
                     <Link
@@ -413,19 +463,9 @@ export default function CursosPage() {
                           <span className="text-[11px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0">
                             {curso.categoria}
                           </span>
-                          {esCompletado ? (
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border bg-emerald-600/90 text-white backdrop-blur-md border-emerald-400/30 shrink-0">
-                              <CheckCircle2 className="size-3.5" /> Completado
-                            </span>
-                          ) : esPorIniciar ? (
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border bg-amber-500/90 text-white backdrop-blur-md border-amber-400/30 shrink-0">
-                              <CircleDashed className="size-3.5" /> Por iniciar
-                            </span>
-                          ) : (
-                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border bg-indigo-500/90 text-white backdrop-blur-md border-indigo-400/30 shrink-0">
-                              <Clock className="size-3.5" /> En progreso
-                            </span>
-                          )}
+                          <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border backdrop-blur-md shrink-0 ${infoEstado.badgeBg}`}>
+                            <IconoEstado className="size-3.5" /> {infoEstado.label}
+                          </span>
                         </div>
                       </div>
 
@@ -438,29 +478,23 @@ export default function CursosPage() {
                             </h3>
                           </div>
                           <p className={`text-xs flex items-center gap-1.5 font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                            <Clock className={`w-4 h-4 ${esCompletado ? 'text-emerald-400' : esPorIniciar ? 'text-amber-400' : 'text-indigo-400'}`} /> {curso.duracion}
+                            <Clock className={`w-4 h-4 ${infoEstado.duracionIconColor}`} /> {curso.duracion}
                           </p>
                         </div>
 
-                        {/* BLOQUE DE AVANCE CON PORCENTAJE ARRIBA DE LA BARRA */}
+                        {/* BLOQUE DE AVANCE CON PORCENTAJE ARRIBA DE LA BARRA (FONT-BOLD UNIFICADO) */}
                         <div className="space-y-1.5 pt-2">
                           <div className="flex items-center justify-between text-xs font-bold">
                             <span className={esOscuro ? 'text-slate-400 font-medium' : 'text-slate-500 font-medium'}>
                               Avance
                             </span>
-                            <span className={esCompletado ? 'text-emerald-400 font-extrabold' : (esPorIniciar ? (esOscuro ? 'text-slate-400 font-medium' : 'text-slate-500 font-medium') : (esOscuro ? 'text-indigo-400 font-bold' : 'text-indigo-600 font-bold'))}>
+                            <span className={`font-bold ${infoEstado.porcentajeColor}`}>
                               {curso.avance}% completado
                             </span>
                           </div>
                           <div className={`w-full h-2 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-100'}`}>
                             <div 
-                              className={`h-full rounded-full transition-all duration-500 ${
-                                esCompletado 
-                                  ? 'bg-emerald-500' 
-                                  : esPorIniciar 
-                                  ? 'bg-slate-300 dark:bg-slate-700' 
-                                  : 'bg-indigo-600'
-                              }`} 
+                              className={`h-full rounded-full transition-all duration-500 ${infoEstado.barraBg}`} 
                               style={{ width: `${curso.avance}%` }}
                             />
                           </div>
@@ -469,16 +503,8 @@ export default function CursosPage() {
 
                       {/* BOTÓN ALINEADO CON ÍCONO ÚNICO UNIFORME */}
                       <div className={`px-6 pb-6 pt-3 border-t flex items-center justify-end ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                        <div 
-                          className={`w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-sm ${
-                            esCompletado
-                              ? 'bg-emerald-600 group-hover:bg-emerald-700 text-white shadow-emerald-600/20'
-                              : esPorIniciar
-                              ? 'bg-amber-600 group-hover:bg-amber-700 text-white shadow-amber-600/20'
-                              : 'bg-indigo-600 group-hover:bg-indigo-700 text-white shadow-indigo-600/20'
-                          }`}
-                        >
-                          <span>{esCompletado ? 'Repasar curso' : esPorIniciar ? 'Iniciar curso' : 'Continuar curso'}</span>
+                        <div className={`w-full sm:w-auto text-xs font-bold px-5 py-2.5 rounded-xl transition-all inline-flex items-center justify-center shadow-sm ${infoEstado.botonBg}`}>
+                          <span>{infoEstado.botonTexto}</span>
                           <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5" />
                         </div>
                       </div>
