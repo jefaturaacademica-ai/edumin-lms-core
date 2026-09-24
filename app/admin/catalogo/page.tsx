@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
   BookOpen, Users, Settings, LogOut, 
-  ShieldCheck, Activity, X, Layers, ChevronRight, UploadCloud, Plus, Loader2, AlertCircle, CheckCircle2, FileSpreadsheet, Download, Search, Edit3, Trash2, Code, Sparkles
+  ShieldCheck, Activity, X, Layers, ChevronRight, UploadCloud, Plus, Loader2, AlertCircle, CheckCircle2, FileSpreadsheet, Download, Search, Edit3, Trash2, Code, Sparkles, Database, RefreshCw
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 
@@ -28,6 +28,7 @@ export default function CatalogoAdminPage() {
   
   // Estado de carga y mensajes
   const [cargandoSupabase, setCargandoSupabase] = useState(true);
+  const [sembrandoSupabase, setSembrandoSupabase] = useState(false);
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
 
   // Formulario de creación
@@ -70,6 +71,31 @@ export default function CatalogoAdminPage() {
     }
   };
 
+  const sembrarCatalogoEnSupabase = async () => {
+    setSembrandoSupabase(true);
+    try {
+      const res = await fetch('/api/admin/catalogo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'seed' })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setCatalogoDiplomados(data.diplomados || []);
+        setCatalogoCursos(data.cursosEspecializacion || []);
+        setCatalogoTalleres(data.talleres || []);
+        setMensajeExito("¡Catálogo de 100 productos (22 Diplomados, 76 Cursos y 2 Talleres) guardado en Supabase!");
+        setTimeout(() => setMensajeExito(null), 5000);
+      } else {
+        alert(`Error al sembrar: ${data.error}`);
+      }
+    } catch (e: any) {
+      alert(`Error de conexión: ${e.message}`);
+    } finally {
+      setSembrandoSupabase(false);
+    }
+  };
+
   const handleCrearProducto = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!nuevoTitulo.trim() || !nuevoCodigo.trim()) return;
@@ -83,6 +109,23 @@ export default function CatalogoAdminPage() {
         taller: 'Talleres'
       };
 
+      const numModulos = nuevoTipo === 'diplomado' ? Number(nuevoNumModulos) || 3 : 1;
+      let contadorClaseGlobal = 1;
+
+      const modulosIniciales = nuevoTipo === 'diplomado' ? Array.from({ length: numModulos }, (_, i) => {
+        const mod = {
+          codigo: `Módulo ${(i + 1).toString().padStart(2, '0')}`,
+          nombre: `MÓDULO ${(i + 1).toString().padStart(2, '0')}`,
+          docente: nuevoDocente,
+          clases: [
+            `Clase ${contadorClaseGlobal}: Introducción y Conceptos Clave`,
+            `Clase ${contadorClaseGlobal + 1}: Aplicación Práctica`
+          ]
+        };
+        contadorClaseGlobal += 2;
+        return mod;
+      }) : [];
+
       const res = await fetch('/api/admin/catalogo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -94,16 +137,11 @@ export default function CatalogoAdminPage() {
           titulo: nuevoTitulo.toUpperCase(),
           tipo: nuevoTipo,
           categoria: categoriaMap[nuevoTipo],
-          num_modulos: nuevoTipo === 'diplomado' ? Number(nuevoNumModulos) || 3 : 1,
+          num_modulos: numModulos,
           taller_aplicable: nuevoTipo === 'diplomado' ? nuevoTallerAplicable : 'Ninguno',
           docente: nuevoDocente,
           precio: Number(nuevoPrecio) || 150.00,
-          modulos: nuevoTipo === 'diplomado' ? Array.from({ length: Number(nuevoNumModulos) || 3 }, (_, i) => ({
-            codigo: `M${(i + 1).toString().padStart(2, '0')}`,
-            nombre: `MÓDULO ${i + 1}`,
-            docente: nuevoDocente,
-            clases: [`Clase 1 del Módulo ${i + 1}`, `Clase 2 del Módulo ${i + 1}`]
-          })) : []
+          modulos: modulosIniciales
         })
       });
 
@@ -160,31 +198,59 @@ export default function CatalogoAdminPage() {
     }
   };
 
-  // Funciones para manipular Módulos y Clases dentro del Modal de Edición de Diplomados
+  // Helper para asegurar que el código del módulo sea "Módulo 01", "Módulo 02" 
+  // y que las clases de TODOS los módulos tengan numeración correlativa global continua
+  const normalizarYSecuenciarClases = (modulos: any[]) => {
+    if (!Array.isArray(modulos)) return [];
+    let contadorClaseGlobal = 1;
+
+    return modulos.map((mod: any, mIdx: number) => {
+      const codigoModulo = `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+      const clasesNuevas = (Array.isArray(mod.clases) ? mod.clases : []).map((claseText: string) => {
+        const numClase = contadorClaseGlobal;
+        contadorClaseGlobal += 1;
+        // Quitar prefijos anteriores tipo "Clase 1:", "Clase 05 -", etc.
+        const nombreLimpio = claseText.replace(/^Clase \d+[\s:\-]+/i, '').trim();
+        return `Clase ${numClase}: ${nombreLimpio || 'Nueva Clase'}`;
+      });
+
+      return {
+        ...mod,
+        codigo: codigoModulo,
+        clases: clasesNuevas
+      };
+    });
+  };
+
+  // Funciones para manipular Módulos y Clases con orden secuencial continuo de clases
   const agregarModuloEditando = () => {
     if (!itemEditando) return;
     const actualMods = itemEditando.modulos || [];
     const nuevoNum = actualMods.length + 1;
+
     const nuevoMod = {
-      codigo: `M${nuevoNum.toString().padStart(2, '0')}`,
-      nombre: `MÓDULO ${nuevoNum}: NUEVO MÓDULO`,
-      docente: 'Reginaldo Andía',
-      clases: ['Clase 1 de Introducción']
+      codigo: `Módulo ${nuevoNum.toString().padStart(2, '0')}`,
+      nombre: `MÓDULO ${nuevoNum.toString().padStart(2, '0')}: NUEVO MÓDULO`,
+      docente: itemEditando.docente || 'Reginaldo Andía',
+      clases: ['Nueva Clase']
     };
+
+    const modsSecuenciados = normalizarYSecuenciarClases([...actualMods, nuevoMod]);
     setItemEditando({
       ...itemEditando,
-      modulos: [...actualMods, nuevoMod],
-      num_modulos: actualMods.length + 1
+      modulos: modsSecuenciados,
+      num_modulos: modsSecuenciados.length
     });
   };
 
   const eliminarModuloEditando = (mIdx: number) => {
     if (!itemEditando) return;
     const actualMods = itemEditando.modulos.filter((_: any, idx: number) => idx !== mIdx);
+    const modsSecuenciados = normalizarYSecuenciarClases(actualMods);
     setItemEditando({
       ...itemEditando,
-      modulos: actualMods,
-      num_modulos: actualMods.length
+      modulos: modsSecuenciados,
+      num_modulos: modsSecuenciados.length
     });
   };
 
@@ -197,24 +263,35 @@ export default function CatalogoAdminPage() {
 
   const agregarClaseAModulo = (mIdx: number) => {
     if (!itemEditando) return;
-    const nuevosMods = [...itemEditando.modulos];
-    const clasesActuales = nuevosMods[mIdx].clases || [];
-    nuevosMods[mIdx].clases = [...clasesActuales, `Nueva Clase ${clasesActuales.length + 1}`];
-    setItemEditando({ ...itemEditando, modulos: nuevosMods });
+    const nuevosMods = itemEditando.modulos 
+      ? itemEditando.modulos.map((m: any) => ({ ...m, clases: [...(m.clases || [])] }))
+      : [];
+    
+    nuevosMods[mIdx].clases.push('Nueva Clase');
+    const modsSecuenciados = normalizarYSecuenciarClases(nuevosMods);
+    setItemEditando({ ...itemEditando, modulos: modsSecuenciados });
   };
 
   const actualizarNombreClase = (mIdx: number, cIdx: number, valor: string) => {
     if (!itemEditando) return;
-    const nuevosMods = [...itemEditando.modulos];
+    const nuevosMods = itemEditando.modulos
+      ? itemEditando.modulos.map((m: any) => ({ ...m, clases: [...(m.clases || [])] }))
+      : [];
+    
     nuevosMods[mIdx].clases[cIdx] = valor;
-    setItemEditando({ ...itemEditando, modulos: nuevosMods });
+    const modsSecuenciados = normalizarYSecuenciarClases(nuevosMods);
+    setItemEditando({ ...itemEditando, modulos: modsSecuenciados });
   };
 
   const eliminarClaseDeModulo = (mIdx: number, cIdx: number) => {
     if (!itemEditando) return;
-    const nuevosMods = [...itemEditando.modulos];
+    const nuevosMods = itemEditando.modulos
+      ? itemEditando.modulos.map((m: any) => ({ ...m, clases: [...(m.clases || [])] }))
+      : [];
+    
     nuevosMods[mIdx].clases = nuevosMods[mIdx].clases.filter((_: any, idx: number) => idx !== cIdx);
-    setItemEditando({ ...itemEditando, modulos: nuevosMods });
+    const modsSecuenciados = normalizarYSecuenciarClases(nuevosMods);
+    setItemEditando({ ...itemEditando, modulos: modsSecuenciados });
   };
 
   const procesarCargaMasivaModulos = () => {
@@ -222,33 +299,18 @@ export default function CatalogoAdminPage() {
 
     try {
       const parsed = JSON.parse(bulkModulesJson);
-      let modsFormateados: any[] = [];
+      const rawMods = Array.isArray(parsed) ? parsed : (parsed.modulos && Array.isArray(parsed.modulos) ? parsed.modulos : []);
+      const modsSecuenciados = normalizarYSecuenciarClases(rawMods);
 
-      if (Array.isArray(parsed)) {
-        modsFormateados = parsed.map((m: any, idx: number) => ({
-          codigo: m.codigo || `M${(idx + 1).toString().padStart(2, '0')}`,
-          nombre: m.nombre || `MÓDULO ${idx + 1}`,
-          docente: m.docente || 'Reginaldo Andía',
-          clases: Array.isArray(m.clases) ? m.clases : []
-        }));
-      } else if (parsed.modulos && Array.isArray(parsed.modulos)) {
-        modsFormateados = parsed.modulos.map((m: any, idx: number) => ({
-          codigo: m.codigo || `M${(idx + 1).toString().padStart(2, '0')}`,
-          nombre: m.nombre || `MÓDULO ${idx + 1}`,
-          docente: m.docente || 'Reginaldo Andía',
-          clases: Array.isArray(m.clases) ? m.clases : []
-        }));
-      }
-
-      if (modsFormateados.length > 0) {
+      if (modsSecuenciados.length > 0) {
         setItemEditando({
           ...itemEditando,
-          modulos: modsFormateados,
-          num_modulos: modsFormateados.length
+          modulos: modsSecuenciados,
+          num_modulos: modsSecuenciados.length
         });
         setShowBulkModulesModal(false);
         setBulkModulesJson('');
-        alert(`¡Se cargaron masivamente ${modsFormateados.length} módulos!`);
+        alert(`¡Se cargaron masivamente ${modsSecuenciados.length} módulos con numeración continua de clases!`);
       } else {
         alert('El JSON proporcionado no contiene una lista válida de módulos.');
       }
@@ -396,7 +458,7 @@ export default function CatalogoAdminPage() {
             </div>
           )}
 
-          <div className="flex justify-between items-center mb-8">
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 mb-8">
             <div>
               <div className="flex items-center gap-2">
                 <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">Catálogo Sincronizado</span>
@@ -404,7 +466,18 @@ export default function CatalogoAdminPage() {
               </div>
               <h1 className="text-3xl font-bold text-slate-900 mt-1">Gestión del Catálogo Académico</h1>
             </div>
-            <div className="flex gap-3">
+            
+            <div className="flex flex-wrap items-center gap-2.5">
+              <button
+                type="button"
+                onClick={sembrarCatalogoEnSupabase}
+                disabled={sembrandoSupabase}
+                className="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
+              >
+                {sembrandoSupabase ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Database className="w-4 h-4" />}
+                Sincronizar a Supabase (100 Productos)
+              </button>
+
               {seleccionados.length > 0 && (
                 <button 
                   type="button"
@@ -414,6 +487,7 @@ export default function CatalogoAdminPage() {
                   <Trash2 className="w-4 h-4" /> Eliminar Seleccionados ({seleccionados.length})
                 </button>
               )}
+              
               <button 
                 type="button"
                 onClick={() => setShowCsvModal(true)} 
@@ -421,6 +495,7 @@ export default function CatalogoAdminPage() {
               >
                 <UploadCloud className="w-4 h-4 text-indigo-600" /> Carga Masiva (CSV)
               </button>
+              
               <button 
                 type="button"
                 onClick={() => {
@@ -430,7 +505,7 @@ export default function CatalogoAdminPage() {
                 }} 
                 className="bg-indigo-600 text-white px-5 py-2.5 rounded-xl font-bold text-xs hover:bg-indigo-700 transition shadow-md flex items-center gap-2 cursor-pointer"
               >
-                <Plus className="w-4 h-4" /> Agregar Producto a Supabase
+                <Plus className="w-4 h-4" /> Agregar Producto
               </button>
             </div>
           </div>
@@ -498,7 +573,7 @@ export default function CatalogoAdminPage() {
                     ) : (
                       <>
                         <th className="pb-3 px-4">Año</th>
-                        <th className="pb-3 px-4">Nombre del Programable</th>
+                        <th className="pb-3 px-4">Nombre del Programa</th>
                         <th className="pb-3 px-4">Docente Asignado</th>
                       </>
                     )}
@@ -546,7 +621,7 @@ export default function CatalogoAdminPage() {
 
                         <td className="py-4 px-4 text-right">
                           <button 
-                            onClick={() => { setItemEditando({ ...item, modulos: item.modulos || [] }); setShowEditModal(true); }}
+                            onClick={() => { setItemEditando({ ...item, modulos: normalizarYSecuenciarClases(item.modulos || []) }); setShowEditModal(true); }}
                             className="bg-indigo-600 hover:bg-indigo-700 text-white px-3.5 py-1.5 rounded-xl font-bold text-xs transition-all inline-flex items-center gap-1.5 shadow-sm cursor-pointer"
                           >
                             <Edit3 className="size-3.5" /> Editar
@@ -693,7 +768,7 @@ export default function CatalogoAdminPage() {
                       <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                         <Layers className="w-4 h-4 text-indigo-600" /> Estructura de Módulos y Clases ({itemEditando.modulos ? itemEditando.modulos.length : 0})
                       </h4>
-                      <p className="text-[11px] text-slate-500">Edita los nombres de módulo, asigna docentes y configura las clases.</p>
+                      <p className="text-[11px] text-slate-500">Edita los nombres de módulo (ej. Módulo 01), docentes y clases correlativas continuas.</p>
                     </div>
 
                     <div className="flex gap-2">
@@ -721,8 +796,8 @@ export default function CatalogoAdminPage() {
                         <div key={mIdx} className="bg-slate-50 border border-slate-200 p-5 rounded-2xl space-y-3">
                           <div className="flex justify-between items-center gap-3">
                             <div className="flex items-center gap-2 flex-1">
-                              <span className="bg-indigo-600 text-white font-mono font-bold px-2.5 py-1 rounded-lg text-xs">
-                                {mod.codigo || `M${(mIdx + 1).toString().padStart(2, '0')}`}
+                              <span className="bg-indigo-600 text-white font-mono font-bold px-3 py-1.5 rounded-lg text-xs shrink-0">
+                                {mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`}
                               </span>
                               <input 
                                 type="text"
@@ -757,14 +832,14 @@ export default function CatalogoAdminPage() {
                           <div className="bg-white p-4 rounded-xl border border-slate-200 space-y-2">
                             <div className="flex justify-between items-center mb-1">
                               <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
-                                Clases ({mod.clases ? mod.clases.length : 0})
+                                Clases de {mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`} ({mod.clases ? mod.clases.length : 0})
                               </span>
                               <button
                                 type="button"
                                 onClick={() => agregarClaseAModulo(mIdx)}
                                 className="text-[10px] font-bold text-indigo-600 hover:underline flex items-center gap-1 cursor-pointer"
                               >
-                                <Plus className="size-3" /> Agregar Clase
+                                <Plus className="size-3" /> Agregar Clase Correlativa
                               </button>
                             </div>
 
@@ -772,12 +847,11 @@ export default function CatalogoAdminPage() {
                               {mod.clases && mod.clases.length > 0 ? (
                                 mod.clases.map((clase: string, cIdx: number) => (
                                   <div key={cIdx} className="flex items-center gap-2">
-                                    <span className="text-[10px] font-mono text-slate-400 w-5">{cIdx + 1}.</span>
                                     <input 
                                       type="text"
                                       value={clase}
                                       onChange={(e) => actualizarNombreClase(mIdx, cIdx, e.target.value)}
-                                      className="flex-1 px-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800"
+                                      className="flex-1 px-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 font-mono"
                                     />
                                     <button
                                       type="button"
@@ -833,7 +907,7 @@ export default function CatalogoAdminPage() {
           <div className="bg-white w-full max-w-2xl rounded-3xl shadow-2xl overflow-hidden flex flex-col border border-slate-100 animate-in fade-in zoom-in-95 duration-200">
             <div className="px-6 py-5 border-b border-slate-100 flex items-center justify-between bg-slate-50">
               <h3 className="text-base font-bold text-slate-900 flex items-center gap-2">
-                <Code className="w-5 h-5 text-indigo-600" /> Carga Masiva de Módulos (JSON)
+                <Code className="w-5 h-5 text-indigo-600" /> Carga Masiva de Módulos y Clases (JSON)
               </h3>
               <button onClick={() => setShowBulkModulesModal(false)} className="p-1.5 hover:bg-slate-200 rounded-full transition-colors text-slate-500 cursor-pointer">
                 <X className="w-5 h-5" />
@@ -847,7 +921,7 @@ export default function CatalogoAdminPage() {
 
               <textarea 
                 rows={10}
-                placeholder={`[\n  {\n    "codigo": "M01",\n    "nombre": "LEGISLACIÓN MINERA",\n    "docente": "Reginaldo Andía",\n    "clases": ["Clase 1: Marco Legal", "Clase 2: Catastro"]\n  }\n]`}
+                placeholder={`[\n  {\n    "codigo": "Módulo 01",\n    "nombre": "LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR",\n    "docente": "Reginaldo Andía",\n    "clases": ["REGULACIÓN AMBIENTAL...", "MARCO LEGAL..."]\n  }\n]`}
                 value={bulkModulesJson}
                 onChange={(e) => setBulkModulesJson(e.target.value)}
                 className="w-full p-4 bg-slate-900 text-emerald-400 font-mono text-xs rounded-2xl border border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-600"
@@ -866,7 +940,7 @@ export default function CatalogoAdminPage() {
                   onClick={procesarCargaMasivaModulos}
                   className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-xl text-xs font-bold shadow-md transition cursor-pointer"
                 >
-                  Importar Módulos
+                  Importar Módulos y Clases
                 </button>
               </div>
             </div>
