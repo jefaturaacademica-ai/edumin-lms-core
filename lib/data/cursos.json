@@ -367,16 +367,28 @@
   {
     "id": 74,
     "curso": "ERGONOMÍA Y DISEÑO DE PUESTOS DE TRABAJO EN LA INDUSTRIA",
-    "categoria": "Seguridad y prevención"
+    "categoria": "Seguridad y prevención",
+    "clases": [
+      "FUNDAMENTOS DE ERGONOMÍA EN LA INDUSTRIA",
+      "DISEÑO Y ADAPTACIÓN DE PUESTOS DE TRABAJO"
+    ]
   },
   {
     "id": 75,
     "curso": "GESTIÓN DE SEGURIDAD DURANTE LAS PARADAS DE PLANTA Y MANTENIMIENTO",
-    "categoria": "Mantenimiento industrial"
+    "categoria": "Mantenimiento industrial",
+    "clases": [
+      "PLANIFICACIÓN Y PREPARACIÓN PARA LA PARADA DE PLANTA",
+      "EJECUCIÓN, SUPERVISIÓN Y MEJORA CONTINUA EN PARADAS DE PLANTA"
+    ]
   },
   {
     "id": 76,
     "curso": "GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
-    "categoria": "Medio ambiente"
+    "categoria": "Medio ambiente",
+    "clases": [
+      "FUNDAMENTOS DE LA GESTIÓN DE RELAVES Y RESIDUOS MINEROS",
+      "TÉCNICAS Y TECNOLOGÍAS PARA LA GESTIÓN SOSTENIBLE DE RESIDUOS MINEROS"
+    ]
   }
 ]

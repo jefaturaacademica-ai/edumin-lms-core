@@ -33,7 +33,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
   const menuItems = [
     { name: 'Inicio', path: '/dashboard', icon: Home },
     { name: 'Mis diplomados', path: '/dashboard/diplomados', icon: GraduationCap },
-    { name: 'Mis cursos y talleres', path: '/dashboard/cursos', icon: BookOpen },
+    { name: 'Mis cursos', path: '/dashboard/cursos', icon: BookOpen },
     { name: 'Mis certificados', path: '/dashboard/certificados', icon: Award },
     { name: 'Mis pagos', path: '/dashboard/pagos', icon: Wallet },
     { name: 'Mi perfil', path: '/dashboard/perfil', icon: User },
