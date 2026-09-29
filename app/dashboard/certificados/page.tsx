@@ -12,23 +12,36 @@ import {
   BookOpen, 
   Sparkles, 
   GraduationCap, 
-  Video, 
   Lock, 
   Wrench, 
   X,
-  ChevronDown,
-  ChevronUp,
   Eye,
   Share2,
   Copy,
   Check,
   ShoppingCart,
-  Filter
+  LayoutGrid,
+  ChevronDown,
+  ChevronUp
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
 
 export default function CertificadosPage() {
   const { esOscuro } = useTheme();
+
+  // Navegación por pestañas (Tabs Navigation)
+  type TabTipo = 'TODOS' | 'DIPLOMAS' | 'MODULARES' | 'CONVENIOS' | 'CURSOS_TALLERES';
+  const [tabActiva, setTabActiva] = useState<TabTipo>('TODOS');
+
+  // Control de despliegue de acordeón por diplomado en Certificados Modulares
+  const [modularesAbiertos, setModularesAbiertos] = useState<Record<string, boolean>>({});
+
+  const toggleModularesDiplomado = (diplomadoNombre: string) => {
+    setModularesAbiertos(prev => ({
+      ...prev,
+      [diplomadoNombre]: prev[diplomadoNombre] === false ? true : false
+    }));
+  };
 
   // Estados de modal de convenios (CIP / MIAMI)
   const [modalAbierto, setModalAbierto] = useState(false);
@@ -50,15 +63,6 @@ export default function CertificadosPage() {
 
   const [copiadoLink, setCopiadoLink] = useState(false);
 
-  // Control de secciones desplegables (Acordeones)
-  const [mostrarSeccionDiplomasGenerales, setMostrarSeccionDiplomasGenerales] = useState(true);
-  const [mostrarSeccionModulares, setMostrarSeccionModulares] = useState(true);
-  const [mostrarSeccionEspeciales, setMostrarSeccionEspeciales] = useState(true);
-  const [mostrarSeccionCursosTalleres, setMostrarSeccionCursosTalleres] = useState(true);
-
-  // Filtro activo por diplomado
-  const [filtroDiplomado, setFiltroDiplomado] = useState<string>('TODOS');
-
   // ESTADO DE SIMULACIÓN DEV (SOLO DESARROLLO INTERNO)
   const [estadoSimuladoDev, setEstadoSimuladoDev] = useState<'cero' | 'un_modular' | 'vista_actual'>('vista_actual');
   const [mostrarPanelDev, setMostrarPanelDev] = useState(true);
@@ -66,18 +70,18 @@ export default function CertificadosPage() {
   // Paquete de usuario
   const paqueteUsuario = 'ILIMITADO';
   const diplomadosCompletados = [
-    'Seguridad y Salud Ocupacional en Minería',
-    'Gestión Logística y Almacenes en Minería'
+    'Seguridad y Salud Ocupacional en la Industria y Minería',
+    'Gerencia Estratégica y Liderazgo de Equipos en la Minería'
   ];
   const [diplomadoSeleccionado, setDiplomadoSeleccionado] = useState(diplomadosCompletados[0]);
 
-  // 1. CERTIFICADOS MODULARES BASE
+  // 1. CERTIFICADOS MODULARES BASE (DATOS REALES EXTRAÍDOS DE LOS JSON DEL PROYECTO)
   const certificadosModularesBase = [
-    { id: 1, modulo: 'Módulo I: Marco Normativo e IPERC en Minería', diplomado: 'Seguridad y Salud Ocupacional en Minería', nota: 17, fecha: '15/01/2026', codigo: 'EDUMIN-MOD-101' },
-    { id: 2, modulo: 'Módulo II: Higiene Ocupacional y Ergonomía', diplomado: 'Seguridad y Salud Ocupacional en Minería', nota: 16, fecha: '20/02/2026', codigo: 'EDUMIN-MOD-102' },
-    { id: 3, modulo: 'Módulo III: Auditoría de Sistemas de Gestión SSOMA', diplomado: 'Seguridad y Salud Ocupacional en Minería', nota: 18, fecha: '10/03/2026', codigo: 'EDUMIN-MOD-103' },
-    { id: 4, modulo: 'Módulo I: Fundamentos de Liderazgo Minero', diplomado: 'Gestión Estratégica en Minería', nota: 16, fecha: '12/03/2026', codigo: 'EDUMIN-MOD-201' },
-    { id: 5, modulo: 'Módulo II: Gestión de Equipos de Alto Rendimiento', diplomado: 'Gestión Estratégica en Minería', nota: 18, fecha: '28/04/2026', codigo: 'EDUMIN-MOD-202' },
+    { id: 1, modulo: 'Módulo I: Normativa en Industria y Minería', diplomado: 'Seguridad y Salud Ocupacional en la Industria y Minería', nota: 17, fecha: '15/01/2026', codigo: 'EDUMIN-MOD-101' },
+    { id: 2, modulo: 'Módulo II: Normativa Internacional y Gestión del Medio Ambiente', diplomado: 'Seguridad y Salud Ocupacional en la Industria y Minería', nota: 16, fecha: '20/02/2026', codigo: 'EDUMIN-MOD-102' },
+    { id: 3, modulo: 'Módulo III: Inspección, Investigación y Respuesta a Emergencias en Minería', diplomado: 'Seguridad y Salud Ocupacional en la Industria y Minería', nota: 18, fecha: '10/03/2026', codigo: 'EDUMIN-MOD-103' },
+    { id: 4, modulo: 'Módulo I: Panorama de la Industria Minera', diplomado: 'Gerencia Estratégica y Liderazgo de Equipos en la Minería', nota: 16, fecha: '12/03/2026', codigo: 'EDUMIN-MOD-201' },
+    { id: 5, modulo: 'Módulo II: Liderazgo Gerencial en la Industria Minera', diplomado: 'Gerencia Estratégica y Liderazgo de Equipos en la Minería', nota: 18, fecha: '28/04/2026', codigo: 'EDUMIN-MOD-202' },
   ];
 
   // Datos dinámicos de modulares según el simulador dev
@@ -101,7 +105,7 @@ export default function CertificadosPage() {
     ? [
         {
           id: 'seguridad-minera',
-          titulo: 'Seguridad y Salud Ocupacional en Minería',
+          titulo: 'Seguridad y Salud Ocupacional en la Industria y Minería',
           modularesAprobados: 0,
           modularesTotales: 3,
           promedio: 0,
@@ -113,7 +117,7 @@ export default function CertificadosPage() {
         ? [
             {
               id: 'seguridad-minera',
-              titulo: 'Seguridad y Salud Ocupacional en Minería',
+              titulo: 'Seguridad y Salud Ocupacional en la Industria y Minería',
               modularesAprobados: 1,
               modularesTotales: 3,
               promedio: 17.0,
@@ -124,7 +128,7 @@ export default function CertificadosPage() {
         : [
             {
               id: 'seguridad-minera',
-              titulo: 'Seguridad y Salud Ocupacional en Minería',
+              titulo: 'Seguridad y Salud Ocupacional en la Industria y Minería',
               modularesAprobados: 3,
               modularesTotales: 3,
               promedio: 17.0,
@@ -133,49 +137,30 @@ export default function CertificadosPage() {
             },
             {
               id: 'gestion-estrategica',
-              titulo: 'Gestión Estratégica y Liderazgo en Minería',
+              titulo: 'Gerencia Estratégica y Liderazgo de Equipos en la Minería',
               modularesAprobados: 2,
               modularesTotales: 3,
               promedio: 17.0,
-              completado: false, // 2 de 3 módulos: diploma general bloqueado/pendiente
+              completado: false,
               codigo: 'EDUMIN-DIP-002'
             }
           ]);
 
-  // 3. CERTIFICADOS DE CURSOS CORTOS
+  // 3. CERTIFICADOS DE CURSOS (UNIFICADOS: CURSOS Y TALLERES SIN MENCIONAR DOCENTE)
   const certificadosCursosBase = [
     { id: 'c1', titulo: "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA", categoria: "Seguridad & SSOMA", horas: "15 Horas", fecha: "18/02/2026", nota: 18, codigo: 'EDUMIN-CUR-801' },
     { id: 'c2', titulo: "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)", categoria: "Seguridad & SSOMA", horas: "40 Horas", fecha: "05/03/2026", nota: 17, codigo: 'EDUMIN-CUR-802' },
-    { id: 'c3', titulo: "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015", categoria: "Legal & Negocios", horas: "30 Horas", fecha: "20/03/2026", nota: 19, codigo: 'EDUMIN-CUR-803' }
-  ];
-  const certificadosCursos = certificadosCursosBase; // 3 cursos en los 3 casos
-
-  // 4. CERTIFICADOS DE TALLERES GRATUITOS
-  const certificadosTalleresBase = [
-    { id: 't1', titulo: "TALLER PRÁCTICO EN VIVO: PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS", tipo: "Taller Gratuito", fecha: "25/02/2026", horas: "08 Horas", instructor: "Ing. Carlos Mendoza", codigo: 'EDUMIN-TAL-901' },
-    { id: 't2', titulo: "MASTERCLASS GRATUITA: BIG DATA E IA EN LA MINERÍA 4.0", tipo: "Webinar Gratuito", fecha: "14/03/2026", horas: "06 Horas", instructor: "Dr. Roberto Silva", codigo: 'EDUMIN-TAL-902' },
-    { id: 't3', titulo: "SEMINARIO WEB: NORMATIVA DE SEGURIDAD EN CAMPAMENTOS MINEROS", tipo: "Seminario Gratuito", fecha: "28/03/2026", horas: "05 Horas", instructor: "Dra. Elena Ramos", codigo: 'EDUMIN-TAL-903' }
+    { id: 'c3', titulo: "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015", categoria: "Legal & Negocios", horas: "30 Horas", fecha: "20/03/2026", nota: 19, codigo: 'EDUMIN-CUR-803' },
+    { id: 't1', titulo: "TALLER PRÁCTICO EN VIVO: PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS", categoria: "Taller Gratuito", horas: "08 Horas", fecha: "25/02/2026", codigo: 'EDUMIN-TAL-901' },
+    { id: 't2', titulo: "MASTERCLASS GRATUITA: BIG DATA E IA EN LA MINERÍA 4.0", categoria: "Webinar Gratuito", horas: "06 Horas", fecha: "14/03/2026", codigo: 'EDUMIN-TAL-902' }
   ];
 
-  // Simulación de cantidad de talleres
-  const certificadosTalleres = (estadoSimuladoDev === 'cero' || estadoSimuladoDev === 'un_modular')
-    ? [certificadosTalleresBase[0]] // 1 taller en Simulación 1 y Simulación 2
-    : [certificadosTalleresBase[0], certificadosTalleresBase[1]]; // 2 talleres en Simulación 3
+  const certificadosCursos = (estadoSimuladoDev === 'cero' || estadoSimuladoDev === 'un_modular')
+    ? certificadosCursosBase.slice(0, 4)
+    : certificadosCursosBase;
 
-  // Habilitación de Certificados Especiales: requieren haber obtenido al menos 1 Diploma General (3/3 módulos)
+  // Habilitación de Certificados Especiales
   const tieneDiplomaGeneral = diplomadosProgreso.some(d => d.completado);
-
-  // APLICACIÓN DE FILTRO POR DIPLOMADO SELECCIONADO
-  const diplomadosFiltrados = filtroDiplomado === 'TODOS'
-    ? diplomadosProgreso
-    : diplomadosProgreso.filter(d => d.titulo === filtroDiplomado);
-
-  const modularesPorDiplomadoFiltrados = Object.entries(modularesPorDiplomado).reduce((acc, [diplomadoNombre, modulares]) => {
-    if (filtroDiplomado === 'TODOS' || diplomadoNombre === filtroDiplomado) {
-      acc[diplomadoNombre] = modulares;
-    }
-    return acc;
-  }, {} as typeof modularesPorDiplomado);
 
   const abrirModal = (tipo: 'CIP' | 'MIAMI') => {
     setTipoCertificacion(tipo);
@@ -220,6 +205,9 @@ export default function CertificadosPage() {
     window.open(url, '_blank');
   };
 
+  const totalModularesCount = Object.values(modularesPorDiplomado).flat().length;
+  const totalCursosCount = certificadosCursos.length;
+
   return (
     <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-300 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
       <div className="max-w-6xl mx-auto space-y-10">
@@ -244,621 +232,512 @@ export default function CertificadosPage() {
               <div>
                 <span className="text-xs text-slate-400 block font-medium">Certificados Totales</span>
                 <span className={`text-lg font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  {certificadosModulares.length + certificadosCursos.length + certificadosTalleres.length} Emitidos
+                  {certificadosModulares.length + certificadosCursos.length} Emitidos
                 </span>
               </div>
             </div>
           </div>
         </header>
 
-        {/* FILTRO POR DIPLOMADO / PROGRAMA (DESPLEGABLE MINIMALISTA) */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
-          <label 
-            htmlFor="filtro-diplomado-select"
-            className={`text-xs sm:text-sm font-bold flex items-center gap-2 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}
-          >
-            <Filter className="size-4 text-indigo-500" />
-            Filtrar por Diplomado / Programa:
-          </label>
-
-          <div className="relative w-full sm:w-80">
-            <select
-              id="filtro-diplomado-select"
-              value={filtroDiplomado}
-              onChange={(e) => setFiltroDiplomado(e.target.value)}
-              className={`w-full appearance-none px-4 py-2.5 pr-10 text-xs sm:text-sm font-semibold rounded-xl border transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
-                esOscuro 
-                  ? 'bg-slate-900 border-slate-700/80 text-white hover:border-slate-600' 
-                  : 'bg-white border-slate-300 text-slate-900 hover:border-slate-400 shadow-sm'
-              }`}
-            >
-              <option value="TODOS">Todos los Programas ({diplomadosProgreso.length})</option>
-              {diplomadosProgreso.map((dip) => (
-                <option key={dip.id} value={dip.titulo}>
-                  {dip.titulo}
-                </option>
-              ))}
-            </select>
-            <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
+        {/* NAVEGACIÓN POR PESTAÑAS (TABS) */}
+        <div className="space-y-4 pt-2">
+          <div className="border-b pb-4 border-slate-200 dark:border-slate-800">
+            <nav className="flex items-center gap-1.5 overflow-x-auto pb-2 lg:pb-0 scrollbar-none" aria-label="Categorías de Certificados">
+              {[
+                { 
+                  id: 'TODOS', 
+                  label: 'Todos', 
+                  icon: LayoutGrid, 
+                  badge: diplomadosProgreso.length + totalModularesCount + totalCursosCount 
+                },
+                { 
+                  id: 'DIPLOMAS', 
+                  label: 'Diplomas Generales', 
+                  icon: GraduationCap, 
+                  badge: diplomadosProgreso.length 
+                },
+                { 
+                  id: 'MODULARES', 
+                  label: 'Certificados modulares', 
+                  icon: FileText, 
+                  badge: totalModularesCount 
+                },
+                { 
+                  id: 'CONVENIOS', 
+                  label: 'Certificados adicionales', 
+                  icon: Globe, 
+                  badge: 2 
+                },
+                { 
+                  id: 'CURSOS_TALLERES', 
+                  label: 'Certificados de cursos', 
+                  icon: BookOpen, 
+                  badge: totalCursosCount 
+                },
+              ].map((tab) => {
+                const Icon = tab.icon;
+                const esActiva = tabActiva === tab.id;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => setTabActiva(tab.id as TabTipo)}
+                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all cursor-pointer ${
+                      esActiva
+                        ? (esOscuro 
+                            ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-600/25 ring-1 ring-indigo-400/30' 
+                            : 'bg-indigo-600 text-white shadow-md shadow-indigo-600/20')
+                        : (esOscuro 
+                            ? 'bg-slate-900/80 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800' 
+                            : 'bg-white text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200 shadow-sm')
+                    }`}
+                  >
+                    <Icon className={`size-4 ${esActiva ? 'text-white' : (esOscuro ? 'text-slate-400' : 'text-slate-500')}`} />
+                    <span>{tab.label}</span>
+                    <span className={`px-2 py-0.5 rounded-full text-[11px] font-extrabold ${
+                      esActiva 
+                        ? 'bg-white/20 text-white' 
+                        : (esOscuro ? 'bg-slate-800 text-slate-400' : 'bg-slate-100 text-slate-600')
+                    }`}>
+                      {tab.badge}
+                    </span>
+                  </button>
+                );
+              })}
+            </nav>
           </div>
         </div>
 
         {/* ==========================================
-            SECCIÓN DESPLEGABLE 1: DIPLOMAS GENERALES DE DIPLOMADOS
+            SECCIÓN 1: DIPLOMAS GENERALES DE DIPLOMADOS
            ========================================== */}
-        <div className={`rounded-3xl border overflow-hidden transition-all ${
-          esOscuro ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'
-        }`}>
-          <button
-            onClick={() => setMostrarSeccionDiplomasGenerales(!mostrarSeccionDiplomasGenerales)}
-            className="w-full p-6 flex items-center justify-between transition hover:bg-white/5 text-left cursor-pointer"
-          >
-            <div className="flex items-center gap-3">
-              <div className="size-10 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 grid place-items-center">
-                <GraduationCap className="size-5" />
-              </div>
-              <div>
-                <h2 className={`text-lg font-bold flex items-center gap-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  Diplomas Generales de Diplomados
-                </h2>
-                <p className={`text-xs mt-0.5 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Diplomas institucionales de culminación de programa (100% completados o en progreso).
-                </p>
-              </div>
-            </div>
+        {(tabActiva === 'TODOS' || tabActiva === 'DIPLOMAS') && (
+          <div className="space-y-6">
+            <div className="py-4 px-1 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3 select-none">
+              <h2 className={`text-lg sm:text-xl font-bold tracking-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                Diplomas Generales de Diplomados
+              </h2>
 
-            <div className="flex items-center gap-3">
               <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
-                {diplomadosFiltrados.filter(d => d.completado).length} Habilitado(s)
+                {diplomadosProgreso.filter(d => d.completado).length} Habilitado(s)
               </span>
-              {mostrarSeccionDiplomasGenerales ? (
-                <ChevronUp className="w-5 h-5 text-slate-400" />
-              ) : (
-                <ChevronDown className="w-5 h-5 text-slate-400" />
-              )}
             </div>
-          </button>
 
-          {mostrarSeccionDiplomasGenerales && (
-            <div className={`p-6 sm:p-8 border-t space-y-6 transition-all animate-fadeIn ${
-              esOscuro ? 'border-slate-800 bg-slate-950/40' : 'border-slate-100 bg-slate-50/50'
-            }`}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {diplomadosFiltrados.map((dip) => (
-                  dip.completado ? (
-                    /* DIPLOMA HABILITADO 100% */
-                    <div key={dip.id} className="border border-indigo-500/30 rounded-3xl p-6 bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 text-white relative overflow-hidden flex flex-col justify-between shadow-lg">
-                      <div>
-                        <div className="flex justify-between items-start mb-3">
-                          <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/20 border border-emerald-500/30 px-3 py-1 rounded-full flex items-center gap-1.5">
-                            <CheckCircle2 className="size-3.5" /> Diploma Desbloqueado (100%)
-                          </span>
-                          <span className="text-xs font-semibold text-amber-400">3 de 3 Módulos</span>
-                        </div>
-                        <h3 className="font-extrabold text-white text-base leading-snug">
-                          {dip.titulo}
-                        </h3>
-                        <p className="text-xs text-indigo-200 mt-2">
-                          Promedio Final: <strong className="text-white text-sm">{dip.promedio} (Aprobado)</strong>
-                        </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+              {diplomadosProgreso.map((dip) => (
+                dip.completado ? (
+                  /* DIPLOMA HABILITADO 100% */
+                  <div key={dip.id} className="border border-indigo-500/30 rounded-3xl p-6 bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 text-white relative overflow-hidden flex flex-col justify-between shadow-lg">
+                    <div>
+                      <div className="flex justify-between items-start mb-3">
+                        <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/20 border border-emerald-500/30 px-3 py-1 rounded-full flex items-center gap-1.5">
+                          <CheckCircle2 className="size-3.5" /> Diploma Desbloqueado (100%)
+                        </span>
+                        <span className="text-xs font-semibold text-amber-400">3 de 3 Módulos</span>
                       </div>
-
-                      <div className="mt-6 flex flex-wrap gap-2.5">
-                        <button 
-                          onClick={() => abrirVistaPrevia({
-                            titulo: dip.titulo,
-                            subtitulo: 'DIPLOMA GENERAL DE ESPECIALIZACIÓN',
-                            categoria: 'Diplomado Oficial EDUMIN',
-                            fecha: '15/03/2026',
-                            codigo: dip.codigo,
-                            nota: dip.promedio,
-                            tipo: 'Diplomado'
-                          })}
-                          className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-3.5 py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
-                        >
-                          <Eye className="w-3.5 h-3.5" /> Vista Previa
-                        </button>
-
-                        <button className="flex-1 bg-white hover:bg-slate-100 text-slate-900 font-bold px-3.5 py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer">
-                          <Download className="w-3.5 h-3.5 text-indigo-600" /> Descargar PDF
-                        </button>
-
-                        <button className="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3 py-2.5 rounded-xl text-xs transition-colors border border-slate-700 flex items-center justify-center gap-1.5 cursor-pointer">
-                          <FileText className="w-3.5 h-3.5" /> Notas
-                        </button>
-                      </div>
-                    </div>
-                  ) : (
-                    /* DIPLOMA EN PROGRESO (BLOQUEADO) */
-                    <div key={dip.id} className={`border rounded-3xl p-6 relative overflow-hidden flex flex-col justify-between ${esOscuro ? 'bg-slate-950/60 border-slate-800' : 'bg-white border-slate-200'}`}>
-                      <div>
-                        <div className="flex justify-between items-start mb-3">
-                          <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full flex items-center gap-1.5">
-                            <Lock className="size-3.5" /> Bloqueado (En Progreso)
-                          </span>
-                          <span className={`text-xs font-semibold ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                            {dip.modularesAprobados} de {dip.modularesTotales} Módulos
-                          </span>
-                        </div>
-                        <h3 className={`font-bold text-base leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                          {dip.titulo}
-                        </h3>
-                        
-                        <div className="mt-4">
-                          <div className="flex justify-between text-xs font-bold mb-1.5">
-                            <span className={esOscuro ? 'text-slate-400' : 'text-slate-600'}>Avance de Módulos</span>
-                            <span className="text-amber-500 font-bold">{Math.round((dip.modularesAprobados / dip.modularesTotales) * 100)}%</span>
-                          </div>
-                          <div className={`w-full h-2.5 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-200'}`}>
-                            <div 
-                              className="bg-amber-500 h-full rounded-full transition-all duration-500" 
-                              style={{ width: `${(dip.modularesAprobados / dip.modularesTotales) * 100}%` }}
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <p className="text-xs text-amber-400/90 mt-6 font-medium flex items-center gap-1.5">
-                        <AlertTriangle className="size-4 shrink-0" />
-                        Requiere aprobar {dip.modularesTotales - dip.modularesAprobados} módulo(s) adicional(es) para emitir el Diploma General.
+                      <h3 className="font-extrabold text-white text-base leading-snug">
+                        {dip.titulo}
+                      </h3>
+                      <p className="text-xs text-indigo-200 mt-2">
+                        Promedio Final: <strong className="text-white text-sm">{dip.promedio} (Aprobado)</strong>
                       </p>
                     </div>
-                  )
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
 
-        {/* ==========================================
-            SECCIÓN DESPLEGABLE 2: CERTIFICADOS MODULARES (PAE)
-           ========================================== */}
-        <div className={`rounded-3xl border overflow-hidden transition-all ${
-          esOscuro ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'
-        }`}>
-          <button
-            onClick={() => setMostrarSeccionModulares(!mostrarSeccionModulares)}
-            className="w-full p-6 flex items-center justify-between transition hover:bg-white/5 text-left cursor-pointer"
-          >
-            <div className="flex items-center gap-3">
-              <div className="size-10 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 grid place-items-center">
-                <FileText className="size-5" />
-              </div>
-              <div>
-                <h2 className={`text-lg font-bold flex items-center gap-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  Certificados Modulares (PAE)
-                </h2>
-                <p className={`text-xs mt-0.5 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Certificados por cada módulo individual aprobado, agrupados por diplomado.
-                </p>
-              </div>
-            </div>
+                    <div className="mt-6 flex flex-wrap gap-2.5">
+                      <button 
+                        onClick={() => abrirVistaPrevia({
+                          titulo: dip.titulo,
+                          subtitulo: 'DIPLOMA GENERAL DE ESPECIALIZACIÓN',
+                          categoria: 'Diplomado Oficial EDUMIN',
+                          fecha: '15/03/2026',
+                          codigo: dip.codigo,
+                          nota: dip.promedio,
+                          tipo: 'Diplomado'
+                        })}
+                        className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-3.5 py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
+                      >
+                        <Eye className="w-3.5 h-3.5" /> Vista Previa
+                      </button>
 
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-                {Object.values(modularesPorDiplomadoFiltrados).flat().length} Certificados
-              </span>
-              {mostrarSeccionModulares ? (
-                <ChevronUp className="w-5 h-5 text-slate-400" />
-              ) : (
-                <ChevronDown className="w-5 h-5 text-slate-400" />
-              )}
-            </div>
-          </button>
+                      <button className="flex-1 bg-white hover:bg-slate-100 text-slate-900 font-bold px-3.5 py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer">
+                        <Download className="w-3.5 h-3.5 text-indigo-600" /> Descargar
+                      </button>
 
-          {mostrarSeccionModulares && (
-            <div className={`p-6 sm:p-8 border-t space-y-6 transition-all animate-fadeIn ${
-              esOscuro ? 'border-slate-800 bg-slate-950/40' : 'border-slate-100 bg-slate-50/50'
-            }`}>
-              {Object.keys(modularesPorDiplomadoFiltrados).length === 0 ? (
-                <div className={`text-center py-10 px-6 rounded-2xl border ${
-                  esOscuro ? 'bg-slate-900/60 border-slate-800 text-slate-400' : 'bg-white border-slate-200 text-slate-500'
-                }`}>
-                  <FileText className="size-10 mx-auto text-indigo-400 mb-3 opacity-60" />
-                  <p className={`text-sm font-bold ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>
-                    Aún no cuentas con certificados modulares emitidos para este filtro
-                  </p>
-                  <p className="text-xs mt-1 max-w-md mx-auto">
-                    Completa y aprueba las evaluaciones de los módulos de tu diplomado para obtener tu primera certificación modular (PAE).
-                  </p>
-                </div>
-              ) : (
-                <div className="space-y-6">
-                  {Object.entries(modularesPorDiplomadoFiltrados).map(([diplomadoNombre, modulares]) => (
-                    <div 
-                      key={diplomadoNombre} 
-                      className={`rounded-2xl border p-5 space-y-4 ${
-                        esOscuro ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200'
-                      }`}
-                    >
-                      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-800/40">
-                        <h4 className={`text-xs sm:text-sm font-bold uppercase tracking-wide flex items-center gap-2 ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
-                          <GraduationCap className="size-4 shrink-0" /> {diplomadoNombre}
-                        </h4>
-                        <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 w-fit">
-                          {modulares.length} Módulo(s) Aprobado(s)
+                      <button className="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-3 py-2.5 rounded-xl text-xs transition-colors border border-slate-700 flex items-center justify-center gap-1.5 cursor-pointer">
+                        <FileText className="w-3.5 h-3.5" /> Notas
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  /* DIPLOMA EN PROGRESO (BLOQUEADO) */
+                  <div key={dip.id} className={`border rounded-3xl p-6 relative overflow-hidden flex flex-col justify-between ${esOscuro ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200 shadow-sm'}`}>
+                    <div>
+                      <div className="flex justify-between items-start mb-3">
+                        <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full flex items-center gap-1.5">
+                          <Lock className="size-3.5" /> Bloqueado (En Progreso)
+                        </span>
+                        <span className={`text-xs font-semibold ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                          {dip.modularesAprobados} de {dip.modularesTotales} Módulos
                         </span>
                       </div>
-
-                      <div className="overflow-x-auto">
-                        <table className="w-full text-left border-collapse">
-                          <thead>
-                            <tr className={`border-b text-[11px] font-bold uppercase tracking-wider ${esOscuro ? 'border-slate-800 text-slate-400' : 'border-slate-200 text-slate-500'}`}>
-                              <th className="py-2.5 px-3">Módulo Aprobado</th>
-                              <th className="py-2.5 px-3 text-center">Nota</th>
-                              <th className="py-2.5 px-3">Fecha Emisión</th>
-                              <th className="py-2.5 px-3 text-right">Acciones</th>
-                            </tr>
-                          </thead>
-                          <tbody className={`divide-y text-xs sm:text-sm ${esOscuro ? 'divide-slate-800/60' : 'divide-slate-100'}`}>
-                            {modulares.map((cert) => (
-                              <tr key={cert.id} className={`transition-colors ${esOscuro ? 'hover:bg-slate-800/40' : 'hover:bg-slate-50'}`}>
-                                <td className={`py-3.5 px-3 font-semibold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>{cert.modulo}</td>
-                                <td className="py-3.5 px-3 text-center">
-                                  <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold px-2.5 py-1 rounded-lg text-xs">
-                                    {cert.nota}
-                                  </span>
-                                </td>
-                                <td className={`py-3.5 px-3 text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>{cert.fecha}</td>
-                                <td className="py-3.5 px-3 text-right">
-                                  <div className="flex items-center justify-end gap-2">
-                                    <button 
-                                      onClick={() => abrirVistaPrevia({
-                                        titulo: cert.modulo,
-                                        subtitulo: cert.diplomado,
-                                        categoria: 'Certificado Modular (PAE)',
-                                        fecha: cert.fecha,
-                                        codigo: cert.codigo,
-                                        nota: cert.nota,
-                                        tipo: 'Modular'
-                                      })}
-                                      className="inline-flex items-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-200 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all border border-slate-700 cursor-pointer"
-                                      title="Vista Previa"
-                                    >
-                                      <Eye className="w-3.5 h-3.5" />
-                                    </button>
-                                    <button className="inline-flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer">
-                                      <Download className="w-3.5 h-3.5" /> Descargar PDF
-                                    </button>
-                                  </div>
-                                </td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
+                      <h3 className={`font-bold text-base leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                        {dip.titulo}
+                      </h3>
+                      
+                      <div className="mt-4">
+                        <div className="flex justify-between text-xs font-bold mb-1.5">
+                          <span className={esOscuro ? 'text-slate-400' : 'text-slate-600'}>Avance de Módulos</span>
+                          <span className="text-amber-500 font-bold">{Math.round((dip.modularesAprobados / dip.modularesTotales) * 100)}%</span>
+                        </div>
+                        <div className={`w-full h-2.5 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-200'}`}>
+                          <div 
+                            className="bg-amber-500 h-full rounded-full transition-all duration-500" 
+                            style={{ width: `${(dip.modularesAprobados / dip.modularesTotales) * 100}%` }}
+                          />
+                        </div>
                       </div>
                     </div>
-                  ))}
-                </div>
-              )}
+
+                    <p className="text-xs text-amber-400/90 mt-6 font-medium flex items-center gap-1.5">
+                      <AlertTriangle className="size-4 shrink-0" />
+                      Requiere aprobar {dip.modularesTotales - dip.modularesAprobados} módulo(s) adicional(es) para emitir el Diploma General.
+                    </p>
+                  </div>
+                )
+              ))}
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* ==========================================
-            SECCIÓN DESPLEGABLE 2: CERTIFICADOS ESPECIALES E INTERNACIONALES
+            SECCIÓN 2: CERTIFICADOS MODULARES
            ========================================== */}
-        <div className={`rounded-3xl border overflow-hidden transition-all ${
-          esOscuro ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'
-        }`}>
-          <button
-            onClick={() => setMostrarSeccionEspeciales(!mostrarSeccionEspeciales)}
-            className="w-full p-6 flex items-center justify-between transition hover:bg-white/5 text-left cursor-pointer"
-          >
-            <div className="flex items-center gap-3">
-              <div className="size-10 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 grid place-items-center">
-                <Globe className="size-5" />
-              </div>
-              <div>
-                <h2 className={`text-lg font-bold flex items-center gap-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  Certificados Especiales e Internacionales
-                </h2>
-                <p className={`text-xs mt-0.5 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Acreditaciones institucionales con el Colegio de Ingenieros del Perú (CIP) y San Ignacio University (Miami, FL).
-                </p>
-              </div>
+        {(tabActiva === 'TODOS' || tabActiva === 'MODULARES') && (
+          <div className="space-y-6">
+            <div className="py-4 px-1 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3 select-none">
+              <h2 className={`text-lg sm:text-xl font-bold tracking-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                Certificados modulares
+              </h2>
+
+              <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                {totalModularesCount} Certificados
+              </span>
             </div>
 
-            <div className="flex items-center gap-3">
+            {/* Contenido Modular con Acordeón Desplegable por Diplomado */}
+            {Object.keys(modularesPorDiplomado).length === 0 ? (
+              <div className={`text-center py-10 px-6 rounded-2xl border ${
+                esOscuro ? 'bg-slate-900/60 border-slate-800 text-slate-400' : 'bg-white border-slate-200 text-slate-500'
+              }`}>
+                <FileText className="size-10 mx-auto text-indigo-400 mb-3 opacity-60" />
+                <p className={`text-sm font-bold ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>
+                  Aún no cuentas con certificados modulares emitidos
+                </p>
+                <p className="text-xs mt-1 max-w-md mx-auto">
+                  Completa y aprueba las evaluaciones de los módulos de tu diplomado para obtener tu primera certificación modular (PAE).
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-6 pt-2">
+                {Object.entries(modularesPorDiplomado).map(([diplomadoNombre, modulares]) => {
+                  const estaAbierto = modularesAbiertos[diplomadoNombre] !== false;
+                  return (
+                    <div 
+                      key={diplomadoNombre} 
+                      className={`rounded-2xl border overflow-hidden transition-all ${
+                        esOscuro ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+                      }`}
+                    >
+                      {/* Cabecera desplegable de Diplomado */}
+                      <button
+                        onClick={() => toggleModularesDiplomado(diplomadoNombre)}
+                        className={`w-full p-4 sm:p-5 flex items-center justify-between transition text-left cursor-pointer ${
+                          estaAbierto ? 'border-b border-slate-200 dark:border-slate-800/60' : ''
+                        } ${esOscuro ? 'hover:bg-slate-800/40' : 'hover:bg-slate-50'}`}
+                      >
+                        <div className="flex items-center gap-2">
+                          <GraduationCap className="size-4 shrink-0 text-indigo-500" />
+                          <h3 className={`text-xs sm:text-sm font-bold uppercase tracking-wide ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
+                            {diplomadoNombre}
+                          </h3>
+                        </div>
+
+                        <div className="flex items-center gap-3">
+                          <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                            {modulares.length} Módulo(s) Aprobado(s)
+                          </span>
+                          <div className="text-slate-400">
+                            {estaAbierto ? <ChevronUp className="size-4" /> : <ChevronDown className="size-4" />}
+                          </div>
+                        </div>
+                      </button>
+
+                      {/* Lista de certificados del diplomado (Acordeón) */}
+                      {estaAbierto && (
+                        <div className="p-4 sm:p-5 overflow-x-auto">
+                          <table className="w-full text-left border-collapse">
+                            <thead>
+                              <tr className={`border-b text-[11px] font-bold uppercase tracking-wider ${esOscuro ? 'border-slate-800 text-slate-400' : 'border-slate-200 text-slate-500'}`}>
+                                <th className="py-2.5 px-3">Módulo Aprobado</th>
+                                <th className="py-2.5 px-3 text-center">Nota</th>
+                                <th className="py-2.5 px-3">Fecha Emisión</th>
+                                <th className="py-2.5 px-3 text-right">Acciones</th>
+                              </tr>
+                            </thead>
+                            <tbody className={`divide-y text-xs sm:text-sm ${esOscuro ? 'divide-slate-800/60' : 'divide-slate-100'}`}>
+                              {modulares.map((cert) => (
+                                <tr key={cert.id} className={`transition-colors ${esOscuro ? 'hover:bg-slate-800/40' : 'hover:bg-slate-50'}`}>
+                                  <td className={`py-3.5 px-3 font-semibold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>{cert.modulo}</td>
+                                  <td className="py-3.5 px-3 text-center">
+                                    <span className="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold px-2.5 py-1 rounded-lg text-xs">
+                                      {cert.nota}
+                                    </span>
+                                  </td>
+                                  <td className={`py-3.5 px-3 text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>{cert.fecha}</td>
+                                  <td className="py-3.5 px-3 text-right">
+                                    <div className="flex items-center justify-end gap-2">
+                                      <button 
+                                        onClick={() => abrirVistaPrevia({
+                                          titulo: cert.modulo,
+                                          subtitulo: cert.diplomado,
+                                          categoria: 'Certificado Modular (PAE)',
+                                          fecha: cert.fecha,
+                                          codigo: cert.codigo,
+                                          nota: cert.nota,
+                                          tipo: 'Modular'
+                                        })}
+                                        className="inline-flex items-center gap-1 bg-slate-800 hover:bg-slate-700 text-slate-200 px-2.5 py-1.5 rounded-xl text-xs font-bold transition-all border border-slate-700 cursor-pointer"
+                                        title="Vista Previa"
+                                      >
+                                        <Eye className="w-3.5 h-3.5" />
+                                      </button>
+                                      <button className="inline-flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-500 text-white px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all shadow-sm cursor-pointer">
+                                        <Download className="w-3.5 h-3.5" /> Descargar
+                                      </button>
+                                    </div>
+                                  </td>
+                                </tr>
+                              ))}
+                            </tbody>
+                          </table>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* ==========================================
+            SECCIÓN 3: CERTIFICADOS ADICIONALES
+           ========================================== */}
+        {(tabActiva === 'TODOS' || tabActiva === 'CONVENIOS') && (
+          <div className="space-y-6">
+            <div className="py-4 px-1 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3 select-none">
+              <h2 className={`text-lg sm:text-xl font-bold tracking-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                Certificados adicionales
+              </h2>
+
               <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
                 2 Convenios
               </span>
-              {mostrarSeccionEspeciales ? (
-                <ChevronUp className="w-5 h-5 text-slate-400" />
-              ) : (
-                <ChevronDown className="w-5 h-5 text-slate-400" />
-              )}
             </div>
-          </button>
 
-          {mostrarSeccionEspeciales && (
-            <div className={`p-6 sm:p-8 border-t transition-all animate-fadeIn ${
-              esOscuro ? 'border-slate-800 bg-slate-950/40' : 'border-slate-100 bg-slate-50/50'
-            }`}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                {/* Tarjeta CIP */}
-                <div className={`rounded-3xl p-8 text-white shadow-xl relative overflow-hidden flex flex-col justify-between border transition-all ${
-                  tieneDiplomaGeneral 
-                    ? 'bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border-slate-800' 
-                    : 'bg-slate-900/60 border-slate-800/80 opacity-80'
-                }`}>
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <span className="text-xs font-bold uppercase tracking-widest text-indigo-400 block">Convenio Nacional Oficial</span>
-                      {tieneDiplomaGeneral ? (
-                        <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/20 border border-emerald-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                          <CheckCircle2 className="size-3" /> Habilitado
+            {/* Grid de Convenios (Sin etiqueta "Convenio...") */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+              
+              {/* Tarjeta CIP */}
+              <div className={`rounded-3xl p-8 text-white shadow-xl relative overflow-hidden flex flex-col justify-between border transition-all ${
+                tieneDiplomaGeneral 
+                  ? 'bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border-slate-800' 
+                  : 'bg-slate-900/60 border-slate-800/80 opacity-80'
+              }`}>
+                <div>
+                  <div className="flex justify-between items-start mb-4">
+                    {tieneDiplomaGeneral ? (
+                      <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/20 border border-emerald-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                        <CheckCircle2 className="size-3" /> Habilitado
+                      </span>
+                    ) : (
+                      <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                        <Lock className="size-3" /> Bloqueado
+                      </span>
+                    )}
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Colegio de Ingenieros del Perú (CIP)</h3>
+                  <p className="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                    Acreditación respaldada institucionalmente por el CIP para validar tus horas lectivas y especialización profesional.
+                  </p>
+                  {!tieneDiplomaGeneral && (
+                    <p className="text-xs text-amber-400 mt-3 font-medium flex items-center gap-1.5 bg-amber-500/10 p-2.5 rounded-xl border border-amber-500/20">
+                      <AlertTriangle className="size-4 shrink-0" />
+                      Se habilita únicamente al obtener tu Diploma General de Diplomado (3 de 3 módulos aprobados).
+                    </p>
+                  )}
+                </div>
+
+                <button
+                  onClick={() => abrirModal('CIP')}
+                  disabled={!tieneDiplomaGeneral}
+                  className={`mt-6 w-full font-bold py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs sm:text-sm ${
+                    tieneDiplomaGeneral 
+                      ? 'bg-indigo-600 hover:bg-indigo-500 text-white cursor-pointer' 
+                      : 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
+                  }`}
+                >
+                  <ShieldCheck className="w-4 h-4" /> 
+                  {tieneDiplomaGeneral ? 'Solicitar Certificación CIP' : 'Requisito: Obten tu Diploma General'}
+                </button>
+              </div>
+
+              {/* Tarjeta MIAMI */}
+              <div className={`rounded-3xl p-8 text-white shadow-xl relative overflow-hidden flex flex-col justify-between border transition-all ${
+                tieneDiplomaGeneral 
+                  ? 'bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border-slate-800' 
+                  : (estadoSimuladoDev === 'un_modular' ? 'bg-gradient-to-br from-purple-950/60 via-slate-900 to-slate-900 border-purple-500/40' : 'bg-slate-900/60 border-slate-800/80 opacity-80')
+              }`}>
+                <div>
+                  <div className="flex justify-between items-start mb-4">
+                    {tieneDiplomaGeneral ? (
+                      <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/20 border border-emerald-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                        <CheckCircle2 className="size-3" /> Habilitado
+                      </span>
+                    ) : (
+                      estadoSimuladoDev === 'un_modular' ? (
+                        <span className="text-[11px] font-bold text-purple-300 bg-purple-500/20 border border-purple-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                          <Sparkles className="size-3" /> No Incluido en tu Plan
                         </span>
                       ) : (
                         <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
                           <Lock className="size-3" /> Bloqueado
                         </span>
-                      )}
-                    </div>
-                    <h3 className="text-xl font-bold text-white">Colegio de Ingenieros del Perú (CIP)</h3>
-                    <p className="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                      Acreditación respaldada institucionalmente por el CIP para validar tus horas lectivas y especialización profesional.
-                    </p>
-                    {!tieneDiplomaGeneral && (
-                      <p className="text-xs text-amber-400 mt-3 font-medium flex items-center gap-1.5 bg-amber-500/10 p-2.5 rounded-xl border border-amber-500/20">
-                        <AlertTriangle className="size-4 shrink-0" />
-                        Se habilita únicamente al obtener tu Diploma General de Diplomado (3 de 3 módulos aprobados).
-                      </p>
+                      )
                     )}
                   </div>
+                  <h3 className="text-xl font-bold text-white">San Ignacio University (Miami, FL)</h3>
+                  <p className="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                    Certificación académica internacional expedida desde EE.UU. con validez global en tu programa de alta especialización.
+                  </p>
 
-                  <button
-                    onClick={() => abrirModal('CIP')}
-                    disabled={!tieneDiplomaGeneral}
-                    className={`mt-6 w-full font-bold py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs sm:text-sm ${
-                      tieneDiplomaGeneral 
-                        ? 'bg-indigo-600 hover:bg-indigo-500 text-white cursor-pointer' 
-                        : 'bg-slate-800 text-slate-500 cursor-not-allowed border border-slate-700'
-                    }`}
-                  >
-                    <ShieldCheck className="w-4 h-4" /> 
-                    {tieneDiplomaGeneral ? 'Solicitar Certificación CIP' : 'Requisito: Obten tu Diploma General'}
-                  </button>
-                </div>
-
-                {/* Tarjeta MIAMI */}
-                <div className={`rounded-3xl p-8 text-white shadow-xl relative overflow-hidden flex flex-col justify-between border transition-all ${
-                  tieneDiplomaGeneral 
-                    ? 'bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border-slate-800' 
-                    : (estadoSimuladoDev === 'un_modular' ? 'bg-gradient-to-br from-purple-950/60 via-slate-900 to-slate-900 border-purple-500/40' : 'bg-slate-900/60 border-slate-800/80 opacity-80')
-                }`}>
-                  <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <span className="text-xs font-bold uppercase tracking-widest text-cyan-400 block">Convenio Internacional</span>
-                      {tieneDiplomaGeneral ? (
-                        <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/20 border border-emerald-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                          <CheckCircle2 className="size-3" /> Habilitado
-                        </span>
-                      ) : (
-                        estadoSimuladoDev === 'un_modular' ? (
-                          <span className="text-[11px] font-bold text-purple-300 bg-purple-500/20 border border-purple-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                            <Sparkles className="size-3" /> No Incluido en tu Plan
-                          </span>
-                        ) : (
-                          <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                            <Lock className="size-3" /> Bloqueado
-                          </span>
-                        )
-                      )}
-                    </div>
-                    <h3 className="text-xl font-bold text-white">San Ignacio University (Miami, FL)</h3>
-                    <p className="text-slate-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                      Certificación académica internacional expedida desde EE.UU. con validez global en tu programa de alta especialización.
+                  {!tieneDiplomaGeneral && estadoSimuladoDev === 'un_modular' && (
+                    <p className="text-xs text-purple-300 mt-3 font-medium flex items-center gap-1.5 bg-purple-500/10 p-2.5 rounded-xl border border-purple-500/20">
+                      <Sparkles className="size-4 shrink-0 text-purple-400" />
+                      Tu plan no incluye esta acreditación internacional. Puedes comprarla directamente para certificar tu programa.
                     </p>
+                  )}
 
-                    {!tieneDiplomaGeneral && estadoSimuladoDev === 'un_modular' && (
-                      <p className="text-xs text-purple-300 mt-3 font-medium flex items-center gap-1.5 bg-purple-500/10 p-2.5 rounded-xl border border-purple-500/20">
-                        <Sparkles className="size-4 shrink-0 text-purple-400" />
-                        Tu plan no incluye esta acreditación internacional. Puedes comprarla directamente para certificar tu programa.
-                      </p>
-                    )}
-
-                    {!tieneDiplomaGeneral && estadoSimuladoDev !== 'un_modular' && (
-                      <p className="text-xs text-amber-400 mt-3 font-medium flex items-center gap-1.5 bg-amber-500/10 p-2.5 rounded-xl border border-amber-500/20">
-                        <AlertTriangle className="size-4 shrink-0" />
-                        Se habilita únicamente al obtener tu Diploma General de Diplomado (3 de 3 módulos aprobados).
-                      </p>
-                    )}
-                  </div>
-
-                  {tieneDiplomaGeneral ? (
-                    <button
-                      onClick={() => abrirModal('MIAMI')}
-                      className="mt-6 w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs sm:text-sm cursor-pointer"
-                    >
-                      <Globe className="w-4 h-4" /> Solicitar Certificación MIAMI
-                    </button>
-                  ) : (
-                    estadoSimuladoDev === 'un_modular' ? (
-                      <button
-                        onClick={() => abrirModal('MIAMI')}
-                        className="mt-6 w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs sm:text-sm cursor-pointer"
-                      >
-                        <ShoppingCart className="w-4 h-4" /> Comprar Acreditación Internacional ($120 USD)
-                      </button>
-                    ) : (
-                      <button
-                        disabled
-                        className="mt-6 w-full bg-slate-800 text-slate-500 font-bold py-3 rounded-xl border border-slate-700 flex items-center justify-center gap-2 text-xs sm:text-sm cursor-not-allowed"
-                      >
-                        <Globe className="w-4 h-4" /> Requisito: Obten tu Diploma General
-                      </button>
-                    )
+                  {!tieneDiplomaGeneral && estadoSimuladoDev !== 'un_modular' && (
+                    <p className="text-xs text-amber-400 mt-3 font-medium flex items-center gap-1.5 bg-amber-500/10 p-2.5 rounded-xl border border-amber-500/20">
+                      <AlertTriangle className="size-4 shrink-0" />
+                      Se habilita únicamente al obtener tu Diploma General de Diplomado (3 de 3 módulos aprobados).
+                    </p>
                   )}
                 </div>
 
+                {tieneDiplomaGeneral ? (
+                  <button
+                    onClick={() => abrirModal('MIAMI')}
+                    className="mt-6 w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs sm:text-sm cursor-pointer"
+                  >
+                    <Globe className="w-4 h-4" /> Solicitar Certificación MIAMI
+                  </button>
+                ) : (
+                  estadoSimuladoDev === 'un_modular' ? (
+                    <button
+                      onClick={() => abrirModal('MIAMI')}
+                      className="mt-6 w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs sm:text-sm cursor-pointer"
+                    >
+                      <ShoppingCart className="w-4 h-4" /> Comprar Acreditación Internacional ($120 USD)
+                    </button>
+                  ) : (
+                    <button
+                      disabled
+                      className="mt-6 w-full bg-slate-800 text-slate-500 font-bold py-3 rounded-xl border border-slate-700 flex items-center justify-center gap-2 text-xs sm:text-sm cursor-not-allowed"
+                    >
+                      <Globe className="w-4 h-4" /> Requisito: Obten tu Diploma General
+                    </button>
+                  )
+                )}
               </div>
+
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* ==========================================
-            SECCIÓN DESPLEGABLE 3: CERTIFICADOS DE CURSOS Y TALLERES
+            SECCIÓN 4: CERTIFICADOS DE CURSOS (UNIFICADO)
            ========================================== */}
-        <div className={`rounded-3xl border overflow-hidden transition-all ${
-          esOscuro ? 'bg-slate-900/60 border-slate-800' : 'bg-white border-slate-200'
-        }`}>
-          <button
-            onClick={() => setMostrarSeccionCursosTalleres(!mostrarSeccionCursosTalleres)}
-            className="w-full p-6 flex items-center justify-between transition hover:bg-white/5 text-left cursor-pointer"
-          >
-            <div className="flex items-center gap-3">
-              <div className="size-10 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 grid place-items-center">
-                <BookOpen className="size-5" />
-              </div>
-              <div>
-                <h2 className={`text-lg font-bold flex items-center gap-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  Certificados de Cursos y Talleres
-                </h2>
-                <p className={`text-xs mt-0.5 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                  Constancias de cursos cortos asincrónicos e insignias de participación en talleres y webinars gratuitos.
-                </p>
-              </div>
-            </div>
+        {(tabActiva === 'TODOS' || tabActiva === 'CURSOS_TALLERES') && (
+          <div className="space-y-6">
+            <div className="py-4 px-1 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3 select-none">
+              <h2 className={`text-lg sm:text-xl font-bold tracking-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                Certificados de cursos
+              </h2>
 
-            <div className="flex items-center gap-3">
               <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                {certificadosCursos.length + certificadosTalleres.length} Certificados
+                {totalCursosCount} Certificados
               </span>
-              {mostrarSeccionCursosTalleres ? (
-                <ChevronUp className="w-5 h-5 text-slate-400" />
-              ) : (
-                <ChevronDown className="w-5 h-5 text-slate-400" />
-              )}
             </div>
-          </button>
 
-          {mostrarSeccionCursosTalleres && (
-            <div className={`p-6 sm:p-8 border-t space-y-8 transition-all animate-fadeIn ${
-              esOscuro ? 'border-slate-800 bg-slate-950/40' : 'border-slate-100 bg-slate-50/50'
-            }`}>
-              
-              {/* SUBSECCIÓN 3.1: CURSOS CORTOS */}
-              <div>
-                <div className="mb-4">
-                  <h3 className={`text-base font-bold flex items-center gap-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                    <BookOpen className="w-4 h-4 text-indigo-400" /> Cursos Cortos Asincrónicos
-                  </h3>
-                  <p className={`text-xs mt-0.5 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                    Emitidos al alcanzar el 100% de avance en tus cursos individuales.
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {certificadosCursos.map((curso) => (
-                    <div 
-                      key={curso.id}
-                      className={`rounded-2xl p-5 border flex flex-col justify-between space-y-4 ${
-                        esOscuro ? 'bg-slate-950/60 border-slate-800' : 'bg-white border-slate-200'
-                      }`}
-                    >
-                      <div>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest">{curso.categoria}</span>
-                          <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
-                            Nota: {curso.nota}
-                          </span>
-                        </div>
-                        <h4 className={`text-xs font-bold uppercase leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                          {curso.titulo}
-                        </h4>
-                        <p className={`text-[11px] mt-2 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                          Duración: {curso.horas} • Fecha: {curso.fecha}
-                        </p>
-                      </div>
-
-                      <div className="flex items-center gap-2 pt-1">
-                        <button 
-                          onClick={() => abrirVistaPrevia({
-                            titulo: curso.titulo,
-                            subtitulo: `CATEGORÍA: ${curso.categoria} (${curso.horas})`,
-                            categoria: 'Curso Corto Asincrónico',
-                            fecha: curso.fecha,
-                            codigo: curso.codigo,
-                            nota: curso.nota,
-                            tipo: 'Curso'
-                          })}
-                          className="bg-slate-800 hover:bg-slate-700 text-slate-200 p-2.5 rounded-xl text-xs transition-colors border border-slate-700 cursor-pointer"
-                          title="Vista Previa"
-                        >
-                          <Eye className="w-4 h-4" />
-                        </button>
-                        <button className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer">
-                          <Download className="w-3.5 h-3.5" /> Descargar PDF
-                        </button>
-                      </div>
+            {/* Grid unificado de Cursos y Talleres sin división ni docentes */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
+              {certificadosCursos.map((curso) => (
+                <div 
+                  key={curso.id}
+                  className={`rounded-2xl p-5 border flex flex-col justify-between space-y-4 ${
+                    esOscuro ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+                  }`}
+                >
+                  <div>
+                    <div className="flex justify-between items-center mb-2">
+                      <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest">{curso.categoria}</span>
+                      {curso.nota ? (
+                        <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
+                          Nota: {curso.nota}
+                        </span>
+                      ) : (
+                        <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
+                          Acceso Gratuito
+                        </span>
+                      )}
                     </div>
-                  ))}
-                </div>
-              </div>
+                    <h4 className={`text-xs font-bold uppercase leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                      {curso.titulo}
+                    </h4>
 
-              {/* SUBSECCIÓN 3.2: TALLERES GRATUITOS (MISMO ESTILO QUE CURSOS CORTOS) */}
-              <div>
-                <div className="mb-4">
-                  <h3 className={`text-base font-bold flex items-center gap-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                    <Video className="w-4 h-4 text-emerald-400" /> Talleres y Masterclasses (Acceso Gratuito)
-                  </h3>
-                  <p className={`text-xs mt-0.5 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                    Constancias digitales gratuitas por participación en talleres en vivo.
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {certificadosTalleres.map((taller) => (
-                    <div 
-                      key={taller.id}
-                      className={`rounded-2xl p-5 border flex flex-col justify-between space-y-4 ${
-                        esOscuro ? 'bg-slate-950/60 border-slate-800' : 'bg-white border-slate-200'
-                      }`}
-                    >
-                      <div>
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">{taller.tipo}</span>
-                          <span className="text-[11px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
-                            Acceso Gratuito
-                          </span>
-                        </div>
-                        <h4 className={`text-xs font-bold uppercase leading-snug ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                          {taller.titulo}
-                        </h4>
-                        <p className={`text-[11px] mt-2 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                          Expositor: {taller.instructor} • {taller.horas} • {taller.fecha}
-                        </p>
-                      </div>
-
-                      <div className="flex items-center gap-2 pt-1">
-                        <button 
-                          onClick={() => abrirVistaPrevia({
-                            titulo: taller.titulo,
-                            subtitulo: `EXPOSITOR: ${taller.instructor} (${taller.horas})`,
-                            categoria: 'Constancia de Taller Gratuito',
-                            fecha: taller.fecha,
-                            codigo: taller.codigo,
-                            tipo: 'Taller'
-                          })}
-                          className="bg-slate-800 hover:bg-slate-700 text-slate-200 p-2.5 rounded-xl text-xs transition-colors border border-slate-700 cursor-pointer"
-                          title="Vista Previa"
-                        >
-                          <Eye className="w-4 h-4" />
-                        </button>
-                        <button className="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer">
-                          <Download className="w-3.5 h-3.5" /> Descargar Constancia
-                        </button>
-                      </div>
+                    {/* Duración y Fecha en filas separadas */}
+                    <div className={`text-[11px] mt-3 space-y-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                      <p>Duración: {curso.horas}</p>
+                      <p>Fecha: {curso.fecha}</p>
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </div>
 
+                  <div className="flex items-center gap-2 pt-1">
+                    <button 
+                      onClick={() => abrirVistaPrevia({
+                        titulo: curso.titulo,
+                        subtitulo: `DURACIÓN: ${curso.horas}`,
+                        categoria: curso.categoria,
+                        fecha: curso.fecha,
+                        codigo: curso.codigo,
+                        nota: curso.nota,
+                        tipo: 'Curso'
+                      })}
+                      className="bg-slate-800 hover:bg-slate-700 text-slate-200 p-2.5 rounded-xl text-xs transition-colors border border-slate-700 cursor-pointer"
+                      title="Vista Previa"
+                    >
+                      <Eye className="w-4 h-4" />
+                    </button>
+                    <button className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2.5 rounded-xl text-xs transition-colors flex items-center justify-center gap-2 shadow-sm cursor-pointer">
+                      <Download className="w-3.5 h-3.5" /> Descargar
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {/* MODAL DE VISTA PREVIA DEL CERTIFICADO (DOCUMENTO INTERACTIVO) */}
         {modalVistaPrevia?.abierto && (
@@ -948,7 +827,7 @@ export default function CertificadosPage() {
                   </button>
 
                   <button className="flex-1 sm:flex-initial bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-md cursor-pointer">
-                    <Download className="size-4" /> Descargar PDF
+                    <Download className="size-4" /> Descargar
                   </button>
                 </div>
               </div>
@@ -1105,7 +984,7 @@ export default function CertificadosPage() {
             >
               <div>
                 <span className="block font-bold">1. Sin Modulares (Inicio)</span>
-                <span className="text-[10px] opacity-80">0 Modulares, 1 Dip. (0/3), 3 Cursos, 1 Taller</span>
+                <span className="text-[10px] opacity-80">0 Modulares, 1 Dip. (0/3), 4 Cursos</span>
               </div>
               {estadoSimuladoDev === 'cero' && <CheckCircle2 className="size-3.5 text-white shrink-0" />}
             </button>
@@ -1118,7 +997,7 @@ export default function CertificadosPage() {
             >
               <div>
                 <span className="block font-bold">2. Con 1 Modular Aprobado</span>
-                <span className="text-[10px] opacity-80">1 Modular, 1 Dip. Pendiente (1/3), 3 Cursos, 1 Taller</span>
+                <span className="text-[10px] opacity-80">1 Modular, 1 Dip. Pendiente (1/3), 4 Cursos</span>
               </div>
               {estadoSimuladoDev === 'un_modular' && <CheckCircle2 className="size-3.5 text-white shrink-0" />}
             </button>

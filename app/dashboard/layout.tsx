@@ -43,7 +43,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
   const primerApellido = apellidos.trim().split(' ')[0] || 'Quispe';
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row">
+    <div className="min-h-screen md:h-screen md:overflow-hidden bg-slate-50 flex flex-col md:flex-row">
       {/* Header Móvil (solo visible en pantallas < md) */}
       <header className="md:hidden bg-slate-950 text-slate-100 border-b border-slate-900 px-4 py-3 flex items-center justify-between sticky top-0 z-30 shrink-0">
         <Link href="/dashboard" className="flex items-center gap-2">

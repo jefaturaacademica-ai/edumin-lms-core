@@ -77,7 +77,13 @@
   {
     "id": 16,
     "curso": "IMPLEMENTACIÓN DE LA ISO 45001:2018",
-    "categoria": "Seguridad y prevención"
+    "categoria": "Seguridad y prevención",
+    "clases": [
+      "IMPLEMENTACIÓN DE LA NORMA ISO 45001:2018 EN LA MINERÍA",
+      "IDENTIFICACIÓN DE PELIGROS Y EVALUACIÓN DE RIESGOS",
+      "BENEFICIOS DE IMPLEMENTAR LA ISO 45001 EN LA MINERÍA",
+      "AUDITORÍA ISO 45001"
+    ]
   },
   {
     "id": 17,
@@ -207,7 +213,13 @@
   {
     "id": 42,
     "curso": "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015",
-    "categoria": "Operaciones y procesos"
+    "categoria": "Operaciones y procesos",
+    "clases": [
+      "CONTEXTO DE LA ORGANIZACIÓN Y LIDERAZGO",
+      "PLANIFICACIÓN Y GESTIÓN DE RIESGOS",
+      "MONITOREO, MEDICIÓN Y MEJORA CONTINUA",
+      "AUDITORÍA ISO 9001"
+    ]
   },
   {
     "id": 43,
@@ -322,47 +334,91 @@
   {
     "id": 65,
     "curso": "REQUISITOS CLAVE DE ISO 14001 Y CÓMO APLICARLOS EN LA EMPRESA",
-    "categoria": "Medio ambiente"
+    "categoria": "Medio ambiente",
+    "clases": [
+      "FUNDAMENTOS DE ISO 14001 Y SU ENFOQUE HACIA LA GESTIÓN AMBIENTAL",
+      "IMPLEMENTACIÓN, EVALUACIÓN Y MEJORA CONTINUA EN LA GESTIÓN AMBIENTAL"
+    ]
   },
   {
     "id": 66,
     "curso": "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)",
-    "categoria": "Legislación y normativa"
+    "categoria": "Legislación y normativa",
+    "clases": [
+      "CONTEXTO DE LA ORGANIZACIÓN Y LIDERAZGO",
+      "PLANIFICACIÓN Y GESTIÓN DE RIESGOS",
+      "MONITOREO, MEDICIÓN Y MEJORA CONTINUA",
+      "AUDITORÍA ISO 9001",
+      "FUNDAMENTOS DE ISO 14001 Y SU ENFOQUE HACIA LA GESTIÓN AMBIENTAL",
+      "IMPLEMENTACIÓN, EVALUACIÓN Y MEJORA CONTINUA EN LA GESTIÓN AMBIENTAL",
+      "IMPLEMENTACIÓN DE LA NORMA ISO 45001:2018 EN LA MINERÍA",
+      "IDENTIFICACIÓN DE PELIGROS Y EVALUACIÓN DE RIESGOS",
+      "BENEFICIOS DE IMPLEMENTAR LA ISO 45001 EN LA MINERÍA",
+      "AUDITORÍA ISO 45001"
+    ]
   },
   {
     "id": 67,
     "curso": "GESTIÓN DE CRISIS Y MANEJO DE CONFLICTOS EN AMBIENTES INDUSTRIALES",
-    "categoria": "Legislación y normativa"
+    "categoria": "Legislación y normativa",
+    "clases": [
+      "INTRODUCCIÓN A LA GESTIÓN DE CRISIS EN EL ENTORNO INDUSTRIAL",
+      "ESTRATEGIAS AVANZADAS Y TECNOLOGÍAS EN LA GESTIÓN ENERGÉTICA PARA MINERÍA"
+    ]
   },
   {
     "id": 68,
     "curso": "PLANIFICACIÓN ESTRATÉGICA Y BALANCED SCORECARD",
-    "categoria": "Operaciones y procesos"
+    "categoria": "Operaciones y procesos",
+    "clases": [
+      "FUNDAMENTOS DE LA PLANIFICACIÓN ESTRATÉGICA",
+      "IMPLEMENTACIÓN DE LA ESTRATEGIA CON BALANCED SCORECARD (BSC)"
+    ]
   },
   {
     "id": 69,
     "curso": "GESTIÓN DE LA ENERGÍA EN OPERACIONES MINERAS",
-    "categoria": "Medio ambiente"
+    "categoria": "Medio ambiente",
+    "clases": [
+      "FUNDAMENTOS DE LA GESTIÓN DE LA ENERGÍA EN LA MINERÍA",
+      "ESTRATEGIAS AVANZADAS Y TECNOLOGÍAS EN LA GESTIÓN ENERGÉTICA PARA MINERÍA"
+    ]
   },
   {
     "id": 70,
     "curso": "GESTIÓN DE LA CADENA DE SUMINISTRO EN EMPRESAS MINERAS",
-    "categoria": "Logística y almacenes"
+    "categoria": "Logística y almacenes",
+    "clases": [
+      "INTRODUCCIÓN A LA GESTIÓN DE LA CADENA DE SUMINISTRO EN LA MINERÍA",
+      "OPTIMIZACIÓN Y MEJORES PRÁCTICAS EN LA GESTIÓN DE LA CADENA DE SUMINISTRO MINERA"
+    ]
   },
   {
     "id": 71,
     "curso": "SEGURIDAD Y NORMATIVA EN EL CONTROL DE INVENTARIO Y LOGÍSTICA MINERA",
-    "categoria": "Legislación y normativa"
+    "categoria": "Legislación y normativa",
+    "clases": [
+      "NORMATIVA Y RIESGOS EN INVENTARIOS",
+      "LOGÍSTICA MINERA SEGURA"
+    ]
   },
   {
     "id": 72,
     "curso": "SALUD MENTAL EN EL TRABAJO: DETECCIÓN Y PREVENCIÓN DE TRASTORNOS PSICOLÓGICOS",
-    "categoria": "Seguridad y prevención"
+    "categoria": "Seguridad y prevención",
+    "clases": [
+      "COMPRENDIENDO LA SALUD MENTAL EN EL TRABAJO Y LOS TRASTORNOS PSICOLÓGICOS COMUNES",
+      "PREVENCIÓN Y ESTRATEGIAS DE APOYO EN EL TRABAJO PARA LA SALUD MENTAL"
+    ]
   },
   {
     "id": 73,
     "curso": "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN PROCESOS INDUSTRIALES",
-    "categoria": "Operaciones y procesos"
+    "categoria": "Operaciones y procesos",
+    "clases": [
+      "FUNDAMENTOS DE LEAN MANUFACTURING Y HERRAMIENTAS BÁSICAS",
+      "IMPLEMENTACIÓN DE LEAN MANUFACTURING EN LOS PROCESOS INDUSTRIALES"
+    ]
   },
   {
     "id": 74,
