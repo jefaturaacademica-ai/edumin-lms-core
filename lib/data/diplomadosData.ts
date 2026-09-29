@@ -1,25 +1,4 @@
-import derechoMineroJson from './diplomados/derecho-minero.json';
-import comercioInternacionalJson from './diplomados/especialista-en-comercio-internacional-gestion-aduanera-y-logistica.json';
-import geologiaMineraJson from './diplomados/geologia-minera.json';
-import geomecanicaJson from './diplomados/geomecanica-subterranea-y-superficial.json';
-import geometalurgiaJson from './diplomados/geometalurgia.json';
-import geotecniaMineraJson from './diplomados/geotecnia-minera.json';
-import gerenciaHseqJson from './diplomados/gerencia-de-sistemas-integrados-de-gestion-hseq.json';
-import liderazgoMineriaJson from './diplomados/gerencia-estrategica-y-liderazgo-de-equipos-en-la-mineria.json';
-import gestionAmbientalJson from './diplomados/gestion-ambiental-para-el-sector-minero-e-industrial.json';
-import controlOperativoJson from './diplomados/gestion-de-control-operativo-en-procesos-mineros.json';
-import operacionesIndustrialesJson from './diplomados/gestion-de-operaciones-industriales.json';
-import bigDataGestionJson from './diplomados/gestion-estrategica-para-empresas-utilizando-big-data-y-analisis-predictivo.json';
-import logisticaComprasJson from './diplomados/gestion-logistica-compras-inventarios-y-manejo-de-proveedores.json';
-import logisticaAlmacenesJson from './diplomados/gestion-logistica-y-almacenes-en-mineria.json';
-import logisticaProveedoresJson from './diplomados/gestion-logistica-y-proveedores-en-industria-y-mineria.json';
-import gestionMineraJson from './diplomados/gestion-minera.json';
-import legislacionLaboralJson from './diplomados/legislacion-laboral-y-elaboracion-de-planillas.json';
-import mineria40Json from './diplomados/mineria-4-0-y-digitalizacion-minera.json';
-import prevencionConflictividadJson from './diplomados/prevencion-de-la-conflictividad-riesgos-sociales-y-responsabilidad-social-minera.json';
-import seguridadIndustrialJson from './diplomados/seguridad-industrial.json';
-import seguridadSaludJson from './diplomados/seguridad-y-salud-ocupacional-en-la-industria-y-mineria.json';
-import supplyChainJson from './diplomados/supply-chain-management-en-industria-y-mineria.json';
+import diplomadosTodosJson from './diplomados_todos.json';
 
 export interface RawModuloJSON {
   codigo?: string;
@@ -109,7 +88,7 @@ function normalizarModulo(mod: RawModuloJSON, index: number): ModuloDetalle {
   return {
     codigo: etiquetaModulo,
     nombre,
-    docente: docente || 'Plana Docente de Alta Especialización',
+    docente: docente || '',
     clases: Array.isArray(mod.clases) ? mod.clases.map(c => c.trim()).filter(Boolean) : []
   };
 }
@@ -118,7 +97,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'derecho-minero',
     numId: 1,
-    json: derechoMineroJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[0] || {}) as RawDiplomadoJSON,
     categoria: 'Minería & Legal',
     nivel: 'Especialización',
     imagen: '/assets/images/daem/derecho-minero.webp',
@@ -127,7 +106,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'especialista-en-comercio-internacional-gestion-aduanera-y-logistica',
     numId: 2,
-    json: comercioInternacionalJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[1] || {}) as RawDiplomadoJSON,
     categoria: 'Logística & Cadena de Suministro',
     nivel: 'Especialización',
     imagen: '/assets/images/daem/comercio-internacional-y-aduanas.webp',
@@ -136,7 +115,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'geologia-minera',
     numId: 3,
-    json: geologiaMineraJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[2] || {}) as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Especialización',
     imagen: '/assets/images/daem/geologia-minera.webp',
@@ -145,7 +124,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'geomecanica-subterranea-y-superficial',
     numId: 4,
-    json: geomecanicaJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[3] || {}) as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Avanzado',
     imagen: '/assets/images/daem/geomecanica-minera.webp',
@@ -154,7 +133,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'geometalurgia',
     numId: 5,
-    json: geometalurgiaJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[4] || {}) as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Avanzado',
     imagen: '/assets/images/daem/geometalurgia.webp',
@@ -163,16 +142,16 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'geotecnia-minera',
     numId: 6,
-    json: geotecniaMineraJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[5] || {}) as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Avanzado',
-    imagen: '/assets/images/daem/geomecanica-minera.webp',
+    imagen: '/assets/images/daem/geotecnia-minera.webp',
     descripcion: 'Mecánica de suelos y rocas, monitoreo geotécnico e hidrogeología aplicada a proyectos mineros.'
   },
   {
     slug: 'gerencia-de-sistemas-integrados-de-gestion-hseq',
     numId: 7,
-    json: gerenciaHseqJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[6] || {}) as RawDiplomadoJSON,
     categoria: 'Seguridad & SSOMA',
     nivel: 'Gerencial',
     imagen: '/assets/images/daem/sistemas-integrados-hseq.webp',
@@ -181,16 +160,16 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'gerencia-estrategica-y-liderazgo-de-equipos-en-la-mineria',
     numId: 8,
-    json: liderazgoMineriaJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[7] || {}) as RawDiplomadoJSON,
     categoria: 'Gestión & Operaciones',
     nivel: 'Gerencial',
-    imagen: '/assets/images/daem/gestion-minera.webp',
+    imagen: '/assets/images/daem/gerencia-estrategica-y-liderazgo.webp',
     descripcion: 'Dirección de equipos de alto rendimiento, estrategia gerencial y compras en minería.'
   },
   {
     slug: 'gestion-ambiental-para-el-sector-minero-e-industrial',
     numId: 9,
-    json: gestionAmbientalJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[8] || {}) as RawDiplomadoJSON,
     categoria: 'Seguridad & SSOMA',
     nivel: 'Especialización',
     imagen: '/assets/images/daem/gestion-ambiental-minera.webp',
@@ -199,7 +178,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'gestion-de-control-operativo-en-procesos-mineros',
     numId: 10,
-    json: controlOperativoJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[9] || {}) as RawDiplomadoJSON,
     categoria: 'Gestión & Operaciones',
     nivel: 'Avanzado',
     imagen: '/assets/images/daem/control-operativo-minero.webp',
@@ -208,7 +187,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'gestion-de-operaciones-industriales',
     numId: 11,
-    json: operacionesIndustrialesJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[10] || {}) as RawDiplomadoJSON,
     categoria: 'Gestión & Operaciones',
     nivel: 'Avanzado',
     imagen: '/assets/images/daem/operaciones-industriales.webp',
@@ -217,7 +196,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'gestion-estrategica-para-empresas-utilizando-big-data-y-analisis-predictivo',
     numId: 12,
-    json: bigDataGestionJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[11] || {}) as RawDiplomadoJSON,
     categoria: 'Gestión & Operaciones',
     nivel: 'Avanzado',
     imagen: '/assets/images/daem/big-data-y-analisis-predictivo.webp',
@@ -226,16 +205,16 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'gestion-logistica-compras-inventarios-y-manejo-de-proveedores',
     numId: 13,
-    json: logisticaComprasJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[12] || {}) as RawDiplomadoJSON,
     categoria: 'Logística & Cadena de Suministro',
     nivel: 'Gerencial',
-    imagen: '/assets/images/daem/logistica-y-proveedores.webp',
+    imagen: '/assets/images/daem/compras-inventarios-y-proveedores.webp',
     descripcion: 'Estrategias de abastecimiento, control presupuestario y negociación en minería.'
   },
   {
     slug: 'gestion-logistica-y-almacenes-en-mineria',
     numId: 14,
-    json: logisticaAlmacenesJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[13] || {}) as RawDiplomadoJSON,
     categoria: 'Logística & Cadena de Suministro',
     nivel: 'Especialización',
     imagen: '/assets/images/daem/logistica-y-almacenes-mineros.webp',
@@ -244,7 +223,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'gestion-logistica-y-proveedores-en-industria-y-mineria',
     numId: 15,
-    json: logisticaProveedoresJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[14] || {}) as RawDiplomadoJSON,
     categoria: 'Logística & Cadena de Suministro',
     nivel: 'Especialización',
     imagen: '/assets/images/daem/logistica-y-proveedores.webp',
@@ -253,7 +232,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'gestion-minera',
     numId: 16,
-    json: gestionMineraJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[15] || {}) as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Gerencial',
     imagen: '/assets/images/daem/gestion-minera.webp',
@@ -262,16 +241,16 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'legislacion-laboral-y-elaboracion-de-planillas',
     numId: 17,
-    json: legislacionLaboralJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[16] || {}) as RawDiplomadoJSON,
     categoria: 'Legal & Negocios',
     nivel: 'Especialización',
-    imagen: '/assets/images/daem/derecho-minero.webp',
+    imagen: '/assets/images/daem/legislacion-laboral-y-planillas.webp',
     descripcion: 'Normativa laboral peruana, elaboración de planillas, T-Registro y PLAME.'
   },
   {
     slug: 'mineria-4-0-y-digitalizacion-minera',
     numId: 18,
-    json: mineria40Json as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[17] || {}) as RawDiplomadoJSON,
     categoria: 'Minería & Geología',
     nivel: 'Avanzado',
     imagen: '/assets/images/daem/mineria-4-0.webp',
@@ -280,7 +259,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'prevencion-de-la-conflictividad-riesgos-sociales-y-responsabilidad-social-minera',
     numId: 19,
-    json: prevencionConflictividadJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[18] || {}) as RawDiplomadoJSON,
     categoria: 'Seguridad & SSOMA',
     nivel: 'Especialización',
     imagen: '/assets/images/daem/riesgos-sociales-y-responsabilidad-minera.webp',
@@ -289,16 +268,16 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'seguridad-industrial',
     numId: 20,
-    json: seguridadIndustrialJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[19] || {}) as RawDiplomadoJSON,
     categoria: 'Seguridad & SSOMA',
     nivel: 'Especialización',
-    imagen: '/assets/images/daem/seguridad-y-salud-ocupacional.webp',
+    imagen: '/assets/images/daem/seguridad-industrial.webp',
     descripcion: 'Prevención de riesgos, salud ocupacional, trabajos de alto riesgo y auditoría ambiental.'
   },
   {
     slug: 'seguridad-y-salud-ocupacional-en-la-industria-y-mineria',
     numId: 21,
-    json: seguridadSaludJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[20] || {}) as RawDiplomadoJSON,
     categoria: 'Seguridad & SSOMA',
     nivel: 'Especialización',
     imagen: '/assets/images/daem/seguridad-y-salud-ocupacional.webp',
@@ -307,7 +286,7 @@ const RAW_DIPLOMADOS: { slug: string; numId: number; json: RawDiplomadoJSON; cat
   {
     slug: 'supply-chain-management-en-industria-y-mineria',
     numId: 22,
-    json: supplyChainJson as RawDiplomadoJSON,
+    json: (diplomadosTodosJson.diplomados[21] || {}) as RawDiplomadoJSON,
     categoria: 'Logística & Cadena de Suministro',
     nivel: 'Gerencial',
     imagen: '/assets/images/daem/supply-chain-minero.webp',

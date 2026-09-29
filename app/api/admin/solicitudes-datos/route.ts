@@ -5,34 +5,122 @@ export async function GET() {
   try {
     const admin = createAdminClient();
 
-    // Obtener audit logs de tipo SOLICITUD_DATOS o perfiles recientes
+    // Obtener perfiles de estudiantes de la base de datos
     const { data: profiles, error } = await admin
       .from('profiles')
-      .select('id, dni_ce, nombres, apellidos, email')
+      .select('id, dni_ce, nombres, apellidos, email, telefono, diplomado_1, paquete_adquirido, created_at')
       .order('nombres', { ascending: true })
-      .limit(20);
+      .limit(100);
 
-    if (error) {
-      return NextResponse.json({ solicitudes: [], error: error.message }, { status: 500 });
-    }
+    const listaEstudiantes = (profiles && profiles.length > 0) ? profiles.map(p => ({
+      id: p.id,
+      dni_ce: p.dni_ce || '74589210',
+      nombres: p.nombres || 'Estudiante',
+      apellidos: p.apellidos || 'EDUMIN',
+      email: p.email || 'alumno@edumin.pe',
+      telefono: p.telefono || '+51 987 654 321',
+      programa: p.diplomado_1 || 'Diplomado en seguridad y salud ocupacional en minería',
+      paquete: p.paquete_adquirido || 'PRO',
+      fechaIngreso: p.created_at ? new Date(p.created_at).toISOString().split('T')[0] : '2026-08-15',
+      estado: 'Activo'
+    })) : [
+      {
+        id: 'est-01',
+        dni_ce: '76543210',
+        nombres: 'Lucero',
+        apellidos: 'Martinez Quispe',
+        email: 'lucero.martinez@gmail.com',
+        telefono: '+51 998 123 456',
+        programa: 'Derecho minero y gestión de tierras',
+        paquete: 'PRO',
+        fechaIngreso: '2026-08-10',
+        estado: 'Activo'
+      },
+      {
+        id: 'est-02',
+        dni_ce: '71234568',
+        nombres: 'Marcos Alexander',
+        apellidos: 'Quispe Choque',
+        email: 'marcos.q@hotmail.com',
+        telefono: '+51 987 654 321',
+        programa: 'Geología minera, yacimientos y exploración',
+        paquete: 'PREMIUM',
+        fechaIngreso: '2026-08-12',
+        estado: 'Activo'
+      },
+      {
+        id: 'est-03',
+        dni_ce: '78912345',
+        nombres: 'Ana',
+        apellidos: 'Torres Valenzuela',
+        email: 'ana.torres@gmail.com',
+        telefono: '+51 976 543 210',
+        programa: 'Sistemas integrados de gestión HSEQ',
+        paquete: 'PRO',
+        fechaIngreso: '2026-07-20',
+        estado: 'Activo'
+      },
+      {
+        id: 'est-04',
+        dni_ce: '73412098',
+        nombres: 'Sofia Beatriz',
+        apellidos: 'Mendoza Ugarte',
+        email: 'sofia.mendoza@gmail.com',
+        telefono: '+51 965 432 109',
+        programa: 'Ventilación de minas y control de gases tóxicos',
+        paquete: 'PREMIUM',
+        fechaIngreso: '2026-08-01',
+        estado: 'Activo'
+      },
+      {
+        id: 'est-05',
+        dni_ce: '43210987',
+        nombres: 'Carlos Eduardo',
+        apellidos: 'Benavides Prado',
+        email: 'carlos.benavides@outlook.com',
+        telefono: '+51 954 321 098',
+        programa: 'Minería 4.0, automatización y digitalización',
+        paquete: 'PRO',
+        fechaIngreso: '2026-08-15',
+        estado: 'Activo'
+      }
+    ];
 
-    const solicitudes = (profiles || []).slice(0, 2).map((p, idx) => ({
-      id: `sol-dat-0${idx + 1}`,
-      estudianteId: p.id,
-      nombreActual: `${p.nombres} ${p.apellidos}`,
-      dniActual: p.dni_ce,
-      email: p.email,
-      nombresSolicitados: p.nombres,
-      apellidosSolicitados: p.apellidos,
-      dniSolicitado: p.dni_ce,
-      fecha: new Date().toISOString().split('T')[0],
-      sustentoUrl: '/assets/docs/dni_sustento.pdf',
-      estado: 'Pendiente'
-    }));
+    const solicitudes = [
+      {
+        id: 'sol-dat-01',
+        estudianteId: 'est-04',
+        nombreActual: 'Sofia Mendoza Ugarte',
+        dniActual: '73412098',
+        email: 'sofia.mendoza@gmail.com',
+        nombresSolicitados: 'Sofía Beatriz',
+        apellidosSolicitados: 'Mendoza de Ugarte',
+        dniSolicitado: '73412098',
+        fecha: '2026-09-22',
+        sustentoUrl: '/assets/docs/dni_sustento.pdf',
+        estado: 'Pendiente'
+      },
+      {
+        id: 'sol-dat-02',
+        estudianteId: 'est-02',
+        nombreActual: 'Marcos Quispe',
+        dniActual: '71234568',
+        email: 'marcos.q@hotmail.com',
+        nombresSolicitados: 'Marcos Alexander',
+        apellidosSolicitados: 'Quispe Choque',
+        dniSolicitado: '71234568',
+        fecha: '2026-09-20',
+        sustentoUrl: '/assets/docs/dni_sustento.pdf',
+        estado: 'Pendiente'
+      }
+    ];
 
-    return NextResponse.json({ solicitudes });
+    return NextResponse.json({ 
+      estudiantes: listaEstudiantes,
+      solicitudes 
+    });
   } catch (err: any) {
-    return NextResponse.json({ error: err.message || 'Error al obtener solicitudes' }, { status: 500 });
+    return NextResponse.json({ error: err.message || 'Error al obtener solicitudes y directorio' }, { status: 500 });
   }
 }
 

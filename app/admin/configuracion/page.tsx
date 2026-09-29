@@ -100,13 +100,13 @@ export default function ConfiguracionRolesPage() {
   });
 
   return (
-    <div className="min-h-screen bg-slate-50 flex font-sans relative overflow-hidden">
+    <div className="min-h-screen md:h-screen md:overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col md:flex-row font-sans relative transition-colors">
       
       {/* Sidebar Unificado */}
       <AdminSidebar />
 
       {/* Contenido Principal */}
-      <main className="flex-1 p-8 overflow-y-auto z-10">
+      <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0 h-full">
         <div className="max-w-7xl mx-auto space-y-8">
           
           <div className="flex justify-between items-center">

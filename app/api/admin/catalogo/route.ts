@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
+import { ALL_DIPLOMADOS } from '@/lib/data/diplomadosData';
 import fs from 'fs';
 import path from 'path';
 
@@ -39,14 +40,14 @@ function getLocalCatalogoData() {
     const numStr = (index + 1).toString().padStart(2, '0');
     const id = `dip-${numStr}`;
     const codigo = `DIP-${numStr}`;
-    const titulo = `${index + 1}. ${d.diplomado}`.toUpperCase();
+    const titulo = (d.diplomado || '').trim().toUpperCase();
 
     // Contador secuencial de clases continuo a lo largo de todo el diplomado
     let contadorClaseGlobal = 1;
 
     const modulosFormateados = (d.modulos || []).map((m: any, mIdx: number) => {
-      let nombre = m.nombre || '';
-      let docente = m.docente || 'Reginaldo Andía';
+      let nombre = (m.nombre || '').trim();
+      let docente = (m.docente || '').trim();
 
       if (!nombre && docente.includes('MÓDULO')) {
         const parts = docente.split(/MÓDULO \d+\s*-\s*/i);
@@ -71,10 +72,13 @@ function getLocalCatalogoData() {
       return {
         codigo: codigoModulo,
         nombre: nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
-        docente: docente || 'Reginaldo Andía',
+        docente: docente,
         clases: clasesFormat
       };
     });
+
+    const docentesList = Array.from(new Set(modulosFormateados.map((m: any) => m.docente).filter(Boolean)));
+    const docenteDiplomado = docentesList.length > 0 ? docentesList.join(', ') : '';
 
     diplomadosFormateados.push({
       id,
@@ -86,9 +90,9 @@ function getLocalCatalogoData() {
       categoria: 'Diplomados Oficiales',
       num_modulos: modulosFormateados.length || 3,
       taller_aplicable: 'Ninguno',
-      docente: modulosFormateados[0]?.docente || 'Equipo Docente',
+      docente: docenteDiplomado,
       duracion: '120 horas',
-      imagen: '/assets/images/daem/gestion-minera.webp',
+      imagen: ALL_DIPLOMADOS[index]?.imagen || '/assets/images/daem/gestion-minera.webp',
       nivel: 'Especialización',
       precio: 150.00,
       modulos: modulosFormateados

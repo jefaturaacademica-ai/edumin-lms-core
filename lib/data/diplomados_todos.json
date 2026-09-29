@@ -37,7 +37,7 @@
       ]
     },
     {
-      "diplomado": "ESPECIALISTA EN COMERCIO INTERNACIONAL GESTIÓN ADUANERA Y LOGÍSTICA",
+      "diplomado": "ESPECIALISTA EN COMERCIO INTERNACIONAL: GESTIÓN ADUANERA Y LOGÍSTICA",
       "modulos": [
         {
           "codigo": "M01",
@@ -78,8 +78,8 @@
       "modulos": [
         {
           "codigo": "M01",
-          "nombre": "",
-          "docente": "Juan Briones MÓDULO 01 - FUNDAMENTOS DE GEOLOGÍA MINERA",
+          "nombre": "FUNDAMENTOS DE GEOLOGÍA MINERA",
+          "docente": "Juan Briones",
           "clases": [
             "MINERALOGÍA Y PETROLOGÍA",
             "PROCESOS GEOLÓGICOS EN DEPÓSITOS MINERALES",
@@ -98,8 +98,8 @@
         },
         {
           "codigo": "M03",
-          "nombre": "Docentes: Mauricio Riveros Manuel Aucapuri MÓDULO 03 - OPERACIONES MINERAS Y GESTIÓN AMBIENTAL",
-          "docente": "",
+          "nombre": "OPERACIONES MINERAS Y GESTIÓN AMBIENTAL",
+          "docente": "Mauricio Riveros, Manuel Aucapuri",
           "clases": [
             "MÉTODOS DE EXPLOTACIÓN MINERA",
             "TECNOLOGÍA Y MAQUINARIA MINERA",
@@ -186,8 +186,8 @@
       "modulos": [
         {
           "codigo": "M01",
-          "nombre": "",
-          "docente": "Diego Astuyauri MÓDULO 01 - GEOTECNIA DE SUELOS Y ROCAS",
+          "nombre": "GEOTECNIA DE SUELOS Y ROCAS",
+          "docente": "Diego Astuyauri",
           "clases": [
             "PRINCIPIOS FUNDAMENTALES DE LA GEOTECNIA",
             "MODELOS DE COMPORTAMIENTOS DE SUELOS",
@@ -197,8 +197,8 @@
         },
         {
           "codigo": "M02",
-          "nombre": "",
-          "docente": "Diego Astuyauri MÓDULO 02 - MONITOREO GEOTÉCNICO",
+          "nombre": "MONITOREO GEOTÉCNICO",
+          "docente": "Diego Astuyauri",
           "clases": [
             "ESTUDIO GEOTÉCNICO",
             "PENETRACIÓN ESTÁTICA Y DINÁMICA",
@@ -208,8 +208,8 @@
         },
         {
           "codigo": "M03",
-          "nombre": "",
-          "docente": "Juan Briones MÓDULO 03 - ANÁLISIS HIDROGEOLÓGICO",
+          "nombre": "ANÁLISIS HIDROGEOLÓGICO",
+          "docente": "Juan Briones",
           "clases": [
             "GESTIÓN DEL AGUA EN MINERÍA",
             "SATURACIÓN DE SUELOS",
@@ -246,8 +246,8 @@
         },
         {
           "codigo": "M03",
-          "nombre": "Docentes: María Jesús Burga MÓDULO 03 - DOCUMENTACIÓN DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
-          "docente": "",
+          "nombre": "DOCUMENTACIÓN DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
+          "docente": "María Jesús Burga, Stephano Luque",
           "clases": [
             "CONCEPTOS Y NORMAS DE REFERENCIA HSEQ",
             "MÉTODOS PARA LA INTEGRACIÓN DE SISTEMAS DE GESTIÓN",
@@ -313,6 +313,7 @@
           "nombre": "EVALUACIÓN Y AUDITORÍA DE PROVEEDORES",
           "docente": "",
           "clases": [
+            "EVALUACIÓN DEL IMPACTO AMBIENTAL Y SOCIAL DE PROVEEDORES",
             "AUDITORÍA Y REPORTE DE SOSTENIBILIDAD EN COMPRAS",
             "TENDENCIAS FUTURAS EN LA GESTIÓN DE COMPRAS EN LA MINERÍA"
           ]
@@ -329,7 +330,8 @@
           "clases": [
             "FUNDAMENTOS ESTRATÉGICOS DE LA GESTIÓN AMBIENTAL INDUSTRIAL Y MINERA",
             "NORMATIVA Y LEGISLACIÓN AMBIENTAL VIGENTE",
-            "SISTEMAS DE GESTIÓN AMBIENTAL (ISO 14001 Y OTROS ESTÁNDARES)"
+            "SISTEMAS DE GESTIÓN AMBIENTAL (ISO 14001 Y OTROS ESTÁNDARES)",
+            "EVALUACIÓN DE IMPACTO AMBIENTAL (EIA)"
           ]
         },
         {
@@ -398,8 +400,8 @@
       "modulos": [
         {
           "codigo": "M01",
-          "nombre": "",
-          "docente": "Aida Ramirez MÓDULO 01 - SOFT SKILLS EN LA INDUSTRIA",
+          "nombre": "SOFT SKILLS EN LA INDUSTRIA",
+          "docente": "Aida Ramirez",
           "clases": [
             "INTELIGENCIA EMOCIONAL APLICADA A LA GESTIÓN INDUSTRIAL Y MINERA",
             "LIDERAZGO INDUSTRIAL, MINERO Y GESTIÓN DEL CAPITAL HUMANO",
@@ -408,8 +410,8 @@
         },
         {
           "codigo": "M02",
-          "nombre": "",
-          "docente": "Javier Rivera MÓDULO 02 - LA GESTIÓN DE OPERACIONES INDUSTRIALES",
+          "nombre": "LA GESTIÓN DE OPERACIONES INDUSTRIALES",
+          "docente": "Javier Rivera",
           "clases": [
             "PLANIFICACIÓN Y PROGRAMACIÓN DE LA PRODUCCIÓN",
             "CONTROL DE PRODUCCIÓN Y GESTIÓN DE CALIDAD EN TIEMPO REAL",
@@ -419,8 +421,8 @@
         },
         {
           "codigo": "M03",
-          "nombre": "",
-          "docente": "Mario Hilasaca MÓDULO 03 - PLANEACIÓN Y CONTROL DE LA PRODUCCIÓN",
+          "nombre": "PLANEACIÓN Y CONTROL DE LA PRODUCCIÓN",
+          "docente": "Mario Hilasaca",
           "clases": [
             "PLANEACIÓN DE LA CAPACIDAD PRODUCTIVA Y OPTIMIZACIÓN DE RECURSOS",
             "GESTIÓN DE LA CALIDAD Y MEJORA CONTINUA",
@@ -456,8 +458,8 @@
         },
         {
           "codigo": "M03",
-          "nombre": "",
-          "docente": "José Chávez MÓDULO 03 - REDES NEURONALES Y DEEP LEARNING",
+          "nombre": "REDES NEURONALES Y DEEP LEARNING",
+          "docente": "José Chávez",
           "clases": [
             "FUNDAMENTOS AVANZADOS DE REDES NEURONALES",
             "CIENCIA DE DATOS PARA LA TOMA DE DECISIONES ESTRATÉGICAS",
@@ -468,7 +470,7 @@
       ]
     },
     {
-      "diplomado": "GESTIÓN LOGÍSTICA COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
+      "diplomado": "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
       "modulos": [
         {
           "codigo": "M01",
@@ -489,6 +491,7 @@
             "DESARROLLO DE ESTRATEGIAS DE COMPRAS EN MINERÍA",
             "TÉCNICAS DE NEGOCIACIÓN Y GESTIÓN DE CONTRATOS",
             "COMPRAS ESTRATÉGICAS Y GESTIÓN DE COSTOS",
+            "EVALUACIÓN Y HOMOLOGACIÓN DE PROVEEDORES",
             "GESTIÓN DE PROVEEDORES GLOBALES Y LOCALES"
           ]
         },
@@ -522,6 +525,7 @@
           "docente": "",
           "clases": [
             "CONSIDERACIONES ÉTICAS Y SOCIALES EN LA GESTIÓN DE COMPRAS",
+            "EVALUACIÓN DEL IMPACTO AMBIENTAL Y SOCIAL DE PROVEEDORES",
             "PRÁCTICAS DE COMPRAS SOSTENIBLES EN LA MINERÍA",
             "AUDITORÍA Y REPORTE DE SOSTENIBILIDAD EN COMPRAS",
             "TENDENCIAS FUTURAS EN LA GESTIÓN DE COMPRAS EN LA MINERÍA"
@@ -607,8 +611,8 @@
       "modulos": [
         {
           "codigo": "M01",
-          "nombre": "Docentes: Manuel Aucapuri Gonzalo González MÓDULO 01 - OPERACIONES MINERAS: GEOLOGÍA, LOGÍSTICA Y PLANTA",
-          "docente": "",
+          "nombre": "OPERACIONES MINERAS: GEOLOGÍA, LOGÍSTICA Y PLANTA",
+          "docente": "Manuel Aucapuri, Gonzalo González ",
           "clases": [
             "OPERACIONES EN MINERÍA: GEOLOGÍA",
             "OPERACIONES EN MINERÍA: PLANTA",
@@ -633,6 +637,7 @@
           "docente": "Mario Hilasaca",
           "clases": [
             "PLANIFICACIÓN Y GESTIÓN DE PROYECTOS MINEROS",
+            "EVALUACIÓN FINANCIERA DE PROYECTOS MINEROS",
             "CONTROL PRESUPUESTAL Y GESTIÓN DE COSTOS",
             "FINANCIAMIENTO Y MARCO NORMATIVO FINANCIERO"
           ]
@@ -648,6 +653,7 @@
           "docente": "",
           "clases": [
             "INTRODUCCIÓN A LA LEGISLACIÓN LABORAL PERUANA",
+            "TIPOS DE CONTRATOS DE TRABAJO Y MODALIDADES CONTRACTUALES GESTIONADAS EN EL PERÚ",
             "DERECHOS Y OBLIGACIONES DE EMPLEADORES Y TRABAJADORES",
             "JORNADA LABORAL Y DESCANSOS EN PERÚ",
             "BENEFICIOS LABORALES, REMUNERACIONES Y PRESTACIONES"
@@ -714,8 +720,8 @@
         },
         {
           "codigo": "M02",
-          "nombre": "",
-          "docente": "José Chávez MÓDULO 02 - DIGITALIZACIÓN DE PROCESOS MINEROS",
+          "nombre": "DIGITALIZACIÓN DE PROCESOS MINEROS",
+          "docente": "José Chávez",
           "clases": [
             "GESTIÓN DE DATOS Y ANÁLISIS PARA LA TOMA DE DECISIONES ESTRATÉGICAS EN MINERÍA",
             "TECNOLOGÍAS CLAVE PARA LA DIGITALIZACIÓN DE PROCESOS MINEROS",
@@ -775,19 +781,20 @@
       "modulos": [
         {
           "codigo": "M01",
-          "nombre": "",
-          "docente": "Alberto Mendoza MÓDULO 01 - GESTIÓN DE OPERACIONES INDUSTRIALES",
+          "nombre": "GESTIÓN DE OPERACIONES INDUSTRIALES",
+          "docente": "Alberto Mendoza",
           "clases": [
             "PLANIFICACIÓN Y PROGRAMACIÓN DE LA PRODUCCIÓN",
             "CONTROL DE LA PRODUCCIÓN Y GESTIÓN DE CALIDAD EN TIEMPO REAL",
             "MANTENIMIENTO INDUSTRIAL",
-            "GESTIÓN DE RESIDUOS INDUSTRIALES Y SOSTENIBILIDAD"
+            "GESTIÓN DE RESIDUOS INDUSTRIALES Y SOSTENIBILIDAD",
+            "CLASE MAGISTRAL"
           ]
         },
         {
           "codigo": "M02",
-          "nombre": "",
-          "docente": "Esteban Hermoza MÓDULO 02 - SEGURIDAD INDUSTRIAL Y PREVENCIÓN DE RIESGOS",
+          "nombre": "SEGURIDAD INDUSTRIAL Y PREVENCIÓN DE RIESGOS",
+          "docente": "Esteban Hermoza",
           "clases": [
             "LEY DE SEGURIDAD Y SALUD EN EL TRABAJO (LEY N.º 29783) Y SU REGLAMENTO (D. S. N.º 005-2012-TR)",
             "NORMA INTERNACIONAL ISO 45001:2018",
@@ -796,19 +803,21 @@
             "MATERIALES PELIGROSOS",
             "TRABAJOS CRÍTICOS",
             "IMPLEMENTACIÓN DE LA ISO 18001",
-            "ERGONOMÍA APLICADA EN LA ORGANIZACIÓN"
+            "ERGONOMÍA APLICADA EN LA ORGANIZACIÓN",
+            "CLASE MAGISTRAL"
           ]
         },
         {
           "codigo": "M03",
-          "nombre": "",
-          "docente": "Raul Jacinto MÓDULO 03 - NORMATIVA DE SEGURIDAD Y MEDIO AMBIENTE",
+          "nombre": "NORMATIVA DE SEGURIDAD Y MEDIO AMBIENTE",
+          "docente": "Raul Jacinto",
           "clases": [
             "LEGISLACIÓN AMBIENTAL Y COMPETENCIAS DEL OEFA",
             "NORMATIVIDAD SOBRE LA PROTECCIÓN Y CALIDAD AMBIENTAL DEL AGUA, EL AIRE, EL SUELO, EL RUIDO Y LA CONTAMINACIÓN LUMÍNICA",
             "REGLAMENTO DEL SISTEMA DE EVALUACIÓN DE IMPACTO AMBIENTAL",
             "ISO 14001 EN LA IDENTIFICACIÓN DE REQUISITOS LEGALES",
-            "TRAIN THE TRAINERS"
+            "TRAIN THE TRAINERS",
+            "CLASE MAGISTRAL"
           ]
         }
       ]
@@ -818,8 +827,8 @@
       "modulos": [
         {
           "codigo": "M01",
-          "nombre": "",
-          "docente": "Alberto Mendoza MÓDULO 01 - NORMATIVA EN INDUSTRIA Y MINERÍA",
+          "nombre": "NORMATIVA EN INDUSTRIA Y MINERÍA",
+          "docente": "Alberto Mendoza",
           "clases": [
             "LEY N.º 29783: MARCO LEGAL DE SEGURIDAD Y SALUD EN EL TRABAJO Y ACTUALIZACIONES RECIENTES",
             "DECRETO SUPREMO N.º 024-2016-EM: REGLAMENTO DE SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA Y SUS MODIFICATORIAS",
@@ -840,8 +849,8 @@
         },
         {
           "codigo": "M03",
-          "nombre": "Docentes: Carlos Dominguez MÓDULO 03 - INSPECCIÓN, INVESTIGACIÓN Y RESPUESTA A EMERGENCIAS EN MINERÍA",
-          "docente": "",
+          "nombre": "INSPECCIÓN, INVESTIGACIÓN Y RESPUESTA A EMERGENCIAS EN MINERÍA",
+          "docente": "Carlos Dominguez",
           "clases": [
             "AUDITORÍA Y FISCALIZACIÓN DE CUMPLIMIENTO EN LA INDUSTRIA MINERA: ENFOQUES AVANZADOS EN INSPECCIÓN Y CONTROL",
             "INVESTIGACIÓN DE ACCIDENTES EN MINERÍA: TÉCNICAS DE VANGUARDIA Y PREVENCIÓN DE RIESGOS",
@@ -873,7 +882,8 @@
           "clases": [
             "ROL ESTRATÉGICO DE LA GESTIÓN DE COMPRAS EN LA INDUSTRIA MINERA",
             "PROCESOS DE ADQUISICIÓN Y APROVISIONAMIENTO PARA OPERACIONES MINERAS",
-            "NORMATIVAS, CONTRATOS Y REGULACIONES EN COMPRAS DEL SECTOR MINERO"
+            "NORMATIVAS, CONTRATOS Y REGULACIONES EN COMPRAS DEL SECTOR MINERO",
+            "EVALUACIÓN, HOMOLGACIÓN Y GESTIÓN DEL DESEMPEÑO DE PROVEEDORES"
           ]
         },
         {

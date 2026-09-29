@@ -442,13 +442,13 @@ export default function CatalogoAdminPage() {
   });
 
   return (
-    <div className="min-h-screen bg-slate-50 flex font-sans relative">
+    <div className="min-h-screen md:h-screen md:overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col md:flex-row font-sans relative transition-colors">
       
       {/* Sidebar Unificado */}
       <AdminSidebar />
 
       {/* Contenido Principal */}
-      <main className="flex-1 p-8 overflow-y-auto z-10">
+      <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0 h-full">
         <div className="max-w-7xl mx-auto">
           
           {mensajeExito && (
@@ -464,7 +464,7 @@ export default function CatalogoAdminPage() {
                 <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">Catálogo Sincronizado</span>
                 <span className="text-slate-400 text-xs font-mono">• Supabase public.cursos</span>
               </div>
-              <h1 className="text-3xl font-bold text-slate-900 mt-1">Gestión del Catálogo Académico</h1>
+              <h1 className="text-3xl font-bold text-slate-900 dark:text-white mt-1">Gestión del Catálogo Académico</h1>
             </div>
             
             <div className="flex flex-wrap items-center gap-2.5">

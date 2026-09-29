@@ -303,13 +303,13 @@ export default function AdminDashboard360() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex font-sans relative overflow-hidden transition-colors">
+    <div className="min-h-screen md:h-screen md:overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col md:flex-row font-sans relative transition-colors">
       
       {/* Sidebar Unificado */}
       <AdminSidebar />
 
       {/* Área Principal de Contenido */}
-      <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10">
+      <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0 h-full">
         <div className="max-w-7xl mx-auto space-y-8">
           
           <header className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
