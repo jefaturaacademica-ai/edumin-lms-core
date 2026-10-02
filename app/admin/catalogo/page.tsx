@@ -206,12 +206,28 @@ export default function CatalogoAdminPage() {
 
     return modulos.map((mod: any, mIdx: number) => {
       const codigoModulo = `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
-      const clasesNuevas = (Array.isArray(mod.clases) ? mod.clases : []).map((claseText: string) => {
+      const clasesNuevas = (Array.isArray(mod.clases) ? mod.clases : []).map((claseItem: any) => {
         const numClase = contadorClaseGlobal;
         contadorClaseGlobal += 1;
-        // Quitar prefijos anteriores tipo "Clase 1:", "Clase 05 -", etc.
+        
+        const isObj = typeof claseItem === 'object' && claseItem !== null;
+        const claseText = isObj ? (claseItem.titulo || '') : String(claseItem);
         const nombreLimpio = claseText.replace(/^Clase \d+[\s:\-]+/i, '').trim();
-        return `Clase ${numClase}: ${nombreLimpio || 'Nueva Clase'}`;
+        const tituloFormateado = `Clase ${numClase}: ${nombreLimpio || 'Nueva Clase'}`;
+
+        if (isObj) {
+          return {
+            ...claseItem,
+            titulo: tituloFormateado
+          };
+        }
+
+        return {
+          titulo: tituloFormateado,
+          iframe_url: '',
+          pdf_url: '',
+          excel_url: ''
+        };
       });
 
       return {
@@ -232,7 +248,7 @@ export default function CatalogoAdminPage() {
       codigo: `Módulo ${nuevoNum.toString().padStart(2, '0')}`,
       nombre: `MÓDULO ${nuevoNum.toString().padStart(2, '0')}: NUEVO MÓDULO`,
       docente: itemEditando.docente || 'Reginaldo Andía',
-      clases: ['Nueva Clase']
+      clases: [{ titulo: 'Nueva Clase', iframe_url: '', pdf_url: '', excel_url: '' }]
     };
 
     const modsSecuenciados = normalizarYSecuenciarClases([...actualMods, nuevoMod]);
@@ -267,18 +283,29 @@ export default function CatalogoAdminPage() {
       ? itemEditando.modulos.map((m: any) => ({ ...m, clases: [...(m.clases || [])] }))
       : [];
     
-    nuevosMods[mIdx].clases.push('Nueva Clase');
+    nuevosMods[mIdx].clases.push({ titulo: 'Nueva Clase', iframe_url: '', pdf_url: '', excel_url: '' });
     const modsSecuenciados = normalizarYSecuenciarClases(nuevosMods);
     setItemEditando({ ...itemEditando, modulos: modsSecuenciados });
   };
 
-  const actualizarNombreClase = (mIdx: number, cIdx: number, valor: string) => {
+  const actualizarCampoClase = (mIdx: number, cIdx: number, campo: string, valor: string) => {
     if (!itemEditando) return;
     const nuevosMods = itemEditando.modulos
       ? itemEditando.modulos.map((m: any) => ({ ...m, clases: [...(m.clases || [])] }))
       : [];
     
-    nuevosMods[mIdx].clases[cIdx] = valor;
+    const claseActual = nuevosMods[mIdx].clases[cIdx];
+    if (typeof claseActual === 'object' && claseActual !== null) {
+      claseActual[campo] = valor;
+    } else {
+      nuevosMods[mIdx].clases[cIdx] = {
+        titulo: String(claseActual),
+        iframe_url: campo === 'iframe_url' ? valor : '',
+        pdf_url: campo === 'pdf_url' ? valor : '',
+        excel_url: campo === 'excel_url' ? valor : ''
+      };
+    }
+    
     const modsSecuenciados = normalizarYSecuenciarClases(nuevosMods);
     setItemEditando({ ...itemEditando, modulos: modsSecuenciados });
   };
@@ -843,29 +870,73 @@ export default function CatalogoAdminPage() {
                               </button>
                             </div>
 
-                            <div className="space-y-2">
-                              {mod.clases && mod.clases.length > 0 ? (
-                                mod.clases.map((clase: string, cIdx: number) => (
-                                  <div key={cIdx} className="flex items-center gap-2">
-                                    <input 
-                                      type="text"
-                                      value={clase}
-                                      onChange={(e) => actualizarNombreClase(mIdx, cIdx, e.target.value)}
-                                      className="flex-1 px-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-800 font-mono"
-                                    />
-                                    <button
-                                      type="button"
-                                      onClick={() => eliminarClaseDeModulo(mIdx, cIdx)}
-                                      className="text-slate-400 hover:text-red-500 p-1 transition cursor-pointer"
-                                    >
-                                      <X className="size-3.5" />
-                                    </button>
-                                  </div>
-                                ))
-                              ) : (
-                                <p className="text-[10px] text-slate-400 italic">No hay clases agregadas aún a este módulo.</p>
-                              )}
-                            </div>
+                             <div className="space-y-3">
+                               {mod.clases && mod.clases.length > 0 ? (
+                                 mod.clases.map((claseObj: any, cIdx: number) => {
+                                   const tituloClase = typeof claseObj === 'object' && claseObj !== null ? claseObj.titulo : String(claseObj);
+                                   const iframeUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.iframe_url || '') : '';
+                                   const pdfUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.pdf_url || '') : '';
+                                   const excelUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.excel_url || '') : '';
+
+                                   return (
+                                     <div key={cIdx} className="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                                       <div className="flex items-center gap-2">
+                                         <input 
+                                           type="text"
+                                           value={tituloClase}
+                                           placeholder="Título de la clase..."
+                                           onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'titulo', e.target.value)}
+                                           className="flex-1 px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-800 font-mono"
+                                         />
+                                         <button
+                                           type="button"
+                                           onClick={() => eliminarClaseDeModulo(mIdx, cIdx)}
+                                           className="text-slate-400 hover:text-red-500 p-1 transition cursor-pointer"
+                                           title="Eliminar clase"
+                                         >
+                                           <X className="size-3.5" />
+                                         </button>
+                                       </div>
+
+                                       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pt-1 border-t border-slate-200/60">
+                                         <div>
+                                           <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📹 Video iFrame (YouTube/Vimeo)</label>
+                                           <input 
+                                             type="text"
+                                             placeholder="https://www.youtube.com/embed/..."
+                                             value={iframeUrl}
+                                             onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'iframe_url', e.target.value)}
+                                             className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                           />
+                                         </div>
+                                         <div>
+                                           <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📄 Documento PDF</label>
+                                           <input 
+                                             type="text"
+                                             placeholder="https://.../separata.pdf"
+                                             value={pdfUrl}
+                                             onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'pdf_url', e.target.value)}
+                                             className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                           />
+                                         </div>
+                                         <div>
+                                           <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📊 Archivo Excel / Material</label>
+                                           <input 
+                                             type="text"
+                                             placeholder="https://.../plantilla.xlsx"
+                                             value={excelUrl}
+                                             onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'excel_url', e.target.value)}
+                                             className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                           />
+                                         </div>
+                                       </div>
+                                     </div>
+                                   );
+                                 })
+                               ) : (
+                                 <p className="text-[10px] text-slate-400 italic">No hay clases agregadas aún a este módulo.</p>
+                               )}
+                             </div>
                           </div>
                         </div>
                       ))

@@ -27,6 +27,7 @@ interface Ficha360ModalProps {
   onSetReciboImprimir: (pag: any) => void;
   onEnviarAlertaWhatsApp: () => Promise<void>;
   enviandoAlertaWhatsApp: boolean;
+  onRefetchEstudiantes?: () => void;
 }
 
 export default function Ficha360Modal({
@@ -49,13 +50,20 @@ export default function Ficha360Modal({
   onSetPagoIdParaValidar,
   onSetReciboImprimir,
   onEnviarAlertaWhatsApp,
-  enviandoAlertaWhatsApp
+  enviandoAlertaWhatsApp,
+  onRefetchEstudiantes
 }: Ficha360ModalProps) {
   const [modalTab, setModalTab] = useState<'cronograma' | 'creditos' | 'academico' | 'retencion'>('cronograma');
 
   // Estado local para módulo de Cargos Extras (Examen Sustitutorio, Mora, etc.)
   const [conceptoExtra, setConceptoExtra] = useState<string>('Examen Sustitutorio');
   const [montoExtra, setMontoExtra] = useState<string>('25.00');
+
+  // Estado local para Selector de los 22 Diplomados y 76 Cursos en Supabase
+  const [nuevoDiplomadoSeleccionado, setNuevoDiplomadoSeleccionado] = useState<string>('');
+  const [cargandoDiplomadoAccion, setCargandoDiplomadoAccion] = useState(false);
+  const [nuevoCursoSeleccionado, setNuevoCursoSeleccionado] = useState<string>('');
+  const [cargandoCursoAccion, setCargandoCursoAccion] = useState(false);
 
   if (!alumnoSeleccionado) return null;
 
@@ -545,30 +553,277 @@ export default function Ficha360Modal({
             </div>
           )}
 
-          {/* TAB 3: AVANCE ACADÉMICO CON BARRAS DE PROGRESO */}
+          {/* TAB 3: AVANCE ACADÉMICO CON BARRAS DE PROGRESO Y GESTIÓN DE DIPLOMADOS Y CURSOS */}
           {modalTab === 'academico' && (() => {
-            const diplomadosAlumno = [
-              alumnoSeleccionado?.diplomado_actual,
-              alumnoSeleccionado?.diplomado_2,
-              (alumnoSeleccionado as any)?.diplomado_3,
-              (alumnoSeleccionado as any)?.diplomado_4,
-              (alumnoSeleccionado as any)?.diplomado_5,
-            ].filter(Boolean) as string[];
+            const listDiplomadosExistentes = (
+              alumnoSeleccionado.diplomados_lista && alumnoSeleccionado.diplomados_lista.length > 0
+                ? alumnoSeleccionado.diplomados_lista
+                : (alumnoSeleccionado.diplomados_json || []).map((d: any) => d.titulo)
+            ) as string[];
 
-            const listaDiplomados = diplomadosAlumno.length > 0 ? diplomadosAlumno : ['DIPLOMADO EN GESTIÓN MINERA'];
+            const listCursosExistentes = (
+              (alumnoSeleccionado.cursos_json || []).map((c: any) => c.titulo || c.codigo)
+            ) as string[];
+
+            const listaDiplomados = listDiplomadosExistentes;
+            const listaCursos = listCursosExistentes;
+
+            // 22 diplomados oficiales del catálogo
+            const titulosCatalogo22 = (catalogoDiplomados || [])
+              .filter((d: any) => d && (d.tipo === 'diplomado' || String(d.id).startsWith('dip-') || String(d.categoria).includes('Diplomados')))
+              .map((d: any) => (d.titulo || d.nombre || '').trim().toUpperCase())
+              .filter(Boolean);
+
+            const titulosOficiales22 = titulosCatalogo22.length > 0 ? titulosCatalogo22 : [
+              "DERECHO MINERO",
+              "ESPECIALISTA EN COMERCIO INTERNACIONAL: GESTIÓN ADUANERA Y LOGÍSTICA",
+              "GEOLOGÍA MINERA",
+              "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL",
+              "GEOMETALURGIA",
+              "GEOTECNIA MINERA",
+              "GERENCIA DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
+              "GERENCIA ESTRATÉGICA Y LIDERAZGO DE EQUIPOS EN LA MINERÍA",
+              "GESTIÓN AMBIENTAL PARA EL SECTOR MINERO E INDUSTRIAL",
+              "GESTIÓN DE CONTROL OPERATIVO EN PROCESOS MINEROS",
+              "GESTIÓN DE OPERACIONES INDUSTRIALES",
+              "GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO",
+              "GESTIÓN LOGÍSTICA: COMPRAS, INVENTARIOS Y MANEJO DE PROVEEDORES",
+              "GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA",
+              "GESTIÓN LOGÍSTICA Y PROVEEDORES EN INDUSTRIA Y MINERÍA",
+              "GESTIÓN MINERA",
+              "LEGISLACIÓN LABORAL Y ELABORACIÓN DE PLANILLAS",
+              "MINERÍA 4.0 Y DIGITALIZACIÓN MINERA",
+              "PREVENCIÓN DE LA CONFLICTIVIDAD, RIESGOS SOCIALES Y RESPONSABILIDAD SOCIAL MINERA",
+              "SEGURIDAD INDUSTRIAL",
+              "SEGURIDAD Y SALUD OCUPACIONAL EN LA INDUSTRIA Y MINERÍA",
+              "SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA"
+            ];
+
+            // 76 Cursos oficiales del catálogo
+            const titulosCursos76 = (catalogoDiplomados || [])
+              .filter((d: any) => d && (d.tipo === 'curso' || String(d.id).startsWith('cur-') || String(d.categoria).includes('Cursos')))
+              .map((d: any) => (d.titulo || d.nombre || '').trim().toUpperCase())
+              .filter(Boolean);
+
+            const handleGuardarDiplomadosSubmit = async (nuevosDips: string[]) => {
+              setCargandoDiplomadoAccion(true);
+              try {
+                const res = await fetch('/api/admin/estudiantes', {
+                  method: 'PATCH',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    action: 'update_diplomados',
+                    studentId: alumnoSeleccionado.id,
+                    dni_ce: alumnoSeleccionado.dni_ce,
+                    diplomados: nuevosDips
+                  })
+                });
+
+                if (res.ok) {
+                  alert('¡Diplomados actualizados y sincronizados en Supabase!');
+                  if (onRefetchEstudiantes) onRefetchEstudiantes();
+                } else {
+                  const errData = await res.json();
+                  alert(`Error al actualizar en Supabase: ${errData.error}`);
+                }
+              } catch (e: any) {
+                alert(`Error de conexión: ${e.message}`);
+              } finally {
+                setCargandoDiplomadoAccion(false);
+              }
+            };
+
+            const handleGuardarCursosSubmit = async (nuevosCursos: string[]) => {
+              setCargandoCursoAccion(true);
+              try {
+                const res = await fetch('/api/admin/estudiantes', {
+                  method: 'PATCH',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    action: 'update_cursos',
+                    studentId: alumnoSeleccionado.id,
+                    dni_ce: alumnoSeleccionado.dni_ce,
+                    cursos: nuevosCursos
+                  })
+                });
+
+                if (res.ok) {
+                  alert('¡Cursos de Especialización actualizados en Supabase!');
+                  if (onRefetchEstudiantes) onRefetchEstudiantes();
+                } else {
+                  const errData = await res.json();
+                  alert(`Error al actualizar cursos: ${errData.error}`);
+                }
+              } catch (e: any) {
+                alert(`Error de conexión: ${e.message}`);
+              } finally {
+                setCargandoCursoAccion(false);
+              }
+            };
+
+            const handleAgregarNuevoDiplomado = () => {
+              if (!nuevoDiplomadoSeleccionado) {
+                alert('Por favor selecciona un diplomado de la lista.');
+                return;
+              }
+              if (listDiplomadosExistentes.includes(nuevoDiplomadoSeleccionado)) {
+                alert('El alumno ya tiene asignado este diplomado.');
+                return;
+              }
+              const actualizados = [...listDiplomadosExistentes, nuevoDiplomadoSeleccionado];
+              handleGuardarDiplomadosSubmit(actualizados);
+              setNuevoDiplomadoSeleccionado('');
+            };
+
+            const handleQuitarDiplomadoExistente = (indexAQuitar: number) => {
+              const actualizados = listDiplomadosExistentes.filter((_, idx) => idx !== indexAQuitar);
+              handleGuardarDiplomadosSubmit(actualizados);
+            };
+
+            const handleAgregarNuevoCurso = () => {
+              if (!nuevoCursoSeleccionado) {
+                alert('Por favor selecciona un curso de la lista.');
+                return;
+              }
+              if (listCursosExistentes.includes(nuevoCursoSeleccionado)) {
+                alert('El alumno ya tiene asignado este curso.');
+                return;
+              }
+              const actualizados = [...listCursosExistentes, nuevoCursoSeleccionado];
+              handleGuardarCursosSubmit(actualizados);
+              setNuevoCursoSeleccionado('');
+            };
+
+            const handleQuitarCursoExistente = (indexAQuitar: number) => {
+              const actualizados = listCursosExistentes.filter((_, idx) => idx !== indexAQuitar);
+              handleGuardarCursosSubmit(actualizados);
+            };
 
             return (
               <div className="space-y-6">
+                
+                {/* PANEL 1: ASIGNADOR DE DIPLOMADOS */}
+                <div className="bg-slate-900 text-white p-5 rounded-2xl border border-slate-800 space-y-4 shadow-md">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+                    <div>
+                      <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest block">Asignador Oficial de Diplomados (Catálogo Supabase)</span>
+                      <h4 className="text-base font-black text-white">Asignar Diplomados a {alumnoSeleccionado.nombres}</h4>
+                    </div>
+                    <span className="text-xs bg-indigo-500/20 text-indigo-300 px-3 py-1 rounded-full border border-indigo-500/30 font-bold">
+                      {listDiplomadosExistentes.length} Diplomado(s) Inscritos
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3 items-center">
+                    <select
+                      value={nuevoDiplomadoSeleccionado}
+                      onChange={(e) => setNuevoDiplomadoSeleccionado(e.target.value)}
+                      className="flex-1 bg-slate-800 border border-slate-700 text-white text-xs font-bold rounded-xl p-3 outline-none focus:border-indigo-500 transition-colors w-full"
+                    >
+                      <option value="">-- SELECCIONAR DIPLOMADO DEL CATÁLOGO --</option>
+                      {titulosOficiales22.map((t, idx) => (
+                        <option key={idx} value={t} disabled={listDiplomadosExistentes.includes(t)}>
+                          {listDiplomadosExistentes.includes(t) ? `✓ ${t} (Ya Asignado)` : `[DIP-${(idx + 1).toString().padStart(2, '0')}] ${t}`}
+                        </option>
+                      ))}
+                    </select>
+
+                    <button
+                      type="button"
+                      disabled={cargandoDiplomadoAccion || !nuevoDiplomadoSeleccionado}
+                      onClick={handleAgregarNuevoDiplomado}
+                      className="bg-indigo-600 hover:bg-indigo-500 disabled:opacity-50 text-white px-5 py-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto shrink-0 shadow-md"
+                    >
+                      <Plus className="size-4" />
+                      {cargandoDiplomadoAccion ? 'Guardando...' : '➕ Añadir Diplomado'}
+                    </button>
+                  </div>
+
+                  {/* Resumen dinámico de los diplomados matriculados */}
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {listDiplomadosExistentes.map((dipName, dIdx) => (
+                      <div key={dIdx} className="bg-slate-800 border border-slate-700 rounded-xl px-3 py-1.5 flex items-center gap-2 text-xs font-semibold text-slate-200">
+                        <span className="text-[10px] bg-indigo-500 text-white px-1.5 py-0.5 rounded font-bold">Diplomado {dIdx + 1}</span>
+                        <span>{dipName}</span>
+                        <button
+                          type="button"
+                          onClick={() => handleQuitarDiplomadoExistente(dIdx)}
+                          title="Eliminar diplomado"
+                          className="text-slate-400 hover:text-red-400 p-0.5 rounded hover:bg-slate-700 transition"
+                        >
+                          <X className="size-3.5" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* PANEL 2: ASIGNADOR DE CURSOS DE ALTA ESPECIALIZACIÓN */}
+                <div className="bg-slate-900 text-white p-5 rounded-2xl border border-slate-800 space-y-4 shadow-md">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-3">
+                    <div>
+                      <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest block">Asignador Oficial de Cursos (76 Cursos Especializados)</span>
+                      <h4 className="text-base font-black text-white">Asignar Cursos a {alumnoSeleccionado.nombres}</h4>
+                    </div>
+                    <span className="text-xs bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full border border-emerald-500/30 font-bold">
+                      {listCursosExistentes.length} Curso(s) Inscritos
+                    </span>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3 items-center">
+                    <select
+                      value={nuevoCursoSeleccionado}
+                      onChange={(e) => setNuevoCursoSeleccionado(e.target.value)}
+                      className="flex-1 bg-slate-800 border border-slate-700 text-white text-xs font-bold rounded-xl p-3 outline-none focus:border-emerald-500 transition-colors w-full"
+                    >
+                      <option value="">-- SELECCIONAR CURSO DE ALTA ESPECIALIZACIÓN --</option>
+                      {titulosCursos76.map((t, idx) => (
+                        <option key={idx} value={t} disabled={listCursosExistentes.includes(t)}>
+                          {listCursosExistentes.includes(t) ? `✓ ${t} (Ya Asignado)` : `[CUR-${(idx + 1).toString().padStart(2, '0')}] ${t}`}
+                        </option>
+                      ))}
+                    </select>
+
+                    <button
+                      type="button"
+                      disabled={cargandoCursoAccion || !nuevoCursoSeleccionado}
+                      onClick={handleAgregarNuevoCurso}
+                      className="bg-emerald-600 hover:bg-emerald-500 disabled:opacity-50 text-white px-5 py-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer w-full sm:w-auto shrink-0 shadow-md"
+                    >
+                      <Plus className="size-4" />
+                      {cargandoCursoAccion ? 'Guardando...' : '➕ Añadir Curso'}
+                    </button>
+                  </div>
+
+                  {/* Resumen dinámico de cursos matriculados */}
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {listCursosExistentes.map((curName, cIdx) => (
+                      <div key={cIdx} className="bg-slate-800 border border-slate-700 rounded-xl px-3 py-1.5 flex items-center gap-2 text-xs font-semibold text-slate-200">
+                        <span className="text-[10px] bg-emerald-600 text-white px-1.5 py-0.5 rounded font-bold">Curso {cIdx + 1}</span>
+                        <span>{curName}</span>
+                        <button
+                          type="button"
+                          onClick={() => handleQuitarCursoExistente(cIdx)}
+                          title="Eliminar curso"
+                          className="text-slate-400 hover:text-red-400 p-0.5 rounded hover:bg-slate-700 transition"
+                        >
+                          <X className="size-3.5" />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="bg-indigo-50 dark:bg-indigo-950/40 p-4 rounded-2xl border border-indigo-100 dark:border-indigo-900 flex justify-between items-center">
                   <div>
-                    <span className="text-[10px] font-bold text-indigo-700 dark:text-indigo-300 uppercase">Paquete & Diplomados Asignados</span>
+                    <span className="text-[10px] font-bold text-indigo-700 dark:text-indigo-300 uppercase">Resumen Programas Activos</span>
                     <h4 className="text-sm font-black text-indigo-950 dark:text-white mt-0.5">
-                      Paquete {alumnoSeleccionado.paquete_adquirido} ({listaDiplomados.length} Diplomado{listaDiplomados.length > 1 ? 's' : ''})
+                      Paquete {alumnoSeleccionado.paquete_adquirido} ({listaDiplomados.length} Diplomados, {listaCursos.length} Cursos)
                     </h4>
                   </div>
                   <div className="text-right">
-                    <span className="text-[10px] font-bold text-indigo-700 dark:text-indigo-300 uppercase">Nota Promedio</span>
-                    <p className="text-2xl font-black text-indigo-700 dark:text-indigo-400">{alumnoSeleccionado.nota_promedio}</p>
+                    <span className="text-[10px] font-bold text-indigo-700 dark:text-indigo-300 uppercase">Avance General</span>
+                    <p className="text-2xl font-black text-indigo-700 dark:text-indigo-400">{alumnoSeleccionado.avance_porcentaje || 0}%</p>
                   </div>
                 </div>
 
@@ -578,6 +833,9 @@ export default function Ficha360Modal({
                     const dipObj = (catalogoDiplomados || []).find((d: any) => 
                       d && typeof d.nombre === 'string' && d.nombre.toLowerCase().trim() === nombreAlumnoDip
                     ) || (catalogoDiplomados || [])[dipIdx % (catalogoDiplomados.length || 1)];
+
+                    const userDipInfo = (alumnoSeleccionado.diplomados_json || []).find((d: any) => d.titulo === nombreDipStr);
+                    const avanceDip = userDipInfo?.avance ?? 0;
 
                     const modulosArray = (dipObj && dipObj.modulos && dipObj.modulos.length > 0) ? dipObj.modulos : [
                       { titulo: 'Módulo 01: Fundamentos y Marco Teórico', clases: [{ titulo: 'Clase 01: Introducción General', duracion: '45 min' }, { titulo: 'Clase 02: Normativa Legal', duracion: '50 min' }] },
@@ -605,10 +863,10 @@ export default function Ficha360Modal({
                         <div className="space-y-1">
                           <div className="flex justify-between text-[10px] font-bold text-slate-500 dark:text-slate-400">
                             <span>Progreso Académico del Diplomado</span>
-                            <span className="text-indigo-600 dark:text-indigo-400 font-mono">65% completado</span>
+                            <span className="text-indigo-600 dark:text-indigo-400 font-mono">{avanceDip}% completado</span>
                           </div>
                           <div className="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                            <div className="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full" style={{ width: '65%' }}></div>
+                            <div className="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full" style={{ width: `${avanceDip}%` }}></div>
                           </div>
                         </div>
 

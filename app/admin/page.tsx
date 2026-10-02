@@ -827,6 +827,7 @@ export default function AdminDashboard360() {
         onSetReciboImprimir={(pag) => setReciboImprimir(pag)}
         onEnviarAlertaWhatsApp={enviarAlertaWhatsAppRetencion}
         enviandoAlertaWhatsApp={enviandoAlertaWhatsApp}
+        onRefetchEstudiantes={cargarEstudiantesDeSupabase}
       />
 
       {/* ========================================================= */}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Award, 
   FileText, 
@@ -28,6 +28,29 @@ import { useTheme } from '@/context/theme-context';
 
 export default function CertificadosPage() {
   const { esOscuro } = useTheme();
+
+  // Perfil real del estudiante desde Supabase
+  const [perfilEstudiante, setPerfilEstudiante] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchMe = async () => {
+      try {
+        const res = await fetch('/api/dashboard/me');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.profile) {
+            setPerfilEstudiante(data.profile);
+            if (data.profile.diplomado_1) {
+              setDiplomadoSeleccionado(data.profile.diplomado_1);
+            }
+          }
+        }
+      } catch (e) {
+        console.error('Error fetching student profile for certificates:', e);
+      }
+    };
+    fetchMe();
+  }, []);
 
   // Navegación por pestañas (Tabs Navigation)
   type TabTipo = 'TODOS' | 'DIPLOMAS' | 'MODULARES' | 'CONVENIOS' | 'CURSOS_TALLERES';
@@ -169,10 +192,25 @@ export default function CertificadosPage() {
     setModalAbierto(true);
   };
 
-  const enviarSolicitud = (e: React.FormEvent) => {
+  const enviarSolicitud = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!terminosAceptados) return;
     setSolicitudEnviada(true);
+
+    try {
+      await fetch('/api/admin/certificaciones', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          tipo: tipoCertificacion,
+          programa: diplomadoSeleccionado,
+          dni: perfilEstudiante?.dni_ce
+        })
+      });
+    } catch (err) {
+      console.error('Error registrando solicitud de certificado CIP/Miami:', err);
+    }
+
     setTimeout(() => {
       setModalAbierto(false);
       setSolicitudEnviada(false);

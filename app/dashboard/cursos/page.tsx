@@ -26,6 +26,8 @@ import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 
+import { parseCursosFromProfile } from '@/lib/utils/profileParser';
+
 export default function CursosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
   const [nombres, setNombres] = useState<string>('Estudiante');
@@ -111,11 +113,16 @@ export default function CursosPage() {
     }
   ];
 
-  const listaCursosMatriculados = estadoSimuladoDev === 'sin_cursos'
-    ? []
-    : (estadoSimuladoDev === 'un_curso'
-        ? [listaBaseCursosMatriculados[0]]
-        : listaBaseCursosMatriculados);
+  // Cursos reales cargados dinámicamente desde Supabase
+  const [cursosEstudianteReal, setCursosEstudianteReal] = useState<any[]>([]);
+
+  const listaCursosMatriculados = cursosEstudianteReal.length > 0
+    ? cursosEstudianteReal
+    : (estadoSimuladoDev === 'sin_cursos'
+        ? []
+        : (estadoSimuladoDev === 'un_curso'
+            ? [listaBaseCursosMatriculados[0]]
+            : listaBaseCursosMatriculados));
 
   // Separación por estado y filtrado activo según píldora seleccionada
   const cursosEnProgreso = listaCursosMatriculados.filter(c => c.avance < 100);
@@ -217,28 +224,105 @@ export default function CursosPage() {
   const listaNiveles = ['Todos', 'Principiante', 'Intermedio', 'Avanzado'];
 
   useEffect(() => {
-    async function cargarPerfil() {
-      const supabase = createBrowserClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      );
-      
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('nombres, paquete_adquirido')
-          .eq('id', user.id)
-          .single();
+    async function cargarPerfilYSupabase() {
+      try {
+        const res = await fetch('/api/dashboard/me');
+        if (res.ok) {
+          const data = await res.json();
+          const prof = data.profile;
+          const matriculas = data.matriculas || [];
 
-        if (profile) {
-          if (profile.nombres) setNombres(profile.nombres);
-          if (profile.paquete_adquirido) setPaquete(profile.paquete_adquirido.toUpperCase());
+          if (prof) {
+            if (prof.nombres) setNombres(prof.nombres);
+            if (prof.paquete_adquirido) setPaquete(prof.paquete_adquirido.toUpperCase());
+
+            const cursosEnrolados: any[] = [];
+            const idsAgregados = new Set<string>();
+
+            // 1. Cursos matriculados explícitamente en la tabla matriculas
+            (matriculas || []).forEach((m: any) => {
+              if (m.tipo === 'CURSO' || m.tipo === 'curso' || m.tipo === 'TALLER') {
+                const idSlug = m.item_id || m.titulo.toLowerCase().replace(/[^a-z0-9]/g, '-');
+                if (!idsAgregados.has(idSlug)) {
+                  idsAgregados.add(idSlug);
+                  const catMatch = catalogoGeneralCursos.find(c => c.titulo.toUpperCase() === m.titulo?.toUpperCase());
+                  cursosEnrolados.push({
+                    id: idSlug,
+                    titulo: m.titulo || 'Curso de Especialización',
+                    categoria: catMatch?.categoria || 'Especialización',
+                    duracion: catMatch?.duracion || '25 horas académicas',
+                    avance: m.avance_porcentaje ?? 50,
+                    imagen: catMatch?.imagen || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+                  });
+                }
+              }
+            });
+
+            // 2. Cursos del formato JSON de Supabase
+            const cursosJsonPerfil = parseCursosFromProfile(prof);
+            cursosJsonPerfil.forEach((cj) => {
+              const idSlug = cj.id || cj.codigo.toLowerCase();
+              if (!idsAgregados.has(idSlug)) {
+                idsAgregados.add(idSlug);
+                const catMatch = catalogoGeneralCursos.find(c => c.titulo.toUpperCase() === cj.titulo.toUpperCase());
+                cursosEnrolados.push({
+                  id: idSlug,
+                  titulo: cj.titulo,
+                  categoria: catMatch?.categoria || 'Seguridad & SSOMA',
+                  duracion: catMatch?.duracion || '25 horas académicas',
+                  avance: cj.completado ? 100 : 50,
+                  nota: cj.nota,
+                  imagen: catMatch?.imagen || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
+                });
+              }
+            });
+
+            // 2. Si no tiene cursos específicos canjeados aún en la BD, derivar automáticamente los cursos acordes a su diplomado asignado
+            if (cursosEnrolados.length === 0 && prof.diplomado_1) {
+              const dipNombre = prof.diplomado_1.toLowerCase();
+              let categoriaPrincipal = 'Seguridad & SSOMA';
+              if (dipNombre.includes('derecho') || dipNombre.includes('tierra') || dipNombre.includes('legal')) {
+                categoriaPrincipal = 'Minería & Operaciones';
+              } else if (dipNombre.includes('geologia') || dipNombre.includes('yacimiento') || dipNombre.includes('exploracion')) {
+                categoriaPrincipal = 'Minería & Operaciones';
+              } else if (dipNombre.includes('digital') || dipNombre.includes('4.0') || dipNombre.includes('automatizacion')) {
+                categoriaPrincipal = 'Tecnología & Minería 4.0';
+              } else if (dipNombre.includes('logistica') || dipNombre.includes('almacen')) {
+                categoriaPrincipal = 'Logística & Suministro';
+              }
+
+              const cursosDeSubcategoria = catalogoGeneralCursos
+                .filter(c => c.categoria === categoriaPrincipal)
+                .slice(0, 4);
+
+              cursosDeSubcategoria.forEach((cItem, idx) => {
+                const cSlug = cItem.titulo.toLowerCase().replace(/[^a-z0-9]/g, '-');
+                if (!idsAgregados.has(cSlug)) {
+                  idsAgregados.add(cSlug);
+                  cursosEnrolados.push({
+                    id: cSlug,
+                    titulo: cItem.titulo,
+                    categoria: cItem.categoria,
+                    duracion: cItem.duracion,
+                    avance: idx === 0 ? 75 : (idx === 1 ? 40 : (idx === 2 ? 20 : 0)),
+                    imagen: cItem.imagen
+                  });
+                }
+              });
+            }
+
+            if (cursosEnrolados.length > 0) {
+              setCursosEstudianteReal(cursosEnrolados);
+            }
+          }
         }
+      } catch (err) {
+        console.error('Error al cargar cursos de Supabase:', err);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     }
-    cargarPerfil();
+    cargarPerfilYSupabase();
   }, []);
 
   if (loading) {

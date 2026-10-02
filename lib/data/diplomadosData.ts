@@ -351,3 +351,29 @@ export function getDiplomadoBySlug(slug: string): DiplomadoCompleto | undefined 
 
   return ALL_DIPLOMADOS.find(d => d.slug === slugNorm || d.id === slugNorm);
 }
+
+export function getDiplomadoByTitleOrSlug(titleOrSlug: string): DiplomadoCompleto {
+  if (!titleOrSlug) return ALL_DIPLOMADOS[0];
+
+  const matchDirect = getDiplomadoBySlug(titleOrSlug);
+  if (matchDirect) return matchDirect;
+
+  const normTarget = titleOrSlug.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+
+  // 1. Match directo o parcial por título
+  const found = ALL_DIPLOMADOS.find(d => {
+    const normTitle = d.titulo.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+    return normTitle === normTarget || normTitle.includes(normTarget) || normTarget.includes(normTitle);
+  });
+  if (found) return found;
+
+  // 2. Coincidencia por palabras clave
+  if (normTarget.includes('derecho') || normTarget.includes('juridic')) return getDiplomadoBySlug('derecho-minero') || ALL_DIPLOMADOS[0];
+  if (normTarget.includes('seguridad') || normTarget.includes('ssoma') || normTarget.includes('salud')) return getDiplomadoBySlug('seguridad-y-salud-ocupacional-en-la-industria-y-mineria') || ALL_DIPLOMADOS[0];
+  if (normTarget.includes('geologia') || normTarget.includes('yacimiento') || normTarget.includes('exploracion')) return ALL_DIPLOMADOS.find(d => d.slug.includes('geologia')) || ALL_DIPLOMADOS[0];
+  if (normTarget.includes('ventilacion') || normTarget.includes('gases')) return ALL_DIPLOMADOS.find(d => d.slug.includes('ventilacion')) || ALL_DIPLOMADOS[0];
+  if (normTarget.includes('hseq') || normTarget.includes('iso')) return ALL_DIPLOMADOS.find(d => d.slug.includes('hseq')) || ALL_DIPLOMADOS[0];
+  if (normTarget.includes('planilla') || normTarget.includes('laboral')) return getDiplomadoBySlug('legislacion-laboral-y-elaboracion-de-planillas') || ALL_DIPLOMADOS[0];
+
+  return ALL_DIPLOMADOS[0];
+}

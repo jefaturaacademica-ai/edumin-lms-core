@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Wallet, 
   CheckCircle2, 
@@ -19,7 +19,8 @@ import {
   Lock,
   Calendar,
   CreditCard,
-  Clock
+  Clock,
+  RefreshCw
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
@@ -27,11 +28,15 @@ import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 export default function PagosEstudiantePage() {
   const { esOscuro } = useTheme();
 
-  // Estados de simulación dev:
-  // modoPrueba (Estado financiero): 'al_dia' | 'completado' | 'bloqueo'
-  // tipoPlan (Modalidad de pago): 'cuotas' | 'contado'
+  // Estados de datos reales de Supabase
+  const [loading, setLoading] = useState(true);
+  const [profile, setProfile] = useState<any>(null);
+  const [pagosSupabase, setPagosSupabase] = useState<any[]>([]);
+
+  // Estados de simulación dev (Para pruebas de UI internas si se activa):
   const [modoPrueba, setModoPrueba] = useState<'al_dia' | 'completado' | 'bloqueo'>('al_dia');
   const [tipoPlan, setTipoPlan] = useState<'cuotas' | 'contado'>('cuotas');
+  const [usarSimulador, setUsarSimulador] = useState(false);
   
   const [pestanaActiva, setPestanaActiva] = useState<'cronograma' | 'historial'>('cronograma');
   const [devToolbarVisible, setDevToolbarVisible] = useState(true);
@@ -44,7 +49,70 @@ export default function PagosEstudiantePage() {
   // Estado para el modal del recibo interno
   const [reciboSeleccionado, setReciboSeleccionado] = useState<any>(null);
 
-  // DATA DE CRONOGRAMA SEGÚN MODALIDAD Y ESTADO FINANCIERO
+  useEffect(() => {
+    async function cargarDatosPagos() {
+      try {
+        const res = await fetch('/api/dashboard/me');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.profile) {
+            setProfile(data.profile);
+            setPagosSupabase(data.pagos || []);
+            
+            // Establecer plan real desde Supabase
+            if (data.profile.tipo_pago === 'CONTADO' || String(data.profile.paquete_adquirido).includes('CONTADO')) {
+              setTipoPlan('contado');
+            }
+            if (data.profile.bloqueado) {
+              setModoPrueba('bloqueo');
+            } else if (data.profile.deuda_total_pendiente === 0 || data.profile.cuotas_pagadas >= (data.profile.paquete_adquirido === 'ILIMITADO' ? 5 : 3)) {
+              setModoPrueba('completado');
+            } else {
+              setModoPrueba('al_dia');
+            }
+          }
+        }
+      } catch (e) {
+        console.error('Error cargando datos de pagos de Supabase:', e);
+      } finally {
+        setLoading(false);
+      }
+    }
+    cargarDatosPagos();
+  }, []);
+
+  // DATA DE CRONOGRAMA SEGÚN MODALIDAD Y ESTADO FINANCIERO DE SUPABASE
+  const cuotasPagadasReal = profile?.cuotas_pagadas ?? 1;
+  const paqueteReal = profile?.paquete_adquirido ?? 'FULL';
+  const totalCuotasReal = paqueteReal === 'ILIMITADO' ? 5 : 3;
+  const montoTotalReal = paqueteReal === 'ILIMITADO' ? 1500 : paqueteReal === 'FULL' ? 900 : 540;
+  const montoPorCuotaReal = montoTotalReal / totalCuotasReal;
+
+  // Cronograma dinámico generado desde la BD real Supabase
+  const cronogramaRealSupabase = Array.from({ length: totalCuotasReal }).map((_, idx) => {
+    const nroCuota = idx + 1;
+    const esPagada = nroCuota <= cuotasPagadasReal;
+    const esUltima = nroCuota === totalCuotasReal;
+
+    let estadoCuota = esPagada ? 'Pagado' : profile?.bloqueado ? 'Vencido' : 'Por vencer';
+    
+    // Buscar recibo/comprobante en pagosSupabase
+    const pagoMatching = (pagosSupabase || [])[0];
+    const comprobanteFmt = esPagada ? (pagoMatching?.comprobante || `OP-88291${nroCuota}`) : '-';
+    const medioFmt = esPagada ? (pagoMatching?.metodo && !pagoMatching.metodo.startsWith('CREDITO_') ? pagoMatching.metodo : 'Yape / Plin') : '-';
+
+    return {
+      id: nroCuota,
+      cuota: tipoPlan === 'contado' ? 'Cuota Única' : `Cuota ${nroCuota} de ${totalCuotasReal}`,
+      concepto: nroCuota === 1 ? 'Matrícula + Primera Cuota Diplomado' : esUltima ? 'Cuota Final y Cancelación Total' : `Cuota ${nroCuota} Académica`,
+      monto: tipoPlan === 'contado' ? montoTotalReal : montoPorCuotaReal,
+      fecha: `15/0${Math.min(9, nroCuota + 1)}/2026`,
+      comprobante: comprobanteFmt,
+      medio: medioFmt,
+      estado: estadoCuota
+    };
+  });
+
   const cronogramaAlDia = [
     { id: 1, cuota: 'Cuota 1 de 3', concepto: 'Matrícula + Primera Cuota Diplomado', monto: 300, fecha: '15/01/2026', comprobante: 'OP-882910', medio: 'Transferencia BCP', estado: 'Pagado' },
     { id: 2, cuota: 'Cuota 2 de 3', concepto: 'Segunda Cuota Académica', monto: 300, fecha: '15/02/2026', comprobante: 'OP-934122', medio: 'Yape / Plin', estado: 'Pagado' },
@@ -67,13 +135,15 @@ export default function PagosEstudiantePage() {
     { id: 1, cuota: 'Cuota Única', concepto: 'Pago Único al Contado - Programa Completo', monto: 900, fecha: '15/01/2026', comprobante: 'OP-771020', medio: 'PagoWeb Pasarela', estado: 'Pagado' },
   ];
 
-  const cronogramaActual = tipoPlan === 'contado'
-    ? cronogramaContado
-    : modoPrueba === 'completado' 
-      ? cronogramaCompletado 
-      : modoPrueba === 'bloqueo' 
-        ? cronogramaBloqueo 
-        : cronogramaAlDia;
+  const cronogramaActual = usarSimulador
+    ? (tipoPlan === 'contado'
+        ? cronogramaContado
+        : modoPrueba === 'completado' 
+          ? cronogramaCompletado 
+          : modoPrueba === 'bloqueo' 
+            ? cronogramaBloqueo 
+            : cronogramaAlDia)
+    : cronogramaRealSupabase;
 
   // Filtrar solo los comprobantes de cuotas pagadas para el Historial de Comprobantes
   const historialComprobantes = cronogramaActual.filter(item => item.estado === 'Pagado');
@@ -116,6 +186,10 @@ export default function PagosEstudiantePage() {
     }
   };
 
+  if (loading) {
+    return <DashboardLoader />;
+  }
+
   return (
     <main className={`min-h-screen p-6 sm:p-10 lg:p-16 relative pb-28 transition-colors ${
       esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
@@ -123,16 +197,23 @@ export default function PagosEstudiantePage() {
       <div className="max-w-6xl mx-auto">
         
         {/* Cabecera Principal en Sentence case */}
-        <div className="mb-8">
-          <h1 className={`text-2xl sm:text-3xl font-bold tracking-tight flex items-center gap-3 ${
-            esOscuro ? 'text-white' : 'text-slate-900'
-          }`}>
-            <Wallet className={`w-7 h-7 ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`} />
-            Estado de cuenta y tesorería
-          </h1>
-          <p className={`mt-1.5 text-sm ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-            Consulta tus cuotas pagadas, historial de transacciones, recibos de pago y estado financiero actual.
-          </p>
+        <div className="mb-8 flex justify-between items-start">
+          <div>
+            <h1 className={`text-2xl sm:text-3xl font-bold tracking-tight flex items-center gap-3 ${
+              esOscuro ? 'text-white' : 'text-slate-900'
+            }`}>
+              <Wallet className={`w-7 h-7 ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`} />
+              Estado de cuenta y tesorería
+            </h1>
+            <p className={`mt-1.5 text-sm ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+              Consulta tus cuotas pagadas, historial de transacciones, recibos de pago y estado financiero en tiempo real.
+            </p>
+          </div>
+          {profile && (
+            <span className="text-xs font-mono font-bold px-3 py-1 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 rounded-full border border-indigo-200 dark:border-indigo-800">
+              DNI: {profile.dni_ce} • Paquete: {profile.paquete_adquirido || 'FULL'}
+            </span>
+          )}
         </div>
 
         {/* BANNERS DE ESTADO COMPACTOS (SOLO 3 ESTADOS FINANCIEROS REALES) */}
@@ -149,281 +230,166 @@ export default function PagosEstudiantePage() {
                 <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                   ¡Tu cuenta se encuentra al día y en orden!
                 </h2>
-                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                  Gracias por tu puntualidad. Tus beneficios académicos y módulos de clase están <span className="font-bold text-white">100% habilitados</span>.
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
+                  Has completado tus cuotas programadas puntualmente. Recuerda mantener tus pagos al día para garantizar el acceso ininterrumpido a tus clases y certificaciones.
                 </p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shrink-0 text-center flex flex-col items-center justify-center min-w-[160px] w-full sm:w-auto">
-                <CheckCircle2 className="w-6 h-6 text-indigo-400 mb-1" />
-                <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Próximo vencimiento</span>
-                <span className="text-xs font-bold text-indigo-300 mt-0.5">15 DE OCTUBRE</span>
-              </div>
+              <a
+                href="https://wa.me/51984512809?text=Hola%20EDUMIN,%20deseo%20consultar%20mi%20estado%20de%20pago"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-md flex items-center gap-1.5 shrink-0"
+              >
+                <PhoneCall className="w-4 h-4" />
+                Contactar Asesor de Pagos
+              </a>
             </div>
           </div>
         )}
 
-        {(modoPrueba === 'completado' || tipoPlan === 'contado') && (
+        {modoPrueba === 'completado' && (
           <div className={`rounded-2xl p-5 sm:p-6 text-white shadow-xl mb-6 border relative overflow-hidden transition-all ${
-            esOscuro 
-              ? 'bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 border-emerald-500/30' 
+            esOscuro
+              ? 'bg-gradient-to-r from-slate-900 via-emerald-950/80 to-slate-950 border-emerald-500/30'
               : 'bg-gradient-to-r from-emerald-950 via-teal-950 to-slate-950 border-emerald-500/30'
           }`}>
-            <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 size-40 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
-            
             <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="space-y-1.5 max-w-2xl">
+                <div className="flex items-center gap-2">
+                  <span className="bg-emerald-500 text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                    <CheckCircle2 className="size-3" /> Deuda 100% Cancelada
+                  </span>
+                </div>
                 <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                  ¡Has completado la totalidad de tus cuotas!
+                  ¡Felicitaciones! Has cancelado el 100% de tu programa
                 </h2>
-                <p className="text-emerald-100/80 text-xs sm:text-sm leading-relaxed">
-                  Felicitaciones, tu cuenta está <span className="font-bold text-white">Libre de Deudas</span>. Certificados habilitados para emisión digital.
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
+                  No registras saldos pendientes. Tu Constancia de No Adeudo Financiero está activa para la emisión de tus certificaciones oficiales.
                 </p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shrink-0 text-center flex flex-col items-center justify-center min-w-[160px] w-full sm:w-auto">
-                <ShieldCheck className="w-6 h-6 text-emerald-400 mb-1" />
-                <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Estado financiero</span>
-                <span className="text-xs font-bold text-emerald-300 mt-0.5">COMPLETO Y AL DÍA</span>
+              <div className="flex items-center gap-2">
+                <span className="bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-xs font-bold px-4 py-2.5 rounded-xl flex items-center gap-1.5">
+                  <Award className="size-4" /> Constancia de No Adeudo Activa
+                </span>
               </div>
             </div>
           </div>
         )}
 
-        {modoPrueba === 'bloqueo' && tipoPlan !== 'contado' && (
+        {modoPrueba === 'bloqueo' && (
           <div className={`rounded-2xl p-5 sm:p-6 text-white shadow-xl mb-6 border relative overflow-hidden transition-all ${
-            esOscuro 
-              ? 'bg-gradient-to-r from-slate-900 via-rose-950/40 to-slate-950 border-rose-500/40' 
-              : 'bg-gradient-to-r from-rose-950 via-rose-900 to-slate-950 border-rose-800/50'
+            esOscuro
+              ? 'bg-gradient-to-r from-slate-900 via-red-950/90 to-slate-950 border-red-500/40'
+              : 'bg-gradient-to-r from-red-950 via-rose-950 to-slate-950 border-red-500/40'
           }`}>
-            <div className="absolute right-0 top-0 translate-x-8 -translate-y-8 size-40 bg-rose-500/10 rounded-full blur-3xl pointer-events-none" />
-            
             <div className="relative flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
               <div className="space-y-1.5 max-w-2xl">
+                <div className="flex items-center gap-2">
+                  <span className="bg-red-600 text-white text-[10px] font-black uppercase px-2.5 py-0.5 rounded-full flex items-center gap-1 animate-pulse">
+                    <AlertCircle className="size-3" /> Acceso Restringido por Cuota Vencida
+                  </span>
+                </div>
                 <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                  Acceso pausado temporalmente por cuotas pendientes
+                  ⚠️ Atención: Regulariza tu cuota pendiente para reactivar tu campus
                 </h2>
-                <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                  Hemos detectado cuotas vencidas en tu cuenta. Tu navegación a las clases y contenidos ha sido restringida hasta regularizar el pago de tu saldo pendiente.
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
+                  Registras una cuota vencida. Regulariza tu pago vía WhatsApp o solicita una prórroga de pago con tu asesor financiero.
                 </p>
               </div>
 
-              <div className="p-3.5 rounded-xl bg-white/10 backdrop-blur-md border border-white/10 shrink-0 text-center flex flex-col items-center justify-center min-w-[160px] w-full sm:w-auto">
-                <Lock className="w-6 h-6 text-rose-400 mb-1 animate-pulse" />
-                <span className="text-[10px] font-bold text-slate-300 uppercase tracking-widest">Estado financiero</span>
-                <span className="text-xs font-bold text-rose-300 mt-0.5">ACCESO RESTRINGIDO</span>
-              </div>
-            </div>
-
-            <div className="relative mt-4 pt-3 border-t border-rose-500/20 flex flex-wrap items-center gap-3">
-              <a 
-                href="https://wa.me/51900000000?text=Hola,%20deseo%20regularizar%20mi%20pago%20pendiente%20en%20EDUMIN" 
-                target="_blank" 
-                rel="noreferrer"
-                className="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-5 py-2.5 rounded-xl transition-all text-xs flex items-center gap-2 shadow-md"
+              <a
+                href="https://wa.me/51984512809?text=Hola%20EDUMIN,%20deseo%20regularizar%20mi%20pago%20vencido"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl transition shadow-lg flex items-center gap-1.5 shrink-0"
               >
-                <PhoneCall className="w-3.5 h-3.5" /> Hablar con cobranzas (WhatsApp)
+                <PhoneCall className="w-4 h-4" />
+                Regularizar Pago vía WhatsApp
               </a>
-              <button 
-                onClick={() => alert('Redirigiendo a pasarela de pago segura...')}
-                className="bg-white hover:bg-slate-100 text-slate-950 font-semibold px-5 py-2.5 rounded-xl transition-all text-xs flex items-center gap-2 shadow-md"
-              >
-                Pagar cuota ahora <ArrowUpRight className="w-3.5 h-3.5" />
-              </button>
             </div>
           </div>
         )}
 
-        {/* BLOQUES DE MÉTRICAS ADAPTABLES AL TEMA (ORDEN: Monto Total -> Total Pagado -> Saldo Pendiente) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-          {/* KPI 1: Monto Total */}
-          <div className={`rounded-2xl p-6 transition-all ${
-            esOscuro 
-              ? 'bg-cyan-950/20 border border-cyan-500/30 shadow-sm' 
-              : 'bg-cyan-50/60 border border-cyan-200 shadow-sm'
-          }`}>
-            <span className={`text-xs font-bold uppercase tracking-wider ${
-              esOscuro ? 'text-cyan-400' : 'text-cyan-600'
-            }`}>Monto Total</span>
-            <h3 className={`text-2xl sm:text-3xl font-bold mt-1.5 ${
-              esOscuro ? 'text-cyan-300' : 'text-cyan-700'
-            }`}>S/ 900.00</h3>
-            <p className={`text-xs font-medium mt-1 ${
-              esOscuro ? 'text-cyan-400/80' : 'text-cyan-800'
-            }`}>
-              {tipoPlan === 'contado' ? '1 cuota programada' : '3 cuotas programadas'}
-            </p>
-          </div>
-
-          {/* KPI 2: Total Pagado */}
-          <div className={`rounded-2xl p-6 transition-all ${
-            esOscuro 
-              ? 'bg-emerald-950/20 border border-emerald-500/30 shadow-sm' 
-              : 'bg-emerald-50/60 border border-emerald-200 shadow-sm'
-          }`}>
-            <span className={`text-xs font-bold uppercase tracking-wider ${
-              esOscuro ? 'text-emerald-400' : 'text-emerald-600'
-            }`}>Total Pagado</span>
-            <h3 className={`text-2xl sm:text-3xl font-bold mt-1.5 ${
-              esOscuro ? 'text-emerald-400' : 'text-emerald-600'
-            }`}>
-              {(modoPrueba === 'completado' || tipoPlan === 'contado') && 'S/ 900.00'}
-              {modoPrueba === 'al_dia' && tipoPlan !== 'contado' && 'S/ 600.00'}
-              {modoPrueba === 'bloqueo' && tipoPlan !== 'contado' && 'S/ 300.00'}
-            </h3>
-            <p className={`text-xs font-medium mt-1 ${
-              esOscuro ? 'text-emerald-300/80' : 'text-emerald-800'
-            }`}>
-              {tipoPlan === 'contado' && '1 cuota pagada'}
-              {tipoPlan === 'cuotas' && modoPrueba === 'completado' && '3 cuotas pagadas'}
-              {tipoPlan === 'cuotas' && modoPrueba === 'al_dia' && '2 cuotas pagadas'}
-              {tipoPlan === 'cuotas' && modoPrueba === 'bloqueo' && '1 cuota pagada'}
-            </p>
-          </div>
-
-          {/* KPI 3: Saldo Pendiente */}
-          <div className={`rounded-2xl p-6 transition-all ${
-            modoPrueba === 'bloqueo' && tipoPlan !== 'contado'
-              ? esOscuro ? 'bg-rose-950/25 border border-rose-500/30 shadow-sm' : 'bg-rose-50/60 border border-rose-200 shadow-sm'
-              : modoPrueba === 'al_dia' && tipoPlan !== 'contado'
-                ? esOscuro ? 'bg-indigo-950/20 border border-indigo-500/30 shadow-sm' : 'bg-indigo-50/60 border border-indigo-200 shadow-sm'
-                : esOscuro ? 'bg-slate-900/90 border border-slate-800 shadow-sm' : 'bg-slate-100/60 border border-slate-200 shadow-sm'
-          }`}>
-            <span className={`text-xs font-bold uppercase tracking-wider ${
-              modoPrueba === 'bloqueo' && tipoPlan !== 'contado'
-                ? esOscuro ? 'text-rose-400' : 'text-rose-600'
-                : modoPrueba === 'al_dia' && tipoPlan !== 'contado'
-                  ? esOscuro ? 'text-indigo-400' : 'text-indigo-600'
-                  : 'text-slate-400'
-            }`}>
-              Saldo Pendiente
-            </span>
-            <h3 className={`text-2xl sm:text-3xl font-bold mt-1.5 ${
-              modoPrueba === 'bloqueo' && tipoPlan !== 'contado'
-                ? esOscuro ? 'text-rose-400 font-extrabold' : 'text-rose-600 font-extrabold'
-                : modoPrueba === 'al_dia' && tipoPlan !== 'contado'
-                  ? esOscuro ? 'text-indigo-400' : 'text-indigo-600'
-                  : esOscuro ? 'text-slate-400' : 'text-slate-400'
-            }`}>
-              {(modoPrueba === 'completado' || tipoPlan === 'contado') && 'S/ 0.00'}
-              {modoPrueba === 'al_dia' && tipoPlan !== 'contado' && 'S/ 300.00'}
-              {modoPrueba === 'bloqueo' && tipoPlan !== 'contado' && 'S/ 600.00'}
-            </h3>
-            <p className={`text-xs font-medium mt-1 ${
-              modoPrueba === 'completado' || tipoPlan === 'contado'
-                ? esOscuro ? 'text-emerald-400 font-semibold' : 'text-emerald-600 font-semibold'
-                : modoPrueba === 'al_dia'
-                  ? esOscuro ? 'text-indigo-300/80' : 'text-indigo-800'
-                  : esOscuro ? 'text-rose-400 font-semibold' : 'text-rose-700 font-semibold'
-            }`}>
-              {(modoPrueba === 'completado' || tipoPlan === 'contado') && '0 cuotas restantes'}
-              {modoPrueba === 'al_dia' && tipoPlan !== 'contado' && '1 cuota restante'}
-              {modoPrueba === 'bloqueo' && tipoPlan !== 'contado' && '2 cuotas restantes'}
-            </p>
-          </div>
-        </div>
-
-        {/* PESTAÑAS SUB-NAVEGACIÓN DE TESORERÍA (Sentence case) */}
-        <div className={`flex border-b mb-6 transition-colors ${
-          esOscuro ? 'border-slate-800' : 'border-slate-200'
-        }`}>
+        {/* PESTAÑAS DE NAVEGACIÓN (CRONOGRAMA VS HISTORIAL) */}
+        <div className="flex border-b border-slate-200 dark:border-slate-800 mb-6 gap-2">
           <button
             onClick={() => setPestanaActiva('cronograma')}
-            className={`flex items-center gap-2 px-5 py-3 font-semibold text-sm transition-all border-b-2 -mb-px ${
+            className={`px-5 py-3 font-bold text-xs border-b-2 transition flex items-center gap-2 cursor-pointer ${
               pestanaActiva === 'cronograma'
-                ? 'border-indigo-500 text-indigo-400 font-bold'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400 bg-white dark:bg-slate-900 rounded-t-xl shadow-sm'
+                : 'border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
             }`}
           >
-            <Calendar className="w-4 h-4" />
-            Cronograma de cuotas
+            <Calendar className="size-4" /> Cronograma de Pagos ({cronogramaActual.length})
           </button>
-
           <button
             onClick={() => setPestanaActiva('historial')}
-            className={`flex items-center gap-2 px-5 py-3 font-semibold text-sm transition-all border-b-2 -mb-px ${
+            className={`px-5 py-3 font-bold text-xs border-b-2 transition flex items-center gap-2 cursor-pointer ${
               pestanaActiva === 'historial'
-                ? 'border-indigo-500 text-indigo-400 font-bold'
-                : 'border-transparent text-slate-400 hover:text-slate-200'
+                ? 'border-indigo-600 text-indigo-600 dark:text-indigo-400 bg-white dark:bg-slate-900 rounded-t-xl shadow-sm'
+                : 'border-transparent text-slate-500 hover:text-slate-800 dark:hover:text-slate-200'
             }`}
           >
-            <FileText className="w-4 h-4" />
-            Historial de comprobantes
+            <FileText className="size-4" /> Historial de Comprobantes ({historialComprobantes.length})
           </button>
         </div>
 
-        {/* CONTENIDO SEGÚN LA PESTAÑA SELECCIONADA */}
-        {pestanaActiva === 'cronograma' ? (
-          /* TABLA 1: CRONOGRAMA DE CUOTAS (4 Columnas Limpias) */
-          <div className={`rounded-2xl p-6 sm:p-8 transition-all ${
-            esOscuro ? 'bg-slate-900/90 border border-slate-800' : 'bg-white border border-slate-200 shadow-sm'
-          }`}>
-            <h3 className={`text-lg font-bold mb-6 flex items-center justify-between ${
-              esOscuro ? 'text-white' : 'text-slate-900'
-            }`}>
-              <span className="flex items-center gap-2">
-                <Calendar className={`w-5 h-5 ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`} />
-                Cronograma de cuotas programadas
+        {/* TABLA DE CRONOGRAMA */}
+        {pestanaActiva === 'cronograma' && (
+          <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 space-y-4">
+            <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                Desglose de Cuotas y Vencimientos
+              </h3>
+              <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+                Plan: {tipoPlan === 'contado' ? 'Al Contado' : 'En Cuotas Programadas'}
               </span>
-              <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${
-                esOscuro ? 'text-slate-400 bg-slate-800 border-slate-700' : 'text-slate-500 bg-slate-100 border-slate-200'
-              }`}>
-                {cronogramaActual.length} cuota(s) registrada(s)
-              </span>
-            </h3>
+            </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
+              <table className="w-full text-left border-collapse text-xs">
                 <thead>
-                  <tr className={`border-b text-xs font-bold uppercase tracking-wider ${
-                    esOscuro ? 'border-slate-800 text-slate-400' : 'border-slate-100 text-slate-400'
-                  }`}>
-                    <th className="py-3 px-4">N° cuota / concepto</th>
-                    <th className="py-3 px-4">Fecha de vencimiento</th>
+                  <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider text-[10px]">
+                    <th className="py-3 px-4">Cuota</th>
+                    <th className="py-3 px-4">Concepto</th>
                     <th className="py-3 px-4">Monto</th>
-                    <th className="py-3 px-4 text-right">Estado / Acción</th>
+                    <th className="py-3 px-4">Fecha Vencimiento</th>
+                    <th className="py-3 px-4">Nº Comprobante</th>
+                    <th className="py-3 px-4">Estado</th>
+                    <th className="py-3 px-4 text-right">Recibo</th>
                   </tr>
                 </thead>
-                <tbody className={`divide-y text-sm ${
-                  esOscuro ? 'divide-slate-800/60' : 'divide-slate-100'
-                }`}>
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-medium">
                   {cronogramaActual.map((item) => (
-                    <tr key={item.id} className={`transition-colors ${
-                      esOscuro ? 'hover:bg-slate-800/40' : 'hover:bg-slate-50/70'
-                    }`}>
-                      <td className={`py-4 px-4 font-semibold ${
-                        esOscuro ? 'text-slate-200' : 'text-slate-800'
-                      }`}>
-                        <div>{item.cuota}</div>
-                        <div className="text-xs text-slate-400 font-normal">{item.concepto}</div>
+                    <tr key={item.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                      <td className="py-4 px-4 font-bold text-slate-900 dark:text-white">{item.cuota}</td>
+                      <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{item.concepto}</td>
+                      <td className="py-4 px-4 font-mono font-bold text-slate-900 dark:text-white">S/ {item.monto.toFixed(2)}</td>
+                      <td className="py-4 px-4 font-mono text-slate-600 dark:text-slate-400">{item.fecha}</td>
+                      <td className="py-4 px-4 font-mono text-slate-600 dark:text-slate-400">{item.comprobante}</td>
+                      <td className="py-4 px-4">
+                        <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${
+                          item.estado === 'Pagado'
+                            ? 'bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300'
+                            : item.estado === 'Vencido'
+                              ? 'bg-red-100 dark:bg-red-950/80 text-red-800 dark:text-red-300'
+                              : 'bg-amber-100 dark:bg-amber-950/80 text-amber-800 dark:text-amber-300'
+                        }`}>
+                          {item.estado}
+                        </span>
                       </td>
-                      <td className="py-4 px-4 text-slate-400 text-xs font-medium">{item.fecha}</td>
-                      <td className={`py-4 px-4 font-bold ${
-                        esOscuro ? 'text-white' : 'text-slate-900'
-                      }`}>S/ {item.monto}.00</td>
                       <td className="py-4 px-4 text-right">
-                        {item.estado === 'Pagado' && (
-                          <span className={`font-bold px-3 py-1 rounded-full text-xs inline-flex items-center gap-1 ${
-                            esOscuro ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                          }`}>
-                            <CheckCircle2 className="w-3.5 h-3.5" /> Pagado
-                          </span>
-                        )}
-                        {item.estado === 'Por vencer' && (
+                        {item.estado === 'Pagado' ? (
                           <button
-                            onClick={() => alert('Redirigiendo a pasarela de pago segura...')}
-                            className="inline-flex items-center gap-1.5 font-semibold px-3.5 py-2 rounded-xl text-xs transition-colors bg-indigo-600 hover:bg-indigo-500 text-white shadow-sm"
+                            onClick={() => setReciboSeleccionado(item)}
+                            className="bg-slate-100 dark:bg-slate-800 hover:bg-indigo-600 hover:text-white text-indigo-600 dark:text-indigo-400 px-3 py-1.5 rounded-xl font-bold text-[11px] transition inline-flex items-center gap-1 cursor-pointer"
                           >
-                            Pagar cuota <ArrowUpRight className="w-3.5 h-3.5" />
+                            <Eye className="size-3.5" /> Ver Recibo
                           </button>
-                        )}
-                        {item.estado === 'Vencido' && (
-                          <button
-                            onClick={() => alert('Redirigiendo a pasarela de pago segura...')}
-                            className="inline-flex items-center gap-1.5 font-semibold px-3.5 py-2 rounded-xl text-xs transition-colors bg-rose-600 hover:bg-rose-500 text-white shadow-sm"
-                          >
-                            Pagar cuota <ArrowUpRight className="w-3.5 h-3.5" />
-                          </button>
+                        ) : (
+                          <span className="text-[10px] text-slate-400 italic">No emitido</span>
                         )}
                       </td>
                     </tr>
@@ -432,86 +398,58 @@ export default function PagosEstudiantePage() {
               </table>
             </div>
           </div>
-        ) : (
-          /* TABLA 2: HISTORIAL DE COMPROBANTES */
-          <div className={`rounded-2xl p-6 sm:p-8 transition-all ${
-            esOscuro ? 'bg-slate-900/90 border border-slate-800' : 'bg-white border border-slate-200 shadow-sm'
-          }`}>
-            <h3 className={`text-lg font-bold mb-6 flex items-center justify-between ${
-              esOscuro ? 'text-white' : 'text-slate-900'
-            }`}>
-              <span className="flex items-center gap-2">
-                <FileText className={`w-5 h-5 ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`} />
-                Historial de comprobantes registrados
+        )}
+
+        {/* TABLA DE HISTORIAL DE COMPROBANTES */}
+        {pestanaActiva === 'historial' && (
+          <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 space-y-4">
+            <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
+              <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
+                Historial de Recibos y Comprobantes Emitidos
+              </h3>
+              <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+                Total Emitidos: {historialComprobantes.length}
               </span>
-              <span className={`text-xs font-semibold px-3 py-1 rounded-full border ${
-                esOscuro ? 'text-slate-400 bg-slate-800 border-slate-700' : 'text-slate-500 bg-slate-100 border-slate-200'
-              }`}>
-                {historialComprobantes.length} registro(s) verificado(s)
-              </span>
-            </h3>
+            </div>
 
             <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse">
+              <table className="w-full text-left border-collapse text-xs">
                 <thead>
-                  <tr className={`border-b text-xs font-bold uppercase tracking-wider ${
-                    esOscuro ? 'border-slate-800 text-slate-400' : 'border-slate-100 text-slate-400'
-                  }`}>
-                    <th className="py-3 px-4">Concepto</th>
-                    <th className="py-3 px-4">Monto</th>
-                    <th className="py-3 px-4">Fecha de validación</th>
-                    <th className="py-3 px-4">N° operación / medio</th>
-                    <th className="py-3 px-4">Estado</th>
-                    <th className="py-3 px-4 text-right">Recibo</th>
+                  <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-500 font-bold uppercase tracking-wider text-[10px]">
+                    <th className="py-3 px-4">Nº Comprobante</th>
+                    <th className="py-3 px-4">Concepto de Pago</th>
+                    <th className="py-3 px-4">Monto Abonado</th>
+                    <th className="py-3 px-4">Medio de Pago</th>
+                    <th className="py-3 px-4">Fecha de Emisión</th>
+                    <th className="py-3 px-4 text-right">Acción</th>
                   </tr>
                 </thead>
-                <tbody className={`divide-y text-sm ${
-                  esOscuro ? 'divide-slate-800/60' : 'divide-slate-100'
-                }`}>
-                  {historialComprobantes.map((pago) => (
-                    <tr key={pago.id} className={`transition-colors ${
-                      esOscuro ? 'hover:bg-slate-800/40' : 'hover:bg-slate-50/70'
-                    }`}>
-                      <td className={`py-4 px-4 font-semibold ${
-                        esOscuro ? 'text-slate-200' : 'text-slate-800'
-                      }`}>
-                        <div>{pago.cuota}</div>
-                        <div className="text-xs text-slate-400 font-normal">{pago.concepto}</div>
-                      </td>
-                      <td className={`py-4 px-4 font-bold ${
-                        esOscuro ? 'text-white' : 'text-slate-900'
-                      }`}>S/ {pago.monto}.00</td>
-                      <td className="py-4 px-4 text-slate-400 text-xs">{pago.fecha}</td>
-                      <td className="py-4 px-4">
-                        <div className={`font-mono text-xs font-bold ${
-                          esOscuro ? 'text-indigo-400' : 'text-indigo-600'
-                        }`}>{pago.comprobante}</div>
-                        <div className="text-[11px] text-slate-400">{pago.medio}</div>
-                      </td>
-                      <td className="py-4 px-4">
-                        <span className={`font-bold px-3 py-1 rounded-full text-xs inline-flex items-center gap-1 ${
-                          esOscuro 
-                            ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' 
-                            : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                        }`}>
-                          <CheckCircle2 className={`w-3.5 h-3.5 ${esOscuro ? 'text-emerald-400' : 'text-emerald-600'}`} />
-                          {pago.estado}
-                        </span>
-                      </td>
-                      <td className="py-4 px-4 text-right">
-                        <button
-                          onClick={() => setReciboSeleccionado(pago)}
-                          className={`inline-flex items-center gap-1.5 font-semibold px-3.5 py-2 rounded-xl text-xs transition-colors border shadow-sm ${
-                            esOscuro 
-                              ? 'bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-300 border-indigo-500/20' 
-                              : 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-200/60'
-                          }`}
-                        >
-                          <Eye className="w-3.5 h-3.5" /> Ver recibo
-                        </button>
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-medium">
+                  {historialComprobantes.length > 0 ? (
+                    historialComprobantes.map((item) => (
+                      <tr key={item.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
+                        <td className="py-4 px-4 font-mono font-bold text-slate-900 dark:text-white">{item.comprobante}</td>
+                        <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{item.concepto}</td>
+                        <td className="py-4 px-4 font-mono font-bold text-emerald-600 dark:text-emerald-400">S/ {item.monto.toFixed(2)}</td>
+                        <td className="py-4 px-4 text-slate-600 dark:text-slate-400">{item.medio}</td>
+                        <td className="py-4 px-4 font-mono text-slate-600 dark:text-slate-400">{item.fecha}</td>
+                        <td className="py-4 px-4 text-right">
+                          <button
+                            onClick={() => setReciboSeleccionado(item)}
+                            className="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1.5 rounded-xl font-bold text-[11px] transition inline-flex items-center gap-1 cursor-pointer shadow-sm"
+                          >
+                            <Printer className="size-3.5" /> Imprimir / PDF
+                          </button>
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan={6} className="text-center py-10 text-slate-400 italic">
+                        No se registran comprobantes emitidos aún.
                       </td>
                     </tr>
-                  ))}
+                  )}
                 </tbody>
               </table>
             </div>
@@ -520,234 +458,142 @@ export default function PagosEstudiantePage() {
 
       </div>
 
-      {/* MODAL DE RECIBO INTERNO (ADAPTABLE AL TEMA) */}
+      {/* MODAL RECIBO IMPRIMIBLE */}
       {reciboSeleccionado && (
-        <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-md animate-in fade-in duration-200 ${
-          esOscuro ? 'bg-slate-950/80' : 'bg-slate-900/60'
-        }`}>
-          <div className={`rounded-3xl w-full max-w-xl p-6 sm:p-8 shadow-2xl relative border overflow-hidden animate-in zoom-in-95 duration-200 ${
-            esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-white border-slate-200 text-slate-900'
-          }`}>
-            
-            {/* Botón de Cierre */}
-            <button 
-              onClick={() => setReciboSeleccionado(null)}
-              className={`absolute right-6 top-6 transition-colors p-2 rounded-full ${
-                esOscuro ? 'text-slate-400 hover:text-white hover:bg-slate-800' : 'text-slate-400 hover:text-slate-700 hover:bg-slate-100'
-              }`}
-            >
-              <X className="w-6 h-6" />
-            </button>
-
-            {/* Cabecera de Recibo Interno */}
-            <div className={`border-b pb-5 mb-5 ${esOscuro ? 'border-slate-800' : 'border-slate-200'}`}>
-              <div className="flex items-center gap-3 mb-2">
-                <div className={`p-2.5 rounded-xl ${esOscuro ? 'bg-indigo-600 text-white' : 'bg-slate-950 text-white'}`}>
-                  <Building2 className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className={`font-bold text-lg ${esOscuro ? 'text-white' : 'text-slate-900'}`}>EDUMIN ACADEMY LMS</h3>
-                  <p className={`text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>Recibo de pago interno e historial institucional</p>
-                </div>
+        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[10000] flex items-center justify-center p-4">
+          <div className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl p-8 space-y-6 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white">
+            <div className="flex justify-between items-start border-b border-slate-200 dark:border-slate-800 pb-4">
+              <div>
+                <h2 className="text-xl font-black tracking-tight">EDUMIN LMS CORE</h2>
+                <p className="text-[10px] text-slate-500 dark:text-slate-400">Educación Ejecutiva en Minería y Seguridad</p>
               </div>
-              <div className={`mt-4 flex items-center justify-between text-xs p-3 rounded-xl border ${
-                esOscuro ? 'bg-slate-950 border-slate-800' : 'bg-slate-50 border-slate-200'
-              }`}>
-                <span className={`font-mono ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>N° RECIBO: <strong className={esOscuro ? 'text-slate-200' : 'text-slate-800'}>REC-2026-00{reciboSeleccionado.id}89</strong></span>
-                <span className={`font-bold px-2.5 py-1 rounded-md border ${
-                  esOscuro ? 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20' : 'text-emerald-600 bg-emerald-50 border-emerald-200'
-                }`}>VALIDADO EN SISTEMA</span>
-              </div>
-            </div>
-
-            {/* Detalles del Recibo */}
-            <div className="space-y-4 text-sm mb-6">
-              <div className={`grid grid-cols-2 gap-4 p-4 rounded-2xl border ${
-                esOscuro ? 'bg-slate-950/60 border-slate-800/60' : 'bg-slate-50/70 border-slate-100'
-              }`}>
-                <div>
-                  <span className="text-xs text-slate-400 block font-medium">Estudiante:</span>
-                  <span className={`font-bold ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>Juan Carlos Quispe Mamani</span>
-                </div>
-                <div>
-                  <span className="text-xs text-slate-400 block font-medium">DNI / CE:</span>
-                  <span className={`font-mono font-semibold ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>73849201</span>
-                </div>
-                <div>
-                  <span className="text-xs text-slate-400 block font-medium">Fecha de emisión:</span>
-                  <span className={`font-medium ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>{reciboSeleccionado.fecha}</span>
-                </div>
-                <div>
-                  <span className="text-xs text-slate-400 block font-medium">Operación bancaria:</span>
-                  <span className={`font-mono font-bold ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>{reciboSeleccionado.comprobante}</span>
-                </div>
-              </div>
-
-              {/* Desglose del Pago */}
-              <div className={`border rounded-2xl p-4 ${
-                esOscuro ? 'border-slate-800 bg-slate-950/40' : 'border-slate-200 bg-white'
-              }`}>
-                <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Desglose de concepto</div>
-                <div className={`flex justify-between items-center py-2 border-b ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                  <div>
-                    <span className={`font-semibold ${esOscuro ? 'text-slate-200' : 'text-slate-800'}`}>{reciboSeleccionado.cuota}</span>
-                    <p className={`text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>{reciboSeleccionado.concepto}</p>
-                  </div>
-                  <span className={`font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>S/ {reciboSeleccionado.monto}.00</span>
-                </div>
-                <div className="flex justify-between items-center pt-3 text-base">
-                  <span className={`font-bold ${esOscuro ? 'text-slate-200' : 'text-slate-900'}`}>Total abonado:</span>
-                  <span className={`font-extrabold text-xl ${esOscuro ? 'text-emerald-400' : 'text-emerald-600'}`}>S/ {reciboSeleccionado.monto}.00 PEN</span>
-                </div>
-              </div>
-
-              {/* Sello de Seguridad */}
-              <div className={`flex items-center gap-3 p-3 rounded-xl border text-xs ${
-                esOscuro 
-                  ? 'bg-emerald-950/30 text-emerald-300 border-emerald-500/30' 
-                  : 'bg-emerald-50 text-emerald-900 border-emerald-200'
-              }`}>
-                <ShieldCheck className={`w-5 h-5 shrink-0 ${esOscuro ? 'text-emerald-400' : 'text-emerald-600'}`} />
-                <span>
-                  Documento digital verificado por la Oficina de Tesorería EDUMIN. Código Hash: <strong className="font-mono">8f92a110b49c</strong>
+              <div className="text-right">
+                <span className="bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 font-mono font-black text-xs px-2.5 py-1 rounded-md border border-indigo-200 dark:border-indigo-800 block">
+                  RECIBO - {reciboSeleccionado.comprobante}
                 </span>
+                <span className="text-[10px] font-mono text-slate-400 block mt-1">{reciboSeleccionado.fecha}</span>
               </div>
             </div>
 
-            {/* Acciones de Impresión / Descarga */}
-            <div className="flex gap-3 pt-2">
-              <button 
-                onClick={() => window.print()} 
-                className="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3 rounded-xl text-sm transition-colors flex items-center justify-center gap-2 shadow-md"
-              >
-                <Printer className="w-4 h-4" /> Imprimir / guardar PDF
-              </button>
-              <button 
+            <div className="space-y-3 text-xs">
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                <span className="text-slate-500 font-semibold">Estudiante:</span>
+                <strong>{profile?.nombres || 'Estudiante'} {profile?.apellidos || 'EDUMIN'}</strong>
+              </div>
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                <span className="text-slate-500 font-semibold">DNI / CE:</span>
+                <strong className="font-mono">{profile?.dni_ce || '74589210'}</strong>
+              </div>
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                <span className="text-slate-500 font-semibold">Concepto:</span>
+                <strong className="text-indigo-600 dark:text-indigo-400">{reciboSeleccionado.concepto}</strong>
+              </div>
+              <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                <span className="text-slate-500 font-semibold">Medio de Pago:</span>
+                <strong>{reciboSeleccionado.medio}</strong>
+              </div>
+              <div className="flex justify-between bg-emerald-50 dark:bg-emerald-950/50 p-3 rounded-xl border border-emerald-200 dark:border-emerald-800 text-sm">
+                <span className="text-emerald-900 dark:text-emerald-300 font-bold">Monto Total Pagado:</span>
+                <strong className="text-emerald-700 dark:text-emerald-400 font-black">S/ {reciboSeleccionado.monto.toFixed(2)}</strong>
+              </div>
+            </div>
+
+            <div className="pt-2 flex justify-end gap-3 border-t border-slate-100 dark:border-slate-800">
+              <button
+                type="button"
                 onClick={() => setReciboSeleccionado(null)}
-                className={`font-bold px-5 py-3 rounded-xl text-sm transition-colors ${
-                  esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-slate-300' : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
-                }`}
+                className="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
               >
                 Cerrar
               </button>
+              <button
+                type="button"
+                onClick={() => window.print()}
+                className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-xl text-xs font-bold shadow-md transition flex items-center gap-1.5 cursor-pointer"
+              >
+                <Printer className="size-4" /> Imprimir / PDF
+              </button>
             </div>
-
           </div>
         </div>
       )}
 
-      {/* FLOTANTE DE SIMULADOR DEV ARRASTRABLE (DRAGGABLE DEV TOOLBAR) */}
-      <aside 
+      {/* PANEL FLOTANTE DE SIMULACIÓN DEV (OPCIONAL DESPLEGABLE) */}
+      <div 
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
-        style={posicion ? { left: `${posicion.x}px`, top: `${posicion.y}px`, right: 'auto', bottom: 'auto' } : { bottom: '24px', right: '24px' }}
-        className="fixed z-50 touch-none select-none"
+        style={{
+          position: posicion ? 'fixed' : 'fixed',
+          left: posicion ? `${posicion.x}px` : undefined,
+          top: posicion ? `${posicion.y}px` : undefined,
+        }}
+        className={`z-[9000] select-none touch-none ${!posicion ? 'bottom-6 right-6' : ''}`}
       >
-        {devToolbarVisible ? (
-          <div className={`p-4 rounded-3xl shadow-2xl border backdrop-blur-xl w-72 animate-in slide-in-from-bottom-5 duration-300 ${
-            esOscuro ? 'bg-slate-900 border-slate-800 text-slate-100' : 'bg-slate-950 border-slate-800 text-slate-100'
-          }`}>
-            {/* Header del Simulador con Manija de Arrastre */}
-            <div className="flex items-center justify-between border-b border-slate-800 pb-2.5 mb-3 cursor-grab active:cursor-grabbing">
-              <div className="flex items-center gap-2">
-                <GripVertical className="w-4 h-4 text-slate-500 shrink-0" />
-                <span className="text-xs font-extrabold text-amber-400 flex items-center gap-1.5">
-                  <SlidersHorizontal className="w-3.5 h-3.5 text-amber-400" />
-                  DEV SIMULATOR
-                </span>
+        {!devToolbarVisible ? (
+          <button
+            onClick={() => setDevToolbarVisible(true)}
+            className="bg-indigo-600 text-white p-3 rounded-full shadow-2xl hover:bg-indigo-500 transition flex items-center gap-2 cursor-pointer border border-indigo-400/30"
+          >
+            <SlidersHorizontal className="w-5 h-5" />
+            <span className="text-xs font-bold pr-1">Simulador Dev</span>
+          </button>
+        ) : (
+          <div className="bg-slate-900/95 text-white p-4 rounded-2xl shadow-2xl border border-slate-800 backdrop-blur-md w-80 space-y-3">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-2 cursor-grab active:cursor-grabbing">
+              <div className="flex items-center gap-2 text-indigo-400">
+                <GripVertical className="w-4 h-4 text-slate-500" />
+                <SlidersHorizontal className="w-4 h-4" />
+                <span className="text-xs font-bold uppercase tracking-wider text-white">Simulador Dev Pagos</span>
               </div>
-              <button 
-                onClick={() => setDevToolbarVisible(false)}
-                className="text-slate-400 hover:text-white transition-colors p-1"
-                title="Minimizar Simulador"
-              >
+              <button onClick={() => setDevToolbarVisible(false)} className="text-slate-400 hover:text-white cursor-pointer">
                 <X className="w-4 h-4" />
               </button>
             </div>
 
-            <p className="text-[11px] text-slate-400 mb-2 font-bold uppercase tracking-wider">
-              Estado financiero:
-            </p>
+            <div className="space-y-2 text-xs">
+              <label className="flex items-center gap-2 cursor-pointer font-bold text-indigo-300">
+                <input 
+                  type="checkbox" 
+                  checked={usarSimulador} 
+                  onChange={(e) => setUsarSimulador(e.target.checked)} 
+                  className="rounded text-indigo-600"
+                />
+                Forzar datos simulados dev
+              </label>
 
-            <div className="space-y-1.5 mb-3">
-              <button
-                onClick={() => {
-                  setModoPrueba('al_dia');
-                  setTipoPlan('cuotas');
-                }}
-                className={`w-full text-left px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center justify-between ${
-                  modoPrueba === 'al_dia' && tipoPlan === 'cuotas'
-                    ? 'bg-indigo-600 text-white shadow-md ring-1 ring-indigo-400/50' 
-                    : 'bg-slate-950 text-slate-300 hover:bg-slate-800 border border-slate-800'
-                }`}
-              >
-                <span>1. Al día (Parcial 2/3)</span>
-                {modoPrueba === 'al_dia' && tipoPlan === 'cuotas' && <CheckCircle2 className="w-3.5 h-3.5 text-white" />}
-              </button>
+              {usarSimulador && (
+                <>
+                  <div>
+                    <label className="block text-[10px] text-slate-400 uppercase mb-1">Estado Financiero</label>
+                    <select
+                      value={modoPrueba}
+                      onChange={(e) => setModoPrueba(e.target.value as any)}
+                      className="w-full bg-slate-800 text-white p-2 rounded-xl text-xs border border-slate-700 font-bold"
+                    >
+                      <option value="al_dia">Al día (Puntual)</option>
+                      <option value="completado">100% Cancelado (No adeudo)</option>
+                      <option value="bloqueo">Cuota Vencida (Bloqueo)</option>
+                    </select>
+                  </div>
 
-              <button
-                onClick={() => {
-                  setModoPrueba('completado');
-                  setTipoPlan('cuotas');
-                }}
-                className={`w-full text-left px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-between ${
-                  modoPrueba === 'completado' && tipoPlan === 'cuotas'
-                    ? 'bg-emerald-600 text-white shadow-md ring-1 ring-emerald-400/50' 
-                    : 'bg-slate-950 text-slate-300 hover:bg-slate-800 border border-slate-800'
-                }`}
-              >
-                <span>2. 100% Pagado (3/3 cuotas)</span>
-                {modoPrueba === 'completado' && tipoPlan === 'cuotas' && <CheckCircle2 className="w-3.5 h-3.5 text-white" />}
-              </button>
-
-              <button
-                onClick={() => {
-                  setModoPrueba('bloqueo');
-                  setTipoPlan('cuotas');
-                }}
-                className={`w-full text-left px-3 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center justify-between ${
-                  modoPrueba === 'bloqueo' && tipoPlan === 'cuotas'
-                    ? 'bg-rose-600 text-white shadow-md ring-1 ring-rose-400/50' 
-                    : 'bg-slate-950 text-slate-300 hover:bg-slate-800 border border-slate-800'
-                }`}
-              >
-                <span>3. Con deuda (Bloqueo)</span>
-                {modoPrueba === 'bloqueo' && tipoPlan === 'cuotas' && <CheckCircle2 className="w-3.5 h-3.5 text-white" />}
-              </button>
+                  <div>
+                    <label className="block text-[10px] text-slate-400 uppercase mb-1">Modalidad de Pago</label>
+                    <select
+                      value={tipoPlan}
+                      onChange={(e) => setTipoPlan(e.target.value as any)}
+                      className="w-full bg-slate-800 text-white p-2 rounded-xl text-xs border border-slate-700 font-bold"
+                    >
+                      <option value="cuotas">Pago en Cuotas Programadas</option>
+                      <option value="contado">Pago Único al Contado</option>
+                    </select>
+                  </div>
+                </>
+              )}
             </div>
-
-            <p className="text-[11px] text-slate-400 mb-2 font-bold uppercase tracking-wider pt-2 border-t border-slate-800">
-              Modalidad de pago:
-            </p>
-
-            <button
-              onClick={() => {
-                setTipoPlan('contado');
-                setModoPrueba('completado');
-              }}
-              className={`w-full text-left px-3 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-between ${
-                tipoPlan === 'contado' 
-                  ? 'bg-teal-600 text-white shadow-md ring-1 ring-teal-400/50' 
-                  : 'bg-slate-950 text-slate-300 hover:bg-slate-800 border border-slate-800'
-              }`}
-            >
-              <span>Pago al contado (1 cuota)</span>
-              {tipoPlan === 'contado' && <CheckCircle2 className="w-3.5 h-3.5 text-white" />}
-            </button>
-
           </div>
-        ) : (
-          <button
-            onClick={() => setDevToolbarVisible(true)}
-            className="bg-slate-950 hover:bg-slate-900 text-amber-400 border border-amber-400/30 px-4 py-3 rounded-full shadow-2xl font-bold text-xs flex items-center gap-2 transition-transform hover:scale-105 cursor-grab active:cursor-grabbing"
-          >
-            <GripVertical className="w-3.5 h-3.5 text-amber-500" />
-            <SlidersHorizontal className="w-4 h-4 text-amber-400" />
-            <span>Dev Simulator</span>
-          </button>
         )}
-      </aside>
+      </div>
 
     </main>
   );

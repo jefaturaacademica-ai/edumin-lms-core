@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Sparkles, CheckCircle2, ArrowLeft, BookOpenCheck, Search } from 'lucide-react';
+import { Sparkles, CheckCircle2, ArrowLeft, BookOpenCheck, Search, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
 
@@ -11,6 +11,7 @@ export default function CanjearBeneficiosPage() {
   const [cuposDisponibles, setCuposDisponibles] = useState<number>(2);
   const [loading, setLoading] = useState(true);
   const [seleccionados, setSeleccionados] = useState<string[]>([]);
+  const [enviandoCanje, setEnviandoCanje] = useState(false);
   const [mensajeExito, setMensajeExito] = useState(false);
   
   // Estado para el buscador
@@ -44,34 +45,23 @@ export default function CanjearBeneficiosPage() {
 
   useEffect(() => {
     async function cargarPerfil() {
-      const supabase = createBrowserClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      );
-      
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('nombres, paquete_adquirido, cuotas_pagadas, cupos_diplomados')
-          .eq('id', user.id)
-          .single();
-
-        if (profile) {
-          if (profile.nombres) setNombres(profile.nombres);
-          if (profile.paquete_adquirido) setPaquete(profile.paquete_adquirido.toUpperCase());
-          
-          // Cálculo dinámico de créditos según cuotas pagadas
-          const cuotas = profile.cuotas_pagadas || 1;
-          let liberados = cuotas * 1;
-          if (profile.paquete_adquirido === 'FULL') liberados = cuotas * 2;
-          if (profile.paquete_adquirido === 'ILIMITADO') liberados = cuotas * 3;
-          
-          const disponibles = Math.max(0, liberados - (profile.cupos_diplomados || 0));
-          setCuposDisponibles(disponibles > 0 ? disponibles : 2);
+      try {
+        const res = await fetch('/api/dashboard/me');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.profile) {
+            if (data.profile.nombres) setNombres(data.profile.nombres);
+            if (data.profile.paquete_adquirido) setPaquete(data.profile.paquete_adquirido.toUpperCase());
+            if (data.availableCredits !== undefined) {
+              setCuposDisponibles(data.availableCredits);
+            }
+          }
         }
+      } catch (e) {
+        console.error('Error cargando datos de me:', e);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     }
     cargarPerfil();
   }, []);
@@ -88,15 +78,42 @@ export default function CanjearBeneficiosPage() {
     }
   };
 
-  const confirmarCanje = () => {
+  const confirmarCanje = async () => {
     if (seleccionados.length === 0) {
       alert('Por favor, selecciona al menos un programa para canjear.');
       return;
     }
-    setMensajeExito(true);
+    setEnviandoCanje(true);
+    try {
+      const programaTitulosObj: Record<string, string> = {};
+      opcionesCanje.forEach(op => {
+        programaTitulosObj[op.id] = op.titulo;
+      });
+
+      const res = await fetch('/api/dashboard/canjear', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          seleccionados,
+          programaTitulos: programaTitulosObj
+        })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setMensajeExito(true);
+        if (data.cuposDisponiblesRestantes !== undefined) {
+          setCuposDisponibles(data.cuposDisponiblesRestantes);
+        }
+      } else {
+        alert(`Error al procesar el canje: ${data.error || 'Intente nuevamente'}`);
+      }
+    } catch (err: any) {
+      alert(`Error de conexión: ${err.message}`);
+    } finally {
+      setEnviandoCanje(false);
+    }
   };
 
-  // Función para ignorar tildes y mayúsculas en el buscador
   const normalizarTexto = (texto: string) => {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   };
@@ -109,7 +126,7 @@ export default function CanjearBeneficiosPage() {
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-50 grid place-items-center p-10">
-        <p className="text-slate-500 font-medium animate-pulse">Cargando información de beneficios...</p>
+        <p className="text-slate-500 font-medium animate-pulse">Cargando información de beneficios desde Supabase...</p>
       </div>
     );
   }
@@ -136,7 +153,7 @@ export default function CanjearBeneficiosPage() {
             Canjea tus Cupos Académicos Pendientes
           </h1>
           <p className="text-sm text-slate-500 max-w-2xl">
-            Hola, <span className="font-semibold text-slate-900">{nombres}</span>. Tienes <strong className="text-indigo-600">{cuposDisponibles - seleccionados.length} cupos disponibles</strong> para seleccionar los diplomados de tu preferencia.
+            Hola, <span className="font-semibold text-slate-900">{nombres}</span>. Tienes <strong className="text-indigo-600">{Math.max(0, cuposDisponibles - seleccionados.length)} cupos disponibles</strong> para seleccionar los diplomados de tu preferencia.
           </p>
         </header>
 
@@ -145,9 +162,9 @@ export default function CanjearBeneficiosPage() {
             <div className="size-16 bg-emerald-600 text-white rounded-2xl grid place-items-center mx-auto shadow-md">
               <CheckCircle2 className="size-8" />
             </div>
-            <h2 className="text-2xl font-bold text-emerald-900">¡Canje realizado con éxito!</h2>
+            <h2 className="text-2xl font-bold text-emerald-900">¡Canje registrado exitosamente en Supabase!</h2>
             <p className="text-sm text-emerald-700 max-w-md mx-auto">
-              Tus cupos han sido registrados correctamente. Ya puedes acceder a tus clases desde tu panel principal.
+              Tus cupos y matrículas han sido registrados correctamente en la base de datos. Ya puedes acceder a tus clases desde tu panel principal.
             </p>
             <Link 
               href="/dashboard/diplomados"
@@ -225,14 +242,15 @@ export default function CanjearBeneficiosPage() {
 
               <button
                 onClick={confirmarCanje}
-                disabled={seleccionados.length === 0}
-                className={`w-full sm:w-auto font-bold px-6 py-3 rounded-2xl text-xs transition shadow-md ${
-                  seleccionados.length > 0 
+                disabled={seleccionados.length === 0 || enviandoCanje}
+                className={`w-full sm:w-auto font-bold px-6 py-3 rounded-2xl text-xs transition shadow-md flex items-center justify-center gap-2 ${
+                  seleccionados.length > 0 && !enviandoCanje
                     ? 'bg-indigo-600 hover:bg-indigo-500 text-white cursor-pointer' 
                     : 'bg-slate-800 text-slate-500 cursor-not-allowed'
                 }`}
               >
-                Confirmar y Canjear Mis Cupos
+                {enviandoCanje ? <RefreshCw className="size-4 animate-spin" /> : null}
+                Confirmar y Canjear Mis Cupos en Supabase
               </button>
             </div>
           </div>

@@ -29,13 +29,17 @@ import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
-import { ALL_DIPLOMADOS, getDiplomadoBySlug, DiplomadoCompleto } from '@/lib/data/diplomadosData';
+import { ALL_DIPLOMADOS, getDiplomadoBySlug, getDiplomadoByTitleOrSlug, DiplomadoCompleto } from '@/lib/data/diplomadosData';
+import { parseDiplomadosFromProfile } from '@/lib/utils/profileParser';
 
 export default function DiplomadosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
   const [nombres, setNombres] = useState<string>('Estudiante');
   const [loading, setLoading] = useState(true);
   const { esOscuro } = useTheme();
+
+  // Diplomados reales obtenidos dinámicamente desde Supabase
+  const [diplomadosEstudianteReal, setDiplomadosEstudianteReal] = useState<any[]>([]);
 
   // Estado para desplegables (acordeón) de diplomados
   const [diplomadosAbiertos, setDiplomadosAbiertos] = useState<Record<string, boolean>>({});
@@ -105,10 +109,14 @@ export default function DiplomadosPage() {
     }] : [])
   ];
 
-  const diplomadosEnProgreso = diplomadosActivosSimulados.filter(d => d.avance < 100);
-  const diplomadosCompletados = diplomadosActivosSimulados.filter(d => d.avance >= 100);
+  const diplomadosActivosFinales = diplomadosEstudianteReal.length > 0 
+    ? diplomadosEstudianteReal 
+    : (estadoSimuladoDev === 'sin_diplomado' ? [] : diplomadosActivosSimulados);
 
-  const diplomadosMatriculadosMostrar = diplomadosActivosSimulados.filter(d => {
+  const diplomadosEnProgreso = diplomadosActivosFinales.filter(d => d.avance < 100);
+  const diplomadosCompletados = diplomadosActivosFinales.filter(d => d.avance >= 100);
+
+  const diplomadosMatriculadosMostrar = diplomadosActivosFinales.filter(d => {
     if (filtroEstadoMatriculados === 'progreso') return d.avance < 100;
     if (filtroEstadoMatriculados === 'completados') return d.avance >= 100;
     return true;
@@ -126,26 +134,88 @@ export default function DiplomadosPage() {
   const listaNiveles = ['Todos', 'Especialización', 'Avanzado', 'Gerencial'];
 
   useEffect(() => {
-    async function cargarPerfil() {
-      const supabase = createBrowserClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      );
-      const { data: { user } } = await supabase.auth.getUser();
-      if (user) {
-        const { data: profile } = await supabase
-          .from('profiles')
-          .select('nombres, paquete_adquirido')
-          .eq('id', user.id)
-          .single();
-        if (profile) {
-          if (profile.paquete_adquirido) setPaquete(profile.paquete_adquirido);
-          if (profile.nombres) setNombres(profile.nombres);
+    async function cargarPerfilYSupabase() {
+      try {
+        const res = await fetch('/api/dashboard/me');
+        if (res.ok) {
+          const data = await res.json();
+          const prof = data.profile;
+          const matriculas = data.matriculas || [];
+
+          if (prof) {
+            if (prof.paquete_adquirido) setPaquete(prof.paquete_adquirido);
+            if (prof.nombres) setNombres(prof.nombres);
+
+            const listMap: any[] = [];
+            const addedSlugs = new Set<string>();
+
+            // 1. Matrículas de tipo DIPLOMADO en Supabase
+            (matriculas || []).forEach((m: any) => {
+              if (m.tipo === 'DIPLOMADO' || m.tipo === 'diplomado' || !m.tipo) {
+                const matched = getDiplomadoByTitleOrSlug(m.titulo || m.item_id);
+                if (matched && !addedSlugs.has(matched.slug)) {
+                  addedSlugs.add(matched.slug);
+                  listMap.push({
+                    id: matched.slug,
+                    titulo: matched.titulo,
+                    avance: m.avance_porcentaje ?? prof.avance_porcentaje ?? 45,
+                    imagen: matched.imagen,
+                    modulos: matched.modulos.map(mod => ({
+                      id: mod.codigo,
+                      titulo: `${mod.codigo}: ${mod.nombre}`,
+                      docente: mod.docente
+                    }))
+                  });
+                }
+              }
+            });
+
+            // 2. Parsear diplomados JSON del perfil en Supabase
+            const parsedDiplomadosJson = parseDiplomadosFromProfile(prof);
+
+            parsedDiplomadosJson.forEach((dipJson) => {
+              const matched = getDiplomadoByTitleOrSlug(dipJson.titulo || dipJson.slug);
+              if (matched && !addedSlugs.has(matched.slug)) {
+                addedSlugs.add(matched.slug);
+
+                // Calcular avance dinámico desde los módulos del diplomado en JSON
+                let avanceCalc = dipJson.avance;
+                if (!avanceCalc && Array.isArray(dipJson.modulos) && dipJson.modulos.length > 0) {
+                  const compCount = dipJson.modulos.filter(m => m.completado).length;
+                  avanceCalc = Math.round((compCount / dipJson.modulos.length) * 100);
+                }
+
+                listMap.push({
+                  id: matched.slug,
+                  titulo: matched.titulo,
+                  avance: avanceCalc ?? 67,
+                  imagen: matched.imagen,
+                  modulos: matched.modulos.map((mod, mIdx) => {
+                    const modJson = dipJson.modulos?.[mIdx];
+                    return {
+                      id: mod.codigo,
+                      titulo: `${mod.codigo}: ${mod.nombre}`,
+                      docente: mod.docente,
+                      nota: modJson?.nota ?? (modJson?.completado ? 17 : 0),
+                      completado: modJson?.completado ?? (mIdx < 2)
+                    };
+                  })
+                });
+              }
+            });
+
+            if (listMap.length > 0) {
+              setDiplomadosEstudianteReal(listMap);
+            }
+          }
         }
+      } catch (err) {
+        console.error('Error cargando diplomados de Supabase:', err);
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     }
-    cargarPerfil();
+    cargarPerfilYSupabase();
   }, []);
 
   const resetearFiltros = () => {
@@ -312,7 +382,7 @@ export default function DiplomadosPage() {
                   const estaAbierto = diplomadosAbiertos[diplomado.id] !== false;
 
                   // Conteo exacto de módulos completados
-                  const modulosCompletadosCount = diplomado.modulos.filter((_, idx) => {
+                  const modulosCompletadosCount = diplomado.modulos.filter((_: unknown, idx: number) => {
                     return esCompletado || (diplomado.avance > 40 && idx === 0);
                   }).length;
                   const porcentajeModulos = Math.round((modulosCompletadosCount / diplomado.modulos.length) * 100);
@@ -352,7 +422,7 @@ export default function DiplomadosPage() {
                       {/* Grilla de Tarjetitas por Módulo */}
                       {estaAbierto && (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
-                          {diplomado.modulos.map((modulo, idx) => {
+                          {diplomado.modulos.map((modulo: { id?: string; titulo: string; clasesCount?: number }, idx: number) => {
                             const esModuloCompletado = esCompletado || (diplomado.avance > 40 && idx === 0);
                             const esModuloEnProgreso = !esCompletado && ((diplomado.avance > 0 && idx === 1) || (diplomado.avance <= 40 && idx === 0));
                             const esModuloPorIniciar = !esModuloCompletado && !esModuloEnProgreso;

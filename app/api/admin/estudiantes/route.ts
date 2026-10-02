@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
+import { parseDiplomadosFromProfile, parseCursosFromProfile, DiplomadoJSON } from '@/lib/utils/profileParser';
 
 function parseCreditoRow(pag: any, auditLogs: any[]) {
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CARGO_EXTRA|')) {
@@ -37,7 +38,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
 
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CREDITO_')) {
     try {
-      const jsonStr = pag.metodo.substring(pag.metodo.indexOf('|') + 1);
+      const jsonStr = pag.metodo.substring(pag.metodo.indexOf('|') + 1).trim();
       const parsed = JSON.parse(jsonStr);
       num_credito = parsed.num_credito || num_credito;
       if (Array.isArray(parsed.cuotas)) {
@@ -239,6 +240,21 @@ export async function GET() {
         nivelRiesgoChurn = 'MEDIO';
       }
 
+      // Parser JSON de Diplomados y Cursos
+      const parsedDiplomados = parseDiplomadosFromProfile(p);
+      const parsedCursos = parseCursosFromProfile(p);
+      const diplomadosLista = parsedDiplomados.map(d => d.titulo);
+
+      // Avance real calculado desde módulos completados del diplomado principal
+      const dipPrincipal = parsedDiplomados[0];
+      let avanceCalculado = 0;
+      if (dipPrincipal && Array.isArray(dipPrincipal.modulos) && dipPrincipal.modulos.length > 0) {
+        const completados = dipPrincipal.modulos.filter(m => m.completado).length;
+        avanceCalculado = Math.round((completados / dipPrincipal.modulos.length) * 100);
+      } else {
+        avanceCalculado = p.avance_porcentaje ?? 0;
+      }
+
       return {
         id: p.id,
         dni_ce: p.dni_ce,
@@ -259,10 +275,12 @@ export async function GET() {
         bloqueado: Boolean(p.bloqueado),
         prorroga_hasta: p.prorroga_hasta || null,
         nivel_riesgo_churn: nivelRiesgoChurn,
-        diplomado_actual: p.diplomado_1 || 'DIPLOMADO EN GESTIÓN MINERA',
-        diplomado_2: p.diplomado_2 || null,
-        avance_porcentaje: p.avance_porcentaje ?? (p.paquete_adquirido === 'ILIMITADO' ? 85 : p.paquete_adquirido === 'FULL' ? 65 : 40),
-        nota_promedio: p.nota_promedio ?? 17.2,
+        diplomado_actual: parsedDiplomados[0]?.titulo || 'DERECHO MINERO',
+        diplomados_json: parsedDiplomados,
+        cursos_json: parsedCursos,
+        diplomados_lista: diplomadosLista,
+        avance_porcentaje: avanceCalculado,
+        nota_promedio: p.nota_promedio ?? 0,
         ultima_conexion: p.ultima_conexion || 'Hace 1 hora',
         dias_inactivo: p.dias_inactivo ?? (p.bloqueado ? 14 : 1),
         mes_inscripcion: p.mes_inscripcion || 'septiembre',
@@ -276,5 +294,112 @@ export async function GET() {
     return NextResponse.json({ estudiantes });
   } catch (err: any) {
     return NextResponse.json({ error: err.message || 'Error al obtener estudiantes' }, { status: 500 });
+  }
+}
+
+export async function PATCH(request: Request) {
+  try {
+    const body = await request.json();
+    const { studentId, dni_ce, action, diplomados, cursos } = body;
+
+    const admin = createAdminClient();
+
+    if (action === 'update_diplomados') {
+      let diplomadosListJson: DiplomadoJSON[] = [];
+
+      if (Array.isArray(diplomados)) {
+        diplomadosListJson = diplomados.map((titleStr: string) => {
+          const title = String(titleStr).trim();
+          return {
+            id: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+            slug: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+            titulo: title,
+            avance: 0,
+            modulos: [
+              { id: 'mod-01', codigo: 'Módulo 01', nombre: `Módulo 01 de ${title}`, nota: 0, completado: false },
+              { id: 'mod-02', codigo: 'Módulo 02', nombre: `Módulo 02 de ${title}`, nota: 0, completado: false },
+              { id: 'mod-03', codigo: 'Módulo 03', nombre: `Módulo 03 de ${title}`, nota: 0, completado: false }
+            ]
+          };
+        });
+      }
+
+      const diplomadosSerialized = `DIPLOMADOS_LIST|${JSON.stringify(diplomadosListJson)}`;
+
+      let query = admin.from('profiles').update({
+        diplomados: diplomadosSerialized,
+        avance_porcentaje: 0
+      });
+
+      if (studentId) {
+        query = query.eq('id', studentId);
+      } else if (dni_ce) {
+        query = query.eq('dni_ce', dni_ce);
+      } else {
+        return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
+      }
+
+      const { data: updated, error: updateErr } = await query.select().single();
+
+      if (updateErr) {
+        return NextResponse.json({ error: `Error al actualizar diplomados: ${updateErr.message}` }, { status: 500 });
+      }
+
+      // Auditoría
+      try {
+        await admin.from('audit_logs').insert({
+          usuario_email: 'admin@edumin.pe',
+          accion: 'ACTUALIZAR_DIPLOMADOS_ESTUDIANTE',
+          detalles: { studentId: updated.id, dni_ce: updated.dni_ce, diplomados: diplomadosListJson }
+        });
+      } catch (e) {
+        console.error(e);
+      }
+
+      return NextResponse.json({ success: true, estudiante: updated });
+    }
+
+    if (action === 'update_cursos') {
+      let cursosListJson: any[] = [];
+
+      if (Array.isArray(cursos)) {
+        cursosListJson = cursos.map((titleStr: string, idx: number) => {
+          const title = String(titleStr).trim();
+          return {
+            id: `cur-${(idx + 1).toString().padStart(2, '0')}`,
+            codigo: `CUR-${(idx + 1).toString().padStart(2, '0')}`,
+            titulo: title,
+            nota: 0,
+            completado: false
+          };
+        });
+      }
+
+      const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosListJson)}`;
+
+      let query = admin.from('profiles').update({
+        cursos: cursosSerialized
+      });
+
+      if (studentId) {
+        query = query.eq('id', studentId);
+      } else if (dni_ce) {
+        query = query.eq('dni_ce', dni_ce);
+      } else {
+        return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
+      }
+
+      const { data: updated, error: updateErr } = await query.select().single();
+
+      if (updateErr) {
+        return NextResponse.json({ error: `Error al actualizar cursos: ${updateErr.message}` }, { status: 500 });
+      }
+
+      return NextResponse.json({ success: true, estudiante: updated });
+    }
+
+    return NextResponse.json({ error: 'Acción no soportada.' }, { status: 400 });
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message || 'Error inesperado' }, { status: 500 });
   }
 }

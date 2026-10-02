@@ -83,14 +83,28 @@ export async function loginWithDni(
 
   // Iniciar sesión con Supabase Auth nativo para escribir las cookies de sesión (HTTP-only)
   const supabase = await createClient();
-  const { error: signInError } = await supabase.auth.signInWithPassword({
+  let { error: signInError } = await supabase.auth.signInWithPassword({
     email: userEmail,
     password: password,
   });
 
   if (signInError) {
-    console.error("Error en signInWithPassword:", signInError.message);
-    return INVALID_CREDENTIALS;
+    // Reintentar sincronización de contraseña en auth.users
+    await admin.auth.admin.updateUserById(profile.id, {
+      password: password,
+      email: userEmail,
+      email_confirm: true,
+    });
+
+    const retryRes = await supabase.auth.signInWithPassword({
+      email: userEmail,
+      password: password,
+    });
+
+    if (retryRes.error) {
+      console.error("Error definitivo en signInWithPassword:", retryRes.error.message);
+      return INVALID_CREDENTIALS;
+    }
   }
 
   // Redirección según rol

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { 
   CheckCircle2, 
   FileText, 
@@ -13,8 +13,10 @@ import {
   Headphones, 
   Sparkles, 
   Eye, 
-  Award, 
-  Layers 
+  Award,
+  Check,
+  Loader2,
+  Table
 } from 'lucide-react';
 import { useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
@@ -23,7 +25,7 @@ import { useTheme } from '@/context/theme-context';
 
 export interface RecursoItem {
   id: string;
-  tipo: 'pdf' | 'video' | 'audio' | 'interactivo';
+  tipo: 'pdf' | 'video' | 'audio' | 'interactivo' | 'excel';
   titulo: string;
   descripcion: string;
   archivo?: string;
@@ -55,44 +57,121 @@ export interface ClaseCompleta {
   partes: ParteClase[];
 }
 
-function generarEstructuraDiplomado(id: string) {
-  const dip = getDiplomadoBySlug(id) || getDiplomadoBySlug('derecho-minero');
-  
-  if (!dip) {
-    return {
-      titulo: "Diplomado de Alta Especialización Edumin",
-      avancePorcentaje: 45,
-      modulos: []
-    };
-  }
+export default function ReproductorClasesPage() {
+  const params = useParams();
+  const searchParams = useSearchParams();
+  const diplomadoId = params.id as string;
+  const moduloQuery = searchParams.get('modulo');
 
-  let contadorGlobalClases = 1;
+  const { esOscuro } = useTheme();
 
-  const modulosProcesados = dip.modulos.map((mod, modIdx) => {
-    const rawClases = (mod.clases && mod.clases.length > 0) 
-      ? mod.clases 
-      : ['Sesión Magistral de Introducción', 'Casuística Aplicada'];
+  // Estados de datos de Supabase
+  const [loading, setLoading] = useState(true);
+  const [completadosMap, setCompletadosMap] = useState<Record<string, boolean>>({});
+  const [catalogoMateriales, setCatalogoMateriales] = useState<any>(null);
+  const [guardandoAvance, setGuardandoAvance] = useState(false);
 
-    const clases: ClaseCompleta[] = rawClases.map((claseTitle, claseIdx) => {
-      const numClase = contadorGlobalClases++;
-      const claseId = `${mod.codigo}-c${numClase}`;
+  // Cargar datos de Supabase (/api/dashboard/me y /api/admin/catalogo)
+  const cargarDatosSupabase = useCallback(async () => {
+    try {
+      setLoading(true);
+      const [meRes, catRes] = await Promise.all([
+        fetch('/api/dashboard/me').catch(() => null),
+        fetch('/api/admin/catalogo').catch(() => null)
+      ]);
 
-      // Simulación: Las Clases 1 y 4 tienen 1 sola parte.
-      // La Clase 3 tiene 5 partes y las demás tienen 2 partes.
-      const esClaseDeUnaSolaParte = (numClase === 1 || numClase === 4);
+      if (meRes && meRes.ok) {
+        const meData = await meRes.json();
+        const profile = meData.profile || meData;
+        const diplomados = profile?.diplomados_json || profile?.diplomados || [];
+        
+        // Buscar el diplomado actual en el perfil del alumno
+        const targetSlugNorm = diplomadoId.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        const dipEnPerfil = Array.isArray(diplomados) 
+          ? diplomados.find((d: any) => (d.slug || d.id || d.titulo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlugNorm)
+          : null;
 
-      let partes: ParteClase[] = [];
+        if (dipEnPerfil && Array.isArray(dipEnPerfil.modulos)) {
+          const map: Record<string, boolean> = {};
+          dipEnPerfil.modulos.forEach((m: any, idx: number) => {
+            const key = m.codigo || m.id || `mod-${idx + 1}`;
+            map[key] = Boolean(m.completado);
+          });
+          setCompletadosMap(map);
+        }
+      }
 
-      if (esClaseDeUnaSolaParte) {
-        partes = [
+      if (catRes && catRes.ok) {
+        const catData = await catRes.json();
+        const todos = catData.cursos || catData.todos || [];
+        const catItem = todos.find((c: any) => 
+          c.id === diplomadoId || 
+          (c.titulo && c.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === diplomadoId.toLowerCase().replace(/[^a-z0-9]+/g, '-'))
+        );
+        if (catItem) {
+          setCatalogoMateriales(catItem);
+        }
+      }
+    } catch (e) {
+      console.error('Error al cargar datos de Supabase:', e);
+    } finally {
+      setLoading(false);
+    }
+  }, [diplomadoId]);
+
+  useEffect(() => {
+    cargarDatosSupabase();
+  }, [cargarDatosSupabase]);
+
+  // Generar datos combinados con el diplomado base
+  const diplomadoActual = useMemo(() => {
+    const dip = getDiplomadoBySlug(diplomadoId) || getDiplomadoBySlug('derecho-minero');
+    
+    const titulo = catalogoMateriales?.titulo || dip?.titulo || 'Diplomado de Alta Especialización EDUMIN';
+    let contadorGlobalClases = 1;
+
+    const modulosRaw = catalogoMateriales?.modulos?.length 
+      ? catalogoMateriales.modulos 
+      : (dip?.modulos || [
+          { codigo: 'Módulo 01', nombre: 'Módulo I: Fundamentos y Gestión', clases: ['Sesión 1: Marco Normativo', 'Sesión 2: Gestión Aplicada'] },
+          { codigo: 'Módulo 02', nombre: 'Módulo II: Operaciones y Estrategia', clases: ['Sesión 1: Operaciones', 'Sesión 2: Estrategia'] },
+          { codigo: 'Módulo 03', nombre: 'Módulo III: Casuística y Proyectos', clases: ['Sesión 1: Casuística Práctica', 'Sesión 2: Evaluación Final'] }
+        ]);
+
+    let totalClasesContadas = 0;
+    let clasesCompletadasContadas = 0;
+
+    const modulosProcesados = modulosRaw.map((mod: any, modIdx: number) => {
+      const modCodigoKey = mod.codigo || `Módulo ${(modIdx + 1).toString().padStart(2, '0')}`;
+      const esModuloCompletadoEnBD = Boolean(completadosMap[modCodigoKey]);
+
+      const rawClases = (mod.clases && mod.clases.length > 0) 
+        ? mod.clases 
+        : ['Sesión Magistral de Introducción', 'Casuística Aplicada'];
+
+      const clases: ClaseCompleta[] = rawClases.map((claseTitleStr: any, claseIdx: number) => {
+        const numClase = contadorGlobalClases++;
+        const claseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase ${numClase}`);
+        const claseId = `${modCodigoKey}-c${numClase}`;
+        const videoUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.videoUrl : (mod.videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ');
+        const pdfUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.pdfUrl : mod.pdfUrl;
+        const excelUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.excelUrl : mod.excelUrl;
+
+        totalClasesContadas++;
+
+        // Una clase está completada si el módulo está marcado o si las clases individuales lo están
+        const esCompletada = esModuloCompletadoEnBD;
+        if (esCompletada) clasesCompletadasContadas++;
+
+        const partes: ParteClase[] = [
           {
             id: `${claseId}-p1`,
             numero: 1,
             titulo: `Sesión Completa`,
             subtitulo: claseTitle,
             duracion: '60 min',
-            videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-            completada: true,
+            videoUrl: videoUrlFromCatalog,
+            completada: esCompletada,
             resumen: {
               objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
               puntosClave: [
@@ -105,10 +184,17 @@ function generarEstructuraDiplomado(id: string) {
               {
                 id: `rec-${claseId}-pdf`,
                 tipo: 'pdf',
-                titulo: `Separata_Oficial_CLASE_${numClase}.pdf`,
-                descripcion: 'Documento oficial con contenidos y diapositivas de la clase · 5.2 MB',
-                archivo: `Separata_Oficial_CLASE_${numClase}.pdf`
+                titulo: pdfUrlFromCatalog ? `Separata_Oficial_CLASE_${numClase}.pdf` : `Separata_Oficial_CLASE_${numClase}.pdf`,
+                descripcion: 'Documento oficial con contenidos y diapositivas de la clase · PDF',
+                archivo: pdfUrlFromCatalog || `Separata_Oficial_CLASE_${numClase}.pdf`
               },
+              ...(excelUrlFromCatalog ? [{
+                id: `rec-${claseId}-excel`,
+                tipo: 'excel' as const,
+                titulo: `Plantilla_Calculo_CLASE_${numClase}.xlsx`,
+                descripcion: 'Hoja de cálculo y plantilla interactiva de trabajo · EXCEL',
+                archivo: excelUrlFromCatalog
+              }] : []),
               {
                 id: `rec-${claseId}-capsula`,
                 tipo: 'video',
@@ -122,200 +208,42 @@ function generarEstructuraDiplomado(id: string) {
                 titulo: `Podcast de la Clase`,
                 descripcion: 'Audio en formato MP3 para estudio y repaso · 15 min',
                 duracion: '15 min'
-              },
-              {
-                id: `rec-${claseId}-interactivo`,
-                tipo: 'interactivo',
-                titulo: `Flashcards de Repaso`,
-                descripcion: 'Módulo interactivo de autoevaluación y preguntas clave'
               }
             ]
           }
         ];
-      } else if (numClase === 3) {
-        // Simulación: La Clase 3 consta de 5 partes
-        partes = [1, 2, 3, 4, 5].map((numP) => ({
-          id: `${claseId}-p${numP}`,
-          numero: numP,
-          titulo: `Parte ${numP}`,
-          subtitulo: claseTitle,
-          duracion: `${35 + numP * 5} min`,
-          videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-          completada: numP <= 2,
-          resumen: {
-            objetivo: `Desarrollo de los temas correspondientes a la Parte ${numP} de: ${claseTitle}.`,
-            puntosClave: [
-              `Punto principal ${numP}.1: Fundamentos y marco operativo para esta sección.`,
-              `Punto principal ${numP}.2: Aplicación técnica directa en procesos clave.`,
-              `Punto principal ${numP}.3: Directrices y recomendaciones metodológicas.`
-            ]
-          },
-          recursos: [
-            {
-              id: `rec-${claseId}-p${numP}-pdf`,
-              tipo: 'pdf',
-              titulo: `Separata_Oficial_CLASE_${numClase}_Parte${numP}.pdf`,
-              descripcion: `Material de estudio oficial · Parte ${numP} · 4.${numP} MB`,
-              archivo: `Separata_Oficial_CLASE_${numClase}_Parte${numP}.pdf`
-            },
-            {
-              id: `rec-${claseId}-p${numP}-capsula`,
-              tipo: 'video',
-              titulo: `Cápsula de Resumen (Parte ${numP})`,
-              descripcion: `Video sumario de la Parte ${numP} · ${5 + numP} min`,
-              duracion: `${5 + numP} min`
-            },
-            {
-              id: `rec-${claseId}-p${numP}-audio`,
-              tipo: 'audio',
-              titulo: `Podcast (Parte ${numP})`,
-              descripcion: `Audio en formato MP3 de la Parte ${numP} · 12 min`,
-              duracion: '12 min'
-            },
-            {
-              id: `rec-${claseId}-p${numP}-interactivo`,
-              tipo: 'interactivo',
-              titulo: `Flashcards de Repaso (Parte ${numP})`,
-              descripcion: 'Módulo interactivo de autoevaluación'
-            }
-          ]
-        }));
-      } else {
-        partes = [
-          {
-            id: `${claseId}-p1`,
-            numero: 1,
-            titulo: `Parte 1`,
-            subtitulo: claseTitle,
-            duracion: '45 min',
-            videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-            completada: (modIdx === 0 && claseIdx === 1),
-            resumen: {
-              objetivo: `Desarrollo de los temas correspondientes a la Parte 1 de: ${claseTitle}.`,
-              puntosClave: [
-                `Revisión de los puntos principales y marco aplicable.`,
-                `Criterios técnicos y metodológicos para el análisis.`,
-                `Fundamentos para la toma de decisiones en el sector.`
-              ]
-            },
-            recursos: [
-              {
-                id: `rec-${claseId}-p1-pdf`,
-                tipo: 'pdf',
-                titulo: `Separata_Oficial_CLASE_${numClase}_Parte1.pdf`,
-                descripcion: 'Material de estudio oficial · Parte 1 · 4.8 MB',
-                archivo: `Separata_Oficial_CLASE_${numClase}_Parte1.pdf`
-              },
-              {
-                id: `rec-${claseId}-p1-capsula`,
-                tipo: 'video',
-                titulo: `Cápsula de Resumen (Parte 1)`,
-                descripcion: 'Video sumario con los conceptos de la Parte 1 · 6 min',
-                duracion: '6 min'
-              },
-              {
-                id: `rec-${claseId}-p1-audio`,
-                tipo: 'audio',
-                titulo: `Podcast (Parte 1)`,
-                descripcion: 'Audio en formato MP3 de la Parte 1 · 12 min',
-                duracion: '12 min'
-              },
-              {
-                id: `rec-${claseId}-p1-interactivo`,
-                tipo: 'interactivo',
-                titulo: `Flashcards de Repaso (Parte 1)`,
-                descripcion: 'Módulo interactivo de autoevaluación'
-              }
-            ]
-          },
-          {
-            id: `${claseId}-p2`,
-            numero: 2,
-            titulo: `Parte 2`,
-            subtitulo: claseTitle,
-            duracion: '50 min',
-            videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-            completada: false,
-            resumen: {
-              objetivo: `Desarrollo y profundización de los temas correspondientes a la Parte 2 de: ${claseTitle}.`,
-              puntosClave: [
-                `Aplicación práctica y análisis de situaciones reales.`,
-                `Taller guiado con matrices de resolución.`,
-                `Lecciones aprendidas y recomendaciones técnicas.`
-              ]
-            },
-            recursos: [
-              {
-                id: `rec-${claseId}-p2-pdf`,
-                tipo: 'pdf',
-                titulo: `Guia_Practica_CLASE_${numClase}_Parte2.pdf`,
-                descripcion: 'Material de estudio oficial · Parte 2 · 3.5 MB',
-                archivo: `Guia_Practica_CLASE_${numClase}_Parte2.pdf`
-              },
-              {
-                id: `rec-${claseId}-p2-capsula`,
-                tipo: 'video',
-                titulo: `Cápsula de Resumen (Parte 2)`,
-                descripcion: 'Video sumario de la Parte 2 · 7 min',
-                duracion: '7 min'
-              },
-              {
-                id: `rec-${claseId}-p2-audio`,
-                tipo: 'audio',
-                titulo: `Podcast (Parte 2)`,
-                descripcion: 'Audio en formato MP3 de la Parte 2 · 15 min',
-                duracion: '15 min'
-              },
-              {
-                id: `rec-${claseId}-p2-interactivo`,
-                tipo: 'interactivo',
-                titulo: `Simulador de Repaso (Parte 2)`,
-                descripcion: 'Módulo interactivo de autoevaluación'
-              }
-            ]
-          }
-        ];
-      }
 
-      const claseCompletada = partes.every(p => p.completada);
+        return {
+          id: claseId,
+          numeroClase: numClase,
+          tituloClase: `CLASE ${numClase}: ${claseTitle.replace(/^Clase \d+:\s*/i, '')}`,
+          moduloCodigo: modCodigoKey,
+          moduloTitulo: `${modCodigoKey}: ${mod.nombre || mod.titulo || ''}`,
+          completada: esCompletada,
+          partes
+        };
+      });
 
       return {
-        id: claseId,
-        numeroClase: numClase,
-        tituloClase: `CLASE ${numClase}: ${claseTitle}`,
-        moduloCodigo: mod.codigo,
-        moduloTitulo: `${mod.codigo}: ${mod.nombre}`,
-        completada: claseCompletada,
-        partes
+        id: modCodigoKey,
+        codigo: modCodigoKey,
+        nombre: mod.nombre || mod.titulo || `Módulo ${(modIdx + 1).toString().padStart(2, '0')}`,
+        titulo: `${modCodigoKey}: ${mod.nombre || ''}`,
+        clases,
+        completado: esModuloCompletadoEnBD
       };
     });
 
+    const avancePorcentaje = totalClasesContadas > 0 
+      ? Math.round((clasesCompletadasContadas / totalClasesContadas) * 100) 
+      : 0;
+
     return {
-      id: mod.codigo,
-      codigo: mod.codigo,
-      nombre: mod.nombre,
-      titulo: `${mod.codigo}: ${mod.nombre}`,
-      clases
+      titulo,
+      avancePorcentaje,
+      modulos: modulosProcesados
     };
-  });
-
-  return {
-    titulo: dip.titulo,
-    avancePorcentaje: 45,
-    modulos: modulosProcesados
-  };
-}
-
-export default function ReproductorClasesPage() {
-  const params = useParams();
-  const searchParams = useSearchParams();
-  const diplomadoId = params.id as string;
-  const moduloQuery = searchParams.get('modulo');
-
-  const { esOscuro } = useTheme();
-
-  // Memorizar la data del diplomado
-  const diplomadoActual = useMemo(() => generarEstructuraDiplomado(diplomadoId), [diplomadoId]);
+  }, [diplomadoId, catalogoMateriales, completadosMap]);
 
   const modInicial = useMemo(() => {
     if (!diplomadoActual?.modulos?.length) return null;
@@ -326,7 +254,7 @@ export default function ReproductorClasesPage() {
     return modInicial?.clases?.[0] || null;
   }, [modInicial]);
 
-  // Estados de navegación inicializados de inmediato
+  // Estados de navegación
   const [moduloActivo, setModuloActivo] = useState<string>(modInicial?.id || '');
   const [claseActual, setClaseActual] = useState<ClaseCompleta | null>(claseInicial);
   const [parteSeleccionada, setParteSeleccionada] = useState<number>(1);
@@ -352,6 +280,38 @@ export default function ReproductorClasesPage() {
       }
     }
   }, [modInicial]);
+
+  // Alternar estado completado de la lección y sincronizar con Supabase
+  const toggleCompletarLeccion = async (moduloId: string) => {
+    try {
+      setGuardandoAvance(true);
+      const estadoActual = Boolean(completadosMap[moduloId]);
+      const nuevoEstado = !estadoActual;
+
+      // Actualizar estado local inmediatamente
+      setCompletadosMap(prev => ({ ...prev, [moduloId]: nuevoEstado }));
+
+      // Enviar actualización a la API en Supabase
+      const response = await fetch('/api/dashboard/completar-leccion', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          diplomadoSlug: diplomadoId,
+          moduloId,
+          completado: nuevoEstado
+        })
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        console.error('Error al actualizar lección:', errorData);
+      }
+    } catch (err) {
+      console.error('Error de red al completar lección:', err);
+    } finally {
+      setGuardandoAvance(false);
+    }
+  };
 
   // Lista plana de todas las partes para navegación Secuencial
   const todasLasPartes = useMemo(() => {
@@ -383,8 +343,6 @@ export default function ReproductorClasesPage() {
 
   const itemAnterior = indiceActualPlano > 0 ? todasLasPartes[indiceActualPlano - 1] : null;
   const itemSiguiente = indiceActualPlano >= 0 && indiceActualPlano < todasLasPartes.length - 1 ? todasLasPartes[indiceActualPlano + 1] : null;
-
-
 
   const publicarComentario = (e: React.FormEvent) => {
     e.preventDefault();
@@ -421,27 +379,29 @@ export default function ReproductorClasesPage() {
     }
   };
 
-  if (!claseActual || !parteActiva) {
+  if (loading || !claseActual || !parteActiva) {
     return (
       <div className={`h-full min-h-screen grid place-items-center ${esOscuro ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
         <div className="flex flex-col items-center gap-3">
-          <div className="w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin" />
-          <p className="text-xs font-semibold text-slate-400">Cargando contenidos de la clase...</p>
+          <Loader2 className="w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin text-indigo-500" />
+          <p className="text-xs font-semibold text-slate-400">Sincronizando contenidos con Supabase...</p>
         </div>
       </div>
     );
   }
+
+  const moduloActualObj = diplomadoActual.modulos.find((m: any) => m.id === moduloActivo) || diplomadoActual.modulos[0];
+  const leccionEstaCompletada = Boolean(completadosMap[moduloActivo] || claseActual.completada);
 
   return (
     <div className={`w-full min-h-full flex flex-col transition-colors duration-200 ${
       esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
     }`}>
       
-      {/* Top Bar FIJA / STICKY EN EL ENCABEZADO */}
+      {/* Top Bar FIJA EN EL ENCABEZADO */}
       <header className={`sticky top-0 z-30 h-16 border-b px-4 sm:px-6 flex items-center justify-between shrink-0 backdrop-blur-md transition-colors ${
         esOscuro ? 'border-slate-800 bg-slate-900/95' : 'border-slate-200 bg-white/95'
       }`}>
-        {/* Lado Izquierdo: Botón Volver + Título del Diplomado */}
         <div className="flex items-center gap-3 sm:gap-4 min-w-0">
           <Link 
             href="/dashboard/diplomados"
@@ -463,6 +423,37 @@ export default function ReproductorClasesPage() {
               {diplomadoActual.titulo}
             </h1>
           </div>
+        </div>
+
+        {/* Botón interactivo superior de Avance y Completado */}
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => toggleCompletarLeccion(moduloActivo)}
+            disabled={guardandoAvance}
+            className={`text-xs font-bold px-3.5 py-2 rounded-xl border flex items-center gap-2 transition-all shadow-xs ${
+              leccionEstaCompletada
+                ? 'bg-emerald-600 hover:bg-emerald-500 text-white border-emerald-500'
+                : esOscuro
+                  ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
+                  : 'bg-white hover:bg-slate-100 text-slate-800 border-slate-300'
+            }`}
+          >
+            {guardandoAvance ? (
+              <Loader2 className="w-4 h-4 animate-spin" />
+            ) : leccionEstaCompletada ? (
+              <>
+                <Check className="w-4 h-4 text-white" />
+                <span className="hidden sm:inline">Lección Completada</span>
+                <span className="sm:hidden">Completada</span>
+              </>
+            ) : (
+              <>
+                <CheckCircle2 className="w-4 h-4 text-indigo-500" />
+                <span className="hidden sm:inline">Marcar como Completada</span>
+                <span className="sm:hidden">Completar</span>
+              </>
+            )}
+          </button>
         </div>
       </header>
 
@@ -497,7 +488,7 @@ export default function ReproductorClasesPage() {
                   esOscuro ? 'bg-slate-950 border-slate-800 text-indigo-300' : 'bg-white border-slate-200 text-indigo-700'
                 }`}>
                   <div className="flex items-center gap-2 text-xs font-bold">
-                    <FileText className="w-4 h-4 text-indigo-500" /> Separata_Oficial_CLASE_{claseActual.numeroClase}{tieneMultiplesPartes ? `_Parte${parteSeleccionada}` : ''}.pdf
+                    <FileText className="w-4 h-4 text-indigo-500" /> Separata_Oficial_CLASE_{claseActual.numeroClase}.pdf
                   </div>
                   <span className={`text-[10px] px-2.5 py-1 rounded-md ${
                     esOscuro ? 'bg-slate-800 text-slate-400' : 'bg-slate-200 text-slate-600'
@@ -513,7 +504,7 @@ export default function ReproductorClasesPage() {
                   }`}>
                     <div className={`border-b pb-3 ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
                       <span className="text-[10px] font-bold text-indigo-500 uppercase tracking-widest">Documento oficial de estudio</span>
-                      <h4 className="font-bold text-base sm:text-lg mt-1">{claseActual.tituloClase} {tieneMultiplesPartes ? `· Parte ${parteSeleccionada}` : ''}</h4>
+                      <h4 className="font-bold text-base sm:text-lg mt-1">{claseActual.tituloClase}</h4>
                     </div>
                     <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}>
                       El presente material de estudio contiene los contenidos y ejercicios aplicados correspondientes a esta sesión académica.
@@ -521,7 +512,7 @@ export default function ReproductorClasesPage() {
                     <div className={`p-4 rounded-xl text-xs italic ${
                       esOscuro ? 'bg-slate-900 border border-slate-800 text-slate-400' : 'bg-slate-50 border border-slate-200 text-slate-600'
                     }`}>
-                      [ Vista previa interactiva de la separata oficial de lectura obligatoria ]
+                      [ Vista previa interactiva de la separata oficial de lectura obligatoria cargada en Supabase ]
                     </div>
                   </div>
                 </div>
@@ -538,10 +529,10 @@ export default function ReproductorClasesPage() {
                   <Video className="w-7 h-7" />
                 </div>
                 <h3 className={`text-base sm:text-lg font-bold mb-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  Cápsula de Resumen en Video {tieneMultiplesPartes ? `(Parte ${parteSeleccionada})` : ''}
+                  Cápsula de Resumen en Video
                 </h3>
                 <iframe 
-                  src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                  src={parteActiva.videoUrl} 
                   title="Resumen en Video"
                   className="w-full max-w-lg h-44 rounded-xl border border-slate-700 shadow-lg mt-1"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -560,7 +551,7 @@ export default function ReproductorClasesPage() {
                   <Headphones className="w-7 h-7" />
                 </div>
                 <h3 className={`text-base sm:text-lg font-bold mb-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  Audio Podcast {tieneMultiplesPartes ? `(Parte ${parteSeleccionada})` : ''}
+                  Audio Podcast
                 </h3>
                 <div className={`w-full max-w-md p-4 rounded-xl flex items-center gap-4 mt-2 border ${
                   esOscuro ? 'bg-slate-800/80 border-slate-700 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-md'
@@ -570,60 +561,24 @@ export default function ReproductorClasesPage() {
                   </button>
                   <div className="flex-1 text-left">
                     <p className={`text-xs font-bold truncate ${esOscuro ? 'text-white' : 'text-slate-800'}`}>
-                      Podcast_CLASE_{claseActual.numeroClase}{tieneMultiplesPartes ? `_Parte${parteSeleccionada}` : ''}.mp3
+                      Podcast_CLASE_{claseActual.numeroClase}.mp3
                     </p>
                     <div className={`w-full h-2 rounded-full mt-2 overflow-hidden ${esOscuro ? 'bg-slate-700' : 'bg-slate-200'}`}>
                       <div className="bg-emerald-500 h-full w-2/5"></div>
                     </div>
                   </div>
-                  <span className={`text-xs shrink-0 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>12 min</span>
-                </div>
-              </div>
-            )}
-
-            {contenidoPrincipal === 'resumen_interactivo' && (
-              <div className={`absolute inset-0 flex flex-col items-center justify-center p-6 text-center ${
-                esOscuro ? 'bg-gradient-to-br from-cyan-950 via-slate-900 to-black' : 'bg-gradient-to-br from-cyan-50 via-white to-slate-100'
-              }`}>
-                <div className={`size-14 rounded-2xl grid place-items-center mb-3 ${
-                  esOscuro ? 'bg-cyan-600/30 text-cyan-300 border border-cyan-500/30' : 'bg-cyan-100 text-cyan-600 border border-cyan-200'
-                }`}>
-                  <Sparkles className="w-7 h-7" />
-                </div>
-                <h3 className={`text-base sm:text-lg font-bold mb-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  Flashcards de Repaso {tieneMultiplesPartes ? `(Parte ${parteSeleccionada})` : ''}
-                </h3>
-                <div className={`p-6 rounded-xl max-w-md w-full text-left shadow-xl mt-1 border ${
-                  esOscuro ? 'bg-slate-900 border-slate-700' : 'bg-white border-slate-200'
-                }`}>
-                  <span className="text-[10px] font-bold text-cyan-500 uppercase tracking-widest">Pregunta Clave 1 de 4</span>
-                  <p className={`text-sm font-semibold mt-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                    ¿Cuál es el tema principal revisado en esta sesión?
-                  </p>
-                  <div className="mt-4 flex gap-2">
-                    <span className={`text-xs px-3 py-1.5 rounded-xl font-semibold border cursor-pointer ${
-                      esOscuro ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30 hover:bg-cyan-500/30' : 'bg-cyan-50 text-cyan-700 border-cyan-200 hover:bg-cyan-100'
-                    }`}>
-                      Opción A (Correcta)
-                    </span>
-                    <span className={`text-xs px-3 py-1.5 rounded-xl cursor-pointer ${
-                      esOscuro ? 'bg-slate-800 text-slate-400 hover:bg-slate-700' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                    }`}>
-                      Opción B
-                    </span>
-                  </div>
+                  <span className={`text-xs shrink-0 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>15 min</span>
                 </div>
               </div>
             )}
 
           </div>
 
-          {/* CONTROLES DE LA CLASE, SELECTOR DE PARTES Y NAVEGACIÓN */}
+          {/* CONTROLES DE LA CLASE, BOTÓN COMPLETAR Y NAVEGACIÓN */}
           <div className={`p-5 sm:p-6 rounded-2xl border transition-all ${
             esOscuro ? 'bg-slate-900/80 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
           }`}>
             
-            {/* Header de la Clase */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div className="min-w-0">
                 <h2 className={`text-lg sm:text-xl font-bold leading-snug ${
@@ -638,22 +593,22 @@ export default function ReproductorClasesPage() {
                 )}
               </div>
 
-              {/* Botón de volver al video principal si se está viendo otro recurso */}
-              {contenidoPrincipal !== 'video_clase' && (
-                <button 
-                  onClick={() => activarRecursoEnVisor('video_clase', tieneMultiplesPartes ? `Video de la Clase (Parte ${parteSeleccionada})` : 'Video de la Clase')}
-                  className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-xl text-xs transition-colors shadow flex items-center justify-center gap-2 shrink-0 self-start sm:self-auto"
-                >
-                  <Video className="w-4 h-4" /> Ver Video de la Clase
-                </button>
-              )}
+              <div className="flex items-center gap-2">
+                {contenidoPrincipal !== 'video_clase' && (
+                  <button 
+                    onClick={() => activarRecursoEnVisor('video_clase', 'Video de la Clase')}
+                    className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-xl text-xs transition-colors shadow flex items-center justify-center gap-2 shrink-0"
+                  >
+                    <Video className="w-4 h-4" /> Ver Video Principal
+                  </button>
+                )}
+              </div>
             </div>
 
-            {/* BARRA UNIFICADA: ANTERIOR + SEGMENTED PILLS DE PARTES + SIGUIENTE */}
+            {/* BARRA UNIFICADA: ANTERIOR + COMPLETAR LECCIÓN + SIGUIENTE */}
             <div className={`mt-5 pt-4 border-t flex flex-col sm:flex-row items-center justify-between gap-3 ${
               esOscuro ? 'border-slate-800' : 'border-slate-100'
             }`}>
-              {/* Botón Anterior */}
               <button
                 onClick={irAAnterior}
                 disabled={!itemAnterior}
@@ -669,42 +624,30 @@ export default function ReproductorClasesPage() {
                 <span>Anterior</span>
               </button>
 
-              {/* Segmented Control de Partes (Compacto y adaptable a 2, 3, 5+ partes) */}
-              {tieneMultiplesPartes ? (
-                <div className="flex items-center gap-1.5 overflow-x-auto max-w-full py-1 px-1 no-scrollbar justify-center">
-                  {claseActual.partes.map((p) => {
-                    const estaActiva = p.numero === parteSeleccionada;
-                    return (
-                      <button
-                        key={p.id}
-                        onClick={() => {
-                          setParteSeleccionada(p.numero);
-                          setContenidoPrincipal('video_clase');
-                          setRecursoActivoInfo(`Video de la Clase (Parte ${p.numero})`);
-                        }}
-                        className={`px-3 py-1.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-all flex items-center gap-1.5 border shrink-0 ${
-                          estaActiva
-                            ? 'bg-indigo-600 border-indigo-600 text-white shadow-sm ring-2 ring-indigo-500/20'
-                            : esOscuro
-                              ? 'bg-slate-800/80 border-slate-700/80 text-slate-300 hover:bg-slate-700 hover:text-white'
-                              : 'bg-slate-100 border-slate-200 text-slate-700 hover:bg-slate-200 hover:text-slate-900'
-                        }`}
-                      >
-                        <span>Parte {p.numero}</span>
-                        {p.completada && (
-                          <CheckCircle2 className={`w-3.5 h-3.5 ${estaActiva ? 'text-white' : 'text-emerald-500'}`} />
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              ) : (
-                <span className={`text-xs font-semibold ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                  CLASE {claseActual.numeroClase} · Sesión Completa
-                </span>
-              )}
+              <button
+                onClick={() => toggleCompletarLeccion(moduloActivo)}
+                disabled={guardandoAvance}
+                className={`px-5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 border ${
+                  leccionEstaCompletada
+                    ? 'bg-emerald-600 hover:bg-emerald-500 text-white border-emerald-500'
+                    : 'bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500 shadow'
+                }`}
+              >
+                {guardandoAvance ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : leccionEstaCompletada ? (
+                  <>
+                    <Check className="w-4 h-4 text-white" />
+                    <span>Lección Completada ✓</span>
+                  </>
+                ) : (
+                  <>
+                    <CheckCircle2 className="w-4 h-4" />
+                    <span>Marcar como Completado</span>
+                  </>
+                )}
+              </button>
 
-              {/* Botón Siguiente */}
               <button
                 onClick={irASiguiente}
                 disabled={!itemSiguiente}
@@ -748,7 +691,7 @@ export default function ReproductorClasesPage() {
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
-                Recursos
+                Recursos Multimedia
               </button>
               <button
                 onClick={() => setTabActiva('foro')}
@@ -760,7 +703,7 @@ export default function ReproductorClasesPage() {
                       : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
                 }`}
               >
-                Foro
+                Foro de Consultas
               </button>
             </div>
 
@@ -772,11 +715,11 @@ export default function ReproductorClasesPage() {
                   esOscuro ? 'bg-slate-900/60 border-slate-800 text-slate-300' : 'bg-white border-slate-200 text-slate-700 shadow-sm'
                 }`}>
                   <h4 className={`font-bold text-sm tracking-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                    Puntos clave aprendidos:
+                    Objetivos y Puntos Clave de la Sesión:
                   </h4>
                   
                   <p className={`text-xs sm:text-sm leading-relaxed ${esOscuro ? 'text-slate-300' : 'text-slate-600'}`}>
-                    En esta sesión se abordaron los principios fundamentales de la lección seleccionada. Podrás aplicar los conceptos teóricos revisados a casos prácticos dentro del entorno industrial y minero.
+                    En esta sesión se abordaron los principios fundamentales de {claseActual.tituloClase}. Los contenidos han sido validados por el equipo académico de EDUMIN y están alineados a los estándares de la industria minera.
                   </p>
 
                   <ul className={`list-disc list-outside pl-5 space-y-2 text-xs sm:text-sm leading-relaxed ${
@@ -791,13 +734,13 @@ export default function ReproductorClasesPage() {
                 </div>
               )}
 
-              {/* TAB RECURSOS MULTIMEDIA */}
+              {/* TAB RECURSOS MULTIMEDIA Y DOCUMENTOS CARGADOS POR ADMINISTRADOR */}
               {tabActiva === 'recursos' && (
                 <div className="space-y-3">
                   <p className={`text-xs mb-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                    Descarga o visualiza los materiales correspondientes a {tieneMultiplesPartes ? `la Parte ${parteSeleccionada}` : 'esta clase'}:
+                    Materiales oficiales de estudio configurados en el catálogo:
                   </p>
-                  
+
                   {parteActiva.recursos.map((rec) => (
                     <div 
                       key={rec.id}
@@ -810,14 +753,14 @@ export default function ReproductorClasesPage() {
                       <div className="flex items-center gap-3">
                         <div className={`size-10 rounded-xl grid place-items-center shrink-0 ${
                           rec.tipo === 'pdf' ? 'bg-rose-500/20 text-rose-500' :
+                          rec.tipo === 'excel' ? 'bg-emerald-500/20 text-emerald-500' :
                           rec.tipo === 'video' ? 'bg-indigo-500/20 text-indigo-500' :
-                          rec.tipo === 'audio' ? 'bg-emerald-500/20 text-emerald-500' :
                           'bg-cyan-500/20 text-cyan-500'
                         }`}>
                           {rec.tipo === 'pdf' && <FileText className="w-5 h-5" />}
+                          {rec.tipo === 'excel' && <Table className="w-5 h-5" />}
                           {rec.tipo === 'video' && <Video className="w-5 h-5" />}
                           {rec.tipo === 'audio' && <Headphones className="w-5 h-5" />}
-                          {rec.tipo === 'interactivo' && <Sparkles className="w-5 h-5" />}
                         </div>
                         <div>
                           <h4 className={`font-bold text-xs sm:text-sm ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
@@ -838,12 +781,27 @@ export default function ReproductorClasesPage() {
                                 esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
                               }`}
                             >
-                              <Eye className="w-3.5 h-3.5" /> Ver en visor
+                              <Eye className="w-3.5 h-3.5" /> Ver PDF
                             </button>
-                            <button className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow">
+                            <a 
+                              href={rec.archivo || '#'} 
+                              target="_blank" 
+                              rel="noreferrer"
+                              className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow"
+                            >
                               <Download className="w-3.5 h-3.5" /> Descargar
-                            </button>
+                            </a>
                           </>
+                        )}
+                        {rec.tipo === 'excel' && (
+                          <a 
+                            href={rec.archivo || '#'} 
+                            target="_blank" 
+                            rel="noreferrer"
+                            className="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow"
+                          >
+                            <Download className="w-3.5 h-3.5" /> Descargar Excel
+                          </a>
                         )}
                         {rec.tipo === 'video' && (
                           <button 
@@ -852,38 +810,22 @@ export default function ReproductorClasesPage() {
                               esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
                             }`}
                           >
-                            <Eye className="w-3.5 h-3.5" /> Ver cápsula
+                            <Eye className="w-3.5 h-3.5" /> Ver cápula
                           </button>
                         )}
                         {rec.tipo === 'audio' && (
-                          <>
-                            <button 
-                              onClick={() => activarRecursoEnVisor('resumen_audio', 'Podcast de Audio')}
-                              className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border ${
-                                esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
-                              }`}
-                            >
-                              <Eye className="w-3.5 h-3.5" /> Escuchar
-                            </button>
-                            <button className="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow">
-                              <Download className="w-3.5 h-3.5" /> MP3
-                            </button>
-                          </>
-                        )}
-                        {rec.tipo === 'interactivo' && (
                           <button 
-                            onClick={() => activarRecursoEnVisor('resumen_interactivo', 'Flashcards de Repaso')}
+                            onClick={() => activarRecursoEnVisor('resumen_audio', 'Podcast de Audio')}
                             className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border ${
                               esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
                             }`}
                           >
-                            <Eye className="w-3.5 h-3.5" /> Iniciar repaso
+                            <Eye className="w-3.5 h-3.5" /> Escuchar
                           </button>
                         )}
                       </div>
                     </div>
                   ))}
-
                 </div>
               )}
 
@@ -931,7 +873,7 @@ export default function ReproductorClasesPage() {
 
         </div>
 
-        {/* SIDEBAR DERECHO (30%) - TEMARIO CONTINUO (SCROLL LIMITADO Y STICKY) */}
+        {/* SIDEBAR DERECHO (30%) - TEMARIO CONTINUO */}
         <aside className={`w-full lg:w-96 border-t lg:border-t-0 lg:border-l flex flex-col shrink-0 lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:overflow-y-auto transition-colors ${
           esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
         }`}>
@@ -943,14 +885,16 @@ export default function ReproductorClasesPage() {
               <h3 className={`font-bold text-base ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
                 Temario del diplomado
               </h3>
-              <span className={`text-xs font-bold px-2 py-0.5 rounded-md ${
-                esOscuro ? 'bg-indigo-600/20 text-indigo-400' : 'bg-indigo-50 text-indigo-600'
+              <span className={`text-xs font-bold px-2.5 py-1 rounded-md border ${
+                diplomadoActual.avancePorcentaje > 0 
+                  ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' 
+                  : esOscuro ? 'bg-slate-800 text-slate-400 border-slate-700' : 'bg-slate-100 text-slate-600 border-slate-200'
               }`}>
                 {diplomadoActual.avancePorcentaje}%
               </span>
             </div>
             
-            {/* Barra de progreso de avance curricular */}
+            {/* Barra de progreso real calculada */}
             <div className="mt-3">
               <div className="flex items-center justify-between text-[11px] mb-1.5">
                 <span className={esOscuro ? 'text-slate-400' : 'text-slate-500'}>
@@ -969,12 +913,13 @@ export default function ReproductorClasesPage() {
             </div>
           </div>
 
-          {/* Lista Continua de Módulos y Clases (Llega exactamente hasta la última clase) */}
+          {/* Lista Continua de Módulos y Clases */}
           <div className="p-4 space-y-6 pb-8">
             {diplomadoActual.modulos.map((mod: any) => {
+              const estaModCompletado = Boolean(completadosMap[mod.codigo] || mod.completado);
+
               return (
                 <div key={mod.id} className="space-y-2">
-                  {/* Encabezado del Módulo (Separador limpio y continuo) */}
                   <div className={`pt-2 pb-2 px-1 border-b flex items-center justify-between ${
                     esOscuro ? 'border-slate-800 text-slate-200' : 'border-slate-200 text-slate-800'
                   }`}>
@@ -986,18 +931,22 @@ export default function ReproductorClasesPage() {
                         {mod.nombre}
                       </h4>
                     </div>
-                    <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-md shrink-0 ml-2 ${
-                      esOscuro ? 'bg-slate-800 text-slate-400' : 'bg-slate-100 text-slate-600'
-                    }`}>
-                      {mod.clases.length} clases
-                    </span>
+                    <button
+                      onClick={() => toggleCompletarLeccion(mod.codigo)}
+                      className={`text-[10px] font-semibold px-2 py-0.5 rounded-md shrink-0 ml-2 border transition-all ${
+                        estaModCompletado
+                          ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
+                          : esOscuro ? 'bg-slate-800 text-slate-400 border-slate-700' : 'bg-slate-100 text-slate-600 border-slate-200'
+                      }`}
+                    >
+                      {estaModCompletado ? 'Completado ✓' : `${mod.clases.length} clases`}
+                    </button>
                   </div>
 
-                  {/* Lista de Clases del Módulo (Directas, sin duración y con check de estado) */}
                   <div className="space-y-1">
                     {mod.clases.map((clase: ClaseCompleta) => {
                       const esClaseSeleccionada = claseActual?.id === clase.id;
-                      const estaCompletada = clase.completada;
+                      const estaCompletada = estaModCompletado || clase.completada;
 
                       return (
                         <button 

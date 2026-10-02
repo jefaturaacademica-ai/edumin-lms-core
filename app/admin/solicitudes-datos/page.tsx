@@ -64,6 +64,7 @@ export default function SolicitudesDatosAdminPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           studentId: sol.estudianteId,
+          solicitudId: sol.id,
           nombres: sol.nombresSolicitados,
           apellidos: sol.apellidosSolicitados,
           dni_ce: sol.dniSolicitado,
@@ -88,8 +89,23 @@ export default function SolicitudesDatosAdminPage() {
     setTimeout(() => setMensajeExito(null), 4000);
   };
 
-  const rechazarSolicitud = (id: string) => {
-    setSolicitudes(prev => prev.map(s => s.id === id ? { ...s, estado: 'Rechazada' } : s));
+  const rechazarSolicitud = async (sol: any) => {
+    const solId = typeof sol === 'string' ? sol : sol?.id;
+    try {
+      await fetch('/api/admin/solicitudes-datos', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          solicitudId: solId,
+          studentId: typeof sol === 'object' ? sol.estudianteId : undefined,
+          accion: 'rechazar'
+        })
+      });
+    } catch (err) {
+      console.error(err);
+    }
+
+    setSolicitudes(prev => prev.map(s => s.id === solId ? { ...s, estado: 'Rechazada' } : s));
     setMensajeExito('Solicitud rechazada correctamente.');
     setTimeout(() => setMensajeExito(null), 3000);
   };

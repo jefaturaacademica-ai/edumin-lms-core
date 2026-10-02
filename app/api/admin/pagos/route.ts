@@ -37,7 +37,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
 
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CREDITO_')) {
     try {
-      const jsonStr = pag.metodo.substring(pag.metodo.indexOf('|') + 1);
+      const jsonStr = pag.metodo.substring(pag.metodo.indexOf('|') + 1).trim();
       const parsed = JSON.parse(jsonStr);
       num_credito = parsed.num_credito || num_credito;
       if (Array.isArray(parsed.cuotas)) {

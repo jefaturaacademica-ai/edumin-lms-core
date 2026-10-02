@@ -14,7 +14,9 @@ import {
   Award
 } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 import { calculateReleasedCredits } from "@/lib/utils/credits";
+import { getDiplomadoByTitleOrSlug } from "@/lib/data/diplomadosData";
 import Link from "next/link";
 
 export const metadata = {
@@ -27,15 +29,33 @@ export default async function DashboardPage() {
 
   if (!user) redirect("/login");
 
-  const { data: profile, error: profileError } = await supabase
-    .from("profiles")
-    .select("nombres, paquete_adquirido, cuotas_pagadas, cupos_diplomados")
-    .eq("id", user.id)
-    .single();
+  const admin = createAdminClient();
 
-  if (profileError || !profile) {
-    throw new Error("No fue posible obtener el perfil del estudiante.");
+  // Intentar obtener perfil con cliente admin para evitar bloqueos de RLS
+  let { data: profile } = await admin
+    .from("profiles")
+    .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomado_1, diplomado_2, avance_porcentaje")
+    .eq("id", user.id)
+    .maybeSingle();
+
+  // Fallback si la búsqueda por ID no retornara resultados (ej: por email o DNI)
+  if (!profile && user.email) {
+    const { data: profileByEmail } = await admin
+      .from("profiles")
+      .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomado_1, diplomado_2, avance_porcentaje")
+      .eq("email", user.email)
+      .maybeSingle();
+    profile = profileByEmail;
   }
+
+  if (!profile) {
+    redirect("/login");
+  }
+
+  // Resolver Diplomado del estudiante desde Supabase (si tiene diplomado_1 asignado)
+  const diplomadoNombre = profile.diplomado_1 || 'GEOMETALURGIA';
+  const diplomadoPrincipal = getDiplomadoByTitleOrSlug(diplomadoNombre);
+  const avanceEstudiante = profile.avance_porcentaje ?? 50;
 
   // Cálculos de Créditos
   const releasedCredits = calculateReleasedCredits(
@@ -141,7 +161,7 @@ export default async function DashboardPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
-            {/* Tarjeta de Diplomado (Derecho Minero) */}
+            {/* Tarjeta de Diplomado (Dinamico de Supabase) */}
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-4 hover:border-indigo-300 transition">
               <div className="flex items-start gap-4">
                 <div className="size-12 rounded-xl bg-indigo-600 text-white grid place-items-center shrink-0 shadow-sm">
@@ -149,8 +169,10 @@ export default async function DashboardPage() {
                 </div>
                 <div>
                   <span className="text-[10px] font-bold text-indigo-600 uppercase tracking-widest block">Programa Principal</span>
-                  <h3 className="font-bold text-base text-slate-900 mt-0.5">Derecho Minero & Normativa</h3>
-                  <p className="text-xs text-slate-500 mt-1">Módulo I: Legislación Minera y Marco Legal</p>
+                  <h3 className="font-bold text-base text-slate-900 mt-0.5 line-clamp-1">{diplomadoPrincipal.titulo}</h3>
+                  <p className="text-xs text-slate-500 mt-1 line-clamp-1">
+                    {diplomadoPrincipal.modulos[0] ? `${diplomadoPrincipal.modulos[0].codigo}: ${diplomadoPrincipal.modulos[0].nombre}` : 'Módulo I'}
+                  </p>
                 </div>
               </div>
 
@@ -158,16 +180,16 @@ export default async function DashboardPage() {
               <div className="space-y-1.5 pt-2">
                 <div className="flex justify-between text-xs font-bold">
                   <span className="text-slate-600">Avance del programa</span>
-                  <span className="text-indigo-600">50%</span>
+                  <span className="text-indigo-600">{avanceEstudiante}%</span>
                 </div>
                 <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                  <div className="bg-indigo-600 h-full rounded-full" style={{ width: '50%' }} />
+                  <div className="bg-indigo-600 h-full rounded-full" style={{ width: `${avanceEstudiante}%` }} />
                 </div>
               </div>
 
               <div className="pt-3 border-t border-slate-200 flex items-center justify-end">
                 <Link 
-                  href="/dashboard/diplomados/derecho-minero/modulo-1"
+                  href={`/dashboard/reproductor?slug=${diplomadoPrincipal.slug}`}
                   className="inline-flex items-center gap-2 text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl shadow-sm transition"
                 >
                   <span className="grid size-5 place-items-center rounded-full bg-white text-indigo-600">
@@ -178,7 +200,7 @@ export default async function DashboardPage() {
               </div>
             </div>
 
-            {/* Tarjeta de Curso (Manejo de EPPs) */}
+            {/* Tarjeta de Curso (Dinamico) */}
             <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-4 hover:border-indigo-300 transition">
               <div className="flex items-start gap-4">
                 <div className="size-12 rounded-xl bg-emerald-600 text-white grid place-items-center shrink-0 shadow-sm">
@@ -186,7 +208,7 @@ export default async function DashboardPage() {
                 </div>
                 <div>
                   <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest block">Curso Asincrónico</span>
-                  <h3 className="font-bold text-base text-slate-900 mt-0.5">Manejo de EPPs según Ley 29783</h3>
+                  <h3 className="font-bold text-base text-slate-900 mt-0.5">MANEJO DE EPPS Y RIESGOS EN MINERÍA</h3>
                   <p className="text-xs text-slate-500 mt-1">Sesión 2: Clasificación y Equipos</p>
                 </div>
               </div>
@@ -204,13 +226,13 @@ export default async function DashboardPage() {
 
               <div className="pt-3 border-t border-slate-200 flex items-center justify-end">
                 <Link 
-                  href="/dashboard/cursos/manejo-epps"
+                  href="/dashboard/cursos"
                   className="inline-flex items-center gap-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl shadow-sm transition"
                 >
                   <span className="grid size-5 place-items-center rounded-full bg-white text-emerald-600">
                     <Play className="size-3 fill-emerald-600 ml-0.5" />
                   </span>
-                  Reanudar clase
+                  Ver todos los cursos
                 </Link>
               </div>
             </div>

@@ -142,9 +142,18 @@ export default function PerfilEstudiante() {
     e.target.value = '';
   };
 
-  const guardarNuevaFoto = () => {
+  const guardarNuevaFoto = async () => {
     if (fotoTemporal) {
       actualizarFotoPerfil(fotoTemporal);
+      try {
+        await fetch('/api/dashboard/perfil', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'actualizar_foto', foto_perfil: fotoTemporal })
+        });
+      } catch (e) {
+        console.error('Error guardando foto en Supabase:', e);
+      }
       setFotoTemporal(null);
       setErrorFoto(null);
     }
@@ -161,7 +170,7 @@ export default function PerfilEstudiante() {
     setModalAbierto(true);
   };
 
-  const handleCambiarPassword = (e: React.FormEvent) => {
+  const handleCambiarPassword = async (e: React.FormEvent) => {
     e.preventDefault();
     setPasswordError('');
 
@@ -174,17 +183,44 @@ export default function PerfilEstudiante() {
       return;
     }
 
-    setPasswordExito(true);
-    setTimeout(() => {
-      setModalPasswordAbierto(false);
-      setPasswordExito(false);
-      setFormPassword({ actual: '', nueva: '', confirmar: '' });
-    }, 2000);
+    try {
+      const { error } = await supabase.auth.updateUser({ password: formPassword.nueva });
+      if (error) {
+        setPasswordError(error.message);
+        return;
+      }
+      setPasswordExito(true);
+      setTimeout(() => {
+        setModalPasswordAbierto(false);
+        setPasswordExito(false);
+        setFormPassword({ actual: '', nueva: '', confirmar: '' });
+      }, 2000);
+    } catch (err: any) {
+      setPasswordError(err.message || 'Error al actualizar la contraseña.');
+    }
   };
 
-  const enviarSolicitudAdministracion = (e: React.FormEvent) => {
+  const enviarSolicitudAdministracion = async (e: React.FormEvent) => {
     e.preventDefault();
     setSolicitudEnviada(true);
+
+    try {
+      await fetch('/api/dashboard/perfil', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'solicitud_cambio_datos',
+          nombresSolicitados: formEdicion.nombres,
+          apellidosSolicitados: formEdicion.apellidos,
+          dniSolicitado: formEdicion.dni_ce,
+          celular: formEdicion.celular,
+          residencia: formEdicion.residencia,
+          declaracionJurada
+        })
+      });
+    } catch (err) {
+      console.error('Error enviando solicitud a Supabase:', err);
+    }
 
     actualizarDatosUsuario({
       nombres: formEdicion.nombres,

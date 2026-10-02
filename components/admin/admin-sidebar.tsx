@@ -56,7 +56,7 @@ export default function AdminSidebar() {
           color: 'text-indigo-400'
         },
         {
-          href: '/admin/solicitudes-datos',
+          href: '/admin/estudiantes',
           label: 'Estudiantes y secretaría',
           icon: UserCheck,
           color: 'text-emerald-400'
