@@ -39,8 +39,8 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
     { name: 'Mi perfil', path: '/dashboard/perfil', icon: User },
   ];
 
-  const primerNombre = nombres.trim().split(' ')[0] || 'Juan';
-  const primerApellido = apellidos.trim().split(' ')[0] || 'Quispe';
+  const primerNombre = nombres ? nombres.trim().split(' ')[0] : 'Estudiante';
+  const primerApellido = apellidos ? apellidos.trim().split(' ')[0] : '';
 
   return (
     <div className="min-h-screen md:h-screen md:overflow-hidden bg-slate-50 flex flex-col md:flex-row">

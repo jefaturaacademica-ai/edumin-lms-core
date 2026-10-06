@@ -17,6 +17,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { calculateReleasedCredits } from "@/lib/utils/credits";
 import { getDiplomadoByTitleOrSlug } from "@/lib/data/diplomadosData";
+import { parseDiplomadosFromProfile } from "@/lib/utils/profileParser";
 import Link from "next/link";
 
 export const metadata = {
@@ -34,7 +35,7 @@ export default async function DashboardPage() {
   // Intentar obtener perfil con cliente admin para evitar bloqueos de RLS
   let { data: profile } = await admin
     .from("profiles")
-    .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomado_1, diplomado_2, avance_porcentaje")
+    .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomados, diplomado_1, diplomado_2, avance_porcentaje")
     .eq("id", user.id)
     .maybeSingle();
 
@@ -42,30 +43,43 @@ export default async function DashboardPage() {
   if (!profile && user.email) {
     const { data: profileByEmail } = await admin
       .from("profiles")
-      .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomado_1, diplomado_2, avance_porcentaje")
+      .select("id, nombres, apellidos, dni_ce, email, paquete_adquirido, cuotas_pagadas, cupos_diplomados, diplomados, diplomado_1, diplomado_2, avance_porcentaje")
       .eq("email", user.email)
       .maybeSingle();
     profile = profileByEmail;
   }
 
-  if (!profile) {
-    redirect("/login");
-  }
+  const safeProfile = profile || {
+    id: user.id,
+    nombres: user.user_metadata?.nombres || user.email?.split('@')[0] || 'Estudiante',
+    apellidos: user.user_metadata?.apellidos || '',
+    dni_ce: 'Sin DNI',
+    email: user.email || '',
+    paquete_adquirido: 'FULL',
+    cuotas_pagadas: 1,
+    cupos_diplomados: 0,
+    diplomados: null,
+    diplomado_1: 'DERECHO MINERO',
+    diplomado_2: null,
+    avance_porcentaje: 0
+  };
 
-  // Resolver Diplomado del estudiante desde Supabase (si tiene diplomado_1 asignado)
-  const diplomadoNombre = profile.diplomado_1 || 'GEOMETALURGIA';
+  // Resolver Diplomado real del estudiante desde Supabase
+  const parsedDips = parseDiplomadosFromProfile(safeProfile);
+  const targetDip = parsedDips[0];
+  const diplomadoNombre = targetDip?.titulo || (typeof safeProfile.diplomado_1 === 'string' && !safeProfile.diplomado_1.startsWith('DIPLOMADOS_LIST|') ? safeProfile.diplomado_1 : 'DERECHO MINERO');
   const diplomadoPrincipal = getDiplomadoByTitleOrSlug(diplomadoNombre);
-  const avanceEstudiante = profile.avance_porcentaje ?? 50;
+  const avanceEstudiante = targetDip?.avance ?? safeProfile.avance_porcentaje ?? 0;
 
   // Cálculos de Créditos
   const releasedCredits = calculateReleasedCredits(
-    profile.paquete_adquirido,
-    profile.cuotas_pagadas,
+    safeProfile.paquete_adquirido,
+    safeProfile.cuotas_pagadas,
   );
-  const availableCredits = Math.max(0, releasedCredits - profile.cupos_diplomados);
+  const availableCredits = Math.max(0, releasedCredits - (safeProfile.cupos_diplomados || 0));
   
   // Lógica de Beneficios Premium
-  const isPremium = profile.paquete_adquirido === "FULL" || profile.paquete_adquirido === "ILIMITADO";
+  const isPremium = safeProfile.paquete_adquirido === "FULL" || safeProfile.paquete_adquirido === "ILIMITADO";
   const dreambuilderUrl = process.env.NEXT_PUBLIC_DREAMBUILDER_URL ?? "https://dreambuilder.com";
   const bolsaTrabajoUrl = process.env.NEXT_PUBLIC_BOLSA_TRABAJO_URL ?? "https://chat.whatsapp.com/edumin-bolsa-exclusiva";
 
@@ -73,21 +87,21 @@ export default async function DashboardPage() {
   let costoTotal = 0;
   let totalCuotas = 0;
   
-  if (profile.paquete_adquirido === 'COMPLETO') {
+  if (safeProfile.paquete_adquirido === 'COMPLETO') {
     costoTotal = 540;
     totalCuotas = 3;
-  } else if (profile.paquete_adquirido === 'FULL') {
+  } else if (safeProfile.paquete_adquirido === 'FULL') {
     costoTotal = 900;
     totalCuotas = 3;
-  } else if (profile.paquete_adquirido === 'ILIMITADO') {
+  } else if (safeProfile.paquete_adquirido === 'ILIMITADO') {
     costoTotal = 1500;
     totalCuotas = 5;
   }
 
-  const cuotaMonto = costoTotal / totalCuotas;
-  const cuotasEfectivas = Math.min(profile.cuotas_pagadas, totalCuotas);
+  const cuotaMonto = totalCuotas > 0 ? costoTotal / totalCuotas : 0;
+  const cuotasEfectivas = Math.min(safeProfile.cuotas_pagadas || 0, totalCuotas);
   const montoPagado = cuotasEfectivas * cuotaMonto;
-  const saldoPendiente = costoTotal - montoPagado;
+  const saldoPendiente = Math.max(0, costoTotal - montoPagado);
   const deudaSaldada = saldoPendiente <= 0;
 
   const fechaProximoPago = new Date();
@@ -113,7 +127,7 @@ export default async function DashboardPage() {
                 Tu espacio de crecimiento profesional
               </div>
               <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl drop-shadow-md">
-                ¡Hola, <span className="text-indigo-400 font-black">{profile.nombres}</span>, bienvenid@ a tu ruta de aprendizaje!
+                ¡Hola, <span className="text-indigo-400 font-black">{safeProfile.nombres}</span>, bienvenid@ a tu ruta de aprendizaje!
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-7 text-slate-200 font-medium drop-shadow">
                 Accede a tus programas de especialización en minería, seguridad, industria y negocios diseñados para potenciar tu perfil ejecutivo.
@@ -125,7 +139,7 @@ export default async function DashboardPage() {
               <div className="flex flex-col">
                 <span className="text-xs font-medium text-slate-400 uppercase tracking-wider">Paquete activo</span>
                 <span className="text-sm font-bold text-indigo-200 tracking-wide">
-                  {profile.paquete_adquirido}
+                  {safeProfile.paquete_adquirido}
                 </span>
               </div>
             </div>
@@ -265,7 +279,7 @@ export default async function DashboardPage() {
               )}
             </p>
             <p className="mt-1 text-xs text-slate-400">
-              {releasedCredits} liberados por cuota · {profile.cupos_diplomados} usados
+              {releasedCredits} liberados por cuota · {safeProfile.cupos_diplomados || 0} usados
             </p>
           </div>
 

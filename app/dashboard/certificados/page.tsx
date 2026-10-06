@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { 
   Award, 
   FileText, 
@@ -25,6 +25,7 @@ import {
   ChevronUp
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
+import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
 
 export default function CertificadosPage() {
   const { esOscuro } = useTheme();
@@ -90,97 +91,123 @@ export default function CertificadosPage() {
   const [estadoSimuladoDev, setEstadoSimuladoDev] = useState<'cero' | 'un_modular' | 'vista_actual'>('vista_actual');
   const [mostrarPanelDev, setMostrarPanelDev] = useState(true);
 
-  // Paquete de usuario
-  const paqueteUsuario = 'ILIMITADO';
-  const diplomadosCompletados = [
-    'Seguridad y Salud Ocupacional en la Industria y Minería',
-    'Gerencia Estratégica y Liderazgo de Equipos en la Minería'
-  ];
-  const [diplomadoSeleccionado, setDiplomadoSeleccionado] = useState(diplomadosCompletados[0]);
+  // Nombre completo del estudiante desde Supabase
+  const nombreEstudianteCompleto = perfilEstudiante
+    ? `${perfilEstudiante.nombres || ''} ${perfilEstudiante.apellidos || ''}`.trim()
+    : 'JUAN CARLOS QUISPE RAMOS';
 
-  // 1. CERTIFICADOS MODULARES BASE (DATOS REALES EXTRAÍDOS DE LOS JSON DEL PROYECTO)
-  const certificadosModularesBase = [
-    { id: 1, modulo: 'Módulo I: Normativa en Industria y Minería', diplomado: 'Seguridad y Salud Ocupacional en la Industria y Minería', nota: 17, fecha: '15/01/2026', codigo: 'EDUMIN-MOD-101' },
-    { id: 2, modulo: 'Módulo II: Normativa Internacional y Gestión del Medio Ambiente', diplomado: 'Seguridad y Salud Ocupacional en la Industria y Minería', nota: 16, fecha: '20/02/2026', codigo: 'EDUMIN-MOD-102' },
-    { id: 3, modulo: 'Módulo III: Inspección, Investigación y Respuesta a Emergencias en Minería', diplomado: 'Seguridad y Salud Ocupacional en la Industria y Minería', nota: 18, fecha: '10/03/2026', codigo: 'EDUMIN-MOD-103' },
-    { id: 4, modulo: 'Módulo I: Panorama de la Industria Minera', diplomado: 'Gerencia Estratégica y Liderazgo de Equipos en la Minería', nota: 16, fecha: '12/03/2026', codigo: 'EDUMIN-MOD-201' },
-    { id: 5, modulo: 'Módulo II: Liderazgo Gerencial en la Industria Minera', diplomado: 'Gerencia Estratégica y Liderazgo de Equipos en la Minería', nota: 18, fecha: '28/04/2026', codigo: 'EDUMIN-MOD-202' },
-  ];
+  const paqueteUsuario = perfilEstudiante?.paquete_adquirido || 'COMPLETO';
 
-  // Datos dinámicos de modulares según el simulador dev
-  const certificadosModulares = estadoSimuladoDev === 'cero'
-    ? []
-    : (estadoSimuladoDev === 'un_modular'
-        ? [certificadosModularesBase[0]]
-        : certificadosModularesBase);
-
-  // Agrupación dinámica de modulares por diplomado
-  const modularesPorDiplomado = certificadosModulares.reduce((acc, cert) => {
-    if (!acc[cert.diplomado]) {
-      acc[cert.diplomado] = [];
-    }
-    acc[cert.diplomado].push(cert);
-    return acc;
-  }, {} as Record<string, typeof certificadosModulares>);
-
-  // 2. DIPLOMAS GENERALES (Desbloqueados con 3 modulares aprobados)
-  const diplomadosProgreso = estadoSimuladoDev === 'cero'
-    ? [
+  // 1. DIPLOMAS GENERALES DINÁMICOS DESDE SUPABASE
+  const diplomadosProgreso = useMemo(() => {
+    if (!perfilEstudiante) {
+      return [
         {
-          id: 'seguridad-minera',
-          titulo: 'Seguridad y Salud Ocupacional en la Industria y Minería',
-          modularesAprobados: 0,
+          id: 'geometalurgia',
+          titulo: 'GEOMETALURGIA',
+          modularesAprobados: 3,
           modularesTotales: 3,
-          promedio: 0,
-          completado: false,
-          codigo: 'EDUMIN-DIP-001'
+          promedio: 18.0,
+          completado: true,
+          fecha: '15/03/2026',
+          codigo: 'EDUMIN-DIP-71234567-GEO'
         }
-      ]
-    : (estadoSimuladoDev === 'un_modular'
-        ? [
-            {
-              id: 'seguridad-minera',
-              titulo: 'Seguridad y Salud Ocupacional en la Industria y Minería',
-              modularesAprobados: 1,
-              modularesTotales: 3,
-              promedio: 17.0,
-              completado: false,
-              codigo: 'EDUMIN-DIP-001'
-            }
-          ]
-        : [
-            {
-              id: 'seguridad-minera',
-              titulo: 'Seguridad y Salud Ocupacional en la Industria y Minería',
-              modularesAprobados: 3,
-              modularesTotales: 3,
-              promedio: 17.0,
-              completado: true,
-              codigo: 'EDUMIN-DIP-001'
-            },
-            {
-              id: 'gestion-estrategica',
-              titulo: 'Gerencia Estratégica y Liderazgo de Equipos en la Minería',
-              modularesAprobados: 2,
-              modularesTotales: 3,
-              promedio: 17.0,
-              completado: false,
-              codigo: 'EDUMIN-DIP-002'
-            }
-          ]);
+      ];
+    }
 
-  // 3. CERTIFICADOS DE CURSOS (UNIFICADOS: CURSOS Y TALLERES SIN MENCIONAR DOCENTE)
-  const certificadosCursosBase = [
-    { id: 'c1', titulo: "GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA", categoria: "Seguridad & SSOMA", horas: "15 Horas", fecha: "18/02/2026", nota: 18, codigo: 'EDUMIN-CUR-801' },
-    { id: 'c2', titulo: "SISTEMAS INTEGRADOS DE GESTIÓN HSEQ (ISO 9001, 14001, 45001)", categoria: "Seguridad & SSOMA", horas: "40 Horas", fecha: "05/03/2026", nota: 17, codigo: 'EDUMIN-CUR-802' },
-    { id: 'c3', titulo: "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015", categoria: "Legal & Negocios", horas: "30 Horas", fecha: "20/03/2026", nota: 19, codigo: 'EDUMIN-CUR-803' },
-    { id: 't1', titulo: "TALLER PRÁCTICO EN VIVO: PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS", categoria: "Taller Gratuito", horas: "08 Horas", fecha: "25/02/2026", codigo: 'EDUMIN-TAL-901' },
-    { id: 't2', titulo: "MASTERCLASS GRATUITA: BIG DATA E IA EN LA MINERÍA 4.0", categoria: "Webinar Gratuito", horas: "06 Horas", fecha: "14/03/2026", codigo: 'EDUMIN-TAL-902' }
-  ];
+    const rawDiplomados = parseDiplomadosFromProfile(perfilEstudiante);
+    return rawDiplomados.map((d: any, idx: number) => {
+      const modulos = d.modulos || [];
+      const modulosCompletados = modulos.filter((m: any) => m.completado);
+      const modularesAprobados = modulosCompletados.length;
+      const modularesTotales = modulos.length || 3;
+      const sumaNotas = modulosCompletados.reduce((sum: number, m: any) => sum + (Number(m.nota) || 0), 0);
+      const promedio = modularesAprobados > 0 ? Number((sumaNotas / modularesAprobados).toFixed(1)) : 0;
+      const completado = d.completado || (modularesAprobados === modularesTotales && modularesTotales > 0);
 
-  const certificadosCursos = (estadoSimuladoDev === 'cero' || estadoSimuladoDev === 'un_modular')
-    ? certificadosCursosBase.slice(0, 4)
-    : certificadosCursosBase;
+      return {
+        id: d.id || d.slug || `dip-${idx + 1}`,
+        titulo: d.titulo || 'Diplomado',
+        modularesAprobados,
+        modularesTotales,
+        promedio: d.promedio || promedio,
+        completado,
+        fecha: d.fecha || '15/03/2026',
+        codigo: d.codigo || `EDUMIN-DIP-${perfilEstudiante.dni_ce || '71234567'}-${(d.id || 'DIP').substring(0, 3).toUpperCase()}`
+      };
+    });
+  }, [perfilEstudiante]);
+
+  // 2. CERTIFICADOS MODULARES DINÁMICOS DESDE SUPABASE
+  const certificadosModulares = useMemo(() => {
+    if (!perfilEstudiante) {
+      return [
+        { id: 1, modulo: 'Módulo 01: GEOTECNIA DE SUELOS Y ROCAS', diplomado: 'GEOMETALURGIA', nota: 18, fecha: '15/01/2026', codigo: 'EDUMIN-MOD-71234567-GEO1' },
+        { id: 2, modulo: 'Módulo 02: MONITOREO GEOTÉCNICO', diplomado: 'GEOMETALURGIA', nota: 17, fecha: '20/02/2026', codigo: 'EDUMIN-MOD-71234567-GEO2' },
+        { id: 3, modulo: 'Módulo 03: ANÁLISIS HIDROGEOLÓGICO', diplomado: 'GEOMETALURGIA', nota: 19, fecha: '15/03/2026', codigo: 'EDUMIN-MOD-71234567-GEO3' },
+        { id: 4, modulo: 'Módulo 01: Marco Legal e Institucional del Sector Minero', diplomado: 'DERECHO MINERO', nota: 18, fecha: '10/02/2026', codigo: 'EDUMIN-MOD-71234567-DER1' },
+        { id: 5, modulo: 'Módulo 02: Procedimientos Catastrales y Concesiones', diplomado: 'DERECHO MINERO', nota: 16, fecha: '05/03/2026', codigo: 'EDUMIN-MOD-71234567-DER2' },
+      ];
+    }
+
+    const rawDiplomados = parseDiplomadosFromProfile(perfilEstudiante);
+    const result: any[] = [];
+    let counter = 1;
+
+    rawDiplomados.forEach((d: any) => {
+      (d.modulos || []).forEach((m: any) => {
+        if (m.completado) {
+          result.push({
+            id: counter++,
+            modulo: `${m.codigo || 'Módulo'}: ${m.nombre}`,
+            diplomado: d.titulo,
+            nota: m.nota || 18,
+            fecha: m.fecha || '15/01/2026',
+            codigo: m.codigo_cert || `EDUMIN-MOD-${perfilEstudiante.dni_ce || '71234567'}-${counter}`
+          });
+        }
+      });
+    });
+
+    return result;
+  }, [perfilEstudiante]);
+
+  // Agrupación de modulares por diplomado
+  const modularesPorDiplomado = useMemo(() => {
+    return certificadosModulares.reduce((acc: Record<string, any[]>, cert: any) => {
+      if (!acc[cert.diplomado]) {
+        acc[cert.diplomado] = [];
+      }
+      acc[cert.diplomado].push(cert);
+      return acc;
+    }, {});
+  }, [certificadosModulares]);
+
+  // 3. CERTIFICADOS DE CURSOS DINÁMICOS DESDE SUPABASE
+  const certificadosCursos = useMemo(() => {
+    if (!perfilEstudiante) {
+      return [
+        { id: 'c1', titulo: "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783", categoria: "Seguridad & SSOMA", horas: "24 Horas", fecha: "18/02/2026", nota: 18, codigo: 'EDUMIN-CUR-71234567-01' },
+        { id: 'c2', titulo: "IPERC CONTINUO EN TRABAJOS DE ALTO RIESGO", categoria: "Seguridad & SSOMA", horas: "16 Horas", fecha: "05/03/2026", nota: 17, codigo: 'EDUMIN-CUR-71234567-02' },
+        { id: 't1', titulo: "TALLER PRÁCTICO EN VIVO: PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS", categoria: "Taller Especializado", horas: "08 Horas", fecha: "25/02/2026", nota: 19, codigo: 'EDUMIN-TAL-71234567-01' }
+      ];
+    }
+
+    const rawCursos = parseCursosFromProfile(perfilEstudiante);
+    return rawCursos.filter((c: any) => c.completado).map((c: any, idx: number) => ({
+      id: c.id || `cur-${idx + 1}`,
+      titulo: c.titulo,
+      categoria: c.categoria || 'Seguridad & SSOMA',
+      horas: c.horas || '24 Horas',
+      fecha: c.fecha || '18/02/2026',
+      nota: c.nota,
+      codigo: c.codigo || `EDUMIN-CUR-${perfilEstudiante.dni_ce || '71234567'}-${idx + 1}`
+    }));
+  }, [perfilEstudiante]);
+
+  const [diplomadoSeleccionado, setDiplomadoSeleccionado] = useState(
+    diplomadosProgreso[0]?.titulo || 'GEOMETALURGIA'
+  );
 
   // Habilitación de Certificados Especiales
   const tieneDiplomaGeneral = diplomadosProgreso.some(d => d.completado);
@@ -777,102 +804,172 @@ export default function CertificadosPage() {
           </div>
         )}
 
-        {/* MODAL DE VISTA PREVIA DEL CERTIFICADO (DOCUMENTO INTERACTIVO) */}
-        {modalVistaPrevia?.abierto && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in">
-            <div className={`rounded-3xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative border space-y-6 ${
-              esOscuro ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'
-            }`}>
-              <button 
-                onClick={() => setModalVistaPrevia(null)} 
-                className="absolute right-6 top-6 text-slate-400 hover:text-white font-bold p-1 rounded-lg cursor-pointer"
-              >
-                ✕
-              </button>
+        {/* MODAL DE VISTA PREVIA DEL CERTIFICADO (DOCUMENTO INTERACTIVO CON PLANTILLA MAESTRA) */}
+        {modalVistaPrevia?.abierto && (() => {
+          const estilo = (function(tipo: string) {
+            const t = (tipo || '').toUpperCase();
+            if (t.includes('DIPLOM')) {
+              return {
+                borde: 'border-amber-500/80 bg-gradient-to-br from-amber-950/90 via-slate-950 to-amber-950/40 text-amber-100 shadow-amber-500/20',
+                badgeColor: 'text-amber-400 bg-amber-500/20 border-amber-500/30',
+                tituloHeader: 'DIPLOMA DE ALTA ESPECIALIZACIÓN',
+                otorgamiento: 'Por haber cumplido y aprobado con excelencia los 3 módulos del programa oficial de:',
+                institucion: 'ESCUELA DE ESPECIALIZACIÓN MINERA - EDUMIN',
+                accentColor: 'text-amber-300'
+              };
+            }
+            if (t.includes('MODULAR')) {
+              return {
+                borde: 'border-indigo-500/80 bg-gradient-to-br from-indigo-950/90 via-slate-950 to-blue-950/40 text-indigo-100 shadow-indigo-500/20',
+                badgeColor: 'text-indigo-400 bg-indigo-500/20 border-indigo-500/30',
+                tituloHeader: 'CERTIFICADO MODULAR OFICIAL',
+                otorgamiento: 'Por haber completado satisfactoriamente la evaluación y contenidos del módulo:',
+                institucion: 'ESCUELA DE ESPECIALIZACIÓN MINERA - EDUMIN',
+                accentColor: 'text-indigo-300'
+              };
+            }
+            if (t.includes('CURSO')) {
+              return {
+                borde: 'border-emerald-500/80 bg-gradient-to-br from-emerald-950/90 via-slate-950 to-teal-950/40 text-emerald-100 shadow-emerald-500/20',
+                badgeColor: 'text-emerald-400 bg-emerald-500/20 border-emerald-500/30',
+                tituloHeader: 'CERTIFICADO DE ESPECIALIZACIÓN PROFESIONAL',
+                otorgamiento: 'Por su destacada participación y aprobación del curso técnico de:',
+                institucion: 'ESCUELA DE ESPECIALIZACIÓN MINERA - EDUMIN',
+                accentColor: 'text-emerald-300'
+              };
+            }
+            if (t.includes('CIP')) {
+              return {
+                borde: 'border-rose-600/80 bg-gradient-to-br from-rose-950/90 via-slate-950 to-red-950/40 text-rose-100 shadow-rose-600/20',
+                badgeColor: 'text-rose-400 bg-rose-500/20 border-rose-500/30',
+                tituloHeader: 'CERTIFICACIÓN CONVENIO OFICIAL CIP',
+                otorgamiento: 'En convenio interinstitucional con el Colegio de Ingenieros del Perú (CIP), acredita a:',
+                institucion: 'COLEGIO DE INGENIEROS DEL PERÚ (CIP) & EDUMIN',
+                accentColor: 'text-rose-300'
+              };
+            }
+            if (t.includes('MIAMI')) {
+              return {
+                borde: 'border-cyan-500/80 bg-gradient-to-br from-cyan-950/90 via-slate-950 to-indigo-950/40 text-cyan-100 shadow-cyan-500/20',
+                badgeColor: 'text-cyan-400 bg-cyan-500/20 border-cyan-500/30',
+                tituloHeader: 'INTERNATIONAL CERTIFICATE OF COMPLETION',
+                otorgamiento: 'University international partner certificate awarded for professional excellence in:',
+                institucion: 'SAN IGNACIO UNIVERSITY (MIAMI, FL) & EDUMIN',
+                accentColor: 'text-cyan-300'
+              };
+            }
+            return {
+              borde: 'border-purple-500/80 bg-gradient-to-br from-purple-950/90 via-slate-950 to-indigo-950/40 text-purple-100 shadow-purple-500/20',
+              badgeColor: 'text-purple-400 bg-purple-500/20 border-purple-500/30',
+              tituloHeader: 'CONSTANCIA DE TALLER PRÁCTICO EN VIVO',
+              otorgamiento: 'Por su asistencia y participación en el taller especializado de:',
+              institucion: 'ESCUELA DE ESPECIALIZACIÓN MINERA - EDUMIN',
+              accentColor: 'text-purple-300'
+            };
+          })(modalVistaPrevia.tipo);
 
-              <div className="flex items-center gap-3">
-                <div className="size-10 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 grid place-items-center shrink-0">
-                  <Eye className="size-5" />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">Vista Previa del Certificado</h3>
-                  <p className="text-xs text-slate-400">Documento oficial verificado emitido por la plataforma EDUMIN.</p>
-                </div>
-              </div>
-
-              {/* SIMULACIÓN VISUAL DEL CERTIFICADO EN PDF */}
-              <div className="rounded-2xl border-4 border-amber-500/40 p-6 sm:p-8 bg-slate-950 text-white relative overflow-hidden shadow-inner text-center space-y-4">
-                <div className="flex justify-between items-center text-[10px] font-mono text-slate-400 pb-2 border-b border-slate-800">
-                  <span className="text-amber-400 font-bold tracking-widest uppercase">ESCUELA DE ESPECIALIZACIÓN MINERA - EDUMIN</span>
-                  <span>CÓDIGO: {modalVistaPrevia.codigo}</span>
-                </div>
-
-                <div className="py-2">
-                  <span className="text-[10px] font-bold text-indigo-400 uppercase tracking-widest bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
-                    {modalVistaPrevia.categoria}
-                  </span>
-                  <h4 className="text-xl sm:text-2xl font-black text-white mt-3 uppercase leading-tight font-serif tracking-wide">
-                    {modalVistaPrevia.titulo}
-                  </h4>
-                  <p className="text-xs text-slate-300 mt-1 font-medium">{modalVistaPrevia.subtitulo}</p>
-                </div>
-
-                <div className="py-3 border-t border-b border-slate-800/80 my-2">
-                  <p className="text-xs text-slate-400 uppercase tracking-widest">Otorgado a favor de:</p>
-                  <p className="text-lg sm:text-xl font-bold text-amber-300 mt-0.5">ROGER SANALEA</p>
-                  {modalVistaPrevia.nota && (
-                    <p className="text-xs text-emerald-400 font-bold mt-1">Calificación Obtenida: {modalVistaPrevia.nota} / 20</p>
-                  )}
-                </div>
-
-                <div className="flex items-center justify-between pt-2 text-[11px] text-slate-400">
-                  <div>
-                    <span className="block font-bold text-slate-200">Fecha de Emisión:</span>
-                    <span>{modalVistaPrevia.fecha}</span>
-                  </div>
-                  <div className="size-12 bg-white p-1 rounded-lg grid place-items-center">
-                    <div className="size-full bg-slate-900 rounded flex items-center justify-center text-[8px] font-bold text-amber-400 font-mono">
-                      QR OK
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <span className="block font-bold text-slate-200">Firma Institucional:</span>
-                    <span className="text-emerald-400 font-semibold">✓ Verificado QR</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* ACCIONES DEL MODAL DE VISTA PREVIA */}
-              <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
-                <button
-                  onClick={copiarLinkValidacion}
-                  className={`w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border cursor-pointer ${
-                    copiadoLink 
-                      ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' 
-                      : (esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200')
-                  }`}
+          return (
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in">
+              <div className={`rounded-3xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative border space-y-6 ${
+                esOscuro ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'
+              }`}>
+                <button 
+                  onClick={() => setModalVistaPrevia(null)} 
+                  className="absolute right-6 top-6 text-slate-400 hover:text-white font-bold p-1 rounded-lg cursor-pointer"
                 >
-                  {copiadoLink ? <Check className="size-4" /> : <Copy className="size-4" />}
-                  {copiadoLink ? '¡Enlace Copiado!' : 'Copiar Enlace de Validación'}
+                  ✕
                 </button>
 
-                <div className="flex items-center gap-2 w-full sm:w-auto">
-                  <button
-                    onClick={compartirLinkedIn}
-                    className="flex-1 sm:flex-initial bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold px-4 py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-sm cursor-pointer"
-                  >
-                    <Share2 className="size-4" /> Añadir a LinkedIn
-                  </button>
-
-                  <button className="flex-1 sm:flex-initial bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-md cursor-pointer">
-                    <Download className="size-4" /> Descargar
-                  </button>
+                <div className="flex items-center gap-3">
+                  <div className="size-10 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 grid place-items-center shrink-0">
+                    <Eye className="size-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold">Vista Previa del Certificado</h3>
+                    <p className="text-xs text-slate-400">Modelo Máster A4 aplicado dinámicamente según categoría.</p>
+                  </div>
                 </div>
-              </div>
 
+                {/* SIMULACIÓN VISUAL SEGÚN SUPERPLANTILLA MAESTRA SELECCIONADA */}
+                <div className={`rounded-2xl border-4 p-6 sm:p-8 relative overflow-hidden shadow-inner text-center space-y-4 ${estilo.borde}`}>
+                  <div className="flex justify-between items-center text-[10px] font-mono text-slate-400 pb-2 border-b border-white/10">
+                    <span className="font-bold tracking-widest uppercase text-white/90">{estilo.institucion}</span>
+                    <span className="font-bold text-amber-400">CÓDIGO CORRELATIVO: {modalVistaPrevia.codigo}</span>
+                  </div>
+
+                  <div className="py-2">
+                    <span className={`text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border ${estilo.badgeColor}`}>
+                      {modalVistaPrevia.categoria}
+                    </span>
+                    <h4 className="text-xl sm:text-2xl font-black text-white mt-3 uppercase leading-tight font-serif tracking-wide">
+                      {estilo.tituloHeader}
+                    </h4>
+                    <p className="text-xs text-slate-300 mt-2 font-medium italic">{estilo.otorgamiento}</p>
+                    <p className={`text-base sm:text-lg font-bold mt-1 uppercase ${estilo.accentColor}`}>
+                      {modalVistaPrevia.titulo}
+                    </p>
+                    {modalVistaPrevia.subtitulo && (
+                      <p className="text-xs text-slate-400 mt-0.5">{modalVistaPrevia.subtitulo}</p>
+                    )}
+                  </div>
+
+                  <div className="py-3 border-t border-b border-white/10 my-2">
+                    <p className="text-xs text-slate-400 uppercase tracking-widest">Otorgado a favor de:</p>
+                    <p className={`text-xl sm:text-2xl font-black mt-1 ${estilo.accentColor}`}>{nombreEstudianteCompleto.toUpperCase()}</p>
+                    {modalVistaPrevia.nota && (
+                      <p className="text-xs text-emerald-400 font-bold mt-1">Calificación Obtenida: {modalVistaPrevia.nota} / 20</p>
+                    )}
+                  </div>
+
+                  <div className="flex items-center justify-between pt-2 text-[11px] text-slate-400">
+                    <div>
+                      <span className="block font-bold text-slate-200">Fecha de Emisión:</span>
+                      <span>{modalVistaPrevia.fecha}</span>
+                    </div>
+                    <div className="size-12 bg-white p-1 rounded-lg grid place-items-center">
+                      <div className="size-full bg-slate-900 rounded flex items-center justify-center text-[8px] font-bold text-amber-400 font-mono">
+                        QR OK
+                      </div>
+                    </div>
+                    <div className="text-right">
+                      <span className="block font-bold text-slate-200">Firma Institucional:</span>
+                      <span className="text-emerald-400 font-semibold">✓ Verificado QR</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* ACCIONES DEL MODAL DE VISTA PREVIA */}
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2">
+                  <button
+                    onClick={copiarLinkValidacion}
+                    className={`w-full sm:w-auto px-4 py-2.5 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 border cursor-pointer ${
+                      copiadoLink 
+                        ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' 
+                        : (esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200')
+                    }`}
+                  >
+                    {copiadoLink ? <Check className="size-4" /> : <Copy className="size-4" />}
+                    {copiadoLink ? '¡Enlace Copiado!' : 'Copiar Enlace de Validación'}
+                  </button>
+
+                  <div className="flex items-center gap-2 w-full sm:w-auto">
+                    <button
+                      onClick={compartirLinkedIn}
+                      className="flex-1 sm:flex-initial bg-[#0A66C2] hover:bg-[#084e96] text-white font-bold px-4 py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-sm cursor-pointer"
+                    >
+                      <Share2 className="size-4" /> Añadir a LinkedIn
+                    </button>
+
+                    <button className="flex-1 sm:flex-initial bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-md cursor-pointer">
+                      <Download className="size-4" /> Descargar
+                    </button>
+                  </div>
+                </div>
+
+              </div>
             </div>
-          </div>
-        )}
+          );
+        })()}
 
         {/* MODAL DE VALIDACIÓN UNIFICADO (CIP / MIAMI) */}
         {modalAbierto && (
@@ -911,7 +1008,7 @@ export default function CertificadosPage() {
                       <input 
                         type="text" 
                         readOnly 
-                        value="Roger Sanalea" 
+                        value={nombreEstudianteCompleto} 
                         className={`w-full border rounded-xl px-4 py-2.5 text-sm cursor-not-allowed ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-400' : 'bg-slate-100 border-slate-200 text-slate-600'}`}
                       />
                     </div>
@@ -922,7 +1019,7 @@ export default function CertificadosPage() {
                         <input 
                           type="text" 
                           readOnly 
-                          value="900000005" 
+                          value={perfilEstudiante?.telefono || '987654321'} 
                           className={`w-full border rounded-xl px-4 py-2.5 text-sm cursor-not-allowed ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-400' : 'bg-slate-100 border-slate-200 text-slate-600'}`}
                         />
                       </div>
@@ -931,7 +1028,7 @@ export default function CertificadosPage() {
                         <input 
                           type="text" 
                           readOnly 
-                          value="superadmin@edumin.pe" 
+                          value={perfilEstudiante?.email || 'estudiante@edumin.pe'} 
                           className={`w-full border rounded-xl px-4 py-2.5 text-sm cursor-not-allowed ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-400' : 'bg-slate-100 border-slate-200 text-slate-600'}`}
                         />
                       </div>
@@ -939,21 +1036,21 @@ export default function CertificadosPage() {
 
                     <div>
                       <label className={`block text-xs font-bold uppercase mb-1 ${esOscuro ? 'text-slate-300' : 'text-slate-700'}`}>Diplomado Aplicado</label>
-                      {paqueteUsuario === 'ILIMITADO' ? (
+                      {paqueteUsuario === 'ILIMITADO' || diplomadosProgreso.length > 1 ? (
                         <select
                           value={diplomadoSeleccionado}
                           onChange={(e) => setDiplomadoSeleccionado(e.target.value)}
                           className={`w-full border rounded-xl px-4 py-2.5 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-indigo-600 ${esOscuro ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-800'}`}
                         >
-                          {diplomadosCompletados.map((dip) => (
-                            <option key={dip} value={dip}>{dip}</option>
+                          {diplomadosProgreso.map((dip: any) => (
+                            <option key={dip.id} value={dip.titulo}>{dip.titulo}</option>
                           ))}
                         </select>
                       ) : (
                         <input 
                           type="text" 
                           readOnly 
-                          value={diplomadosCompletados[0]} 
+                          value={diplomadosProgreso[0]?.titulo || 'GEOMETALURGIA'} 
                           className={`w-full border rounded-xl px-4 py-2.5 text-sm cursor-not-allowed ${esOscuro ? 'bg-slate-950 border-slate-800 text-slate-400' : 'bg-slate-100 border-slate-200 text-slate-600'}`}
                         />
                       )}

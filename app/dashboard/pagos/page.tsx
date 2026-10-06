@@ -1,26 +1,19 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { 
   Wallet, 
   CheckCircle2, 
   AlertCircle, 
-  ArrowUpRight, 
-  FileText, 
   PhoneCall, 
   Eye, 
   Printer, 
   X, 
-  ShieldCheck, 
   SlidersHorizontal,
   Award,
-  Building2,
   GripVertical,
-  Lock,
   Calendar,
-  CreditCard,
-  Clock,
-  RefreshCw
+  FileText
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
@@ -33,25 +26,26 @@ export default function PagosEstudiantePage() {
   const [profile, setProfile] = useState<any>(null);
   const [pagosSupabase, setPagosSupabase] = useState<any[]>([]);
 
-  // Estados de simulación dev (Para pruebas de UI internas si se activa):
+  // Estados de simulación dev (para pruebas manuales si se activa el simulador)
   const [modoPrueba, setModoPrueba] = useState<'al_dia' | 'completado' | 'bloqueo'>('al_dia');
   const [tipoPlan, setTipoPlan] = useState<'cuotas' | 'contado'>('cuotas');
   const [usarSimulador, setUsarSimulador] = useState(false);
   
   const [pestanaActiva, setPestanaActiva] = useState<'cronograma' | 'historial'>('cronograma');
-  const [devToolbarVisible, setDevToolbarVisible] = useState(true);
+  const [devToolbarVisible, setDevToolbarVisible] = useState(false);
   
-  // Estado de posición y arrastre para el simulador dev
+  // Estado de posición para el panel dev
   const [posicion, setPosicion] = useState<{ x: number; y: number } | null>(null);
   const [arrastrando, setArrastrando] = useState(false);
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
 
-  // Estado para el modal del recibo interno
+  // Estado para el modal de recibo imprimible
   const [reciboSeleccionado, setReciboSeleccionado] = useState<any>(null);
 
   useEffect(() => {
     async function cargarDatosPagos() {
       try {
+        setLoading(true);
         const res = await fetch('/api/dashboard/me');
         if (res.ok) {
           const data = await res.json();
@@ -59,13 +53,22 @@ export default function PagosEstudiantePage() {
             setProfile(data.profile);
             setPagosSupabase(data.pagos || []);
             
-            // Establecer plan real desde Supabase
+            // Evaluar estado financiero real del alumno desde Supabase
+            const totalDeudaReal = (data.pagos || []).reduce((acc: number, p: any) => acc + (p.total_deuda ?? 0), 0);
+            const cuotasPagadasCount = (data.pagos || []).reduce((acc: number, p: any) => {
+              if (Array.isArray(p.cuotas)) {
+                return acc + p.cuotas.filter((v: string) => v !== 'no corresponde' && Number(v) > 0).length;
+              }
+              return acc;
+            }, 0);
+
             if (data.profile.tipo_pago === 'CONTADO' || String(data.profile.paquete_adquirido).includes('CONTADO')) {
               setTipoPlan('contado');
             }
+
             if (data.profile.bloqueado) {
               setModoPrueba('bloqueo');
-            } else if (data.profile.deuda_total_pendiente === 0 || data.profile.cuotas_pagadas >= (data.profile.paquete_adquirido === 'ILIMITADO' ? 5 : 3)) {
+            } else if (totalDeudaReal === 0 && cuotasPagadasCount > 0) {
               setModoPrueba('completado');
             } else {
               setModoPrueba('al_dia');
@@ -81,74 +84,102 @@ export default function PagosEstudiantePage() {
     cargarDatosPagos();
   }, []);
 
-  // DATA DE CRONOGRAMA SEGÚN MODALIDAD Y ESTADO FINANCIERO DE SUPABASE
-  const cuotasPagadasReal = profile?.cuotas_pagadas ?? 1;
-  const paqueteReal = profile?.paquete_adquirido ?? 'FULL';
-  const totalCuotasReal = paqueteReal === 'ILIMITADO' ? 5 : 3;
-  const montoTotalReal = paqueteReal === 'ILIMITADO' ? 1500 : paqueteReal === 'FULL' ? 900 : 540;
-  const montoPorCuotaReal = montoTotalReal / totalCuotasReal;
+  // Construir cronograma real dinámicamente desde la coincidencia de DNI en Supabase (tabla /pagos)
+  const cronogramaRealSupabase = useMemo(() => {
+    if (!pagosSupabase || pagosSupabase.length === 0) {
+      // Fallback si no hay registros de pagos creados aún
+      const paquete = profile?.paquete_adquirido || 'FULL';
+      const montoTotal = paquete === 'ILIMITADO' ? 1500 : paquete === 'FULL' ? 900 : 540;
+      const totalCuotas = paquete === 'ILIMITADO' ? 5 : 3;
+      const cuotaMonto = montoTotal / totalCuotas;
 
-  // Cronograma dinámico generado desde la BD real Supabase
-  const cronogramaRealSupabase = Array.from({ length: totalCuotasReal }).map((_, idx) => {
-    const nroCuota = idx + 1;
-    const esPagada = nroCuota <= cuotasPagadasReal;
-    const esUltima = nroCuota === totalCuotasReal;
+      return Array.from({ length: totalCuotas }).map((_, idx) => ({
+        id: `sim-${idx + 1}`,
+        cuota: `Cuota 0${idx + 1} de 0${totalCuotas}`,
+        concepto: idx === 0 ? 'Matrícula + Primera Cuota Diplomado' : `Cuota 0${idx + 1} Académica`,
+        monto: cuotaMonto,
+        fecha: `15/0${idx + 1}/2026`,
+        comprobante: idx === 0 ? 'OP-882910' : '-',
+        medio: idx === 0 ? 'Yape / Plin' : '-',
+        estado: idx === 0 ? 'Pagado' : 'Por vencer'
+      }));
+    }
 
-    let estadoCuota = esPagada ? 'Pagado' : profile?.bloqueado ? 'Vencido' : 'Por vencer';
-    
-    // Buscar recibo/comprobante en pagosSupabase
-    const pagoMatching = (pagosSupabase || [])[0];
-    const comprobanteFmt = esPagada ? (pagoMatching?.comprobante || `OP-88291${nroCuota}`) : '-';
-    const medioFmt = esPagada ? (pagoMatching?.metodo && !pagoMatching.metodo.startsWith('CREDITO_') ? pagoMatching.metodo : 'Yape / Plin') : '-';
+    const items: any[] = [];
+    let contadorCuotaGlobal = 1;
 
-    return {
-      id: nroCuota,
-      cuota: tipoPlan === 'contado' ? 'Cuota Única' : `Cuota ${nroCuota} de ${totalCuotasReal}`,
-      concepto: nroCuota === 1 ? 'Matrícula + Primera Cuota Diplomado' : esUltima ? 'Cuota Final y Cancelación Total' : `Cuota ${nroCuota} Académica`,
-      monto: tipoPlan === 'contado' ? montoTotalReal : montoPorCuotaReal,
-      fecha: `15/0${Math.min(9, nroCuota + 1)}/2026`,
-      comprobante: comprobanteFmt,
-      medio: medioFmt,
-      estado: estadoCuota
-    };
-  });
+    pagosSupabase.forEach((pago: any) => {
+      if (pago.is_cargo_extra) {
+        items.push({
+          id: pago.id,
+          cuota: `Cargo Extra`,
+          concepto: pago.concepto || 'Examen Sustitutorio',
+          monto: Number(pago.monto || 0),
+          fecha: pago.created_at ? new Date(pago.created_at).toLocaleDateString('es-PE') : '15/02/2026',
+          comprobante: `OP-CARGO-${String(pago.id).substring(0, 6)}`,
+          medio: pago.metodo || 'Yape / Plin',
+          estado: pago.estado || 'Pagado'
+        });
+        return;
+      }
 
-  const cronogramaAlDia = [
-    { id: 1, cuota: 'Cuota 1 de 3', concepto: 'Matrícula + Primera Cuota Diplomado', monto: 300, fecha: '15/01/2026', comprobante: 'OP-882910', medio: 'Transferencia BCP', estado: 'Pagado' },
-    { id: 2, cuota: 'Cuota 2 de 3', concepto: 'Segunda Cuota Académica', monto: 300, fecha: '15/02/2026', comprobante: 'OP-934122', medio: 'Yape / Plin', estado: 'Pagado' },
-    { id: 3, cuota: 'Cuota 3 de 3', concepto: 'Tercera Cuota y Cancelación Final', monto: 300, fecha: '15/10/2026', comprobante: '-', medio: '-', estado: 'Por vencer' },
+      const cuotasArray: string[] = Array.isArray(pago.cuotas) ? pago.cuotas : ['0', 'no corresponde', 'no corresponde', 'no corresponde', 'no corresponde', 'no corresponde'];
+      const cuotasValidas = cuotasArray.filter(v => v !== 'no corresponde');
+      const totalValidasCount = cuotasValidas.length;
+      const montoBaseCuota = pago.monto ? (pago.monto / Math.max(1, totalValidasCount)) : 300;
+
+      cuotasArray.forEach((cVal: string, cIdx: number) => {
+        if (cVal === 'no corresponde') return;
+
+        const numCuota = cIdx + 1;
+        const montoCuota = Number(cVal) > 0 ? Number(cVal) : montoBaseCuota;
+        const esPagada = Number(cVal) > 0;
+        const estadoCuota = esPagada ? 'Pagado' : profile?.bloqueado ? 'Vencido' : 'Por vencer';
+
+        items.push({
+          id: `${pago.id}-c${numCuota}`,
+          cuota: totalValidasCount === 1 ? 'Cuota Única' : `Cuota 0${numCuota} de 0${totalValidasCount}`,
+          concepto: numCuota === 1 ? `Cuota 01 - Matrícula + Programa (${profile?.diplomado_1 || 'Diplomado'})` : `Cuota 0${numCuota} Académica`,
+          monto: montoCuota,
+          fecha: `15/0${Math.min(9, numCuota + 1)}/2026`,
+          comprobante: esPagada ? `OP-CUOTA-0${numCuota}` : '-',
+          medio: esPagada ? (pago.metodo && !pago.metodo.startsWith('CREDITO_') ? pago.metodo : 'Yape / Plin') : '-',
+          estado: estadoCuota
+        });
+        contadorCuotaGlobal++;
+      });
+    });
+
+    return items;
+  }, [pagosSupabase, profile]);
+
+  // Simuladores Dev auxiliares
+  const cronogramaAlDiaDev = [
+    { id: '1', cuota: 'Cuota 1 de 3', concepto: 'Matrícula + Primera Cuota Diplomado', monto: 300, fecha: '15/01/2026', comprobante: 'OP-882910', medio: 'Transferencia BCP', estado: 'Pagado' },
+    { id: '2', cuota: 'Cuota 2 de 3', concepto: 'Segunda Cuota Académica', monto: 300, fecha: '15/02/2026', comprobante: 'OP-934122', medio: 'Yape / Plin', estado: 'Pagado' },
+    { id: '3', cuota: 'Cuota 3 de 3', concepto: 'Tercera Cuota y Cancelación Final', monto: 300, fecha: '15/10/2026', comprobante: '-', medio: '-', estado: 'Por vencer' },
   ];
 
-  const cronogramaCompletado = [
-    { id: 1, cuota: 'Cuota 1 de 3', concepto: 'Matrícula + Primera Cuota Diplomado', monto: 300, fecha: '15/01/2026', comprobante: 'OP-882910', medio: 'Transferencia BCP', estado: 'Pagado' },
-    { id: 2, cuota: 'Cuota 2 de 3', concepto: 'Segunda Cuota Académica', monto: 300, fecha: '15/02/2026', comprobante: 'OP-934122', medio: 'Yape / Plin', estado: 'Pagado' },
-    { id: 3, cuota: 'Cuota 3 de 3', concepto: 'Tercera Cuota y Cancelación Total', monto: 300, fecha: '15/03/2026', comprobante: 'OP-991034', medio: 'PagoWeb Pasarela', estado: 'Pagado' },
+  const cronogramaCompletadoDev = [
+    { id: '1', cuota: 'Cuota 1 de 3', concepto: 'Matrícula + Primera Cuota Diplomado', monto: 300, fecha: '15/01/2026', comprobante: 'OP-882910', medio: 'Transferencia BCP', estado: 'Pagado' },
+    { id: '2', cuota: 'Cuota 2 de 3', concepto: 'Segunda Cuota Académica', monto: 300, fecha: '15/02/2026', comprobante: 'OP-934122', medio: 'Yape / Plin', estado: 'Pagado' },
+    { id: '3', cuota: 'Cuota 3 de 3', concepto: 'Tercera Cuota y Cancelación Total', monto: 300, fecha: '15/03/2026', comprobante: 'OP-991034', medio: 'PagoWeb Pasarela', estado: 'Pagado' },
   ];
 
-  const cronogramaBloqueo = [
-    { id: 1, cuota: 'Cuota 1 de 3', concepto: 'Matrícula + Primera Cuota Diplomado', monto: 300, fecha: '15/01/2026', comprobante: 'OP-882910', medio: 'Transferencia BCP', estado: 'Pagado' },
-    { id: 2, cuota: 'Cuota 2 de 3', concepto: 'Segunda Cuota Académica', monto: 300, fecha: '15/02/2026', comprobante: '-', medio: '-', estado: 'Vencido' },
-    { id: 3, cuota: 'Cuota 3 de 3', concepto: 'Tercera Cuota Final', monto: 300, fecha: '15/03/2026', comprobante: '-', medio: '-', estado: 'Vencido' },
-  ];
-
-  const cronogramaContado = [
-    { id: 1, cuota: 'Cuota Única', concepto: 'Pago Único al Contado - Programa Completo', monto: 900, fecha: '15/01/2026', comprobante: 'OP-771020', medio: 'PagoWeb Pasarela', estado: 'Pagado' },
+  const cronogramaBloqueoDev = [
+    { id: '1', cuota: 'Cuota 1 de 3', concepto: 'Matrícula + Primera Cuota Diplomado', monto: 300, fecha: '15/01/2026', comprobante: 'OP-882910', medio: 'Transferencia BCP', estado: 'Pagado' },
+    { id: '2', cuota: 'Cuota 2 de 3', concepto: 'Segunda Cuota Académica', monto: 300, fecha: '15/02/2026', comprobante: '-', medio: '-', estado: 'Vencido' },
+    { id: '3', cuota: 'Cuota 3 de 3', concepto: 'Tercera Cuota Final', monto: 300, fecha: '15/03/2026', comprobante: '-', medio: '-', estado: 'Vencido' },
   ];
 
   const cronogramaActual = usarSimulador
-    ? (tipoPlan === 'contado'
-        ? cronogramaContado
-        : modoPrueba === 'completado' 
-          ? cronogramaCompletado 
-          : modoPrueba === 'bloqueo' 
-            ? cronogramaBloqueo 
-            : cronogramaAlDia)
+    ? (modoPrueba === 'completado' ? cronogramaCompletadoDev : modoPrueba === 'bloqueo' ? cronogramaBloqueoDev : cronogramaAlDiaDev)
     : cronogramaRealSupabase;
 
-  // Filtrar solo los comprobantes de cuotas pagadas para el Historial de Comprobantes
-  const historialComprobantes = cronogramaActual.filter(item => item.estado === 'Pagado');
+  // Filtrar solo los comprobantes de cuotas pagadas o cargos extras para el Historial de Comprobantes
+  const historialComprobantes = cronogramaActual.filter(item => item.estado === 'Pagado' || item.estado === 'APROBADO' || item.cuota === 'Cargo Extra');
 
-  // Lógica de arrastre (Drag and Drop) para el panel flotante
+  // Lógica de arrastre para el panel flotante
   const handlePointerDown = (e: React.PointerEvent<HTMLDivElement>) => {
     const target = e.target as HTMLElement;
     if (target.closest('button') || target.closest('a') || target.closest('input')) return;
@@ -196,8 +227,8 @@ export default function PagosEstudiantePage() {
     }`}>
       <div className="max-w-6xl mx-auto">
         
-        {/* Cabecera Principal en Sentence case */}
-        <div className="mb-8 flex justify-between items-start">
+        {/* Cabecera Principal */}
+        <div className="mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
             <h1 className={`text-2xl sm:text-3xl font-bold tracking-tight flex items-center gap-3 ${
               esOscuro ? 'text-white' : 'text-slate-900'
@@ -206,18 +237,18 @@ export default function PagosEstudiantePage() {
               Estado de cuenta y tesorería
             </h1>
             <p className={`mt-1.5 text-sm ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-              Consulta tus cuotas pagadas, historial de transacciones, recibos de pago y estado financiero en tiempo real.
+              Consulta tus cuotas pagadas, historial de transacciones y recibos sincronizados directamente con Supabase.
             </p>
           </div>
           {profile && (
-            <span className="text-xs font-mono font-bold px-3 py-1 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 rounded-full border border-indigo-200 dark:border-indigo-800">
+            <span className="text-xs font-mono font-bold px-3.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 rounded-full border border-indigo-200 dark:border-indigo-800 shrink-0">
               DNI: {profile.dni_ce} • Paquete: {profile.paquete_adquirido || 'FULL'}
             </span>
           )}
         </div>
 
-        {/* BANNERS DE ESTADO COMPACTOS (SOLO 3 ESTADOS FINANCIEROS REALES) */}
-        {modoPrueba === 'al_dia' && tipoPlan !== 'contado' && (
+        {/* BANNERS DE ESTADO FINANCIERO REAL */}
+        {modoPrueba === 'al_dia' && (
           <div className={`rounded-2xl p-5 sm:p-6 text-white shadow-xl mb-6 border relative overflow-hidden transition-all ${
             esOscuro 
               ? 'bg-gradient-to-r from-slate-900 via-slate-900 to-slate-950 border-indigo-500/30' 
@@ -344,7 +375,7 @@ export default function PagosEstudiantePage() {
                 Desglose de Cuotas y Vencimientos
               </h3>
               <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
-                Plan: {tipoPlan === 'contado' ? 'Al Contado' : 'En Cuotas Programadas'}
+                Coincidencia por DNI: {profile?.dni_ce}
               </span>
             </div>
 
@@ -366,12 +397,12 @@ export default function PagosEstudiantePage() {
                     <tr key={item.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
                       <td className="py-4 px-4 font-bold text-slate-900 dark:text-white">{item.cuota}</td>
                       <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{item.concepto}</td>
-                      <td className="py-4 px-4 font-mono font-bold text-slate-900 dark:text-white">S/ {item.monto.toFixed(2)}</td>
+                      <td className="py-4 px-4 font-mono font-bold text-slate-900 dark:text-white">S/ {Number(item.monto).toFixed(2)}</td>
                       <td className="py-4 px-4 font-mono text-slate-600 dark:text-slate-400">{item.fecha}</td>
                       <td className="py-4 px-4 font-mono text-slate-600 dark:text-slate-400">{item.comprobante}</td>
                       <td className="py-4 px-4">
                         <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${
-                          item.estado === 'Pagado'
+                          item.estado === 'Pagado' || item.estado === 'APROBADO' || item.estado === 'Completado'
                             ? 'bg-emerald-100 dark:bg-emerald-950/80 text-emerald-800 dark:text-emerald-300'
                             : item.estado === 'Vencido'
                               ? 'bg-red-100 dark:bg-red-950/80 text-red-800 dark:text-red-300'
@@ -381,7 +412,7 @@ export default function PagosEstudiantePage() {
                         </span>
                       </td>
                       <td className="py-4 px-4 text-right">
-                        {item.estado === 'Pagado' ? (
+                        {(item.estado === 'Pagado' || item.estado === 'APROBADO' || item.estado === 'Completado' || item.cuota === 'Cargo Extra') ? (
                           <button
                             onClick={() => setReciboSeleccionado(item)}
                             className="bg-slate-100 dark:bg-slate-800 hover:bg-indigo-600 hover:text-white text-indigo-600 dark:text-indigo-400 px-3 py-1.5 rounded-xl font-bold text-[11px] transition inline-flex items-center gap-1 cursor-pointer"
@@ -430,7 +461,7 @@ export default function PagosEstudiantePage() {
                       <tr key={item.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
                         <td className="py-4 px-4 font-mono font-bold text-slate-900 dark:text-white">{item.comprobante}</td>
                         <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{item.concepto}</td>
-                        <td className="py-4 px-4 font-mono font-bold text-emerald-600 dark:text-emerald-400">S/ {item.monto.toFixed(2)}</td>
+                        <td className="py-4 px-4 font-mono font-bold text-emerald-600 dark:text-emerald-400">S/ {Number(item.monto).toFixed(2)}</td>
                         <td className="py-4 px-4 text-slate-600 dark:text-slate-400">{item.medio}</td>
                         <td className="py-4 px-4 font-mono text-slate-600 dark:text-slate-400">{item.fecha}</td>
                         <td className="py-4 px-4 text-right">
@@ -478,11 +509,11 @@ export default function PagosEstudiantePage() {
             <div className="space-y-3 text-xs">
               <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                 <span className="text-slate-500 font-semibold">Estudiante:</span>
-                <strong>{profile?.nombres || 'Estudiante'} {profile?.apellidos || 'EDUMIN'}</strong>
+                <strong>{profile?.nombres || 'Estudiante'} {profile?.apellidos || ''}</strong>
               </div>
               <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                 <span className="text-slate-500 font-semibold">DNI / CE:</span>
-                <strong className="font-mono">{profile?.dni_ce || '74589210'}</strong>
+                <strong className="font-mono">{profile?.dni_ce || 'Sin DNI'}</strong>
               </div>
               <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                 <span className="text-slate-500 font-semibold">Concepto:</span>
@@ -494,7 +525,7 @@ export default function PagosEstudiantePage() {
               </div>
               <div className="flex justify-between bg-emerald-50 dark:bg-emerald-950/50 p-3 rounded-xl border border-emerald-200 dark:border-emerald-800 text-sm">
                 <span className="text-emerald-900 dark:text-emerald-300 font-bold">Monto Total Pagado:</span>
-                <strong className="text-emerald-700 dark:text-emerald-400 font-black">S/ {reciboSeleccionado.monto.toFixed(2)}</strong>
+                <strong className="text-emerald-700 dark:text-emerald-400 font-black">S/ {Number(reciboSeleccionado.monto).toFixed(2)}</strong>
               </div>
             </div>
 
@@ -574,18 +605,6 @@ export default function PagosEstudiantePage() {
                       <option value="al_dia">Al día (Puntual)</option>
                       <option value="completado">100% Cancelado (No adeudo)</option>
                       <option value="bloqueo">Cuota Vencida (Bloqueo)</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-[10px] text-slate-400 uppercase mb-1">Modalidad de Pago</label>
-                    <select
-                      value={tipoPlan}
-                      onChange={(e) => setTipoPlan(e.target.value as any)}
-                      className="w-full bg-slate-800 text-white p-2 rounded-xl text-xs border border-slate-700 font-bold"
-                    >
-                      <option value="cuotas">Pago en Cuotas Programadas</option>
-                      <option value="contado">Pago Único al Contado</option>
                     </select>
                   </div>
                 </>

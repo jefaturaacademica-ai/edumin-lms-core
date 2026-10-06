@@ -32,7 +32,7 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
     pag.cuota_06 || pag['cuota 06'] || 'no corresponde'
   ];
   let total_pagado = Number(pag.total_pagado || pag['total pagado'] || 0);
-  let total_deuda = Number(pag.total_deuda || pag['total deuda'] || pag.monto || 0);
+  let explicitDeuda: number | undefined = undefined;
   let parsedFromMetodo = false;
 
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CREDITO_')) {
@@ -44,8 +44,12 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
         cuotas = parsed.cuotas;
         parsedFromMetodo = true;
       }
-      total_pagado = parsed.total_pagado ?? total_pagado;
-      total_deuda = parsed.total_deuda ?? Math.max(0, Number(pag.monto || 0) - total_pagado);
+      if (parsed.total_pagado !== undefined) {
+        total_pagado = Number(parsed.total_pagado);
+      }
+      if (parsed.total_deuda !== undefined) {
+        explicitDeuda = Number(parsed.total_deuda);
+      }
     } catch {
       // ignore
     }
@@ -56,26 +60,34 @@ function parseCreditoRow(pag: any, auditLogs: any[]) {
     if (auditEntry?.detalles) {
       num_credito = auditEntry.detalles.num_credito || num_credito;
       cuotas = auditEntry.detalles.cuotas || cuotas;
-      total_pagado = auditEntry.detalles.total_pagado ?? total_pagado;
-      total_deuda = auditEntry.detalles.total_deuda ?? total_deuda;
+      if (auditEntry.detalles.total_pagado !== undefined) total_pagado = Number(auditEntry.detalles.total_pagado);
+      if (auditEntry.detalles.total_deuda !== undefined) explicitDeuda = Number(auditEntry.detalles.total_deuda);
     }
   }
 
   if (Array.isArray(cuotas)) {
-    total_pagado = cuotas.reduce((sum: number, val: string) => {
+    const sumCuotasPagadas = cuotas.reduce((sum: number, val: string) => {
       return val !== 'no corresponde' ? sum + (Number(val) || 0) : sum;
     }, 0);
-    total_deuda = Math.max(0, Number(pag.monto || 0) - total_pagado);
+    if (sumCuotasPagadas > 0 || total_pagado === 0) {
+      total_pagado = sumCuotasPagadas;
+    }
   }
+
+  let total_deuda = explicitDeuda !== undefined
+    ? explicitDeuda
+    : Math.max(0, Number(pag.monto || 0) - total_pagado);
+
+  const montoTotal = Math.max(Number(pag.monto || 0), total_pagado + total_deuda);
 
   return {
     id: pag.id,
     profile_id: pag.profile_id,
     dni_ce: pag.dni_ce,
     num_credito,
-    monto: Number(pag.monto || 0),
+    monto: montoTotal,
     metodo: pag.metodo && !pag.metodo.startsWith('CREDITO_') ? pag.metodo : 'Por Pagar',
-    estado: pag.estado || 'Pendiente',
+    estado: total_deuda === 0 ? 'Completado' : (pag.estado || 'Pendiente'),
     created_at: pag.created_at,
     cuotas,
     'cuota 01': cuotas[0],
