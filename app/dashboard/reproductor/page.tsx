@@ -590,11 +590,20 @@ function ReproductorContent() {
                             }}
                             className="flex items-center gap-3 min-w-0 flex-1 cursor-pointer"
                           >
-                            {mod.completado ? (
-                              <CheckCircle2 className="w-4.5 h-4.5 text-emerald-400 shrink-0" />
-                            ) : (
-                              <PlayCircle className="w-4.5 h-4.5 text-indigo-400 shrink-0" />
-                            )}
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleToggleCompletada(mIdx);
+                              }}
+                              title={mod.completado ? "Desmarcar completado (volver a en curso)" : "Marcar como completado"}
+                              className="p-1 rounded-lg transition-transform hover:scale-110 cursor-pointer shrink-0"
+                            >
+                              {mod.completado ? (
+                                <CheckCircle2 className="w-4.5 h-4.5 text-emerald-400 shrink-0" />
+                              ) : (
+                                <div className="w-4 h-4 rounded-full border-2 border-slate-400 hover:border-indigo-400 shrink-0 transition-colors" />
+                              )}
+                            </button>
                             <span className={`text-xs font-semibold truncate ${isSelected ? 'text-indigo-300 font-bold' : 'text-slate-200'}`}>
                               {clase.titulo}
                             </span>

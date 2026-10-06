@@ -20,6 +20,7 @@ export interface CursoJSON {
   titulo: string;
   nota: number;
   completado: boolean;
+  avance?: number;
 }
 
 export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {

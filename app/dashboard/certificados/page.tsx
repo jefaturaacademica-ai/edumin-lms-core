@@ -22,7 +22,8 @@ import {
   ShoppingCart,
   LayoutGrid,
   ChevronDown,
-  ChevronUp
+  ChevronUp,
+  QrCode
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
@@ -804,73 +805,79 @@ export default function CertificadosPage() {
           </div>
         )}
 
-        {/* MODAL DE VISTA PREVIA DEL CERTIFICADO (DOCUMENTO INTERACTIVO CON PLANTILLA MAESTRA) */}
+        {/* MODAL DE VISTA PREVIA DEL CERTIFICADO (DOCUMENTO INTERACTIVO FIDELIDAD A PLANTILLA MAESTRA A4) */}
         {modalVistaPrevia?.abierto && (() => {
           const estilo = (function(tipo: string) {
             const t = (tipo || '').toUpperCase();
             if (t.includes('DIPLOM')) {
               return {
-                borde: 'border-amber-500/80 bg-gradient-to-br from-amber-950/90 via-slate-950 to-amber-950/40 text-amber-100 shadow-amber-500/20',
-                badgeColor: 'text-amber-400 bg-amber-500/20 border-amber-500/30',
+                marco: 'border-amber-600/40 bg-gradient-to-br from-amber-50 via-white to-amber-50/60 text-slate-900 shadow-amber-900/10',
                 tituloHeader: 'DIPLOMA DE ALTA ESPECIALIZACIÓN',
                 otorgamiento: 'Por haber cumplido y aprobado con excelencia los 3 módulos del programa oficial de:',
-                institucion: 'ESCUELA DE ESPECIALIZACIÓN MINERA - EDUMIN',
-                accentColor: 'text-amber-300'
+                escuelaHeader: 'ESCUELA DE POSTGRADO & MINERÍA',
+                institucionHeader: 'INSTITUTO INTERNACIONAL EDUMIN',
+                horas: '120 horas cronológicas',
+                firmas: ['Director Académico', 'Coordinador General']
               };
             }
             if (t.includes('MODULAR')) {
               return {
-                borde: 'border-indigo-500/80 bg-gradient-to-br from-indigo-950/90 via-slate-950 to-blue-950/40 text-indigo-100 shadow-indigo-500/20',
-                badgeColor: 'text-indigo-400 bg-indigo-500/20 border-indigo-500/30',
+                marco: 'border-indigo-600/40 bg-gradient-to-br from-indigo-50/40 via-white to-blue-50/50 text-slate-900 shadow-indigo-900/10',
                 tituloHeader: 'CERTIFICADO MODULAR OFICIAL',
                 otorgamiento: 'Por haber completado satisfactoriamente la evaluación y contenidos del módulo:',
-                institucion: 'ESCUELA DE ESPECIALIZACIÓN MINERA - EDUMIN',
-                accentColor: 'text-indigo-300'
+                escuelaHeader: 'ESCUELA DE POSTGRADO & MINERÍA',
+                institucionHeader: 'INSTITUTO INTERNACIONAL EDUMIN',
+                horas: '40 horas cronológicas',
+                firmas: ['Director Académico']
               };
             }
             if (t.includes('CURSO')) {
               return {
-                borde: 'border-emerald-500/80 bg-gradient-to-br from-emerald-950/90 via-slate-950 to-teal-950/40 text-emerald-100 shadow-emerald-500/20',
-                badgeColor: 'text-emerald-400 bg-emerald-500/20 border-emerald-500/30',
+                marco: 'border-emerald-600/40 bg-gradient-to-br from-emerald-50/40 via-white to-teal-50/50 text-slate-900 shadow-emerald-900/10',
                 tituloHeader: 'CERTIFICADO DE ESPECIALIZACIÓN PROFESIONAL',
-                otorgamiento: 'Por su destacada participación y aprobación del curso técnico de:',
-                institucion: 'ESCUELA DE ESPECIALIZACIÓN MINERA - EDUMIN',
-                accentColor: 'text-emerald-300'
+                otorgamiento: 'Por su destacada participación y aprobación del curso técnico intensivo de:',
+                escuelaHeader: 'ESCUELA DE POSTGRADO & MINERÍA',
+                institucionHeader: 'INSTITUTO INTERNACIONAL EDUMIN',
+                horas: '24 horas cronológicas',
+                firmas: ['Director Académico', 'Docente Titular']
               };
             }
             if (t.includes('CIP')) {
               return {
-                borde: 'border-rose-600/80 bg-gradient-to-br from-rose-950/90 via-slate-950 to-red-950/40 text-rose-100 shadow-rose-600/20',
-                badgeColor: 'text-rose-400 bg-rose-500/20 border-rose-500/30',
+                marco: 'border-rose-700/40 bg-gradient-to-br from-rose-50/40 via-white to-amber-50/40 text-slate-900 shadow-rose-900/10',
                 tituloHeader: 'CERTIFICACIÓN CONVENIO OFICIAL CIP',
                 otorgamiento: 'En convenio interinstitucional con el Colegio de Ingenieros del Perú (CIP), acredita a:',
-                institucion: 'COLEGIO DE INGENIEROS DEL PERÚ (CIP) & EDUMIN',
-                accentColor: 'text-rose-300'
+                escuelaHeader: 'CONVENIO INSTITUCIONAL CIP & EDUMIN',
+                institucionHeader: 'COLEGIO DE INGENIEROS DEL PERÚ',
+                horas: '120 horas cronológicas',
+                firmas: ['Decano CIP Nacional', 'Director EDUMIN']
               };
             }
             if (t.includes('MIAMI')) {
               return {
-                borde: 'border-cyan-500/80 bg-gradient-to-br from-cyan-950/90 via-slate-950 to-indigo-950/40 text-cyan-100 shadow-cyan-500/20',
-                badgeColor: 'text-cyan-400 bg-cyan-500/20 border-cyan-500/30',
+                marco: 'border-cyan-600/40 bg-gradient-to-br from-cyan-50/40 via-white to-indigo-50/40 text-slate-900 shadow-cyan-900/10',
                 tituloHeader: 'INTERNATIONAL CERTIFICATE OF COMPLETION',
                 otorgamiento: 'University international partner certificate awarded for professional excellence in:',
-                institucion: 'SAN IGNACIO UNIVERSITY (MIAMI, FL) & EDUMIN',
-                accentColor: 'text-cyan-300'
+                escuelaHeader: 'INTERNATIONAL PARTNERSHIP ACADEMY',
+                institucionHeader: 'SAN IGNACIO UNIVERSITY (MIAMI, FL)',
+                horas: '150 horas internacionales',
+                firmas: ['International Dean', 'Executive Director']
               };
             }
             return {
-              borde: 'border-purple-500/80 bg-gradient-to-br from-purple-950/90 via-slate-950 to-indigo-950/40 text-purple-100 shadow-purple-500/20',
-              badgeColor: 'text-purple-400 bg-purple-500/20 border-purple-500/30',
+              marco: 'border-purple-600/40 bg-gradient-to-br from-purple-50/40 via-white to-indigo-50/50 text-slate-900 shadow-purple-900/10',
               tituloHeader: 'CONSTANCIA DE TALLER PRÁCTICO EN VIVO',
               otorgamiento: 'Por su asistencia y participación en el taller especializado de:',
-              institucion: 'ESCUELA DE ESPECIALIZACIÓN MINERA - EDUMIN',
-              accentColor: 'text-purple-300'
+              escuelaHeader: 'ESCUELA DE POSTGRADO & MINERÍA',
+              institucionHeader: 'INSTITUTO INTERNACIONAL EDUMIN',
+              horas: '08 horas prácticas',
+              firmas: ['Director Académico']
             };
           })(modalVistaPrevia.tipo);
 
           return (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in">
-              <div className={`rounded-3xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative border space-y-6 ${
+            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md animate-in fade-in overflow-y-auto">
+              <div className={`rounded-3xl w-full max-w-2xl p-6 sm:p-8 shadow-2xl relative border space-y-6 my-6 ${
                 esOscuro ? 'bg-slate-900 text-white border-slate-800' : 'bg-white text-slate-900 border-slate-200'
               }`}>
                 <button 
@@ -890,50 +897,87 @@ export default function CertificadosPage() {
                   </div>
                 </div>
 
-                {/* SIMULACIÓN VISUAL SEGÚN SUPERPLANTILLA MAESTRA SELECCIONADA */}
-                <div className={`rounded-2xl border-4 p-6 sm:p-8 relative overflow-hidden shadow-inner text-center space-y-4 ${estilo.borde}`}>
-                  <div className="flex justify-between items-center text-[10px] font-mono text-slate-400 pb-2 border-b border-white/10">
-                    <span className="font-bold tracking-widest uppercase text-white/90">{estilo.institucion}</span>
-                    <span className="font-bold text-amber-400">CÓDIGO CORRELATIVO: {modalVistaPrevia.codigo}</span>
-                  </div>
+                {/* CANVAS DIPLOMA/CERTIFICADO FIEL A LA PLANTILLA MAESTRA A4 (COMPARTIDO CON ADMIN) */}
+                <div className="p-2 sm:p-4 bg-slate-950/90 rounded-2xl flex items-center justify-center">
+                  <div className={`rounded-2xl border-8 p-6 sm:p-8 relative text-center shadow-2xl transition-all overflow-hidden w-full ${
+                    estilo.marco
+                  }`}>
+                    {/* Header: Escuela + Instituto (izq) e Insignia EM (der) */}
+                    <div className="flex justify-between items-center border-b border-black/10 pb-3 mb-4">
+                      <div className="text-left">
+                        <span className="text-[9px] font-mono font-bold tracking-widest block opacity-70 text-slate-600">
+                          {estilo.escuelaHeader}
+                        </span>
+                        <h4 className="text-xs font-black text-slate-900">
+                          {estilo.institucionHeader}
+                        </h4>
+                      </div>
+                      <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center text-indigo-700 font-black text-xs shrink-0">
+                        EM
+                      </div>
+                    </div>
 
-                  <div className="py-2">
-                    <span className={`text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full border ${estilo.badgeColor}`}>
-                      {modalVistaPrevia.categoria}
-                    </span>
-                    <h4 className="text-xl sm:text-2xl font-black text-white mt-3 uppercase leading-tight font-serif tracking-wide">
+                    {/* Subtítulo Tipo de Certificado */}
+                    <span className="text-[10px] uppercase font-bold tracking-widest opacity-80 block text-slate-700">
                       {estilo.tituloHeader}
-                    </h4>
-                    <p className="text-xs text-slate-300 mt-2 font-medium italic">{estilo.otorgamiento}</p>
-                    <p className={`text-base sm:text-lg font-bold mt-1 uppercase ${estilo.accentColor}`}>
+                    </span>
+
+                    <p className="text-[11px] opacity-70 mt-2 text-slate-600">Otorgado a favor de:</p>
+                    
+                    {/* Nombre Estudiante en Fuente Serif Elegante con subrayado dorado */}
+                    <h3 className="text-xl sm:text-2xl font-extrabold font-serif text-slate-900 my-2 underline decoration-amber-500 underline-offset-4">
+                      {nombreEstudianteCompleto || 'JUAN CARLOS QUISPE RAMOS'}
+                    </h3>
+                    <p className="text-[10px] opacity-60 font-mono text-slate-600">
+                      DNI / CE: {perfilEstudiante?.dni || '71234567'}
+                    </p>
+
+                    {/* Texto de Otorgamiento */}
+                    <p className="text-xs mt-3 px-4 leading-relaxed opacity-85 text-slate-700">
+                      {estilo.otorgamiento}
+                    </p>
+
+                    {/* Título del Programa / Curso en Mayúsculas Azules/Índigo */}
+                    <p className="text-sm sm:text-base font-black mt-1 uppercase px-4 text-indigo-950 tracking-wide">
                       {modalVistaPrevia.titulo}
                     </p>
                     {modalVistaPrevia.subtitulo && (
-                      <p className="text-xs text-slate-400 mt-0.5">{modalVistaPrevia.subtitulo}</p>
+                      <p className="text-xs font-semibold text-slate-500 mt-0.5">{modalVistaPrevia.subtitulo}</p>
                     )}
-                  </div>
 
-                  <div className="py-3 border-t border-b border-white/10 my-2">
-                    <p className="text-xs text-slate-400 uppercase tracking-widest">Otorgado a favor de:</p>
-                    <p className={`text-xl sm:text-2xl font-black mt-1 ${estilo.accentColor}`}>{nombreEstudianteCompleto.toUpperCase()}</p>
-                    {modalVistaPrevia.nota && (
-                      <p className="text-xs text-emerald-400 font-bold mt-1">Calificación Obtenida: {modalVistaPrevia.nota} / 20</p>
-                    )}
-                  </div>
-
-                  <div className="flex items-center justify-between pt-2 text-[11px] text-slate-400">
-                    <div>
-                      <span className="block font-bold text-slate-200">Fecha de Emisión:</span>
-                      <span>{modalVistaPrevia.fecha}</span>
+                    {/* Pastillas de Métricas: Horas y Calificación */}
+                    <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold text-slate-800">
+                      <span className="px-3 py-1 rounded-lg border border-black/10 bg-black/5">
+                        ⏱️ {estilo.horas}
+                      </span>
+                      {modalVistaPrevia.nota && (
+                        <span className="px-3 py-1 rounded-lg border border-black/10 bg-black/5">
+                          🏆 Calificación: {modalVistaPrevia.nota}
+                        </span>
+                      )}
                     </div>
-                    <div className="size-12 bg-white p-1 rounded-lg grid place-items-center">
-                      <div className="size-full bg-slate-900 rounded flex items-center justify-center text-[8px] font-bold text-amber-400 font-mono">
-                        QR OK
+
+                    {/* Footer del Certificado con Fechas, Firmas y Código QR */}
+                    <div className="mt-6 pt-4 border-t border-black/10 flex justify-between items-end text-[9px] opacity-80 text-slate-700">
+                      <div className="text-left font-mono">
+                        <p>Fecha de emisión: {modalVistaPrevia.fecha || '2026-10-06'}</p>
+                        <p className="font-bold mt-0.5 text-indigo-900">Código: {modalVistaPrevia.codigo}</p>
                       </div>
-                    </div>
-                    <div className="text-right">
-                      <span className="block font-bold text-slate-200">Firma Institucional:</span>
-                      <span className="text-emerald-400 font-semibold">✓ Verificado QR</span>
+
+                      <div className="flex gap-4 sm:gap-6">
+                        {estilo.firmas.map((f: string, i: number) => (
+                          <div key={i} className="text-center">
+                            <div className="w-16 sm:w-20 border-b border-black/30 mb-1"></div>
+                            <span className="text-[8px] block font-bold text-slate-800">{f}</span>
+                            <span className="text-[7px] opacity-70 text-slate-500">EDUMIN LMS</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm shrink-0">
+                        <QrCode className="w-7 h-7 text-slate-900" />
+                        <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
+                      </div>
                     </div>
                   </div>
                 </div>

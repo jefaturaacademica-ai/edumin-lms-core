@@ -91,12 +91,19 @@ export default function ReproductorClasesPage() {
           ? diplomados.find((d: any) => (d.slug || d.id || d.titulo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlugNorm)
           : null;
 
-        if (dipEnPerfil && Array.isArray(dipEnPerfil.modulos)) {
+        if (dipEnPerfil) {
           const map: Record<string, boolean> = {};
-          dipEnPerfil.modulos.forEach((m: any, idx: number) => {
-            const key = m.codigo || m.id || `mod-${idx + 1}`;
-            map[key] = Boolean(m.completado);
-          });
+          if (dipEnPerfil.completadosMap && typeof dipEnPerfil.completadosMap === 'object') {
+            Object.assign(map, dipEnPerfil.completadosMap);
+          }
+          if (Array.isArray(dipEnPerfil.modulos)) {
+            dipEnPerfil.modulos.forEach((m: any, idx: number) => {
+              const key = m.codigo || m.id || `Módulo ${(idx + 1).toString().padStart(2, '0')}`;
+              if (map[key] === undefined) {
+                map[key] = Boolean(m.completado);
+              }
+            });
+          }
           setCompletadosMap(map);
         }
       }
@@ -159,8 +166,12 @@ export default function ReproductorClasesPage() {
 
         totalClasesContadas++;
 
-        // Una clase está completada si el módulo está marcado o si las clases individuales lo están
-        const esCompletada = esModuloCompletadoEnBD;
+        // Una clase está completada si su claseId individual está marcada o si el módulo completo lo está
+        const esCompletada = Boolean(
+          completadosMap[claseId] !== undefined
+            ? completadosMap[claseId]
+            : (esModuloCompletadoEnBD && completadosMap[claseId] !== false)
+        );
         if (esCompletada) clasesCompletadasContadas++;
 
         const partes: ParteClase[] = [
@@ -247,7 +258,24 @@ export default function ReproductorClasesPage() {
 
   const modInicial = useMemo(() => {
     if (!diplomadoActual?.modulos?.length) return null;
-    return diplomadoActual.modulos.find((m: any) => m.id === moduloQuery) || diplomadoActual.modulos[0];
+    if (!moduloQuery) return diplomadoActual.modulos[0];
+
+    const queryNorm = moduloQuery.toLowerCase().replace(/[^a-z0-9]+/g, '');
+    const queryNum = queryNorm.replace(/[^0-9]/g, '');
+
+    const found = diplomadoActual.modulos.find((m: any, idx: number) => {
+      if (m.id === moduloQuery || m.codigo === moduloQuery) return true;
+      const idNorm = (m.id || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+      const codNorm = (m.codigo || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+      if (idNorm === queryNorm || codNorm === queryNorm) return true;
+
+      const modNum = String(idx + 1);
+      if (queryNum && (queryNum === modNum || queryNum === modNum.padStart(2, '0'))) return true;
+
+      return false;
+    });
+
+    return found || diplomadoActual.modulos[0];
   }, [diplomadoActual, moduloQuery]);
 
   const claseInicial = useMemo(() => {
@@ -272,7 +300,7 @@ export default function ReproductorClasesPage() {
 
   // Sincronizar si cambia el parámetro de módulo en la URL
   useEffect(() => {
-    if (modInicial && (!claseActual || moduloActivo !== modInicial.id)) {
+    if (modInicial) {
       setModuloActivo(modInicial.id);
       if (modInicial.clases && modInicial.clases.length > 0) {
         setClaseActual(modInicial.clases[0]);
@@ -282,14 +310,41 @@ export default function ReproductorClasesPage() {
   }, [modInicial]);
 
   // Alternar estado completado de la lección y sincronizar con Supabase
-  const toggleCompletarLeccion = async (moduloId: string) => {
+  const toggleCompletarLeccion = async (targetId: string) => {
     try {
       setGuardandoAvance(true);
-      const estadoActual = Boolean(completadosMap[moduloId]);
+      const estadoActual = Boolean(completadosMap[targetId]);
       const nuevoEstado = !estadoActual;
 
       // Actualizar estado local inmediatamente
-      setCompletadosMap(prev => ({ ...prev, [moduloId]: nuevoEstado }));
+      const nuevoMap = { ...completadosMap, [targetId]: nuevoEstado };
+
+      // Si targetId corresponde a un módulo completo, actualizar todas sus clases
+      const modMatch = diplomadoActual?.modulos?.find((m: any) => m.codigo === targetId || m.id === targetId);
+      if (modMatch && Array.isArray(modMatch.clases)) {
+        modMatch.clases.forEach((c: any) => {
+          nuevoMap[c.id] = nuevoEstado;
+        });
+      }
+
+      setCompletadosMap(nuevoMap);
+
+      // Recalcular el porcentaje de avance granular
+      let totalClases = 0;
+      let clasesCompletadas = 0;
+      if (diplomadoActual && diplomadoActual.modulos) {
+        diplomadoActual.modulos.forEach((m: any) => {
+          m.clases.forEach((c: any) => {
+            totalClases++;
+            const isDone = nuevoMap[c.id] !== undefined 
+              ? nuevoMap[c.id] 
+              : (nuevoMap[m.codigo] !== undefined ? nuevoMap[m.codigo] : c.completada);
+            if (isDone) clasesCompletadas++;
+          });
+        });
+      }
+
+      const nuevoAvance = totalClases > 0 ? Math.round((clasesCompletadas / totalClases) * 100) : 0;
 
       // Enviar actualización a la API en Supabase
       const response = await fetch('/api/dashboard/completar-leccion', {
@@ -297,8 +352,12 @@ export default function ReproductorClasesPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           diplomadoSlug: diplomadoId,
-          moduloId,
-          completado: nuevoEstado
+          claseId: targetId,
+          moduloId: targetId,
+          completado: nuevoEstado,
+          completadosMap: nuevoMap,
+          avancePorcentaje: nuevoAvance,
+          dni: '71234567'
         })
       });
 
@@ -391,7 +450,11 @@ export default function ReproductorClasesPage() {
   }
 
   const moduloActualObj = diplomadoActual.modulos.find((m: any) => m.id === moduloActivo) || diplomadoActual.modulos[0];
-  const leccionEstaCompletada = Boolean(completadosMap[moduloActivo] || claseActual.completada);
+  const leccionEstaCompletada = Boolean(
+    completadosMap[claseActual.id] !== undefined
+      ? completadosMap[claseActual.id]
+      : (completadosMap[moduloActivo] || claseActual.completada)
+  );
 
   return (
     <div className={`w-full min-h-full flex flex-col transition-colors duration-200 ${
@@ -428,7 +491,7 @@ export default function ReproductorClasesPage() {
         {/* Botón interactivo superior de Avance y Completado */}
         <div className="flex items-center gap-3">
           <button
-            onClick={() => toggleCompletarLeccion(moduloActivo)}
+            onClick={() => toggleCompletarLeccion(claseActual.id)}
             disabled={guardandoAvance}
             className={`text-xs font-bold px-3.5 py-2 rounded-xl border flex items-center gap-2 transition-all shadow-xs ${
               leccionEstaCompletada
@@ -962,14 +1025,21 @@ export default function ReproductorClasesPage() {
                                 : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                           }`}
                         >
-                          <div className="pt-0.5 shrink-0">
+                          <div 
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              toggleCompletarLeccion(clase.id);
+                            }}
+                            className="pt-0.5 shrink-0 cursor-pointer p-0.5 hover:scale-110 transition-transform"
+                            title={estaCompletada ? "Desmarcar completado (volver a en curso)" : "Marcar lección como completada"}
+                          >
                             {estaCompletada ? (
                               <CheckCircle2 className={`w-4 h-4 shrink-0 ${esClaseSeleccionada ? (esOscuro ? 'text-indigo-400' : 'text-indigo-600') : 'text-emerald-500'}`} />
                             ) : (
                               <div className={`size-4 rounded-full border-2 shrink-0 ${
                                 esClaseSeleccionada 
-                                  ? (esOscuro ? 'border-indigo-400' : 'border-indigo-600') 
-                                  : (esOscuro ? 'border-slate-600' : 'border-slate-300')
+                                  ? (esOscuro ? 'border-indigo-400 hover:border-indigo-300' : 'border-indigo-600 hover:border-indigo-700') 
+                                  : (esOscuro ? 'border-slate-500 hover:border-indigo-400' : 'border-slate-400 hover:border-indigo-600')
                               }`} />
                             )}
                           </div>

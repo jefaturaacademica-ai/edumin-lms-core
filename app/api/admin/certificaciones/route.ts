@@ -30,10 +30,26 @@ export async function GET() {
         .select('*')
         .order('created_at', { ascending: false });
       if (cData && cData.length > 0) {
-        realEmitidos = cData;
+        realEmitidos = cData.map(c => ({
+          id: c.id,
+          codigo: c.codigo_verificacion,
+          tipo: c.tipo,
+          estudiante: c.estudiante_nombre,
+          dni: c.dni_ce,
+          email: `${c.dni_ce}@edumin.pe`,
+          programa: c.programa_titulo,
+          modulo: c.modulo_titulo,
+          nota: Number(c.nota_final) || 18,
+          horas: c.horas_lectivas || '120 horas cronológicas',
+          fecha: c.fecha_emision ? String(c.fecha_emision) : '2026-03-15',
+          estadoFinanciero: c.estado_financiero_al_dia ? 'AL_DIA' : 'DEUDA_PENDIENTE',
+          habilitado: c.estado_financiero_al_dia !== false,
+          plantilla_snapshot: c.plantilla_snapshot || {},
+          categoria: c.tipo === 'DIPLOMA' || c.tipo === 'MODULAR' ? 'Diplomados Oficiales' : (c.tipo === 'TALLER' ? 'Talleres' : 'Cursos de Alta Especialización')
+        }));
       }
-    } catch {
-      // Table missing fallback
+    } catch (err) {
+      console.error('Error al consultar tabla certificaciones:', err);
     }
 
     // 2. Si no hay filas en tabla certificaciones, construir dinámicamente desde profiles de Supabase

@@ -80,7 +80,14 @@ export default function ReproductorCursoPage() {
           : null;
 
         if (curEnPerfil) {
-          setCompletadosMap(prev => ({ ...prev, [curEnPerfil.id || cursoId]: Boolean(curEnPerfil.completado) }));
+          setCompletadosMap(prev => {
+            const next = { ...prev };
+            if (curEnPerfil.completadosMap && typeof curEnPerfil.completadosMap === 'object') {
+              Object.assign(next, curEnPerfil.completadosMap);
+            }
+            next[curEnPerfil.id || cursoId] = Boolean(curEnPerfil.completado);
+            return next;
+          });
         }
       }
 
@@ -140,15 +147,24 @@ export default function ReproductorCursoPage() {
       const estadoActual = Boolean(completadosMap[sesionId]);
       const nuevoEstado = !estadoActual;
 
-      setCompletadosMap(prev => ({ ...prev, [sesionId]: nuevoEstado }));
+      const nuevoMap = { ...completadosMap, [sesionId]: nuevoEstado };
+      setCompletadosMap(nuevoMap);
+
+      const completadasCount = cursoActual.grabaciones.filter((g: any) => nuevoMap[g.id]).length;
+      const totalGrabaciones = cursoActual.grabaciones.length;
+      const nuevoAvance = totalGrabaciones > 0 ? Math.round((completadasCount / totalGrabaciones) * 100) : 0;
 
       await fetch('/api/dashboard/completar-leccion', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          diplomadoSlug: cursoId,
-          moduloId: sesionId,
-          completado: nuevoEstado
+          cursoId: cursoId,
+          cursoSlug: cursoId,
+          sesionId: sesionId,
+          claseId: sesionId,
+          completado: nuevoEstado,
+          completadosMap: nuevoMap,
+          avancePorcentaje: nuevoAvance
         })
       });
     } catch (e) {
@@ -360,15 +376,24 @@ export default function ReproductorCursoPage() {
                   }`}
                 >
                   <div className="flex items-center gap-3 min-w-0">
-                    {estaComp ? (
-                      <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-500" />
-                    ) : (
-                      <PlayCircle className={`w-5 h-5 shrink-0 ${
-                        esSeleccionado 
-                          ? 'text-indigo-500' 
-                          : esOscuro ? 'text-slate-500' : 'text-slate-400'
-                      }`} />
-                    )}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleCompletarSesion(grab.id);
+                      }}
+                      title={estaComp ? "Desmarcar completado (volver a en curso)" : "Marcar sesión como completada"}
+                      className="p-1 rounded-lg transition-transform hover:scale-110 cursor-pointer shrink-0"
+                    >
+                      {estaComp ? (
+                        <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-500" />
+                      ) : (
+                        <div className={`size-4.5 rounded-full border-2 shrink-0 ${
+                          esSeleccionado 
+                            ? 'border-indigo-500 hover:border-indigo-400' 
+                            : esOscuro ? 'border-slate-500 hover:border-indigo-400' : 'border-slate-400 hover:border-indigo-600'
+                        }`} />
+                      )}
+                    </button>
                     <div className="min-w-0">
                       <span className="text-[10px] font-bold uppercase tracking-wider text-indigo-500 block">
                         Sesión 0{index + 1}

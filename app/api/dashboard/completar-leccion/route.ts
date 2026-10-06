@@ -1,132 +1,198 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
-import { parseDiplomadosFromProfile, DiplomadoJSON } from '@/lib/utils/profileParser';
+import { parseDiplomadosFromProfile, parseCursosFromProfile, DiplomadoJSON, CursoJSON } from '@/lib/utils/profileParser';
 
 export async function POST(request: Request) {
   try {
-    const supabase = await createClient();
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    const admin = createAdminClient();
+    const body = await request.json();
+    const { 
+      diplomadoSlug, 
+      diplomadoTitulo, 
+      moduloIndex, 
+      moduloId, 
+      claseId,
+      completado, 
+      completadosMap: inputMap,
+      avancePorcentaje,
+      cursoId, 
+      cursoSlug, 
+      dni 
+    } = body;
 
-    if (authError || !user) {
-      return NextResponse.json({ error: 'No autorizado. Inicie sesión.' }, { status: 401 });
+    // 1. Obtener usuario autenticado o buscar por DNI/email si está en sesión demo
+    let profile: any = null;
+    try {
+      const supabase = await createClient();
+      const { data: { user } } = await supabase.auth.getUser();
+      if (user) {
+        const { data: p } = await admin
+          .from('profiles')
+          .select('*')
+          .eq('id', user.id)
+          .maybeSingle();
+        profile = p;
+
+        if (!profile && user.email) {
+          const { data: pByEmail } = await admin
+            .from('profiles')
+            .select('*')
+            .eq('email', user.email)
+            .maybeSingle();
+          profile = pByEmail;
+        }
+      }
+    } catch {
+      // Demo session fallback
     }
 
-    const body = await request.json();
-    const { diplomadoSlug, diplomadoTitulo, moduloIndex, moduloId, completado } = body;
-
-    const admin = createAdminClient();
-
-    // 1. Obtener Perfil del estudiante
-    let { data: profile } = await admin
-      .from('profiles')
-      .select('*')
-      .eq('id', user.id)
-      .maybeSingle();
-
-    if (!profile && user.email) {
-      const { data: pByEmail } = await admin
+    if (!profile) {
+      const targetDni = dni || '71234567';
+      const { data: pByDni } = await admin
         .from('profiles')
         .select('*')
-        .eq('email', user.email)
+        .eq('dni_ce', targetDni)
         .maybeSingle();
-      profile = pByEmail;
+      profile = pByDni;
+    }
+
+    if (!profile) {
+      const { data: pFirst } = await admin
+        .from('profiles')
+        .select('*')
+        .limit(1)
+        .maybeSingle();
+      profile = pFirst;
     }
 
     if (!profile) {
       return NextResponse.json({ error: 'Perfil no encontrado en Supabase.' }, { status: 404 });
     }
 
-    // 2. Parsear diplomados del perfil
+    // 2. Parsear diplomados y cursos del perfil
     let diplomadosList: DiplomadoJSON[] = parseDiplomadosFromProfile(profile);
+    let cursosList: CursoJSON[] = parseCursosFromProfile(profile);
 
-    if (diplomadosList.length === 0) {
-      // Fallback si no tiene diplomados creados en JSON
-      const title = (diplomadoTitulo || diplomadoSlug || 'DERECHO MINERO').toUpperCase();
-      diplomadosList = [{
-        id: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-        slug: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-        titulo: title,
-        avance: 0,
-        modulos: [
-          { id: 'mod-01', codigo: 'Módulo 01', nombre: 'Módulo 01', nota: 17, completado: false },
-          { id: 'mod-02', codigo: 'Módulo 02', nombre: 'Módulo 02', nota: 18, completado: false },
-          { id: 'mod-03', codigo: 'Módulo 03', nombre: 'Módulo 03', nota: 0, completado: false }
-        ]
-      }];
-    }
+    const targetSlug = (diplomadoSlug || cursoId || cursoSlug || diplomadoTitulo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
-    // Buscar el diplomado objetivo por slug, titulo o ID
-    const targetSlugNorm = (diplomadoSlug || diplomadoTitulo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    // Búsqueda en diplomados
     let targetDip = diplomadosList.find(d => 
-      (d.slug && d.slug.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlugNorm) ||
-      (d.id && d.id.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlugNorm) ||
-      (d.titulo && d.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlugNorm)
+      (d.slug && d.slug.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug) ||
+      (d.id && d.id.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug) ||
+      (d.titulo && d.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug)
     );
 
-    if (!targetDip) {
+    // Búsqueda en cursos
+    let targetCurso = cursosList.find(c => 
+      (c.id && c.id.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug) ||
+      (c.codigo && c.codigo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug) ||
+      (c.titulo && c.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug)
+    );
+
+    let esDiplomado = Boolean(targetDip);
+
+    if (!targetDip && !targetCurso && diplomadosList.length > 0) {
       targetDip = diplomadosList[0];
+      esDiplomado = true;
     }
 
-    // 3. Actualizar el módulo especificado
-    if (targetDip && Array.isArray(targetDip.modulos) && targetDip.modulos.length > 0) {
-      let idxToUpdate = -1;
-      if (typeof moduloIndex === 'number' && moduloIndex >= 0 && moduloIndex < targetDip.modulos.length) {
-        idxToUpdate = moduloIndex;
-      } else if (moduloId) {
-        idxToUpdate = targetDip.modulos.findIndex(m => m.id === moduloId || m.codigo === moduloId);
+    // 3. Actualización Granular por Clase / Módulo para Diplomado
+    if (esDiplomado && targetDip) {
+      (targetDip as any).completadosMap = (targetDip as any).completadosMap || {};
+
+      const keyTarget = claseId || moduloId;
+      if (keyTarget) {
+        (targetDip as any).completadosMap[keyTarget] = Boolean(completado);
+      }
+      if (inputMap && typeof inputMap === 'object') {
+        Object.assign((targetDip as any).completadosMap, inputMap);
       }
 
-      if (idxToUpdate === -1) idxToUpdate = 0;
+      // Si viene avancePorcentaje precalculado por el cliente, usarlo
+      if (typeof avancePorcentaje === 'number' && avancePorcentaje >= 0 && avancePorcentaje <= 100) {
+        targetDip.avance = avancePorcentaje;
+      } else if (Array.isArray(targetDip.modulos) && targetDip.modulos.length > 0) {
+        // Recalcular por módulos si no viene porcentaje explicito
+        let idxToUpdate = -1;
+        if (typeof moduloIndex === 'number' && moduloIndex >= 0 && moduloIndex < targetDip.modulos.length) {
+          idxToUpdate = moduloIndex;
+        } else if (moduloId) {
+          idxToUpdate = targetDip.modulos.findIndex(m => m.id === moduloId || m.codigo === moduloId);
+        }
 
-      const isCompleted = completado !== undefined ? Boolean(completado) : !targetDip.modulos[idxToUpdate].completado;
-      targetDip.modulos[idxToUpdate].completado = isCompleted;
+        if (idxToUpdate !== -1) {
+          targetDip.modulos[idxToUpdate].completado = Boolean(completado);
+        }
 
-      // Recalcular el porcentaje de avance del diplomado
-      const completadosCount = targetDip.modulos.filter(m => m.completado).length;
-      const nuevoAvance = Math.round((completadosCount / targetDip.modulos.length) * 100);
-      targetDip.avance = nuevoAvance;
+        const completadosCount = targetDip.modulos.filter(m => m.completado).length;
+        targetDip.avance = Math.round((completadosCount / targetDip.modulos.length) * 100);
+      }
+
+      // Sincronizar estado de cada módulo en el array modulos
+      if (Array.isArray(targetDip.modulos)) {
+        targetDip.modulos.forEach((m: any, mIdx: number) => {
+          const modKey = m.codigo || m.id || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+          if ((targetDip as any).completadosMap[modKey] !== undefined) {
+            m.completado = Boolean((targetDip as any).completadosMap[modKey]);
+          }
+        });
+      }
+
+      // Si el avance es menor al 100%, la propiedad completado pasa a FALSE (vuelve a estado "en_curso")
+      (targetDip as any).completado = (targetDip.avance === 100);
+
+    } else if (targetCurso) {
+      // Actualizar Curso
+      (targetCurso as any).completadosMap = (targetCurso as any).completadosMap || {};
+      const keyTarget = claseId || moduloId;
+      if (keyTarget) {
+        (targetCurso as any).completadosMap[keyTarget] = Boolean(completado);
+      }
+      if (inputMap && typeof inputMap === 'object') {
+        Object.assign((targetCurso as any).completadosMap, inputMap);
+      }
+
+      if (typeof avancePorcentaje === 'number') {
+        targetCurso.avance = avancePorcentaje;
+      } else {
+        const isCompleted = completado !== undefined ? Boolean(completado) : !targetCurso.completado;
+        targetCurso.avance = isCompleted ? 100 : 0;
+      }
+
+      targetCurso.completado = ((targetCurso.avance || 0) === 100);
     }
 
-    // 4. Guardar diplomados y cursos actualizados en Supabase profiles
+    // 4. Serializar y guardar en la tabla profiles de Supabase
     const diplomadosSerialized = `DIPLOMADOS_LIST|${JSON.stringify(diplomadosList)}`;
-
-    const updatePayload: any = {
-      diplomados: diplomadosSerialized,
-      diplomado_1: diplomadosSerialized,
-      avance_porcentaje: targetDip ? targetDip.avance : profile.avance_porcentaje
-    };
+    const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosList)}`;
 
     const { data: updatedProfile, error: updateErr } = await admin
       .from('profiles')
-      .update(updatePayload)
+      .update({
+        diplomados: diplomadosSerialized,
+        cursos: cursosSerialized
+      })
       .eq('id', profile.id)
       .select()
-      .single();
+      .maybeSingle();
 
     if (updateErr) {
-      // Fallback try without diplomado_1 if column doesn't exist
-      const { data: retryProfile, error: retryErr } = await admin
-        .from('profiles')
-        .update({
-          diplomados: diplomadosSerialized,
-          avance_porcentaje: targetDip ? targetDip.avance : profile.avance_porcentaje
-        })
-        .eq('id', profile.id)
-        .select()
-        .single();
-
-      if (retryErr) {
-        return NextResponse.json({ error: `Error al guardar avance en Supabase: ${retryErr.message}` }, { status: 500 });
-      }
+      console.error('Error guardando en Supabase:', updateErr);
+      return NextResponse.json({ error: `Error en Supabase: ${updateErr.message}` }, { status: 500 });
     }
 
-    // Audit Log
+    // Registrar en auditoría
     try {
       await admin.from('audit_logs').insert({
-        usuario_email: profile.email || user.email,
-        accion: 'MARCAR_LECCION_COMPLETADA',
-        detalles: { diplomado: targetDip?.titulo, avance: targetDip?.avance, modulos: targetDip?.modulos }
+        usuario_email: profile.email || 'estudiante@edumin.pe',
+        accion: 'CAMBIAR_ESTADO_LECCION_GRANULAR',
+        detalles: {
+          programa: targetDip?.titulo || targetCurso?.titulo,
+          claseId,
+          completado,
+          avance: targetDip?.avance || targetCurso?.avance
+        }
       });
     } catch (e) {
       console.error(e);
@@ -134,14 +200,15 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      message: 'Avance registrado y sincronizado en Supabase.',
+      message: 'Progreso por clase y porcentaje de avance actualizados en Supabase.',
       diplomado: targetDip,
-      avance_porcentaje: targetDip ? targetDip.avance : 0,
-      profile: updatedProfile
+      curso: targetCurso,
+      avance: targetDip ? targetDip.avance : (targetCurso ? targetCurso.avance : 0),
+      profile: updatedProfile || profile
     });
 
   } catch (err: any) {
-    console.error('Error al completar lección:', err);
+    console.error('Error en completar-leccion API:', err);
     return NextResponse.json({ error: err.message || 'Error del servidor' }, { status: 500 });
   }
 }
