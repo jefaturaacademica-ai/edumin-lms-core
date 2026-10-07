@@ -61,12 +61,22 @@ function getLocalCatalogoData() {
       const codigoModulo = `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
 
       // Clases numeradas secuencialmente (ej. Clase 1, Clase 2... Módulo 2 empieza en Clase 4, etc.)
-      const clasesFormat = (Array.isArray(m.clases) ? m.clases : []).map((claseNombre: string) => {
+      const clasesFormat = (Array.isArray(m.clases) ? m.clases : []).map((claseItem: any) => {
         const numClase = contadorClaseGlobal;
         contadorClaseGlobal += 1;
-        // Quitar prefijos antiguos si existían
-        const nombreLimpio = claseNombre.replace(/^Clase \d+:\s*/i, '').replace(/^Clase \d+ - \s*/i, '').trim();
-        return `Clase ${numClase}: ${nombreLimpio}`;
+        const isObj = typeof claseItem === 'object' && claseItem !== null;
+        const rawTitle = isObj ? (claseItem.titulo || '') : String(claseItem);
+        const nombreLimpio = rawTitle.replace(/^Clase \d+:\s*/i, '').replace(/^Clase \d+ - \s*/i, '').trim();
+        const tituloFormateado = `Clase ${numClase}: ${nombreLimpio || 'Nueva Clase'}`;
+
+        if (isObj) {
+          return {
+            ...claseItem,
+            titulo: tituloFormateado
+          };
+        }
+
+        return tituloFormateado;
       });
 
       return {

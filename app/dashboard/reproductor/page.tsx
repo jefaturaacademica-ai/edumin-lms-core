@@ -23,6 +23,7 @@ import {
 import Link from 'next/link';
 import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 import { parseDiplomadosFromProfile } from '@/lib/utils/profileParser';
+import { getDriveVideoForClass } from '@/lib/data/driveVideos';
 
 function ReproductorContent() {
   const searchParams = useSearchParams();
@@ -109,11 +110,12 @@ function ReproductorContent() {
         const modulosMapeados = modulosSource.map((m: any, idx: number) => {
           const userModState = userDipMatch?.modulos?.[idx];
           const isComp = userModState?.completado ?? (idx === 0);
-          const clasesList = (Array.isArray(m.clases) ? m.clases : []).map((cItem: any) => {
+          const clasesList = (Array.isArray(m.clases) ? m.clases : []).map((cItem: any, cIdx: number) => {
             const isObj = typeof cItem === 'object' && cItem !== null;
+            const driveVideoUrl = getDriveVideoForClass(slugParam, idx, cIdx);
             return {
               titulo: isObj ? cItem.titulo : String(cItem),
-              iframe_url: isObj ? (cItem.iframe_url || '') : '',
+              iframe_url: isObj ? (cItem.iframe_url || cItem.videoUrl || driveVideoUrl || '') : (driveVideoUrl || ''),
               pdf_url: isObj ? (cItem.pdf_url || '') : '',
               excel_url: isObj ? (cItem.excel_url || '') : ''
             };

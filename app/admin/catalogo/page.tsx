@@ -215,18 +215,21 @@ export default function CatalogoAdminPage() {
         const nombreLimpio = claseText.replace(/^Clase \d+[\s:\-]+/i, '').trim();
         const tituloFormateado = `Clase ${numClase}: ${nombreLimpio || 'Nueva Clase'}`;
 
-        if (isObj) {
-          return {
-            ...claseItem,
-            titulo: tituloFormateado
-          };
-        }
+        const videoUrlVal = isObj ? (claseItem.videoUrl || claseItem.iframe_url || '') : '';
+        const pdfUrlVal = isObj ? (claseItem.pdf_url || claseItem.pdfUrl || '') : '';
+        const excelUrlVal = isObj ? (claseItem.excel_url || claseItem.excelUrl || '') : '';
+        const videoResumenVal = isObj ? (claseItem.videoResumenUrl || '') : '';
+        const audioResumenVal = isObj ? (claseItem.audioResumenUrl || '') : '';
 
         return {
+          ...(isObj ? claseItem : {}),
           titulo: tituloFormateado,
-          iframe_url: '',
-          pdf_url: '',
-          excel_url: ''
+          videoUrl: videoUrlVal,
+          iframe_url: videoUrlVal,
+          pdf_url: pdfUrlVal,
+          excel_url: excelUrlVal,
+          videoResumenUrl: videoResumenVal,
+          audioResumenUrl: audioResumenVal
         };
       });
 
@@ -248,7 +251,7 @@ export default function CatalogoAdminPage() {
       codigo: `Módulo ${nuevoNum.toString().padStart(2, '0')}`,
       nombre: `MÓDULO ${nuevoNum.toString().padStart(2, '0')}: NUEVO MÓDULO`,
       docente: itemEditando.docente || 'Reginaldo Andía',
-      clases: [{ titulo: 'Nueva Clase', iframe_url: '', pdf_url: '', excel_url: '' }]
+      clases: [{ titulo: 'Nueva Clase', videoUrl: '', iframe_url: '', pdf_url: '', excel_url: '', videoResumenUrl: '', audioResumenUrl: '' }]
     };
 
     const modsSecuenciados = normalizarYSecuenciarClases([...actualMods, nuevoMod]);
@@ -283,7 +286,7 @@ export default function CatalogoAdminPage() {
       ? itemEditando.modulos.map((m: any) => ({ ...m, clases: [...(m.clases || [])] }))
       : [];
     
-    nuevosMods[mIdx].clases.push({ titulo: 'Nueva Clase', iframe_url: '', pdf_url: '', excel_url: '' });
+    nuevosMods[mIdx].clases.push({ titulo: 'Nueva Clase', videoUrl: '', iframe_url: '', pdf_url: '', excel_url: '', videoResumenUrl: '', audioResumenUrl: '' });
     const modsSecuenciados = normalizarYSecuenciarClases(nuevosMods);
     setItemEditando({ ...itemEditando, modulos: modsSecuenciados });
   };
@@ -297,12 +300,19 @@ export default function CatalogoAdminPage() {
     const claseActual = nuevosMods[mIdx].clases[cIdx];
     if (typeof claseActual === 'object' && claseActual !== null) {
       claseActual[campo] = valor;
+      if (campo === 'iframe_url' || campo === 'videoUrl') {
+        claseActual.iframe_url = valor;
+        claseActual.videoUrl = valor;
+      }
     } else {
       nuevosMods[mIdx].clases[cIdx] = {
         titulo: String(claseActual),
-        iframe_url: campo === 'iframe_url' ? valor : '',
+        videoUrl: (campo === 'iframe_url' || campo === 'videoUrl') ? valor : '',
+        iframe_url: (campo === 'iframe_url' || campo === 'videoUrl') ? valor : '',
         pdf_url: campo === 'pdf_url' ? valor : '',
-        excel_url: campo === 'excel_url' ? valor : ''
+        excel_url: campo === 'excel_url' ? valor : '',
+        videoResumenUrl: campo === 'videoResumenUrl' ? valor : '',
+        audioResumenUrl: campo === 'audioResumenUrl' ? valor : ''
       };
     }
     
@@ -873,66 +883,88 @@ export default function CatalogoAdminPage() {
                              <div className="space-y-3">
                                {mod.clases && mod.clases.length > 0 ? (
                                  mod.clases.map((claseObj: any, cIdx: number) => {
-                                   const tituloClase = typeof claseObj === 'object' && claseObj !== null ? claseObj.titulo : String(claseObj);
-                                   const iframeUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.iframe_url || '') : '';
-                                   const pdfUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.pdf_url || '') : '';
-                                   const excelUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.excel_url || '') : '';
+                                  const tituloClase = typeof claseObj === 'object' && claseObj !== null ? claseObj.titulo : String(claseObj);
+                                  const iframeUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.iframe_url || claseObj.videoUrl || '') : '';
+                                  const videoResumenUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.videoResumenUrl || '') : '';
+                                  const audioResumenUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.audioResumenUrl || '') : '';
+                                  const pdfUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.pdf_url || claseObj.pdfUrl || '') : '';
+                                  const excelUrl = typeof claseObj === 'object' && claseObj !== null ? (claseObj.excel_url || claseObj.excelUrl || '') : '';
 
-                                   return (
-                                     <div key={cIdx} className="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
-                                       <div className="flex items-center gap-2">
-                                         <input 
-                                           type="text"
-                                           value={tituloClase}
-                                           placeholder="Título de la clase..."
-                                           onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'titulo', e.target.value)}
-                                           className="flex-1 px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-800 font-mono"
-                                         />
-                                         <button
-                                           type="button"
-                                           onClick={() => eliminarClaseDeModulo(mIdx, cIdx)}
-                                           className="text-slate-400 hover:text-red-500 p-1 transition cursor-pointer"
-                                           title="Eliminar clase"
-                                         >
-                                           <X className="size-3.5" />
-                                         </button>
-                                       </div>
+                                  return (
+                                    <div key={cIdx} className="p-3 bg-slate-50 border border-slate-200 rounded-xl space-y-2">
+                                      <div className="flex items-center gap-2">
+                                        <input 
+                                          type="text"
+                                          value={tituloClase}
+                                          placeholder="Título de la clase..."
+                                          onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'titulo', e.target.value)}
+                                          className="flex-1 px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-800 font-mono"
+                                        />
+                                        <button
+                                          type="button"
+                                          onClick={() => eliminarClaseDeModulo(mIdx, cIdx)}
+                                          className="text-slate-400 hover:text-red-500 p-1 transition cursor-pointer"
+                                          title="Eliminar clase"
+                                        >
+                                          <X className="size-3.5" />
+                                        </button>
+                                      </div>
 
-                                       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 pt-1 border-t border-slate-200/60">
-                                         <div>
-                                           <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📹 Video iFrame (YouTube/Vimeo)</label>
-                                           <input 
-                                             type="text"
-                                             placeholder="https://www.youtube.com/embed/..."
-                                             value={iframeUrl}
-                                             onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'iframe_url', e.target.value)}
-                                             className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
-                                           />
-                                         </div>
-                                         <div>
-                                           <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📄 Documento PDF</label>
-                                           <input 
-                                             type="text"
-                                             placeholder="https://.../separata.pdf"
-                                             value={pdfUrl}
-                                             onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'pdf_url', e.target.value)}
-                                             className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
-                                           />
-                                         </div>
-                                         <div>
-                                           <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📊 Archivo Excel / Material</label>
-                                           <input 
-                                             type="text"
-                                             placeholder="https://.../plantilla.xlsx"
-                                             value={excelUrl}
-                                             onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'excel_url', e.target.value)}
-                                             className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
-                                           />
-                                         </div>
-                                       </div>
-                                     </div>
-                                   );
-                                 })
+                                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 pt-1 border-t border-slate-200/60">
+                                        <div>
+                                          <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📹 Video Principal (iFrame / Drive)</label>
+                                          <input 
+                                            type="text"
+                                            placeholder="https://drive.google.com/file/d/.../preview"
+                                            value={iframeUrl}
+                                            onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'iframe_url', e.target.value)}
+                                            className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                          />
+                                        </div>
+                                        <div>
+                                          <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">🎬 Resumen en Video (MP4 / iFrame)</label>
+                                          <input 
+                                            type="text"
+                                            placeholder="https://.../resumen.mp4"
+                                            value={videoResumenUrl}
+                                            onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'videoResumenUrl', e.target.value)}
+                                            className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                          />
+                                        </div>
+                                        <div>
+                                          <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">🎧 Resumen en Audio (MP3 / Podcast)</label>
+                                          <input 
+                                            type="text"
+                                            placeholder="https://.../audio.mp3"
+                                            value={audioResumenUrl}
+                                            onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'audioResumenUrl', e.target.value)}
+                                            className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                          />
+                                        </div>
+                                        <div>
+                                          <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📄 Documento PDF</label>
+                                          <input 
+                                            type="text"
+                                            placeholder="https://.../separata.pdf"
+                                            value={pdfUrl}
+                                            onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'pdf_url', e.target.value)}
+                                            className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                          />
+                                        </div>
+                                        <div>
+                                          <label className="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-0.5">📊 Archivo Excel / Material</label>
+                                          <input 
+                                            type="text"
+                                            placeholder="https://.../plantilla.xlsx"
+                                            value={excelUrl}
+                                            onChange={(e) => actualizarCampoClase(mIdx, cIdx, 'excel_url', e.target.value)}
+                                            className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                          />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  );
+                                })
                                ) : (
                                  <p className="text-[10px] text-slate-400 italic">No hay clases agregadas aún a este módulo.</p>
                                )}

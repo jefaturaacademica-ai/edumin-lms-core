@@ -4,7 +4,7 @@ export interface RawModuloJSON {
   codigo?: string;
   nombre?: string;
   docente?: string;
-  clases?: string[];
+  clases?: (string | { titulo?: string; videoUrl?: string; driveId?: string })[];
 }
 
 export interface RawDiplomadoJSON {
@@ -89,7 +89,7 @@ function normalizarModulo(mod: RawModuloJSON, index: number): ModuloDetalle {
     codigo: etiquetaModulo,
     nombre,
     docente: docente || '',
-    clases: Array.isArray(mod.clases) ? mod.clases.map(c => c.trim()).filter(Boolean) : []
+    clases: Array.isArray(mod.clases) ? mod.clases.map(c => typeof c === 'string' ? c.trim() : (typeof c === 'object' && c !== null ? (c.titulo || '') : '')).filter(Boolean) : []
   };
 }
 

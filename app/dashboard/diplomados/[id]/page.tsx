@@ -6,6 +6,8 @@ import {
   FileText, 
   ChevronLeft, 
   ChevronRight, 
+  ChevronDown,
+  Folder,
   ArrowLeft, 
   Download, 
   Send, 
@@ -21,6 +23,7 @@ import {
 import { useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { getDiplomadoBySlug } from '@/lib/data/diplomadosData';
+import { getDriveVideoForClass } from '@/lib/data/driveVideos';
 import { useTheme } from '@/context/theme-context';
 
 export interface RecursoItem {
@@ -70,6 +73,14 @@ export default function ReproductorClasesPage() {
   const [completadosMap, setCompletadosMap] = useState<Record<string, boolean>>({});
   const [catalogoMateriales, setCatalogoMateriales] = useState<any>(null);
   const [guardandoAvance, setGuardandoAvance] = useState(false);
+  const [temasAbiertosMap, setTemasAbiertosMap] = useState<Record<string, boolean>>({});
+
+  const toggleTema = (temaId: string) => {
+    setTemasAbiertosMap(prev => ({
+      ...prev,
+      [temaId]: prev[temaId] === undefined ? false : !prev[temaId]
+    }));
+  };
 
   // Cargar datos de Supabase (/api/dashboard/me y /api/admin/catalogo)
   const cargarDatosSupabase = useCallback(async () => {
@@ -152,6 +163,163 @@ export default function ReproductorClasesPage() {
       const modCodigoKey = mod.codigo || `Módulo ${(modIdx + 1).toString().padStart(2, '0')}`;
       const esModuloCompletadoEnBD = Boolean(completadosMap[modCodigoKey]);
 
+      let temasProcesados: any[] | undefined = undefined;
+
+      if (Array.isArray(mod.temas) && mod.temas.length > 0) {
+        temasProcesados = mod.temas.map((tObj: any, tIdx: number) => {
+          const rawTemaClases = Array.isArray(tObj.clases) ? tObj.clases : [];
+          const temaClases: ClaseCompleta[] = rawTemaClases.map((claseTitleStr: any, claseIdx: number) => {
+            const numClase = contadorGlobalClases++;
+            const claseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase ${numClase}`);
+            const claseId = `${modCodigoKey}-t${tIdx + 1}-c${claseIdx + 1}`;
+            const driveVideoUrl = typeof claseTitleStr === 'object' && claseTitleStr.videoUrl 
+              ? claseTitleStr.videoUrl 
+              : (getDriveVideoForClass(diplomadoId, modIdx, totalClasesContadas) || mod.videoUrl);
+            const videoUrlFromCatalog = driveVideoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+            const pdfUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.pdfUrl : mod.pdfUrl;
+            const excelUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.excelUrl : mod.excelUrl;
+
+            totalClasesContadas++;
+
+            const esCompletada = Boolean(
+              completadosMap[claseId] !== undefined
+                ? completadosMap[claseId]
+                : (esModuloCompletadoEnBD && completadosMap[claseId] !== false)
+            );
+            if (esCompletada) clasesCompletadasContadas++;
+
+            const partes: ParteClase[] = [
+              {
+                id: `${claseId}-p1`,
+                numero: 1,
+                titulo: `Sesión Completa`,
+                subtitulo: claseTitle,
+                duracion: '60 min',
+                videoUrl: videoUrlFromCatalog,
+                completada: esCompletada,
+                resumen: {
+                  objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
+                  puntosClave: [
+                    `Revisión de la normativa vigente y estándares técnicos aplicables.`,
+                    `Criterios clave para la toma de decisiones operativas y de gestión.`,
+                    `Estrategias de análisis y resolución de problemas en el sector.`
+                  ]
+                },
+                recursos: [
+                  {
+                    id: `rec-${claseId}-pdf`,
+                    tipo: 'pdf',
+                    titulo: pdfUrlFromCatalog ? `Separata_Oficial_CLASE_${numClase}.pdf` : `Separata_Oficial_CLASE_${numClase}.pdf`,
+                    descripcion: 'Documento oficial con contenidos y diapositivas de la clase · PDF',
+                    archivo: pdfUrlFromCatalog || `Separata_Oficial_CLASE_${numClase}.pdf`
+                  },
+                  ...(excelUrlFromCatalog ? [{
+                    id: `rec-${claseId}-excel`,
+                    tipo: 'excel' as const,
+                    titulo: `Plantilla_Calculo_CLASE_${numClase}.xlsx`,
+                    descripcion: 'Hoja de cálculo y plantilla interactiva de trabajo · EXCEL',
+                    archivo: excelUrlFromCatalog
+                  }] : []),
+                  {
+                    id: `rec-${claseId}-capsula`,
+                    tipo: 'video',
+                    titulo: `Cápsula de Resumen en Video`,
+                    descripcion: 'Video sumario con los puntos más relevantes · 8 min',
+                    duracion: '8 min'
+                  },
+                  {
+                    id: `rec-${claseId}-audio`,
+                    tipo: 'audio',
+                    titulo: `Podcast de la Clase`,
+                    descripcion: 'Audio en formato MP3 para estudio y repaso · 15 min',
+                    duracion: '15 min'
+                  }
+                ]
+              }
+            ];
+
+            return {
+              id: claseId,
+              numeroClase: numClase,
+              tituloClase: claseTitle.startsWith('Clase') ? claseTitle : `CLASE ${numClase}: ${claseTitle}`,
+              moduloCodigo: modCodigoKey,
+              moduloTitulo: `${modCodigoKey}: ${mod.nombre || mod.titulo || ''}`,
+              completada: esCompletada,
+              partes
+            };
+          });
+
+          return {
+            id: `${modCodigoKey}-t${tIdx + 1}`,
+            titulo: tObj.titulo || `Tema 0${tIdx + 1}`,
+            clases: temaClases
+          };
+        });
+      }
+
+      let clasesAdicionalesProcesadas: ClaseCompleta[] = [];
+      if (Array.isArray(mod.clasesAdicionales) && mod.clasesAdicionales.length > 0) {
+        clasesAdicionalesProcesadas = mod.clasesAdicionales.map((claseTitleStr: any, cIdx: number) => {
+          const numClase = contadorGlobalClases++;
+          const claseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase Adicional`);
+          const claseId = `${modCodigoKey}-adic-${cIdx + 1}`;
+          const driveVideoUrl = typeof claseTitleStr === 'object' && claseTitleStr.videoUrl 
+            ? claseTitleStr.videoUrl 
+            : (getDriveVideoForClass(diplomadoId, modIdx, totalClasesContadas) || mod.videoUrl);
+          const videoUrlFromCatalog = driveVideoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+          const pdfUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.pdfUrl : mod.pdfUrl;
+          const excelUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.excelUrl : mod.excelUrl;
+
+          totalClasesContadas++;
+
+          const esCompletada = Boolean(
+            completadosMap[claseId] !== undefined
+              ? completadosMap[claseId]
+              : (esModuloCompletadoEnBD && completadosMap[claseId] !== false)
+          );
+          if (esCompletada) clasesCompletadasContadas++;
+
+          const partes: ParteClase[] = [
+            {
+              id: `${claseId}-p1`,
+              numero: 1,
+              titulo: `Sesión Completa`,
+              subtitulo: claseTitle,
+              duracion: '60 min',
+              videoUrl: videoUrlFromCatalog,
+              completada: esCompletada,
+              resumen: {
+                objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
+                puntosClave: [
+                  `Revisión de la normativa vigente y estándares técnicos aplicables.`,
+                  `Criterios clave para la toma de decisiones operativas y de gestión.`,
+                  `Estrategias de análisis y resolución de problemas en el sector.`
+                ]
+              },
+              recursos: [
+                {
+                  id: `rec-${claseId}-pdf`,
+                  tipo: 'pdf',
+                  titulo: pdfUrlFromCatalog ? `Separata_Oficial_CLASE_${numClase}.pdf` : `Separata_Oficial_CLASE_${numClase}.pdf`,
+                  descripcion: 'Documento oficial con contenidos y diapositivas de la clase · PDF',
+                  archivo: pdfUrlFromCatalog || `Separata_Oficial_CLASE_${numClase}.pdf`
+                }
+              ]
+            }
+          ];
+
+          return {
+            id: claseId,
+            numeroClase: numClase,
+            tituloClase: claseTitle.startsWith('Clase') ? claseTitle : `CLASE ${numClase}: ${claseTitle}`,
+            moduloCodigo: modCodigoKey,
+            moduloTitulo: `${modCodigoKey}: ${mod.nombre || mod.titulo || ''}`,
+            completada: esCompletada,
+            partes
+          };
+        });
+      }
+
       const rawClases = (mod.clases && mod.clases.length > 0) 
         ? mod.clases 
         : ['Sesión Magistral de Introducción', 'Casuística Aplicada'];
@@ -160,7 +328,10 @@ export default function ReproductorClasesPage() {
         const numClase = contadorGlobalClases++;
         const claseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase ${numClase}`);
         const claseId = `${modCodigoKey}-c${numClase}`;
-        const videoUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.videoUrl : (mod.videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ');
+        const driveVideoUrl = getDriveVideoForClass(diplomadoId, modIdx, claseIdx);
+        const videoUrlFromCatalog = (typeof claseTitleStr === 'object' && claseTitleStr.videoUrl)
+          ? claseTitleStr.videoUrl
+          : (driveVideoUrl || mod.videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ');
         const pdfUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.pdfUrl : mod.pdfUrl;
         const excelUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.excelUrl : mod.excelUrl;
 
@@ -235,12 +406,18 @@ export default function ReproductorClasesPage() {
         };
       });
 
+      const todasLasClasesDelModulo = temasProcesados 
+        ? [...temasProcesados.flatMap((t: any) => t.clases), ...clasesAdicionalesProcesadas] 
+        : clases;
+
       return {
         id: modCodigoKey,
         codigo: modCodigoKey,
         nombre: mod.nombre || mod.titulo || `Módulo ${(modIdx + 1).toString().padStart(2, '0')}`,
         titulo: `${modCodigoKey}: ${mod.nombre || ''}`,
-        clases,
+        clases: todasLasClasesDelModulo,
+        temas: temasProcesados,
+        clasesAdicionales: clasesAdicionalesProcesadas,
         completado: esModuloCompletadoEnBD
       };
     });
@@ -419,12 +596,64 @@ export default function ReproductorClasesPage() {
     }
   };
 
+  const marcarLeccionCompletadaAuto = useCallback(async (claseId: string, modId: string) => {
+    if (!claseId || completadosMap[claseId]) return;
+
+    const nuevoMap = { ...completadosMap, [claseId]: true };
+    setCompletadosMap(nuevoMap);
+
+    let totalClases = 0;
+    let clasesCompletadas = 0;
+
+    if (diplomadoActual && diplomadoActual.modulos) {
+      diplomadoActual.modulos.forEach((m: any) => {
+        m.clases.forEach((c: any) => {
+          totalClases++;
+          const isDone = nuevoMap[c.id] !== undefined 
+            ? nuevoMap[c.id] 
+            : (nuevoMap[m.codigo] !== undefined ? nuevoMap[m.codigo] : c.completada);
+          if (isDone) clasesCompletadas++;
+        });
+      });
+    }
+
+    const nuevoAvance = totalClases > 0 ? Math.round((clasesCompletadas / totalClases) * 100) : 0;
+
+    setGuardandoAvance(true);
+    try {
+      await fetch('/api/dashboard/completar-leccion', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          diplomadoSlug: diplomadoId,
+          claseId: claseId,
+          moduloId: modId,
+          completado: true,
+          completadosMap: nuevoMap,
+          avancePorcentaje: nuevoAvance,
+          dni: '71234567'
+        })
+      });
+    } catch (err) {
+      console.error('Error al autocompletar lección:', err);
+    } finally {
+      setGuardandoAvance(false);
+    }
+  }, [completadosMap, diplomadoActual, diplomadoId]);
+
   const seleccionarClaseYParte = (moduloId: string, clase: ClaseCompleta, parteNum: number = 1) => {
     setModuloActivo(moduloId);
     setClaseActual(clase);
     setParteSeleccionada(parteNum);
     activarRecursoEnVisor('video_clase', clase.partes.length > 1 ? `Video de la Clase (Parte ${parteNum})` : 'Video de la Clase');
+    marcarLeccionCompletadaAuto(clase.id, moduloId);
   };
+
+  useEffect(() => {
+    if (claseActual && !loading && !completadosMap[claseActual.id]) {
+      marcarLeccionCompletadaAuto(claseActual.id, claseActual.moduloCodigo);
+    }
+  }, [claseActual, loading, completadosMap, marcarLeccionCompletadaAuto]);
 
   const irAAnterior = () => {
     if (itemAnterior) {
@@ -488,35 +717,21 @@ export default function ReproductorClasesPage() {
           </div>
         </div>
 
-        {/* Botón interactivo superior de Avance y Completado */}
+        {/* Indicador de Avance y Estado de Lección en Encabezado */}
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => toggleCompletarLeccion(claseActual.id)}
-            disabled={guardandoAvance}
-            className={`text-xs font-bold px-3.5 py-2 rounded-xl border flex items-center gap-2 transition-all shadow-xs ${
-              leccionEstaCompletada
-                ? 'bg-emerald-600 hover:bg-emerald-500 text-white border-emerald-500'
-                : esOscuro
-                  ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
-                  : 'bg-white hover:bg-slate-100 text-slate-800 border-slate-300'
-            }`}
-          >
-            {guardandoAvance ? (
-              <Loader2 className="w-4 h-4 animate-spin" />
-            ) : leccionEstaCompletada ? (
-              <>
-                <Check className="w-4 h-4 text-white" />
-                <span className="hidden sm:inline">Lección Completada</span>
-                <span className="sm:hidden">Completada</span>
-              </>
-            ) : (
-              <>
-                <CheckCircle2 className="w-4 h-4 text-indigo-500" />
-                <span className="hidden sm:inline">Marcar como Completada</span>
-                <span className="sm:hidden">Completar</span>
-              </>
-            )}
-          </button>
+          <div className={`text-xs font-bold px-3.5 py-1.5 rounded-xl border flex items-center gap-2 transition-all ${
+            esOscuro 
+              ? 'bg-indigo-950/60 border-indigo-800/60 text-indigo-300' 
+              : 'bg-indigo-50 border-indigo-200 text-indigo-900'
+          }`}>
+            <span className="font-extrabold uppercase tracking-wider text-[11px]">
+              {claseActual.tituloClase.split(':')[0] || `Clase ${claseActual.numeroClase}`}
+            </span>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-[10px] font-bold text-emerald-500 hidden sm:inline">
+              ✓ Guardado
+            </span>
+          </div>
         </div>
       </header>
 
@@ -668,14 +883,15 @@ export default function ReproductorClasesPage() {
               </div>
             </div>
 
-            {/* BARRA UNIFICADA: ANTERIOR + COMPLETAR LECCIÓN + SIGUIENTE */}
+            {/* BARRA DE NAVEGACIÓN SECUENCIAL */}
             <div className={`mt-5 pt-4 border-t flex flex-col sm:flex-row items-center justify-between gap-3 ${
               esOscuro ? 'border-slate-800' : 'border-slate-100'
             }`}>
               <button
+                type="button"
                 onClick={irAAnterior}
                 disabled={!itemAnterior}
-                className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold px-3.5 py-2 rounded-xl border transition-all shrink-0 ${
+                className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold px-4 py-2 rounded-xl border transition-all shrink-0 cursor-pointer ${
                   itemAnterior
                     ? esOscuro
                       ? 'bg-slate-800 text-slate-200 border-slate-700 hover:bg-slate-700'
@@ -687,36 +903,19 @@ export default function ReproductorClasesPage() {
                 <span>Anterior</span>
               </button>
 
-              <button
-                onClick={() => toggleCompletarLeccion(moduloActivo)}
-                disabled={guardandoAvance}
-                className={`px-5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-2 border ${
-                  leccionEstaCompletada
-                    ? 'bg-emerald-600 hover:bg-emerald-500 text-white border-emerald-500'
-                    : 'bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500 shadow'
-                }`}
-              >
-                {guardandoAvance ? (
-                  <Loader2 className="w-4 h-4 animate-spin" />
-                ) : leccionEstaCompletada ? (
-                  <>
-                    <Check className="w-4 h-4 text-white" />
-                    <span>Lección Completada ✓</span>
-                  </>
-                ) : (
-                  <>
-                    <CheckCircle2 className="w-4 h-4" />
-                    <span>Marcar como Completado</span>
-                  </>
-                )}
-              </button>
+              <div className={`text-center text-xs font-semibold px-4 py-1.5 rounded-lg ${
+                esOscuro ? 'bg-slate-800/60 text-slate-400' : 'bg-slate-100 text-slate-600'
+              }`}>
+                Sesión {indiceActualPlano >= 0 ? indiceActualPlano + 1 : 1} de {todasLasPartes.length}
+              </div>
 
               <button
+                type="button"
                 onClick={irASiguiente}
                 disabled={!itemSiguiente}
-                className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold px-3.5 py-2 rounded-xl border transition-all shrink-0 ${
+                className={`w-full sm:w-auto inline-flex items-center justify-center gap-2 text-xs font-bold px-4 py-2 rounded-xl border transition-all shrink-0 cursor-pointer ${
                   itemSiguiente
-                    ? 'bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500 shadow'
+                    ? 'bg-indigo-600 hover:bg-indigo-500 text-white border-indigo-500 shadow-xs'
                     : 'opacity-40 cursor-not-allowed text-slate-500 border-transparent'
                 }`}
               >
@@ -1006,50 +1205,167 @@ export default function ReproductorClasesPage() {
                     </button>
                   </div>
 
-                  <div className="space-y-1">
-                    {mod.clases.map((clase: ClaseCompleta) => {
-                      const esClaseSeleccionada = claseActual?.id === clase.id;
-                      const estaCompletada = estaModCompletado || clase.completada;
+                  {mod.temas && mod.temas.length > 0 ? (
+                    <div className="space-y-3 pt-1">
+                      {mod.temas.map((tema: any) => {
+                        const isTemaOpen = temasAbiertosMap[tema.id] !== false;
+                        const temaClases = tema.clases || [];
+                        const esTemaCompletado = temaClases.length > 0 && temaClases.every((c: any) => Boolean(completadosMap[c.id] || completadosMap[mod.codigo]));
 
-                      return (
-                        <button 
-                          key={clase.id} 
-                          onClick={() => seleccionarClaseYParte(mod.id, clase, 1)}
-                          className={`w-full p-2.5 rounded-xl flex items-start gap-2.5 text-left transition-all ${
-                            esClaseSeleccionada 
-                              ? esOscuro 
-                                ? 'bg-indigo-600/20 text-indigo-200 font-semibold' 
-                                : 'bg-indigo-50 text-indigo-900 font-semibold shadow-xs' 
-                              : esOscuro 
-                                ? 'text-slate-400 hover:bg-slate-800/60 hover:text-slate-200' 
-                                : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
-                          }`}
-                        >
-                          <div 
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              toggleCompletarLeccion(clase.id);
-                            }}
-                            className="pt-0.5 shrink-0 cursor-pointer p-0.5 hover:scale-110 transition-transform"
-                            title={estaCompletada ? "Desmarcar completado (volver a en curso)" : "Marcar lección como completada"}
-                          >
-                            {estaCompletada ? (
-                              <CheckCircle2 className={`w-4 h-4 shrink-0 ${esClaseSeleccionada ? (esOscuro ? 'text-indigo-400' : 'text-indigo-600') : 'text-emerald-500'}`} />
-                            ) : (
-                              <div className={`size-4 rounded-full border-2 shrink-0 ${
-                                esClaseSeleccionada 
-                                  ? (esOscuro ? 'border-indigo-400 hover:border-indigo-300' : 'border-indigo-600 hover:border-indigo-700') 
-                                  : (esOscuro ? 'border-slate-500 hover:border-indigo-400' : 'border-slate-400 hover:border-indigo-600')
-                              }`} />
+                        return (
+                          <div key={tema.id} className="space-y-1">
+                            <button
+                              type="button"
+                              onClick={() => toggleTema(tema.id)}
+                              className={`w-full text-left px-2.5 py-1.5 rounded-xl flex items-center justify-between text-xs font-semibold transition-all border cursor-pointer ${
+                                esTemaCompletado
+                                  ? esOscuro
+                                    ? 'bg-emerald-950/40 border-emerald-800/40 text-emerald-300'
+                                    : 'bg-emerald-50/80 border-emerald-200 text-emerald-900 shadow-2xs'
+                                  : esOscuro
+                                    ? 'bg-slate-800/80 border-slate-700/60 text-indigo-300 hover:bg-slate-800'
+                                    : 'bg-indigo-50/80 border-indigo-100 text-indigo-900 hover:bg-indigo-100/80 shadow-2xs'
+                              }`}
+                            >
+                              <div className="flex items-center gap-2 flex-1 min-w-0 pr-2">
+                                <Folder className={`w-3.5 h-3.5 shrink-0 ${esTemaCompletado ? 'text-emerald-500' : 'text-indigo-500'}`} />
+                                <span className="truncate text-[11px] font-bold tracking-tight">
+                                  {tema.titulo}
+                                </span>
+                                {esTemaCompletado && (
+                                  <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shrink-0">
+                                    ✓ Completado
+                                  </span>
+                                )}
+                              </div>
+                              {isTemaOpen ? (
+                                <ChevronDown className="w-3.5 h-3.5 shrink-0 opacity-70" />
+                              ) : (
+                                <ChevronRight className="w-3.5 h-3.5 shrink-0 opacity-70" />
+                              )}
+                            </button>
+
+                            {isTemaOpen && (
+                              <div className="space-y-1 pl-2 border-l-2 border-indigo-500/20 ml-2 pt-0.5">
+                                {tema.clases.map((clase: ClaseCompleta) => {
+                                  const esClaseSeleccionada = claseActual?.id === clase.id;
+                                  const estaCompletada = estaModCompletado || clase.completada;
+
+                                  return (
+                                    <button 
+                                      key={clase.id} 
+                                      onClick={() => seleccionarClaseYParte(mod.id, clase, 1)}
+                                      className={`w-full p-2.5 rounded-xl flex items-start gap-2.5 text-left transition-all cursor-pointer ${
+                                        esClaseSeleccionada 
+                                          ? esOscuro 
+                                            ? 'bg-indigo-600/20 text-indigo-200 font-semibold border border-indigo-500/30' 
+                                            : 'bg-indigo-50 text-indigo-900 font-semibold border border-indigo-200 shadow-2xs' 
+                                          : esOscuro 
+                                            ? 'text-slate-400 hover:bg-slate-800/60 hover:text-slate-200' 
+                                            : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                      }`}
+                                    >
+                                      <div className="pt-0.5 shrink-0">
+                                        {estaCompletada ? (
+                                          <CheckCircle2 className={`w-4 h-4 shrink-0 ${esClaseSeleccionada ? (esOscuro ? 'text-indigo-400' : 'text-indigo-600') : 'text-emerald-500'}`} />
+                                        ) : (
+                                          <div className={`size-4 rounded-full border-2 shrink-0 ${
+                                            esClaseSeleccionada 
+                                              ? (esOscuro ? 'border-indigo-400' : 'border-indigo-600') 
+                                              : (esOscuro ? 'border-slate-500' : 'border-slate-400')
+                                          }`} />
+                                        )}
+                                      </div>
+                                      <span className="text-xs leading-snug line-clamp-2">
+                                        {clase.tituloClase}
+                                      </span>
+                                    </button>
+                                  );
+                                })}
+                              </div>
                             )}
                           </div>
-                          <span className="text-xs leading-snug line-clamp-2">
-                            {clase.tituloClase}
+                        );
+                      })}
+
+                      {mod.clasesAdicionales && mod.clasesAdicionales.length > 0 && (
+                        <div className="space-y-1.5 pt-2 border-t border-slate-200/50 mt-2">
+                          <span className="text-[10px] font-bold text-amber-500 uppercase tracking-widest block px-1">
+                            ⭐ Clase Adicional
                           </span>
-                        </button>
-                      );
-                    })}
-                  </div>
+                          {mod.clasesAdicionales.map((clase: ClaseCompleta) => {
+                            const esClaseSeleccionada = claseActual?.id === clase.id;
+                            const estaCompletada = estaModCompletado || clase.completada;
+
+                            return (
+                              <button 
+                                key={clase.id} 
+                                onClick={() => seleccionarClaseYParte(mod.id, clase, 1)}
+                                className={`w-full p-2.5 rounded-xl flex items-start gap-2.5 text-left transition-all cursor-pointer ${
+                                  esClaseSeleccionada 
+                                    ? esOscuro 
+                                      ? 'bg-amber-600/20 text-amber-200 font-semibold border border-amber-500/30' 
+                                      : 'bg-amber-50 text-amber-900 font-semibold border border-amber-200 shadow-2xs' 
+                                    : esOscuro 
+                                      ? 'text-slate-400 hover:bg-slate-800/60 hover:text-slate-200' 
+                                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                }`}
+                              >
+                                <div className="pt-0.5 shrink-0">
+                                  {estaCompletada ? (
+                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                                  ) : (
+                                    <div className="size-4 rounded-full border-2 border-amber-400 shrink-0" />
+                                  )}
+                                </div>
+                                <span className="text-xs leading-snug line-clamp-2">
+                                  {clase.tituloClase}
+                                </span>
+                              </button>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="space-y-1">
+                      {mod.clases.map((clase: ClaseCompleta) => {
+                        const esClaseSeleccionada = claseActual?.id === clase.id;
+                        const estaCompletada = estaModCompletado || clase.completada;
+
+                        return (
+                          <button 
+                            key={clase.id} 
+                            onClick={() => seleccionarClaseYParte(mod.id, clase, 1)}
+                            className={`w-full p-2.5 rounded-xl flex items-start gap-2.5 text-left transition-all cursor-pointer ${
+                              esClaseSeleccionada 
+                                ? esOscuro 
+                                  ? 'bg-indigo-600/20 text-indigo-200 font-semibold' 
+                                  : 'bg-indigo-50 text-indigo-900 font-semibold shadow-2xs' 
+                                : esOscuro 
+                                  ? 'text-slate-400 hover:bg-slate-800/60 hover:text-slate-200' 
+                                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                            }`}
+                          >
+                            <div className="pt-0.5 shrink-0">
+                              {estaCompletada ? (
+                                <CheckCircle2 className={`w-4 h-4 shrink-0 ${esClaseSeleccionada ? (esOscuro ? 'text-indigo-400' : 'text-indigo-600') : 'text-emerald-500'}`} />
+                              ) : (
+                                <div className={`size-4 rounded-full border-2 shrink-0 ${
+                                  esClaseSeleccionada 
+                                    ? (esOscuro ? 'border-indigo-400' : 'border-indigo-600') 
+                                    : (esOscuro ? 'border-slate-500' : 'border-slate-400')
+                                }`} />
+                              )}
+                            </div>
+                            <span className="text-xs leading-snug line-clamp-2">
+                              {clase.tituloClase}
+                            </span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
               );
             })}

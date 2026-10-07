@@ -8,30 +8,264 @@
           "codigo": "M01",
           "nombre": "LEGISLACIÓN MINERA Y MARCO LEGAL DEL SECTOR",
           "docente": "Reginaldo Andía",
+          "temas": [
+            {
+              "titulo": "Tema 01: Regulación Ambiental y Gestión del Catastro Minero: Áreas Restringidas y su Impacto",
+              "clases": [
+                {
+                  "titulo": "Clase 01 (17/10): Sesión Teórica y Fundamentos del Catastro Minero",
+                  "videoUrl": "https://drive.google.com/file/d/1YcuePTMFN2MTU1JsjCowwnGmcwgiPcOY/preview",
+                  "driveId": "1YcuePTMFN2MTU1JsjCowwnGmcwgiPcOY"
+                },
+                {
+                  "titulo": "Clase 02 (22/10): Áreas Restringidas y Análisis del Impacto Ambiental",
+                  "videoUrl": "https://drive.google.com/file/d/1FEf_erKQOT2VirpUQq7pr-oPU_Th3ZTy/preview",
+                  "driveId": "1FEf_erKQOT2VirpUQq7pr-oPU_Th3ZTy"
+                }
+              ]
+            },
+            {
+              "titulo": "Tema 02: Marco Legal y Permisología Ambiental en Minería",
+              "clases": [
+                {
+                  "titulo": "Clase 03 (24/10): Marco Legal de Permisología Ambiental",
+                  "videoUrl": "https://drive.google.com/file/d/1dsKys4AFflP4k-w_Bts5XczyrL1s34yE/preview",
+                  "driveId": "1dsKys4AFflP4k-w_Bts5XczyrL1s34yE"
+                },
+                {
+                  "titulo": "Clase 04 (29/10): Evaluación de Instrumentos Ambientales y Trámites",
+                  "videoUrl": "https://drive.google.com/file/d/1ULLt7BI8IEDNj1qPo6_cHxU9SB3YVTfT/preview",
+                  "driveId": "1ULLt7BI8IEDNj1qPo6_cHxU9SB3YVTfT"
+                }
+              ]
+            },
+            {
+              "titulo": "Tema 03: Responsabilidad Social, Derechos de las Comunidades y Resolución de Conflictos",
+              "clases": [
+                {
+                  "titulo": "Clase 05 (31/10): Responsabilidad Social y Licencia Social Minera",
+                  "videoUrl": "https://drive.google.com/file/d/1HmqR1L7hP5HhSKbM4FJTKuwt90HOaSrW/preview",
+                  "driveId": "1HmqR1L7hP5HhSKbM4FJTKuwt90HOaSrW"
+                },
+                {
+                  "titulo": "Clase 06 (05/11): Derechos Comunales y Resolución de Conflictos",
+                  "videoUrl": "https://drive.google.com/file/d/1DvfzdoLSwoqbqoXAnrj-BxOxlT4Tm1ZD/preview",
+                  "driveId": "1DvfzdoLSwoqbqoXAnrj-BxOxlT4Tm1ZD"
+                }
+              ]
+            }
+          ],
           "clases": [
-            "REGULACIÓN AMBIENTAL Y GESTIÓN DEL CATASTRO MINERO: ÁREAS RESTRINGIDAS Y SU IMPACTO",
-            "MARCO LEGAL Y PERMISOLOGÍA AMBIENTAL EN MINERÍA",
-            "RESPONSABILIDAD SOCIAL, DERECHOS DE LAS COMUNIDADES Y RESOLUCIÓN DE CONFLICTOS"
+            {
+              "titulo": "Clase 01 (17/10): Sesión Teórica y Fundamentos del Catastro Minero",
+              "videoUrl": "https://drive.google.com/file/d/1YcuePTMFN2MTU1JsjCowwnGmcwgiPcOY/preview",
+              "driveId": "1YcuePTMFN2MTU1JsjCowwnGmcwgiPcOY"
+            },
+            {
+              "titulo": "Clase 02 (22/10): Áreas Restringidas y Análisis del Impacto Ambiental",
+              "videoUrl": "https://drive.google.com/file/d/1FEf_erKQOT2VirpUQq7pr-oPU_Th3ZTy/preview",
+              "driveId": "1FEf_erKQOT2VirpUQq7pr-oPU_Th3ZTy"
+            },
+            {
+              "titulo": "Clase 03 (24/10): Marco Legal de Permisología Ambiental",
+              "videoUrl": "https://drive.google.com/file/d/1dsKys4AFflP4k-w_Bts5XczyrL1s34yE/preview",
+              "driveId": "1dsKys4AFflP4k-w_Bts5XczyrL1s34yE"
+            },
+            {
+              "titulo": "Clase 04 (29/10): Evaluación de Instrumentos Ambientales y Trámites",
+              "videoUrl": "https://drive.google.com/file/d/1ULLt7BI8IEDNj1qPo6_cHxU9SB3YVTfT/preview",
+              "driveId": "1ULLt7BI8IEDNj1qPo6_cHxU9SB3YVTfT"
+            },
+            {
+              "titulo": "Clase 05 (31/10): Responsabilidad Social y Licencia Social Minera",
+              "videoUrl": "https://drive.google.com/file/d/1HmqR1L7hP5HhSKbM4FJTKuwt90HOaSrW/preview",
+              "driveId": "1HmqR1L7hP5HhSKbM4FJTKuwt90HOaSrW"
+            },
+            {
+              "titulo": "Clase 06 (05/11): Derechos Comunales y Resolución de Conflictos",
+              "videoUrl": "https://drive.google.com/file/d/1DvfzdoLSwoqbqoXAnrj-BxOxlT4Tm1ZD/preview",
+              "driveId": "1DvfzdoLSwoqbqoXAnrj-BxOxlT4Tm1ZD"
+            }
           ]
         },
         {
           "codigo": "M02",
           "nombre": "JURISDICCIÓN MINERA, REGULACIÓN LABORAL Y NORMATIVAS DE SEGURIDAD",
           "docente": "Reginaldo Andía",
+          "temas": [
+            {
+              "titulo": "Tema 01: Legislación en Seguridad Minera: Normativas y Sistemas de Gestión Avanzados",
+              "clases": [
+                {
+                  "titulo": "Clase 07 (07/11): Normativa y Sistemas de Gestión de Seguridad (Parte 1)",
+                  "videoUrl": "https://drive.google.com/file/d/16DqFaiglABAJJ-ma1qqDUwKSUxiY1L-F/preview",
+                  "driveId": "16DqFaiglABAJJ-ma1qqDUwKSUxiY1L-F"
+                },
+                {
+                  "titulo": "Clase 08 (12/11): Normativa y Sistemas de Gestión de Seguridad (Parte 2)",
+                  "videoUrl": "https://drive.google.com/file/d/1IHJ2W1OmRi6zc5BtgBU7xBa7npDVldJH/preview",
+                  "driveId": "1IHJ2W1OmRi6zc5BtgBU7xBa7npDVldJH"
+                }
+              ]
+            },
+            {
+              "titulo": "Tema 02: Jurisdicción Minera: Marco Legal y Resolución de Conflictos en Concesiones Mineras",
+              "clases": [
+                {
+                  "titulo": "Clase 09 (14/11): Marco Legal de Concesiones Mineras (Parte 1)",
+                  "videoUrl": "https://drive.google.com/file/d/1YtlKDP4UzYs4ccFLKDOhkgDfO_UveB02/preview",
+                  "driveId": "1YtlKDP4UzYs4ccFLKDOhkgDfO_UveB02"
+                },
+                {
+                  "titulo": "Clase 10 (19/11): Procedimientos y Controversias en Concesiones (Parte 2)",
+                  "videoUrl": "https://drive.google.com/file/d/11XTqWNWjr1oXNWHPW6ZXmdGkc9pjTpS9/preview",
+                  "driveId": "11XTqWNWjr1oXNWHPW6ZXmdGkc9pjTpS9"
+                }
+              ]
+            },
+            {
+              "titulo": "Tema 03: Arbitraje y Fiscalización en el Sector Minero",
+              "clases": [
+                {
+                  "titulo": "Clase 11 (21/11): Mecanismos Arbitrales en el Sector Minero",
+                  "videoUrl": "https://drive.google.com/file/d/1nj-iujwkY1aGZ2cszWDwjcat0lqgk-w6/preview",
+                  "driveId": "1nj-iujwkY1aGZ2cszWDwjcat0lqgk-w6"
+                },
+                {
+                  "titulo": "Clase 12 (26/11): Fiscalización, Auditorías y Sanciones Mineras",
+                  "videoUrl": "https://drive.google.com/file/d/19RveVtAQr_giOK2cmTApV4UypxWXs5Cy/preview",
+                  "driveId": "19RveVtAQr_giOK2cmTApV4UypxWXs5Cy"
+                }
+              ]
+            }
+          ],
+          "clasesAdicionales": [
+            {
+              "titulo": "Clase Adicional: Sesión Especial de Refuerzo en Fiscalización Minera",
+              "videoUrl": "https://drive.google.com/file/d/1r_4txaf71SCyzEbXI8Df7Bh0GJgbS2KJ/preview",
+              "driveId": "1r_4txaf71SCyzEbXI8Df7Bh0GJgbS2KJ"
+            }
+          ],
           "clases": [
-            "LEGISLACIÓN EN SEGURIDAD MINERA: NORMATIVAS Y SISTEMAS DE GESTIÓN AVANZADOS",
-            "JURISDICCIÓN MINERA: MARCO LEGAL Y RESOLUCIÓN DE CONFLICTOS EN CONCESIONES MINERAS",
-            "ARBITRAJE Y FISCALIZACIÓN EN EL SECTOR MINERO"
+            {
+              "titulo": "Clase 07 (07/11): Normativa y Sistemas de Gestión de Seguridad (Parte 1)",
+              "videoUrl": "https://drive.google.com/file/d/16DqFaiglABAJJ-ma1qqDUwKSUxiY1L-F/preview",
+              "driveId": "16DqFaiglABAJJ-ma1qqDUwKSUxiY1L-F"
+            },
+            {
+              "titulo": "Clase 08 (12/11): Normativa y Sistemas de Gestión de Seguridad (Parte 2)",
+              "videoUrl": "https://drive.google.com/file/d/1IHJ2W1OmRi6zc5BtgBU7xBa7npDVldJH/preview",
+              "driveId": "1IHJ2W1OmRi6zc5BtgBU7xBa7npDVldJH"
+            },
+            {
+              "titulo": "Clase 09 (14/11): Marco Legal de Concesiones Mineras (Parte 1)",
+              "videoUrl": "https://drive.google.com/file/d/1YtlKDP4UzYs4ccFLKDOhkgDfO_UveB02/preview",
+              "driveId": "1YtlKDP4UzYs4ccFLKDOhkgDfO_UveB02"
+            },
+            {
+              "titulo": "Clase 10 (19/11): Procedimientos y Controversias en Concesiones (Parte 2)",
+              "videoUrl": "https://drive.google.com/file/d/11XTqWNWjr1oXNWHPW6ZXmdGkc9pjTpS9/preview",
+              "driveId": "11XTqWNWjr1oXNWHPW6ZXmdGkc9pjTpS9"
+            },
+            {
+              "titulo": "Clase 11 (21/11): Mecanismos Arbitrales en el Sector Minero",
+              "videoUrl": "https://drive.google.com/file/d/1nj-iujwkY1aGZ2cszWDwjcat0lqgk-w6/preview",
+              "driveId": "1nj-iujwkY1aGZ2cszWDwjcat0lqgk-w6"
+            },
+            {
+              "titulo": "Clase 12 (26/11): Fiscalización, Auditorías y Sanciones Mineras",
+              "videoUrl": "https://drive.google.com/file/d/19RveVtAQr_giOK2cmTApV4UypxWXs5Cy/preview",
+              "driveId": "19RveVtAQr_giOK2cmTApV4UypxWXs5Cy"
+            },
+            {
+              "titulo": "Clase Adicional: Sesión Especial de Refuerzo en Fiscalización Minera",
+              "videoUrl": "https://drive.google.com/file/d/1r_4txaf71SCyzEbXI8Df7Bh0GJgbS2KJ/preview",
+              "driveId": "1r_4txaf71SCyzEbXI8Df7Bh0GJgbS2KJ"
+            }
           ]
         },
         {
           "codigo": "M03",
           "nombre": "GESTIÓN CONTRACTUAL, CONCESIONES Y RESPONSABILIDADES DE LOS TITULARES MINEROS",
           "docente": "Andrea Tejada",
+          "temas": [
+            {
+              "titulo": "Tema 01: Derechos y Obligaciones de los Titulares de la Actividad Minera: Marco Legal y Estrategias",
+              "clases": [
+                {
+                  "titulo": "Clase 13 (28/11): Marco Legal y Obligaciones de Titulares (Parte 1)",
+                  "videoUrl": "https://drive.google.com/file/d/1t8ts8ps4mogqAqPvMLnIU5aW8zeZzZIT/preview",
+                  "driveId": "1t8ts8ps4mogqAqPvMLnIU5aW8zeZzZIT"
+                },
+                {
+                  "titulo": "Clase 14 (03/12): Estrategias de Cumplimiento y Responsabilidad (Parte 2)",
+                  "videoUrl": "https://drive.google.com/file/d/187wEjACb_SCri9_VhT_kJSlSbkl1M6OS/preview",
+                  "driveId": "187wEjACb_SCri9_VhT_kJSlSbkl1M6OS"
+                }
+              ]
+            },
+            {
+              "titulo": "Tema 02: Concesiones Mineras: Legislación, Requisitos y Gestión Estratégica",
+              "clases": [
+                {
+                  "titulo": "Clase 15 (05/12): Requisitos y Procedimientos de Titularidad (Parte 1)",
+                  "videoUrl": "https://drive.google.com/file/d/1c5jPQxLiBTe4nf4NuQDAvDL0IGesRC5p/preview",
+                  "driveId": "1c5jPQxLiBTe4nf4NuQDAvDL0IGesRC5p"
+                },
+                {
+                  "titulo": "Clase 16 (10/12): Gestión Estratégica de Concesiones (Parte 2)",
+                  "videoUrl": "https://drive.google.com/file/d/1GUlSkJdx1iOuRgUpi11Xd4T3MLXPI--9/preview",
+                  "driveId": "1GUlSkJdx1iOuRgUpi11Xd4T3MLXPI--9"
+                }
+              ]
+            },
+            {
+              "titulo": "Tema 03: Concesiones Mineras y Gestión Contractual: Tipos, Requisitos y Resolución de Disputas",
+              "clases": [
+                {
+                  "titulo": "Clase 17 (12/12): Contratos Mineros (Cesión, Opción, Joint Venture)",
+                  "videoUrl": "https://drive.google.com/file/d/1OiDy-sFReHNNCqVo4NoDP8FILKGFWWlB/preview",
+                  "driveId": "1OiDy-sFReHNNCqVo4NoDP8FILKGFWWlB"
+                },
+                {
+                  "titulo": "Clase 18 (17/12): Requisitos y Resolución de Disputas Contractuales",
+                  "videoUrl": "https://drive.google.com/file/d/1KNE2Zrf6rDvw2Z5axUpCk0RAtu1hiTBi/preview",
+                  "driveId": "1KNE2Zrf6rDvw2Z5axUpCk0RAtu1hiTBi"
+                }
+              ]
+            }
+          ],
           "clases": [
-            "DERECHOS Y OBLIGACIONES DE LOS TITULARES DE LA ACTIVIDAD MINERA: MARCO LEGAL Y ESTRATEGIAS DE CUMPLIMIENTO",
-            "CONCESIONES MINERAS: LEGISLACIÓN, REQUISITOS Y GESTIÓN ESTRATÉGICA",
-            "CONCESIONES MINERAS Y GESTIÓN CONTRACTUAL: TIPOS, REQUISITOS Y RESOLUCIÓN DE DISPUTAS"
+            {
+              "titulo": "Clase 13 (28/11): Marco Legal y Obligaciones de Titulares (Parte 1)",
+              "videoUrl": "https://drive.google.com/file/d/1t8ts8ps4mogqAqPvMLnIU5aW8zeZzZIT/preview",
+              "driveId": "1t8ts8ps4mogqAqPvMLnIU5aW8zeZzZIT"
+            },
+            {
+              "titulo": "Clase 14 (03/12): Estrategias de Cumplimiento y Responsabilidad (Parte 2)",
+              "videoUrl": "https://drive.google.com/file/d/187wEjACb_SCri9_VhT_kJSlSbkl1M6OS/preview",
+              "driveId": "187wEjACb_SCri9_VhT_kJSlSbkl1M6OS"
+            },
+            {
+              "titulo": "Clase 15 (05/12): Requisitos y Procedimientos de Titularidad (Parte 1)",
+              "videoUrl": "https://drive.google.com/file/d/1c5jPQxLiBTe4nf4NuQDAvDL0IGesRC5p/preview",
+              "driveId": "1c5jPQxLiBTe4nf4NuQDAvDL0IGesRC5p"
+            },
+            {
+              "titulo": "Clase 16 (10/12): Gestión Estratégica de Concesiones (Parte 2)",
+              "videoUrl": "https://drive.google.com/file/d/1GUlSkJdx1iOuRgUpi11Xd4T3MLXPI--9/preview",
+              "driveId": "1GUlSkJdx1iOuRgUpi11Xd4T3MLXPI--9"
+            },
+            {
+              "titulo": "Clase 17 (12/12): Contratos Mineros (Cesión, Opción, Joint Venture)",
+              "videoUrl": "https://drive.google.com/file/d/1OiDy-sFReHNNCqVo4NoDP8FILKGFWWlB/preview",
+              "driveId": "1OiDy-sFReHNNCqVo4NoDP8FILKGFWWlB"
+            },
+            {
+              "titulo": "Clase 18 (17/12): Requisitos y Resolución de Disputas Contractuales",
+              "videoUrl": "https://drive.google.com/file/d/1KNE2Zrf6rDvw2Z5axUpCk0RAtu1hiTBi/preview",
+              "driveId": "1KNE2Zrf6rDvw2Z5axUpCk0RAtu1hiTBi"
+            }
           ]
         }
       ]
@@ -44,9 +278,36 @@
           "nombre": "REGULACIÓN DEL COMERCIO INTERNACIONAL EN EE. UU. Y CHINA: NORMATIVA Y DESAFÍOS LEGALES",
           "docente": "Ivette Alvarez",
           "clases": [
-            "PERSPECTIVAS Y DINÁMICAS DEL COMERCIO EXTERIOR: IMPORTACIONES Y EXPORTACIONES",
-            "NORMATIVAS DEL COMERCIO INTERNACIONAL: PERSPECTIVAS DE EE. UU. Y CHINA",
-            "REGULACIÓN, NORMAS Y PROCEDIMIENTOS EN EL COMERCIO EXTERIOR"
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 01 - CLASE 01",
+              "videoUrl": "https://drive.google.com/file/d/1WA_6r51aAtVLIVCctHUqlVRvUXNGlv5t/preview",
+              "driveId": "1WA_6r51aAtVLIVCctHUqlVRvUXNGlv5t"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 01 - CLASE 02",
+              "videoUrl": "https://drive.google.com/file/d/1j4FmyUJnbcxowx8DfCV1TZ-wi5RWdN3N/preview",
+              "driveId": "1j4FmyUJnbcxowx8DfCV1TZ-wi5RWdN3N"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 01 - CLASE 03",
+              "videoUrl": "https://drive.google.com/file/d/1eZMD9WGgiRJ-wwc41pJ11PaJXgeSrW7J/preview",
+              "driveId": "1eZMD9WGgiRJ-wwc41pJ11PaJXgeSrW7J"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 01 - CLASE 04",
+              "videoUrl": "https://drive.google.com/file/d/1oQ0mvEsMlwIzLWw1jZ8FQ607uW55Cf3l/preview",
+              "driveId": "1oQ0mvEsMlwIzLWw1jZ8FQ607uW55Cf3l"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 01 - CLASE 05",
+              "videoUrl": "https://drive.google.com/file/d/1gOm5NBI2g_FAn5adqa_tfx6fPos8ELcp/preview",
+              "driveId": "1gOm5NBI2g_FAn5adqa_tfx6fPos8ELcp"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 01 - CLASE 06",
+              "videoUrl": "https://drive.google.com/file/d/1R3LVkWUE-MJAeRT3g7vHTc79xLs_AuTA/preview",
+              "driveId": "1R3LVkWUE-MJAeRT3g7vHTc79xLs_AuTA"
+            }
           ]
         },
         {
@@ -54,10 +315,46 @@
           "nombre": "OPTIMIZACIÓN DE LA GESTIÓN ADUANERA EN EL PROCESO DE IMPORTACIÓN",
           "docente": "Gabriel Rosaperez",
           "clases": [
-            "GESTIÓN ADUANERA: PROCEDIMIENTOS EN ESTADOS UNIDOS Y CHINA",
-            "CLASIFICACIÓN Y TRAMITACIÓN ADUANERA",
-            "OPTIMIZACIÓN DE LA CLASIFICACIÓN Y TRAMITACIÓN ADUANERA",
-            "APLICACIÓN DE PLATAFORMAS Y HERRAMIENTAS UTILIZADAS EN EL COMERCIO EXTERIOR"
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 02 - CLASE 07",
+              "videoUrl": "https://drive.google.com/file/d/1Hu9gqYf0arp_aGrGwaUnHcRqrnPnwMn_/preview",
+              "driveId": "1Hu9gqYf0arp_aGrGwaUnHcRqrnPnwMn_"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 02 - CLASE 08",
+              "videoUrl": "https://drive.google.com/file/d/1ghcxh3LztApvABRu7ypnX9RR1fRGgkBd/preview",
+              "driveId": "1ghcxh3LztApvABRu7ypnX9RR1fRGgkBd"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 02 - CLASE 09",
+              "videoUrl": "https://drive.google.com/file/d/1a1xkN0wR_t3pjnKknDOBSVk-J61JcLtc/preview",
+              "driveId": "1a1xkN0wR_t3pjnKknDOBSVk-J61JcLtc"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 02 - CLASE 10",
+              "videoUrl": "https://drive.google.com/file/d/1ub-gGQYMcMm7-rcPRow5kk8oV5L3WN5A/preview",
+              "driveId": "1ub-gGQYMcMm7-rcPRow5kk8oV5L3WN5A"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 02 - CLASE 11",
+              "videoUrl": "https://drive.google.com/file/d/15C8HIvBGwe1jup8kGHC-KNk4DFD3BoHO/preview",
+              "driveId": "15C8HIvBGwe1jup8kGHC-KNk4DFD3BoHO"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 02 - CLASE 12",
+              "videoUrl": "https://drive.google.com/file/d/1nNJ68NgZzxc8UUCTuBLprptUyAdoNPw0/preview",
+              "driveId": "1nNJ68NgZzxc8UUCTuBLprptUyAdoNPw0"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 02 - CLASE 13",
+              "videoUrl": "https://drive.google.com/file/d/1m6-KF3xpASiuqj8RhUQwbZqGdG6gOEJ2/preview",
+              "driveId": "1m6-KF3xpASiuqj8RhUQwbZqGdG6gOEJ2"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 02 - CLASE 14",
+              "videoUrl": "https://drive.google.com/file/d/1jB0_Pf9caGtqSip2uS6O5uO0p-oluXP_/preview",
+              "driveId": "1jB0_Pf9caGtqSip2uS6O5uO0p-oluXP_"
+            }
           ]
         },
         {
@@ -65,10 +362,51 @@
           "nombre": "GESTIÓN INTEGRAL DE LA LOGÍSTICA EN EL COMERCIO INTERNACIONAL",
           "docente": "Gabriel Rosaperez",
           "clases": [
-            "OPERACIONES INTERNACIONALES DE IMPORTACIÓN Y EXPORTACIÓN",
-            "GESTIÓN LOGÍSTICA DE LAS IMPORTACIONES",
-            "GESTIÓN DE COSTOS, PRECIOS Y FINANCIAMIENTO",
-            "ESTRATEGIAS AVANZADAS EN IMPORTACIONES, EXPORTACIONES E INCOTERMS"
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 03 - CLASE 15",
+              "videoUrl": "https://drive.google.com/file/d/1iA_VKM_kWZhR10lRDdnioeqz3vKJMy17/preview",
+              "driveId": "1iA_VKM_kWZhR10lRDdnioeqz3vKJMy17"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 03 - CLASE 16",
+              "videoUrl": "https://drive.google.com/file/d/1K6sHDtOyEAgDRelH135AcQgdaRoS75u7/preview",
+              "driveId": "1K6sHDtOyEAgDRelH135AcQgdaRoS75u7"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 03 - CLASE 17",
+              "videoUrl": "https://drive.google.com/file/d/1hczxGdl6Kzq6n-WB7oN7O-q3KyXLwaAs/preview",
+              "driveId": "1hczxGdl6Kzq6n-WB7oN7O-q3KyXLwaAs"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 03 - CLASE 18",
+              "videoUrl": "https://drive.google.com/file/d/164hEAIlGunCDxqZkRYddh5dF3YAU8lOX/preview",
+              "driveId": "164hEAIlGunCDxqZkRYddh5dF3YAU8lOX"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 03 - CLASE 19",
+              "videoUrl": "https://drive.google.com/file/d/1ATqFsOXuMykDaLV8tsVpQlr4VUkYmGGO/preview",
+              "driveId": "1ATqFsOXuMykDaLV8tsVpQlr4VUkYmGGO"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 03 - CLASE 20",
+              "videoUrl": "https://drive.google.com/file/d/162frnZX7xGVot4Dz3gcL4nMP_ucjI26j/preview",
+              "driveId": "162frnZX7xGVot4Dz3gcL4nMP_ucjI26j"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 03 - CLASE 21",
+              "videoUrl": "https://drive.google.com/file/d/1Kdcc21T02z1KluYz34-11DbYzDM_34_K/preview",
+              "driveId": "1Kdcc21T02z1KluYz34-11DbYzDM_34_K"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 03 - CLASE 22",
+              "videoUrl": "https://drive.google.com/file/d/19hHmAMwA1Ky1JA3HR6KEfzkkr9KyW_ow/preview",
+              "driveId": "19hHmAMwA1Ky1JA3HR6KEfzkkr9KyW_ow"
+            },
+            {
+              "titulo": "ESPECIALISTA EN COMERCIO INTERNACIONAL - MÓDULO 03 - CLASE ADICIONAL",
+              "videoUrl": "https://drive.google.com/file/d/16i3ACe4Iidz47rFnCKbBYvRZ3OYC_afo/preview",
+              "driveId": "16i3ACe4Iidz47rFnCKbBYvRZ3OYC_afo"
+            }
           ]
         }
       ]
@@ -81,9 +419,36 @@
           "nombre": "FUNDAMENTOS DE GEOLOGÍA MINERA",
           "docente": "Juan Briones",
           "clases": [
-            "MINERALOGÍA Y PETROLOGÍA",
-            "PROCESOS GEOLÓGICOS EN DEPÓSITOS MINERALES",
-            "GEOLOGÍA DE YACIMIENTOS MINERALES"
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 01 - CLASE 01",
+              "videoUrl": "https://drive.google.com/file/d/1i1zIHNBr4t26QAUaY4g4kBEAYlgyWcbE/preview",
+              "driveId": "1i1zIHNBr4t26QAUaY4g4kBEAYlgyWcbE"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 01 - CLASE 02",
+              "videoUrl": "https://drive.google.com/file/d/1LpHoafT51rNfe-HaT5_4PQfmwn_77PUl/preview",
+              "driveId": "1LpHoafT51rNfe-HaT5_4PQfmwn_77PUl"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 01 - CLASE 03",
+              "videoUrl": "https://drive.google.com/file/d/14aLY3T3D3FtJjAZkgBq4XvhzbO9dk-lM/preview",
+              "driveId": "14aLY3T3D3FtJjAZkgBq4XvhzbO9dk-lM"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 01 - CLASE 04",
+              "videoUrl": "https://drive.google.com/file/d/1OMl90A2T25kzaICMe-YpcOqHogjFh7dJ/preview",
+              "driveId": "1OMl90A2T25kzaICMe-YpcOqHogjFh7dJ"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 01 - CLASE 05",
+              "videoUrl": "https://drive.google.com/file/d/1G0kR8KaOYrFzYtW7anVCxa0IfkXSA-sg/preview",
+              "driveId": "1G0kR8KaOYrFzYtW7anVCxa0IfkXSA-sg"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 01 - CLASE 06",
+              "videoUrl": "https://drive.google.com/file/d/1XMf74YBHybjSlSNYGdKg89UlXrUhg2Iu/preview",
+              "driveId": "1XMf74YBHybjSlSNYGdKg89UlXrUhg2Iu"
+            }
           ]
         },
         {
@@ -91,9 +456,36 @@
           "nombre": "EXPLORACIÓN GEOLÓGICA Y EVALUACIÓN DE RECURSOS MINERALES",
           "docente": "Mauricio Riveros",
           "clases": [
-            "MÉTODOS DE EXPLORACIÓN GEOLÓGICA",
-            "MUESTREO Y ANÁLISIS DE MUESTRAS: INTERPRETACIÓN DE DATOS GEOLÓGICOS",
-            "MODELADO DE RECURSOS MINERALES"
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 02 - CLASE 07",
+              "videoUrl": "https://drive.google.com/file/d/1p9HhnGC22VhIB4uvymVlQCKBWz90oSPV/preview",
+              "driveId": "1p9HhnGC22VhIB4uvymVlQCKBWz90oSPV"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 02 - CLASE 08",
+              "videoUrl": "https://drive.google.com/file/d/1G0GY5mQM3JBYFTXuEl2UZ4ttUsxWJ_q_/preview",
+              "driveId": "1G0GY5mQM3JBYFTXuEl2UZ4ttUsxWJ_q_"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 02 - CLASE 09",
+              "videoUrl": "https://drive.google.com/file/d/15PsAWfVIs6-_WEgaFGY67khgoyuSJnUg/preview",
+              "driveId": "15PsAWfVIs6-_WEgaFGY67khgoyuSJnUg"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 02 - CLASE 10",
+              "videoUrl": "https://drive.google.com/file/d/1htD4VgGVXqAauZNcmeiMwqE-BM9GnV2O/preview",
+              "driveId": "1htD4VgGVXqAauZNcmeiMwqE-BM9GnV2O"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 02 - CLASE 11",
+              "videoUrl": "https://drive.google.com/file/d/191sM1yWAkudfQ0QAP7cYXwUt7wwwVqCf/preview",
+              "driveId": "191sM1yWAkudfQ0QAP7cYXwUt7wwwVqCf"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 02 - CLASE 12",
+              "videoUrl": "https://drive.google.com/file/d/1mGHml2CDEWIwGCMc0fFJkW2ZtoBeuG56/preview",
+              "driveId": "1mGHml2CDEWIwGCMc0fFJkW2ZtoBeuG56"
+            }
           ]
         },
         {
@@ -101,9 +493,36 @@
           "nombre": "OPERACIONES MINERAS Y GESTIÓN AMBIENTAL",
           "docente": "Mauricio Riveros, Manuel Aucapuri",
           "clases": [
-            "MÉTODOS DE EXPLOTACIÓN MINERA",
-            "TECNOLOGÍA Y MAQUINARIA MINERA",
-            "SEGURIDAD EN OPERACIONES MINERAS"
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 03 - CLASE 13",
+              "videoUrl": "https://drive.google.com/file/d/1SaXiHOQjc6dvhfHgDYoLDx2wyTkh6U_1/preview",
+              "driveId": "1SaXiHOQjc6dvhfHgDYoLDx2wyTkh6U_1"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 03 - CLASE 14",
+              "videoUrl": "https://drive.google.com/file/d/14tX3FXATAUYGNoyD_YYlUSQw9W5qnY8F/preview",
+              "driveId": "14tX3FXATAUYGNoyD_YYlUSQw9W5qnY8F"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 03 - CLASE 15",
+              "videoUrl": "https://drive.google.com/file/d/1LctIqEmW0-KadcNkIM20xQP9AeZfKtbX/preview",
+              "driveId": "1LctIqEmW0-KadcNkIM20xQP9AeZfKtbX"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 03 - CLASE 16",
+              "videoUrl": "https://drive.google.com/file/d/1AciSFfYa-8kXxxrG6v5m2P0dPZdCSMGr/preview",
+              "driveId": "1AciSFfYa-8kXxxrG6v5m2P0dPZdCSMGr"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 03 - CLASE 17",
+              "videoUrl": "https://drive.google.com/file/d/1kvc9VMmzXVmN8WOaOSl7KXfG420JJpL3/preview",
+              "driveId": "1kvc9VMmzXVmN8WOaOSl7KXfG420JJpL3"
+            },
+            {
+              "titulo": "GEOLOGÍA MINERA - MÓDULO 03 - CLASE 18",
+              "videoUrl": "https://drive.google.com/file/d/1Sij4St7BydLX7oUBTqauYDXRYX6ADvlS/preview",
+              "driveId": "1Sij4St7BydLX7oUBTqauYDXRYX6ADvlS"
+            }
           ]
         }
       ]
@@ -116,10 +535,41 @@
           "nombre": "PRINCIPIOS Y APLICACIONES DE LA GEOMECÁNICA EN MINERÍA",
           "docente": "Mauricio Riveros",
           "clases": [
-            "INTRODUCCIÓN A LA GEOMECÁNICA APLICADA AL SECTOR MINERO",
-            "COMPORTAMIENTO MECÁNICO DE ROCAS Y SUELOS EN OPERACIONES MINERAS",
-            "MÉTODOS Y TÉCNICAS DE INVESTIGACIÓN GEOMECÁNICA",
-            "FACTORES GEOMECÁNICOS CLAVE EN LA EXPLORACIÓN Y EXPLOTACIÓN MINERA"
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 01 - CLASE 01",
+              "videoUrl": "https://drive.google.com/file/d/196AR0oMEWb8jvGIy3KUy_lCh-5yOT7aI/preview",
+              "driveId": "196AR0oMEWb8jvGIy3KUy_lCh-5yOT7aI"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 01 - CLASE 02",
+              "videoUrl": "https://drive.google.com/file/d/1cxIuWl0Zv1-18mUiQuuQikad8HI5_dcz/preview",
+              "driveId": "1cxIuWl0Zv1-18mUiQuuQikad8HI5_dcz"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 01 - CLASE 03",
+              "videoUrl": "https://drive.google.com/file/d/1uo7AN8FPdR8j7fhCXcVw3f21WZ5AHK1n/preview",
+              "driveId": "1uo7AN8FPdR8j7fhCXcVw3f21WZ5AHK1n"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 01 - CLASE 04",
+              "videoUrl": "https://drive.google.com/file/d/1rw7oRX_OqfZVN_ktbotjk0_kq0MlkLCr/preview",
+              "driveId": "1rw7oRX_OqfZVN_ktbotjk0_kq0MlkLCr"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 01 - CLASE 05",
+              "videoUrl": "https://drive.google.com/file/d/1hZMSZJ6uLcbQDGqWClNcFcvZyLyJGsul/preview",
+              "driveId": "1hZMSZJ6uLcbQDGqWClNcFcvZyLyJGsul"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 01 - CLASE 06",
+              "videoUrl": "https://drive.google.com/file/d/1QYS3ulv94940C3Vnm5IjMSGfiUTsuYxd/preview",
+              "driveId": "1QYS3ulv94940C3Vnm5IjMSGfiUTsuYxd"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 01 - CLASE 07",
+              "videoUrl": "https://drive.google.com/file/d/1hSJqbq4gzggJCZyMQ0DivgMk3S8DTnFS/preview",
+              "driveId": "1hSJqbq4gzggJCZyMQ0DivgMk3S8DTnFS"
+            }
           ]
         },
         {
@@ -127,10 +577,46 @@
           "nombre": "GEOMECÁNICA SUBTERRÁNEA: COMPORTAMIENTO DE ROCAS Y SUELOS EN MINERÍA",
           "docente": "Diego Astuyauri",
           "clases": [
-            "CARACTERIZACIÓN GEOMECÁNICA DEL MACIZO ROCOSO",
-            "ANÁLISIS DE TENSIONES Y COMPORTAMIENTO DEL SUBSUELO",
-            "ESTABILIDAD DE EXCAVACIONES SUBTERRÁNEAS: EVALUACIÓN Y CONTROL",
-            "DISEÑO Y SELECCIÓN DE SOSTENIMIENTO SUBTERRÁNEO"
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 02 - CLASE 08",
+              "videoUrl": "https://drive.google.com/file/d/1aQl90Dfm0nP2QbsKX1nY_3f53NFIjkX6/preview",
+              "driveId": "1aQl90Dfm0nP2QbsKX1nY_3f53NFIjkX6"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 02 - CLASE 09",
+              "videoUrl": "https://drive.google.com/file/d/1760MXkBPRSaV1RT7RQ4KLondqd58pxc2/preview",
+              "driveId": "1760MXkBPRSaV1RT7RQ4KLondqd58pxc2"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 02 - CLASE 10",
+              "videoUrl": "https://drive.google.com/file/d/1sfu6VZDGcLA9ggbM0typHEwm-C0DyOgW/preview",
+              "driveId": "1sfu6VZDGcLA9ggbM0typHEwm-C0DyOgW"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 02 - CLASE 11",
+              "videoUrl": "https://drive.google.com/file/d/1onuvzw7uaUFz68wJDUWbjpuUA0sWbioN/preview",
+              "driveId": "1onuvzw7uaUFz68wJDUWbjpuUA0sWbioN"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 02 - CLASE 12",
+              "videoUrl": "https://drive.google.com/file/d/1P5UmnOf2QlcQ_PuqbY_qRmunhTVpTWjy/preview",
+              "driveId": "1P5UmnOf2QlcQ_PuqbY_qRmunhTVpTWjy"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 02 - CLASE 13",
+              "videoUrl": "https://drive.google.com/file/d/1IrIKw_PxIy0gmSauJkrowbwtGZsYr9Hr/preview",
+              "driveId": "1IrIKw_PxIy0gmSauJkrowbwtGZsYr9Hr"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 02 - CLASE 14",
+              "videoUrl": "https://drive.google.com/file/d/1ruIRVsrukAiOxLzmF-rvsoaguD5Dl18f/preview",
+              "driveId": "1ruIRVsrukAiOxLzmF-rvsoaguD5Dl18f"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 02 - CLASE 15",
+              "videoUrl": "https://drive.google.com/file/d/1FdXT21Y57l2Z6YQVT801u-406RocqA4_/preview",
+              "driveId": "1FdXT21Y57l2Z6YQVT801u-406RocqA4_"
+            }
           ]
         },
         {
@@ -138,10 +624,41 @@
           "nombre": "GEOTECNIA APLICADA EN MINERÍA A CIELO ABIERTO",
           "docente": "Mauricio Riveros",
           "clases": [
-            "DISEÑO GEOTÉCNICO DE BANCOS Y TALUDES EN MINERÍA SUPERFICIAL",
-            "CONSIDERACIONES GEOTÉCNICAS EN OPERACIONES DE EXPLOTACIÓN",
-            "CONTROL DE LA EROSIÓN Y DRENAJE EN MINERÍA A CIELO ABIERTO",
-            "DRENAJE SUPERFICIAL Y SUBTERRÁNEO EN MINERÍA A CIELO ABIERTO"
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 03 - CLASE 16",
+              "videoUrl": "https://drive.google.com/file/d/1_qOw-wo801EzXhXD9_r6nCYXml2epL9v/preview",
+              "driveId": "1_qOw-wo801EzXhXD9_r6nCYXml2epL9v"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 03 - CLASE 17",
+              "videoUrl": "https://drive.google.com/file/d/1ILgIOOt0apTVUkyLhXdxKF8Iby2abL3v/preview",
+              "driveId": "1ILgIOOt0apTVUkyLhXdxKF8Iby2abL3v"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 03 - CLASE 18",
+              "videoUrl": "https://drive.google.com/file/d/1QDZvhE501Oo1LrZzYZ1AqH0tO_N7nW-H/preview",
+              "driveId": "1QDZvhE501Oo1LrZzYZ1AqH0tO_N7nW-H"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 03 - CLASE 19",
+              "videoUrl": "https://drive.google.com/file/d/1mYZj0BJe9bTq0rwuEKgq8TURIvoRtJWq/preview",
+              "driveId": "1mYZj0BJe9bTq0rwuEKgq8TURIvoRtJWq"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 03 - CLASE 20",
+              "videoUrl": "https://drive.google.com/file/d/1LXG8SrLxMaES0imU0IGqvOpSsmROTD6f/preview",
+              "driveId": "1LXG8SrLxMaES0imU0IGqvOpSsmROTD6f"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 03 - CLASE 21",
+              "videoUrl": "https://drive.google.com/file/d/13Fk3JYaYtV8We9s1jQQ0T0h5zEWvTbdo/preview",
+              "driveId": "13Fk3JYaYtV8We9s1jQQ0T0h5zEWvTbdo"
+            },
+            {
+              "titulo": "GEOMECÁNICA SUBTERRÁNEA Y SUPERFICIAL - MÓDULO 03 - CLASE 22",
+              "videoUrl": "https://drive.google.com/file/d/13cbSfOFc6ZSVYcDO0sDKSJBvfBYLcU4T/preview",
+              "driveId": "13cbSfOFc6ZSVYcDO0sDKSJBvfBYLcU4T"
+            }
           ]
         }
       ]
@@ -154,9 +671,26 @@
           "nombre": "MÉTODOS DE SEPARACIÓN Y CONCENTRACIÓN DE MINERALES",
           "docente": "Manuel Aucapuri",
           "clases": [
-            "SMART MINING EN LAS OPERACIONES MINERAS",
-            "OPTIMIZACIÓN DE TÉCNICAS AVANZADAS DEL PROCESAMIENTO DE MINERALES",
-            "PROCESOS METALÚRGICOS EN LAS OPERACIONES MINERALÓGICAS"
+            {
+              "titulo": "GEOMETALURGIA - MÓDULO 01 - CLASE 01",
+              "videoUrl": "https://drive.google.com/file/d/1vONlGR79v6mbJ64f0iLn9V3I0-Ly8lG4/preview",
+              "driveId": "1vONlGR79v6mbJ64f0iLn9V3I0-Ly8lG4"
+            },
+            {
+              "titulo": "GEOMETALURGIA - MÓDULO 01 - CLASE 02",
+              "videoUrl": "https://drive.google.com/file/d/1KXsU5G3IVt2rJnASMArLm6zu5rtMQ38y/preview",
+              "driveId": "1KXsU5G3IVt2rJnASMArLm6zu5rtMQ38y"
+            },
+            {
+              "titulo": "GEOMETALURGIA - MÓDULO 01 - CLASE 03",
+              "videoUrl": "https://drive.google.com/file/d/1Tapk2_g5TTLITdtlyp3gR81XcMvtmr0Z/preview",
+              "driveId": "1Tapk2_g5TTLITdtlyp3gR81XcMvtmr0Z"
+            },
+            {
+              "titulo": "GEOMETALURGIA - MÓDULO 01 - CLASE 04",
+              "videoUrl": "https://drive.google.com/file/d/1OwzQK8NU32Gs9fD9Z-m2Jq87VqqqJAgX/preview",
+              "driveId": "1OwzQK8NU32Gs9fD9Z-m2Jq87VqqqJAgX"
+            }
           ]
         },
         {
@@ -189,10 +723,46 @@
           "nombre": "GEOTECNIA DE SUELOS Y ROCAS",
           "docente": "Diego Astuyauri",
           "clases": [
-            "PRINCIPIOS FUNDAMENTALES DE LA GEOTECNIA",
-            "MODELOS DE COMPORTAMIENTOS DE SUELOS",
-            "MECÁNICA DE ROCAS",
-            "DINÁMICA DE ROCAS"
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 01 - CLASE 01",
+              "videoUrl": "https://drive.google.com/file/d/1SRyya21LPO_RsKnPEVvaccXD8EEz67tL/preview",
+              "driveId": "1SRyya21LPO_RsKnPEVvaccXD8EEz67tL"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 01 - CLASE 02",
+              "videoUrl": "https://drive.google.com/file/d/1JNepFkg6x3mhHarhjr1sWwjOa0kw4qMs/preview",
+              "driveId": "1JNepFkg6x3mhHarhjr1sWwjOa0kw4qMs"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 01 - CLASE 03",
+              "videoUrl": "https://drive.google.com/file/d/1njMuBQ3q53QldEtRogKEUp_u9IKVI4qR/preview",
+              "driveId": "1njMuBQ3q53QldEtRogKEUp_u9IKVI4qR"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 01 - CLASE 04",
+              "videoUrl": "https://drive.google.com/file/d/17M3May-p_UksM-HYl3_3QWJzMx8z55_o/preview",
+              "driveId": "17M3May-p_UksM-HYl3_3QWJzMx8z55_o"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 01 - CLASE 05",
+              "videoUrl": "https://drive.google.com/file/d/1VTda0vrBux0TegFlx5ZmDUpBbJ__zxAO/preview",
+              "driveId": "1VTda0vrBux0TegFlx5ZmDUpBbJ__zxAO"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 01 - CLASE 06",
+              "videoUrl": "https://drive.google.com/file/d/12YmVWV_DxP-HCghGrVuIrhQ540xikxHE/preview",
+              "driveId": "12YmVWV_DxP-HCghGrVuIrhQ540xikxHE"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 01 - CLASE 07",
+              "videoUrl": "https://drive.google.com/file/d/1tGE1dgJLurQmrS3eU_Qm32gL4STns1_5/preview",
+              "driveId": "1tGE1dgJLurQmrS3eU_Qm32gL4STns1_5"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 01 - CLASE 08",
+              "videoUrl": "https://drive.google.com/file/d/1HK379I4O6oBTkJmaB6ziLRcD6WH4HXaZ/preview",
+              "driveId": "1HK379I4O6oBTkJmaB6ziLRcD6WH4HXaZ"
+            }
           ]
         },
         {
@@ -200,10 +770,46 @@
           "nombre": "MONITOREO GEOTÉCNICO",
           "docente": "Diego Astuyauri",
           "clases": [
-            "ESTUDIO GEOTÉCNICO",
-            "PENETRACIÓN ESTÁTICA Y DINÁMICA",
-            "INVESTIGACIÓN GEOFÍSICA",
-            "INSTRUMENTACIÓN GEOTÉCNICA"
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 02 - CLASE 09",
+              "videoUrl": "https://drive.google.com/file/d/1Q0R8eE88VbZ6p8Pk12btEzuXGuzD1nJm/preview",
+              "driveId": "1Q0R8eE88VbZ6p8Pk12btEzuXGuzD1nJm"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 02 - CLASE 10",
+              "videoUrl": "https://drive.google.com/file/d/1QmUXZIbwCpIJMuconl9bwL__oTRrELZi/preview",
+              "driveId": "1QmUXZIbwCpIJMuconl9bwL__oTRrELZi"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 02 - CLASE 11",
+              "videoUrl": "https://drive.google.com/file/d/1TlVp7MEU0kH5OmhncKLr9cC3TKvCT2va/preview",
+              "driveId": "1TlVp7MEU0kH5OmhncKLr9cC3TKvCT2va"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 02 - CLASE 12",
+              "videoUrl": "https://drive.google.com/file/d/1IraK53CcHwJbIIr5-MNBn7ekhFaMmGiX/preview",
+              "driveId": "1IraK53CcHwJbIIr5-MNBn7ekhFaMmGiX"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 02 - CLASE 13",
+              "videoUrl": "https://drive.google.com/file/d/1yh-MocOSszMoPQ_f9xPY06o_TQ3vwd_I/preview",
+              "driveId": "1yh-MocOSszMoPQ_f9xPY06o_TQ3vwd_I"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 02 - CLASE 14",
+              "videoUrl": "https://drive.google.com/file/d/1KPwr3MVCjFHBXwPiSN7Z1Qza0lmksPtb/preview",
+              "driveId": "1KPwr3MVCjFHBXwPiSN7Z1Qza0lmksPtb"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 02 - CLASE 15",
+              "videoUrl": "https://drive.google.com/file/d/1S4asqOhUT_JFuk_hmoJslE1jYj0B4y93/preview",
+              "driveId": "1S4asqOhUT_JFuk_hmoJslE1jYj0B4y93"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 02 - CLASE 16",
+              "videoUrl": "https://drive.google.com/file/d/1NQDKjTWE1dIxYffg9miXKIWacjL94CFM/preview",
+              "driveId": "1NQDKjTWE1dIxYffg9miXKIWacjL94CFM"
+            }
           ]
         },
         {
@@ -211,10 +817,46 @@
           "nombre": "ANÁLISIS HIDROGEOLÓGICO",
           "docente": "Juan Briones",
           "clases": [
-            "GESTIÓN DEL AGUA EN MINERÍA",
-            "SATURACIÓN DE SUELOS",
-            "PROCESOS DE SATURACIÓN",
-            "DRENAJE DE SUELOS"
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 03 - CLASE 17",
+              "videoUrl": "https://drive.google.com/file/d/1C5rAHfXyo71S3SfpdzZi5427rESLrWW1/preview",
+              "driveId": "1C5rAHfXyo71S3SfpdzZi5427rESLrWW1"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 03 - CLASE 18",
+              "videoUrl": "https://drive.google.com/file/d/1jJUUlxkos0WtwoP5sJlk8RZnQPngiLnH/preview",
+              "driveId": "1jJUUlxkos0WtwoP5sJlk8RZnQPngiLnH"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 03 - CLASE 19",
+              "videoUrl": "https://drive.google.com/file/d/1lSaX-0BKIMy4ksVhfgauJjKEzMZpAxjW/preview",
+              "driveId": "1lSaX-0BKIMy4ksVhfgauJjKEzMZpAxjW"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 03 - CLASE 20",
+              "videoUrl": "https://drive.google.com/file/d/1iHFGX_gDxyN5CYfCPLhXy5gcW4cS7qJM/preview",
+              "driveId": "1iHFGX_gDxyN5CYfCPLhXy5gcW4cS7qJM"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 03 - CLASE 21",
+              "videoUrl": "https://drive.google.com/file/d/1ihT72INL9SGMPepKvsj05TaR0EGRy8GK/preview",
+              "driveId": "1ihT72INL9SGMPepKvsj05TaR0EGRy8GK"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 03 - CLASE 22",
+              "videoUrl": "https://drive.google.com/file/d/1WZRHjk6vRB1o_i5R3UOncQcmmeHM0kcY/preview",
+              "driveId": "1WZRHjk6vRB1o_i5R3UOncQcmmeHM0kcY"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 03 - CLASE 23",
+              "videoUrl": "https://drive.google.com/file/d/1jX_QgJfsJA8BLOZpnElzWSuJ_BRlZz3B/preview",
+              "driveId": "1jX_QgJfsJA8BLOZpnElzWSuJ_BRlZz3B"
+            },
+            {
+              "titulo": "GEOTECNIA MINERA - MÓDULO 03 - CLASE 24",
+              "videoUrl": "https://drive.google.com/file/d/1FxO7iXCtGM9zClhDaLLqp0McMigPtrTb/preview",
+              "driveId": "1FxO7iXCtGM9zClhDaLLqp0McMigPtrTb"
+            }
           ]
         }
       ]
@@ -227,10 +869,46 @@
           "nombre": "INTRODUCCIÓN A LOS SISTEMAS DE GESTIÓN HSEQ",
           "docente": "María Jesús Burga",
           "clases": [
-            "CICLO PHVA: EL CORAZÓN DE LA MEJORA CONTINUA",
-            "GESTIÓN POR PROCESOS: EFICIENCIA, CONTROL Y TRAZABILIDAD",
-            "HERRAMIENTAS DE ANÁLISIS Y MEJORA CONTINUA",
-            "LIDERAZGO, CULTURA ORGANIZACIONAL Y SOSTENIBILIDAD"
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 01 - CLASE 01",
+              "videoUrl": "https://drive.google.com/file/d/13px3oKJHokRB0TFKvnD79sxyJYoFVQK3/preview",
+              "driveId": "13px3oKJHokRB0TFKvnD79sxyJYoFVQK3"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 01 - CLASE 02",
+              "videoUrl": "https://drive.google.com/file/d/1loiS_TZQQTuaEjF64wpMfpSRg63zte9d/preview",
+              "driveId": "1loiS_TZQQTuaEjF64wpMfpSRg63zte9d"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 01 - CLASE 03",
+              "videoUrl": "https://drive.google.com/file/d/16HzHeUlrVBP2Isd1jdcMpI4gT7QDpuAb/preview",
+              "driveId": "16HzHeUlrVBP2Isd1jdcMpI4gT7QDpuAb"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 01 - CLASE 04",
+              "videoUrl": "https://drive.google.com/file/d/1ybVf-L7chTIhyj54deFVQrxfgns-bofY/preview",
+              "driveId": "1ybVf-L7chTIhyj54deFVQrxfgns-bofY"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 01 - CLASE 05",
+              "videoUrl": "https://drive.google.com/file/d/13Ftx2sVapkkJuM9bvqKkDYjo0bdWLEMS/preview",
+              "driveId": "13Ftx2sVapkkJuM9bvqKkDYjo0bdWLEMS"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 01 - CLASE 06",
+              "videoUrl": "https://drive.google.com/file/d/1ubBt0uqKkCjy4eGYGh1rXsOcE5AgIQOH/preview",
+              "driveId": "1ubBt0uqKkCjy4eGYGh1rXsOcE5AgIQOH"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 01 - CLASE 07",
+              "videoUrl": "https://drive.google.com/file/d/19AijLWuArxRzOtG5XSYm-SSoZtY9uKaZ/preview",
+              "driveId": "19AijLWuArxRzOtG5XSYm-SSoZtY9uKaZ"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 01 - CLASE 08",
+              "videoUrl": "https://drive.google.com/file/d/1nYJVccRO2J-h7gjR-2X2TRVrDfVjGJdx/preview",
+              "driveId": "1nYJVccRO2J-h7gjR-2X2TRVrDfVjGJdx"
+            }
           ]
         },
         {
@@ -238,10 +916,46 @@
           "nombre": "INTERPRETACIÓN DE LAS NORMAS ISO 9001, ISO 45001 E ISO 14001",
           "docente": "Javier Rivera",
           "clases": [
-            "SISTEMA DE GESTIÓN DE CALIDAD (ISO 9001:2015)",
-            "SISTEMA DE GESTIÓN DE SEGURIDAD Y SALUD EN EL TRABAJO (ISO 45001:2018)",
-            "SISTEMA DE GESTIÓN AMBIENTAL (ISO 14001:2015)",
-            "TALLERES PRÁCTICOS DE AUDITORÍAS INTERNAS HSEQ"
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 02 - CLASE 09",
+              "videoUrl": "https://drive.google.com/file/d/10qHn1PNObEmuwZt9oAeMBhIiOc0xU4KL/preview",
+              "driveId": "10qHn1PNObEmuwZt9oAeMBhIiOc0xU4KL"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 02 - CLASE 10",
+              "videoUrl": "https://drive.google.com/file/d/1FrxDnuLOp57wBru_6bmIkKkP1RPevuQ9/preview",
+              "driveId": "1FrxDnuLOp57wBru_6bmIkKkP1RPevuQ9"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 02 - CLASE 11",
+              "videoUrl": "https://drive.google.com/file/d/1RT_wWtau4PWyfa5l-RtHQnYneGg7TSbV/preview",
+              "driveId": "1RT_wWtau4PWyfa5l-RtHQnYneGg7TSbV"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 02 - CLASE 12",
+              "videoUrl": "https://drive.google.com/file/d/1rruUilWd7Ra5QbhcF1BlZbM9Z9nSsRSV/preview",
+              "driveId": "1rruUilWd7Ra5QbhcF1BlZbM9Z9nSsRSV"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 02 - CLASE 13",
+              "videoUrl": "https://drive.google.com/file/d/1Bmt5B0Pn9ZiMHg9OIjldcK3CZALZfEbG/preview",
+              "driveId": "1Bmt5B0Pn9ZiMHg9OIjldcK3CZALZfEbG"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 02 - CLASE 14",
+              "videoUrl": "https://drive.google.com/file/d/1SZkHlJGrl1KJNiHBiUbFLAbgBdefhT3d/preview",
+              "driveId": "1SZkHlJGrl1KJNiHBiUbFLAbgBdefhT3d"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 02 - CLASE 15",
+              "videoUrl": "https://drive.google.com/file/d/1hK18A2swbP_5uoRn-mxMmKfB_A8Fls31/preview",
+              "driveId": "1hK18A2swbP_5uoRn-mxMmKfB_A8Fls31"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 02 - CLASE 16",
+              "videoUrl": "https://drive.google.com/file/d/1l0_qvrwUVTCPWhtB5b97revC2mPKKOFu/preview",
+              "driveId": "1l0_qvrwUVTCPWhtB5b97revC2mPKKOFu"
+            }
           ]
         },
         {
@@ -249,10 +963,46 @@
           "nombre": "DOCUMENTACIÓN DE SISTEMAS INTEGRADOS DE GESTIÓN HSEQ",
           "docente": "María Jesús Burga, Stephano Luque",
           "clases": [
-            "CONCEPTOS Y NORMAS DE REFERENCIA HSEQ",
-            "MÉTODOS PARA LA INTEGRACIÓN DE SISTEMAS DE GESTIÓN",
-            "ALINEACIÓN DE REQUISITOS DEL SISTEMA HSEQ",
-            "CASO DE ESTUDIO INTEGRAL Y PREGUNTAS FRECUENTES"
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 03 - CLASE 17",
+              "videoUrl": "https://drive.google.com/file/d/1LfJJTeFrueFkgiDX3zUi6KraLchX7_Vg/preview",
+              "driveId": "1LfJJTeFrueFkgiDX3zUi6KraLchX7_Vg"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 03 - CLASE 18",
+              "videoUrl": "https://drive.google.com/file/d/1KnnMLUq-Yf6F7qJNy7LZCEvF7Q4p-3TC/preview",
+              "driveId": "1KnnMLUq-Yf6F7qJNy7LZCEvF7Q4p-3TC"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 03 - CLASE 19",
+              "videoUrl": "https://drive.google.com/file/d/1tSPPs1It2P-wYTm_pAzy-HpJdLgXrxdu/preview",
+              "driveId": "1tSPPs1It2P-wYTm_pAzy-HpJdLgXrxdu"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 03 - CLASE 20",
+              "videoUrl": "https://drive.google.com/file/d/1M5ggCPD76lpaYr-ZC57BMCHdsrlPALVg/preview",
+              "driveId": "1M5ggCPD76lpaYr-ZC57BMCHdsrlPALVg"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 03 - CLASE 21",
+              "videoUrl": "https://drive.google.com/file/d/1WKP3t4G7S0Nk7TBHARQmdFe3SvRZpJ78/preview",
+              "driveId": "1WKP3t4G7S0Nk7TBHARQmdFe3SvRZpJ78"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 03 - CLASE 22",
+              "videoUrl": "https://drive.google.com/file/d/1aowNM2oIBvoxh52zpTwN2kurXHYMN8Cb/preview",
+              "driveId": "1aowNM2oIBvoxh52zpTwN2kurXHYMN8Cb"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 03 - CLASE 23",
+              "videoUrl": "https://drive.google.com/file/d/1It2d2TrSG0peimU93uHKeWmPxovid_Wk/preview",
+              "driveId": "1It2d2TrSG0peimU93uHKeWmPxovid_Wk"
+            },
+            {
+              "titulo": "GERENCIA DE SISTEMAS INTEGRADOS - MÓDULO 03 - CLASE 24",
+              "videoUrl": "https://drive.google.com/file/d/1JZ4xN3rXj_EmVyMrRmYsPwYWCbt_EktY/preview",
+              "driveId": "1JZ4xN3rXj_EmVyMrRmYsPwYWCbt_EktY"
+            }
           ]
         }
       ]
@@ -265,11 +1015,51 @@
           "nombre": "PANORAMA DE LA INDUSTRIA MINERA",
           "docente": "",
           "clases": [
-            "PANORAMA ACTUAL DE LA INDUSTRIA MINERA A NIVEL MUNDIAL Y EN EL PERÚ",
-            "MARCO LEGAL Y REGULATORIO DE LA MINERÍA",
-            "COMERCIALIZACIÓN DE LA MINERÍA",
-            "TENDENCIAS TECNOLÓGICAS E INNOVACIÓN EN LA INDUSTRIA MINERA",
-            "RSC: RESPONSABILIDAD SOCIAL CORPORATIVA"
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 01 - CLASE 01",
+              "videoUrl": "https://drive.google.com/file/d/1bY9i8cM6-aVvhaLWkwSp1sie17eWLT-V/preview",
+              "driveId": "1bY9i8cM6-aVvhaLWkwSp1sie17eWLT-V"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 01 - CLASE 02",
+              "videoUrl": "https://drive.google.com/file/d/18hBIzJBl5UCELNQ6FOA0MhJpGuG3DJX1/preview",
+              "driveId": "18hBIzJBl5UCELNQ6FOA0MhJpGuG3DJX1"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 01 - CLASE 03",
+              "videoUrl": "https://drive.google.com/file/d/1OPRaWszA-Cz2XU1VRpE2oJOgQ8Km-i8o/preview",
+              "driveId": "1OPRaWszA-Cz2XU1VRpE2oJOgQ8Km-i8o"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 01 - CLASE 04",
+              "videoUrl": "https://drive.google.com/file/d/1Flcbot_oMaIoIo1ayZGcZG50B1l3L2YO/preview",
+              "driveId": "1Flcbot_oMaIoIo1ayZGcZG50B1l3L2YO"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 01 - CLASE 05",
+              "videoUrl": "https://drive.google.com/file/d/19n0LOLwjREltEYFdjNLoieRUeoPdQsAo/preview",
+              "driveId": "19n0LOLwjREltEYFdjNLoieRUeoPdQsAo"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 01 - CLASE 06",
+              "videoUrl": "https://drive.google.com/file/d/18yLUNl7WoFUidfiOeHn8tTGo9ucijp6c/preview",
+              "driveId": "18yLUNl7WoFUidfiOeHn8tTGo9ucijp6c"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 01 - CLASE 07",
+              "videoUrl": "https://drive.google.com/file/d/168hr7qIGh2RQ6kSUC96zIyc8ZGb54D0z/preview",
+              "driveId": "168hr7qIGh2RQ6kSUC96zIyc8ZGb54D0z"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 01 - CLASE 08",
+              "videoUrl": "https://drive.google.com/file/d/10QJ09MstbYptsmT1B_j5BwW8b99wcokl/preview",
+              "driveId": "10QJ09MstbYptsmT1B_j5BwW8b99wcokl"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 01 - CLASE 09",
+              "videoUrl": "https://drive.google.com/file/d/1taFi7Jj3CrAKYGJqcwFxGdSdTYnzrNAZ/preview",
+              "driveId": "1taFi7Jj3CrAKYGJqcwFxGdSdTYnzrNAZ"
+            }
           ]
         },
         {
@@ -277,11 +1067,51 @@
           "nombre": "LIDERAZGO GERENCIAL EN LA INDUSTRIA MINERA",
           "docente": "",
           "clases": [
-            "TEORÍAS Y ENFOQUES DE LIDERAZGO APLICADOS A LA MINERÍA",
-            "LIDERAZGO Y TOMA DE DECISIONES",
-            "COMPORTAMIENTO EMOCIONALMENTE INTELIGENTE",
-            "GESTIÓN DEL TALENTO Y EQUIPOS DE TRABAJO EN OPERACIONES MINERAS",
-            "COMUNICACIÓN EFECTIVA EN ENTORNOS MINEROS"
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 01 - CLASE 10",
+              "videoUrl": "https://drive.google.com/file/d/1SXm0ss08vqYRuVdfMLIWBj-jb_QskuTC/preview",
+              "driveId": "1SXm0ss08vqYRuVdfMLIWBj-jb_QskuTC"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 02 - CLASE 11",
+              "videoUrl": "https://drive.google.com/file/d/1i0akvsPii4dN11yKYc85Nwy8ptSk6CU9/preview",
+              "driveId": "1i0akvsPii4dN11yKYc85Nwy8ptSk6CU9"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 02 - CLASE 12",
+              "videoUrl": "https://drive.google.com/file/d/1WZiU6-xkM7mAMgapnrqknUnAPXZZYaWa/preview",
+              "driveId": "1WZiU6-xkM7mAMgapnrqknUnAPXZZYaWa"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 02 - CLASE 13",
+              "videoUrl": "https://drive.google.com/file/d/1phdPc8xSrsNPLcHBUyl9X_dB4fwNraiY/preview",
+              "driveId": "1phdPc8xSrsNPLcHBUyl9X_dB4fwNraiY"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 02 - CLASE 14",
+              "videoUrl": "https://drive.google.com/file/d/1pgQn232dBbxiE1gHw7dOELK_yclthQir/preview",
+              "driveId": "1pgQn232dBbxiE1gHw7dOELK_yclthQir"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 02 - CLASE 15",
+              "videoUrl": "https://drive.google.com/file/d/1xL70d5vKN5gL8wNROurp-KwXMNFw2Rm7/preview",
+              "driveId": "1xL70d5vKN5gL8wNROurp-KwXMNFw2Rm7"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 02 - CLASE 16",
+              "videoUrl": "https://drive.google.com/file/d/14uLAjB6uVr8hSyy7tZy0ldZGeoCRudgk/preview",
+              "driveId": "14uLAjB6uVr8hSyy7tZy0ldZGeoCRudgk"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 02 - CLASE 17",
+              "videoUrl": "https://drive.google.com/file/d/1NDjmkh0JZ6eNMMaRvZ9hAq3VFo2PrYLo/preview",
+              "driveId": "1NDjmkh0JZ6eNMMaRvZ9hAq3VFo2PrYLo"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 02 - CLASE 18",
+              "videoUrl": "https://drive.google.com/file/d/1ts8CrdcZzxKBl_OToGlZTEmySSxiAPya/preview",
+              "driveId": "1ts8CrdcZzxKBl_OToGlZTEmySSxiAPya"
+            }
           ]
         },
         {
@@ -289,13 +1119,51 @@
           "nombre": "GESTIÓN ESTRATÉGICA Y CADENA DE SUMINISTRO",
           "docente": "",
           "clases": [
-            "PLANIFICACIÓN ESTRATÉGICA EN EMPRESAS MINERAS",
-            "SISTEMAS DE GESTIÓN DE ALMACENES (WMS) Y HERRAMIENTAS APLICADAS A LA MINERÍA",
-            "ANÁLISIS PRESUPUESTARIO Y DE LA GESTIÓN DE COMPRAS",
-            "FUNDAMENTOS DE LA GESTIÓN DE DISTRIBUCIÓN MINERA",
-            "LOGÍSTICA MINERA E IDENTIFICACIÓN DE KPIS EN LA CADENA DE ABASTECIMIENTO",
-            "ANÁLISIS DE COSTOS EN LA CADENA DE SUMINISTRO MINERA",
-            "LICITACIONES CAPEX Y OPEX EN LA MINERÍA"
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 02 - CLASE 19",
+              "videoUrl": "https://drive.google.com/file/d/1WwL-rK3_-qqhoAjN6hra30IfqzibUzQu/preview",
+              "driveId": "1WwL-rK3_-qqhoAjN6hra30IfqzibUzQu"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 02 - CLASE 20",
+              "videoUrl": "https://drive.google.com/file/d/1u2mxN_5dI4GZ08l537SFRTqxblAx9QeA/preview",
+              "driveId": "1u2mxN_5dI4GZ08l537SFRTqxblAx9QeA"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 21",
+              "videoUrl": "https://drive.google.com/file/d/1E55EOLkV5NAzSuZipGuuiLT9bPbeOINH/preview",
+              "driveId": "1E55EOLkV5NAzSuZipGuuiLT9bPbeOINH"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 22",
+              "videoUrl": "https://drive.google.com/file/d/1E4gF08fpiQc145EcZaRugRaFwndPneSc/preview",
+              "driveId": "1E4gF08fpiQc145EcZaRugRaFwndPneSc"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 23",
+              "videoUrl": "https://drive.google.com/file/d/1I3HDohirfDTsKvwLfg8EaYG7ubUDsDHy/preview",
+              "driveId": "1I3HDohirfDTsKvwLfg8EaYG7ubUDsDHy"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 24",
+              "videoUrl": "https://drive.google.com/file/d/1ccuspB2OhTjFf5nemFFC2K1mu15cXjsK/preview",
+              "driveId": "1ccuspB2OhTjFf5nemFFC2K1mu15cXjsK"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 25",
+              "videoUrl": "https://drive.google.com/file/d/1C5m7y_ocpxgkoEmuCSncMI2xEeFbFqmY/preview",
+              "driveId": "1C5m7y_ocpxgkoEmuCSncMI2xEeFbFqmY"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 26",
+              "videoUrl": "https://drive.google.com/file/d/1L1eAF5dhXhKQCK-T9b154Fxyftub6nGh/preview",
+              "driveId": "1L1eAF5dhXhKQCK-T9b154Fxyftub6nGh"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 27",
+              "videoUrl": "https://drive.google.com/file/d/1t7NsQN79NuR3yFLaOdvGEKR11ioELjRq/preview",
+              "driveId": "1t7NsQN79NuR3yFLaOdvGEKR11ioELjRq"
+            }
           ]
         },
         {
@@ -303,9 +1171,51 @@
           "nombre": "GESTIÓN DE COMPRAS Y COMERCIO INTERNACIONAL",
           "docente": "",
           "clases": [
-            "IMPORTACIONES, EXPORTACIONES, IMPUESTOS E INCOTERMS",
-            "CONSIDERACIONES ÉTICAS Y SOCIALES EN LA GESTIÓN DE COMPRAS",
-            "PRÁCTICAS DE COMPRAS SOSTENIBLES EN LA MINERÍA"
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 28",
+              "videoUrl": "https://drive.google.com/file/d/1O6J2A5niIqN1hmq18ZyRVtLTe_ZUIX0d/preview",
+              "driveId": "1O6J2A5niIqN1hmq18ZyRVtLTe_ZUIX0d"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 29",
+              "videoUrl": "https://drive.google.com/file/d/1XekU9XDaQie3dhqNHbj2BwpRM0FgtBpF/preview",
+              "driveId": "1XekU9XDaQie3dhqNHbj2BwpRM0FgtBpF"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 30",
+              "videoUrl": "https://drive.google.com/file/d/1K2WMn02Cvot03aWH1wak-VtGZsSTqwbi/preview",
+              "driveId": "1K2WMn02Cvot03aWH1wak-VtGZsSTqwbi"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 31",
+              "videoUrl": "https://drive.google.com/file/d/1u1ENPO_lNkU9HnZPKZKQffLvLYQMNmDS/preview",
+              "driveId": "1u1ENPO_lNkU9HnZPKZKQffLvLYQMNmDS"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 32",
+              "videoUrl": "https://drive.google.com/file/d/1_M7k1iRhIrEzRVGFb3b3z1gPgdTNrarv/preview",
+              "driveId": "1_M7k1iRhIrEzRVGFb3b3z1gPgdTNrarv"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 03 - CLASE 33",
+              "videoUrl": "https://drive.google.com/file/d/1De0U7KxKqshKJprN0mLmVuhEI7Y2Tlcx/preview",
+              "driveId": "1De0U7KxKqshKJprN0mLmVuhEI7Y2Tlcx"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 04 - CLASE 34",
+              "videoUrl": "https://drive.google.com/file/d/1ZR2VaDhT-zOeWi14JIZqO1Bt-dh513ou/preview",
+              "driveId": "1ZR2VaDhT-zOeWi14JIZqO1Bt-dh513ou"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 04 - CLASE 35",
+              "videoUrl": "https://drive.google.com/file/d/1EzB00JVjNrXfxWP1e5ZomDfHlwmqjOyc/preview",
+              "driveId": "1EzB00JVjNrXfxWP1e5ZomDfHlwmqjOyc"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 04 - CLASE 36",
+              "videoUrl": "https://drive.google.com/file/d/1ggh7SChC7xVWmGgN7YMIB-qk7kfrzGK7/preview",
+              "driveId": "1ggh7SChC7xVWmGgN7YMIB-qk7kfrzGK7"
+            }
           ]
         },
         {
@@ -313,9 +1223,51 @@
           "nombre": "EVALUACIÓN Y AUDITORÍA DE PROVEEDORES",
           "docente": "",
           "clases": [
-            "EVALUACIÓN DEL IMPACTO AMBIENTAL Y SOCIAL DE PROVEEDORES",
-            "AUDITORÍA Y REPORTE DE SOSTENIBILIDAD EN COMPRAS",
-            "TENDENCIAS FUTURAS EN LA GESTIÓN DE COMPRAS EN LA MINERÍA"
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 04 - CLASE 37",
+              "videoUrl": "https://drive.google.com/file/d/1tuQmMAf00OA-Jn3MkzQ3nHUX_YSTGhaQ/preview",
+              "driveId": "1tuQmMAf00OA-Jn3MkzQ3nHUX_YSTGhaQ"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 04 - CLASE 38",
+              "videoUrl": "https://drive.google.com/file/d/1dPcyhWAQy5-_0Njvdud6lxBT5tf67EKo/preview",
+              "driveId": "1dPcyhWAQy5-_0Njvdud6lxBT5tf67EKo"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 04 - CLASE 39",
+              "videoUrl": "https://drive.google.com/file/d/1LDeYiMGczxvcVhAHmvVq5SrN_MFvcjz4/preview",
+              "driveId": "1LDeYiMGczxvcVhAHmvVq5SrN_MFvcjz4"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 05 - CLASE 40",
+              "videoUrl": "https://drive.google.com/file/d/1_nNYnT0IkWjEgg54RbSoM1ETV7leytEL/preview",
+              "driveId": "1_nNYnT0IkWjEgg54RbSoM1ETV7leytEL"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 05 - CLASE 41",
+              "videoUrl": "https://drive.google.com/file/d/1j4BbJ1SKgurhdw7mVIFv4uA5nn_J_Z4x/preview",
+              "driveId": "1j4BbJ1SKgurhdw7mVIFv4uA5nn_J_Z4x"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 05 - CLASE 42",
+              "videoUrl": "https://drive.google.com/file/d/1lWTyXhn4P4mxy1O8SexDVUE6OhtydTEX/preview",
+              "driveId": "1lWTyXhn4P4mxy1O8SexDVUE6OhtydTEX"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 05 - CLASE 43",
+              "videoUrl": "https://drive.google.com/file/d/1rLmmmCizM6MvoDmpn0dvUCo7lbN0rl0V/preview",
+              "driveId": "1rLmmmCizM6MvoDmpn0dvUCo7lbN0rl0V"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 05 - CLASE 44",
+              "videoUrl": "https://drive.google.com/file/d/1umlEiCyPZvbRGQd_qEIxXNlsIqWd0jbO/preview",
+              "driveId": "1umlEiCyPZvbRGQd_qEIxXNlsIqWd0jbO"
+            },
+            {
+              "titulo": "GERENCIA ESTRATÉGICA Y LIDERAZGO - MÓDULO 05 - CLASE 45",
+              "videoUrl": "https://drive.google.com/file/d/18GnQEtmYPVCvYWCPS1Rd9VemZz5z2wCL/preview",
+              "driveId": "18GnQEtmYPVCvYWCPS1Rd9VemZz5z2wCL"
+            }
           ]
         }
       ]
@@ -328,10 +1280,41 @@
           "nombre": "GESTIÓN AMBIENTAL APLICADA A ENTORNOS INDUSTRIALES Y MINEROS",
           "docente": "Juan Briones",
           "clases": [
-            "FUNDAMENTOS ESTRATÉGICOS DE LA GESTIÓN AMBIENTAL INDUSTRIAL Y MINERA",
-            "NORMATIVA Y LEGISLACIÓN AMBIENTAL VIGENTE",
-            "SISTEMAS DE GESTIÓN AMBIENTAL (ISO 14001 Y OTROS ESTÁNDARES)",
-            "EVALUACIÓN DE IMPACTO AMBIENTAL (EIA)"
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 01 - CLASE 01",
+              "videoUrl": "https://drive.google.com/file/d/1eRO8Vqhtyv_GCrZOffyiredpo_tQtxsR/preview",
+              "driveId": "1eRO8Vqhtyv_GCrZOffyiredpo_tQtxsR"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 01 - CLASE 02",
+              "videoUrl": "https://drive.google.com/file/d/1C437pJS-73RaVfsvbFOyWhYduHIvlGaH/preview",
+              "driveId": "1C437pJS-73RaVfsvbFOyWhYduHIvlGaH"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 01 - CLASE 03",
+              "videoUrl": "https://drive.google.com/file/d/1Oulx1lwyazkQLCd6E_Szo0RNXBad2tqJ/preview",
+              "driveId": "1Oulx1lwyazkQLCd6E_Szo0RNXBad2tqJ"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 01 - CLASE 04",
+              "videoUrl": "https://drive.google.com/file/d/12R-z4lG5eHCaTI1DHPE3WvHwzMX4uKw3/preview",
+              "driveId": "12R-z4lG5eHCaTI1DHPE3WvHwzMX4uKw3"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 01 - CLASE 05",
+              "videoUrl": "https://drive.google.com/file/d/18_cu11VPloxAiBBqGVuy315wqmUmtrut/preview",
+              "driveId": "18_cu11VPloxAiBBqGVuy315wqmUmtrut"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 01 - CLASE 06",
+              "videoUrl": "https://drive.google.com/file/d/1ybSVpwSOWkBkysr_lv5bybA_0rnlRyHs/preview",
+              "driveId": "1ybSVpwSOWkBkysr_lv5bybA_0rnlRyHs"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 01 - CLASE 07",
+              "videoUrl": "https://drive.google.com/file/d/1bhCEcLCUjuCjOA9Wvcv5wpPsn36eux_B/preview",
+              "driveId": "1bhCEcLCUjuCjOA9Wvcv5wpPsn36eux_B"
+            }
           ]
         },
         {
@@ -339,10 +1322,46 @@
           "nombre": "HERRAMIENTAS TÉCNICAS DE CONTROL Y GESTIÓN AMBIENTAL OPERATIVA",
           "docente": "Raul Jacinto",
           "clases": [
-            "MANEJO INTEGRAL DE RESIDUOS SÓLIDOS Y RESIDUOS PELIGROSOS",
-            "GESTIÓN SOSTENIBLE DEL AGUA Y CONTROL DE EFLUENTES",
-            "CONTROL DE EMISIONES ATMOSFÉRICAS Y CALIDAD DEL AIRE",
-            "REHABILITACIÓN AMBIENTAL Y CIERRE DE PASIVOS"
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 02 - CLASE 08",
+              "videoUrl": "https://drive.google.com/file/d/1OxfxeOZA1OGM_EnIDOk151rhom7RV4ZP/preview",
+              "driveId": "1OxfxeOZA1OGM_EnIDOk151rhom7RV4ZP"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 02 - CLASE 09",
+              "videoUrl": "https://drive.google.com/file/d/1JHagXsC9pXrmgH10yr6CwOSX79bwMrQS/preview",
+              "driveId": "1JHagXsC9pXrmgH10yr6CwOSX79bwMrQS"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 02 - CLASE 10",
+              "videoUrl": "https://drive.google.com/file/d/1E2mGY1KSlx4UFtNQ6x6lXanQ82gPps5u/preview",
+              "driveId": "1E2mGY1KSlx4UFtNQ6x6lXanQ82gPps5u"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 02 - CLASE 11",
+              "videoUrl": "https://drive.google.com/file/d/1yF42ngFRzD0ViFJHQPvVSu9AQIrgVLgT/preview",
+              "driveId": "1yF42ngFRzD0ViFJHQPvVSu9AQIrgVLgT"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 02 - CLASE 12",
+              "videoUrl": "https://drive.google.com/file/d/14Xwo_GAk12Wc0qgFALePv3nH71VytoDn/preview",
+              "driveId": "14Xwo_GAk12Wc0qgFALePv3nH71VytoDn"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 02 - CLASE 13",
+              "videoUrl": "https://drive.google.com/file/d/1lmvrniHp4r1M5CMMiBMANk13JWNBTMXV/preview",
+              "driveId": "1lmvrniHp4r1M5CMMiBMANk13JWNBTMXV"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 02 - CLASE 14",
+              "videoUrl": "https://drive.google.com/file/d/10-cfcPfH4oA2WQqAFWFU3A3xd6GNeB2n/preview",
+              "driveId": "10-cfcPfH4oA2WQqAFWFU3A3xd6GNeB2n"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 02 - CLASE 15",
+              "videoUrl": "https://drive.google.com/file/d/1ZYhhOcOQQ5eg327qAnVf6Ht3Om2MNeXL/preview",
+              "driveId": "1ZYhhOcOQQ5eg327qAnVf6Ht3Om2MNeXL"
+            }
           ]
         },
         {
@@ -350,10 +1369,46 @@
           "nombre": "ESTRATEGIAS DE SOSTENIBILIDAD Y MEJORA AMBIENTAL CONTINUA",
           "docente": "Juan Briones",
           "clases": [
-            "ECONOMÍA CIRCULAR Y PRODUCCIÓN MÁS LIMPIA",
-            "CAMBIO CLIMÁTICO, ADAPTACIÓN Y HUELLA DE CARBONO",
-            "RELACIÓN COMUNITARIA, GESTIÓN SOCIAL Y LICENCIA SOCIAL PARA OPERAR",
-            "AUDITORÍA AMBIENTAL Y MONITOREO PARA LA MEJORA CONTINUA"
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 03 - CLASE 16",
+              "videoUrl": "https://drive.google.com/file/d/1C-YAQ-tf4A1euPVYwIxXG2oC2Ec09Eoe/preview",
+              "driveId": "1C-YAQ-tf4A1euPVYwIxXG2oC2Ec09Eoe"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 03 - CLASE 17",
+              "videoUrl": "https://drive.google.com/file/d/1PjLLUz6BQJorcyfrDCLrkW9b9KzHN4MA/preview",
+              "driveId": "1PjLLUz6BQJorcyfrDCLrkW9b9KzHN4MA"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 03 - CLASE 18",
+              "videoUrl": "https://drive.google.com/file/d/1HRZECKA-DTYkVS7QR4DLGqyro7cIcAVW/preview",
+              "driveId": "1HRZECKA-DTYkVS7QR4DLGqyro7cIcAVW"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 03 - CLASE 19",
+              "videoUrl": "https://drive.google.com/file/d/1WREtOYeK4TifIqh5t-2nWTh1br0dbRNU/preview",
+              "driveId": "1WREtOYeK4TifIqh5t-2nWTh1br0dbRNU"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 03 - CLASE 20",
+              "videoUrl": "https://drive.google.com/file/d/1mhw6wCbOxsUoNfCATLHInyWB-k0fCWXF/preview",
+              "driveId": "1mhw6wCbOxsUoNfCATLHInyWB-k0fCWXF"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 03 - CLASE 21",
+              "videoUrl": "https://drive.google.com/file/d/15tftK5CPOPjFPhwmvILJb0wV2yhHcyHS/preview",
+              "driveId": "15tftK5CPOPjFPhwmvILJb0wV2yhHcyHS"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 03 - CLASE 22",
+              "videoUrl": "https://drive.google.com/file/d/1656xfjrlH-NNZw9NhoRs-9NXSvVRBj5z/preview",
+              "driveId": "1656xfjrlH-NNZw9NhoRs-9NXSvVRBj5z"
+            },
+            {
+              "titulo": "GESTIÓN AMBIENTAL - MÓDULO 03 - CLASE 23",
+              "videoUrl": "https://drive.google.com/file/d/1nKKdMpaY0soYmTNw5vENlmuDKorUaL_M/preview",
+              "driveId": "1nKKdMpaY0soYmTNw5vENlmuDKorUaL_M"
+            }
           ]
         }
       ]
@@ -440,10 +1495,46 @@
           "nombre": "BIG DATA: DESDE LA RECOLECCIÓN DE DATOS A LA VISUALIZACIÓN DE INFORMES",
           "docente": "José Chávez",
           "clases": [
-            "ESTRATEGIAS AVANZADAS DE RECOLECCIÓN Y CAPTURA DE DATOS",
-            "ALMACENAMIENTO INTELIGENTE Y ARQUITECTURA DE DATOS MODERNA",
-            "ANÁLISIS DE DATOS PARA LA TOMA DE DECISIONES ESTRATÉGICAS",
-            "APLICACIÓN PRÁCTICA Y ZONA DE PREGUNTAS"
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/04/08 19:16 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1OPF3Uh61d75KTDgGx6JekF3hyoVMOENI/preview",
+              "driveId": "1OPF3Uh61d75KTDgGx6JekF3hyoVMOENI"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/04/10 19:06 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1VffYsw-M0httPSygOsB9Dvzrvosgle9E/preview",
+              "driveId": "1VffYsw-M0httPSygOsB9Dvzrvosgle9E"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/04/24 19:08 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1fOtqJkFxIH-kbYGhZ2ahJc6uuIIXyNwb/preview",
+              "driveId": "1fOtqJkFxIH-kbYGhZ2ahJc6uuIIXyNwb"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/04/29 19:47 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1hr_-iBgDI-KOGGNQ7zP5QXGBM6ZMOnGe/preview",
+              "driveId": "1hr_-iBgDI-KOGGNQ7zP5QXGBM6ZMOnGe"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/05/01 18:35 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1EMJnFPM2efnet_A4jagF9pOlzg06f_48/preview",
+              "driveId": "1EMJnFPM2efnet_A4jagF9pOlzg06f_48"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/05/06 19:38 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1EGRSZqK11iAd6rbSDfrhScvX-hpcA__0/preview",
+              "driveId": "1EGRSZqK11iAd6rbSDfrhScvX-hpcA__0"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/05/08 19:15 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1Yk0HXxe_Apu4-Efia98YLzktdPCuZixP/preview",
+              "driveId": "1Yk0HXxe_Apu4-Efia98YLzktdPCuZixP"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/05/13 20:24 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1PcwUQMvOYW9tuFwAztKg1lrizx_WmnGd/preview",
+              "driveId": "1PcwUQMvOYW9tuFwAztKg1lrizx_WmnGd"
+            }
           ]
         },
         {
@@ -451,9 +1542,46 @@
           "nombre": "ANÁLISIS PREDICTIVO PARA LA TOMA DE DECISIONES ESTRATÉGICAS",
           "docente": "Carlos Gauret",
           "clases": [
-            "DOMINANDO EL ANÁLISIS PREDICTIVO PARA DECISIONES INTELIGENTES",
-            "MACHINE LEARNING ESTRATÉGICO PARA EMPRESAS",
-            "OPTIMIZACIÓN DE PROCESOS EMPRESARIALES"
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/05/15 19:03 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1Jpr4woBq499VeN0GKLMy474cYYrrmZSd/preview",
+              "driveId": "1Jpr4woBq499VeN0GKLMy474cYYrrmZSd"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/05/20 19:11 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/11rPV_vahUPqaHZc5dByllgmTrF8SW1h5/preview",
+              "driveId": "11rPV_vahUPqaHZc5dByllgmTrF8SW1h5"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/05/22 19:02 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/15cSD6XukHSUNJxf-GOE6fP3nZIAncyCy/preview",
+              "driveId": "15cSD6XukHSUNJxf-GOE6fP3nZIAncyCy"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/05/29 19:14 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1CFEalGVB3EFy1_NHVlCyHXjGF8qQV8GT/preview",
+              "driveId": "1CFEalGVB3EFy1_NHVlCyHXjGF8qQV8GT"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/06/03 19:05 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1ImTWKKGBW7u43Y38b-hDrLwWWzJElSjC/preview",
+              "driveId": "1ImTWKKGBW7u43Y38b-hDrLwWWzJElSjC"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/06/05 19:13 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1MaUowHdNgqQfZHzE2ejrNAULEDNUpGlz/preview",
+              "driveId": "1MaUowHdNgqQfZHzE2ejrNAULEDNUpGlz"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/06/10 19:00 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1-eI3HEvNnSuzac4aDhkjGn_tNa9ec-oy/preview",
+              "driveId": "1-eI3HEvNnSuzac4aDhkjGn_tNa9ec-oy"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/06/12 19:07 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1sbyoaSR-HZ4cWfsqyHaiKhJExEk-TkVD/preview",
+              "driveId": "1sbyoaSR-HZ4cWfsqyHaiKhJExEk-TkVD"
+            }
           ]
         },
         {
@@ -461,10 +1589,46 @@
           "nombre": "REDES NEURONALES Y DEEP LEARNING",
           "docente": "José Chávez",
           "clases": [
-            "FUNDAMENTOS AVANZADOS DE REDES NEURONALES",
-            "CIENCIA DE DATOS PARA LA TOMA DE DECISIONES ESTRATÉGICAS",
-            "MACHINE LEARNING APLICADO A SECTORES EMPRESARIALES CLAVE",
-            "APLICACIÓN PRÁCTICA Y ZONA DE PREGUNTAS"
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/06/13 19:18 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1iikfrVG40FdIzE6n53dep9dk5uvjdfYP/preview",
+              "driveId": "1iikfrVG40FdIzE6n53dep9dk5uvjdfYP"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/06/17 19:18 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1xMcglTiy_RQrEcT49MuqZJOS5DmOtuos/preview",
+              "driveId": "1xMcglTiy_RQrEcT49MuqZJOS5DmOtuos"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/06/19 19:20 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1nghsf123-jKR8LjR5H6VH7cTke05ndSQ/preview",
+              "driveId": "1nghsf123-jKR8LjR5H6VH7cTke05ndSQ"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/06/24 20:05 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1Bn5KAeoKzSlUp5MUG7_ekCtrUNud84ax/preview",
+              "driveId": "1Bn5KAeoKzSlUp5MUG7_ekCtrUNud84ax"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/06/26 19:05 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1MtoI9YPaoewSpFfF7D9c38q9RxqDvf58/preview",
+              "driveId": "1MtoI9YPaoewSpFfF7D9c38q9RxqDvf58"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/07/01 20:28 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1uMBc3yUcWOig4z4PxmVkUVM36IG-msSd/preview",
+              "driveId": "1uMBc3yUcWOig4z4PxmVkUVM36IG-msSd"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/07/04 20:15 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1SLaEh4aXzshlZ1yCuo3OT6RZg82CeDpN/preview",
+              "driveId": "1SLaEh4aXzshlZ1yCuo3OT6RZg82CeDpN"
+            },
+            {
+              "titulo": "Copia de D2/3M- GESTIÓN ESTRATÉGICA PARA EMPRESAS UTILIZANDO BIG DATA Y ANÁLISIS PREDICTIVO - 2025/07/08 20:25 GMT-05:00 - Recording",
+              "videoUrl": "https://drive.google.com/file/d/1VF2SOzFZDgl5ZKT49IY7U1DRrGLvMA3V/preview",
+              "driveId": "1VF2SOzFZDgl5ZKT49IY7U1DRrGLvMA3V"
+            }
           ]
         }
       ]
@@ -614,10 +1778,46 @@
           "nombre": "OPERACIONES MINERAS: GEOLOGÍA, LOGÍSTICA Y PLANTA",
           "docente": "Manuel Aucapuri, Gonzalo González ",
           "clases": [
-            "OPERACIONES EN MINERÍA: GEOLOGÍA",
-            "OPERACIONES EN MINERÍA: PLANTA",
-            "OPERACIONES EN MINERÍA: LOGÍSTICA",
-            "INNOVACIÓN Y TRANSFORMACIÓN DIGITAL EN LA MINERÍA"
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 01 - CLASE 01",
+              "videoUrl": "https://drive.google.com/file/d/1nKz_Vd9fztBLgP3ifVJJ3GABIFI70euH/preview",
+              "driveId": "1nKz_Vd9fztBLgP3ifVJJ3GABIFI70euH"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 01 - CLASE 02",
+              "videoUrl": "https://drive.google.com/file/d/1vVEBoGl9H0Fj83oMlBXKRm77kbeQFGyK/preview",
+              "driveId": "1vVEBoGl9H0Fj83oMlBXKRm77kbeQFGyK"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 01 - CLASE 03",
+              "videoUrl": "https://drive.google.com/file/d/1Hl0myirHTlMdwQkkGu9q5R2z_nGH8grz/preview",
+              "driveId": "1Hl0myirHTlMdwQkkGu9q5R2z_nGH8grz"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 01 - CLASE 04",
+              "videoUrl": "https://drive.google.com/file/d/1qn4-DYKgBbh934x0U3P_pAx43ajsDIfI/preview",
+              "driveId": "1qn4-DYKgBbh934x0U3P_pAx43ajsDIfI"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 01 - CLASE 05",
+              "videoUrl": "https://drive.google.com/file/d/1a-PgbTlcj_C_B7pktmaEj2uCsR86o51O/preview",
+              "driveId": "1a-PgbTlcj_C_B7pktmaEj2uCsR86o51O"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 01 - CLASE 06",
+              "videoUrl": "https://drive.google.com/file/d/1nT2zA8SBRbifnUohGKGJzZ6kNe0j6eFS/preview",
+              "driveId": "1nT2zA8SBRbifnUohGKGJzZ6kNe0j6eFS"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 01 - CLASE 07",
+              "videoUrl": "https://drive.google.com/file/d/1LNXaLyGZlhrcasD2sZaeIgYbCDSYVmjP/preview",
+              "driveId": "1LNXaLyGZlhrcasD2sZaeIgYbCDSYVmjP"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 01 - CLASE 08",
+              "videoUrl": "https://drive.google.com/file/d/1KiLwkaUajZwE8P9mBREuQsTnaFd1XsQn/preview",
+              "driveId": "1KiLwkaUajZwE8P9mBREuQsTnaFd1XsQn"
+            }
           ]
         },
         {
@@ -625,10 +1825,46 @@
           "nombre": "MEDIO AMBIENTE, RESPONSABILIDAD SOCIAL Y SEGURIDAD EN LA MINERÍA",
           "docente": "Juan Briones",
           "clases": [
-            "MEDIO AMBIENTE Y NORMATIVA RELACIONADA A LA MINERÍA",
-            "RESPONSABILIDAD SOCIAL, RELACIONES COMUNITARIAS Y MANEJO DE CONFLICTOS",
-            "SEGURIDAD Y PREVENCIÓN DE RIESGOS EN LA MINERÍA",
-            "RECURSO HUMANO EN MINERÍA"
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 02 - CLASE 09",
+              "videoUrl": "https://drive.google.com/file/d/1pINv3LPNqI8iYPuNSzcs_tAkTF65XQjz/preview",
+              "driveId": "1pINv3LPNqI8iYPuNSzcs_tAkTF65XQjz"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 02 - CLASE 10",
+              "videoUrl": "https://drive.google.com/file/d/18HGpaBp5OOMKekMuTrvLh3DZ4bRziZ8e/preview",
+              "driveId": "18HGpaBp5OOMKekMuTrvLh3DZ4bRziZ8e"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 02 - CLASE 11",
+              "videoUrl": "https://drive.google.com/file/d/1nePHIMKd0OZnCxeosuQZQ_T6dFXZ1zgs/preview",
+              "driveId": "1nePHIMKd0OZnCxeosuQZQ_T6dFXZ1zgs"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 02 - CLASE 12",
+              "videoUrl": "https://drive.google.com/file/d/1LWHn3yYc1CUwRz8YciYMf0dedLcbiUWt/preview",
+              "driveId": "1LWHn3yYc1CUwRz8YciYMf0dedLcbiUWt"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 02 - CLASE 13",
+              "videoUrl": "https://drive.google.com/file/d/1ttBmfSIQmotc7BJ8FMekZTBXG9zGdwCz/preview",
+              "driveId": "1ttBmfSIQmotc7BJ8FMekZTBXG9zGdwCz"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 02 - CLASE 14",
+              "videoUrl": "https://drive.google.com/file/d/1MxHUO9bo2xn6rHqJaLO1-XWy2xhuHdQ_/preview",
+              "driveId": "1MxHUO9bo2xn6rHqJaLO1-XWy2xhuHdQ_"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 02 - CLASE 15",
+              "videoUrl": "https://drive.google.com/file/d/1gMsGJlHLMBrkHceTRIzSbg0wNLvBvSw2/preview",
+              "driveId": "1gMsGJlHLMBrkHceTRIzSbg0wNLvBvSw2"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 02 - CLASE 16",
+              "videoUrl": "https://drive.google.com/file/d/1QTt0ZFOixBNw0tb-Y3NPFoSRNH7KDtjn/preview",
+              "driveId": "1QTt0ZFOixBNw0tb-Y3NPFoSRNH7KDtjn"
+            }
           ]
         },
         {
@@ -636,10 +1872,46 @@
           "nombre": "GESTIÓN DE PROYECTOS Y FINANZAS EN LA MINERÍA",
           "docente": "Mario Hilasaca",
           "clases": [
-            "PLANIFICACIÓN Y GESTIÓN DE PROYECTOS MINEROS",
-            "EVALUACIÓN FINANCIERA DE PROYECTOS MINEROS",
-            "CONTROL PRESUPUESTAL Y GESTIÓN DE COSTOS",
-            "FINANCIAMIENTO Y MARCO NORMATIVO FINANCIERO"
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 03 - CLASE 17",
+              "videoUrl": "https://drive.google.com/file/d/1t_5M4anv_gn9UND0ey8SQFFi0G8A037t/preview",
+              "driveId": "1t_5M4anv_gn9UND0ey8SQFFi0G8A037t"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 03 - CLASE 18",
+              "videoUrl": "https://drive.google.com/file/d/141ouSIZqFT1usABRtSPrCVLxl22qp5s4/preview",
+              "driveId": "141ouSIZqFT1usABRtSPrCVLxl22qp5s4"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 03 - CLASE 19",
+              "videoUrl": "https://drive.google.com/file/d/1eSI8zVQ1T1evrUj7QgMoR_B06YMgPGBd/preview",
+              "driveId": "1eSI8zVQ1T1evrUj7QgMoR_B06YMgPGBd"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 03 - CLASE 20",
+              "videoUrl": "https://drive.google.com/file/d/16AUuRZxfvV73sOs4ZMh5VF67JRdc571M/preview",
+              "driveId": "16AUuRZxfvV73sOs4ZMh5VF67JRdc571M"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 03 - CLASE 21",
+              "videoUrl": "https://drive.google.com/file/d/1m6vazOIf8lQz5z0jEoPmSYrHnWKPdiwv/preview",
+              "driveId": "1m6vazOIf8lQz5z0jEoPmSYrHnWKPdiwv"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 03 - CLASE 22",
+              "videoUrl": "https://drive.google.com/file/d/1b-hdmctxmTqT3T2VtkM5s_RIShoOk4V3/preview",
+              "driveId": "1b-hdmctxmTqT3T2VtkM5s_RIShoOk4V3"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 03 - CLASE 23",
+              "videoUrl": "https://drive.google.com/file/d/1Hp_gYt-0nU8ZXi23RuDjFleWMzH9Bcqk/preview",
+              "driveId": "1Hp_gYt-0nU8ZXi23RuDjFleWMzH9Bcqk"
+            },
+            {
+              "titulo": "GESTIÓN MINERA - MÓDULO 03 - CLASE 24",
+              "videoUrl": "https://drive.google.com/file/d/1Nf9PnPY9bF5SIy--46xBhFWbjarATOFB/preview",
+              "driveId": "1Nf9PnPY9bF5SIy--46xBhFWbjarATOFB"
+            }
           ]
         }
       ]
