@@ -25,6 +25,7 @@ import Link from 'next/link';
 import { getDiplomadoBySlug } from '@/lib/data/diplomadosData';
 import { getDriveVideoForClass } from '@/lib/data/driveVideos';
 import { useTheme } from '@/context/theme-context';
+import { parseDiplomadosFromProfile } from '@/lib/utils/profileParser';
 
 export interface RecursoItem {
   id: string;
@@ -94,7 +95,7 @@ export default function ReproductorClasesPage() {
       if (meRes && meRes.ok) {
         const meData = await meRes.json();
         const profile = meData.profile || meData;
-        const diplomados = profile?.diplomados_json || profile?.diplomados || [];
+        const diplomados = parseDiplomadosFromProfile(profile);
         
         // Buscar el diplomado actual en el perfil del alumno
         const targetSlugNorm = diplomadoId.toLowerCase().replace(/[^a-z0-9]+/g, '-');
@@ -110,7 +111,7 @@ export default function ReproductorClasesPage() {
           if (Array.isArray(dipEnPerfil.modulos)) {
             dipEnPerfil.modulos.forEach((m: any, idx: number) => {
               const key = m.codigo || m.id || `Módulo ${(idx + 1).toString().padStart(2, '0')}`;
-              if (map[key] === undefined) {
+              if (map[key] === undefined && m.completado !== undefined) {
                 map[key] = Boolean(m.completado);
               }
             });
@@ -146,6 +147,7 @@ export default function ReproductorClasesPage() {
     const dip = getDiplomadoBySlug(diplomadoId) || getDiplomadoBySlug('derecho-minero');
     
     const titulo = catalogoMateriales?.titulo || dip?.titulo || 'Diplomado de Alta Especialización EDUMIN';
+    let contadorGlobalTemas = 1;
     let contadorGlobalClases = 1;
 
     const modulosRaw = catalogoMateriales?.modulos?.length 
@@ -167,10 +169,16 @@ export default function ReproductorClasesPage() {
 
       if (Array.isArray(mod.temas) && mod.temas.length > 0) {
         temasProcesados = mod.temas.map((tObj: any, tIdx: number) => {
+          const numTema = contadorGlobalTemas++;
+          const numTemaStr = numTema < 10 ? `0${numTema}` : `${numTema}`;
+          const rawTitulo = tObj.titulo || `Tema ${numTemaStr}`;
+          const temaTituloFinal = rawTitulo.replace(/^Tema \d+:/i, `Tema ${numTemaStr}:`);
+
           const rawTemaClases = Array.isArray(tObj.clases) ? tObj.clases : [];
           const temaClases: ClaseCompleta[] = rawTemaClases.map((claseTitleStr: any, claseIdx: number) => {
             const numClase = contadorGlobalClases++;
-            const claseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase ${numClase}`);
+            const rawClaseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase ${numClase}`);
+            const claseTitle = rawClaseTitle.replace(/\s*\(\d{1,2}\/\d{1,2}\)/g, '').trim();
             const claseId = `${modCodigoKey}-t${tIdx + 1}-c${claseIdx + 1}`;
             const driveVideoUrl = typeof claseTitleStr === 'object' && claseTitleStr.videoUrl 
               ? claseTitleStr.videoUrl 
@@ -251,7 +259,7 @@ export default function ReproductorClasesPage() {
 
           return {
             id: `${modCodigoKey}-t${tIdx + 1}`,
-            titulo: tObj.titulo || `Tema 0${tIdx + 1}`,
+            titulo: temaTituloFinal,
             clases: temaClases
           };
         });
@@ -320,91 +328,94 @@ export default function ReproductorClasesPage() {
         });
       }
 
-      const rawClases = (mod.clases && mod.clases.length > 0) 
-        ? mod.clases 
-        : ['Sesión Magistral de Introducción', 'Casuística Aplicada'];
+      let clases: ClaseCompleta[] = [];
+      if (!temasProcesados) {
+        const rawClases = (mod.clases && mod.clases.length > 0) 
+          ? mod.clases 
+          : ['Sesión Magistral de Introducción', 'Casuística Aplicada'];
 
-      const clases: ClaseCompleta[] = rawClases.map((claseTitleStr: any, claseIdx: number) => {
-        const numClase = contadorGlobalClases++;
-        const claseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase ${numClase}`);
-        const claseId = `${modCodigoKey}-c${numClase}`;
-        const driveVideoUrl = getDriveVideoForClass(diplomadoId, modIdx, claseIdx);
-        const videoUrlFromCatalog = (typeof claseTitleStr === 'object' && claseTitleStr.videoUrl)
-          ? claseTitleStr.videoUrl
-          : (driveVideoUrl || mod.videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ');
-        const pdfUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.pdfUrl : mod.pdfUrl;
-        const excelUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.excelUrl : mod.excelUrl;
+        clases = rawClases.map((claseTitleStr: any, claseIdx: number) => {
+          const numClase = contadorGlobalClases++;
+          const claseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase ${numClase}`);
+          const claseId = `${modCodigoKey}-c${numClase}`;
+          const driveVideoUrl = getDriveVideoForClass(diplomadoId, modIdx, claseIdx);
+          const videoUrlFromCatalog = (typeof claseTitleStr === 'object' && claseTitleStr.videoUrl)
+            ? claseTitleStr.videoUrl
+            : (driveVideoUrl || mod.videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ');
+          const pdfUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.pdfUrl : mod.pdfUrl;
+          const excelUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.excelUrl : mod.excelUrl;
 
-        totalClasesContadas++;
+          totalClasesContadas++;
 
-        // Una clase está completada si su claseId individual está marcada o si el módulo completo lo está
-        const esCompletada = Boolean(
-          completadosMap[claseId] !== undefined
-            ? completadosMap[claseId]
-            : (esModuloCompletadoEnBD && completadosMap[claseId] !== false)
-        );
-        if (esCompletada) clasesCompletadasContadas++;
+          // Una clase está completada si su claseId individual está marcada o si el módulo completo lo está
+          const esCompletada = Boolean(
+            completadosMap[claseId] !== undefined
+              ? completadosMap[claseId]
+              : (esModuloCompletadoEnBD && completadosMap[claseId] !== false)
+          );
+          if (esCompletada) clasesCompletadasContadas++;
 
-        const partes: ParteClase[] = [
-          {
-            id: `${claseId}-p1`,
-            numero: 1,
-            titulo: `Sesión Completa`,
-            subtitulo: claseTitle,
-            duracion: '60 min',
-            videoUrl: videoUrlFromCatalog,
-            completada: esCompletada,
-            resumen: {
-              objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
-              puntosClave: [
-                `Revisión de la normativa vigente y estándares técnicos aplicables.`,
-                `Criterios clave para la toma de decisiones operativas y de gestión.`,
-                `Estrategias de análisis y resolución de problemas en el sector.`
+          const partes: ParteClase[] = [
+            {
+              id: `${claseId}-p1`,
+              numero: 1,
+              titulo: `Sesión Completa`,
+              subtitulo: claseTitle,
+              duracion: '60 min',
+              videoUrl: videoUrlFromCatalog,
+              completada: esCompletada,
+              resumen: {
+                objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
+                puntosClave: [
+                  `Revisión de la normativa vigente y estándares técnicos aplicables.`,
+                  `Criterios clave para la toma de decisiones operativas y de gestión.`,
+                  `Estrategias de análisis y resolución de problemas en el sector.`
+                ]
+              },
+              recursos: [
+                {
+                  id: `rec-${claseId}-pdf`,
+                  tipo: 'pdf',
+                  titulo: pdfUrlFromCatalog ? `Separata_Oficial_CLASE_${numClase}.pdf` : `Separata_Oficial_CLASE_${numClase}.pdf`,
+                  descripcion: 'Documento oficial con contenidos y diapositivas de la clase · PDF',
+                  archivo: pdfUrlFromCatalog || `Separata_Oficial_CLASE_${numClase}.pdf`
+                },
+                ...(excelUrlFromCatalog ? [{
+                  id: `rec-${claseId}-excel`,
+                  tipo: 'excel' as const,
+                  titulo: `Plantilla_Calculo_CLASE_${numClase}.xlsx`,
+                  descripcion: 'Hoja de cálculo y plantilla interactiva de trabajo · EXCEL',
+                  archivo: excelUrlFromCatalog
+                }] : []),
+                {
+                  id: `rec-${claseId}-capsula`,
+                  tipo: 'video',
+                  titulo: `Cápsula de Resumen en Video`,
+                  descripcion: 'Video sumario con los puntos más relevantes · 8 min',
+                  duracion: '8 min'
+                },
+                {
+                  id: `rec-${claseId}-audio`,
+                  tipo: 'audio',
+                  titulo: `Podcast de la Clase`,
+                  descripcion: 'Audio en formato MP3 para estudio y repaso · 15 min',
+                  duracion: '15 min'
+                }
               ]
-            },
-            recursos: [
-              {
-                id: `rec-${claseId}-pdf`,
-                tipo: 'pdf',
-                titulo: pdfUrlFromCatalog ? `Separata_Oficial_CLASE_${numClase}.pdf` : `Separata_Oficial_CLASE_${numClase}.pdf`,
-                descripcion: 'Documento oficial con contenidos y diapositivas de la clase · PDF',
-                archivo: pdfUrlFromCatalog || `Separata_Oficial_CLASE_${numClase}.pdf`
-              },
-              ...(excelUrlFromCatalog ? [{
-                id: `rec-${claseId}-excel`,
-                tipo: 'excel' as const,
-                titulo: `Plantilla_Calculo_CLASE_${numClase}.xlsx`,
-                descripcion: 'Hoja de cálculo y plantilla interactiva de trabajo · EXCEL',
-                archivo: excelUrlFromCatalog
-              }] : []),
-              {
-                id: `rec-${claseId}-capsula`,
-                tipo: 'video',
-                titulo: `Cápsula de Resumen en Video`,
-                descripcion: 'Video sumario con los puntos más relevantes · 8 min',
-                duracion: '8 min'
-              },
-              {
-                id: `rec-${claseId}-audio`,
-                tipo: 'audio',
-                titulo: `Podcast de la Clase`,
-                descripcion: 'Audio en formato MP3 para estudio y repaso · 15 min',
-                duracion: '15 min'
-              }
-            ]
-          }
-        ];
+            }
+          ];
 
-        return {
-          id: claseId,
-          numeroClase: numClase,
-          tituloClase: `CLASE ${numClase}: ${claseTitle.replace(/^Clase \d+:\s*/i, '')}`,
-          moduloCodigo: modCodigoKey,
-          moduloTitulo: `${modCodigoKey}: ${mod.nombre || mod.titulo || ''}`,
-          completada: esCompletada,
-          partes
-        };
-      });
+          return {
+            id: claseId,
+            numeroClase: numClase,
+            tituloClase: `CLASE ${numClase}: ${claseTitle.replace(/^Clase \d+:\s*/i, '')}`,
+            moduloCodigo: modCodigoKey,
+            moduloTitulo: `${modCodigoKey}: ${mod.nombre || mod.titulo || ''}`,
+            completada: esCompletada,
+            partes
+          };
+        });
+      }
 
       const todasLasClasesDelModulo = temasProcesados 
         ? [...temasProcesados.flatMap((t: any) => t.clases), ...clasesAdicionalesProcesadas] 
@@ -464,6 +475,21 @@ export default function ReproductorClasesPage() {
   const [claseActual, setClaseActual] = useState<ClaseCompleta | null>(claseInicial);
   const [parteSeleccionada, setParteSeleccionada] = useState<number>(1);
 
+  // Tema activo determinado a partir de la clase actual
+  const temaActual = useMemo(() => {
+    if (!claseActual || !diplomadoActual) return null;
+    for (const mod of diplomadoActual.modulos) {
+      if (mod.temas) {
+        for (const t of mod.temas) {
+          if (t.clases.some((c: ClaseCompleta) => c.id === claseActual.id)) {
+            return t;
+          }
+        }
+      }
+    }
+    return null;
+  }, [claseActual, diplomadoActual]);
+
   // Estados de contenido principal y pestañas
   const [contenidoPrincipal, setContenidoPrincipal] = useState<'video_clase' | 'pdf_visor' | 'resumen_video' | 'resumen_audio' | 'resumen_interactivo'>('video_clase');
   const [recursoActivoInfo, setRecursoActivoInfo] = useState<string>('Clase principal en video');
@@ -475,16 +501,19 @@ export default function ReproductorClasesPage() {
     { autor: 'Ing. Carlos Mendoza', texto: 'Excelente explicación de los temas de la clase.', fecha: 'Hace 2 horas' }
   ]);
 
-  // Sincronizar si cambia el parámetro de módulo en la URL
+  const [inicializadoNav, setInicializadoNav] = useState(false);
+
+  // Sincronizar si cambia el parámetro de módulo en la URL o en la carga inicial
   useEffect(() => {
-    if (modInicial) {
+    if (modInicial && (!inicializadoNav || moduloQuery)) {
       setModuloActivo(modInicial.id);
-      if (modInicial.clases && modInicial.clases.length > 0) {
+      if (!claseActual && modInicial.clases && modInicial.clases.length > 0) {
         setClaseActual(modInicial.clases[0]);
         setParteSeleccionada(1);
       }
+      setInicializadoNav(true);
     }
-  }, [modInicial]);
+  }, [modInicial, moduloQuery, inicializadoNav, claseActual]);
 
   // Alternar estado completado de la lección y sincronizar con Supabase
   const toggleCompletarLeccion = async (targetId: string) => {
@@ -640,6 +669,25 @@ export default function ReproductorClasesPage() {
       setGuardandoAvance(false);
     }
   }, [completadosMap, diplomadoActual, diplomadoId]);
+
+  const seleccionarTema = (moduloId: string, temaObj: any) => {
+    setModuloActivo(moduloId);
+    if (temaObj.clases && temaObj.clases.length > 0) {
+      const primeraClase = temaObj.clases[0];
+      setClaseActual(primeraClase);
+      setParteSeleccionada(1);
+      activarRecursoEnVisor('video_clase', 'Video de la Clase');
+      marcarLeccionCompletadaAuto(primeraClase.id, moduloId);
+    }
+  };
+
+  const seleccionarSesion = (moduloId: string, claseObj: ClaseCompleta) => {
+    setModuloActivo(moduloId);
+    setClaseActual(claseObj);
+    setParteSeleccionada(1);
+    activarRecursoEnVisor('video_clase', 'Video de la Clase');
+    marcarLeccionCompletadaAuto(claseObj.id, moduloId);
+  };
 
   const seleccionarClaseYParte = (moduloId: string, clase: ClaseCompleta, parteNum: number = 1) => {
     setModuloActivo(moduloId);
@@ -851,6 +899,80 @@ export default function ReproductorClasesPage() {
             )}
 
           </div>
+
+          {/* TEMA ACTIVO Y SELECTOR DE SESIONES DEL TEMA */}
+          {temaActual && temaActual.clases && temaActual.clases.length > 0 && (
+            <div className={`p-4 sm:p-5 rounded-2xl border transition-all ${
+              esOscuro ? 'bg-slate-900/90 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
+            }`}>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3 pb-3 border-b border-slate-800/20">
+                <div className="min-w-0">
+                  <span className="text-[10px] font-bold text-indigo-500 uppercase tracking-widest block">
+                    {moduloActualObj?.nombre || 'Tema Activo'}
+                  </span>
+                  <h3 className={`text-sm sm:text-base font-bold leading-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                    {temaActual.titulo}
+                  </h3>
+                </div>
+                <span className={`text-[11px] font-semibold px-2.5 py-1 rounded-lg border shrink-0 ${
+                  esOscuro ? 'bg-slate-800 border-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 text-slate-700'
+                }`}>
+                  {temaActual.clases.filter((c: ClaseCompleta) => completadosMap[c.id]).length} de {temaActual.clases.length} sesiones completadas
+                </span>
+              </div>
+
+              {/* Botones de Sesiones (Sesión 1, Sesión 2) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {temaActual.clases.map((claseItem: ClaseCompleta, sIdx: number) => {
+                  const esSesionActiva = claseActual?.id === claseItem.id;
+                  const esSesionCompletada = Boolean(completadosMap[claseItem.id]);
+
+                  return (
+                    <button
+                      key={claseItem.id}
+                      onClick={() => seleccionarSesion(moduloActivo, claseItem)}
+                      className={`p-3 rounded-xl border text-left flex items-center justify-between transition-all cursor-pointer ${
+                        esSesionActiva
+                          ? 'bg-indigo-600 text-white border-indigo-500 shadow-md font-bold'
+                          : esOscuro
+                            ? 'bg-slate-800/80 border-slate-700/80 text-slate-200 hover:bg-slate-800'
+                            : 'bg-slate-50 border-slate-200 text-slate-800 hover:bg-slate-100'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2.5 min-w-0 pr-2">
+                        <div className={`size-7 rounded-lg grid place-items-center shrink-0 font-extrabold text-xs ${
+                          esSesionActiva 
+                            ? 'bg-white/20 text-white' 
+                            : esOscuro ? 'bg-slate-700 text-slate-300' : 'bg-slate-200 text-slate-700'
+                        }`}>
+                          📹
+                        </div>
+                        <div className="min-w-0">
+                          <span className={`text-[10px] uppercase tracking-wider block ${
+                            esSesionActiva ? 'text-indigo-100 font-bold' : 'text-indigo-400 font-semibold'
+                          }`}>
+                            Sesión {sIdx + 1} de {temaActual.clases.length}
+                          </span>
+                          <p className="text-xs truncate font-medium">
+                            {claseItem.tituloClase.replace(/^CLASE \d+:\s*/i, '')}
+                          </p>
+                        </div>
+                      </div>
+                      {esSesionCompletada ? (
+                        <CheckCircle2 className={`w-4 h-4 shrink-0 ${esSesionActiva ? 'text-white' : 'text-emerald-500'}`} />
+                      ) : (
+                        <span className={`text-[10px] px-2 py-0.5 rounded-full shrink-0 font-semibold ${
+                          esSesionActiva ? 'bg-white/20 text-white' : esOscuro ? 'bg-slate-700 text-slate-400' : 'bg-slate-200 text-slate-600'
+                        }`}>
+                          Disponible
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* CONTROLES DE LA CLASE, BOTÓN COMPLETAR Y NAVEGACIÓN */}
           <div className={`p-5 sm:p-6 rounded-2xl border transition-all ${
@@ -1206,85 +1328,53 @@ export default function ReproductorClasesPage() {
                   </div>
 
                   {mod.temas && mod.temas.length > 0 ? (
-                    <div className="space-y-3 pt-1">
+                    <div className="space-y-2 pt-1">
                       {mod.temas.map((tema: any) => {
-                        const isTemaOpen = temasAbiertosMap[tema.id] !== false;
                         const temaClases = tema.clases || [];
                         const esTemaCompletado = temaClases.length > 0 && temaClases.every((c: any) => Boolean(completadosMap[c.id] || completadosMap[mod.codigo]));
+                        const esTemaSeleccionado = temaActual?.id === tema.id;
 
                         return (
-                          <div key={tema.id} className="space-y-1">
-                            <button
-                              type="button"
-                              onClick={() => toggleTema(tema.id)}
-                              className={`w-full text-left px-2.5 py-1.5 rounded-xl flex items-center justify-between text-xs font-semibold transition-all border cursor-pointer ${
-                                esTemaCompletado
+                          <button
+                            key={tema.id}
+                            type="button"
+                            onClick={() => seleccionarTema(mod.id, tema)}
+                            className={`w-full text-left p-3 rounded-xl flex items-center justify-between text-xs font-semibold transition-all border cursor-pointer ${
+                              esTemaSeleccionado
+                                ? 'bg-indigo-600 text-white border-indigo-500 shadow-md font-bold'
+                                : esTemaCompletado
                                   ? esOscuro
-                                    ? 'bg-emerald-950/40 border-emerald-800/40 text-emerald-300'
-                                    : 'bg-emerald-50/80 border-emerald-200 text-emerald-900 shadow-2xs'
+                                    ? 'bg-emerald-950/40 border-emerald-800/40 text-emerald-300 hover:bg-emerald-900/50'
+                                    : 'bg-emerald-50/80 border-emerald-200 text-emerald-900 hover:bg-emerald-100 shadow-2xs'
                                   : esOscuro
-                                    ? 'bg-slate-800/80 border-slate-700/60 text-indigo-300 hover:bg-slate-800'
-                                    : 'bg-indigo-50/80 border-indigo-100 text-indigo-900 hover:bg-indigo-100/80 shadow-2xs'
-                              }`}
-                            >
-                              <div className="flex items-center gap-2 flex-1 min-w-0 pr-2">
-                                <Folder className={`w-3.5 h-3.5 shrink-0 ${esTemaCompletado ? 'text-emerald-500' : 'text-indigo-500'}`} />
-                                <span className="truncate text-[11px] font-bold tracking-tight">
-                                  {tema.titulo}
-                                </span>
-                                {esTemaCompletado && (
-                                  <span className="text-[9px] font-extrabold px-1.5 py-0.5 rounded-md bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 shrink-0">
-                                    ✓ Completado
-                                  </span>
-                                )}
-                              </div>
-                              {isTemaOpen ? (
-                                <ChevronDown className="w-3.5 h-3.5 shrink-0 opacity-70" />
-                              ) : (
-                                <ChevronRight className="w-3.5 h-3.5 shrink-0 opacity-70" />
-                              )}
-                            </button>
-
-                            {isTemaOpen && (
-                              <div className="space-y-1 pl-2 border-l-2 border-indigo-500/20 ml-2 pt-0.5">
-                                {tema.clases.map((clase: ClaseCompleta) => {
-                                  const esClaseSeleccionada = claseActual?.id === clase.id;
-                                  const estaCompletada = estaModCompletado || clase.completada;
-
-                                  return (
-                                    <button 
-                                      key={clase.id} 
-                                      onClick={() => seleccionarClaseYParte(mod.id, clase, 1)}
-                                      className={`w-full p-2.5 rounded-xl flex items-start gap-2.5 text-left transition-all cursor-pointer ${
-                                        esClaseSeleccionada 
-                                          ? esOscuro 
-                                            ? 'bg-indigo-600/20 text-indigo-200 font-semibold border border-indigo-500/30' 
-                                            : 'bg-indigo-50 text-indigo-900 font-semibold border border-indigo-200 shadow-2xs' 
-                                          : esOscuro 
-                                            ? 'text-slate-400 hover:bg-slate-800/60 hover:text-slate-200' 
-                                            : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
-                                      }`}
-                                    >
-                                      <div className="pt-0.5 shrink-0">
-                                        {estaCompletada ? (
-                                          <CheckCircle2 className={`w-4 h-4 shrink-0 ${esClaseSeleccionada ? (esOscuro ? 'text-indigo-400' : 'text-indigo-600') : 'text-emerald-500'}`} />
-                                        ) : (
-                                          <div className={`size-4 rounded-full border-2 shrink-0 ${
-                                            esClaseSeleccionada 
-                                              ? (esOscuro ? 'border-indigo-400' : 'border-indigo-600') 
-                                              : (esOscuro ? 'border-slate-500' : 'border-slate-400')
-                                          }`} />
-                                        )}
-                                      </div>
-                                      <span className="text-xs leading-snug line-clamp-2">
-                                        {clase.tituloClase}
-                                      </span>
-                                    </button>
-                                  );
-                                })}
-                              </div>
+                                    ? 'bg-slate-800/80 border-slate-700/60 text-slate-200 hover:bg-slate-800'
+                                    : 'bg-slate-50 border-slate-200 text-slate-800 hover:bg-slate-100 shadow-2xs'
+                            }`}
+                          >
+                            <div className="flex items-center gap-2.5 min-w-0 pr-2">
+                              <Folder className={`w-4 h-4 shrink-0 ${
+                                esTemaSeleccionado 
+                                  ? 'text-white' 
+                                  : esTemaCompletado ? 'text-emerald-500' : 'text-indigo-500'
+                              }`} />
+                              <span className="truncate text-xs font-bold leading-tight">
+                                {tema.titulo}
+                              </span>
+                            </div>
+                            {esTemaCompletado ? (
+                              <span className={`text-[10px] font-extrabold px-2 py-0.5 rounded-md shrink-0 ${
+                                esTemaSeleccionado ? 'bg-white/20 text-white' : 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                              }`}>
+                                ✓ Completado
+                              </span>
+                            ) : (
+                              <span className={`text-[10px] font-medium px-2 py-0.5 rounded-md shrink-0 ${
+                                esTemaSeleccionado ? 'bg-white/20 text-white' : esOscuro ? 'bg-slate-700 text-slate-400' : 'bg-slate-200 text-slate-600'
+                              }`}>
+                                {temaClases.length} sesiones
+                              </span>
                             )}
-                          </div>
+                          </button>
                         );
                       })}
 
@@ -1300,27 +1390,27 @@ export default function ReproductorClasesPage() {
                             return (
                               <button 
                                 key={clase.id} 
-                                onClick={() => seleccionarClaseYParte(mod.id, clase, 1)}
-                                className={`w-full p-2.5 rounded-xl flex items-start gap-2.5 text-left transition-all cursor-pointer ${
+                                onClick={() => seleccionarSesion(mod.id, clase)}
+                                className={`w-full p-2.5 rounded-xl flex items-center justify-between text-left transition-all cursor-pointer border ${
                                   esClaseSeleccionada 
-                                    ? esOscuro 
-                                      ? 'bg-amber-600/20 text-amber-200 font-semibold border border-amber-500/30' 
-                                      : 'bg-amber-50 text-amber-900 font-semibold border border-amber-200 shadow-2xs' 
+                                    ? 'bg-amber-600 text-white border-amber-500 shadow-md font-bold' 
                                     : esOscuro 
-                                      ? 'text-slate-400 hover:bg-slate-800/60 hover:text-slate-200' 
-                                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                                      ? 'bg-slate-800/80 border-slate-700/60 text-slate-300 hover:bg-slate-800' 
+                                      : 'bg-amber-50/50 border-amber-200/80 text-amber-900 hover:bg-amber-100/80'
                                 }`}
                               >
-                                <div className="pt-0.5 shrink-0">
-                                  {estaCompletada ? (
-                                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-                                  ) : (
-                                    <div className="size-4 rounded-full border-2 border-amber-400 shrink-0" />
-                                  )}
+                                <div className="flex items-center gap-2.5 min-w-0 pr-2">
+                                  <div className="pt-0.5 shrink-0">
+                                    {estaCompletada ? (
+                                      <CheckCircle2 className={`w-4 h-4 shrink-0 ${esClaseSeleccionada ? 'text-white' : 'text-emerald-500'}`} />
+                                    ) : (
+                                      <div className={`size-4 rounded-full border-2 shrink-0 ${esClaseSeleccionada ? 'border-white' : 'border-amber-400'}`} />
+                                    )}
+                                  </div>
+                                  <span className="text-xs leading-snug truncate">
+                                    {clase.tituloClase}
+                                  </span>
                                 </div>
-                                <span className="text-xs leading-snug line-clamp-2">
-                                  {clase.tituloClase}
-                                </span>
                               </button>
                             );
                           })}

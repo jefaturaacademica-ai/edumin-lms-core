@@ -11,6 +11,7 @@ export interface DiplomadoJSON {
   slug: string;
   titulo: string;
   avance: number;
+  completadosMap?: Record<string, boolean>;
   modulos: ModuloJSON[];
 }
 

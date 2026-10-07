@@ -77,7 +77,7 @@ export default function DiplomadosPage() {
     {
       id: 'derecho-minero',
       titulo: derechoMineroData?.titulo || 'DERECHO MINERO',
-      avance: estadoSimuladoDev === 'completado' ? 100 : 45,
+      avance: estadoSimuladoDev === 'completado' ? 100 : 0,
       imagen: derechoMineroData?.imagen || "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
       modulos: (derechoMineroData?.modulos || []).map((m) => ({
         id: m.codigo,
@@ -158,7 +158,7 @@ export default function DiplomadosPage() {
                   listMap.push({
                     id: matched.slug,
                     titulo: matched.titulo,
-                    avance: m.avance_porcentaje ?? prof.avance_porcentaje ?? 45,
+                    avance: m.avance_porcentaje ?? prof.avance_porcentaje ?? 0,
                     imagen: matched.imagen,
                     modulos: matched.modulos.map(mod => ({
                       id: mod.codigo,
@@ -179,16 +179,16 @@ export default function DiplomadosPage() {
                 addedSlugs.add(matched.slug);
 
                 // Calcular avance dinámico desde los módulos del diplomado en JSON
-                let avanceCalc = dipJson.avance;
-                if (!avanceCalc && Array.isArray(dipJson.modulos) && dipJson.modulos.length > 0) {
-                  const compCount = dipJson.modulos.filter(m => m.completado).length;
+                let avanceCalc = typeof dipJson.avance === 'number' ? dipJson.avance : 0;
+                if (avanceCalc === 0 && Array.isArray(dipJson.modulos) && dipJson.modulos.length > 0) {
+                  const compCount = dipJson.modulos.filter(m => Boolean(m.completado)).length;
                   avanceCalc = Math.round((compCount / dipJson.modulos.length) * 100);
                 }
 
                 listMap.push({
                   id: matched.slug,
                   titulo: matched.titulo,
-                  avance: avanceCalc ?? 67,
+                  avance: avanceCalc,
                   imagen: matched.imagen,
                   modulos: matched.modulos.map((mod, mIdx) => {
                     const modJson = dipJson.modulos?.[mIdx];
@@ -196,8 +196,8 @@ export default function DiplomadosPage() {
                       id: mod.codigo,
                       titulo: `${mod.codigo}: ${mod.nombre}`,
                       docente: mod.docente,
-                      nota: modJson?.nota ?? (modJson?.completado ? 17 : 0),
-                      completado: modJson?.completado ?? (mIdx < 2)
+                      nota: modJson?.nota ?? 0,
+                      completado: Boolean(modJson?.completado)
                     };
                   })
                 });
