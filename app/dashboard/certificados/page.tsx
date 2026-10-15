@@ -26,6 +26,7 @@ import {
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
+import AvanzaCertificateRenderer from '@/components/certificates/AvanzaCertificateRenderer';
 
 export default function CertificadosPage() {
   const { esOscuro } = useTheme();
@@ -81,6 +82,8 @@ export default function CertificadosPage() {
     categoria: string;
     fecha: string;
     codigo: string;
+    horas?: string;
+    modelo_id?: string;
     nota?: number;
     tipo: 'Diplomado' | 'Modular' | 'Curso' | 'Taller';
   } | null>(null);
@@ -121,6 +124,8 @@ export default function CertificadosPage() {
         modularesTotales,
         promedio: d.promedio || promedio,
         completado,
+        horas: d.horas || '325 horas académicas y 13 créditos académicos',
+        modelo_id: (d as any).modelo_id || 'mod-avanza-dip',
         fecha: d.fecha || '15/03/2026',
         codigo: d.codigo || `EDUMIN-DIP-${perfilEstudiante.dni_ce || '71234567'}-${(d.id || 'DIP').substring(0, 3).toUpperCase()}`
       };
@@ -145,6 +150,8 @@ export default function CertificadosPage() {
             modulo: `${m.codigo || 'Módulo'}: ${m.nombre}`,
             diplomado: d.titulo,
             nota: nota,
+            horas: m.horas || '108 horas académicas',
+            modelo_id: (m as any).modelo_id || 'mod-avanza-mod',
             fecha: m.fecha || '15/01/2026',
             codigo: m.codigo_cert || `EDUMIN-MOD-${perfilEstudiante.dni_ce || '71234567'}-${counter}`
           });
@@ -176,6 +183,7 @@ export default function CertificadosPage() {
       titulo: c.titulo,
       categoria: c.categoria || 'Seguridad & SSOMA',
       horas: c.horas || '24 Horas',
+      modelo_id: (c as any).modelo_id || 'mod-03',
       fecha: c.fecha || '18/02/2026',
       nota: c.nota,
       codigo: c.codigo || `EDUMIN-CUR-${perfilEstudiante.dni_ce || '71234567'}-${idx + 1}`
@@ -855,89 +863,103 @@ export default function CertificadosPage() {
                   </div>
                 </div>
 
-                {/* CANVAS DIPLOMA/CERTIFICADO FIEL A LA PLANTILLA MAESTRA A4 (COMPARTIDO CON ADMIN) */}
+                {/* CANVAS DIPLOMA/CERTIFICADO FIEL A LA PLANTILLA MAESTRA A4 */}
                 <div className="p-2 sm:p-4 bg-slate-950/90 rounded-2xl flex items-center justify-center">
-                  <div className={`rounded-2xl border-8 p-6 sm:p-8 relative text-center shadow-2xl transition-all overflow-hidden w-full ${
-                    estilo.marco
-                  }`}>
-                    {/* Header: Escuela + Instituto (izq) e Insignia EM (der) */}
-                    <div className="flex justify-between items-center border-b border-black/10 pb-3 mb-4">
-                      <div className="text-left">
-                        <span className="text-[9px] font-mono font-bold tracking-widest block opacity-70 text-slate-600">
-                          {estilo.escuelaHeader}
-                        </span>
-                        <h4 className="text-xs font-black text-slate-900">
-                          {estilo.institucionHeader}
-                        </h4>
-                      </div>
-                      <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center text-indigo-700 font-black text-xs shrink-0">
-                        EM
-                      </div>
+                  {modalVistaPrevia.tipo === 'Diplomado' || modalVistaPrevia.tipo === 'Modular' ? (
+                    <div className="w-full max-w-xl">
+                      <AvanzaCertificateRenderer
+                        tipo={modalVistaPrevia.tipo === 'Diplomado' ? 'DIPLOMA' : 'MODULAR'}
+                        estudiante={nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN'}
+                        programa={modalVistaPrevia.tipo === 'Diplomado' ? modalVistaPrevia.titulo : modalVistaPrevia.subtitulo}
+                        modulo={modalVistaPrevia.tipo === 'Modular' ? modalVistaPrevia.titulo : undefined}
+                        horas={modalVistaPrevia.horas || (modalVistaPrevia.tipo === 'Diplomado' ? '325 horas académicas y 13 créditos académicos' : '108 horas académicas')}
+                        fecha={modalVistaPrevia.fecha}
+                        codigo={modalVistaPrevia.codigo}
+                      />
                     </div>
+                  ) : (
+                    <div className={`rounded-2xl border-8 p-6 sm:p-8 relative text-center shadow-2xl transition-all overflow-hidden w-full ${
+                      estilo.marco
+                    }`}>
+                      {/* Header: Escuela + Instituto (izq) e Insignia EM (der) */}
+                      <div className="flex justify-between items-center border-b border-black/10 pb-3 mb-4">
+                        <div className="text-left">
+                          <span className="text-[9px] font-mono font-bold tracking-widest block opacity-70 text-slate-600">
+                            {estilo.escuelaHeader}
+                          </span>
+                          <h4 className="text-xs font-black text-slate-900">
+                            {estilo.institucionHeader}
+                          </h4>
+                        </div>
+                        <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center text-indigo-700 font-black text-xs shrink-0">
+                          EM
+                        </div>
+                      </div>
 
-                    {/* Subtítulo Tipo de Certificado */}
-                    <span className="text-[10px] uppercase font-bold tracking-widest opacity-80 block text-slate-700">
-                      {estilo.tituloHeader}
-                    </span>
-
-                    <p className="text-[11px] opacity-70 mt-2 text-slate-600">Otorgado a favor de:</p>
-                    
-                    {/* Nombre Estudiante en Fuente Serif Elegante con subrayado dorado */}
-                    <h3 className="text-xl sm:text-2xl font-extrabold font-serif text-slate-900 my-2 underline decoration-amber-500 underline-offset-4">
-                      {nombreEstudianteCompleto || 'JUAN CARLOS QUISPE RAMOS'}
-                    </h3>
-                    <p className="text-[10px] opacity-60 font-mono text-slate-600">
-                      DNI / CE: {perfilEstudiante?.dni || '71234567'}
-                    </p>
-
-                    {/* Texto de Otorgamiento */}
-                    <p className="text-xs mt-3 px-4 leading-relaxed opacity-85 text-slate-700">
-                      {estilo.otorgamiento}
-                    </p>
-
-                    {/* Título del Programa / Curso en Mayúsculas Azules/Índigo */}
-                    <p className="text-sm sm:text-base font-black mt-1 uppercase px-4 text-indigo-950 tracking-wide">
-                      {modalVistaPrevia.titulo}
-                    </p>
-                    {modalVistaPrevia.subtitulo && (
-                      <p className="text-xs font-semibold text-slate-500 mt-0.5">{modalVistaPrevia.subtitulo}</p>
-                    )}
-
-                    {/* Pastillas de Métricas: Horas y Calificación */}
-                    <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold text-slate-800">
-                      <span className="px-3 py-1 rounded-lg border border-black/10 bg-black/5">
-                        ⏱️ {estilo.horas}
+                      {/* Subtítulo Tipo de Certificado */}
+                      <span className="text-[10px] uppercase font-bold tracking-widest opacity-80 block text-slate-700">
+                        {estilo.tituloHeader}
                       </span>
-                      {modalVistaPrevia.nota && (
-                        <span className="px-3 py-1 rounded-lg border border-black/10 bg-black/5">
-                          🏆 Calificación: {modalVistaPrevia.nota}
-                        </span>
+
+                      <p className="text-[11px] opacity-70 mt-2 text-slate-600">Otorgado a favor de:</p>
+                      
+                      {/* Nombre Estudiante en Fuente Serif Elegante con subrayado dorado */}
+                      <h3 className="text-xl sm:text-2xl font-extrabold font-serif text-slate-900 my-2 underline decoration-amber-500 underline-offset-4">
+                        {nombreEstudianteCompleto || 'JUAN CARLOS QUISPE RAMOS'}
+                      </h3>
+                      <p className="text-[10px] opacity-60 font-mono text-slate-600">
+                        DNI / CE: {perfilEstudiante?.dni || '71234567'}
+                      </p>
+
+                      {/* Texto de Otorgamiento */}
+                      <p className="text-xs mt-3 px-4 leading-relaxed opacity-85 text-slate-700">
+                        {estilo.otorgamiento}
+                      </p>
+
+                      {/* Título del Programa / Curso en Mayúsculas Azules/Índigo */}
+                      <p className="text-sm sm:text-base font-black mt-1 uppercase px-4 text-indigo-950 tracking-wide">
+                        {modalVistaPrevia.titulo}
+                      </p>
+                      {modalVistaPrevia.subtitulo && (
+                        <p className="text-xs font-semibold text-slate-500 mt-0.5">{modalVistaPrevia.subtitulo}</p>
                       )}
+
+                      {/* Pastillas de Métricas: Horas y Calificación */}
+                      <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold text-slate-800">
+                        <span className="px-3 py-1 rounded-lg border border-black/10 bg-black/5">
+                          ⏱️ {estilo.horas}
+                        </span>
+                        {modalVistaPrevia.nota && (
+                          <span className="px-3 py-1 rounded-lg border border-black/10 bg-black/5">
+                            🏆 Calificación: {modalVistaPrevia.nota}
+                          </span>
+                        )}
+                      </div>
+
+                      {/* Footer del Certificado con Fechas, Firmas y Código QR */}
+                      <div className="mt-6 pt-4 border-t border-black/10 flex justify-between items-end text-[9px] opacity-80 text-slate-700">
+                        <div className="text-left font-mono">
+                          <p>Fecha de emisión: {modalVistaPrevia.fecha || '2026-10-06'}</p>
+                          <p className="font-bold mt-0.5 text-indigo-900">Código: {modalVistaPrevia.codigo}</p>
+                        </div>
+
+                        <div className="flex gap-4 sm:gap-6">
+                          {estilo.firmas.map((f: string, i: number) => (
+                            <div key={i} className="text-center">
+                              <div className="w-16 sm:w-20 border-b border-black/30 mb-1"></div>
+                              <span className="text-[8px] block font-bold text-slate-800">{f}</span>
+                              <span className="text-[7px] opacity-70 text-slate-500">EDUMIN LMS</span>
+                            </div>
+                          ))}
+                        </div>
+
+                        <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm shrink-0">
+                          <QrCode className="w-7 h-7 text-slate-900" />
+                          <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
+                        </div>
+                      </div>
                     </div>
-
-                    {/* Footer del Certificado con Fechas, Firmas y Código QR */}
-                    <div className="mt-6 pt-4 border-t border-black/10 flex justify-between items-end text-[9px] opacity-80 text-slate-700">
-                      <div className="text-left font-mono">
-                        <p>Fecha de emisión: {modalVistaPrevia.fecha || '2026-10-06'}</p>
-                        <p className="font-bold mt-0.5 text-indigo-900">Código: {modalVistaPrevia.codigo}</p>
-                      </div>
-
-                      <div className="flex gap-4 sm:gap-6">
-                        {estilo.firmas.map((f: string, i: number) => (
-                          <div key={i} className="text-center">
-                            <div className="w-16 sm:w-20 border-b border-black/30 mb-1"></div>
-                            <span className="text-[8px] block font-bold text-slate-800">{f}</span>
-                            <span className="text-[7px] opacity-70 text-slate-500">EDUMIN LMS</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm shrink-0">
-                        <QrCode className="w-7 h-7 text-slate-900" />
-                        <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
-                      </div>
-                    </div>
-                  </div>
+                  )}
                 </div>
 
                 {/* ACCIONES DEL MODAL DE VISTA PREVIA */}

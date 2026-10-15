@@ -1,9 +1,14 @@
+import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
+
 export interface ModuloJSON {
   id: string;
   codigo: string;
   nombre: string;
   nota: number;
   completado: boolean;
+  codigo_cert?: string;
+  fecha?: string;
+  horas?: string;
 }
 
 export interface DiplomadoJSON {
@@ -13,6 +18,11 @@ export interface DiplomadoJSON {
   avance: number;
   completadosMap?: Record<string, boolean>;
   modulos: ModuloJSON[];
+  codigo?: string;
+  fecha?: string;
+  horas?: string;
+  promedio?: number;
+  completado?: boolean;
 }
 
 export interface CursoJSON {
@@ -22,6 +32,11 @@ export interface CursoJSON {
   nota: number;
   completado: boolean;
   avance?: number;
+  completadosMap?: Record<string, boolean>;
+  categoria?: string;
+  duracion?: string;
+  horas?: string;
+  fecha?: string;
 }
 
 export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {
@@ -76,16 +91,29 @@ export function parseDiplomadosFromProfile(profile: any): DiplomadoJSON[] {
     const val = profile[`diplomado_${i}`];
     if (val && typeof val === 'string' && !val.startsWith('DIPLOMADOS_LIST|') && !val.startsWith('CURSOS_LIST|') && val.trim() !== '') {
       const title = val.trim();
+      const matchedData = getDiplomadoByTitleOrSlug(title);
+      const matchedTitle = matchedData?.titulo || title;
+      const matchedSlug = matchedData?.slug || title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const modulosList = matchedData?.modulos && matchedData.modulos.length > 0
+        ? matchedData.modulos.map((m: any, mIdx: number) => ({
+            id: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+            codigo: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+            nombre: m.nombre || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+            nota: 0,
+            completado: false
+          }))
+        : [
+            { id: 'mod-01', codigo: 'Módulo 01', nombre: `Módulo 01 de ${matchedTitle}`, nota: 0, completado: false },
+            { id: 'mod-02', codigo: 'Módulo 02', nombre: `Módulo 02 de ${matchedTitle}`, nota: 0, completado: false },
+            { id: 'mod-03', codigo: 'Módulo 03', nombre: `Módulo 03 de ${matchedTitle}`, nota: 0, completado: false }
+          ];
+
       fallbackList.push({
-        id: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-        slug: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-        titulo: title,
+        id: matchedSlug,
+        slug: matchedSlug,
+        titulo: matchedTitle,
         avance: 0,
-        modulos: [
-          { id: 'mod-01', codigo: 'Módulo 01', nombre: `Módulo 01 de ${title}`, nota: 0, completado: false },
-          { id: 'mod-02', codigo: 'Módulo 02', nombre: `Módulo 02 de ${title}`, nota: 0, completado: false },
-          { id: 'mod-03', codigo: 'Módulo 03', nombre: `Módulo 03 de ${title}`, nota: 0, completado: false }
-        ]
+        modulos: modulosList
       });
     }
   }

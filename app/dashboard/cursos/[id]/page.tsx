@@ -5,6 +5,7 @@ import { PlayCircle, CheckCircle2, FileText, ArrowLeft, Download, Video, Award, 
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useTheme } from '@/context/theme-context';
+import { parseCursosFromProfile } from '@/lib/utils/profileParser';
 
 function formatearUrlVideoEmbed(url?: string): string {
   if (!url) return '';
@@ -137,7 +138,7 @@ export default function ReproductorCursoPage() {
       if (meRes && meRes.ok) {
         const meData = await meRes.json();
         const profile = meData.profile || meData;
-        const cursos = profile?.cursos_json || profile?.cursos || [];
+        const cursos = profile?.cursos_json || (Array.isArray(profile?.cursos) ? profile.cursos : parseCursosFromProfile(profile));
         
         const targetNorm = cursoId.toLowerCase().replace(/[^a-z0-9]+/g, '-');
         const curEnPerfil = Array.isArray(cursos)
@@ -256,6 +257,7 @@ export default function ReproductorCursoPage() {
         body: JSON.stringify({
           cursoId: cursoId,
           cursoSlug: cursoId,
+          cursoTitulo: cursoActual.titulo,
           sesionId: sesionId,
           claseId: sesionId,
           completado: nuevoEstado,

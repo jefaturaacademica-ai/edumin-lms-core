@@ -317,14 +317,35 @@ export async function PATCH(request: Request) {
     const admin = createAdminClient();
 
     if (action === 'update_diplomados') {
+      let profileQuery = admin.from('profiles').select('*');
+      if (studentId) profileQuery = profileQuery.eq('id', studentId);
+      else if (dni_ce) profileQuery = profileQuery.eq('dni_ce', dni_ce);
+      else return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
+
+      const { data: currentProfile, error: pErr } = await profileQuery.maybeSingle();
+      if (pErr || !currentProfile) {
+        return NextResponse.json({ error: 'Perfil de estudiante no encontrado.' }, { status: 404 });
+      }
+
+      const existingDiplomados = parseDiplomadosFromProfile(currentProfile);
+      const existingMap = new Map<string, DiplomadoJSON>();
+      existingDiplomados.forEach(d => {
+        const key = (d.titulo || d.slug || d.id || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        existingMap.set(key, d);
+      });
+
       let diplomadosListJson: DiplomadoJSON[] = [];
 
       if (Array.isArray(diplomados)) {
         diplomadosListJson = diplomados.map((titleStr: string) => {
           const title = String(titleStr).trim();
+          const key = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          if (existingMap.has(key)) {
+            return existingMap.get(key)!;
+          }
           return {
-            id: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-            slug: title.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+            id: key,
+            slug: key,
             titulo: title,
             avance: 0,
             modulos: [
@@ -338,20 +359,14 @@ export async function PATCH(request: Request) {
 
       const diplomadosSerialized = `DIPLOMADOS_LIST|${JSON.stringify(diplomadosListJson)}`;
 
-      let query = admin.from('profiles').update({
-        diplomados: diplomadosSerialized,
-        avance_porcentaje: 0
-      });
-
-      if (studentId) {
-        query = query.eq('id', studentId);
-      } else if (dni_ce) {
-        query = query.eq('dni_ce', dni_ce);
-      } else {
-        return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
-      }
-
-      const { data: updated, error: updateErr } = await query.select().single();
+      const { data: updated, error: updateErr } = await admin
+        .from('profiles')
+        .update({
+          diplomados: diplomadosSerialized
+        })
+        .eq('id', currentProfile.id)
+        .select()
+        .single();
 
       if (updateErr) {
         return NextResponse.json({ error: `Error al actualizar diplomados: ${updateErr.message}` }, { status: 500 });
@@ -372,36 +387,53 @@ export async function PATCH(request: Request) {
     }
 
     if (action === 'update_cursos') {
+      let profileQuery = admin.from('profiles').select('*');
+      if (studentId) profileQuery = profileQuery.eq('id', studentId);
+      else if (dni_ce) profileQuery = profileQuery.eq('dni_ce', dni_ce);
+      else return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
+
+      const { data: currentProfile, error: pErr } = await profileQuery.maybeSingle();
+      if (pErr || !currentProfile) {
+        return NextResponse.json({ error: 'Perfil de estudiante no encontrado.' }, { status: 404 });
+      }
+
+      const existingCursos = parseCursosFromProfile(currentProfile);
+      const existingCursosMap = new Map<string, any>();
+      existingCursos.forEach(c => {
+        const key = (c.titulo || c.id || c.codigo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+        existingCursosMap.set(key, c);
+      });
+
       let cursosListJson: any[] = [];
 
       if (Array.isArray(cursos)) {
         cursosListJson = cursos.map((titleStr: string, idx: number) => {
           const title = String(titleStr).trim();
+          const key = title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+          if (existingCursosMap.has(key)) {
+            return existingCursosMap.get(key)!;
+          }
           return {
             id: `cur-${(idx + 1).toString().padStart(2, '0')}`,
             codigo: `CUR-${(idx + 1).toString().padStart(2, '0')}`,
             titulo: title,
             nota: 0,
-            completado: false
+            completado: false,
+            avance: 0
           };
         });
       }
 
       const cursosSerialized = `CURSOS_LIST|${JSON.stringify(cursosListJson)}`;
 
-      let query = admin.from('profiles').update({
-        cursos: cursosSerialized
-      });
-
-      if (studentId) {
-        query = query.eq('id', studentId);
-      } else if (dni_ce) {
-        query = query.eq('dni_ce', dni_ce);
-      } else {
-        return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
-      }
-
-      const { data: updated, error: updateErr } = await query.select().single();
+      const { data: updated, error: updateErr } = await admin
+        .from('profiles')
+        .update({
+          cursos: cursosSerialized
+        })
+        .eq('id', currentProfile.id)
+        .select()
+        .single();
 
       if (updateErr) {
         return NextResponse.json({ error: `Error al actualizar cursos: ${updateErr.message}` }, { status: 500 });

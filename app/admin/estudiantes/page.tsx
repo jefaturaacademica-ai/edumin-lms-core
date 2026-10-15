@@ -6,6 +6,9 @@ import {
   CheckCircle2, AlertTriangle, UserCheck, GraduationCap, Download
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import AnularPagoModal from '@/components/admin/anular-pago-modal';
+import ReciboModal from '@/components/admin/recibo-modal';
+import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
 import Ficha360Modal from '@/components/admin/ficha-360-modal';
 import { EstudianteCompleto } from '@/lib/data/mockStudents';
 
@@ -58,6 +61,182 @@ export default function AdminEstudiantesPage() {
       console.error('Error cargando estudiantes:', e);
     } finally {
       setCargando(false);
+    }
+  };
+
+  // Estados de Registro de Pago
+  const [montoPago, setMontoPago] = useState<string>('150.00');
+  const [comprobante, setComprobante] = useState<string>('OP-984321');
+  const [metodo, setMetodo] = useState<string>('Yape / Plin');
+  const [descuento, setDescuento] = useState<string>('0.00');
+  const [pagoIdParaValidar, setPagoIdParaValidar] = useState<string | null>(null);
+  const [selectedCreditoIdx, setSelectedCreditoIdx] = useState<number>(0);
+  const [cargandoPago, setCargandoPago] = useState<boolean>(false);
+  const [mensaje, setMensaje] = useState<{ texto: string; tipo: 'exito' | 'error'; webhookStatus?: string } | null>(null);
+
+  // Estados de Anulación de Pago
+  const [pagoParaAnular, setPagoParaAnular] = useState<any | null>(null);
+  const [cargandoAnulacion, setCargandoAnulacion] = useState<boolean>(false);
+
+  // Estados de Modales Adicionales
+  const [reciboImprimir, setReciboImprimir] = useState<any | null>(null);
+  const [mostrarEditarCronogramaModal, setMostrarEditarCronogramaModal] = useState<boolean>(false);
+  const [editMontoTotal, setEditMontoTotal] = useState<number>(1500);
+  const [editCuotas6, setEditCuotas6] = useState<{ val: string }[]>(Array(6).fill({ val: 'no corresponde' }));
+  const [enviandoAlertaWhatsApp, setEnviandoAlertaWhatsApp] = useState<boolean>(false);
+
+  const registrarPago = async (cuotaIdxParam?: number, cargoExtraParam?: { concepto: string; monto: number }) => {
+    if (!alumnoSeleccionado) return;
+    setCargandoPago(true);
+    setMensaje(null);
+    try {
+      const payload: any = {
+        dni_ce: alumnoSeleccionado.dni_ce,
+        monto: cargoExtraParam ? cargoExtraParam.monto : Number(montoPago),
+        metodo: cargoExtraParam ? `Cargo Extra: ${cargoExtraParam.concepto}` : metodo,
+        comprobante: cargoExtraParam ? `CARGO-${Math.floor(100000 + Math.random() * 900000)}` : comprobante,
+        pago_id: pagoIdParaValidar,
+        descuento: Number(descuento)
+      };
+
+      if (cuotaIdxParam !== undefined) {
+        payload.cuota_index = cuotaIdxParam;
+      }
+
+      if (cargoExtraParam) {
+        payload.is_cargo_extra = true;
+        payload.concepto = cargoExtraParam.concepto;
+      }
+
+      const res = await fetch('/api/admin/pagos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+      
+      if (res.ok) {
+        setMensaje({ 
+          texto: cargoExtraParam 
+            ? `¡Cargo extra "${cargoExtraParam.concepto}" (S/ ${cargoExtraParam.monto.toFixed(2)}) registrado en Supabase para ${alumnoSeleccionado.nombres}!`
+            : `¡Cuota validada y webhook enviado a n8n para ${alumnoSeleccionado.nombres}!`, 
+          tipo: 'exito',
+          webhookStatus: data.webhookStatus
+        });
+        
+        setPagoIdParaValidar(null);
+        await cargarEstudiantes();
+      } else {
+        setMensaje({ texto: `Error: ${data.error || 'No se pudo procesar la solicitud'}`, tipo: 'error' });
+      }
+    } catch {
+      setMensaje({ texto: 'Error de conexión con el servidor local.', tipo: 'error' });
+    } finally {
+      setCargandoPago(false);
+    }
+  };
+
+  const handleAnularPagoSubmit = async (motivo: string) => {
+    if (!pagoParaAnular || !motivo.trim()) return;
+
+    setCargandoAnulacion(true);
+    try {
+      const res = await fetch('/api/admin/pagos', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'anular',
+          pago_id: pagoParaAnular.id,
+          dni_ce: pagoParaAnular.dni_ce || alumnoSeleccionado?.dni_ce,
+          cuota_index: pagoParaAnular.cuota_index,
+          motivo_anulacion: motivo.trim()
+        })
+      });
+
+      const data = await res.json();
+      if (res.ok) {
+        alert(`¡Pago anulado exitosamente! Motivo registrado: "${motivo.trim()}". Notificación enviada a n8n.`);
+        setPagoParaAnular(null);
+        await cargarEstudiantes();
+      } else {
+        alert(`Error al anular pago: ${data.error}`);
+      }
+    } catch (err: any) {
+      alert(`Error de conexión: ${err.message}`);
+    } finally {
+      setCargandoAnulacion(false);
+    }
+  };
+
+  const handleGuardarCronogramaSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!alumnoSeleccionado) return;
+
+    const creditos = (alumnoSeleccionado as any).creditos || [];
+    const creditoActual = creditos[selectedCreditoIdx] || creditos[0];
+    const cuotasArray = editCuotas6.map(item => item.val || 'no corresponde');
+
+    const sumaCuotas = cuotasArray.reduce((acc, val) => {
+      return val !== 'no corresponde' ? acc + (Number(val) || 0) : acc;
+    }, 0);
+
+    if (Math.abs(sumaCuotas - editMontoTotal) > 0.01) {
+      alert(`⚠️ Error de Validación: La suma de las cuotas (S/ ${sumaCuotas.toFixed(2)}) debe ser igual al total del programa (S/ ${editMontoTotal.toFixed(2)}). Por favor ajusta los montos antes de guardar el cronograma.`);
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/admin/pagos', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'editar_cronograma',
+          pago_id: creditoActual?.id,
+          dni_ce: alumnoSeleccionado.dni_ce,
+          num_credito: creditoActual?.num_credito || (selectedCreditoIdx + 1),
+          monto_total: editMontoTotal,
+          cuotas: cuotasArray
+        })
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok) {
+        alert('¡Configuración de cuotas y cronograma actualizada exitosamente en Supabase!');
+        setMostrarEditarCronogramaModal(false);
+        await cargarEstudiantes();
+      } else {
+        alert(`Error al guardar configuración de cronograma: ${data.error || 'Error imprevisto'}`);
+      }
+    } catch (err: any) {
+      alert(`Error de conexión: ${err.message}`);
+    }
+  };
+
+  const enviarAlertaWhatsAppRetencion = async () => {
+    if (!alumnoSeleccionado) return;
+    setEnviandoAlertaWhatsApp(true);
+    try {
+      await fetch('/api/admin/auditoria', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          accion: 'ALERTA_RETENCION_DESERCION_CERO',
+          detalles: {
+            estudiante: `${alumnoSeleccionado.nombres} ${alumnoSeleccionado.apellidos}`,
+            dni_ce: alumnoSeleccionado.dni_ce,
+            telefono: alumnoSeleccionado.telefono,
+            dias_inactivo: alumnoSeleccionado.dias_inactivo,
+            deuda: alumnoSeleccionado.deuda_total_pendiente,
+            riesgo: alumnoSeleccionado.nivel_riesgo_churn
+          }
+        })
+      });
+      alert(`¡Alerta de Retención (Deserción Cero) enviada a n8n para notificar vía WhatsApp a ${alumnoSeleccionado.nombres}!`);
+    } catch (e) {
+      console.error(e);
+    } finally {
+      setEnviandoAlertaWhatsApp(false);
     }
   };
 
@@ -260,26 +439,66 @@ export default function AdminEstudiantesPage() {
           alumnoSeleccionado={alumnoSeleccionado}
           catalogoDiplomados={catalogoFull}
           onClose={() => setAlumnoSeleccionado(null)}
-          onOpenEditCronograma={() => {}}
-          onSetPagoParaAnular={() => {}}
-          onRegistrarPago={async () => {}}
-          montoPago="150.00"
-          setMontoPago={() => {}}
-          comprobante="OP-984321"
-          setComprobante={() => {}}
-          metodo="Yape / Plin"
-          setMetodo={() => {}}
-          cargandoPago={false}
-          mensaje={null}
-          selectedCreditoIdx={0}
-          setSelectedCreditoIdx={() => {}}
-          onSetPagoIdParaValidar={() => {}}
-          onSetReciboImprimir={() => {}}
-          onEnviarAlertaWhatsApp={async () => {}}
-          enviandoAlertaWhatsApp={false}
+          onOpenEditCronograma={() => {
+            if (!alumnoSeleccionado) return;
+            const creditos = (alumnoSeleccionado as any).creditos || [];
+            const cred = creditos[selectedCreditoIdx] || creditos[0];
+            if (cred) {
+              setEditMontoTotal(cred.monto_total || alumnoSeleccionado.monto_total_programa || 1500);
+              if (cred.cuotas_desglose && cred.cuotas_desglose.length > 0) {
+                setEditCuotas6(cred.cuotas_desglose.map((val: string) => ({ val })));
+              }
+            }
+            setMostrarEditarCronogramaModal(true);
+          }}
+          onSetPagoParaAnular={(pag) => setPagoParaAnular(pag)}
+          onRegistrarPago={registrarPago}
+          montoPago={montoPago}
+          setMontoPago={setMontoPago}
+          comprobante={comprobante}
+          setComprobante={setComprobante}
+          metodo={metodo}
+          setMetodo={setMetodo}
+          cargandoPago={cargandoPago}
+          mensaje={mensaje}
+          selectedCreditoIdx={selectedCreditoIdx}
+          setSelectedCreditoIdx={setSelectedCreditoIdx}
+          onSetPagoIdParaValidar={setPagoIdParaValidar}
+          onSetReciboImprimir={(pag) => setReciboImprimir(pag)}
+          onEnviarAlertaWhatsApp={enviarAlertaWhatsAppRetencion}
+          enviandoAlertaWhatsApp={enviandoAlertaWhatsApp}
           onRefetchEstudiantes={cargarEstudiantes}
         />
       )}
+
+      {/* Modal: Recibo Interno Imprimible */}
+      <ReciboModal
+        reciboImprimir={reciboImprimir}
+        alumnoSeleccionado={alumnoSeleccionado}
+        onClose={() => setReciboImprimir(null)}
+      />
+
+      {/* Modal: Anulación de Pago */}
+      <AnularPagoModal
+        pagoParaAnular={pagoParaAnular}
+        alumnoSeleccionado={alumnoSeleccionado}
+        onClose={() => setPagoParaAnular(null)}
+        onSubmit={handleAnularPagoSubmit}
+        cargandoAnulacion={cargandoAnulacion}
+      />
+
+      {/* Modal: Editar Cuotas y Cronograma de Pagos */}
+      <EditarCronogramaModal
+        isOpen={mostrarEditarCronogramaModal}
+        alumnoSeleccionado={alumnoSeleccionado}
+        selectedCreditoIdx={selectedCreditoIdx}
+        editMontoTotal={editMontoTotal}
+        setEditMontoTotal={setEditMontoTotal}
+        editCuotas6={editCuotas6}
+        setEditCuotas6={setEditCuotas6}
+        onClose={() => setMostrarEditarCronogramaModal(false)}
+        onSave={handleGuardarCronogramaSubmit}
+      />
 
     </div>
   );

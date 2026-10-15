@@ -711,6 +711,7 @@ export default function AdminDashboard360() {
                     <table className="w-full text-left border-collapse">
                       <thead>
                         <tr className="border-b border-slate-100 dark:border-slate-800 text-slate-400 dark:text-slate-500 text-[10px] uppercase tracking-wider font-bold">
+                          <th className="pb-3 px-4">Fecha y Hora</th>
                           <th className="pb-3 px-4">Nº Operación</th>
                           <th className="pb-3 px-4">Estudiante & DNI</th>
                           <th className="pb-3 px-4">Programa</th>
@@ -727,6 +728,9 @@ export default function AdminDashboard360() {
                             const esAprobado = pag.estado === 'APROBADO' || pag.estado === 'VALIDADO';
                             return (
                               <tr key={pIdx} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+                                <td className="py-4 px-4 font-mono text-slate-500 dark:text-slate-400 text-[11px] whitespace-nowrap">
+                                  {pag.created_at ? new Date(pag.created_at).toLocaleString('es-PE', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true }) : '-'}
+                                </td>
                                 <td className="py-4 px-4 font-mono font-bold text-slate-700 dark:text-slate-300">
                                   {pag.comprobante || 'OP-984321'}
                                 </td>

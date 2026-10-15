@@ -419,6 +419,7 @@ export default function Ficha360Modal({
                     <table className="w-full text-left border-collapse text-xs">
                       <thead>
                         <tr className="bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 text-[10px] uppercase font-bold tracking-wider">
+                          <th className="py-2.5 px-4">Fecha y Hora</th>
                           <th className="py-2.5 px-4">Concepto / Cuota</th>
                           <th className="py-2.5 px-4">Comprobante</th>
                           <th className="py-2.5 px-4">Monto Pagado</th>
@@ -428,8 +429,16 @@ export default function Ficha360Modal({
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100 dark:divide-slate-800 font-medium">
-                        {historialPagos.map((p: any, idx: number) => (
+                        {historialPagos.map((p: any, idx: number) => {
+                          const fechaDisplay = p.created_at 
+                            ? new Date(p.created_at).toLocaleString('es-PE', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true })
+                            : (p.fecha || '-');
+
+                          return (
                           <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-800/40">
+                            <td className="py-3 px-4 font-mono text-slate-600 dark:text-slate-400 text-[11px] whitespace-nowrap">
+                              {fechaDisplay}
+                            </td>
                             <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">{p.concepto || p.nro_cuota}</td>
                             <td className="py-3 px-4 font-mono text-slate-600 dark:text-slate-400">{p.comprobante || 'OP-984321'}</td>
                             <td className="py-3 px-4 font-mono font-bold text-emerald-600 dark:text-emerald-400">S/ {Number(p.monto || 0).toFixed(2)}</td>
@@ -456,7 +465,8 @@ export default function Ficha360Modal({
                               </button>
                             </td>
                           </tr>
-                        ))}
+                        );
+                      })}
                       </tbody>
                     </table>
                   </div>

@@ -10,6 +10,7 @@ import {
   ArrowLeft, FileCheck, Building2, Bell
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import AvanzaCertificateRenderer from '@/components/certificates/AvanzaCertificateRenderer';
 
 export interface ModeloCertificado {
   id: string;
@@ -55,18 +56,20 @@ export default function CertificacionesAdminPage() {
   const [certificadoParaVer, setCertificadoParaVer] = useState<any | null>(null);
   const [copiadoLink, setCopiadoLink] = useState(false);
 
-  // Modal para cambiar modelo a un certificado ya emitido
+  // Modal para cambiar modelo y editar horas a un certificado ya emitido
   const [certificadoParaCambiarModelo, setCertificadoParaCambiarModelo] = useState<any | null>(null);
-  const [modeloSeleccionadoParaCert, setModeloSeleccionadoParaCert] = useState<string>('mod-01');
+  const [modeloSeleccionadoParaCert, setModeloSeleccionadoParaCert] = useState<string>('mod-avanza-mod');
+  const [horasParaEditarCert, setHorasParaEditarCert] = useState<string>('');
+  const [fechaParaEditarCert, setFechaParaEditarCert] = useState<string>('');
 
   // Estados para Emisión Masiva
   const [diplomadoEmisionMasiva, setDiplomadoEmisionMasiva] = useState<string>('');
   const [moduloEmisionMasiva, setModuloEmisionMasiva] = useState<string>('all');
-  const [modeloEmisionMasiva, setModeloEmisionMasiva] = useState<string>('mod-01');
+  const [modeloEmisionMasiva, setModeloEmisionMasiva] = useState<string>('mod-avanza-dip');
 
   // Modal de previsualización dinámica para modelos de certificados
   const [modeloParaPrevisualizar, setModeloParaPrevisualizar] = useState<ModeloCertificado | null>(null);
-  const [programaSimuladoEnModal, setProgramaSimuladoEnModal] = useState<string>('Seguridad y salud ocupacional en minería');
+  const [programaSimuladoEnModal, setProgramaSimuladoEnModal] = useState<string>('DERECHO MINERO');
 
   // Certificaciones externas (solicitudes de alumnos y registros directos de convenios)
   const [solicitudesCip, setSolicitudesCip] = useState<any[]>([]);
@@ -88,6 +91,40 @@ export default function CertificacionesAdminPage() {
   // Galería de modelos de certificados (superplantillas y asignaciones)
   const [modelosCertificados, setModelosCertificados] = useState<ModeloCertificado[]>([
     {
+      id: 'mod-avanza-dip',
+      nombre: 'Modelo Oficial Avanza & EDUMIN - Diploma de Alta Especialización',
+      tipo: 'DIPLOMA',
+      tituloCertificado: 'DIPLOMA',
+      textoOtorgamiento: 'En mérito de haber cumplido y aprobado con los requisitos de evaluación de las asignaturas correspondientes al:',
+      estiloMarco: 'dorado',
+      orientacion: 'horizontal',
+      horas: '325 horas académicas y 13 créditos académicos',
+      firmas: ['Italo Carrera Yepez (Gerente General)', 'Alejandra Alva Porto (Coordinadora Académica)'],
+      incluyeQr: true,
+      esPredeterminado: true,
+      fechaCreacion: '2026-10-15',
+      imagenFondoUrl: '/assets/certificates/plantilla_avanza_diploma_bg.png',
+      asignacionAlcance: 'SUPERPLANTILLA_GLOBAL',
+      recursoAsignadoNombre: 'Todos los diplomados oficiales Avanza - EDUMIN'
+    },
+    {
+      id: 'mod-avanza-mod',
+      nombre: 'Modelo Oficial Avanza & EDUMIN - Certificado Modular',
+      tipo: 'MODULAR',
+      tituloCertificado: 'CERTIFICADO',
+      textoOtorgamiento: 'Por haber concluido satisfactoriamente el',
+      estiloMarco: 'azul',
+      orientacion: 'horizontal',
+      horas: '108 horas académicas',
+      firmas: ['Italo Carrera Yepez (Gerente General)', 'Alejandra Alva Porto (Coordinadora Académica)'],
+      incluyeQr: true,
+      esPredeterminado: true,
+      fechaCreacion: '2026-10-15',
+      imagenFondoUrl: '/assets/certificates/plantilla_avanza_modular_bg.png',
+      asignacionAlcance: 'SUPERPLANTILLA_GLOBAL',
+      recursoAsignadoNombre: 'Todos los módulos de diplomados Avanza - EDUMIN'
+    },
+    {
       id: 'mod-01',
       nombre: 'Superplantilla maestra - Diplomas oficiales DAEM',
       tipo: 'DIPLOMA',
@@ -98,7 +135,7 @@ export default function CertificacionesAdminPage() {
       horas: '120 horas cronológicas',
       firmas: ['Director Académico', 'Coordinador General'],
       incluyeQr: true,
-      esPredeterminado: true,
+      esPredeterminado: false,
       fechaCreacion: '2026-09-01',
       asignacionAlcance: 'SUPERPLANTILLA_GLOBAL',
       recursoAsignadoNombre: 'Todos los diplomados oficiales (22 diplomados)'
@@ -234,22 +271,50 @@ export default function CertificacionesAdminPage() {
     }
   };
 
-  const guardarCambioModelo = () => {
+  const guardarCambioModelo = async () => {
     if (!certificadoParaCambiarModelo) return;
     const modeloElegido = modelosCertificados.find(m => m.id === modeloSeleccionadoParaCert) || modelosCertificados[0];
+
+    try {
+      await fetch('/api/admin/certificaciones', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          id: certificadoParaCambiarModelo.id,
+          codigo: certificadoParaCambiarModelo.codigo,
+          modelo_id: modeloElegido.id,
+          horas: horasParaEditarCert || certificadoParaCambiarModelo.horas,
+          fecha: fechaParaEditarCert || certificadoParaCambiarModelo.fecha,
+          dni: certificadoParaCambiarModelo.dni,
+          estudiante: certificadoParaCambiarModelo.estudiante,
+          programa: certificadoParaCambiarModelo.programa,
+          modulo: certificadoParaCambiarModelo.modulo,
+          tipo: certificadoParaCambiarModelo.tipo,
+          nota: certificadoParaCambiarModelo.nota,
+          plantilla_snapshot: {
+            ...modeloElegido,
+            horas: horasParaEditarCert || certificadoParaCambiarModelo.horas
+          }
+        })
+      });
+    } catch (e) {
+      console.error('Error al actualizar certificación en Supabase:', e);
+    }
 
     setCertificadosEmitidos(prev => prev.map(c => {
       if (c.id === certificadoParaCambiarModelo.id || c.codigo === certificadoParaCambiarModelo.codigo) {
         return {
           ...c,
           modelo_id: modeloElegido.id,
+          horas: horasParaEditarCert || c.horas,
+          fecha: fechaParaEditarCert || c.fecha,
           plantilla_snapshot: modeloElegido
         };
       }
       return c;
     }));
 
-    setMensajeExito(`¡Modelo de certificado actualizado con éxito! Ahora ${certificadoParaCambiarModelo.estudiante} tiene asignado el modelo "${modeloElegido.nombre}".`);
+    setMensajeExito(`¡Certificado actualizado con éxito! Se aplicó el modelo "${modeloElegido.nombre}" y horas "${horasParaEditarCert || certificadoParaCambiarModelo.horas}".`);
     setCertificadoParaCambiarModelo(null);
     setTimeout(() => setMensajeExito(null), 4000);
   };
@@ -848,10 +913,12 @@ export default function CertificacionesAdminPage() {
                                 <button
                                   onClick={() => {
                                     setCertificadoParaCambiarModelo(cert);
-                                    setModeloSeleccionadoParaCert(cert.modelo_id || (cert.tipo === 'MODULAR' ? 'mod-02' : 'mod-01'));
+                                    setModeloSeleccionadoParaCert(cert.modelo_id || (cert.tipo === 'MODULAR' ? 'mod-avanza-mod' : 'mod-avanza-dip'));
+                                    setHorasParaEditarCert(cert.horas || (cert.tipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos'));
+                                    setFechaParaEditarCert(cert.fecha || '');
                                   }}
                                   className="p-1.5 bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 hover:bg-purple-100 dark:hover:bg-purple-900 rounded-xl transition cursor-pointer"
-                                  title="Cambiar modelo de certificado asignado (ej. Modelo 1 a Modelo 2)"
+                                  title="Editar modelo asignado y horas académicas"
                                 >
                                   <LayoutTemplate className="w-4 h-4" />
                                 </button>
@@ -1641,6 +1708,38 @@ export default function CertificacionesAdminPage() {
                   Al cambiar el modelo, el certificado del estudiante se emitirá y visualizará con este nuevo diseño, marco y firmas institucionales.
                 </p>
               </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+                  Horas académicas / lectivas
+                </label>
+                <input
+                  type="text"
+                  value={horasParaEditarCert}
+                  onChange={(e) => setHorasParaEditarCert(e.target.value)}
+                  placeholder="Ej: 108 horas académicas"
+                  className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-purple-600"
+                />
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Puedes editar la cantidad de horas acreditadas según la normativa académica.
+                </p>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+                  Fecha de emisión
+                </label>
+                <input
+                  type="text"
+                  value={fechaParaEditarCert}
+                  onChange={(e) => setFechaParaEditarCert(e.target.value)}
+                  placeholder="Ej: 15/10/2026"
+                  className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-purple-600"
+                />
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Fecha que figura impresa en el certificado oficial.
+                </p>
+              </div>
             </div>
 
             <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 flex items-center justify-end gap-2">
@@ -1737,80 +1836,94 @@ export default function CertificacionesAdminPage() {
             </div>
 
             {/* Certificado Canvas A4 Simulado */}
-            <div className="p-6 bg-slate-950 flex items-center justify-center">
-              <div 
-                className={`rounded-2xl border-8 text-center shadow-2xl relative transition-all overflow-hidden ${
-                  modeloParaPrevisualizar.orientacion === 'vertical' ? 'w-full max-w-sm py-10 px-6' : 'w-full max-w-lg p-8'
-                } ${
-                  modeloParaPrevisualizar.imagenFondoUrl ? 'bg-cover bg-center border-slate-700 text-slate-900' : marcoEstilos[modeloParaPrevisualizar.estiloMarco]
-                }`}
-                style={modeloParaPrevisualizar.imagenFondoUrl ? { backgroundImage: `url(${modeloParaPrevisualizar.imagenFondoUrl})` } : {}}
-              >
-                
-                {/* Logo y Encabezado */}
-                <div className="flex justify-between items-center border-b border-black/10 dark:border-white/10 pb-3 mb-4">
-                  <div className="text-left">
-                    <span className="text-[9px] font-mono font-bold tracking-widest block opacity-70">ESCUELA DE POSTGRADO & MINERÍA</span>
-                    <h4 className="text-xs font-black">INSTITUTO INTERNACIONAL EDUMIN</h4>
-                  </div>
-                  <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center text-indigo-700 font-black text-xs">
-                    EM
-                  </div>
+            <div className="p-4 sm:p-6 bg-slate-950 flex items-center justify-center">
+              {modeloParaPrevisualizar.id === 'mod-avanza-dip' || modeloParaPrevisualizar.id === 'mod-avanza-mod' || modeloParaPrevisualizar.imagenFondoUrl?.includes('plantilla_avanza') ? (
+                <div className="w-full max-w-xl">
+                  <AvanzaCertificateRenderer
+                    tipo={modeloParaPrevisualizar.tipo}
+                    estudiante="QUISPE RAMOS, JUAN CARLOS"
+                    programa={programaSimuladoEnModal}
+                    modulo={modeloParaPrevisualizar.tipo === 'MODULAR' ? 'Módulo 01: Legislación Minera y Marco Legal del Sector' : undefined}
+                    horas={modeloParaPrevisualizar.horas}
+                    fecha={new Date().toISOString().split('T')[0]}
+                    codigo="HNYNXT2"
+                  />
                 </div>
-
-                <span className="text-[10px] uppercase font-bold tracking-widest opacity-80 block">
-                  {modeloParaPrevisualizar.tituloCertificado}
-                </span>
-
-                <p className="text-[11px] opacity-70 mt-2">Otorgado a favor de:</p>
-                
-                <h3 className="text-xl font-extrabold font-serif my-2 underline decoration-amber-500 underline-offset-4">
-                  Ing. Carlos Mendoza Quispe
-                </h3>
-                <p className="text-[10px] opacity-60 font-mono">DNI / CE: 74589210</p>
-
-                <p className="text-xs mt-3 px-4 leading-relaxed opacity-85">
-                  {modeloParaPrevisualizar.textoOtorgamiento}
-                </p>
-                <p className="text-sm font-black mt-1 uppercase px-4 text-indigo-950 dark:text-indigo-200">
-                  {programaSimuladoEnModal}
-                </p>
-
-                <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold">
-                  <span className="px-3 py-1 rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
-                    ⏱️ {modeloParaPrevisualizar.horas}
-                  </span>
-                  <span className="px-3 py-1 rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
-                    🏆 Calificación: 19
-                  </span>
-                </div>
-
-                {/* Footer del Certificado */}
-                <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex justify-between items-end text-[9px] opacity-80">
-                  <div className="text-left font-mono">
-                    <p>Fecha de emisión: {new Date().toISOString().split('T')[0]}</p>
-                    <p className="font-bold mt-0.5">Código: EDM-2026-DIP-8F4K2A</p>
-                  </div>
-
-                  <div className="flex gap-6">
-                    {modeloParaPrevisualizar.firmas.map((f, i) => (
-                      <div key={i} className="text-center">
-                        <div className="w-20 border-b border-black/30 dark:border-white/30 mb-1"></div>
-                        <span className="text-[8px] block font-bold">{f}</span>
-                        <span className="text-[7px] opacity-70">EDUMIN LMS</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {modeloParaPrevisualizar.incluyeQr && (
-                    <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm">
-                      <QrCode className="w-7 h-7" />
-                      <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
+              ) : (
+                <div 
+                  className={`rounded-2xl border-8 text-center shadow-2xl relative transition-all overflow-hidden ${
+                    modeloParaPrevisualizar.orientacion === 'vertical' ? 'w-full max-w-sm py-10 px-6' : 'w-full max-w-lg p-8'
+                  } ${
+                    modeloParaPrevisualizar.imagenFondoUrl ? 'bg-cover bg-center border-slate-700 text-slate-900' : marcoEstilos[modeloParaPrevisualizar.estiloMarco]
+                  }`}
+                  style={modeloParaPrevisualizar.imagenFondoUrl ? { backgroundImage: `url(${modeloParaPrevisualizar.imagenFondoUrl})` } : {}}
+                >
+                  
+                  {/* Logo y Encabezado */}
+                  <div className="flex justify-between items-center border-b border-black/10 dark:border-white/10 pb-3 mb-4">
+                    <div className="text-left">
+                      <span className="text-[9px] font-mono font-bold tracking-widest block opacity-70">ESCUELA DE POSTGRADO & MINERÍA</span>
+                      <h4 className="text-xs font-black">INSTITUTO INTERNACIONAL EDUMIN</h4>
                     </div>
-                  )}
-                </div>
+                    <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center text-indigo-700 font-black text-xs">
+                      EM
+                    </div>
+                  </div>
 
-              </div>
+                  <span className="text-[10px] uppercase font-bold tracking-widest opacity-80 block">
+                    {modeloParaPrevisualizar.tituloCertificado}
+                  </span>
+
+                  <p className="text-[11px] opacity-70 mt-2">Otorgado a favor de:</p>
+                  
+                  <h3 className="text-xl font-extrabold font-serif my-2 underline decoration-amber-500 underline-offset-4">
+                    Ing. Carlos Mendoza Quispe
+                  </h3>
+                  <p className="text-[10px] opacity-60 font-mono">DNI / CE: 74589210</p>
+
+                  <p className="text-xs mt-3 px-4 leading-relaxed opacity-85">
+                    {modeloParaPrevisualizar.textoOtorgamiento}
+                  </p>
+                  <p className="text-sm font-black mt-1 uppercase px-4 text-indigo-950 dark:text-indigo-200">
+                    {programaSimuladoEnModal}
+                  </p>
+
+                  <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold">
+                    <span className="px-3 py-1 rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
+                      ⏱️ {modeloParaPrevisualizar.horas}
+                    </span>
+                    <span className="px-3 py-1 rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
+                      🏆 Calificación: 19
+                    </span>
+                  </div>
+
+                  {/* Footer del Certificado */}
+                  <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex justify-between items-end text-[9px] opacity-80">
+                    <div className="text-left font-mono">
+                      <p>Fecha de emisión: {new Date().toISOString().split('T')[0]}</p>
+                      <p className="font-bold mt-0.5">Código: EDM-2026-DIP-8F4K2A</p>
+                    </div>
+
+                    <div className="flex gap-6">
+                      {modeloParaPrevisualizar.firmas.map((f, i) => (
+                        <div key={i} className="text-center">
+                          <div className="w-20 border-b border-black/30 dark:border-white/30 mb-1"></div>
+                          <span className="text-[8px] block font-bold">{f}</span>
+                          <span className="text-[7px] opacity-70">EDUMIN LMS</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {modeloParaPrevisualizar.incluyeQr && (
+                      <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm">
+                        <QrCode className="w-7 h-7" />
+                        <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
+                      </div>
+                    )}
+                  </div>
+
+                </div>
+              )}
             </div>
 
             {/* Footer con Acciones */}
@@ -1866,71 +1979,102 @@ export default function CertificacionesAdminPage() {
             </div>
 
             {/* Certificado Canvas A4 Simulado */}
-            <div className="p-6 bg-slate-950 flex items-center justify-center">
-              <div className="bg-gradient-to-br from-amber-50 via-white to-amber-50/60 border-8 border-amber-600/40 p-8 rounded-2xl w-full text-center shadow-2xl relative text-slate-900">
-                
-                {/* Logo y Encabezado */}
-                <div className="flex justify-between items-center border-b border-amber-300/60 pb-3 mb-4">
-                  <div className="text-left">
-                    <span className="text-[9px] font-mono font-bold text-amber-800 tracking-widest block">ESCUELA DE POSTGRADO & MINERÍA</span>
-                    <h4 className="text-xs font-black text-slate-900">INSTITUTO INTERNACIONAL EDUMIN</h4>
-                  </div>
-                  <div className="size-8 rounded-full bg-amber-600/10 border border-amber-600/30 flex items-center justify-center text-amber-700 font-black text-xs">
-                    EM
-                  </div>
-                </div>
+            <div className="p-4 sm:p-6 bg-slate-950 flex items-center justify-center">
+              {(() => {
+                const modeloActual = modelosCertificados.find(m => m.id === certificadoParaVer.modelo_id) || 
+                  (certificadoParaVer.tipo === 'DIPLOMA' ? modelosCertificados.find(m => m.id === 'mod-avanza-dip') : modelosCertificados.find(m => m.id === 'mod-avanza-mod')) || 
+                  modelosCertificados[0];
 
-                <span className="text-[10px] uppercase font-bold tracking-widest text-amber-700">
-                  {certificadoParaVer.tipo === 'DIPLOMA' ? 'DIPLOMA DE ALTA ESPECIALIZACIÓN' : certificadoParaVer.tipo === 'MODULAR' ? 'CERTIFICADO MODULAR OFICIAL' : 'CERTIFICADO DE ESPECIALIZACIÓN'}
-                </span>
+                const esAvanza = modeloActual.id === 'mod-avanza-dip' || modeloActual.id === 'mod-avanza-mod' || modeloActual.imagenFondoUrl?.includes('plantilla_avanza');
 
-                <p className="text-[11px] text-slate-500 mt-2">Otorgado con distinción a:</p>
-                
-                <h3 className="text-xl font-extrabold font-serif text-indigo-950 my-2 underline decoration-amber-500 underline-offset-4">
-                  {certificadoParaVer.estudiante}
-                </h3>
-                <p className="text-[10px] text-slate-400 font-mono">DNI / CE: {certificadoParaVer.dni}</p>
+                if (esAvanza) {
+                  return (
+                    <div className="w-full max-w-xl">
+                      <AvanzaCertificateRenderer
+                        tipo={certificadoParaVer.tipo}
+                        estudiante={certificadoParaVer.estudiante}
+                        programa={certificadoParaVer.programa}
+                        modulo={certificadoParaVer.modulo}
+                        horas={certificadoParaVer.horas}
+                        fecha={certificadoParaVer.fecha}
+                        codigo={certificadoParaVer.codigo}
+                      />
+                    </div>
+                  );
+                }
 
-                <p className="text-xs text-slate-700 mt-3 px-4 leading-relaxed">
-                  Por haber cursado y aprobado satisfactoriamente los requisitos académicos del programa de:
-                </p>
-                <p className="text-sm font-black text-slate-900 mt-1 uppercase px-4">
-                  {certificadoParaVer.modulo ? `${certificadoParaVer.modulo} • ${certificadoParaVer.programa}` : certificadoParaVer.programa}
-                </p>
+                return (
+                  <div 
+                    className={`rounded-2xl border-8 text-center shadow-2xl relative transition-all overflow-hidden ${
+                      modeloActual.orientacion === 'vertical' ? 'w-full max-w-sm py-10 px-6' : 'w-full max-w-lg p-8'
+                    } ${
+                      modeloActual.imagenFondoUrl ? 'bg-cover bg-center border-slate-700 text-slate-900' : (marcoEstilos[modeloActual.estiloMarco] || 'bg-gradient-to-br from-amber-50 via-white to-amber-50/60 border-amber-600/40 text-slate-900')
+                    }`}
+                    style={modeloActual.imagenFondoUrl ? { backgroundImage: `url(${modeloActual.imagenFondoUrl})` } : {}}
+                  >
+                    {/* Logo y Encabezado */}
+                    <div className="flex justify-between items-center border-b border-black/10 dark:border-white/10 pb-3 mb-4">
+                      <div className="text-left">
+                        <span className="text-[9px] font-mono font-bold tracking-widest block opacity-70">ESCUELA DE POSTGRADO & MINERÍA</span>
+                        <h4 className="text-xs font-black">INSTITUTO INTERNACIONAL EDUMIN</h4>
+                      </div>
+                      <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center text-indigo-700 font-black text-xs">
+                        EM
+                      </div>
+                    </div>
 
-                <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold text-slate-700">
-                  <span className="bg-amber-100/80 text-amber-900 px-3 py-1 rounded-lg border border-amber-300">
-                    ⏱️ {certificadoParaVer.horas}
-                  </span>
-                  <span className="bg-indigo-100/80 text-indigo-900 px-3 py-1 rounded-lg border border-indigo-300">
-                    🏆 Calificación: {certificadoParaVer.nota}
-                  </span>
-                </div>
+                    <span className="text-[10px] uppercase font-bold tracking-widest text-indigo-900 dark:text-indigo-400">
+                      {certificadoParaVer.tipo === 'DIPLOMA' ? 'DIPLOMA DE ALTA ESPECIALIZACIÓN' : certificadoParaVer.tipo === 'MODULAR' ? 'CERTIFICADO MODULAR OFICIAL' : 'CERTIFICADO DE ESPECIALIZACIÓN'}
+                    </span>
 
-                {/* Footer del Certificado con QR y Firmas */}
-                <div className="mt-6 pt-4 border-t border-amber-200 flex justify-between items-end text-[9px] text-slate-600">
-                  <div className="text-left">
-                    <p className="font-mono">Fecha de emisión: {certificadoParaVer.fecha}</p>
-                    <p className="font-mono font-bold text-indigo-900 mt-0.5">Código: {certificadoParaVer.codigo}</p>
-                  </div>
+                    <p className="text-[11px] opacity-70 mt-2">Otorgado con distinción a:</p>
+                    
+                    <h3 className="text-xl font-extrabold font-serif text-indigo-950 dark:text-white my-2 underline decoration-amber-500 underline-offset-4">
+                      {certificadoParaVer.estudiante}
+                    </h3>
+                    <p className="text-[10px] opacity-60 font-mono">DNI / CE: {certificadoParaVer.dni}</p>
 
-                  {/* Firmas Simuladas */}
-                  <div className="flex gap-6">
-                    <div className="text-center">
-                      <div className="w-20 border-b border-slate-400 mb-1"></div>
-                      <span className="text-[8px] block font-bold text-slate-700">Director Académico</span>
-                      <span className="text-[7px] text-slate-400">EDUMIN LMS</span>
+                    <p className="text-xs opacity-80 mt-3 px-4 leading-relaxed">
+                      Por haber cursado y aprobado satisfactoriamente los requisitos académicos del programa de:
+                    </p>
+                    <p className="text-sm font-black mt-1 uppercase px-4 text-slate-900 dark:text-white">
+                      {certificadoParaVer.modulo ? `${certificadoParaVer.modulo} • ${certificadoParaVer.programa}` : certificadoParaVer.programa}
+                    </p>
+
+                    <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold">
+                      <span className="bg-amber-100/80 text-amber-900 px-3 py-1 rounded-lg border border-amber-300">
+                        ⏱️ {certificadoParaVer.horas}
+                      </span>
+                      <span className="bg-indigo-100/80 text-indigo-900 px-3 py-1 rounded-lg border border-indigo-300">
+                        🏆 Calificación: {certificadoParaVer.nota}
+                      </span>
+                    </div>
+
+                    {/* Footer del Certificado con QR y Firmas */}
+                    <div className="mt-6 pt-4 border-t border-black/10 flex justify-between items-end text-[9px] opacity-80">
+                      <div className="text-left font-mono">
+                        <p>Fecha de emisión: {certificadoParaVer.fecha}</p>
+                        <p className="font-bold text-indigo-900 dark:text-indigo-400 mt-0.5">Código: {certificadoParaVer.codigo}</p>
+                      </div>
+
+                      {/* Firmas Simuladas */}
+                      <div className="flex gap-6">
+                        <div className="text-center">
+                          <div className="w-20 border-b border-black/30 dark:border-white/30 mb-1"></div>
+                          <span className="text-[8px] block font-bold">Director Académico</span>
+                          <span className="text-[7px] opacity-70">EDUMIN LMS</span>
+                        </div>
+                      </div>
+
+                      {/* Código QR */}
+                      <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm">
+                        <QrCode className="w-7 h-7 text-slate-900" />
+                        <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
+                      </div>
                     </div>
                   </div>
-
-                  {/* Código QR */}
-                  <div className="flex flex-col items-center p-1 bg-white rounded-lg border border-slate-200 shadow-sm">
-                    <QrCode className="w-7 h-7 text-slate-900" />
-                    <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
-                  </div>
-                </div>
-
-              </div>
+                );
+              })()}
             </div>
 
             {/* Footer con Acciones */}

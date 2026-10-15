@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { calculateReleasedCredits } from '@/lib/utils/credits';
+import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
 
 function parseCreditoRow(pag: any) {
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CARGO_EXTRA|')) {
@@ -107,10 +108,16 @@ export async function GET() {
           .order('created_at', { ascending: true });
         
         const parsedPagos = (rawPagos || []).map(p => parseCreditoRow(p));
+        const diplomados_json = parseDiplomadosFromProfile(pByDni);
+        const cursos_json = parseCursosFromProfile(pByDni);
 
         return NextResponse.json({
           user: { id: pByDni.id, email: pByDni.email },
-          profile: pByDni,
+          profile: {
+            ...pByDni,
+            diplomados_json,
+            cursos_json
+          },
           pagos: parsedPagos,
           rawPagos: rawPagos || [],
           matriculas: [],
@@ -177,16 +184,46 @@ export async function GET() {
       // ignore table missing
     }
 
+    const esAdmin = profile.role === 'ADMIN' || profile.role === 'SUPERADMIN';
+    if (esAdmin) {
+      profile.paquete_adquirido = profile.paquete_adquirido || 'FULL';
+      profile.cuotas_pagadas = profile.cuotas_pagadas || 6;
+      profile.bloqueado = false;
+    }
+
     // Cálculo de créditos liberados y disponibles
-    const releasedCredits = calculateReleasedCredits(
+    const releasedCredits = esAdmin ? 10 : calculateReleasedCredits(
       profile.paquete_adquirido || 'FULL',
       profile.cuotas_pagadas || 1
     );
-    const availableCredits = Math.max(0, releasedCredits - (profile.cupos_diplomados || 0));
+    const availableCredits = esAdmin ? 10 : Math.max(0, releasedCredits - (profile.cupos_diplomados || 0));
+
+    let diplomados_json = parseDiplomadosFromProfile(profile);
+    if (esAdmin && diplomados_json.length === 0) {
+      const defaultDip = getDiplomadoByTitleOrSlug(profile.diplomado_1 || 'derecho-minero');
+      diplomados_json = [{
+        id: defaultDip.slug,
+        slug: defaultDip.slug,
+        titulo: defaultDip.titulo,
+        avance: 0,
+        modulos: defaultDip.modulos.map((m, mIdx) => ({
+          id: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+          codigo: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+          nombre: m.nombre || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
+          nota: 0,
+          completado: false
+        }))
+      }];
+    }
+    const cursos_json = parseCursosFromProfile(profile);
 
     return NextResponse.json({
       user,
-      profile,
+      profile: {
+        ...profile,
+        diplomados_json,
+        cursos_json
+      },
       pagos: parsedPagos,
       rawPagos,
       matriculas: matriculasData || [],

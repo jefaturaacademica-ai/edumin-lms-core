@@ -85,6 +85,7 @@ export default function ReproductorClasesPage() {
   const [recursoUrlActivo, setRecursoUrlActivo] = useState<string>('');
   const [guardandoAvance, setGuardandoAvance] = useState(false);
   const [temasAbiertosMap, setTemasAbiertosMap] = useState<Record<string, boolean>>({});
+  const [dniAlumno, setDniAlumno] = useState<string>('71234567');
 
   // Estados del Examen del Módulo
   const [notasModulosMap, setNotasModulosMap] = useState<Record<string, number>>({});
@@ -235,14 +236,16 @@ export default function ReproductorClasesPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           diplomadoSlug: diplomadoId,
+          diplomadoTitulo: diplomadoActual?.titulo,
           moduloId: modCodigo,
+          moduloNombre: examenActivoModal.moduloNombre,
           moduloIndex: examenActivoModal.moduloIdx,
           nota: notaFinal,
           rendido: true,
           completado: aprobado,
           completadosMap: nuevoCompletadosMap,
           avancePorcentaje: nuevoAvance,
-          dni: '71234567'
+          dni: dniAlumno || '71234567'
         })
       });
     } catch (err) {
@@ -265,6 +268,7 @@ export default function ReproductorClasesPage() {
       if (meRes && meRes.ok) {
         const meData = await meRes.json();
         const profile = meData.profile || meData;
+        if (profile?.dni_ce || profile?.dni) setDniAlumno(profile.dni_ce || profile.dni);
         const diplomados = parseDiplomadosFromProfile(profile);
         
         // Buscar el diplomado actual en el perfil del alumno

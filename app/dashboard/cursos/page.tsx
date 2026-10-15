@@ -251,7 +251,7 @@ export default function CursosPage() {
                     titulo: m.titulo || 'Curso de Especialización',
                     categoria: catMatch?.categoria || 'Especialización',
                     duracion: catMatch?.duracion || '25 horas académicas',
-                    avance: m.avance_porcentaje ?? 50,
+                    avance: m.avance_porcentaje ?? 0,
                     imagen: catMatch?.imagen || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
                   });
                 }
@@ -270,7 +270,7 @@ export default function CursosPage() {
                   titulo: cj.titulo,
                   categoria: catMatch?.categoria || 'Seguridad & SSOMA',
                   duracion: catMatch?.duracion || '25 horas académicas',
-                  avance: cj.completado ? 100 : 50,
+                  avance: cj.completado ? 100 : (typeof cj.avance === 'number' ? cj.avance : 0),
                   nota: cj.nota,
                   imagen: catMatch?.imagen || 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80'
                 });
