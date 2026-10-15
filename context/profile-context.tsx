@@ -7,6 +7,7 @@ type ProfileContextType = {
   apellidos: string;
   iniciales: string;
   paqueteContratado: string;
+  role: string;
   fotoPerfil: string | null;
   cargando: boolean;
   actualizarFotoPerfil: (nuevaFoto: string | null) => void;
@@ -19,6 +20,7 @@ const ProfileContext = createContext<ProfileContextType>({
   apellidos: '',
   iniciales: '',
   paqueteContratado: '',
+  role: 'ESTUDIANTE',
   fotoPerfil: null,
   cargando: true,
   actualizarFotoPerfil: () => {},
@@ -30,6 +32,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
   const [paqueteContratado, setPaqueteContratado] = useState('');
+  const [role, setRole] = useState('ESTUDIANTE');
   const [fotoPerfil, setFotoPerfil] = useState<string | null>(null);
   const [cargando, setCargando] = useState(true);
 
@@ -44,11 +47,13 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
           const nom = profile.nombres || '';
           const ape = profile.apellidos || '';
           const paq = profile.paquete_adquirido || 'PROGRAMA FULL';
+          const rol = profile.role || 'ESTUDIANTE';
           const foto = profile.foto_perfil || null;
 
           setNombres(nom);
           setApellidos(ape);
           setPaqueteContratado(paq);
+          setRole(rol);
 
           if (foto) {
             setFotoPerfil(foto);
@@ -58,6 +63,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
           if (nom) localStorage.setItem('edumin_nombres', nom);
           if (ape) localStorage.setItem('edumin_apellidos', ape);
           if (paq) localStorage.setItem('edumin_paquete', paq);
+          if (rol) localStorage.setItem('edumin_role', rol);
         }
       }
     } catch (e) {
@@ -114,6 +120,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       apellidos,
       iniciales,
       paqueteContratado,
+      role,
       fotoPerfil,
       cargando,
       actualizarFotoPerfil,

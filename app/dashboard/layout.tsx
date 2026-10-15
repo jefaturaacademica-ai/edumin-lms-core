@@ -7,13 +7,15 @@ import { Home, BookOpen, Award, User, LogOut, GraduationCap, Wallet, Sun, Moon, 
 import { createBrowserClient } from '@supabase/ssr';
 import { ThemeProvider, useTheme } from '@/context/theme-context';
 import { ProfileProvider, useProfile } from '@/context/profile-context';
+import InstitutionalUserDropdown from '@/components/navigation/InstitutionalUserDropdown';
 
 function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
   const { esOscuro, toggleTema } = useTheme();
-  const { nombres, apellidos, iniciales, paqueteContratado, fotoPerfil } = useProfile();
+  const { nombres, apellidos, iniciales, paqueteContratado, fotoPerfil, role } = useProfile();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const isAdminRole = role === 'ADMIN' || role === 'SUPERADMIN';
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -55,6 +57,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
         </Link>
 
         <div className="flex items-center gap-2">
+          <InstitutionalUserDropdown />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Abrir menú"
@@ -251,6 +254,35 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
 
       {/* Área Principal Dinámica */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0">
+        {/* Top Header Institucional Desktop */}
+        <header className="hidden md:flex items-center justify-between px-6 py-2.5 bg-slate-950 text-white border-b border-slate-900 shrink-0 z-20">
+          <div className="flex items-center gap-3">
+            <span className="font-extrabold tracking-tight text-xs text-slate-300 uppercase">CAMPUS EDUMIN</span>
+            <span className="text-slate-600 text-xs">/</span>
+            <span className="text-xs text-indigo-400 font-semibold">Aula Virtual</span>
+
+            {isAdminRole && (
+              <span className="ml-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                <span className="size-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+                Modo Simulación: Vista Estudiante FULL
+              </span>
+            )}
+          </div>
+
+          <div className="flex items-center gap-3">
+            {isAdminRole && (
+              <Link 
+                href="/admin" 
+                className="text-[11px] font-bold px-3 py-1 rounded-lg bg-indigo-600/20 text-indigo-300 hover:bg-indigo-600 hover:text-white border border-indigo-500/30 transition-all flex items-center gap-1.5"
+              >
+                <span>Volver a Administrador</span>
+                <span>→</span>
+              </Link>
+            )}
+            <InstitutionalUserDropdown />
+          </div>
+        </header>
+
         <div className="flex-1 overflow-y-auto">
           {children}
         </div>

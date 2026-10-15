@@ -6,6 +6,7 @@ import {
   CheckCircle2, AlertTriangle, UserCheck, GraduationCap, Download
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import AdminHeader from '@/components/admin/admin-header';
 import AnularPagoModal from '@/components/admin/anular-pago-modal';
 import ReciboModal from '@/components/admin/recibo-modal';
 import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
@@ -262,9 +263,11 @@ export default function AdminEstudiantesPage() {
       {/* Sidebar Principal Unificado */}
       <AdminSidebar />
 
-      {/* Contenido Principal */}
-      <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0 h-full">
-        <div className="max-w-7xl mx-auto space-y-6">
+      {/* Contenido Principal con Header Superior */}
+      <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
+        <AdminHeader breadcrumb="Estudiantes y Secretaría" />
+        <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
+          <div className="max-w-7xl mx-auto space-y-6">
           
           {/* Encabezado */}
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 border-b border-slate-200 dark:border-slate-800 pb-6">
@@ -432,6 +435,7 @@ export default function AdminEstudiantesPage() {
 
         </div>
       </main>
+    </div>
 
       {/* Modal Ficha 360° */}
       {alumnoSeleccionado && (

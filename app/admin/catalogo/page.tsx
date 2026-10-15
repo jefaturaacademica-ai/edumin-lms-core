@@ -6,6 +6,7 @@ import {
   ShieldCheck, Activity, X, Layers, ChevronRight, UploadCloud, Plus, Loader2, AlertCircle, CheckCircle2, FileSpreadsheet, Download, Search, Edit3, Trash2, Code, Sparkles, Database, RefreshCw, RotateCcw, Folder, Table, PlayCircle, Video, FileText
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import AdminHeader from '@/components/admin/admin-header';
 import * as XLSX from 'xlsx';
 import { convertirModulosALeccionRows } from '@/lib/data/diplomadosLeccionesService';
 
@@ -1670,9 +1671,11 @@ export default function CatalogoAdminPage() {
       {/* Sidebar Unificado */}
       <AdminSidebar />
 
-      {/* Contenido Principal */}
-      <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0 h-full">
-        <div className="max-w-7xl mx-auto">
+      {/* Contenido Principal con Header Superior Institucional */}
+      <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
+        <AdminHeader breadcrumb="Catálogo y Programas" />
+        <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
+          <div className="max-w-7xl mx-auto">
           
           {mensajeExito && (
             <div className="mb-6 bg-emerald-50 border border-emerald-200 text-emerald-800 px-5 py-3 rounded-2xl flex items-center gap-3 shadow-sm">
@@ -1908,6 +1911,7 @@ export default function CatalogoAdminPage() {
 
         </div>
       </main>
+    </div>
 
       {/* ========================================================= */}
       {/* MODAL: EDITAR PRODUCTO EN SUPABASE */}

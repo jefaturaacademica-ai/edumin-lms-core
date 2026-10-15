@@ -3,15 +3,17 @@
 import React, { useState, useEffect } from 'react';
 import { 
   CreditCard, ShieldCheck, Users, BookOpen, Settings, LogOut,
-  Activity, CheckCircle2, AlertCircle, Search, UserCheck, Layers, Award, Save, RefreshCw, Server
+  Activity, CheckCircle2, AlertCircle, Search, UserCheck, Layers, Award, Save, RefreshCw, Server,
+  GraduationCap, Eye, ExternalLink, Database, Sparkles, Check
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import AdminHeader from '@/components/admin/admin-header';
 
 export default function ConfiguracionRolesPage() {
-  const [activeTab, setActiveTab] = useState<'rbac' | 'paquetes'>('rbac');
+  const [activeTab, setActiveTab] = useState<'rbac' | 'paquetes' | 'simulador'>('rbac');
   const [usuarios, setUsuarios] = useState<any[]>([]);
   const [cargando, setCargando] = useState(true);
   const [busqueda, setBusqueda] = useState('');
@@ -95,9 +97,11 @@ export default function ConfiguracionRolesPage() {
       {/* Sidebar Unificado */}
       <AdminSidebar />
 
-      {/* Contenido Principal */}
-      <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0 h-full">
-        <div className="max-w-7xl mx-auto space-y-8">
+      {/* Contenido Principal con Header Superior Institucional */}
+      <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
+        <AdminHeader breadcrumb="Configuración y Roles (RBAC)" />
+        <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
+          <div className="max-w-7xl mx-auto space-y-8">
           
           <div className="flex justify-between items-center">
             <div>
@@ -117,18 +121,24 @@ export default function ConfiguracionRolesPage() {
           )}
 
           {/* Navegación por pestañas */}
-          <div className="flex border-b border-slate-200">
+          <div className="flex border-b border-slate-200 overflow-x-auto">
             <button
               onClick={() => setActiveTab('rbac')}
-              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 ${activeTab === 'rbac' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'rbac' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
             >
               <UserCheck className="w-4 h-4" /> Control de Acceso RBAC ({usuarios.length} Usuarios)
             </button>
             <button
               onClick={() => setActiveTab('paquetes')}
-              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 ${activeTab === 'paquetes' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'paquetes' ? 'border-indigo-600 text-indigo-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
             >
               <Layers className="w-4 h-4" /> Configuración de Paquetes & Créditos
+            </button>
+            <button
+              onClick={() => setActiveTab('simulador')}
+              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'simulador' ? 'border-emerald-600 text-emerald-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+            >
+              <GraduationCap className="w-4 h-4" /> Vista Estudiante FULL (Simulador)
             </button>
           </div>
 
@@ -220,7 +230,7 @@ export default function ConfiguracionRolesPage() {
                 </table>
               </div>
             </div>
-          ) : (
+          ) : activeTab === 'paquetes' ? (
             /* TAB: CONFIGURACIÓN DE PLANTILLAS Y PAQUETES */
             <div className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -362,10 +372,142 @@ export default function ConfiguracionRolesPage() {
                 </button>
               </div>
             </div>
+          ) : (
+            /* TAB: SIMULADOR DE VISTA ESTUDIANTE FULL */
+            <div className="space-y-6">
+              {/* Tarjeta de Inicio Rápido de Simulación */}
+              <div className="bg-gradient-to-br from-indigo-950 via-slate-900 to-slate-950 rounded-3xl p-6 sm:p-8 border border-indigo-500/30 text-white shadow-xl relative overflow-hidden">
+                <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
+                  <GraduationCap className="w-64 h-64 text-indigo-400" />
+                </div>
+
+                <div className="relative z-10 max-w-3xl space-y-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-black bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                    <span className="size-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    SIMULADOR ACTIVO EN TIEMPO REAL
+                  </div>
+
+                  <h2 className="text-2xl sm:text-3xl font-black tracking-tight">
+                    Vista Estudiante con Paquete FULL
+                  </h2>
+
+                  <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    Como administrador, puedes ingresar directamente al Aula Virtual (<code className="text-indigo-300 bg-white/10 px-1.5 py-0.5 rounded font-mono">/dashboard</code>). Tu sesión ejecutará automáticamente los privilegios de un alumno con <strong>Paquete FULL</strong>, con todas las cuotas al día, acceso irrestricto a los 3 módulos de <strong>Derecho Minero</strong> y opción de rendir exámenes y generar certificados.
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
+                      <p className="text-[10px] text-slate-400 uppercase font-bold">Programa asignado</p>
+                      <p className="text-xs font-bold text-white mt-0.5">Derecho Minero y Gestión Amb.</p>
+                    </div>
+                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
+                      <p className="text-[10px] text-slate-400 uppercase font-bold">Paquete simulado</p>
+                      <p className="text-xs font-bold text-emerald-400 mt-0.5">FULL (Cursos + CIP)</p>
+                    </div>
+                    <div className="p-3 rounded-2xl bg-white/5 border border-white/10">
+                      <p className="text-[10px] text-slate-400 uppercase font-bold">Estado financiero</p>
+                      <p className="text-xs font-bold text-sky-400 mt-0.5">Habilitado 100%</p>
+                    </div>
+                  </div>
+
+                  <div className="pt-4 flex flex-wrap gap-3">
+                    <Link
+                      href="/dashboard"
+                      className="bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold px-6 py-3 rounded-2xl text-xs shadow-lg shadow-emerald-600/30 transition-all flex items-center gap-2"
+                    >
+                      <GraduationCap className="w-4 h-4" />
+                      <span>Ingresar al Aula como Estudiante (FULL)</span>
+                      <span>→</span>
+                    </Link>
+
+                    <Link
+                      href="/dashboard/certificados"
+                      className="bg-white/10 hover:bg-white/20 text-white font-bold px-5 py-3 rounded-2xl text-xs border border-white/15 transition-all flex items-center gap-2"
+                    >
+                      <Award className="w-4 h-4 text-amber-400" />
+                      <span>Ver Mis Certificados</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Guía Técnica Supabase */}
+              <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm space-y-6">
+                <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+                  <div className="size-10 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center font-bold">
+                    <Database className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-slate-900">
+                      ¿Cómo configurar en Supabase un estudiante para Derecho Minero?
+                    </h3>
+                    <p className="text-xs text-slate-500">
+                      Guía directa para asignar diplomados, paquetes y roles desde el Table Editor de Supabase.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-4 text-xs text-slate-700">
+                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
+                    <p className="font-bold text-slate-900 flex items-center gap-2">
+                      <span className="size-5 rounded-full bg-indigo-600 text-white inline-flex items-center justify-center text-[10px]">1</span>
+                      Abre tu panel de Supabase y ve a la tabla:
+                    </p>
+                    <code className="block bg-slate-900 text-emerald-400 p-2.5 rounded-xl font-mono text-[11px]">
+                      Table Editor ➔ tabla "profiles"
+                    </code>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                    <p className="font-bold text-slate-900 flex items-center gap-2">
+                      <span className="size-5 rounded-full bg-indigo-600 text-white inline-flex items-center justify-center text-[10px]">2</span>
+                      Ubica al usuario (por su DNI o email) y edita las siguientes columnas:
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 font-sans">
+                      <div className="p-3 bg-white rounded-xl border border-slate-200">
+                        <span className="text-[10px] uppercase font-bold text-slate-400">Columna diplomado_1</span>
+                        <p className="font-mono text-indigo-600 font-bold text-xs mt-1">Derecho Minero</p>
+                        <p className="text-[11px] text-slate-500 mt-0.5">O el nombre oficial: <em>"Diplomado en Derecho Minero y Gestión Ambiental"</em>.</p>
+                      </div>
+
+                      <div className="p-3 bg-white rounded-xl border border-slate-200">
+                        <span className="text-[10px] uppercase font-bold text-slate-400">Columna role</span>
+                        <p className="font-mono text-indigo-600 font-bold text-xs mt-1">ESTUDIANTE</p>
+                        <p className="text-[11px] text-slate-500 mt-0.5">(Para administradores pon <code>ADMIN</code> o <code>SUPERADMIN</code>).</p>
+                      </div>
+
+                      <div className="p-3 bg-white rounded-xl border border-slate-200">
+                        <span className="text-[10px] uppercase font-bold text-slate-400">Columna paquete_adquirido</span>
+                        <p className="font-mono text-emerald-600 font-bold text-xs mt-1">FULL</p>
+                        <p className="text-[11px] text-slate-500 mt-0.5">Habilita acceso completo a cursos libres y certificaciones.</p>
+                      </div>
+
+                      <div className="p-3 bg-white rounded-xl border border-slate-200">
+                        <span className="text-[10px] uppercase font-bold text-slate-400">Columna cuotas_pagadas</span>
+                        <p className="font-mono text-sky-600 font-bold text-xs mt-1">6</p>
+                        <p className="text-[11px] text-slate-500 mt-0.5">Evita cualquier bloqueo por pago pendiente.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200/80 text-amber-900 space-y-1">
+                    <p className="font-bold flex items-center gap-1.5">
+                      <Sparkles className="size-4 text-amber-600" />
+                      Tip Inteligente de Sincronización:
+                    </p>
+                    <p className="text-[11px] leading-relaxed">
+                      El sistema cuenta con un parser inteligente. Cuando en <code className="bg-amber-100 px-1 rounded font-bold">diplomado_1</code> colocas <em>"Derecho Minero"</em>, la plataforma enlaza automáticamente sus 3 módulos oficiales con exámenes individuales (Módulo 1: Marco Legal y Regulación, Módulo 2: Fiscalización Ambiental, Módulo 3: Cierre de Minas y Sostenibilidad).
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           )}
 
         </div>
       </main>
+    </div>
     </div>
   );
 }

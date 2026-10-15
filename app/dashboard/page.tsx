@@ -109,6 +109,13 @@ export default async function DashboardPage() {
   fechaProximoPago.setMonth(fechaProximoPago.getMonth() + 1);
   const stringFechaPago = fechaProximoPago.toLocaleDateString('es-PE', { day: 'numeric', month: 'long', year: 'numeric' });
 
+  const nombreBienvenida = safeProfile.nombres
+    ? safeProfile.nombres
+        .split(/[._\s]+/)
+        .map((w: string) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
+        .join(' ')
+    : 'Estudiante';
+
   return (
     <main className="min-h-screen overflow-hidden bg-slate-50 text-slate-950 pb-20">
       {/* Hero Section */}
@@ -127,7 +134,7 @@ export default async function DashboardPage() {
                 Tu espacio de crecimiento profesional
               </div>
               <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-white sm:text-4xl lg:text-5xl drop-shadow-md">
-                ¡Hola, <span className="text-indigo-400 font-black">{safeProfile.nombres}</span>, bienvenid@ a tu ruta de aprendizaje!
+                ¡Hola, <span className="text-indigo-400 font-black">{nombreBienvenida}</span>, bienvenid@ a tu ruta de aprendizaje!
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-7 text-slate-200 font-medium drop-shadow">
                 Accede a tus programas de especialización en minería, seguridad, industria y negocios diseñados para potenciar tu perfil ejecutivo.

@@ -3,6 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { calculateReleasedCredits } from '@/lib/utils/credits';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
+import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 
 function parseCreditoRow(pag: any) {
   if (typeof pag.metodo === 'string' && pag.metodo.startsWith('CARGO_EXTRA|')) {
@@ -206,7 +207,7 @@ export async function GET() {
         slug: defaultDip.slug,
         titulo: defaultDip.titulo,
         avance: 0,
-        modulos: defaultDip.modulos.map((m, mIdx) => ({
+        modulos: defaultDip.modulos.map((m: any, mIdx: number) => ({
           id: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
           codigo: m.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,
           nombre: m.nombre || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`,

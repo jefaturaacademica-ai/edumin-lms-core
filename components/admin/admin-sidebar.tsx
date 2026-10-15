@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
+import InstitutionalUserDropdown from '@/components/navigation/InstitutionalUserDropdown';
 
 export interface NavItem {
   href: string;
@@ -130,6 +131,7 @@ export default function AdminSidebar() {
         </Link>
 
         <div className="flex items-center gap-2">
+          <InstitutionalUserDropdown />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Abrir menú"

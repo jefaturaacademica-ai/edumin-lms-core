@@ -9,6 +9,7 @@ import { createBrowserClient } from '@supabase/ssr';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import AdminHeader from '@/components/admin/admin-header';
 
 export default function AuditoriaWebhooksPage() {
   const [logs, setLogs] = useState<any[]>([]);
@@ -87,9 +88,11 @@ export default function AuditoriaWebhooksPage() {
       {/* Sidebar Unificado */}
       <AdminSidebar />
 
-      {/* Contenido Principal */}
-      <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0 h-full">
-        <div className="max-w-7xl mx-auto space-y-8">
+      {/* Contenido Principal con Header Superior */}
+      <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
+        <AdminHeader breadcrumb="Auditoría y Webhooks n8n" />
+        <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
+          <div className="max-w-7xl mx-auto space-y-8">
           
           <div>
             <h1 className="text-3xl font-bold text-slate-900">Auditoría & Centro de Webhooks</h1>
@@ -219,6 +222,7 @@ export default function AuditoriaWebhooksPage() {
 
         </div>
       </main>
+    </div>
     </div>
   );
 }

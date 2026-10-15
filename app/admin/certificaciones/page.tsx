@@ -10,6 +10,7 @@ import {
   ArrowLeft, FileCheck, Building2, Bell
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
+import AdminHeader from '@/components/admin/admin-header';
 import AvanzaCertificateRenderer from '@/components/certificates/AvanzaCertificateRenderer';
 
 export interface ModeloCertificado {
@@ -605,9 +606,11 @@ export default function CertificacionesAdminPage() {
       {/* Sidebar unificado */}
       <AdminSidebar />
 
-      {/* Contenido principal */}
-      <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0 h-full">
-        <div className="max-w-7xl mx-auto space-y-6">
+      {/* Contenido principal con Header Superior Institucional */}
+      <div className="flex-1 flex flex-col overflow-hidden min-w-0 h-full">
+        <AdminHeader breadcrumb="Certificaciones y Convenios" />
+        <main className="flex-1 p-4 sm:p-8 overflow-y-auto z-10 min-w-0">
+          <div className="max-w-7xl mx-auto space-y-6">
           
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
@@ -1646,6 +1649,7 @@ export default function CertificacionesAdminPage() {
 
         </div>
       </main>
+    </div>
 
       {/* MODAL: CAMBIAR MODELO DE CERTIFICADO ASIGNADO */}
       {certificadoParaCambiarModelo && (

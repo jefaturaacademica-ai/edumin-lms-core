@@ -37,9 +37,10 @@ export async function middleware(request: NextRequest) {
 
   const { pathname } = request.nextUrl;
   const isDashboardRoute = pathname.startsWith("/dashboard");
+  const isAdminRoute = pathname.startsWith("/admin");
 
   if (!user) {
-    if (isDashboardRoute) {
+    if (isDashboardRoute || isAdminRoute) {
       const loginUrl = request.nextUrl.clone();
       loginUrl.pathname = LOGIN_PATH;
       return NextResponse.redirect(loginUrl);
@@ -53,9 +54,19 @@ export async function middleware(request: NextRequest) {
   const admin = createAdminClient();
   const { data: profile } = await admin
     .from("profiles")
-    .select("debe_cambiar_password")
+    .select("role, debe_cambiar_password")
     .eq("id", user.id)
     .maybeSingle();
+
+  const userRole = (profile?.role || "ESTUDIANTE").toUpperCase();
+  const isPrivilegedAdmin = userRole === "ADMIN" || userRole === "SUPERADMIN";
+
+  // Si un estudiante o usuario sin privilegios intenta entrar a /admin, bloquear y redirigir al aula virtual
+  if (isAdminRoute && !isPrivilegedAdmin) {
+    const dashboardUrl = request.nextUrl.clone();
+    dashboardUrl.pathname = "/dashboard";
+    return NextResponse.redirect(dashboardUrl);
+  }
 
   if (profile?.debe_cambiar_password && pathname !== UPDATE_CREDENTIALS_PATH) {
     const updateCredentialsUrl = request.nextUrl.clone();
