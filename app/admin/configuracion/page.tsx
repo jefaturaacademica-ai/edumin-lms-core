@@ -40,17 +40,7 @@ export default function ConfiguracionRolesPage() {
       const res = await fetch('/api/admin/roles');
       if (res.ok) {
         const data = await res.json();
-        if (data.usuarios && data.usuarios.length > 0) {
-          setUsuarios(data.usuarios);
-        } else {
-          // Usuarios mock de demostración si la tabla está vacía
-          setUsuarios([
-            { id: 'usr-1', dni_ce: '70000001', nombres: 'SuperAdmin', apellidos: 'Principal', email: 'admin@edumin.pe', role: 'SUPERADMIN', paquete_adquirido: 'ILIMITADO' },
-            { id: 'usr-2', dni_ce: '45678912', nombres: 'Lucero', apellidos: 'Martinez', email: 'lucero@gmail.com', role: 'ESTUDIANTE', paquete_adquirido: 'COMPLETO' },
-            { id: 'usr-3', dni_ce: '71234568', nombres: 'Reginaldo', apellidos: 'Andía', email: 'docente.andia@edumin.pe', role: 'DOCENTE', paquete_adquirido: 'FULL' },
-            { id: 'usr-4', dni_ce: '78912345', nombres: 'Coordinación', apellidos: 'Académica', email: 'coordinacion@edumin.pe', role: 'ADMIN', paquete_adquirido: 'FULL' },
-          ]);
-        }
+        setUsuarios(Array.isArray(data.usuarios) ? data.usuarios : []);
       }
     } catch (e) {
       console.error('Error cargando usuarios:', e);

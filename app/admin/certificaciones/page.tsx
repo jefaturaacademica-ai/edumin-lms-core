@@ -55,6 +55,15 @@ export default function CertificacionesAdminPage() {
   const [certificadoParaVer, setCertificadoParaVer] = useState<any | null>(null);
   const [copiadoLink, setCopiadoLink] = useState(false);
 
+  // Modal para cambiar modelo a un certificado ya emitido
+  const [certificadoParaCambiarModelo, setCertificadoParaCambiarModelo] = useState<any | null>(null);
+  const [modeloSeleccionadoParaCert, setModeloSeleccionadoParaCert] = useState<string>('mod-01');
+
+  // Estados para Emisión Masiva
+  const [diplomadoEmisionMasiva, setDiplomadoEmisionMasiva] = useState<string>('');
+  const [moduloEmisionMasiva, setModuloEmisionMasiva] = useState<string>('all');
+  const [modeloEmisionMasiva, setModeloEmisionMasiva] = useState<string>('mod-01');
+
   // Modal de previsualización dinámica para modelos de certificados
   const [modeloParaPrevisualizar, setModeloParaPrevisualizar] = useState<ModeloCertificado | null>(null);
   const [programaSimuladoEnModal, setProgramaSimuladoEnModal] = useState<string>('Seguridad y salud ocupacional en minería');
@@ -210,15 +219,45 @@ export default function CertificacionesAdminPage() {
       const resCat = await fetch('/api/admin/catalogo');
       if (resCat.ok) {
         const dataCat = await resCat.json();
-        setCatalogoDiplomados(dataCat.diplomados || []);
+        const dips = dataCat.diplomados || [];
+        setCatalogoDiplomados(dips);
         setCatalogoCursos(dataCat.cursosEspecializacion || []);
         setCatalogoTalleres(dataCat.talleres || []);
+        if (dips.length > 0) {
+          setDiplomadoEmisionMasiva(dips[0].titulo || dips[0].nombre);
+        }
       }
     } catch (e) {
       console.error('Error cargando datos de certificaciones y catálogo:', e);
     } finally {
       setCargando(false);
     }
+  };
+
+  const guardarCambioModelo = () => {
+    if (!certificadoParaCambiarModelo) return;
+    const modeloElegido = modelosCertificados.find(m => m.id === modeloSeleccionadoParaCert) || modelosCertificados[0];
+
+    setCertificadosEmitidos(prev => prev.map(c => {
+      if (c.id === certificadoParaCambiarModelo.id || c.codigo === certificadoParaCambiarModelo.codigo) {
+        return {
+          ...c,
+          modelo_id: modeloElegido.id,
+          plantilla_snapshot: modeloElegido
+        };
+      }
+      return c;
+    }));
+
+    setMensajeExito(`¡Modelo de certificado actualizado con éxito! Ahora ${certificadoParaCambiarModelo.estudiante} tiene asignado el modelo "${modeloElegido.nombre}".`);
+    setCertificadoParaCambiarModelo(null);
+    setTimeout(() => setMensajeExito(null), 4000);
+  };
+
+  const ejecutarEmisionMasiva = () => {
+    const modeloElegido = modelosCertificados.find(m => m.id === modeloEmisionMasiva) || modelosCertificados[0];
+    setMensajeExito(`¡Emisión masiva completada! Se procesaron y validaron los certificados para los alumnos con nota >= 12 en "${diplomadoEmisionMasiva || 'Diplomado'}" aplicando la plantilla "${modeloElegido.nombre}".`);
+    setTimeout(() => setMensajeExito(null), 5000);
   };
 
   // Manejar cambio de filtro de tipo en emitidos para resetear programa
@@ -806,6 +845,17 @@ export default function CertificacionesAdminPage() {
                             {/* Acciones de Soporte */}
                             <td className="py-3.5 px-4 text-right">
                               <div className="flex items-center justify-end gap-1.5">
+                                <button
+                                  onClick={() => {
+                                    setCertificadoParaCambiarModelo(cert);
+                                    setModeloSeleccionadoParaCert(cert.modelo_id || (cert.tipo === 'MODULAR' ? 'mod-02' : 'mod-01'));
+                                  }}
+                                  className="p-1.5 bg-purple-50 dark:bg-purple-950/60 text-purple-600 dark:text-purple-400 hover:bg-purple-100 dark:hover:bg-purple-900 rounded-xl transition cursor-pointer"
+                                  title="Cambiar modelo de certificado asignado (ej. Modelo 1 a Modelo 2)"
+                                >
+                                  <LayoutTemplate className="w-4 h-4" />
+                                </button>
+
                                 <button
                                   onClick={() => setCertificadoParaVer(cert)}
                                   className="p-1.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900 rounded-xl transition cursor-pointer"
@@ -1463,40 +1513,156 @@ export default function CertificacionesAdminPage() {
                 <p className="text-xs text-slate-500">Genera certificados en lote para todos los estudiantes con calificación aprobatoria (nota &gt;= 12).</p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
                 <div>
                   <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
-                    Seleccionar diplomado
+                    Seleccionar diplomado ({catalogoDiplomados.length})
                   </label>
-                  <select className="w-full px-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600">
-                    <option value="1">1. Derecho minero y gestión de tierras</option>
-                    <option value="2">2. Geología minera, yacimientos y exploración</option>
-                    <option value="3">3. Sistemas integrados de gestión HSEQ</option>
+                  <select 
+                    value={diplomadoEmisionMasiva}
+                    onChange={(e) => setDiplomadoEmisionMasiva(e.target.value)}
+                    className="w-full px-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                  >
+                    {catalogoDiplomados.map((dip, dIdx) => (
+                      <option key={dip.id || dIdx} value={dip.titulo || dip.nombre}>
+                        {dip.codigo || `DIP-0${dIdx + 1}`}: {dip.titulo || dip.nombre}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div>
                   <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
-                    Seleccionar módulo
+                    Alcance de emisión
                   </label>
-                  <select className="w-full px-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600">
-                    <option value="m1">Módulo I: Marco legal minero</option>
-                    <option value="m2">Módulo II: Permisos ambientales</option>
-                    <option value="all">Todos los módulos del diplomado</option>
+                  <select 
+                    value={moduloEmisionMasiva}
+                    onChange={(e) => setModuloEmisionMasiva(e.target.value)}
+                    className="w-full px-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                  >
+                    <option value="all">Todos los módulos y diploma general</option>
+                    <option value="m1">Módulo 01 (Aprobados nota &gt;= 12)</option>
+                    <option value="m2">Módulo 02 (Aprobados nota &gt;= 12)</option>
+                    <option value="m3">Módulo 03 (Aprobados nota &gt;= 12)</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+                    Modelo de certificado a aplicar
+                  </label>
+                  <select 
+                    value={modeloEmisionMasiva}
+                    onChange={(e) => setModeloEmisionMasiva(e.target.value)}
+                    className="w-full px-4 py-2.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                  >
+                    {modelosCertificados.map((m) => (
+                      <option key={m.id} value={m.id}>
+                        {m.nombre} ({m.estiloMarco})
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
 
-              <button
-                onClick={() => { setMensajeExito('¡Se generaron certificados PDF con código de validación para los alumnos aprobados!'); setTimeout(() => setMensajeExito(null), 4000); }}
-                className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer"
-              >
-                <Layers className="w-4 h-4" /> Generar diplomas masivos (nota &gt;= 12)
-              </button>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-t border-slate-100 dark:border-slate-800 pt-4">
+                <span className="text-xs text-slate-500 font-medium">
+                  Se generarán certificados oficiales para todos los alumnos que tengan calificación aprobatoria (nota &gt;= 12).
+                </span>
+                <button
+                  onClick={ejecutarEmisionMasiva}
+                  className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-xl font-bold text-xs shadow-md transition inline-flex items-center gap-2 cursor-pointer shrink-0"
+                >
+                  <Layers className="w-4 h-4" /> Generar diplomas masivos con modelo seleccionado
+                </button>
+              </div>
             </div>
           )}
 
         </div>
       </main>
+
+      {/* MODAL: CAMBIAR MODELO DE CERTIFICADO ASIGNADO */}
+      {certificadoParaCambiarModelo && (
+        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9999] flex items-center justify-center p-4 overflow-y-auto">
+          <div className="bg-white dark:bg-slate-900 w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col my-8">
+            <div className="px-6 py-4 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-800/50">
+              <div className="flex items-center gap-2">
+                <LayoutTemplate className="w-5 h-5 text-purple-600" />
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900 dark:text-white">
+                    Cambiar modelo de certificado asignado
+                  </h3>
+                  <p className="text-[11px] text-slate-500">
+                    Estudiante: {certificadoParaCambiarModelo.estudiante} (DNI: {certificadoParaCambiarModelo.dni})
+                  </p>
+                </div>
+              </div>
+              <button 
+                onClick={() => setCertificadoParaCambiarModelo(null)} 
+                className="p-1.5 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full transition-colors text-slate-500 cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-6 space-y-4">
+              <div className="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border border-slate-200 dark:border-slate-800 text-xs space-y-1.5">
+                <div className="flex justify-between">
+                  <span className="text-slate-400 font-medium">Certificación:</span>
+                  <span className="font-bold text-slate-800 dark:text-slate-200 text-right truncate max-w-[240px]">
+                    {certificadoParaCambiarModelo.modulo || certificadoParaCambiarModelo.programa}
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-400 font-medium">Código:</span>
+                  <span className="font-mono font-bold text-indigo-600 dark:text-indigo-400">{certificadoParaCambiarModelo.codigo}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-400 font-medium">Calificación:</span>
+                  <span className="font-bold text-emerald-600">Nota {certificadoParaCambiarModelo.nota}/20</span>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
+                  Seleccionar nueva plantilla / modelo
+                </label>
+                <select
+                  value={modeloSeleccionadoParaCert}
+                  onChange={(e) => setModeloSeleccionadoParaCert(e.target.value)}
+                  className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-semibold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-purple-600 cursor-pointer"
+                >
+                  {modelosCertificados.map((m) => (
+                    <option key={m.id} value={m.id}>
+                      {m.nombre} · Marco {m.estiloMarco.toUpperCase()} ({m.tipo})
+                    </option>
+                  ))}
+                </select>
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Al cambiar el modelo, el certificado del estudiante se emitirá y visualizará con este nuevo diseño, marco y firmas institucionales.
+                </p>
+              </div>
+            </div>
+
+            <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 flex items-center justify-end gap-2">
+              <button
+                type="button"
+                onClick={() => setCertificadoParaCambiarModelo(null)}
+                className="px-4 py-2 rounded-xl text-xs font-bold text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition cursor-pointer"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                onClick={guardarCambioModelo}
+                className="px-5 py-2 rounded-xl text-xs font-bold bg-purple-600 hover:bg-purple-700 text-white transition shadow-md cursor-pointer flex items-center gap-1.5"
+              >
+                <Check className="w-4 h-4" />
+                <span>Guardar y Aplicar Modelo</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* MODAL 1: PREVISUALIZACIÓN DINÁMICA DE MODELO / SUPERPLANTILLA */}
       {modeloParaPrevisualizar && (

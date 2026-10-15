@@ -410,6 +410,96 @@ export async function PATCH(request: Request) {
       return NextResponse.json({ success: true, estudiante: updated });
     }
 
+    if (action === 'reset_examen_modulo') {
+      const { diplomadoTitulo, diplomadoSlug, moduloCodigo } = body;
+      if (!studentId && !dni_ce) {
+        return NextResponse.json({ error: 'Se requiere studentId o dni_ce.' }, { status: 400 });
+      }
+
+      let profileQuery = admin.from('profiles').select('*');
+      if (studentId) profileQuery = profileQuery.eq('id', studentId);
+      else profileQuery = profileQuery.eq('dni_ce', dni_ce);
+
+      const { data: profile, error: pErr } = await profileQuery.maybeSingle();
+      if (pErr || !profile) {
+        return NextResponse.json({ error: 'Perfil de estudiante no encontrado.' }, { status: 404 });
+      }
+
+      let diplomadosListJson: DiplomadoJSON[] = parseDiplomadosFromProfile(profile);
+      const targetSlug = (diplomadoSlug || diplomadoTitulo || '').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
+      const targetDip = diplomadosListJson.find(d =>
+        (d.slug && d.slug.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug) ||
+        (d.id && d.id.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug) ||
+        (d.titulo && d.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlug)
+      );
+
+      if (targetDip && Array.isArray(targetDip.modulos)) {
+        // Encontrar módulo objetivo
+        const mod = targetDip.modulos.find((m: any) =>
+          m.codigo === moduloCodigo ||
+          m.id === moduloCodigo ||
+          (moduloCodigo && m.nombre && m.nombre.toLowerCase().includes(moduloCodigo.toLowerCase())) ||
+          (moduloCodigo && m.titulo && m.titulo.toLowerCase().includes(moduloCodigo.toLowerCase()))
+        );
+
+        if (mod) {
+          delete (mod as any).nota;
+          (mod as any).rendido = false;
+          mod.completado = false;
+        }
+
+        // Limpiar de completadosMap si existe
+        if ((targetDip as any).completadosMap && moduloCodigo) {
+          delete (targetDip as any).completadosMap[moduloCodigo];
+          if (mod?.id) delete (targetDip as any).completadosMap[mod.id];
+          if (mod?.codigo) delete (targetDip as any).completadosMap[mod.codigo];
+        }
+
+        // Recalcular avance
+        const completados = targetDip.modulos.filter(m => m.completado).length;
+        targetDip.avance = Math.round((completados / targetDip.modulos.length) * 100);
+        (targetDip as any).completado = targetDip.avance === 100;
+      }
+
+      const diplomadosSerialized = `DIPLOMADOS_LIST|${JSON.stringify(diplomadosListJson)}`;
+
+      let updateQuery = admin.from('profiles').update({
+        diplomados: diplomadosSerialized
+      });
+
+      if (studentId) updateQuery = updateQuery.eq('id', studentId);
+      else updateQuery = updateQuery.eq('dni_ce', dni_ce);
+
+      const { data: updated, error: updErr } = await updateQuery.select().single();
+      if (updErr) {
+        return NextResponse.json({ error: `Error al reiniciar examen: ${updErr.message}` }, { status: 500 });
+      }
+
+      // Registrar auditoría de reseteo para examen sustitutorio
+      try {
+        await admin.from('audit_logs').insert({
+          usuario_email: 'admin@edumin.pe',
+          accion: 'REINICIAR_INTENTO_EXAMEN_SUSTITUTORIO',
+          detalles: {
+            studentId: profile.id,
+            dni_ce: profile.dni_ce,
+            diplomado: diplomadoTitulo || diplomadoSlug,
+            modulo: moduloCodigo,
+            tarifa_sustitutorio: 'S/ 25.00'
+          }
+        });
+      } catch (e) {
+        console.error('Error registrando auditoría:', e);
+      }
+
+      return NextResponse.json({
+        success: true,
+        estudiante: updated,
+        message: 'Intento de examen reiniciado correctamente. El estudiante ya puede rendir su examen sustitutorio.'
+      });
+    }
+
     return NextResponse.json({ error: 'Acción no soportada.' }, { status: 400 });
   } catch (err: any) {
     return NextResponse.json({ error: err.message || 'Error inesperado' }, { status: 500 });

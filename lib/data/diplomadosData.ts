@@ -16,6 +16,8 @@ export interface ModuloDetalle {
   codigo: string;
   nombre: string;
   docente: string;
+  temas?: any[];
+  clasesAdicionales?: any[];
   clases: string[];
 }
 
@@ -89,6 +91,8 @@ function normalizarModulo(mod: RawModuloJSON, index: number): ModuloDetalle {
     codigo: etiquetaModulo,
     nombre,
     docente: docente || '',
+    temas: (mod as any).temas || [],
+    clasesAdicionales: (mod as any).clasesAdicionales || [],
     clases: Array.isArray(mod.clases) ? mod.clases.map(c => typeof c === 'string' ? c.trim() : (typeof c === 'object' && c !== null ? (c.titulo || '') : '')).filter(Boolean) : []
   };
 }

@@ -10,11 +10,11 @@ import AdminSidebar from '@/components/admin/admin-sidebar';
 export default function ReportesPage() {
   const [descargando, setDescargando] = useState<string | null>(null);
   const [kpis, setKpis] = useState({
-    totalRecaudado: 18450,
-    tasaMorosidad: '10.9%',
-    alumnosEnRiesgo: 14,
-    totalAlumnos: 128,
-    totalCursos: 98
+    totalRecaudado: 0,
+    tasaMorosidad: '0%',
+    alumnosEnRiesgo: 0,
+    totalAlumnos: 0,
+    totalCursos: 0
   });
   const [reporteData, setReporteData] = useState<{ pagos: any[]; alumnosRiesgo: any[]; cursos: any[] }>({
     pagos: [],
@@ -35,11 +35,11 @@ export default function ReportesPage() {
         const data = await res.json();
         if (data.kpis) {
           setKpis({
-            totalRecaudado: data.kpis.totalRecaudado || 18450,
-            tasaMorosidad: data.kpis.tasaMorosidad || '10.9%',
-            alumnosEnRiesgo: data.kpis.alumnosEnRiesgo || 14,
-            totalAlumnos: data.kpis.totalAlumnos || 128,
-            totalCursos: data.kpis.totalCursos || 98
+            totalRecaudado: Number(data.kpis.totalRecaudado) || 0,
+            tasaMorosidad: data.kpis.tasaMorosidad || '0%',
+            alumnosEnRiesgo: Number(data.kpis.alumnosEnRiesgo) || 0,
+            totalAlumnos: Number(data.kpis.totalAlumnos) || 0,
+            totalCursos: Number(data.kpis.totalCursos) || 0
           });
         }
         setReporteData({
@@ -63,10 +63,6 @@ export default function ReportesPage() {
         reporteData.pagos.forEach(p => {
           rows += `${p.id},${p.dni_ce || ''},${p.monto || 150.00},${p.metodo || 'Yape/Plin'},${p.estado || 'Completado'},${p.created_at || new Date().toISOString()}\n`;
         });
-      } else {
-        rows += "PAY-101,76543210,150.00,Yape / Plin,Completado,2026-09-23\n" +
-          "PAY-102,45678912,300.00,Transferencia,Completado,2026-09-22\n" +
-          "PAY-103,12345678,150.00,Visa,Completado,2026-09-21\n";
       }
       
       const csvContent = "data:text/csv;charset=utf-8," + encodeURIComponent(rows);
@@ -88,9 +84,6 @@ export default function ReportesPage() {
         reporteData.alumnosRiesgo.forEach(a => {
           rows += `${a.dni_ce},"${a.nombres}","${a.apellidos}",${a.email},${a.paquete_adquirido},${a.cuotas_pagadas},${a.bloqueado ? 'SI' : 'NO'},${a.prorroga_hasta || 'NINGUNA'}\n`;
         });
-      } else {
-        rows += "45678912,Lucero,Martinez,lucero@gmail.com,COMPLETO,1,NO,\n" +
-          "71234568,Marcos,Quispe,marcos.q@hotmail.com,FULL,2,NO,2026-09-27\n";
       }
       
       const csvContent = "data:text/csv;charset=utf-8," + encodeURIComponent(rows);
@@ -112,9 +105,6 @@ export default function ReportesPage() {
         reporteData.cursos.forEach(c => {
           rows += `${c.id},"${c.titulo}","${c.categoria}",${c.duracion || '40 horas'},${c.precio || 150.00},${c.nivel || 'Especialización'}\n`;
         });
-      } else {
-        rows += "DIP-01,DERECHO MINERO,Diplomados Oficiales,120 horas,150.00,Especialización\n" +
-          "DIP-03,GEOLOGIA MINERA,Diplomados Oficiales,120 horas,150.00,Especialización\n";
       }
       
       const csvContent = "data:text/csv;charset=utf-8," + encodeURIComponent(rows);

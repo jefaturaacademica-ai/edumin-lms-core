@@ -27,23 +27,20 @@ export default function AlumnosRiesgoPage() {
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
   );
 
-  const [estudiantes, setEstudiantes] = useState<any[]>([
-    { id: '1', dni: '45678912', nombre: 'Lucero Martinez', email: 'lucero@gmail.com', programa: 'DERECHO MINERO', cuotasPendientes: 2, deudaMonto: 300.00, mesDeuda: 'agosto', prorrogaHasta: null, estado: 'Deuda Activa', bloqueado: false },
-    { id: '2', dni: '71234568', nombre: 'Marcos Quispe', email: 'marcos.q@hotmail.com', programa: 'GEOLOGÍA MINERA', cuotasPendientes: 1, deudaMonto: 150.00, mesDeuda: 'septiembre', prorrogaHasta: '2026-09-27', estado: 'Prórroga Activa', bloqueado: false },
-    { id: '3', dni: '78912345', nombre: 'Ana Torres V.', email: 'ana.torres@gmail.com', programa: 'HSEQ SISTEMAS', cuotasPendientes: 3, deudaMonto: 450.00, mesDeuda: 'julio', prorrogaHasta: null, estado: 'Bloqueado por Sistema', bloqueado: true },
-    { id: '4', dni: '43210987', nombre: 'Pedro Huanca', email: 'pedro.h@outlook.com', programa: 'SEGURIDAD INDUSTRIAL', cuotasPendientes: 1, deudaMonto: 150.00, mesDeuda: 'agosto', prorrogaHasta: null, estado: 'Deuda Activa', bloqueado: false },
-  ]);
+  const [estudiantes, setEstudiantes] = useState<any[]>([]);
+  const [cargando, setCargando] = useState(true);
 
   React.useEffect(() => {
     cargarEstudiantes();
   }, []);
 
   const cargarEstudiantes = async () => {
+    setCargando(true);
     try {
       const res = await fetch('/api/admin/alumnos-riesgo');
       if (res.ok) {
         const data = await res.json();
-        if (data.estudiantes && data.estudiantes.length > 0) {
+        if (Array.isArray(data.estudiantes)) {
           const formateados = data.estudiantes.map((e: any) => {
             const cuotasPend = Math.max(0, 3 - (e.cuotas_pagadas || 1));
             return {
@@ -65,6 +62,8 @@ export default function AlumnosRiesgoPage() {
       }
     } catch (err) {
       console.error('Error cargando estudiantes:', err);
+    } finally {
+      setCargando(false);
     }
   };
 
@@ -286,7 +285,19 @@ export default function AlumnosRiesgoPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-xs">
-                  {estudiantesFiltrados.length > 0 ? (
+                  {cargando && estudiantes.length === 0 ? (
+                    Array.from({ length: 4 }).map((_, i) => (
+                      <tr key={`skel-${i}`} className="animate-pulse">
+                        <td className="py-4 px-4"><div className="h-4 bg-slate-200 rounded w-20"></div></td>
+                        <td className="py-4 px-4 space-y-1"><div className="h-4 bg-slate-200 rounded w-36"></div><div className="h-3 bg-slate-100 rounded w-44"></div></td>
+                        <td className="py-4 px-4"><div className="h-4 bg-slate-200 rounded w-28"></div></td>
+                        <td className="py-4 px-4"><div className="h-4 bg-slate-200 rounded w-16"></div></td>
+                        <td className="py-4 px-4"><div className="h-4 bg-slate-200 rounded w-20"></div></td>
+                        <td className="py-4 px-4"><div className="h-5 bg-slate-200 rounded-full w-24"></div></td>
+                        <td className="py-4 px-4 text-right"><div className="h-7 bg-slate-200 rounded-xl w-32 ml-auto"></div></td>
+                      </tr>
+                    ))
+                  ) : estudiantesFiltrados.length > 0 ? (
                     estudiantesFiltrados.map((est) => (
                       <tr key={est.id} className="hover:bg-slate-50 transition-colors">
                         <td className="py-4 px-4 font-mono font-bold text-indigo-600">{est.dni}</td>

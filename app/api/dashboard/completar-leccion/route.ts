@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { parseDiplomadosFromProfile, parseCursosFromProfile, DiplomadoJSON, CursoJSON } from '@/lib/utils/profileParser';
+import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 
 export async function POST(request: Request) {
   try {
@@ -92,8 +93,25 @@ export async function POST(request: Request) {
 
     let esDiplomado = Boolean(targetDip);
 
-    if (!targetDip && !targetCurso && diplomadosList.length > 0) {
-      targetDip = diplomadosList[0];
+    // Si el diplomado no existía en el perfil del alumno, crearlo de forma aislada
+    if (!targetDip && !targetCurso && targetSlug) {
+      const matchedData = getDiplomadoByTitleOrSlug(diplomadoSlug || targetSlug);
+      const newSlug = matchedData?.slug || targetSlug;
+      const newTitle = matchedData?.titulo || (diplomadoTitulo || targetSlug.replace(/-/g, ' ').toUpperCase());
+
+      targetDip = {
+        id: newSlug,
+        slug: newSlug,
+        titulo: newTitle,
+        avance: 0,
+        completadosMap: {},
+        modulos: [
+          { id: 'Módulo 01', codigo: 'Módulo 01', nombre: 'Módulo 01', nota: 0, completado: false },
+          { id: 'Módulo 02', codigo: 'Módulo 02', nombre: 'Módulo 02', nota: 0, completado: false },
+          { id: 'Módulo 03', codigo: 'Módulo 03', nombre: 'Módulo 03', nota: 0, completado: false }
+        ]
+      };
+      diplomadosList.push(targetDip);
       esDiplomado = true;
     }
 
@@ -109,11 +127,8 @@ export async function POST(request: Request) {
         Object.assign((targetDip as any).completadosMap, inputMap);
       }
 
-      // Si viene avancePorcentaje precalculado por el cliente, usarlo
-      if (typeof avancePorcentaje === 'number' && avancePorcentaje >= 0 && avancePorcentaje <= 100) {
-        targetDip.avance = avancePorcentaje;
-      } else if (Array.isArray(targetDip.modulos) && targetDip.modulos.length > 0) {
-        // Recalcular por módulos si no viene porcentaje explicito
+      // Actualización de notas y estado por módulo en Supabase
+      if (Array.isArray(targetDip.modulos)) {
         let idxToUpdate = -1;
         if (typeof moduloIndex === 'number' && moduloIndex >= 0 && moduloIndex < targetDip.modulos.length) {
           idxToUpdate = moduloIndex;
@@ -122,15 +137,18 @@ export async function POST(request: Request) {
         }
 
         if (idxToUpdate !== -1) {
-          targetDip.modulos[idxToUpdate].completado = Boolean(completado);
+          if (typeof body.nota === 'number') {
+            targetDip.modulos[idxToUpdate].nota = body.nota;
+            (targetDip.modulos[idxToUpdate] as any).rendido = true;
+            if (body.nota >= 12) {
+              targetDip.modulos[idxToUpdate].completado = true;
+            }
+          } else if (completado !== undefined) {
+            targetDip.modulos[idxToUpdate].completado = Boolean(completado);
+          }
         }
 
-        const completadosCount = targetDip.modulos.filter(m => m.completado).length;
-        targetDip.avance = Math.round((completadosCount / targetDip.modulos.length) * 100);
-      }
-
-      // Sincronizar estado de cada módulo en el array modulos
-      if (Array.isArray(targetDip.modulos)) {
+        // Sincronizar estado de cada módulo desde completadosMap
         targetDip.modulos.forEach((m: any, mIdx: number) => {
           const modKey = m.codigo || m.id || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
           if ((targetDip as any).completadosMap[modKey] !== undefined) {
@@ -139,7 +157,15 @@ export async function POST(request: Request) {
         });
       }
 
-      // Si el avance es menor al 100%, la propiedad completado pasa a FALSE (vuelve a estado "en_curso")
+      // Definir porcentaje de avance
+      if (typeof avancePorcentaje === 'number' && avancePorcentaje >= 0 && avancePorcentaje <= 100) {
+        targetDip.avance = avancePorcentaje;
+      } else if (Array.isArray(targetDip.modulos) && targetDip.modulos.length > 0) {
+        const completadosCount = targetDip.modulos.filter(m => m.completado).length;
+        targetDip.avance = Math.round((completadosCount / targetDip.modulos.length) * 100);
+      }
+
+      // Si el avance es menor al 100%, la propiedad completado pasa a FALSE (estado "en_curso")
       (targetDip as any).completado = (targetDip.avance === 100);
 
     } else if (targetCurso) {

@@ -7,10 +7,10 @@ import {
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import Ficha360Modal from '@/components/admin/ficha-360-modal';
-import { MOCK_ESTUDIANTES, EstudianteCompleto } from '@/lib/data/mockStudents';
+import { EstudianteCompleto } from '@/lib/data/mockStudents';
 
 export default function AdminEstudiantesPage() {
-  const [estudiantes, setEstudiantes] = useState<EstudianteCompleto[]>(MOCK_ESTUDIANTES);
+  const [estudiantes, setEstudiantes] = useState<EstudianteCompleto[]>([]);
   const [cargando, setCargando] = useState(true);
   
   // Filtros
@@ -46,11 +46,11 @@ export default function AdminEstudiantesPage() {
       const res = await fetch('/api/admin/estudiantes');
       if (res.ok) {
         const data = await res.json();
-        if (data.estudiantes && data.estudiantes.length > 0) {
+        if (Array.isArray(data.estudiantes)) {
           setEstudiantes(data.estudiantes);
           setAlumnoSeleccionado((prev) => {
             if (!prev) return null;
-            return data.estudiantes.find((e: EstudianteCompleto) => e.id === prev.id || e.dni_ce === prev.dni_ce) || prev;
+            return data.estudiantes.find((e: EstudianteCompleto) => e.id === prev.id || e.dni_ce === prev.dni_ce) || null;
           });
         }
       }
@@ -111,7 +111,7 @@ export default function AdminEstudiantesPage() {
               className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
             >
               <RefreshCw className={`w-4 h-4 ${cargando ? 'animate-spin' : ''}`} />
-              Actualizar Lista ({estudiantes.length})
+              Actualizar Lista {cargando && estudiantes.length === 0 ? '' : `(${estudiantes.length})`}
             </button>
           </div>
 
@@ -175,7 +175,22 @@ export default function AdminEstudiantesPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 dark:divide-slate-800/60 text-xs">
-                  {estudiantesFiltrados.length > 0 ? (
+                  {cargando && estudiantes.length === 0 ? (
+                    Array.from({ length: 5 }).map((_, i) => (
+                      <tr key={`skeleton-${i}`} className="animate-pulse">
+                        <td className="py-4 px-4"><div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-20"></div></td>
+                        <td className="py-4 px-4 space-y-1.5">
+                          <div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-36"></div>
+                          <div className="h-3 bg-slate-100 dark:bg-slate-800/60 rounded w-48"></div>
+                        </td>
+                        <td className="py-4 px-4"><div className="h-4 bg-slate-200 dark:bg-slate-800 rounded w-32"></div></td>
+                        <td className="py-4 px-4 text-center"><div className="h-5 bg-slate-200 dark:bg-slate-800 rounded-md w-12 mx-auto"></div></td>
+                        <td className="py-4 px-4"><div className="h-5 bg-slate-200 dark:bg-slate-800 rounded-full w-24"></div></td>
+                        <td className="py-4 px-4 text-center"><div className="h-5 bg-slate-200 dark:bg-slate-800 rounded-full w-16 mx-auto"></div></td>
+                        <td className="py-4 px-4 text-right"><div className="h-7 bg-slate-200 dark:bg-slate-800 rounded-xl w-24 ml-auto"></div></td>
+                      </tr>
+                    ))
+                  ) : estudiantesFiltrados.length > 0 ? (
                     estudiantesFiltrados.map((est) => (
                       <tr key={est.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
                         <td className="py-4 px-4 font-mono font-bold text-indigo-600 dark:text-indigo-400">{est.dni_ce}</td>
@@ -227,7 +242,7 @@ export default function AdminEstudiantesPage() {
                   ) : (
                     <tr>
                       <td colSpan={7} className="text-center py-12 text-slate-400 font-medium">
-                        {cargando ? 'Cargando estudiantes...' : 'No se encontraron estudiantes para la búsqueda.'}
+                        No se encontraron estudiantes para la búsqueda.
                       </td>
                     </tr>
                   )}

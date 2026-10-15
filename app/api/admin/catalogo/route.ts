@@ -1,6 +1,13 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { ALL_DIPLOMADOS } from '@/lib/data/diplomadosData';
+import { 
+  LeccionRow, 
+  normalizeLeccionRow, 
+  convertirFilasAListaModulos, 
+  convertirModulosALeccionRows,
+  generarFilasMaestrasIniciales
+} from '@/lib/data/diplomadosLeccionesService';
 import fs from 'fs';
 import path from 'path';
 
@@ -79,11 +86,34 @@ function getLocalCatalogoData() {
         return tituloFormateado;
       });
 
+      // Procesar temas limpios si existen
+      const temasFormat = (Array.isArray(m.temas) ? m.temas : []).map((tObj: any, tIdx: number) => {
+        const numTemaStr = (tIdx + 1) < 10 ? `0${tIdx + 1}` : `${tIdx + 1}`;
+        const rawTit = tObj.titulo || `Tema ${numTemaStr}`;
+        const temaLimpio = rawTit
+          .replace(/^Tema\s*\d+[:\-\s]*/i, '')
+          .replace(/^(Clase|CLASE|Sesión|SESIÓN)\s*\d+[:\-\s]*/i, '')
+          .trim();
+        return {
+          titulo: `Tema ${numTemaStr}: ${temaLimpio}`,
+          clases: Array.isArray(tObj.clases) ? tObj.clases : []
+        };
+      });
+
       return {
         codigo: codigoModulo,
         nombre: nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
         docente: docente,
-        clases: clasesFormat
+        temas: temasFormat,
+        clases: clasesFormat,
+        clasesAdicionales: Array.isArray(m.clasesAdicionales) && m.clasesAdicionales.length > 0
+          ? m.clasesAdicionales
+          : [
+              {
+                titulo: 'Clase Adicional: Sesión Especial de Refuerzo y Casuística Práctica',
+                videoUrl: ''
+              }
+            ]
       };
     });
 
@@ -223,16 +253,149 @@ async function seedInitialCatalogo(admin: any) {
   }
 }
 
+// Helper para ordenar códigos DIP-01 .. DIP-22 naturalmente
+function parseCodeNumber(code: string): number {
+  const match = (code || '').match(/\d+/);
+  return match ? parseInt(match[0], 10) : 999;
+}
+
+// Sincroniza filas de un diplomado en la tabla diplomados_lecciones de forma atómica y segura
+async function syncLeccionesEnSupabase(admin: any, codigoDiplomado: string, rows: LeccionRow[]) {
+  if (!codigoDiplomado || !Array.isArray(rows) || rows.length === 0) {
+    console.warn('syncLeccionesEnSupabase: Omitido porque no hay filas válidas para guardar de', codigoDiplomado);
+    return;
+  }
+
+  try {
+    // 1. Normalizar filas limpiando IDs arbitrarios para que Supabase use gen_random_uuid()
+    const filasLimpias = rows.map((r, idx) => {
+      const norm = normalizeLeccionRow(r);
+      return {
+        ...norm,
+        orden: norm.orden || idx + 1
+      };
+    });
+
+    // 2. Eliminar lecciones anteriores de este diplomado específico
+    const { error: delError } = await admin
+      .from('diplomados_lecciones')
+      .delete()
+      .ilike('CodigoDiplomado', codigoDiplomado);
+
+    if (delError) {
+      console.warn('Aviso al eliminar lecciones previas en diplomados_lecciones:', delError.message);
+    }
+
+    // 3. Insertar nuevas lecciones en bloques seguros
+    const chunkSize = 80;
+    for (let i = 0; i < filasLimpias.length; i += chunkSize) {
+      const batch = filasLimpias.slice(i, i + chunkSize);
+      const { error: insError } = await admin.from('diplomados_lecciones').insert(batch);
+      if (insError) {
+        console.error(`Error al insertar lote ${i} en diplomados_lecciones:`, insError.message);
+      }
+    }
+  } catch (err: any) {
+    console.error('Error al sincronizar diplomados_lecciones:', err.message);
+  }
+}
+
+// Reconstruye diplomados con su estructura completa directamente desde las filas de diplomados_lecciones
+// Garantiza que los 22 diplomados oficiales SIEMPRE se preserven y nunca desaparezcan del catálogo
+function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabase: any[], localDiplomados: any[]) {
+  const filasPorCodigo = new Map<string, LeccionRow[]>();
+
+  for (const row of (leccionesRows || [])) {
+    const norm = normalizeLeccionRow(row);
+    const cod = (norm.CodigoDiplomado || 'DIP-01').toUpperCase();
+    if (!filasPorCodigo.has(cod)) {
+      filasPorCodigo.set(cod, []);
+    }
+    filasPorCodigo.get(cod)!.push(norm);
+  }
+
+  // Obtenemos todos los 22 códigos oficiales para asegurar que ninguno desaparezca
+  const codigosOficiales = Array.from(new Set([
+    ...localDiplomados.map((d: any) => d.codigo?.toUpperCase()).filter(Boolean),
+    ...Array.from(filasPorCodigo.keys())
+  ])).sort((a, b) => parseCodeNumber(a) - parseCodeNumber(b));
+
+  return codigosOficiales.map((cod, idx) => {
+    let rows = filasPorCodigo.get(cod) || [];
+
+    // Si por alguna razón este diplomado no tenía filas en BD, recuperar sus filas maestras por seguridad
+    if (rows.length === 0) {
+      const maestras = generarFilasMaestrasIniciales().filter(m => m.CodigoDiplomado.toUpperCase() === cod);
+      rows = maestras;
+    }
+
+    const firstRow = rows[0] || ({} as LeccionRow);
+    const modulos = convertirFilasAListaModulos(rows);
+
+    const docentesList = Array.from(new Set(rows.map(r => r.Docente).filter(Boolean)));
+    const docenteDiplomado = docentesList.length > 0 ? docentesList.join(', ') : 'Reginaldo Andía';
+
+    const numDigits = cod.replace(/[^0-9]/g, '');
+    const id = `dip-${numDigits.padStart(2, '0')}`;
+
+    // Buscar metadata en public.cursos si existe, priorizando ID oficial estándar (ej. dip-01) y evitando IDs duplicados (dip-dip)
+    const cursoExistente = (cursosSupabase || []).find((c: any) => c.id === id) ||
+      (cursosSupabase || []).find((c: any) => (c.codigo && c.codigo.toUpperCase() === cod.toUpperCase()) && !c.id.includes('dip-dip'));
+
+    // Buscar metadata en local si existe
+    const localDip = (localDiplomados || []).find((d: any) => 
+      d.codigo?.toUpperCase() === cod.toUpperCase() || 
+      d.id === id
+    );
+
+    const esSoloCodigo = (t: string | undefined | null) => {
+      if (!t) return true;
+      const clean = t.trim().toUpperCase();
+      return clean === cod || clean === `DIPLOMADO ${cod}` || (/^DIP-\d+$/i.test(clean));
+    };
+
+    let titulo = '';
+    if (!esSoloCodigo(firstRow.Diplomado)) {
+      titulo = firstRow.Diplomado.trim().toUpperCase();
+    } else if (cursoExistente && !esSoloCodigo(cursoExistente.titulo)) {
+      titulo = cursoExistente.titulo.trim().toUpperCase();
+    } else if (localDip && !esSoloCodigo(localDip.titulo)) {
+      titulo = localDip.titulo.trim().toUpperCase();
+    } else {
+      titulo = (firstRow.Diplomado || `DIPLOMADO ${cod}`).trim().toUpperCase();
+    }
+
+    return {
+      id: cursoExistente?.id || id,
+      codigo: cod,
+      version: cursoExistente?.version || localDip?.version || 'Versión 1',
+      ano: cursoExistente?.ano || localDip?.ano || 2026,
+      titulo,
+      tipo: 'diplomado',
+      categoria: 'Diplomados Oficiales',
+      num_modulos: modulos.length || cursoExistente?.num_modulos || 3,
+      taller_aplicable: cursoExistente?.taller_aplicable || 'Ninguno',
+      docente: docenteDiplomado,
+      duracion: cursoExistente?.duracion || localDip?.duracion || '120 horas',
+      imagen: cursoExistente?.imagen || localDip?.imagen || ALL_DIPLOMADOS[idx]?.imagen || '/assets/images/daem/gestion-minera.webp',
+      nivel: cursoExistente?.nivel || localDip?.nivel || 'Especialización',
+      precio: cursoExistente?.precio || localDip?.precio || 150.00,
+      modulos
+    };
+  });
+}
+
 export async function GET() {
   try {
     const admin = createAdminClient();
     const local = getLocalCatalogoData();
 
+    // 1. Consultar cursos y talleres desde public.cursos
     let { data: cursos, error } = await admin
       .from('cursos')
       .select('*');
 
-    // Si la tabla en Supabase tiene menos de 10 productos o dio error, ejecutar sembrado automático
+    // Si la tabla en Supabase tiene menos de 10 productos o dio error, sembrar automáticamente
     if (error || !cursos || cursos.length < 10) {
       await seedInitialCatalogo(admin);
       const res = await admin.from('cursos').select('*');
@@ -243,43 +406,62 @@ export async function GET() {
       }
     }
 
-    // Mapear y combinar datos asegurando que código y versión estén presentes siempre
-    const cursosMapeados = (cursos || []).map((c: any, index: number) => {
+    // 2. Consultar diplomados directamente desde public.diplomados_lecciones
+    const { data: leccionesRows, error: leccionesError } = await admin
+      .from('diplomados_lecciones')
+      .select('*')
+      .order('orden', { ascending: true });
+
+    let diplomados: any[] = [];
+    if (!leccionesError && Array.isArray(leccionesRows) && leccionesRows.length > 0) {
+      diplomados = reconstruirDiplomadosDesdeLecciones(leccionesRows, cursos, local.diplomados);
+    } else {
+      diplomados = local.diplomados;
+    }
+
+    // 3. Mapear Cursos de Especialización y Talleres desde public.cursos
+    const otrosCursosMapeados = (cursos || []).filter((c: any) => {
+      const tipo = c.tipo || (c.categoria === 'Diplomados Oficiales' || (c.id && c.id.startsWith('dip-')) ? 'diplomado' : c.categoria === 'Talleres' || (c.id && c.id.startsWith('tal-')) ? 'taller' : 'curso');
+      return tipo !== 'diplomado';
+    }).map((c: any, index: number) => {
       let tipo = c.tipo;
       if (!tipo) {
-        if (c.categoria === 'Diplomados Oficiales' || (c.id && c.id.startsWith('dip-'))) tipo = 'diplomado';
-        else if (c.categoria === 'Talleres' || (c.id && c.id.startsWith('tal-'))) tipo = 'taller';
+        if (c.categoria === 'Talleres' || (c.id && c.id.startsWith('tal-'))) tipo = 'taller';
         else tipo = 'curso';
       }
 
-      // Buscar si tenemos los módulos en local si no existen en BD
       const localItem = local.todos.find(item => item.id === c.id || item.titulo === c.titulo);
 
       return {
         id: c.id,
-        codigo: c.codigo || localItem?.codigo || (tipo === 'diplomado' ? `DIP-${(index + 1).toString().padStart(2, '0')}` : tipo === 'taller' ? `TAL-${(index + 1).toString().padStart(2, '0')}` : `CUR-${(index + 1).toString().padStart(2, '0')}`),
+        codigo: c.codigo || localItem?.codigo || (tipo === 'taller' ? `TAL-${(index + 1).toString().padStart(2, '0')}` : `CUR-${(index + 1).toString().padStart(2, '0')}`),
         version: c.version || localItem?.version || 'Versión 1',
         ano: c.ano || localItem?.ano || 2026,
         titulo: c.titulo,
         tipo,
-        categoria: c.categoria || localItem?.categoria || (tipo === 'diplomado' ? 'Diplomados Oficiales' : tipo === 'taller' ? 'Talleres' : 'Cursos de Alta Especialización'),
-        num_modulos: c.num_modulos || localItem?.num_modulos || (localItem?.modulos ? localItem.modulos.length : 3),
+        categoria: c.categoria || localItem?.categoria || (tipo === 'taller' ? 'Talleres' : 'Cursos de Alta Especialización'),
+        num_modulos: c.num_modulos || localItem?.num_modulos || 1,
         taller_aplicable: c.taller_aplicable || localItem?.taller_aplicable || 'Ninguno',
         docente: c.docente || localItem?.docente || 'Por asignar',
-        duracion: c.duracion || '40 horas',
+        duracion: c.duracion || (tipo === 'taller' ? '20 horas' : '40 horas'),
         imagen: c.imagen || '/assets/images/daem/gestion-minera.webp',
-        nivel: c.nivel || 'Especialización',
-        precio: c.precio || 150.00,
+        nivel: c.nivel || (tipo === 'taller' ? 'Práctico' : 'Especialización'),
+        precio: c.precio || (tipo === 'taller' ? 100.00 : 150.00),
         modulos: (c.modulos && Array.isArray(c.modulos) && c.modulos.length > 0) ? c.modulos : (localItem?.modulos || [])
       };
     });
 
-    const diplomados = cursosMapeados.filter(c => c.tipo === 'diplomado');
-    const cursosEspecializacion = cursosMapeados.filter(c => c.tipo === 'curso');
-    const talleres = cursosMapeados.filter(c => c.tipo === 'taller');
+    const cursosEspecializacion = otrosCursosMapeados.filter(c => c.tipo === 'curso');
+    const talleres = otrosCursosMapeados.filter(c => c.tipo === 'taller');
+
+    const todos = [
+      ...diplomados,
+      ...(cursosEspecializacion.length > 0 ? cursosEspecializacion : local.cursosEspecializacion),
+      ...(talleres.length > 0 ? talleres : local.talleres)
+    ];
 
     return NextResponse.json({
-      cursos: cursosMapeados,
+      cursos: todos,
       diplomados: diplomados.length > 0 ? diplomados : local.diplomados,
       cursosEspecializacion: cursosEspecializacion.length > 0 ? cursosEspecializacion : local.cursosEspecializacion,
       talleres: talleres.length > 0 ? talleres : local.talleres,
@@ -314,6 +496,21 @@ export async function POST(request: Request) {
 
       const rawList = (res.data && res.data.length >= 10) ? res.data : local.todos;
 
+      // Asegurar que diplomados_lecciones también tenga datos
+      const { count: leccCount } = await admin.from('diplomados_lecciones').select('*', { count: 'exact', head: true });
+      if (!leccCount || leccCount === 0) {
+        const maestras = generarFilasMaestrasIniciales();
+        for (let i = 0; i < maestras.length; i += 80) {
+          await admin.from('diplomados_lecciones').insert(maestras.slice(i, i + 80));
+        }
+      }
+
+      // Reconstruir diplomados desde diplomados_lecciones
+      const { data: leccRows } = await admin.from('diplomados_lecciones').select('*').order('orden', { ascending: true });
+      const diplomados = (leccRows && leccRows.length > 0)
+        ? reconstruirDiplomadosDesdeLecciones(leccRows, rawList, local.diplomados)
+        : local.diplomados;
+
       const cursosMapeados = rawList.map((c: any, index: number) => {
         let tipo = c.tipo;
         if (!tipo) {
@@ -341,7 +538,6 @@ export async function POST(request: Request) {
         };
       });
 
-      const diplomados = cursosMapeados.filter(c => c.tipo === 'diplomado');
       const cursosEspecializacion = cursosMapeados.filter(c => c.tipo === 'curso');
       const talleres = cursosMapeados.filter(c => c.tipo === 'taller');
 
@@ -365,7 +561,8 @@ export async function POST(request: Request) {
 
     const tipoNormalizado = tipo || (categoria === 'Diplomados Oficiales' ? 'diplomado' : categoria === 'Talleres' ? 'taller' : 'curso');
     const codigoGen = codigo ? codigo.toUpperCase() : (tipoNormalizado === 'diplomado' ? 'DIP-99' : tipoNormalizado === 'taller' ? 'TAL-99' : 'CUR-99');
-    const idGen = id || `${tipoNormalizado}-${codigoGen.toLowerCase().replace(/[^a-z0-9]/g, '')}`;
+    const numDigits = codigoGen.replace(/[^0-9]/g, '');
+    const idGen = id || (tipoNormalizado === 'diplomado' && numDigits ? `dip-${numDigits.padStart(2, '0')}` : `${tipoNormalizado}-${codigoGen.toLowerCase().replace(/[^a-z0-9]/g, '')}`);
 
     const productoData = {
       id: idGen,
@@ -404,6 +601,12 @@ export async function POST(request: Request) {
       };
       const basicRes = await admin.from('cursos').upsert(basicData).select().maybeSingle();
       data = basicRes.data || productoData;
+    }
+
+    // Si es un diplomado y no se solicitó omitir la sincronización (ej. durante importación masiva directa de filas)
+    if (!body.skipSyncLecciones && tipoNormalizado === 'diplomado' && Array.isArray(modulos) && modulos.length > 0) {
+      const leccionRows = convertirModulosALeccionRows(codigoGen, titulo.toUpperCase(), modulos);
+      await syncLeccionesEnSupabase(admin, codigoGen, leccionRows);
     }
 
     try {
@@ -467,6 +670,19 @@ export async function PUT(request: Request) {
       data = basicRes.data || { id, ...updateFields };
     }
 
+    // Si es un diplomado y se proporcionaron módulos, sincronizar la tabla diplomados_lecciones
+    if (modulos !== undefined && Array.isArray(modulos)) {
+      const { data: cursoActual } = await admin.from('cursos').select('*').eq('id', id).maybeSingle();
+      const cod = (codigo || cursoActual?.codigo || (id.startsWith('dip-') ? `DIP-${id.replace(/[^0-9]/g, '').padStart(2, '0')}` : 'DIP-99')).toUpperCase();
+      const tit = (titulo || cursoActual?.titulo || 'DIPLOMADO').toUpperCase();
+      const tipoProd = cursoActual?.tipo || (id.startsWith('dip-') ? 'diplomado' : 'curso');
+
+      if (tipoProd === 'diplomado' || id.startsWith('dip-')) {
+        const leccionRows = convertirModulosALeccionRows(cod, tit, modulos);
+        await syncLeccionesEnSupabase(admin, cod, leccionRows);
+      }
+    }
+
     try {
       await admin.from('audit_logs').insert({
         usuario_email: 'admin@edumin.pe',
@@ -501,6 +717,15 @@ export async function DELETE(request: Request) {
 
     if (error) {
       console.error('Error al eliminar de Supabase:', error.message);
+    }
+
+    // Eliminar también lecciones asociadas en diplomados_lecciones si son diplomados
+    for (const idItem of ids) {
+      if (typeof idItem === 'string' && idItem.toLowerCase().startsWith('dip-')) {
+        const num = idItem.replace(/[^0-9]/g, '');
+        const code = `DIP-${num.padStart(2, '0')}`;
+        await admin.from('diplomados_lecciones').delete().ilike('CodigoDiplomado', code);
+      }
     }
 
     try {

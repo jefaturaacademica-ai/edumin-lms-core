@@ -33,16 +33,7 @@ export default function AuditoriaWebhooksPage() {
       const res = await fetch('/api/admin/auditoria');
       if (res.ok) {
         const data = await res.json();
-        if (data.logs && data.logs.length > 0) {
-          setLogs(data.logs);
-        } else {
-          // Datos mock iniciales si no hay eventos aún
-          setLogs([
-            { id: '1', usuario_email: 'admin@edumin.pe', accion: 'CUOTA_VALIDADA_MANUAL', detalles: { dni_ce: '76543210', estudiante: 'Lucero Martinez', cuota_nueva: 2 }, created_at: new Date(Date.now() - 1000 * 60 * 12).toISOString() },
-            { id: '2', usuario_email: 'sistema@n8n.io', accion: 'ALUMNO_MATRICULADO_N8N', detalles: { dni_ce: '45678912', estudiante: 'Marcos Quispe', paquete: 'FULL' }, created_at: new Date(Date.now() - 1000 * 60 * 45).toISOString() },
-            { id: '3', usuario_email: 'admin@edumin.pe', accion: 'PRORROGA_OTORGADA', detalles: { prorroga_hasta: '2026-09-27' }, created_at: new Date(Date.now() - 1000 * 60 * 120).toISOString() },
-          ]);
-        }
+        setLogs(Array.isArray(data.logs) ? data.logs : []);
       }
     } catch (e) {
       console.error('Error cargando logs:', e);

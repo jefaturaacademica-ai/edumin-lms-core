@@ -64,6 +64,7 @@ export default function Ficha360Modal({
   const [cargandoDiplomadoAccion, setCargandoDiplomadoAccion] = useState(false);
   const [nuevoCursoSeleccionado, setNuevoCursoSeleccionado] = useState<string>('');
   const [cargandoCursoAccion, setCargandoCursoAccion] = useState(false);
+  const [reiniciandoExamenModulo, setReiniciandoExamenModulo] = useState<string | null>(null);
 
   if (!alumnoSeleccionado) return null;
 
@@ -80,6 +81,38 @@ export default function Ficha360Modal({
       return;
     }
     await onRegistrarPago(undefined, { concepto: conceptoExtra, monto: montoNum });
+  };
+
+  const handleResetExamenModulo = async (diplomadoTitulo: string, moduloCodigo: string) => {
+    const confirmMsg = `¿Deseas reiniciar el intento de examen del "${moduloCodigo}" en "${diplomadoTitulo}" para el alumno ${alumnoSeleccionado.nombres} ${alumnoSeleccionado.apellidos}?\n\nEsto borrará la nota anterior y permitirá al alumno rendir su Examen Sustitutorio (S/ 25.00).`;
+    if (!window.confirm(confirmMsg)) return;
+
+    try {
+      setReiniciandoExamenModulo(moduloCodigo);
+      const res = await fetch('/api/admin/estudiantes', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'reset_examen_modulo',
+          studentId: alumnoSeleccionado.id,
+          dni_ce: alumnoSeleccionado.dni_ce,
+          diplomadoTitulo,
+          moduloCodigo
+        })
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || 'Error al reiniciar examen.');
+      }
+
+      alert('✅ Intento de examen reiniciado correctamente. El alumno ya puede rendir su examen sustitutorio.');
+      onRefetchEstudiantes?.();
+    } catch (err: any) {
+      alert(`❌ Error: ${err.message || 'No se pudo reiniciar el intento de examen.'}`);
+    } finally {
+      setReiniciandoExamenModulo(null);
+    }
   };
 
   return (
@@ -872,15 +905,57 @@ export default function Ficha360Modal({
 
                         <div className="space-y-3">
                           {modulosArray.map((m: any, mIdx: number) => {
-                            const modTitle = m.titulo || `Módulo 0${mIdx + 1}`;
+                            const modTitle = m.titulo || m.nombre || `Módulo 0${mIdx + 1}`;
+                            const modCodigoKey = m.codigo || `Módulo 0${mIdx + 1}`;
+
+                            // Buscar el módulo real en userDipInfo (datos reales sincronizados con Supabase)
+                            const userModInfo = (userDipInfo?.modulos || []).find((um: any) =>
+                              um.codigo === modCodigoKey ||
+                              um.id === modCodigoKey ||
+                              (um.nombre && m.titulo && um.nombre.toLowerCase().includes(m.titulo.toLowerCase()))
+                            ) || userDipInfo?.modulos?.[mIdx];
+
+                            const tieneNota = userModInfo?.nota !== undefined && userModInfo?.nota !== null;
+                            const notaNum = tieneNota ? Number(userModInfo.nota) : null;
+                            const estaAprobado = userModInfo?.completado || (notaNum !== null && notaNum >= 12);
+                            const haRendido = Boolean(userModInfo?.rendido || tieneNota);
+                            const estaReiniciando = reiniciandoExamenModulo === modCodigoKey;
+
                             const clases = m.clases || [];
                             return (
                               <div key={mIdx} className="bg-slate-50 dark:bg-slate-800/40 rounded-xl p-3 border border-slate-200 dark:border-slate-800 space-y-2">
-                                <div className="flex justify-between items-center border-b border-slate-200 dark:border-slate-800 pb-1.5">
+                                <div className="flex flex-wrap justify-between items-center gap-2 border-b border-slate-200 dark:border-slate-800 pb-2">
                                   <span className="font-bold text-xs text-slate-800 dark:text-slate-200">{modTitle}</span>
-                                  <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 font-bold px-2 py-0.5 rounded text-[10px]">
-                                    {mIdx === 0 ? 'Aprobado (Nota: 18)' : mIdx === 1 ? 'Aprobado (Nota: 16)' : 'En Curso'}
-                                  </span>
+                                  
+                                  <div className="flex items-center gap-2">
+                                    {haRendido && notaNum !== null ? (
+                                      <span className={`font-bold px-2 py-0.5 rounded text-[10px] border ${
+                                        estaAprobado
+                                          ? 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800'
+                                          : 'bg-rose-100 dark:bg-rose-950/60 text-rose-800 dark:text-rose-300 border-rose-300 dark:border-rose-800'
+                                      }`}>
+                                        {estaAprobado ? `Aprobado (Nota: ${notaNum.toString().padStart(2, '0')}/20)` : `Desaprobado (Nota: ${notaNum.toString().padStart(2, '0')}/20)`}
+                                      </span>
+                                    ) : (
+                                      <span className="bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold px-2 py-0.5 rounded text-[10px]">
+                                        Pendiente de Examen
+                                      </span>
+                                    )}
+
+                                    {/* Botón para reiniciar intento si ha rendido o desaprobó (Sustitutorio S/ 25) */}
+                                    {haRendido && (
+                                      <button
+                                        type="button"
+                                        disabled={estaReiniciando}
+                                        onClick={() => handleResetExamenModulo(nombreDipStr, modCodigoKey)}
+                                        className="bg-rose-600 hover:bg-rose-700 text-white font-bold text-[10px] px-2.5 py-1 rounded-md transition-colors flex items-center gap-1 shadow-2xs cursor-pointer disabled:opacity-50"
+                                        title="Borrar intento de examen para permitir que el alumno rinda su examen sustitutorio (S/ 25)"
+                                      >
+                                        <RefreshCw className={`w-3 h-3 ${estaReiniciando ? 'animate-spin' : ''}`} />
+                                        <span>{estaReiniciando ? 'Reiniciando...' : 'Borrar intento / Sustitutorio (S/ 25)'}</span>
+                                      </button>
+                                    )}
+                                  </div>
                                 </div>
                                 <div className="space-y-1 pl-1">
                                   {clases.length > 0 ? (

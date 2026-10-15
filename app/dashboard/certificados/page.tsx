@@ -13,7 +13,6 @@ import {
   Sparkles, 
   GraduationCap, 
   Lock, 
-  Wrench, 
   X,
   Eye,
   Share2,
@@ -88,43 +87,32 @@ export default function CertificadosPage() {
 
   const [copiadoLink, setCopiadoLink] = useState(false);
 
-  // ESTADO DE SIMULACIÓN DEV (SOLO DESARROLLO INTERNO)
-  const [estadoSimuladoDev, setEstadoSimuladoDev] = useState<'cero' | 'un_modular' | 'vista_actual'>('vista_actual');
-  const [mostrarPanelDev, setMostrarPanelDev] = useState(true);
-
   // Nombre completo del estudiante desde Supabase
   const nombreEstudianteCompleto = perfilEstudiante
     ? `${perfilEstudiante.nombres || ''} ${perfilEstudiante.apellidos || ''}`.trim()
-    : 'JUAN CARLOS QUISPE RAMOS';
+    : 'Estudiante EDUMIN';
 
   const paqueteUsuario = perfilEstudiante?.paquete_adquirido || 'COMPLETO';
 
   // 1. DIPLOMAS GENERALES DINÁMICOS DESDE SUPABASE
   const diplomadosProgreso = useMemo(() => {
-    if (!perfilEstudiante) {
-      return [
-        {
-          id: 'geometalurgia',
-          titulo: 'GEOMETALURGIA',
-          modularesAprobados: 3,
-          modularesTotales: 3,
-          promedio: 18.0,
-          completado: true,
-          fecha: '15/03/2026',
-          codigo: 'EDUMIN-DIP-71234567-GEO'
-        }
-      ];
-    }
+    if (!perfilEstudiante) return [];
 
     const rawDiplomados = parseDiplomadosFromProfile(perfilEstudiante);
     return rawDiplomados.map((d: any, idx: number) => {
       const modulos = d.modulos || [];
-      const modulosCompletados = modulos.filter((m: any) => m.completado);
-      const modularesAprobados = modulosCompletados.length;
-      const modularesTotales = modulos.length || 3;
-      const sumaNotas = modulosCompletados.reduce((sum: number, m: any) => sum + (Number(m.nota) || 0), 0);
+      // Solo consideramos módulos aprobados con nota mínima de 12/20
+      const modulosAprobados = modulos.filter((m: any) => {
+        const nota = m.nota !== undefined ? Number(m.nota) : (m.completado ? 18 : 0);
+        return Boolean(m.completado) && nota >= 12;
+      });
+      const modularesAprobados = modulosAprobados.length;
+      const modularesTotales = Math.max(3, modulos.length || 3);
+      const sumaNotas = modulosAprobados.reduce((sum: number, m: any) => sum + (Number(m.nota) || 18), 0);
       const promedio = modularesAprobados > 0 ? Number((sumaNotas / modularesAprobados).toFixed(1)) : 0;
-      const completado = d.completado || (modularesAprobados === modularesTotales && modularesTotales > 0);
+      
+      // REGLA ACADÉMICA ESTRICTA: El diploma general se otorga ÚNICAMENTE si aprueba los 3 módulos con nota >= 12
+      const completado = modularesAprobados >= 3;
 
       return {
         id: d.id || d.slug || `dip-${idx + 1}`,
@@ -141,15 +129,7 @@ export default function CertificadosPage() {
 
   // 2. CERTIFICADOS MODULARES DINÁMICOS DESDE SUPABASE
   const certificadosModulares = useMemo(() => {
-    if (!perfilEstudiante) {
-      return [
-        { id: 1, modulo: 'Módulo 01: GEOTECNIA DE SUELOS Y ROCAS', diplomado: 'GEOMETALURGIA', nota: 18, fecha: '15/01/2026', codigo: 'EDUMIN-MOD-71234567-GEO1' },
-        { id: 2, modulo: 'Módulo 02: MONITOREO GEOTÉCNICO', diplomado: 'GEOMETALURGIA', nota: 17, fecha: '20/02/2026', codigo: 'EDUMIN-MOD-71234567-GEO2' },
-        { id: 3, modulo: 'Módulo 03: ANÁLISIS HIDROGEOLÓGICO', diplomado: 'GEOMETALURGIA', nota: 19, fecha: '15/03/2026', codigo: 'EDUMIN-MOD-71234567-GEO3' },
-        { id: 4, modulo: 'Módulo 01: Marco Legal e Institucional del Sector Minero', diplomado: 'DERECHO MINERO', nota: 18, fecha: '10/02/2026', codigo: 'EDUMIN-MOD-71234567-DER1' },
-        { id: 5, modulo: 'Módulo 02: Procedimientos Catastrales y Concesiones', diplomado: 'DERECHO MINERO', nota: 16, fecha: '05/03/2026', codigo: 'EDUMIN-MOD-71234567-DER2' },
-      ];
-    }
+    if (!perfilEstudiante) return [];
 
     const rawDiplomados = parseDiplomadosFromProfile(perfilEstudiante);
     const result: any[] = [];
@@ -157,12 +137,14 @@ export default function CertificadosPage() {
 
     rawDiplomados.forEach((d: any) => {
       (d.modulos || []).forEach((m: any) => {
-        if (m.completado) {
+        const nota = m.nota !== undefined ? Number(m.nota) : (m.completado ? 18 : 0);
+        // Solo emitir certificado modular si aprobó con nota >= 12
+        if (Boolean(m.completado) && nota >= 12) {
           result.push({
             id: counter++,
             modulo: `${m.codigo || 'Módulo'}: ${m.nombre}`,
             diplomado: d.titulo,
-            nota: m.nota || 18,
+            nota: nota,
             fecha: m.fecha || '15/01/2026',
             codigo: m.codigo_cert || `EDUMIN-MOD-${perfilEstudiante.dni_ce || '71234567'}-${counter}`
           });
@@ -186,13 +168,7 @@ export default function CertificadosPage() {
 
   // 3. CERTIFICADOS DE CURSOS DINÁMICOS DESDE SUPABASE
   const certificadosCursos = useMemo(() => {
-    if (!perfilEstudiante) {
-      return [
-        { id: 'c1', titulo: "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783", categoria: "Seguridad & SSOMA", horas: "24 Horas", fecha: "18/02/2026", nota: 18, codigo: 'EDUMIN-CUR-71234567-01' },
-        { id: 'c2', titulo: "IPERC CONTINUO EN TRABAJOS DE ALTO RIESGO", categoria: "Seguridad & SSOMA", horas: "16 Horas", fecha: "05/03/2026", nota: 17, codigo: 'EDUMIN-CUR-71234567-02' },
-        { id: 't1', titulo: "TALLER PRÁCTICO EN VIVO: PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS", categoria: "Taller Especializado", horas: "08 Horas", fecha: "25/02/2026", nota: 19, codigo: 'EDUMIN-TAL-71234567-01' }
-      ];
-    }
+    if (!perfilEstudiante) return [];
 
     const rawCursos = parseCursosFromProfile(perfilEstudiante);
     return rawCursos.filter((c: any) => c.completado).map((c: any, idx: number) => ({
@@ -206,9 +182,13 @@ export default function CertificadosPage() {
     }));
   }, [perfilEstudiante]);
 
-  const [diplomadoSeleccionado, setDiplomadoSeleccionado] = useState(
-    diplomadosProgreso[0]?.titulo || 'GEOMETALURGIA'
-  );
+  const [diplomadoSeleccionado, setDiplomadoSeleccionado] = useState('');
+
+  useEffect(() => {
+    if (diplomadosProgreso.length > 0 && (!diplomadoSeleccionado || !diplomadosProgreso.some(d => d.titulo === diplomadoSeleccionado))) {
+      setDiplomadoSeleccionado(diplomadosProgreso[0].titulo);
+    }
+  }, [diplomadosProgreso, diplomadoSeleccionado]);
 
   // Habilitación de Certificados Especiales
   const tieneDiplomaGeneral = diplomadosProgreso.some(d => d.completado);
@@ -661,7 +641,7 @@ export default function CertificadosPage() {
               <div className={`rounded-3xl p-8 text-white shadow-xl relative overflow-hidden flex flex-col justify-between border transition-all ${
                 tieneDiplomaGeneral 
                   ? 'bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 border-slate-800' 
-                  : (estadoSimuladoDev === 'un_modular' ? 'bg-gradient-to-br from-purple-950/60 via-slate-900 to-slate-900 border-purple-500/40' : 'bg-slate-900/60 border-slate-800/80 opacity-80')
+                  : 'bg-slate-900/60 border-slate-800/80 opacity-80'
               }`}>
                 <div>
                   <div className="flex justify-between items-start mb-4">
@@ -670,15 +650,9 @@ export default function CertificadosPage() {
                         <CheckCircle2 className="size-3" /> Habilitado
                       </span>
                     ) : (
-                      estadoSimuladoDev === 'un_modular' ? (
-                        <span className="text-[11px] font-bold text-purple-300 bg-purple-500/20 border border-purple-500/30 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                          <Sparkles className="size-3" /> No Incluido en tu Plan
-                        </span>
-                      ) : (
-                        <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                          <Lock className="size-3" /> Bloqueado
-                        </span>
-                      )
+                      <span className="text-[11px] font-bold text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                        <Lock className="size-3" /> Bloqueado
+                      </span>
                     )}
                   </div>
                   <h3 className="text-xl font-bold text-white">San Ignacio University (Miami, FL)</h3>
@@ -686,14 +660,7 @@ export default function CertificadosPage() {
                     Certificación académica internacional expedida desde EE.UU. con validez global en tu programa de alta especialización.
                   </p>
 
-                  {!tieneDiplomaGeneral && estadoSimuladoDev === 'un_modular' && (
-                    <p className="text-xs text-purple-300 mt-3 font-medium flex items-center gap-1.5 bg-purple-500/10 p-2.5 rounded-xl border border-purple-500/20">
-                      <Sparkles className="size-4 shrink-0 text-purple-400" />
-                      Tu plan no incluye esta acreditación internacional. Puedes comprarla directamente para certificar tu programa.
-                    </p>
-                  )}
-
-                  {!tieneDiplomaGeneral && estadoSimuladoDev !== 'un_modular' && (
+                  {!tieneDiplomaGeneral && (
                     <p className="text-xs text-amber-400 mt-3 font-medium flex items-center gap-1.5 bg-amber-500/10 p-2.5 rounded-xl border border-amber-500/20">
                       <AlertTriangle className="size-4 shrink-0" />
                       Se habilita únicamente al obtener tu Diploma General de Diplomado (3 de 3 módulos aprobados).
@@ -709,21 +676,12 @@ export default function CertificadosPage() {
                     <Globe className="w-4 h-4" /> Solicitar Certificación MIAMI
                   </button>
                 ) : (
-                  estadoSimuladoDev === 'un_modular' ? (
-                    <button
-                      onClick={() => abrirModal('MIAMI')}
-                      className="mt-6 w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-3 rounded-xl transition-all shadow-md flex items-center justify-center gap-2 text-xs sm:text-sm cursor-pointer"
-                    >
-                      <ShoppingCart className="w-4 h-4" /> Comprar Acreditación Internacional ($120 USD)
-                    </button>
-                  ) : (
-                    <button
-                      disabled
-                      className="mt-6 w-full bg-slate-800 text-slate-500 font-bold py-3 rounded-xl border border-slate-700 flex items-center justify-center gap-2 text-xs sm:text-sm cursor-not-allowed"
-                    >
-                      <Globe className="w-4 h-4" /> Requisito: Obten tu Diploma General
-                    </button>
-                  )
+                  <button
+                    disabled
+                    className="mt-6 w-full bg-slate-800 text-slate-500 font-bold py-3 rounded-xl border border-slate-700 flex items-center justify-center gap-2 text-xs sm:text-sm cursor-not-allowed"
+                  >
+                    <Globe className="w-4 h-4" /> Requisito: Obten tu Diploma General
+                  </button>
                 )}
               </div>
 
@@ -1131,71 +1089,7 @@ export default function CertificadosPage() {
 
       </div>
 
-      {/* PANEL FLOTANTE DE SIMULACIÓN DEV (DESARROLLO INTERNO) */}
-      {mostrarPanelDev && (
-        <aside className="fixed bottom-5 right-5 z-40 bg-slate-900/95 text-white border border-slate-700/80 backdrop-blur-md p-4 rounded-2xl shadow-2xl max-w-xs space-y-3">
-          <div className="flex items-center justify-between pb-2 border-b border-slate-800">
-            <span className="text-xs font-bold text-amber-400 flex items-center gap-1.5">
-              <Wrench className="size-3.5" /> Simulador Dev (Interno)
-            </span>
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded-md font-mono">v1.0</span>
-              <button 
-                onClick={() => setMostrarPanelDev(false)}
-                className="text-slate-400 hover:text-white transition p-0.5 rounded-lg hover:bg-slate-800 cursor-pointer"
-                title="Cerrar panel de simulación"
-              >
-                <X className="size-4" />
-              </button>
-            </div>
-          </div>
 
-          <p className="text-[11px] text-slate-300">
-            Prueba la vista de certificados según modulares:
-          </p>
-
-          <div className="space-y-1.5 text-xs">
-            <button
-              onClick={() => setEstadoSimuladoDev('cero')}
-              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
-                estadoSimuladoDev === 'cero' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-              }`}
-            >
-              <div>
-                <span className="block font-bold">1. Sin Modulares (Inicio)</span>
-                <span className="text-[10px] opacity-80">0 Modulares, 1 Dip. (0/3), 4 Cursos</span>
-              </div>
-              {estadoSimuladoDev === 'cero' && <CheckCircle2 className="size-3.5 text-white shrink-0" />}
-            </button>
-
-            <button
-              onClick={() => setEstadoSimuladoDev('un_modular')}
-              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
-                estadoSimuladoDev === 'un_modular' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-              }`}
-            >
-              <div>
-                <span className="block font-bold">2. Con 1 Modular Aprobado</span>
-                <span className="text-[10px] opacity-80">1 Modular, 1 Dip. Pendiente (1/3), 4 Cursos</span>
-              </div>
-              {estadoSimuladoDev === 'un_modular' && <CheckCircle2 className="size-3.5 text-white shrink-0" />}
-            </button>
-
-            <button
-              onClick={() => setEstadoSimuladoDev('vista_actual')}
-              className={`w-full text-left px-3 py-2 rounded-xl transition text-[11px] font-medium flex items-center justify-between cursor-pointer ${
-                estadoSimuladoDev === 'vista_actual' ? 'bg-indigo-600 text-white font-bold' : 'bg-slate-800/80 hover:bg-slate-800 text-slate-300'
-              }`}
-            >
-              <div>
-                <span className="block font-bold">3. Vista Mixta (Dip. 1 OK / Dip. 2 Bloq.)</span>
-                <span className="text-[10px] opacity-80">Dip 1 (3/3 100%), Dip 2 (2/3 Bloqueado)</span>
-              </div>
-              {estadoSimuladoDev === 'vista_actual' && <CheckCircle2 className="size-3.5 text-white shrink-0" />}
-            </button>
-          </div>
-        </aside>
-      )}
 
     </main>
   );

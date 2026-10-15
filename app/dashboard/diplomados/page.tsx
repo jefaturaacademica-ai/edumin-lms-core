@@ -30,7 +30,7 @@ import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { ALL_DIPLOMADOS, getDiplomadoBySlug, getDiplomadoByTitleOrSlug, DiplomadoCompleto } from '@/lib/data/diplomadosData';
-import { parseDiplomadosFromProfile } from '@/lib/utils/profileParser';
+import { parseDiplomadosFromProfile, formatearCodigoModulo, calcularAvanceModuloGranular } from '@/lib/utils/profileParser';
 
 export default function DiplomadosPage() {
   const [paquete, setPaquete] = useState<string>('FULL');
@@ -40,6 +40,7 @@ export default function DiplomadosPage() {
 
   // Diplomados reales obtenidos dinámicamente desde Supabase
   const [diplomadosEstudianteReal, setDiplomadosEstudianteReal] = useState<any[]>([]);
+  const [catalogoSupabase, setCatalogoSupabase] = useState<any[]>([]);
 
   // Estado para desplegables (acordeón) de diplomados
   const [diplomadosAbiertos, setDiplomadosAbiertos] = useState<Record<string, boolean>>({});
@@ -136,9 +137,22 @@ export default function DiplomadosPage() {
   useEffect(() => {
     async function cargarPerfilYSupabase() {
       try {
-        const res = await fetch('/api/dashboard/me');
-        if (res.ok) {
-          const data = await res.json();
+        const [meRes, catRes] = await Promise.all([
+          fetch('/api/dashboard/me').catch(() => null),
+          fetch('/api/admin/catalogo').catch(() => null)
+        ]);
+
+        let liveDiplomados: any[] = [];
+        if (catRes && catRes.ok) {
+          const catData = await catRes.json();
+          liveDiplomados = catData.diplomados || [];
+          if (liveDiplomados.length > 0) {
+            setCatalogoSupabase(liveDiplomados);
+          }
+        }
+
+        if (meRes && meRes.ok) {
+          const data = await meRes.json();
           const prof = data.profile;
           const matriculas = data.matriculas || [];
 
@@ -149,58 +163,99 @@ export default function DiplomadosPage() {
             const listMap: any[] = [];
             const addedSlugs = new Set<string>();
 
-            // 1. Matrículas de tipo DIPLOMADO en Supabase
-            (matriculas || []).forEach((m: any) => {
-              if (m.tipo === 'DIPLOMADO' || m.tipo === 'diplomado' || !m.tipo) {
-                const matched = getDiplomadoByTitleOrSlug(m.titulo || m.item_id);
-                if (matched && !addedSlugs.has(matched.slug)) {
-                  addedSlugs.add(matched.slug);
-                  listMap.push({
+            // Parsear diplomados JSON del perfil en Supabase
+            const parsedDiplomadosJson = parseDiplomadosFromProfile(prof);
+            const dipJsonBySlug = new Map<string, any>();
+            parsedDiplomadosJson.forEach((d: any) => {
+              const matched = getDiplomadoByTitleOrSlug(d.titulo || d.slug || d.id);
+              if (matched) {
+                const existing = dipJsonBySlug.get(matched.slug);
+                if (!existing) {
+                  dipJsonBySlug.set(matched.slug, d);
+                } else {
+                  const mergedCompMap = { ...existing.completadosMap, ...d.completadosMap };
+                  const maxAvance = Math.max(existing.avance || 0, d.avance || 0);
+                  dipJsonBySlug.set(matched.slug, {
+                    ...existing,
+                    ...d,
+                    slug: matched.slug,
                     id: matched.slug,
-                    titulo: matched.titulo,
-                    avance: m.avance_porcentaje ?? prof.avance_porcentaje ?? 0,
-                    imagen: matched.imagen,
-                    modulos: matched.modulos.map(mod => ({
-                      id: mod.codigo,
-                      titulo: `${mod.codigo}: ${mod.nombre}`,
-                      docente: mod.docente
-                    }))
+                    avance: maxAvance,
+                    completadosMap: mergedCompMap
                   });
                 }
               }
             });
 
-            // 2. Parsear diplomados JSON del perfil en Supabase
-            const parsedDiplomadosJson = parseDiplomadosFromProfile(prof);
+            // Helper para procesar e incluir un diplomado
+            const agregarDiplomadoALista = (matched: any, dipJson?: any) => {
+              if (addedSlugs.has(matched.slug)) return;
+              addedSlugs.add(matched.slug);
 
+              const compMap = dipJson?.completadosMap || {};
+
+              // Buscar si existe versión en vivo actualizada desde Supabase (/api/admin/catalogo)
+              const liveDip = liveDiplomados.find((ld: any) => 
+                ld.id === matched.slug || 
+                (ld.codigo && ld.codigo.toLowerCase() === matched.id?.toLowerCase()) ||
+                (ld.codigo && matched.numId && ld.codigo.toLowerCase() === `dip-${String(matched.numId).padStart(2, '0')}`.toLowerCase()) ||
+                (ld.titulo && matched.titulo && ld.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '') === matched.titulo.toLowerCase().replace(/[^a-z0-9]+/g, ''))
+              );
+
+              const modulosSource = (liveDip && Array.isArray(liveDip.modulos) && liveDip.modulos.length > 0)
+                ? liveDip.modulos
+                : matched.modulos;
+
+              const modulosMap = modulosSource.map((mod: any, mIdx: number) => {
+                const modJson = dipJson?.modulos?.[mIdx];
+                const avanceMod = calcularAvanceModuloGranular(mod, mIdx, compMap, modJson);
+                const codigoFormateado = mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+                return {
+                  id: codigoFormateado,
+                  codigo: codigoFormateado,
+                  nombre: mod.nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
+                  titulo: `${codigoFormateado}: ${mod.nombre || ''}`,
+                  docente: mod.docente || '',
+                  clases: mod.clases || [],
+                  avance: avanceMod,
+                  nota: modJson?.nota ?? 0,
+                  completado: avanceMod === 100
+                };
+              });
+
+              const sumAvanceModulos = modulosMap.reduce((acc: number, m: any) => acc + m.avance, 0);
+              const avanceCalc = modulosMap.length > 0 
+                ? Math.round(sumAvanceModulos / modulosMap.length) 
+                : 0;
+              const avanceGuardado = (typeof dipJson?.avance === 'number' && dipJson.avance > 0) ? dipJson.avance : 0;
+              const avanceFinal = Math.max(avanceGuardado, avanceCalc);
+
+              listMap.push({
+                id: matched.slug,
+                titulo: (liveDip?.titulo || matched.titulo).toUpperCase(),
+                avance: avanceFinal,
+                imagen: liveDip?.imagen || matched.imagen,
+                completadosMap: compMap,
+                modulos: modulosMap
+              });
+            };
+
+            // 1. Matrículas de tipo DIPLOMADO en Supabase
+            (matriculas || []).forEach((m: any) => {
+              if (m.tipo === 'DIPLOMADO' || m.tipo === 'diplomado' || !m.tipo) {
+                const matched = getDiplomadoByTitleOrSlug(m.titulo || m.item_id);
+                if (matched) {
+                  const dipJson = dipJsonBySlug.get(matched.slug);
+                  agregarDiplomadoALista(matched, dipJson);
+                }
+              }
+            });
+
+            // 2. Diplomados JSON del perfil en Supabase
             parsedDiplomadosJson.forEach((dipJson) => {
               const matched = getDiplomadoByTitleOrSlug(dipJson.titulo || dipJson.slug);
-              if (matched && !addedSlugs.has(matched.slug)) {
-                addedSlugs.add(matched.slug);
-
-                // Calcular avance dinámico desde los módulos del diplomado en JSON
-                let avanceCalc = typeof dipJson.avance === 'number' ? dipJson.avance : 0;
-                if (avanceCalc === 0 && Array.isArray(dipJson.modulos) && dipJson.modulos.length > 0) {
-                  const compCount = dipJson.modulos.filter(m => Boolean(m.completado)).length;
-                  avanceCalc = Math.round((compCount / dipJson.modulos.length) * 100);
-                }
-
-                listMap.push({
-                  id: matched.slug,
-                  titulo: matched.titulo,
-                  avance: avanceCalc,
-                  imagen: matched.imagen,
-                  modulos: matched.modulos.map((mod, mIdx) => {
-                    const modJson = dipJson.modulos?.[mIdx];
-                    return {
-                      id: mod.codigo,
-                      titulo: `${mod.codigo}: ${mod.nombre}`,
-                      docente: mod.docente,
-                      nota: modJson?.nota ?? 0,
-                      completado: Boolean(modJson?.completado)
-                    };
-                  })
-                });
+              if (matched) {
+                agregarDiplomadoALista(matched, dipJson);
               }
             });
 
@@ -228,7 +283,23 @@ export default function DiplomadosPage() {
     return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   };
 
-  const diplomadosFiltrados = ALL_DIPLOMADOS.filter(dip => {
+  const listaDiplomadosCatalogo = ALL_DIPLOMADOS.map((dip) => {
+    const live = catalogoSupabase.find((c: any) => 
+      c.id === dip.slug || 
+      (c.codigo && dip.numId && c.codigo.toLowerCase() === `dip-${String(dip.numId).padStart(2, '0')}`.toLowerCase()) ||
+      (c.titulo && dip.titulo && c.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '') === dip.titulo.toLowerCase().replace(/[^a-z0-9]+/g, ''))
+    );
+    if (!live) return dip;
+    return {
+      ...dip,
+      titulo: live.titulo || dip.titulo,
+      modulosCount: Array.isArray(live.modulos) ? live.modulos.length : dip.modulosCount,
+      modulos: Array.isArray(live.modulos) && live.modulos.length > 0 ? live.modulos : dip.modulos,
+      imagen: live.imagen || dip.imagen
+    };
+  });
+
+  const diplomadosFiltrados = listaDiplomadosCatalogo.filter(dip => {
     const tituloNormalizado = normalizarTexto(dip.titulo);
     const busquedaNormalizada = normalizarTexto(busqueda);
     
@@ -382,8 +453,11 @@ export default function DiplomadosPage() {
                   const estaAbierto = diplomadosAbiertos[diplomado.id] !== false;
 
                   // Conteo exacto de módulos completados
-                  const modulosCompletadosCount = diplomado.modulos.filter((_: unknown, idx: number) => {
-                    return esCompletado || (diplomado.avance > 40 && idx === 0);
+                  const modulosCompletadosCount = diplomado.modulos.filter((m: any, idx: number) => {
+                    const av = typeof m.avance === 'number' 
+                      ? m.avance 
+                      : calcularAvanceModuloGranular(m, idx, diplomado.completadosMap);
+                    return av === 100;
                   }).length;
                   const porcentajeModulos = Math.round((modulosCompletadosCount / diplomado.modulos.length) * 100);
 
@@ -422,13 +496,16 @@ export default function DiplomadosPage() {
                       {/* Grilla de Tarjetitas por Módulo */}
                       {estaAbierto && (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
-                          {diplomado.modulos.map((modulo: { id?: string; titulo: string; clasesCount?: number }, idx: number) => {
-                            const esModuloCompletado = esCompletado || (diplomado.avance > 40 && idx === 0);
-                            const esModuloEnProgreso = !esCompletado && ((diplomado.avance > 0 && idx === 1) || (diplomado.avance <= 40 && idx === 0));
-                            const esModuloPorIniciar = !esModuloCompletado && !esModuloEnProgreso;
-                            const avanceModulo = esModuloCompletado ? 100 : (esModuloEnProgreso ? 50 : 0);
+                          {diplomado.modulos.map((modulo: any, idx: number) => {
+                            const avanceModulo = typeof modulo.avance === 'number' 
+                              ? modulo.avance 
+                              : calcularAvanceModuloGranular(modulo, idx, diplomado.completadosMap);
 
-                            // Centralización de estilos e información por estado del módulo (Texto de botón en plural: 'clases')
+                            const esModuloCompletado = avanceModulo === 100;
+                            const esModuloEnProgreso = avanceModulo > 0 && avanceModulo < 100;
+                            const esModuloPorIniciar = avanceModulo === 0;
+
+                            // Centralización de estilos e información por estado del módulo
                             const infoEstadoModulo = esModuloCompletado
                               ? {
                                   label: 'Completado',
@@ -481,7 +558,7 @@ export default function DiplomadosPage() {
                                   />
                                   <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none">
                                     <span className="text-[11px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0">
-                                      Módulo {idx + 1}
+                                      {formatearCodigoModulo(modulo.codigo || modulo.id, idx)}
                                     </span>
                                     <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border backdrop-blur-md shrink-0 ${infoEstadoModulo.badgeBg}`}>
                                       <IconoEstadoMod className="size-3.5" /> {infoEstadoModulo.label}

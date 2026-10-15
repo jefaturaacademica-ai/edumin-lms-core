@@ -12,11 +12,11 @@ import AnularPagoModal from '@/components/admin/anular-pago-modal';
 import ReciboModal from '@/components/admin/recibo-modal';
 import EditarCronogramaModal from '@/components/admin/editar-cronograma-modal';
 import Ficha360Modal from '@/components/admin/ficha-360-modal';
-import { MOCK_ESTUDIANTES, EstudianteCompleto } from '@/lib/data/mockStudents';
+import { EstudianteCompleto } from '@/lib/data/mockStudents';
 
 export default function AdminDashboard360() {
   const [activeTab, setActiveTab] = useState<'analitica' | 'tesoreria'>('analitica');
-  const [estudiantes, setEstudiantes] = useState<EstudianteCompleto[]>(MOCK_ESTUDIANTES);
+  const [estudiantes, setEstudiantes] = useState<EstudianteCompleto[]>([]);
   const [cargandoEstudiantes, setCargandoEstudiantes] = useState(true);
 
   // Filtros Cruzados / Múltiples
@@ -75,12 +75,12 @@ export default function AdminDashboard360() {
       const res = await fetch('/api/admin/estudiantes');
       if (res.ok) {
         const data = await res.json();
-        if (data.estudiantes && data.estudiantes.length > 0) {
+        if (Array.isArray(data.estudiantes)) {
           setEstudiantes(data.estudiantes);
           setAlumnoSeleccionado((prev) => {
             if (!prev) return null;
             const updated = data.estudiantes.find((e: EstudianteCompleto) => e.id === prev.id || e.dni_ce === prev.dni_ce);
-            return updated || prev;
+            return updated || null;
           });
         }
       }

@@ -56,9 +56,7 @@ function ReproductorContent() {
   const [recursoActivoInfo, setRecursoActivoInfo] = useState<string>('Clase Magistral en Video');
   const [tabActiva, setTabActiva] = useState<'resumen' | 'recursos' | 'foro'>('resumen');
   const [comentario, setComentario] = useState('');
-  const [listaComentarios, setListaComentarios] = useState([
-    { autor: 'Docente Titular', texto: `Bienvenidos a la clase. Revisen el material de lectura y plantillas adjuntas en la plataforma.`, fecha: 'Hace 1 día' }
-  ]);
+  const [listaComentarios, setListaComentarios] = useState<{ autor: string; texto: string; fecha: string }[]>([]);
 
   // Cargar datos de Supabase (/api/dashboard/me y /api/admin/catalogo)
   useEffect(() => {
@@ -339,10 +337,10 @@ function ReproductorContent() {
             {contenidoPrincipal === 'resumen_video' && (
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-950 via-slate-900 to-black flex flex-col items-center justify-center p-8">
                 <Video className="w-12 h-12 text-indigo-400 mb-3 animate-pulse" />
-                <h3 className="text-lg font-bold text-white mb-2">Video Cápsula Resumen</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Resumen en Video</h3>
                 <iframe 
                   src={leccionActual.iframe_url || "https://www.youtube.com/embed/dQw4w9WgXcQ"} 
-                  title="Resumen Video"
+                  title="Resumen en Video"
                   className="w-full max-w-md h-40 rounded-xl border border-slate-700"
                   allowFullScreen
                 />
@@ -352,7 +350,7 @@ function ReproductorContent() {
             {contenidoPrincipal === 'resumen_audio' && (
               <div className="absolute inset-0 bg-gradient-to-br from-emerald-950 via-slate-900 to-black flex flex-col items-center justify-center p-8">
                 <Headphones className="w-12 h-12 text-emerald-400 mb-3" />
-                <h3 className="text-lg font-bold text-white mb-2">Podcast Audio de Cátedra</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Resumen en Audio</h3>
                 <div className="w-full max-w-md bg-slate-800 p-4 rounded-2xl flex items-center gap-4">
                   <button className="size-10 rounded-full bg-emerald-600 text-white font-bold">▶</button>
                   <div className="flex-1 text-left">
@@ -488,7 +486,7 @@ function ReproductorContent() {
                     <div className="flex items-center gap-3">
                       <Video className="w-6 h-6 text-indigo-400" />
                       <div>
-                        <h4 className="font-bold text-white text-sm">Cápsula de Resumen de Clase</h4>
+                        <h4 className="font-bold text-white text-sm">Resumen en Video</h4>
                         <span className="text-xs text-slate-500">Video explicativo</span>
                       </div>
                     </div>

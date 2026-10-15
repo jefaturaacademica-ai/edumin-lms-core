@@ -25,14 +25,21 @@ import Link from 'next/link';
 import { getDiplomadoBySlug } from '@/lib/data/diplomadosData';
 import { getDriveVideoForClass } from '@/lib/data/driveVideos';
 import { useTheme } from '@/context/theme-context';
-import { parseDiplomadosFromProfile } from '@/lib/utils/profileParser';
+import { useProfile } from '@/context/profile-context';
+import { parseDiplomadosFromProfile, formatearCodigoModulo } from '@/lib/utils/profileParser';
+import { 
+  obtenerRecursosConLinks, 
+  convertirFilasAListaModulos, 
+  LeccionRow 
+} from '@/lib/data/diplomadosLeccionesService';
 
 export interface RecursoItem {
   id: string;
-  tipo: 'pdf' | 'video' | 'audio' | 'interactivo' | 'excel';
+  tipo: 'pdf' | 'video' | 'audio' | 'interactivo' | 'excel' | 'material';
   titulo: string;
   descripcion: string;
   archivo?: string;
+  url?: string;
   duracion?: string;
 }
 
@@ -68,13 +75,25 @@ export default function ReproductorClasesPage() {
   const moduloQuery = searchParams.get('modulo');
 
   const { esOscuro } = useTheme();
+  const { nombres, apellidos } = useProfile();
 
   // Estados de datos de Supabase
   const [loading, setLoading] = useState(true);
   const [completadosMap, setCompletadosMap] = useState<Record<string, boolean>>({});
   const [catalogoMateriales, setCatalogoMateriales] = useState<any>(null);
+  const [leccionesTabla, setLeccionesTabla] = useState<LeccionRow[]>([]);
+  const [recursoUrlActivo, setRecursoUrlActivo] = useState<string>('');
   const [guardandoAvance, setGuardandoAvance] = useState(false);
   const [temasAbiertosMap, setTemasAbiertosMap] = useState<Record<string, boolean>>({});
+
+  // Estados del Examen del Módulo
+  const [notasModulosMap, setNotasModulosMap] = useState<Record<string, number>>({});
+  const [examenActivoModal, setExamenActivoModal] = useState<{ moduloCodigo: string; moduloNombre: string; moduloIdx: number } | null>(null);
+  const [pasoModalExamen, setPasoModalExamen] = useState<'indicaciones' | 'cuestionario' | 'resultado' | 'ver_intento'>('indicaciones');
+  const [respuestasExamen, setRespuestasExamen] = useState<Record<number, number>>({});
+  const [respuestasPorModulo, setRespuestasPorModulo] = useState<Record<string, Record<number, number>>>({});
+  const [guardandoExamen, setGuardandoExamen] = useState(false);
+  const [resultadoExamen, setResultadoExamen] = useState<{ nota: number; aprobado: boolean } | null>(null);
 
   const toggleTema = (temaId: string) => {
     setTemasAbiertosMap(prev => ({
@@ -83,13 +102,164 @@ export default function ReproductorClasesPage() {
     }));
   };
 
-  // Cargar datos de Supabase (/api/dashboard/me y /api/admin/catalogo)
+  // Generador de 5 preguntas objetivas por módulo
+  const generarPreguntasExamenModulo = (modCodigo: string, modNombre: string) => {
+    return [
+      {
+        id: 1,
+        pregunta: `¿Cuál es el marco regulatorio y técnico fundamental abordado en ${modNombre}?`,
+        opciones: [
+          'Reglamentos y estándares técnicos de cumplimiento obligatorio en el sector',
+          'Directivas informativas sin carácter vinculante',
+          'Manuales de usuario informáticos sin impacto legal',
+          'Protocolos internacionales no aplicables a la gestión nacional'
+        ],
+        respuestaCorrecta: 0
+      },
+      {
+        id: 2,
+        pregunta: `En la evaluación técnica de ${modNombre}, ¿qué criterio es prioritario?`,
+        opciones: [
+          'Desestimar los reportes de campo y priorizar la rapidez',
+          'Análisis integral de riesgos y cumplimiento de estándares de calidad y seguridad',
+          'Considerar únicamente los costos de inversión inicial',
+          'Omitir los procedimientos de fiscalización'
+        ],
+        respuestaCorrecta: 1
+      },
+      {
+        id: 3,
+        pregunta: `¿Qué herramienta o procedimiento se aplica para garantizar la eficiencia operacional en ${modNombre}?`,
+        opciones: [
+          'Monitoreo continuo de indicadores KPI y auditoría de procesos',
+          'Registro manual informal en hojas sueltas',
+          'Inspecciones aleatorias sin periodicidad ni formato',
+          'Estimaciones empíricas sin sustento técnico'
+        ],
+        respuestaCorrecta: 0
+      },
+      {
+        id: 4,
+        pregunta: `¿Cuál es el objetivo principal del análisis de casuística práctica en ${modNombre}?`,
+        opciones: [
+          'Cumplir con una formalidad documental',
+          'Resolver escenarios reales mediante la aplicación directa de normativas y estándares',
+          'Generar archivos administrativos de almacenamiento',
+          'Evitar el uso de metodologías modernas de gestión'
+        ],
+        respuestaCorrecta: 1
+      },
+      {
+        id: 5,
+        pregunta: `Para lograr la aprobación del módulo en ${modNombre}, ¿cuál es la nota mínima requerida sobre 20?`,
+        opciones: [
+          'Nota mínima de 08 / 20',
+          'Nota mínima de 10 / 20',
+          'Nota mínima aprobatoria de 12 / 20',
+          'Nota mínima de 18 / 20'
+        ],
+        respuestaCorrecta: 2
+      }
+    ];
+  };
+
+  const abrirModalExamen = (modCodigo: string, modNombre: string, modIdx: number) => {
+    setExamenActivoModal({ moduloCodigo: modCodigo, moduloNombre: modNombre, moduloIdx: modIdx });
+    setPasoModalExamen('indicaciones');
+    setRespuestasExamen({});
+    setResultadoExamen(null);
+  };
+
+  const abrirVerIntento = (modCodigo: string, modNombre: string, modIdx: number) => {
+    setExamenActivoModal({ moduloCodigo: modCodigo, moduloNombre: modNombre, moduloIdx: modIdx });
+    setPasoModalExamen('ver_intento');
+    const nota = notasModulosMap[modCodigo] || 0;
+    setResultadoExamen({ nota, aprobado: nota >= 12 });
+  };
+
+  const rendirExamenModulo = async () => {
+    if (!examenActivoModal) return;
+
+    const preguntas = generarPreguntasExamenModulo(examenActivoModal.moduloCodigo, examenActivoModal.moduloNombre);
+    let aciertos = 0;
+    preguntas.forEach((q, idx) => {
+      if (respuestasExamen[idx] === q.respuestaCorrecta) {
+        aciertos++;
+      }
+    });
+
+    const notaFinal = aciertos * 4; // 5 preguntas * 4 pts = 20 max
+    const aprobado = notaFinal >= 12; // Nota mínima aprobatoria 12/20
+
+    setGuardandoExamen(true);
+    try {
+      const modCodigo = examenActivoModal.moduloCodigo;
+
+      const nuevoNotasMap = { ...notasModulosMap, [modCodigo]: notaFinal };
+      setNotasModulosMap(nuevoNotasMap);
+
+      // Guardar respuestas seleccionadas para "Ver intento"
+      setRespuestasPorModulo(prev => ({
+        ...prev,
+        [modCodigo]: { ...respuestasExamen }
+      }));
+
+      const nuevoCompletadosMap = { ...completadosMap };
+      if (aprobado) {
+        nuevoCompletadosMap[modCodigo] = true;
+        setCompletadosMap(nuevoCompletadosMap);
+      }
+
+      setResultadoExamen({ nota: notaFinal, aprobado });
+      setPasoModalExamen('resultado');
+
+      // Recalcular el porcentaje de avance granular
+      let totalClases = 0;
+      let clasesCompletadas = 0;
+      if (diplomadoActual && diplomadoActual.modulos) {
+        diplomadoActual.modulos.forEach((m: any) => {
+          m.clases.forEach((c: any) => {
+            totalClases++;
+            const isDone = nuevoCompletadosMap[c.id] !== undefined 
+              ? nuevoCompletadosMap[c.id] 
+              : (nuevoCompletadosMap[m.codigo] !== undefined ? nuevoCompletadosMap[m.codigo] : c.completada);
+            if (isDone) clasesCompletadas++;
+          });
+        });
+      }
+      const nuevoAvance = totalClases > 0 ? Math.round((clasesCompletadas / totalClases) * 100) : 0;
+
+      // Guardar en Supabase via API
+      await fetch('/api/dashboard/completar-leccion', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          diplomadoSlug: diplomadoId,
+          moduloId: modCodigo,
+          moduloIndex: examenActivoModal.moduloIdx,
+          nota: notaFinal,
+          rendido: true,
+          completado: aprobado,
+          completadosMap: nuevoCompletadosMap,
+          avancePorcentaje: nuevoAvance,
+          dni: '71234567'
+        })
+      });
+    } catch (err) {
+      console.error('Error al guardar nota de examen en Supabase:', err);
+    } finally {
+      setGuardandoExamen(false);
+    }
+  };
+
+  // Cargar datos de Supabase (/api/dashboard/me, /api/admin/catalogo y /api/admin/diplomados-lecciones)
   const cargarDatosSupabase = useCallback(async () => {
     try {
       setLoading(true);
-      const [meRes, catRes] = await Promise.all([
+      const [meRes, catRes, leccRes] = await Promise.all([
         fetch('/api/dashboard/me').catch(() => null),
-        fetch('/api/admin/catalogo').catch(() => null)
+        fetch('/api/admin/catalogo').catch(() => null),
+        fetch(`/api/admin/diplomados-lecciones?slug=${encodeURIComponent(diplomadoId)}`).catch(() => null)
       ]);
 
       if (meRes && meRes.ok) {
@@ -105,6 +275,8 @@ export default function ReproductorClasesPage() {
 
         if (dipEnPerfil) {
           const map: Record<string, boolean> = {};
+          const nMap: Record<string, number> = {};
+
           if (dipEnPerfil.completadosMap && typeof dipEnPerfil.completadosMap === 'object') {
             Object.assign(map, dipEnPerfil.completadosMap);
           }
@@ -114,18 +286,35 @@ export default function ReproductorClasesPage() {
               if (map[key] === undefined && m.completado !== undefined) {
                 map[key] = Boolean(m.completado);
               }
+              if (m.nota !== undefined && m.nota !== null && (m.rendido === true || m.nota > 0)) {
+                nMap[key] = Number(m.nota);
+              }
             });
           }
           setCompletadosMap(map);
+          setNotasModulosMap(nMap);
+        } else {
+          setCompletadosMap({});
+          setNotasModulosMap({});
+        }
+      }
+
+      if (leccRes && leccRes.ok) {
+        const leccData = await leccRes.json();
+        if (leccData && Array.isArray(leccData.filas) && leccData.filas.length > 0) {
+          setLeccionesTabla(leccData.filas);
         }
       }
 
       if (catRes && catRes.ok) {
         const catData = await catRes.json();
-        const todos = catData.cursos || catData.todos || [];
+        const todos = catData.diplomados || catData.cursos || catData.todos || [];
+        const targetSlugNorm = diplomadoId.toLowerCase().replace(/[^a-z0-9]+/g, '-');
         const catItem = todos.find((c: any) => 
           c.id === diplomadoId || 
-          (c.titulo && c.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === diplomadoId.toLowerCase().replace(/[^a-z0-9]+/g, '-'))
+          (c.codigo && c.codigo.toLowerCase() === diplomadoId.toLowerCase()) ||
+          (c.titulo && c.titulo.toLowerCase().replace(/[^a-z0-9]+/g, '-') === targetSlugNorm) ||
+          (c.titulo && c.titulo.toLowerCase().includes(targetSlugNorm))
         );
         if (catItem) {
           setCatalogoMateriales(catItem);
@@ -139,53 +328,53 @@ export default function ReproductorClasesPage() {
   }, [diplomadoId]);
 
   useEffect(() => {
+    setCompletadosMap({});
+    setNotasModulosMap({});
     cargarDatosSupabase();
-  }, [cargarDatosSupabase]);
+  }, [diplomadoId, cargarDatosSupabase]);
 
   // Generar datos combinados con el diplomado base
   const diplomadoActual = useMemo(() => {
     const dip = getDiplomadoBySlug(diplomadoId) || getDiplomadoBySlug('derecho-minero');
+    const tituloBase = dip?.titulo || diplomadoId.toUpperCase().replace(/-/g, ' ');
     
-    const titulo = catalogoMateriales?.titulo || dip?.titulo || 'Diplomado de Alta Especialización EDUMIN';
+    let totalClasesContadas = 0;
+    let clasesCompletadasContadas = 0;
     let contadorGlobalTemas = 1;
     let contadorGlobalClases = 1;
 
-    const modulosRaw = catalogoMateriales?.modulos?.length 
-      ? catalogoMateriales.modulos 
-      : (dip?.modulos || [
-          { codigo: 'Módulo 01', nombre: 'Módulo I: Fundamentos y Gestión', clases: ['Sesión 1: Marco Normativo', 'Sesión 2: Gestión Aplicada'] },
-          { codigo: 'Módulo 02', nombre: 'Módulo II: Operaciones y Estrategia', clases: ['Sesión 1: Operaciones', 'Sesión 2: Estrategia'] },
-          { codigo: 'Módulo 03', nombre: 'Módulo III: Casuística y Proyectos', clases: ['Sesión 1: Casuística Práctica', 'Sesión 2: Evaluación Final'] }
-        ]);
+    // 1. PRIORIDAD: Usar datos de la tabla diplomados_lecciones de Supabase si existen
+    if (leccionesTabla && leccionesTabla.length > 0) {
+      const modulosDeTabla = convertirFilasAListaModulos(leccionesTabla);
 
-    let totalClasesContadas = 0;
-    let clasesCompletadasContadas = 0;
+      const modulosProcesados = modulosDeTabla.map((mod: any, modIdx: number) => {
+        const modCodigoKey = mod.codigo || `Módulo ${(modIdx + 1).toString().padStart(2, '0')}`;
+        const esModuloCompletadoEnBD = Boolean(completadosMap[modCodigoKey]);
 
-    const modulosProcesados = modulosRaw.map((mod: any, modIdx: number) => {
-      const modCodigoKey = mod.codigo || `Módulo ${(modIdx + 1).toString().padStart(2, '0')}`;
-      const esModuloCompletadoEnBD = Boolean(completadosMap[modCodigoKey]);
-
-      let temasProcesados: any[] | undefined = undefined;
-
-      if (Array.isArray(mod.temas) && mod.temas.length > 0) {
-        temasProcesados = mod.temas.map((tObj: any, tIdx: number) => {
+        const temasProcesados = (mod.temas || []).map((tObj: any, tIdx: number) => {
           const numTema = contadorGlobalTemas++;
           const numTemaStr = numTema < 10 ? `0${numTema}` : `${numTema}`;
           const rawTitulo = tObj.titulo || `Tema ${numTemaStr}`;
-          const temaTituloFinal = rawTitulo.replace(/^Tema \d+:/i, `Tema ${numTemaStr}:`);
-
+          const temaLimpio = rawTitulo
+            .replace(/^Tema\s*\d+[:\-\s]*/i, '')
+            .replace(/^(Clase|CLASE|Sesión|SESIÓN)\s*\d+[:\-\s]*/i, '')
+            .trim();
+          const temaTituloFinal = `Tema ${numTemaStr}: ${temaLimpio}`;
           const rawTemaClases = Array.isArray(tObj.clases) ? tObj.clases : [];
-          const temaClases: ClaseCompleta[] = rawTemaClases.map((claseTitleStr: any, claseIdx: number) => {
+
+          const temaClases: ClaseCompleta[] = rawTemaClases.map((claseRow: any, claseIdx: number) => {
             const numClase = contadorGlobalClases++;
-            const rawClaseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase ${numClase}`);
-            const claseTitle = rawClaseTitle.replace(/\s*\(\d{1,2}\/\d{1,2}\)/g, '').trim();
+            const isObj = typeof claseRow === 'object' && claseRow !== null;
+            const rawClaseTitle = isObj ? (claseRow.titulo || claseRow.Sesion || `Clase ${numClase}`) : String(claseRow);
+            let claseTitle = rawClaseTitle.replace(/\s*\(\d{1,2}\/\d{1,2}\)/g, '').trim();
+
+            if (rawTemaClases.length > 1 && (claseTitle.toLowerCase() === temaLimpio.toLowerCase() || /^Clase\s*\d+/i.test(claseTitle) || /^Sesión\s*\d+/i.test(claseTitle))) {
+              claseTitle = `Parte ${claseIdx + 1}`;
+            }
+
             const claseId = `${modCodigoKey}-t${tIdx + 1}-c${claseIdx + 1}`;
-            const driveVideoUrl = typeof claseTitleStr === 'object' && claseTitleStr.videoUrl 
-              ? claseTitleStr.videoUrl 
-              : (getDriveVideoForClass(diplomadoId, modIdx, totalClasesContadas) || mod.videoUrl);
-            const videoUrlFromCatalog = driveVideoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ';
-            const pdfUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.pdfUrl : mod.pdfUrl;
-            const excelUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.excelUrl : mod.excelUrl;
+            const videoUrlFromTable = isObj ? (claseRow.VideoUrl || claseRow.videoUrl || claseRow.iframe_url) : null;
+            const driveVideoUrl = videoUrlFromTable || (getDriveVideoForClass(diplomadoId, modIdx, totalClasesContadas) || 'https://www.youtube.com/embed/dQw4w9WgXcQ');
 
             totalClasesContadas++;
 
@@ -196,6 +385,8 @@ export default function ReproductorClasesPage() {
             );
             if (esCompletada) clasesCompletadasContadas++;
 
+            const recursos = isObj ? obtenerRecursosConLinks(claseRow, numClase) : [];
+
             const partes: ParteClase[] = [
               {
                 id: `${claseId}-p1`,
@@ -203,7 +394,7 @@ export default function ReproductorClasesPage() {
                 titulo: `Sesión Completa`,
                 subtitulo: claseTitle,
                 duracion: '60 min',
-                videoUrl: videoUrlFromCatalog,
+                videoUrl: driveVideoUrl,
                 completada: esCompletada,
                 resumen: {
                   objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
@@ -213,36 +404,7 @@ export default function ReproductorClasesPage() {
                     `Estrategias de análisis y resolución de problemas en el sector.`
                   ]
                 },
-                recursos: [
-                  {
-                    id: `rec-${claseId}-pdf`,
-                    tipo: 'pdf',
-                    titulo: pdfUrlFromCatalog ? `Separata_Oficial_CLASE_${numClase}.pdf` : `Separata_Oficial_CLASE_${numClase}.pdf`,
-                    descripcion: 'Documento oficial con contenidos y diapositivas de la clase · PDF',
-                    archivo: pdfUrlFromCatalog || `Separata_Oficial_CLASE_${numClase}.pdf`
-                  },
-                  ...(excelUrlFromCatalog ? [{
-                    id: `rec-${claseId}-excel`,
-                    tipo: 'excel' as const,
-                    titulo: `Plantilla_Calculo_CLASE_${numClase}.xlsx`,
-                    descripcion: 'Hoja de cálculo y plantilla interactiva de trabajo · EXCEL',
-                    archivo: excelUrlFromCatalog
-                  }] : []),
-                  {
-                    id: `rec-${claseId}-capsula`,
-                    tipo: 'video',
-                    titulo: `Cápsula de Resumen en Video`,
-                    descripcion: 'Video sumario con los puntos más relevantes · 8 min',
-                    duracion: '8 min'
-                  },
-                  {
-                    id: `rec-${claseId}-audio`,
-                    tipo: 'audio',
-                    titulo: `Podcast de la Clase`,
-                    descripcion: 'Audio en formato MP3 para estudio y repaso · 15 min',
-                    duracion: '15 min'
-                  }
-                ]
+                recursos
               }
             ];
 
@@ -251,7 +413,7 @@ export default function ReproductorClasesPage() {
               numeroClase: numClase,
               tituloClase: claseTitle.startsWith('Clase') ? claseTitle : `CLASE ${numClase}: ${claseTitle}`,
               moduloCodigo: modCodigoKey,
-              moduloTitulo: `${modCodigoKey}: ${mod.nombre || mod.titulo || ''}`,
+              moduloTitulo: `${modCodigoKey}: ${mod.nombre || ''}`,
               completada: esCompletada,
               partes
             };
@@ -263,11 +425,273 @@ export default function ReproductorClasesPage() {
             clases: temaClases
           };
         });
+
+        const clasesAdicionalesProcesadas: ClaseCompleta[] = (mod.clasesAdicionales || []).map((caRow: any, cIdx: number) => {
+          const numClase = contadorGlobalClases++;
+          const isObj = typeof caRow === 'object' && caRow !== null;
+          const claseTitle = isObj ? (caRow.titulo || caRow.Sesion || `Clase Adicional`) : String(caRow);
+          const claseId = `${modCodigoKey}-adic-${cIdx + 1}`;
+          const videoUrlFromTable = isObj ? (caRow.VideoUrl || caRow.videoUrl || caRow.iframe_url) : null;
+          const driveVideoUrl = videoUrlFromTable || (getDriveVideoForClass(diplomadoId, modIdx, totalClasesContadas) || 'https://www.youtube.com/embed/dQw4w9WgXcQ');
+
+          totalClasesContadas++;
+
+          const esCompletada = Boolean(
+            completadosMap[claseId] !== undefined
+              ? completadosMap[claseId]
+              : (esModuloCompletadoEnBD && completadosMap[claseId] !== false)
+          );
+          if (esCompletada) clasesCompletadasContadas++;
+
+          const recursos = isObj ? obtenerRecursosConLinks(caRow, numClase) : [];
+
+          const partes: ParteClase[] = [
+            {
+              id: `${claseId}-p1`,
+              numero: 1,
+              titulo: `Sesión Completa`,
+              subtitulo: claseTitle,
+              duracion: '60 min',
+              videoUrl: driveVideoUrl,
+              completada: esCompletada,
+              resumen: {
+                objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
+                puntosClave: [
+                  `Revisión de la normativa vigente y estándares técnicos aplicables.`,
+                  `Criterios clave para la toma de decisiones operativas y de gestión.`,
+                  `Estrategias de análisis y resolución de problemas en el sector.`
+                ]
+              },
+              recursos
+            }
+          ];
+
+          return {
+            id: claseId,
+            numeroClase: numClase,
+            tituloClase: `⭐ ${claseTitle}`,
+            moduloCodigo: modCodigoKey,
+            moduloTitulo: `${modCodigoKey}: ${mod.nombre || ''}`,
+            completada: esCompletada,
+            partes
+          };
+        });
+
+        const todasClasesModulo = [
+          ...temasProcesados.flatMap((t: any) => t.clases),
+          ...clasesAdicionalesProcesadas
+        ];
+
+        return {
+          id: modCodigoKey,
+          codigo: modCodigoKey,
+          nombre: mod.nombre,
+          docente: mod.docente || '',
+          temas: temasProcesados,
+          clasesAdicionales: clasesAdicionalesProcesadas,
+          clases: todasClasesModulo,
+          completado: esModuloCompletadoEnBD || (todasClasesModulo.length > 0 && todasClasesModulo.every(c => c.completada))
+        };
+      });
+
+      const avancePorcentaje = totalClasesContadas > 0
+        ? Math.round((clasesCompletadasContadas / totalClasesContadas) * 100)
+        : 0;
+
+      return {
+        id: diplomadoId,
+        titulo: (leccionesTabla[0]?.Diplomado || tituloBase).toUpperCase(),
+        avancePorcentaje,
+        progreso: avancePorcentaje,
+        modulos: modulosProcesados
+      };
+    }
+
+    const baseModulos = dip?.modulos || [];
+    const modulosInput = catalogoMateriales?.modulos?.length ? catalogoMateriales.modulos : baseModulos;
+
+    const modulosRaw = modulosInput.map((mod: any, mIdx: number) => {
+      const baseMod = baseModulos[mIdx] || {};
+      const temasCombinados = (Array.isArray(mod.temas) && mod.temas.length > 0)
+        ? mod.temas
+        : (Array.isArray(baseMod.temas) && baseMod.temas.length > 0 ? baseMod.temas : null);
+
+      return {
+        ...mod,
+        temas: temasCombinados
+      };
+    });
+
+    totalClasesContadas = 0;
+    clasesCompletadasContadas = 0;
+    contadorGlobalTemas = 1;
+    contadorGlobalClases = 1;
+
+    const modulosProcesados = modulosRaw.map((mod: any, modIdx: number) => {
+      const modCodigoKey = mod.codigo || `Módulo ${(modIdx + 1).toString().padStart(2, '0')}`;
+      const esModuloCompletadoEnBD = Boolean(completadosMap[modCodigoKey]);
+
+      // Normalizar e igualar estructura de temas para TODOS los diplomados
+      let rawTemasInput = Array.isArray(mod.temas) && mod.temas.length > 0 ? mod.temas : null;
+
+      if (!rawTemasInput) {
+        const rawClasesList = Array.isArray(mod.clases) && mod.clases.length > 0 
+          ? mod.clases 
+          : ['Sesión Magistral de Introducción', 'Casuística Aplicada'];
+        
+        let hasExplicitOrRepeatingTema = false;
+        const temaNamesSeen: string[] = [];
+
+        rawClasesList.forEach((cItem: any) => {
+          const isObj = typeof cItem === 'object' && cItem !== null;
+          const tName = isObj ? (cItem.tema || cItem.titulo || '') : String(cItem);
+          const cleanName = tName.replace(/^(Clase|CLASE|Sesión|SESIÓN)\s*\d+[:\-\s]*/i, '').replace(/\s*\(Parte\s*\d+\)$/i, '').trim();
+          if (isObj && cItem.tema) hasExplicitOrRepeatingTema = true;
+          if (cleanName && temaNamesSeen.includes(cleanName.toLowerCase())) hasExplicitOrRepeatingTema = true;
+          if (cleanName) temaNamesSeen.push(cleanName.toLowerCase());
+        });
+
+        rawTemasInput = [];
+
+        if (hasExplicitOrRepeatingTema) {
+          let currentGroup: { titulo: string; clases: any[] } | null = null;
+          rawClasesList.forEach((cItem: any) => {
+            const isObj = typeof cItem === 'object' && cItem !== null;
+            const rawTit = isObj ? (cItem.tema || cItem.titulo || '') : String(cItem);
+            const temaLimpio = rawTit.replace(/^(Clase|CLASE|Sesión|SESIÓN)\s*\d+[:\-\s]*/i, '').replace(/\s*\(Parte\s*\d+\)$/i, '').trim();
+
+            if (currentGroup && currentGroup.titulo.toLowerCase() === temaLimpio.toLowerCase()) {
+              currentGroup.clases.push(cItem);
+            } else {
+              currentGroup = {
+                titulo: temaLimpio || 'Especialización Aplicada',
+                clases: [cItem]
+              };
+              rawTemasInput.push(currentGroup);
+            }
+          });
+        } else {
+          for (let i = 0; i < rawClasesList.length; i += 2) {
+            const chunk = rawClasesList.slice(i, i + 2);
+            const firstItem = chunk[0];
+            const firstClaseTitle = typeof firstItem === 'string'
+              ? firstItem.replace(/^(Clase|CLASE|Sesión|SESIÓN)\s*\d+[:\-\s]*/i, '').trim()
+              : (firstItem?.titulo || 'Especialización Aplicada');
+
+            const tNum = Math.floor(i / 2) + 1;
+            const tNumGlobal = (modIdx * 3) + tNum;
+            const tNumStr = tNumGlobal < 10 ? `0${tNumGlobal}` : `${tNumGlobal}`;
+
+            rawTemasInput.push({
+              titulo: `Tema ${tNumStr}: ${firstClaseTitle || 'Fundamentos y Gestión Aplicada'}`,
+              clases: chunk
+            });
+          }
+        }
+      }
+
+      const temasProcesados = rawTemasInput.map((tObj: any, tIdx: number) => {
+        const numTema = contadorGlobalTemas++;
+        const numTemaStr = numTema < 10 ? `0${numTema}` : `${numTema}`;
+        const rawTitulo = tObj.titulo || `Tema ${numTemaStr}`;
+        const temaLimpio = rawTitulo
+          .replace(/^Tema\s*\d+[:\-\s]*/i, '')
+          .replace(/^(Clase|CLASE|Sesión|SESIÓN)\s*\d+[:\-\s]*/i, '')
+          .trim();
+        const temaTituloFinal = `Tema ${numTemaStr}: ${temaLimpio}`;
+        const temaClean = temaLimpio;
+
+        const rawTemaClases = Array.isArray(tObj.clases) ? tObj.clases : [];
+        const isMultiSession = rawTemaClases.length > 1;
+
+        const temaClases: ClaseCompleta[] = rawTemaClases.map((claseTitleStr: any, claseIdx: number) => {
+          const numClase = contadorGlobalClases++;
+          const isObj = typeof claseTitleStr === 'object' && claseTitleStr !== null;
+          const rawClaseTitle = isObj ? (claseTitleStr.titulo || `Clase ${numClase}`) : String(claseTitleStr);
+          let claseTitle = rawClaseTitle.replace(/\s*\(\d{1,2}\/\d{1,2}\)/g, '').trim();
+
+          if (isMultiSession && (claseTitle.toLowerCase() === temaClean.toLowerCase() || /^Clase\s*\d+/i.test(claseTitle) || /^Sesión\s*\d+/i.test(claseTitle))) {
+            claseTitle = `Parte ${claseIdx + 1}`;
+          }
+          const claseId = `${modCodigoKey}-t${tIdx + 1}-c${claseIdx + 1}`;
+          const driveVideoUrl = isObj && (claseTitleStr.videoUrl || claseTitleStr.iframe_url)
+            ? (claseTitleStr.videoUrl || claseTitleStr.iframe_url)
+            : (getDriveVideoForClass(diplomadoId, modIdx, totalClasesContadas) || mod.videoUrl);
+          const videoUrlFromCatalog = driveVideoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ';
+          const pdfUrlFromCatalog = isObj ? (claseTitleStr.pdfUrl || claseTitleStr.pdf_url) : mod.pdfUrl;
+          const excelUrlFromCatalog = isObj ? (claseTitleStr.excelUrl || claseTitleStr.excel_url) : mod.excelUrl;
+
+          totalClasesContadas++;
+
+          const esCompletada = Boolean(
+            completadosMap[claseId] !== undefined
+              ? completadosMap[claseId]
+              : (esModuloCompletadoEnBD && completadosMap[claseId] !== false)
+          );
+          if (esCompletada) clasesCompletadasContadas++;
+
+          const partes: ParteClase[] = [
+            {
+              id: `${claseId}-p1`,
+              numero: 1,
+              titulo: `Sesión Completa`,
+              subtitulo: claseTitle,
+              duracion: '60 min',
+              videoUrl: videoUrlFromCatalog,
+              completada: esCompletada,
+              resumen: {
+                objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
+                puntosClave: [
+                  `Revisión de la normativa vigente y estándares técnicos aplicables.`,
+                  `Criterios clave para la toma de decisiones operativas y de gestión.`,
+                  `Estrategias de análisis y resolución de problemas en el sector.`
+                ]
+              },
+              recursos: isObj 
+                ? obtenerRecursosConLinks(claseTitleStr, numClase) 
+                : (pdfUrlFromCatalog ? [{
+                    id: `rec-${claseId}-pdf`,
+                    tipo: 'pdf' as const,
+                    titulo: 'Material de clases',
+                    descripcion: 'Documento oficial con contenidos y diapositivas de la sesión · PDF',
+                    archivo: pdfUrlFromCatalog,
+                    url: pdfUrlFromCatalog
+                  }] : [])
+            }
+          ];
+
+          return {
+            id: claseId,
+            numeroClase: numClase,
+            tituloClase: claseTitle.startsWith('Clase') ? claseTitle : `CLASE ${numClase}: ${claseTitle}`,
+            moduloCodigo: modCodigoKey,
+            moduloTitulo: `${modCodigoKey}: ${mod.nombre || mod.titulo || ''}`,
+            completada: esCompletada,
+            partes
+          };
+        });
+
+        return {
+          id: `${modCodigoKey}-t${tIdx + 1}`,
+          titulo: temaTituloFinal,
+          clases: temaClases
+        };
+      });
+
+      // Clases adicionales (presentes en todos los módulos de forma uniforme)
+      let rawAdicionalesInput = Array.isArray(mod.clasesAdicionales) ? mod.clasesAdicionales : [];
+      if (rawAdicionalesInput.length === 0) {
+        rawAdicionalesInput = [
+          {
+            titulo: 'Clase Adicional: Sesión Especial de Refuerzo y Casuística Práctica',
+            videoUrl: getDriveVideoForClass(diplomadoId, modIdx, 6) || mod.videoUrl
+          }
+        ];
       }
 
       let clasesAdicionalesProcesadas: ClaseCompleta[] = [];
-      if (Array.isArray(mod.clasesAdicionales) && mod.clasesAdicionales.length > 0) {
-        clasesAdicionalesProcesadas = mod.clasesAdicionales.map((claseTitleStr: any, cIdx: number) => {
+      if (rawAdicionalesInput.length > 0) {
+        clasesAdicionalesProcesadas = rawAdicionalesInput.map((claseTitleStr: any, cIdx: number) => {
           const numClase = contadorGlobalClases++;
           const claseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase Adicional`);
           const claseId = `${modCodigoKey}-adic-${cIdx + 1}`;
@@ -304,15 +728,16 @@ export default function ReproductorClasesPage() {
                   `Estrategias de análisis y resolución de problemas en el sector.`
                 ]
               },
-              recursos: [
-                {
-                  id: `rec-${claseId}-pdf`,
-                  tipo: 'pdf',
-                  titulo: pdfUrlFromCatalog ? `Separata_Oficial_CLASE_${numClase}.pdf` : `Separata_Oficial_CLASE_${numClase}.pdf`,
-                  descripcion: 'Documento oficial con contenidos y diapositivas de la clase · PDF',
-                  archivo: pdfUrlFromCatalog || `Separata_Oficial_CLASE_${numClase}.pdf`
-                }
-              ]
+              recursos: typeof claseTitleStr === 'object' 
+                ? obtenerRecursosConLinks(claseTitleStr, numClase)
+                : (pdfUrlFromCatalog ? [{
+                    id: `rec-${claseId}-pdf`,
+                    tipo: 'pdf' as const,
+                    titulo: 'Material de clases',
+                    descripcion: 'Documento oficial con contenidos y diapositivas de la sesión · PDF',
+                    archivo: pdfUrlFromCatalog,
+                    url: pdfUrlFromCatalog
+                  }] : [])
             }
           ];
 
@@ -328,98 +753,10 @@ export default function ReproductorClasesPage() {
         });
       }
 
-      let clases: ClaseCompleta[] = [];
-      if (!temasProcesados) {
-        const rawClases = (mod.clases && mod.clases.length > 0) 
-          ? mod.clases 
-          : ['Sesión Magistral de Introducción', 'Casuística Aplicada'];
-
-        clases = rawClases.map((claseTitleStr: any, claseIdx: number) => {
-          const numClase = contadorGlobalClases++;
-          const claseTitle = typeof claseTitleStr === 'string' ? claseTitleStr : (claseTitleStr.titulo || `Clase ${numClase}`);
-          const claseId = `${modCodigoKey}-c${numClase}`;
-          const driveVideoUrl = getDriveVideoForClass(diplomadoId, modIdx, claseIdx);
-          const videoUrlFromCatalog = (typeof claseTitleStr === 'object' && claseTitleStr.videoUrl)
-            ? claseTitleStr.videoUrl
-            : (driveVideoUrl || mod.videoUrl || 'https://www.youtube.com/embed/dQw4w9WgXcQ');
-          const pdfUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.pdfUrl : mod.pdfUrl;
-          const excelUrlFromCatalog = typeof claseTitleStr === 'object' ? claseTitleStr.excelUrl : mod.excelUrl;
-
-          totalClasesContadas++;
-
-          // Una clase está completada si su claseId individual está marcada o si el módulo completo lo está
-          const esCompletada = Boolean(
-            completadosMap[claseId] !== undefined
-              ? completadosMap[claseId]
-              : (esModuloCompletadoEnBD && completadosMap[claseId] !== false)
-          );
-          if (esCompletada) clasesCompletadasContadas++;
-
-          const partes: ParteClase[] = [
-            {
-              id: `${claseId}-p1`,
-              numero: 1,
-              titulo: `Sesión Completa`,
-              subtitulo: claseTitle,
-              duracion: '60 min',
-              videoUrl: videoUrlFromCatalog,
-              completada: esCompletada,
-              resumen: {
-                objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
-                puntosClave: [
-                  `Revisión de la normativa vigente y estándares técnicos aplicables.`,
-                  `Criterios clave para la toma de decisiones operativas y de gestión.`,
-                  `Estrategias de análisis y resolución de problemas en el sector.`
-                ]
-              },
-              recursos: [
-                {
-                  id: `rec-${claseId}-pdf`,
-                  tipo: 'pdf',
-                  titulo: pdfUrlFromCatalog ? `Separata_Oficial_CLASE_${numClase}.pdf` : `Separata_Oficial_CLASE_${numClase}.pdf`,
-                  descripcion: 'Documento oficial con contenidos y diapositivas de la clase · PDF',
-                  archivo: pdfUrlFromCatalog || `Separata_Oficial_CLASE_${numClase}.pdf`
-                },
-                ...(excelUrlFromCatalog ? [{
-                  id: `rec-${claseId}-excel`,
-                  tipo: 'excel' as const,
-                  titulo: `Plantilla_Calculo_CLASE_${numClase}.xlsx`,
-                  descripcion: 'Hoja de cálculo y plantilla interactiva de trabajo · EXCEL',
-                  archivo: excelUrlFromCatalog
-                }] : []),
-                {
-                  id: `rec-${claseId}-capsula`,
-                  tipo: 'video',
-                  titulo: `Cápsula de Resumen en Video`,
-                  descripcion: 'Video sumario con los puntos más relevantes · 8 min',
-                  duracion: '8 min'
-                },
-                {
-                  id: `rec-${claseId}-audio`,
-                  tipo: 'audio',
-                  titulo: `Podcast de la Clase`,
-                  descripcion: 'Audio en formato MP3 para estudio y repaso · 15 min',
-                  duracion: '15 min'
-                }
-              ]
-            }
-          ];
-
-          return {
-            id: claseId,
-            numeroClase: numClase,
-            tituloClase: `CLASE ${numClase}: ${claseTitle.replace(/^Clase \d+:\s*/i, '')}`,
-            moduloCodigo: modCodigoKey,
-            moduloTitulo: `${modCodigoKey}: ${mod.nombre || mod.titulo || ''}`,
-            completada: esCompletada,
-            partes
-          };
-        });
-      }
-
-      const todasLasClasesDelModulo = temasProcesados 
-        ? [...temasProcesados.flatMap((t: any) => t.clases), ...clasesAdicionalesProcesadas] 
-        : clases;
+      const todasLasClasesDelModulo: ClaseCompleta[] = [
+        ...temasProcesados.flatMap((t: any) => t.clases),
+        ...clasesAdicionalesProcesadas
+      ];
 
       return {
         id: modCodigoKey,
@@ -438,11 +775,12 @@ export default function ReproductorClasesPage() {
       : 0;
 
     return {
-      titulo,
+      titulo: tituloBase,
       avancePorcentaje,
+      progreso: avancePorcentaje,
       modulos: modulosProcesados
     };
-  }, [diplomadoId, catalogoMateriales, completadosMap]);
+  }, [diplomadoId, catalogoMateriales, completadosMap, leccionesTabla]);
 
   const modInicial = useMemo(() => {
     if (!diplomadoActual?.modulos?.length) return null;
@@ -497,23 +835,36 @@ export default function ReproductorClasesPage() {
   
   // Estados del foro
   const [comentario, setComentario] = useState('');
-  const [listaComentarios, setListaComentarios] = useState([
-    { autor: 'Ing. Carlos Mendoza', texto: 'Excelente explicación de los temas de la clase.', fecha: 'Hace 2 horas' }
-  ]);
+  const [listaComentarios, setListaComentarios] = useState<{ autor: string; texto: string; fecha: string }[]>([]);
 
   const [inicializadoNav, setInicializadoNav] = useState(false);
 
-  // Sincronizar si cambia el parámetro de módulo en la URL o en la carga inicial
+  // Sincronizar claseActual cuando diplomadoActual o modInicial se actualizan desde Supabase
   useEffect(() => {
-    if (modInicial && (!inicializadoNav || moduloQuery)) {
-      setModuloActivo(modInicial.id);
-      if (!claseActual && modInicial.clases && modInicial.clases.length > 0) {
-        setClaseActual(modInicial.clases[0]);
-        setParteSeleccionada(1);
+    if (!diplomadoActual || !diplomadoActual.modulos?.length) return;
+
+    // Si ya tenemos una claseActual, buscar su versión actualizada en el nuevo diplomadoActual
+    if (claseActual) {
+      for (const mod of diplomadoActual.modulos) {
+        const found = mod.clases?.find((c: ClaseCompleta) => c.id === claseActual.id);
+        if (found) {
+          if (found !== claseActual) {
+            setClaseActual(found);
+          }
+          return;
+        }
       }
+    }
+
+    // Si no había claseActual o cambió el módulo vía URL, seleccionar la primera clase de modInicial
+    const targetMod = modInicial || diplomadoActual.modulos[0];
+    if (targetMod && targetMod.clases && targetMod.clases.length > 0) {
+      setModuloActivo(targetMod.id);
+      setClaseActual(targetMod.clases[0]);
+      setParteSeleccionada(1);
       setInicializadoNav(true);
     }
-  }, [modInicial, moduloQuery, inicializadoNav, claseActual]);
+  }, [diplomadoActual, modInicial, claseActual, moduloQuery]);
 
   // Alternar estado completado de la lección y sincronizar con Supabase
   const toggleCompletarLeccion = async (targetId: string) => {
@@ -612,13 +963,17 @@ export default function ReproductorClasesPage() {
   const publicarComentario = (e: React.FormEvent) => {
     e.preventDefault();
     if (!comentario.trim()) return;
-    setListaComentarios([{ autor: 'Estudiante (Tú)', texto: comentario, fecha: 'Justo ahora' }, ...listaComentarios]);
+    const nombreCompleto = [nombres, apellidos].filter(Boolean).join(' ') || 'Estudiante';
+    setListaComentarios([{ autor: nombreCompleto, texto: comentario, fecha: 'Justo ahora' }, ...listaComentarios]);
     setComentario('');
   };
 
-  const activarRecursoEnVisor = (tipo: 'video_clase' | 'pdf_visor' | 'resumen_video' | 'resumen_audio' | 'resumen_interactivo', info: string) => {
+  const activarRecursoEnVisor = (tipo: 'video_clase' | 'pdf_visor' | 'resumen_video' | 'resumen_audio' | 'resumen_interactivo', info: string, url?: string) => {
     setContenidoPrincipal(tipo);
     setRecursoActivoInfo(info);
+    if (url) {
+      setRecursoUrlActivo(url);
+    }
     const elem = document.getElementById('zona-reproductor-principal');
     if (elem) {
       elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -799,7 +1154,7 @@ export default function ReproductorClasesPage() {
             {contenidoPrincipal === 'video_clase' && (
               <iframe 
                 key={`${claseActual.id}-p${parteActiva.numero}`}
-                src={parteActiva.videoUrl} 
+                src={(parteActiva.videoUrl || '').replace(/\/view(\?.*)?$/, '/preview')} 
                 title={`${claseActual.tituloClase} - ${parteActiva.titulo}`}
                 className="w-full h-full border-0 absolute inset-0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -810,90 +1165,220 @@ export default function ReproductorClasesPage() {
             {/* VISOR DE PDF INTEGRADO */}
             {contenidoPrincipal === 'pdf_visor' && (
               <div className={`absolute inset-0 flex flex-col ${esOscuro ? 'bg-slate-900' : 'bg-slate-100'}`}>
-                <div className={`px-6 py-3 border-b flex justify-between items-center shrink-0 ${
+                <div className={`px-4 sm:px-6 py-2.5 border-b flex justify-between items-center shrink-0 ${
                   esOscuro ? 'bg-slate-950 border-slate-800 text-indigo-300' : 'bg-white border-slate-200 text-indigo-700'
                 }`}>
-                  <div className="flex items-center gap-2 text-xs font-bold">
-                    <FileText className="w-4 h-4 text-indigo-500" /> Separata_Oficial_CLASE_{claseActual.numeroClase}.pdf
+                  <div className="flex items-center gap-2 text-xs font-bold truncate">
+                    <FileText className="w-4 h-4 text-indigo-500 shrink-0" /> Material de clases: {claseActual.tituloClase}
                   </div>
-                  <span className={`text-[10px] px-2.5 py-1 rounded-md ${
-                    esOscuro ? 'bg-slate-800 text-slate-400' : 'bg-slate-200 text-slate-600'
-                  }`}>
-                    Visualizador Integrado EDUMIN
-                  </span>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <button
+                      onClick={() => activarRecursoEnVisor('video_clase', 'Clase principal en video')}
+                      className="text-[11px] font-bold px-3 py-1 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg transition cursor-pointer"
+                    >
+                      Volver al Video
+                    </button>
+                    {(recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'pdf')?.archivo) && (
+                      <a
+                        href={recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'pdf')?.archivo || '#'}
+                        target="_blank"
+                        rel="noreferrer"
+                        download
+                        className="text-[11px] font-bold px-3 py-1 bg-slate-700 hover:bg-slate-600 text-white rounded-lg transition inline-flex items-center gap-1 cursor-pointer"
+                      >
+                        <Download className="size-3" /> Descargar
+                      </a>
+                    )}
+                  </div>
                 </div>
-                <div className={`flex-1 p-4 grid place-items-center overflow-y-auto ${
-                  esOscuro ? 'bg-slate-900/50' : 'bg-slate-200/50'
-                }`}>
-                  <div className={`w-full max-w-2xl p-6 sm:p-8 rounded-2xl shadow-xl text-left space-y-4 border ${
-                    esOscuro ? 'bg-slate-950 text-slate-100 border-slate-800' : 'bg-white text-slate-900 border-slate-200'
-                  }`}>
-                    <div className={`border-b pb-3 ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`}>
-                      <span className="text-[10px] font-bold text-indigo-500 uppercase tracking-widest">Documento oficial de estudio</span>
-                      <h4 className="font-bold text-base sm:text-lg mt-1">{claseActual.tituloClase}</h4>
+                <div className="flex-1 w-full h-full relative bg-slate-950">
+                  {Boolean(recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'pdf')?.archivo) ? (
+                    <iframe
+                      src={(recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'pdf')?.archivo || '').replace('/view', '/preview')}
+                      className="w-full h-full border-0 absolute inset-0"
+                      title="Visor PDF Oficial"
+                    />
+                  ) : (
+                    <div className="flex-1 p-8 grid place-items-center text-center text-slate-400">
+                      <p className="text-xs">No hay enlace de material de clases configurado para esta sesión.</p>
                     </div>
-                    <p className={`text-xs leading-relaxed ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}>
-                      El presente material de estudio contiene los contenidos y ejercicios aplicados correspondientes a esta sesión académica.
-                    </p>
-                    <div className={`p-4 rounded-xl text-xs italic ${
-                      esOscuro ? 'bg-slate-900 border border-slate-800 text-slate-400' : 'bg-slate-50 border border-slate-200 text-slate-600'
-                    }`}>
-                      [ Vista previa interactiva de la separata oficial de lectura obligatoria cargada en Supabase ]
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
             )}
 
+            {/* VISOR DE RESUMEN EN VIDEO */}
             {contenidoPrincipal === 'resumen_video' && (
-              <div className={`absolute inset-0 flex flex-col items-center justify-center p-6 text-center ${
+              <div className={`absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 text-center ${
                 esOscuro ? 'bg-gradient-to-br from-indigo-950 via-slate-900 to-black' : 'bg-gradient-to-br from-indigo-50 via-white to-slate-100'
               }`}>
-                <div className={`size-14 rounded-2xl grid place-items-center mb-3 ${
-                  esOscuro ? 'bg-indigo-600/30 text-indigo-300 border border-indigo-500/30' : 'bg-indigo-100 text-indigo-600 border border-indigo-200'
-                }`}>
-                  <Video className="w-7 h-7" />
+                <div className="w-full flex justify-between items-center mb-3 max-w-2xl px-2 shrink-0">
+                  <div className="flex items-center gap-2">
+                    <div className="size-7 rounded-lg bg-indigo-600/30 text-indigo-400 grid place-items-center">
+                      <Video className="w-3.5 h-3.5" />
+                    </div>
+                    <h3 className={`text-xs sm:text-sm font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                      Resumen en Video
+                    </h3>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {(recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'video')?.archivo) && (
+                      <a
+                        href={recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'video')?.archivo}
+                        target="_blank"
+                        rel="noreferrer"
+                        download
+                        className="text-xs font-bold px-3 py-1.5 bg-indigo-700/70 hover:bg-indigo-600 text-white rounded-xl transition flex items-center gap-1.5 cursor-pointer"
+                      >
+                        <Download className="w-3.5 h-3.5" /> Descargar
+                      </a>
+                    )}
+                    <button
+                      onClick={() => activarRecursoEnVisor('video_clase', 'Clase principal en video')}
+                      className="text-xs font-bold px-3 py-1.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl transition cursor-pointer"
+                    >
+                      Volver al Video Principal
+                    </button>
+                  </div>
                 </div>
-                <h3 className={`text-base sm:text-lg font-bold mb-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  Cápsula de Resumen en Video
-                </h3>
                 <iframe 
-                  src={parteActiva.videoUrl} 
+                  src={(recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'video')?.archivo || parteActiva.videoUrl).replace('/view', '/preview')} 
                   title="Resumen en Video"
-                  className="w-full max-w-lg h-44 rounded-xl border border-slate-700 shadow-lg mt-1"
+                  className="w-full max-w-2xl flex-1 rounded-2xl border border-slate-700 shadow-2xl"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               </div>
             )}
 
+            {/* VISOR DE RESUMEN EN AUDIO */}
             {contenidoPrincipal === 'resumen_audio' && (
-              <div className={`absolute inset-0 flex flex-col items-center justify-center p-6 text-center ${
-                esOscuro ? 'bg-gradient-to-br from-emerald-950 via-slate-900 to-black' : 'bg-gradient-to-br from-emerald-50 via-white to-slate-100'
+              <div className={`absolute inset-0 flex flex-col items-center justify-center p-4 sm:p-6 text-center ${
+                esOscuro ? 'bg-gradient-to-br from-purple-950 via-slate-900 to-black' : 'bg-gradient-to-br from-purple-50 via-white to-slate-100'
               }`}>
-                <div className={`size-14 rounded-2xl grid place-items-center mb-3 ${
-                  esOscuro ? 'bg-emerald-600/30 text-emerald-300 border border-emerald-500/30' : 'bg-emerald-100 text-emerald-600 border border-emerald-200'
-                }`}>
-                  <Headphones className="w-7 h-7" />
-                </div>
-                <h3 className={`text-base sm:text-lg font-bold mb-2 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  Audio Podcast
-                </h3>
-                <div className={`w-full max-w-md p-4 rounded-xl flex items-center gap-4 mt-2 border ${
-                  esOscuro ? 'bg-slate-800/80 border-slate-700 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-md'
-                }`}>
-                  <button className="size-11 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white grid place-items-center font-bold transition-colors shrink-0 shadow">
-                    ▶
-                  </button>
-                  <div className="flex-1 text-left">
-                    <p className={`text-xs font-bold truncate ${esOscuro ? 'text-white' : 'text-slate-800'}`}>
-                      Podcast_CLASE_{claseActual.numeroClase}.mp3
-                    </p>
-                    <div className={`w-full h-2 rounded-full mt-2 overflow-hidden ${esOscuro ? 'bg-slate-700' : 'bg-slate-200'}`}>
-                      <div className="bg-emerald-500 h-full w-2/5"></div>
+                <div className="w-full flex justify-between items-center mb-3 max-w-3xl px-2 shrink-0">
+                  <div className="flex items-center gap-2">
+                    <div className="size-7 rounded-lg bg-purple-600/30 text-purple-400 grid place-items-center">
+                      <Headphones className="w-3.5 h-3.5" />
                     </div>
+                    <h3 className={`text-xs sm:text-sm font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                      Resumen en Audio
+                    </h3>
                   </div>
-                  <span className={`text-xs shrink-0 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>15 min</span>
+                  <div className="flex items-center gap-2">
+                    {(recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'audio')?.archivo) && (
+                      <a
+                        href={recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'audio')?.archivo}
+                        target="_blank"
+                        rel="noreferrer"
+                        download
+                        className="text-xs font-bold px-3 py-1.5 bg-purple-700/70 hover:bg-purple-600 text-white rounded-xl transition flex items-center gap-1.5 cursor-pointer"
+                      >
+                        <Download className="w-3.5 h-3.5" /> Descargar
+                      </a>
+                    )}
+                    <button
+                      onClick={() => activarRecursoEnVisor('video_clase', 'Clase principal en video')}
+                      className="text-xs font-bold px-3 py-1.5 bg-purple-600 hover:bg-purple-500 text-white rounded-xl transition cursor-pointer"
+                    >
+                      Volver al Video
+                    </button>
+                  </div>
+                </div>
+
+                {(() => {
+                  const audioUrl = recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'audio')?.archivo || '';
+                  if (!audioUrl) {
+                    return (
+                      <div className="p-8 text-center text-slate-400">
+                        <p className="text-xs italic">Enlace de resumen en audio no configurado aún.</p>
+                      </div>
+                    );
+                  }
+
+                  const esAudioDirecto = /\.(mp3|wav|ogg|m4a|aac)(\?.*)?$/i.test(audioUrl);
+
+                  if (esAudioDirecto) {
+                    return (
+                      <div className={`w-full max-w-md p-6 rounded-2xl border text-center space-y-4 ${
+                        esOscuro ? 'bg-slate-900/90 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-xl'
+                      }`}>
+                        <p className="text-[10px] font-bold text-purple-500 uppercase tracking-widest">
+                          Reproducción de Audio Oficial
+                        </p>
+                        <p className="text-xs sm:text-sm font-bold truncate">
+                          {claseActual.tituloClase}
+                        </p>
+                        <audio 
+                          controls 
+                          autoPlay 
+                          src={audioUrl} 
+                          className="w-full mt-3" 
+                        />
+                      </div>
+                    );
+                  }
+
+                  const embedUrl = audioUrl.includes('drive.google.com') && audioUrl.includes('/view')
+                    ? audioUrl.replace('/view', '/preview')
+                    : audioUrl;
+
+                  return (
+                    <div className="w-full max-w-3xl flex-1 flex flex-col rounded-2xl overflow-hidden border border-purple-800/40 shadow-2xl bg-black relative">
+                      <iframe
+                        src={embedUrl}
+                        title="Resumen en Audio"
+                        className="w-full h-full flex-1 border-0 absolute inset-0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    </div>
+                  );
+                })()}
+              </div>
+            )}
+
+            {/* VISOR DE RESUMEN INTERACTIVO */}
+            {contenidoPrincipal === 'resumen_interactivo' && (
+              <div className={`absolute inset-0 flex flex-col ${esOscuro ? 'bg-slate-900' : 'bg-slate-100'}`}>
+                <div className={`px-4 sm:px-6 py-2.5 border-b flex justify-between items-center shrink-0 ${
+                  esOscuro ? 'bg-slate-950 border-slate-800 text-amber-300' : 'bg-white border-slate-200 text-amber-700'
+                }`}>
+                  <div className="flex items-center gap-2 text-xs font-bold">
+                    <Sparkles className="w-4 h-4 text-amber-500" /> Resumen Interactivo
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {(recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'interactivo')?.archivo) && (
+                      <a
+                        href={recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'interactivo')?.archivo}
+                        target="_blank"
+                        rel="noreferrer"
+                        download
+                        className="text-[11px] font-bold px-3 py-1 bg-amber-700/60 hover:bg-amber-600 text-white rounded-lg transition inline-flex items-center gap-1 cursor-pointer"
+                      >
+                        <Download className="size-3" /> Descargar
+                      </a>
+                    )}
+                    <button
+                      onClick={() => activarRecursoEnVisor('video_clase', 'Clase principal en video')}
+                      className="text-[11px] font-bold px-3 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition cursor-pointer"
+                    >
+                      Volver al Video
+                    </button>
+                  </div>
+                </div>
+                <div className="flex-1 w-full h-full relative">
+                  {(recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'interactivo')?.archivo) ? (
+                    <iframe
+                      src={(recursoUrlActivo || parteActiva.recursos.find(r => r.tipo === 'interactivo')?.archivo || '').replace('/view', '/preview')}
+                      className="w-full h-full border-0 absolute inset-0"
+                      title="Resumen Interactivo"
+                    />
+                  ) : (
+                    <div className="flex-1 p-8 grid place-items-center text-center text-slate-400">
+                      <p className="text-sm">Resumen interactivo no disponible.</p>
+                    </div>
+                  )}
                 </div>
               </div>
             )}
@@ -997,13 +1482,107 @@ export default function ReproductorClasesPage() {
                 {contenidoPrincipal !== 'video_clase' && (
                   <button 
                     onClick={() => activarRecursoEnVisor('video_clase', 'Video de la Clase')}
-                    className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-xl text-xs transition-colors shadow flex items-center justify-center gap-2 shrink-0"
+                    className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-4 py-2 rounded-xl text-xs transition-colors shadow flex items-center justify-center gap-2 shrink-0 cursor-pointer"
                   >
                     <Video className="w-4 h-4" /> Ver Video Principal
                   </button>
                 )}
               </div>
             </div>
+
+            {/* Píldoras de Acceso Rápido para Recursos con Enlace */}
+            {parteActiva && parteActiva.recursos && parteActiva.recursos.length > 0 && (
+              <div className="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-slate-800/30">
+                <span className={`text-[11px] font-bold uppercase tracking-wider mr-1 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                  Recursos disponibles:
+                </span>
+                {parteActiva.recursos.map((rec) => {
+                  if (rec.tipo === 'video') {
+                    return (
+                      <button
+                        key={rec.id}
+                        onClick={() => activarRecursoEnVisor('resumen_video', 'Resumen en Video', rec.archivo)}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer border ${
+                          contenidoPrincipal === 'resumen_video'
+                            ? 'bg-indigo-600 text-white border-indigo-500 shadow-sm'
+                            : esOscuro 
+                              ? 'bg-indigo-950/60 hover:bg-indigo-900/60 text-indigo-300 border-indigo-800/60'
+                              : 'bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border-indigo-200'
+                        }`}
+                      >
+                        <Video className="size-3.5" /> Resumen en Video
+                      </button>
+                    );
+                  }
+                  if (rec.tipo === 'audio') {
+                    return (
+                      <button
+                        key={rec.id}
+                        onClick={() => activarRecursoEnVisor('resumen_audio', 'Resumen en Audio', rec.archivo)}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer border ${
+                          contenidoPrincipal === 'resumen_audio'
+                            ? 'bg-purple-600 text-white border-purple-500 shadow-sm'
+                            : esOscuro 
+                              ? 'bg-purple-950/60 hover:bg-purple-900/60 text-purple-300 border-purple-800/60'
+                              : 'bg-purple-50 hover:bg-purple-100 text-purple-700 border-purple-200'
+                        }`}
+                      >
+                        <Headphones className="size-3.5" /> Resumen en Audio
+                      </button>
+                    );
+                  }
+                  if (rec.tipo === 'pdf') {
+                    return (
+                      <button
+                        key={rec.id}
+                        onClick={() => activarRecursoEnVisor('pdf_visor', 'Material de clases', rec.archivo)}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer border ${
+                          contenidoPrincipal === 'pdf_visor'
+                            ? 'bg-rose-600 text-white border-rose-500 shadow-sm'
+                            : esOscuro 
+                              ? 'bg-rose-950/60 hover:bg-rose-900/60 text-rose-300 border-rose-800/60'
+                              : 'bg-rose-50 hover:bg-rose-100 text-rose-700 border-rose-200'
+                        }`}
+                      >
+                        <FileText className="size-3.5" /> Material de clases
+                      </button>
+                    );
+                  }
+                  if (rec.tipo === 'interactivo') {
+                    return (
+                      <button
+                        key={rec.id}
+                        onClick={() => activarRecursoEnVisor('resumen_interactivo', 'Resumen Interactivo', rec.archivo)}
+                        className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer border ${
+                          contenidoPrincipal === 'resumen_interactivo'
+                            ? 'bg-amber-600 text-white border-amber-500 shadow-sm'
+                            : esOscuro 
+                              ? 'bg-amber-950/60 hover:bg-amber-900/60 text-amber-300 border-amber-800/60'
+                              : 'bg-amber-50 hover:bg-amber-100 text-amber-800 border-amber-200'
+                        }`}
+                      >
+                        <Sparkles className="size-3.5" /> Resumen Interactivo
+                      </button>
+                    );
+                  }
+                  return (
+                    <a
+                      key={rec.id}
+                      href={rec.archivo || '#'}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition cursor-pointer border ${
+                        esOscuro 
+                          ? 'bg-emerald-950/60 hover:bg-emerald-900/60 text-emerald-300 border-emerald-800/60'
+                          : 'bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border-emerald-200'
+                      }`}
+                    >
+                      <Download className="size-3.5" /> {rec.titulo}
+                    </a>
+                  );
+                })}
+              </div>
+            )}
 
             {/* BARRA DE NAVEGACIÓN SECUENCIAL */}
             <div className={`mt-5 pt-4 border-t flex flex-col sm:flex-row items-center justify-between gap-3 ${
@@ -1125,91 +1704,185 @@ export default function ReproductorClasesPage() {
                     Materiales oficiales de estudio configurados en el catálogo:
                   </p>
 
-                  {parteActiva.recursos.map((rec) => (
-                    <div 
-                      key={rec.id}
-                      className={`flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl border gap-4 transition-all ${
-                        esOscuro 
-                          ? 'bg-slate-900 border-slate-800 hover:border-slate-700' 
-                          : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'
-                      }`}
-                    >
-                      <div className="flex items-center gap-3">
-                        <div className={`size-10 rounded-xl grid place-items-center shrink-0 ${
-                          rec.tipo === 'pdf' ? 'bg-rose-500/20 text-rose-500' :
-                          rec.tipo === 'excel' ? 'bg-emerald-500/20 text-emerald-500' :
-                          rec.tipo === 'video' ? 'bg-indigo-500/20 text-indigo-500' :
-                          'bg-cyan-500/20 text-cyan-500'
-                        }`}>
-                          {rec.tipo === 'pdf' && <FileText className="w-5 h-5" />}
-                          {rec.tipo === 'excel' && <Table className="w-5 h-5" />}
-                          {rec.tipo === 'video' && <Video className="w-5 h-5" />}
-                          {rec.tipo === 'audio' && <Headphones className="w-5 h-5" />}
+                  {parteActiva.recursos && parteActiva.recursos.length > 0 ? (
+                    parteActiva.recursos.map((rec) => (
+                      <div 
+                        key={rec.id}
+                        className={`flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-2xl border gap-4 transition-all ${
+                          esOscuro 
+                            ? 'bg-slate-900 border-slate-800 hover:border-slate-700' 
+                            : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm'
+                        }`}
+                      >
+                        <div className="flex items-center gap-3 min-w-0">
+                          <div className={`size-10 rounded-xl grid place-items-center shrink-0 ${
+                            rec.tipo === 'pdf' ? 'bg-rose-500/20 text-rose-500' :
+                            rec.tipo === 'excel' ? 'bg-emerald-500/20 text-emerald-500' :
+                            rec.tipo === 'video' ? 'bg-indigo-500/20 text-indigo-500' :
+                            rec.tipo === 'audio' ? 'bg-purple-500/20 text-purple-500' :
+                            rec.tipo === 'interactivo' ? 'bg-amber-500/20 text-amber-500' :
+                            'bg-cyan-500/20 text-cyan-500'
+                          }`}>
+                            {rec.tipo === 'pdf' && <FileText className="w-5 h-5" />}
+                            {rec.tipo === 'excel' && <Table className="w-5 h-5" />}
+                            {rec.tipo === 'video' && <Video className="w-5 h-5" />}
+                            {rec.tipo === 'audio' && <Headphones className="w-5 h-5" />}
+                            {rec.tipo === 'interactivo' && <Sparkles className="w-5 h-5" />}
+                            {rec.tipo === 'material' && <Folder className="w-5 h-5" />}
+                          </div>
+                          <div className="min-w-0">
+                            <h4 className={`font-bold text-xs sm:text-sm truncate ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                              {rec.titulo}
+                            </h4>
+                            <span className={`text-[11px] block truncate ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                              {rec.descripcion}
+                            </span>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className={`font-bold text-xs sm:text-sm ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                            {rec.titulo}
-                          </h4>
-                          <span className={`text-[11px] ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                            {rec.descripcion}
-                          </span>
-                        </div>
-                      </div>
 
-                      <div className="flex items-center gap-2 shrink-0">
-                        {rec.tipo === 'pdf' && (
-                          <>
-                            <button 
-                              onClick={() => activarRecursoEnVisor('pdf_visor', 'Separata PDF Oficial')}
-                              className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border ${
-                                esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
-                              }`}
-                            >
-                              <Eye className="w-3.5 h-3.5" /> Ver PDF
-                            </button>
-                            <a 
-                              href={rec.archivo || '#'} 
-                              target="_blank" 
-                              rel="noreferrer"
-                              className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow"
-                            >
-                              <Download className="w-3.5 h-3.5" /> Descargar
-                            </a>
-                          </>
-                        )}
-                        {rec.tipo === 'excel' && (
-                          <a 
-                            href={rec.archivo || '#'} 
-                            target="_blank" 
-                            rel="noreferrer"
-                            className="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow"
-                          >
-                            <Download className="w-3.5 h-3.5" /> Descargar Excel
-                          </a>
-                        )}
-                        {rec.tipo === 'video' && (
-                          <button 
-                            onClick={() => activarRecursoEnVisor('resumen_video', 'Cápsula de Resumen en Video')}
-                            className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border ${
-                              esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
-                            }`}
-                          >
-                            <Eye className="w-3.5 h-3.5" /> Ver cápula
-                          </button>
-                        )}
-                        {rec.tipo === 'audio' && (
-                          <button 
-                            onClick={() => activarRecursoEnVisor('resumen_audio', 'Podcast de Audio')}
-                            className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border ${
-                              esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
-                            }`}
-                          >
-                            <Eye className="w-3.5 h-3.5" /> Escuchar
-                          </button>
-                        )}
+                        <div className="flex items-center gap-2 shrink-0">
+                          {rec.tipo === 'pdf' && (
+                            <>
+                              <button 
+                                onClick={() => activarRecursoEnVisor('pdf_visor', 'Material de clases', rec.archivo)}
+                                className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border cursor-pointer ${
+                                  esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
+                                }`}
+                              >
+                                <Eye className="w-3.5 h-3.5" /> Ver PDF
+                              </button>
+                              <a 
+                                href={rec.archivo || '#'} 
+                                target="_blank" 
+                                rel="noreferrer"
+                                download
+                                className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow cursor-pointer"
+                              >
+                                <Download className="w-3.5 h-3.5" /> Descargar
+                              </a>
+                            </>
+                          )}
+                          {rec.tipo === 'excel' && (
+                            <>
+                              <a 
+                                href={rec.archivo || '#'} 
+                                target="_blank" 
+                                rel="noreferrer"
+                                className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border cursor-pointer ${
+                                  esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
+                                }`}
+                              >
+                                <Eye className="w-3.5 h-3.5" /> Abrir
+                              </a>
+                              <a 
+                                href={rec.archivo || '#'} 
+                                target="_blank" 
+                                rel="noreferrer"
+                                download
+                                className="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow cursor-pointer"
+                              >
+                                <Download className="w-3.5 h-3.5" /> Descargar Excel
+                              </a>
+                            </>
+                          )}
+                          {rec.tipo === 'video' && (
+                            <>
+                              <button 
+                                onClick={() => activarRecursoEnVisor('resumen_video', 'Resumen en Video', rec.archivo)}
+                                className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border cursor-pointer ${
+                                  esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
+                                }`}
+                              >
+                                <Eye className="w-3.5 h-3.5" /> Ver Video
+                              </button>
+                              <a 
+                                href={rec.archivo || '#'} 
+                                target="_blank" 
+                                rel="noreferrer"
+                                download
+                                className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow cursor-pointer"
+                              >
+                                <Download className="w-3.5 h-3.5" /> Descargar
+                              </a>
+                            </>
+                          )}
+                          {rec.tipo === 'audio' && (
+                            <>
+                              <button 
+                                onClick={() => activarRecursoEnVisor('resumen_audio', 'Resumen en Audio', rec.archivo)}
+                                className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border cursor-pointer ${
+                                  esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
+                                }`}
+                              >
+                                <Headphones className="w-3.5 h-3.5" /> Escuchar
+                              </button>
+                              <a 
+                                href={rec.archivo || '#'} 
+                                target="_blank" 
+                                rel="noreferrer"
+                                download
+                                className="bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow cursor-pointer"
+                              >
+                                <Download className="w-3.5 h-3.5" /> Descargar
+                              </a>
+                            </>
+                          )}
+                          {rec.tipo === 'interactivo' && (
+                            <>
+                              <button 
+                                onClick={() => activarRecursoEnVisor('resumen_interactivo', 'Resumen Interactivo', rec.archivo)}
+                                className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border cursor-pointer ${
+                                  esOscuro ? 'bg-amber-900/40 hover:bg-amber-900/60 text-amber-300 border-amber-700' : 'bg-amber-100 hover:bg-amber-200 text-amber-800 border-amber-200'
+                                }`}
+                              >
+                                <Sparkles className="w-3.5 h-3.5" /> Abrir Interactivo
+                              </button>
+                              <a 
+                                href={rec.archivo || '#'} 
+                                target="_blank" 
+                                rel="noreferrer"
+                                download
+                                className="bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow cursor-pointer"
+                              >
+                                <Download className="w-3.5 h-3.5" /> Descargar
+                              </a>
+                            </>
+                          )}
+                          {rec.tipo === 'material' && (
+                            <>
+                              <a 
+                                href={rec.archivo || '#'} 
+                                target="_blank" 
+                                rel="noreferrer"
+                                className={`text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors border cursor-pointer ${
+                                  esOscuro ? 'bg-slate-800 hover:bg-slate-700 text-white border-slate-700' : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
+                                }`}
+                              >
+                                <Eye className="w-3.5 h-3.5" /> Abrir
+                              </a>
+                              <a 
+                                href={rec.archivo || '#'} 
+                                target="_blank" 
+                                rel="noreferrer"
+                                download
+                                className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-colors shadow cursor-pointer"
+                              >
+                                <Download className="w-3.5 h-3.5" /> Descargar
+                              </a>
+                            </>
+                          )}
+                        </div>
                       </div>
+                    ))
+                  ) : (
+                    <div className={`p-8 text-center rounded-2xl border border-dashed ${
+                      esOscuro ? 'border-slate-800 text-slate-400 bg-slate-900/40' : 'border-slate-200 text-slate-500 bg-slate-50'
+                    }`}>
+                      <p className="text-xs">
+                        Esta sesión cuenta con su clase magistral en video. No hay materiales adicionales requeridos para este tema.
+                      </p>
                     </div>
-                  ))}
+                  )}
                 </div>
               )}
 
@@ -1298,33 +1971,42 @@ export default function ReproductorClasesPage() {
           </div>
 
           {/* Lista Continua de Módulos y Clases */}
-          <div className="p-4 space-y-6 pb-8">
-            {diplomadoActual.modulos.map((mod: any) => {
+          <div className="p-4 space-y-5 pb-8">
+            {diplomadoActual.modulos.map((mod: any, modIdx: number) => {
               const estaModCompletado = Boolean(completadosMap[mod.codigo] || mod.completado);
 
               return (
-                <div key={mod.id} className="space-y-2">
-                  <div className={`pt-2 pb-2 px-1 border-b flex items-center justify-between ${
-                    esOscuro ? 'border-slate-800 text-slate-200' : 'border-slate-200 text-slate-800'
+                <div 
+                  key={mod.id} 
+                  className={`p-4 rounded-2xl border space-y-3 transition-all ${
+                    esOscuro 
+                      ? 'bg-slate-900/90 border-slate-800' 
+                      : 'bg-white border-slate-200 shadow-2xs'
+                  }`}
+                >
+                  <div className={`pb-2.5 border-b space-y-2 ${
+                    esOscuro ? 'border-slate-800' : 'border-slate-100'
                   }`}>
-                    <div>
-                      <span className="text-[10px] font-bold text-indigo-500 uppercase tracking-widest block">
-                        {mod.codigo}
-                      </span>
-                      <h4 className="font-bold text-xs mt-0.5 leading-snug">
-                        {mod.nombre}
-                      </h4>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <span className="text-[10px] font-bold text-indigo-500 uppercase tracking-widest block">
+                          {formatearCodigoModulo(mod.codigo, modIdx)}
+                        </span>
+                        <h4 className="font-bold text-xs mt-0.5 leading-snug">
+                          {mod.nombre}
+                        </h4>
+                      </div>
+                      <button
+                        onClick={() => toggleCompletarLeccion(mod.codigo)}
+                        className={`text-[10px] font-semibold px-2 py-0.5 rounded-md shrink-0 ml-2 border transition-all cursor-pointer ${
+                          estaModCompletado
+                            ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
+                            : esOscuro ? 'bg-slate-800 text-slate-400 border-slate-700' : 'bg-slate-100 text-slate-600 border-slate-200'
+                        }`}
+                      >
+                        {estaModCompletado ? 'Completado ✓' : `${mod.clases.length} clases`}
+                      </button>
                     </div>
-                    <button
-                      onClick={() => toggleCompletarLeccion(mod.codigo)}
-                      className={`text-[10px] font-semibold px-2 py-0.5 rounded-md shrink-0 ml-2 border transition-all ${
-                        estaModCompletado
-                          ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
-                          : esOscuro ? 'bg-slate-800 text-slate-400 border-slate-700' : 'bg-slate-100 text-slate-600 border-slate-200'
-                      }`}
-                    >
-                      {estaModCompletado ? 'Completado ✓' : `${mod.clases.length} clases`}
-                    </button>
                   </div>
 
                   {mod.temas && mod.temas.length > 0 ? (
@@ -1379,13 +2061,13 @@ export default function ReproductorClasesPage() {
                       })}
 
                       {mod.clasesAdicionales && mod.clasesAdicionales.length > 0 && (
-                        <div className="space-y-1.5 pt-2 border-t border-slate-200/50 mt-2">
+                        <div className="space-y-1.5 pt-2 border-t border-slate-200/50 dark:border-slate-800/50 mt-2">
                           <span className="text-[10px] font-bold text-amber-500 uppercase tracking-widest block px-1">
                             ⭐ Clase Adicional
                           </span>
                           {mod.clasesAdicionales.map((clase: ClaseCompleta) => {
                             const esClaseSeleccionada = claseActual?.id === clase.id;
-                            const estaCompletada = estaModCompletado || clase.completada;
+                            const estaCompletada = estaModCompletado || Boolean(completadosMap[clase.id]);
 
                             return (
                               <button 
@@ -1421,7 +2103,7 @@ export default function ReproductorClasesPage() {
                     <div className="space-y-1">
                       {mod.clases.map((clase: ClaseCompleta) => {
                         const esClaseSeleccionada = claseActual?.id === clase.id;
-                        const estaCompletada = estaModCompletado || clase.completada;
+                        const estaCompletada = estaModCompletado || Boolean(completadosMap[clase.id]);
 
                         return (
                           <button 
@@ -1456,6 +2138,75 @@ export default function ReproductorClasesPage() {
                       })}
                     </div>
                   )}
+
+                  {/* Fila del Examen del Módulo (Ubicado después de los temas y clases) */}
+                  <div className={`mt-3 pt-2.5 border-t flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 rounded-xl p-3 ${
+                    esOscuro ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'
+                  }`}>
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <div className={`size-8 rounded-lg flex items-center justify-center shrink-0 ${
+                        notasModulosMap[mod.codigo] !== undefined
+                          ? (notasModulosMap[mod.codigo] >= 12 ? 'bg-emerald-500/10 text-emerald-500' : 'bg-rose-500/10 text-rose-500')
+                          : 'bg-indigo-500/10 text-indigo-500'
+                      }`}>
+                        <FileText className="w-4 h-4" />
+                      </div>
+                      <div className="min-w-0">
+                        <span className={`text-xs font-bold block truncate ${esOscuro ? 'text-slate-100' : 'text-slate-800'}`}>
+                          Examen Modular {modIdx + 1}
+                        </span>
+                        <span className="text-[11px] text-slate-400 block font-medium">
+                          {notasModulosMap[mod.codigo] !== undefined
+                            ? `Nota: ${notasModulosMap[mod.codigo].toString().padStart(2, '0')}/20 · ${notasModulosMap[mod.codigo] >= 12 ? 'Aprobado' : 'Desaprobado'}`
+                            : '1 intento - 30 min'
+                          }
+                        </span>
+                      </div>
+                    </div>
+
+                    {notasModulosMap[mod.codigo] !== undefined ? (
+                      <div className="flex items-center gap-2 shrink-0">
+                        <button
+                          type="button"
+                          onClick={() => abrirVerIntento(mod.codigo, mod.nombre, modIdx)}
+                          className={`text-xs font-bold px-3 py-1.5 rounded-lg border transition-colors flex items-center gap-1 cursor-pointer ${
+                            esOscuro 
+                              ? 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700' 
+                              : 'bg-white border-slate-300 text-slate-700 hover:bg-slate-100 shadow-2xs'
+                          }`}
+                        >
+                          <Eye className="w-3.5 h-3.5" /> Ver intento
+                        </button>
+
+                        {notasModulosMap[mod.codigo] >= 12 ? (
+                          <Link
+                            href="/dashboard/certificados"
+                            className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-3 py-1.5 rounded-lg transition-colors shadow-2xs cursor-pointer"
+                          >
+                            <Award className="w-3.5 h-3.5" /> Descargar certificado
+                          </Link>
+                        ) : (
+                          <a
+                            href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, desaprobé el Examen Modular ${modIdx + 1} en ${diplomadoActual.titulo}. Deseo pagar los S/ 25.00 para rendir mi Examen Sustitutorio.`)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs px-3 py-1.5 rounded-lg transition-colors shadow-2xs"
+                            title="Solo tienes 1 intento. Para rendir nuevamente debes pagar el sustitutorio de S/ 25."
+                          >
+                            <span>Sustitutorio (S/ 25)</span>
+                          </a>
+                        )}
+                      </div>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => abrirModalExamen(mod.codigo, mod.nombre, modIdx)}
+                        className="bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold px-3.5 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 shrink-0 shadow-2xs cursor-pointer"
+                      >
+                        <FileText className="w-3.5 h-3.5" /> Rendir examen
+                      </button>
+                    )}
+                  </div>
                 </div>
               );
             })}
@@ -1463,6 +2214,371 @@ export default function ReproductorClasesPage() {
         </aside>
 
       </div>
+
+      {/* MODAL DE EVALUACIÓN MODULAR */}
+      {examenActivoModal && (
+        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
+          <div className={`max-w-2xl w-full rounded-2xl p-6 shadow-2xl space-y-6 border transition-all my-8 ${
+            esOscuro ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900'
+          }`}>
+            {/* Header Modal */}
+            <div className="flex items-start justify-between border-b pb-4 border-slate-200 dark:border-slate-800">
+              <div>
+                <span className="text-xs font-bold text-indigo-500 uppercase tracking-wider block">
+                  Examen Modular {examenActivoModal.moduloIdx + 1} · Evaluación Académica
+                </span>
+                <h3 className="text-base font-bold mt-1 leading-snug">
+                  {examenActivoModal.moduloNombre}
+                </h3>
+              </div>
+              <button
+                onClick={() => setExamenActivoModal(null)}
+                className={`p-2 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
+                  esOscuro ? 'hover:bg-slate-800 text-slate-400' : 'hover:bg-slate-100 text-slate-500'
+                }`}
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* PASO 1: INDICACIONES PREVIAS AL EXAMEN */}
+            {pasoModalExamen === 'indicaciones' && (
+              <div className="space-y-5">
+                <div className={`p-4 rounded-xl border ${
+                  esOscuro ? 'bg-slate-800/60 border-slate-750' : 'bg-slate-50 border-slate-200'
+                }`}>
+                  <h4 className="text-sm font-bold mb-3 flex items-center gap-2">
+                    <Sparkles className="w-4 h-4 text-amber-500" />
+                    Indicaciones para rendir tu evaluación
+                  </h4>
+                  <ul className="space-y-3 text-xs leading-relaxed">
+                    <li className="flex items-start gap-2.5">
+                      <span className="font-bold text-indigo-500 shrink-0">⏱️ Tiempo:</span>
+                      <span>Tendrás un tiempo límite de <strong>30 minutos</strong> para responder el cuestionario completo.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="font-bold text-indigo-500 shrink-0">🎯 Intentos:</span>
+                      <span>Cuentas con <strong>1 solo intento</strong> para rendir este examen modular.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="font-bold text-indigo-500 shrink-0">📝 Estructura:</span>
+                      <span>Consta de <strong>5 preguntas objetivas</strong> de opción múltiple relacionadas al módulo cursado.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="font-bold text-indigo-500 shrink-0">🏆 Aprobación:</span>
+                      <span>La nota mínima aprobatoria es <strong>12 / 20</strong> (cada pregunta correcta suma 4 puntos).</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="font-bold text-indigo-500 shrink-0">📜 Certificación:</span>
+                      <span>Al aprobar con 12 o más, tu certificado modular se activará automáticamente para descarga en <strong>Mis Certificados</strong>.</span>
+                    </li>
+                    <li className="flex items-start gap-2.5">
+                      <span className="font-bold text-amber-500 shrink-0">⚠️ Sustitutorio:</span>
+                      <span>En caso de desaprobar, deberás abonar el derecho de <strong>S/ 25.00</strong> para habilitar un Examen Sustitutorio.</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-end gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setExamenActivoModal(null)}
+                    className={`px-4 py-2 rounded-xl text-xs font-semibold border transition-colors cursor-pointer ${
+                      esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-700'
+                    }`}
+                  >
+                    Cancelar
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPasoModalExamen('cuestionario')}
+                    className="bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow-md transition-colors flex items-center gap-2 cursor-pointer"
+                  >
+                    <FileText className="w-4 h-4" /> Comenzar Examen Ahora
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* PASO 2: CUESTIONARIO */}
+            {pasoModalExamen === 'cuestionario' && (
+              <div className="space-y-6 max-h-[60vh] overflow-y-auto pr-1">
+                {generarPreguntasExamenModulo(examenActivoModal.moduloCodigo, examenActivoModal.moduloNombre).map((q, qIdx) => (
+                  <div
+                    key={q.id}
+                    className={`p-4 rounded-xl border space-y-3 ${
+                      esOscuro ? 'bg-slate-800/60 border-slate-750' : 'bg-slate-50 border-slate-200'
+                    }`}
+                  >
+                    <h4 className="text-xs font-bold leading-snug">
+                      {qIdx + 1}. {q.pregunta}
+                    </h4>
+                    <div className="space-y-2">
+                      {q.opciones.map((opt, optIdx) => {
+                        const seleccionada = respuestasExamen[qIdx] === optIdx;
+                        return (
+                          <button
+                            key={optIdx}
+                            type="button"
+                            onClick={() => setRespuestasExamen(prev => ({ ...prev, [qIdx]: optIdx }))}
+                            className={`w-full text-left p-3 rounded-lg text-xs flex items-center gap-3 transition-all border cursor-pointer ${
+                              seleccionada
+                                ? 'bg-indigo-600 text-white border-indigo-500 font-semibold shadow-2xs'
+                                : esOscuro
+                                  ? 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'
+                                  : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-100'
+                            }`}
+                          >
+                            <div className={`size-4 rounded-full border grid place-items-center shrink-0 ${
+                              seleccionada ? 'border-white bg-white text-indigo-600 font-bold' : 'border-slate-400'
+                            }`}>
+                              {seleccionada && <div className="size-2 rounded-full bg-indigo-600" />}
+                            </div>
+                            <span className="leading-tight">{opt}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+
+                {/* Botón de Envío */}
+                <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                  <span className={`text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
+                    Preguntas respondidas: {Object.keys(respuestasExamen).length} / 5
+                  </span>
+                  <button
+                    onClick={rendirExamenModulo}
+                    disabled={Object.keys(respuestasExamen).length < 5 || guardandoExamen}
+                    className={`px-6 py-2.5 rounded-xl font-bold text-xs flex items-center gap-2 transition-all shadow-md ${
+                      Object.keys(respuestasExamen).length === 5 && !guardandoExamen
+                        ? 'bg-indigo-600 hover:bg-indigo-500 text-white cursor-pointer'
+                        : 'bg-slate-700 text-slate-400 cursor-not-allowed opacity-60'
+                    }`}
+                  >
+                    {guardandoExamen ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" /> Guardando Nota en Supabase...
+                      </>
+                    ) : (
+                      'Entregar y Finalizar Examen'
+                    )}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* PASO 3: RESULTADOS INMEDIATOS */}
+            {pasoModalExamen === 'resultado' && resultadoExamen && (
+              <div className="space-y-6 text-center py-2">
+                <div className={`p-6 rounded-2xl border ${
+                  resultadoExamen.aprobado
+                    ? esOscuro ? 'bg-emerald-950/40 border-emerald-800/60 text-emerald-300' : 'bg-emerald-50 border-emerald-200 text-emerald-900'
+                    : esOscuro ? 'bg-rose-950/40 border-rose-800/60 text-rose-300' : 'bg-rose-50 border-rose-200 text-rose-900'
+                }`}>
+                  <div className="text-4xl mb-2">
+                    {resultadoExamen.aprobado ? '🎉' : '❌'}
+                  </div>
+                  <h4 className="text-lg font-bold">
+                    {resultadoExamen.aprobado ? '¡Examen Aprobado con Éxito!' : 'Examen No Aprobado'}
+                  </h4>
+                  <p className="text-3xl font-black my-2">
+                    Nota: {resultadoExamen.nota.toString().padStart(2, '0')} / 20
+                  </p>
+                  <p className="text-xs max-w-md mx-auto leading-relaxed">
+                    {resultadoExamen.aprobado
+                      ? '¡Felicitaciones! Has superado la nota mínima aprobatoria (12/20). Tu certificado de este módulo ya se encuentra disponible para descargar en la sección Mis Certificados.'
+                      : 'Obtuviste una calificación menor a 12/20 y has completado tu único intento permitido. Para rendir tu Examen Sustitutorio y rehabilitar tu evaluación, abona el derecho de S/ 25.00 con soporte.'}
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap justify-center gap-3">
+                  <button
+                    onClick={() => setPasoModalExamen('ver_intento')}
+                    className={`font-bold text-xs px-4 py-2.5 rounded-xl border transition-colors inline-flex items-center gap-1.5 cursor-pointer ${
+                      esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-white border-slate-300 hover:bg-slate-100 text-slate-800 shadow-2xs'
+                    }`}
+                  >
+                    <Eye className="w-4 h-4" /> Ver intento y revisión
+                  </button>
+
+                  {resultadoExamen.aprobado ? (
+                    <Link
+                      href="/dashboard/certificados"
+                      className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+                    >
+                      <Award className="w-4 h-4" /> Descargar Certificado
+                    </Link>
+                  ) : (
+                    <a
+                      href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, rendí el Examen Modular ${examenActivoModal.moduloIdx + 1} con nota ${resultadoExamen.nota}/20 y deseo pagar los S/ 25.00 para habilitar el Examen Sustitutorio.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow transition-colors inline-flex items-center gap-1.5"
+                    >
+                      Solicitar Sustitutorio (S/ 25)
+                    </a>
+                  )}
+
+                  <button
+                    onClick={() => setExamenActivoModal(null)}
+                    className={`font-bold text-xs px-5 py-2.5 rounded-xl border transition-colors cursor-pointer ${
+                      esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-800'
+                    }`}
+                  >
+                    Cerrar
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* PASO 4: REVISIÓN DETALLADA DEL INTENTO ("VER INTENTO") */}
+            {pasoModalExamen === 'ver_intento' && (() => {
+              const preguntas = generarPreguntasExamenModulo(examenActivoModal.moduloCodigo, examenActivoModal.moduloNombre);
+              const respuestasDelModulo = respuestasPorModulo[examenActivoModal.moduloCodigo] || {};
+              const notaActual = notasModulosMap[examenActivoModal.moduloCodigo] ?? (resultadoExamen?.nota || 0);
+              const aciertosObjetivo = Math.min(5, Math.max(0, Math.round(notaActual / 4)));
+
+              return (
+                <div className="space-y-5 max-h-[60vh] overflow-y-auto pr-1">
+                  {/* Resumen de Calificación */}
+                  <div className={`p-4 rounded-xl border flex items-center justify-between ${
+                    notaActual >= 12 
+                      ? (esOscuro ? 'bg-emerald-950/30 border-emerald-800/40' : 'bg-emerald-50 border-emerald-200')
+                      : (esOscuro ? 'bg-rose-950/30 border-rose-800/40' : 'bg-rose-50 border-rose-200')
+                  }`}>
+                    <div>
+                      <span className="text-xs font-bold block">
+                        Calificación del intento: <span className="text-sm font-black">{notaActual.toString().padStart(2, '0')} / 20</span>
+                      </span>
+                      <span className="text-[11px] text-slate-400">
+                        {notaActual >= 12 ? 'Examen Aprobado (Mínimo 12/20)' : 'Examen Desaprobado (Requiere Sustitutorio)'}
+                      </span>
+                    </div>
+                    <span className={`text-xs font-bold px-3 py-1 rounded-full border ${
+                      notaActual >= 12
+                        ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
+                        : 'bg-rose-500/20 text-rose-400 border-rose-500/30'
+                    }`}>
+                      {notaActual >= 12 ? 'Aprobado ✓' : 'Desaprobado ❌'}
+                    </span>
+                  </div>
+
+                  {/* Detalle Pregunta por Pregunta */}
+                  <div className="space-y-4">
+                    {preguntas.map((q, qIdx) => {
+                      // Si tenemos la respuesta exacta guardada la usamos; sino la reconstruimos consistente con la nota
+                      let seleccion = respuestasDelModulo[qIdx];
+                      if (seleccion === undefined) {
+                        seleccion = qIdx < aciertosObjetivo ? q.respuestaCorrecta : ((q.respuestaCorrecta + 1) % q.opciones.length);
+                      }
+                      const esCorrecta = seleccion === q.respuestaCorrecta;
+
+                      return (
+                        <div
+                          key={q.id}
+                          className={`p-4 rounded-xl border space-y-3 ${
+                            esCorrecta 
+                              ? (esOscuro ? 'bg-emerald-950/20 border-emerald-800/30' : 'bg-emerald-50/50 border-emerald-200')
+                              : (esOscuro ? 'bg-rose-950/20 border-rose-800/30' : 'bg-rose-50/50 border-rose-200')
+                          }`}
+                        >
+                          <div className="flex items-start justify-between gap-2">
+                            <h4 className="text-xs font-bold leading-snug">
+                              {qIdx + 1}. {q.pregunta}
+                            </h4>
+                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border shrink-0 ${
+                              esCorrecta 
+                                ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' 
+                                : 'bg-rose-500/20 text-rose-400 border-rose-500/30'
+                            }`}>
+                              {esCorrecta ? '+4 pts (Correcto)' : '0 pts (Incorrecto)'}
+                            </span>
+                          </div>
+
+                          <div className="space-y-2">
+                            {q.opciones.map((opt, optIdx) => {
+                              const esLaSeleccionada = seleccion === optIdx;
+                              const esLaCorrecta = optIdx === q.respuestaCorrecta;
+
+                              let estiloOpcion = esOscuro 
+                                ? 'bg-slate-900 border-slate-800 text-slate-400' 
+                                : 'bg-white border-slate-200 text-slate-600';
+
+                              if (esLaSeleccionada && esCorrecta) {
+                                estiloOpcion = 'bg-emerald-600/20 border-emerald-500 text-emerald-400 font-bold';
+                              } else if (esLaSeleccionada && !esCorrecta) {
+                                estiloOpcion = 'bg-rose-600/20 border-rose-500 text-rose-400 font-bold line-through';
+                              } else if (!esLaSeleccionada && esLaCorrecta) {
+                                estiloOpcion = 'bg-emerald-600/10 border-emerald-500/60 text-emerald-400 font-semibold';
+                              }
+
+                              return (
+                                <div
+                                  key={optIdx}
+                                  className={`p-2.5 rounded-lg text-xs border flex items-center justify-between gap-2 ${estiloOpcion}`}
+                                >
+                                  <span>{opt}</span>
+                                  <div className="shrink-0 text-[10px] font-bold">
+                                    {esLaSeleccionada && esCorrecta && '✓ Tu respuesta (Correcta)'}
+                                    {esLaSeleccionada && !esCorrecta && '✗ Tu respuesta (Fallida)'}
+                                    {!esLaSeleccionada && esLaCorrecta && '✓ Respuesta correcta'}
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Acciones del pie en Ver Intento */}
+                  <div className="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                    <button
+                      type="button"
+                      onClick={() => setPasoModalExamen('resultado')}
+                      className={`px-4 py-2 rounded-xl text-xs font-semibold border transition-colors cursor-pointer ${
+                        esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-700'
+                      }`}
+                    >
+                      Volver
+                    </button>
+
+                    <div className="flex items-center gap-2">
+                      {notaActual >= 12 ? (
+                        <Link
+                          href="/dashboard/certificados"
+                          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2 rounded-xl shadow transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+                        >
+                          <Award className="w-4 h-4" /> Descargar Certificado
+                        </Link>
+                      ) : (
+                        <a
+                          href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el Examen Modular ${examenActivoModal.moduloIdx + 1} con nota ${notaActual}/20 y deseo pagar los S/ 25.00 para rendir el Examen Sustitutorio.`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs px-4 py-2 rounded-xl shadow transition-colors inline-flex items-center gap-1.5"
+                        >
+                          Sustitutorio (S/ 25)
+                        </a>
+                      )}
+                      <button
+                        onClick={() => setExamenActivoModal(null)}
+                        className={`font-bold text-xs px-4 py-2 rounded-xl border transition-colors cursor-pointer ${
+                          esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-800'
+                        }`}
+                      >
+                        Cerrar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
