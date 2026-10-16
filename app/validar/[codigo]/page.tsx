@@ -14,6 +14,7 @@ export default function ValidarCertificadoPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    document.title = 'Validación de Certificado | EDUMIN';
     if (!codigo) return;
     validarCertificado();
   }, [codigo]);

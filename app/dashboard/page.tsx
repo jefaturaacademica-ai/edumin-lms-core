@@ -21,7 +21,7 @@ import { parseDiplomadosFromProfile } from "@/lib/utils/profileParser";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Dashboard | Edumin",
+  title: "Inicio",
 };
 
 export default async function DashboardPage() {

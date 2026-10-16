@@ -25,6 +25,7 @@ import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
+import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 
 import { parseCursosFromProfile } from '@/lib/utils/profileParser';
 
@@ -366,18 +367,12 @@ export default function CursosPage() {
     <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-300 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
       <div className="max-w-7xl mx-auto space-y-10">
         
-        {/* CABECERA */}
-        <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <h1 className={`text-3xl font-bold tracking-tight flex items-center gap-3 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-              <BookOpen className="w-8 h-8 text-indigo-600" />
-              Mis cursos y talleres
-            </h1>
-            <p className={`mt-2 text-sm ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-              Accede a tus cursos matriculados con seguimiento de avance o adquiere nuevas especializaciones.
-            </p>
-          </div>
-        </header>
+        {/* Encabezado Unificado */}
+        <StudentPageHeader
+          icon={BookOpen}
+          title="Mis cursos"
+          subtitle="Accede a tus cursos matriculados con seguimiento de avance o adquiere nuevas especializaciones."
+        />
 
         {/* VISTA SEGÚN ESTADO DE CURSOS MATRICULADOS */}
         {listaCursosMatriculados.length === 0 ? (

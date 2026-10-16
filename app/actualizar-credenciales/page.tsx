@@ -2,7 +2,7 @@ import { ShieldCheck } from "lucide-react";
 import { UpdatePasswordForm } from "@/components/auth/update-password-form";
 
 export const metadata = {
-  title: "Actualizar credenciales | Edumin",
+  title: "Actualizar credenciales",
 };
 
 export default function UpdateCredentialsPage() {

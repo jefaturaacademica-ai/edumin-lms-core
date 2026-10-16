@@ -10,7 +10,8 @@ import {
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
-import InstitutionalUserDropdown from '@/components/navigation/InstitutionalUserDropdown';
+import { UserProfileCard } from '@/components/navigation/UserProfileCard';
+import { ThemeMenuButton } from '@/components/navigation/ThemeMenuButton';
 
 export interface NavItem {
   href: string;
@@ -28,7 +29,7 @@ export interface NavGroup {
 export default function AdminSidebar() {
   const pathname = usePathname();
   const router = useRouter();
-  const { esOscuro, toggleTema } = useTheme();
+  const { esOscuro, mounted, toggleTema } = useTheme();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const supabase = createBrowserClient(
@@ -38,6 +39,22 @@ export default function AdminSidebar() {
 
   useEffect(() => {
     setMobileOpen(false);
+
+    const adminTitles: Record<string, string> = {
+      '/admin': 'Dashboard y Finanzas 360°',
+      '/admin/catalogo': 'Catálogo y Programas',
+      '/admin/estudiantes': 'Estudiantes y Secretaría',
+      '/admin/certificaciones': 'Certificaciones y Convenios',
+      '/admin/alumnos-riesgo': 'Alumnos en Riesgo',
+      '/admin/reportes': 'Reportes y Datos',
+      '/admin/auditoria': 'Auditoría y Webhooks',
+      '/admin/configuracion': 'Configuración y Roles',
+      '/admin/solicitudes-datos': 'Solicitudes de Datos',
+    };
+
+    if (adminTitles[pathname]) {
+      document.title = `${adminTitles[pathname]} | EDUMIN Admin`;
+    }
   }, [pathname]);
 
   const handleLogout = async () => {
@@ -131,7 +148,6 @@ export default function AdminSidebar() {
         </Link>
 
         <div className="flex items-center gap-2">
-          <InstitutionalUserDropdown />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Abrir menú"
@@ -173,18 +189,8 @@ export default function AdminSidebar() {
         </div>
 
         {/* Tarjeta de Usuario Admin en Móvil */}
-        <div className="p-4 border-b border-slate-900 bg-slate-900/50 shrink-0">
-          <div className="flex items-center gap-3">
-            <div className="size-10 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30">
-              AD
-            </div>
-            <div className="min-w-0 flex-1">
-              <h4 className="text-xs font-bold text-white truncate">SuperAdmin Directorio</h4>
-              <span className="inline-flex items-center gap-1 mt-0.5 px-2 py-0.5 text-[9px] font-bold text-emerald-400 bg-emerald-500/10 rounded-md border border-emerald-500/20">
-                <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span> ONLINE
-              </span>
-            </div>
-          </div>
+        <div className="p-4 border-b border-slate-900 shrink-0">
+          <UserProfileCard currentView="admin" onNavigate={() => setMobileOpen(false)} />
         </div>
 
         <nav className="flex-1 py-3 px-3 space-y-4 overflow-y-auto">
@@ -235,17 +241,7 @@ export default function AdminSidebar() {
             <span>Cerrar sesión</span>
           </button>
 
-          <button
-            onClick={toggleTema}
-            title={esOscuro ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-            className="p-2.5 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors border border-white/10 flex items-center justify-center shrink-0 cursor-pointer"
-          >
-            {esOscuro ? (
-              <Sun className="w-4 h-4 text-amber-400" />
-            ) : (
-              <Moon className="w-4 h-4 text-indigo-400" />
-            )}
-          </button>
+          <ThemeMenuButton dropdownAlign="left" />
         </div>
       </aside>
 
@@ -263,18 +259,8 @@ export default function AdminSidebar() {
         </div>
 
         {/* Tarjeta Admin Desktop */}
-        <div className="p-3.5 border-b border-slate-800/80 bg-slate-950/40 shrink-0">
-          <div className="flex items-center gap-3 p-2 rounded-xl bg-slate-800/50 border border-slate-700/50">
-            <div className="relative size-9 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30">
-              AD
-            </div>
-            <div className="min-w-0 flex-1">
-              <h4 className="text-xs font-bold text-white truncate">SuperAdmin Directorio</h4>
-              <span className="inline-flex items-center gap-1 mt-0.5 px-1.5 py-0.5 text-[9px] font-bold text-emerald-400 bg-emerald-500/10 rounded border border-emerald-500/20">
-                <span className="size-1.5 rounded-full bg-emerald-400 animate-pulse"></span> ONLINE
-              </span>
-            </div>
-          </div>
+        <div className="p-4 border-b border-slate-800/80 shrink-0">
+          <UserProfileCard currentView="admin" />
         </div>
         
         {/* Navegación Desktop Categorizada */}
@@ -322,17 +308,7 @@ export default function AdminSidebar() {
             <span>Cerrar sesión</span>
           </button>
 
-          <button
-            onClick={toggleTema}
-            title={esOscuro ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-            className="p-2.5 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors border border-white/10 flex items-center justify-center shrink-0 cursor-pointer"
-          >
-            {esOscuro ? (
-              <Sun className="w-4 h-4 text-amber-400" />
-            ) : (
-              <Moon className="w-4 h-4 text-indigo-400" />
-            )}
-          </button>
+          <ThemeMenuButton dropdownAlign="right" />
         </div>
       </aside>
     </>

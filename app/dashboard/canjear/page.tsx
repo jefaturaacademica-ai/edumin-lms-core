@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Sparkles, CheckCircle2, ArrowLeft, BookOpenCheck, Search, RefreshCw } from 'lucide-react';
 import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
+import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 
 export default function CanjearBeneficiosPage() {
   const [nombres, setNombres] = useState<string>('Estudiante');
@@ -124,11 +125,7 @@ export default function CanjearBeneficiosPage() {
   );
 
   if (loading) {
-    return (
-      <div className="min-h-screen bg-slate-50 grid place-items-center p-10">
-        <p className="text-slate-500 font-medium animate-pulse">Cargando información de beneficios desde Supabase...</p>
-      </div>
-    );
+    return <DashboardLoader minHeight="min-h-screen" />;
   }
 
   return (
@@ -162,9 +159,9 @@ export default function CanjearBeneficiosPage() {
             <div className="size-16 bg-emerald-600 text-white rounded-2xl grid place-items-center mx-auto shadow-md">
               <CheckCircle2 className="size-8" />
             </div>
-            <h2 className="text-2xl font-bold text-emerald-900">¡Canje registrado exitosamente en Supabase!</h2>
+            <h2 className="text-2xl font-bold text-emerald-900">¡Canje registrado exitosamente!</h2>
             <p className="text-sm text-emerald-700 max-w-md mx-auto">
-              Tus cupos y matrículas han sido registrados correctamente en la base de datos. Ya puedes acceder a tus clases desde tu panel principal.
+              Tus cupos y matrículas han sido registrados correctamente. Ya puedes acceder a tus clases desde tu panel principal.
             </p>
             <Link 
               href="/dashboard/diplomados"
@@ -250,7 +247,7 @@ export default function CanjearBeneficiosPage() {
                 }`}
               >
                 {enviandoCanje ? <RefreshCw className="size-4 animate-spin" /> : null}
-                Confirmar y Canjear Mis Cupos en Supabase
+                Confirmar y Canjear Mis Cupos
               </button>
             </div>
           </div>

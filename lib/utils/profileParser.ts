@@ -152,37 +152,37 @@ export function parseCursosFromProfile(profile: any): CursoJSON[] {
 export function formatearCodigoModulo(codigo?: string, index?: number): string {
   if (!codigo) {
     const num = (index ?? 0) + 1;
-    return `Módulo ${num.toString().padStart(2, '0')}`;
+    return `MÓDULO ${num.toString().padStart(2, '0')}`;
   }
 
   // Si ya contiene Módulo 01, Módulo 1, etc.
   const matchMod = codigo.match(/Mó?dulo\s*0*(\d+)/i);
   if (matchMod) {
     const num = parseInt(matchMod[1], 10);
-    return `Módulo ${num.toString().padStart(2, '0')}`;
+    return `MÓDULO ${num.toString().padStart(2, '0')}`;
   }
 
   // Si es del tipo M01, M02, M1, M2
   const matchM = codigo.match(/^M0*(\d+)$/i);
   if (matchM) {
     const num = parseInt(matchM[1], 10);
-    return `Módulo ${num.toString().padStart(2, '0')}`;
+    return `MÓDULO ${num.toString().padStart(2, '0')}`;
   }
 
   // Si es solo número (1, 2, 3)
   const matchNum = codigo.match(/^\d+$/);
   if (matchNum) {
     const num = parseInt(matchNum[0], 10);
-    return `Módulo ${num.toString().padStart(2, '0')}`;
+    return `MÓDULO ${num.toString().padStart(2, '0')}`;
   }
 
   // Romanos (MÓDULO I, MÓDULO II, MÓDULO III)
-  if (/III/i.test(codigo)) return 'Módulo 03';
-  if (/II/i.test(codigo)) return 'Módulo 02';
-  if (/I/i.test(codigo)) return 'Módulo 01';
+  if (/III/i.test(codigo)) return 'MÓDULO 03';
+  if (/II/i.test(codigo)) return 'MÓDULO 02';
+  if (/I/i.test(codigo)) return 'MÓDULO 01';
 
   const num = (index ?? 0) + 1;
-  return `Módulo ${num.toString().padStart(2, '0')}`;
+  return `MÓDULO ${num.toString().padStart(2, '0')}`;
 }
 
 export function calcularAvanceModuloGranular(

@@ -25,6 +25,7 @@ import { createBrowserClient } from '@supabase/ssr';
 import { useProfile } from '@/context/profile-context';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
+import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 
 export default function PerfilEstudiante() {
   const { esOscuro } = useTheme();
@@ -104,15 +105,26 @@ export default function PerfilEstudiante() {
     cargarPerfil();
   }, [supabase]);
 
-  // Manejo de carga y vista previa de foto de perfil (sin transparencia)
+  const [guardandoFoto, setGuardandoFoto] = useState(false);
+
+  // Manejo de carga y vista previa de foto de perfil (estandarizada a 320x320 cuadrada, sin distorsión ni transparencia)
   const handleCambiarFoto = (e: React.ChangeEvent<HTMLInputElement>) => {
     setErrorFoto(null);
     const file = e.target.files?.[0];
     if (!file) return;
 
+    // 1. Validar formato permitido
     const tiposPermitidos = ['image/jpeg', 'image/jpg', 'image/webp', 'image/png'];
     if (!tiposPermitidos.includes(file.type.toLowerCase())) {
-      setErrorFoto('Formato no permitido. Por favor selecciona una imagen JPG, JPEG o WEBP.');
+      setErrorFoto('Formato no permitido. Por favor selecciona una imagen JPG, JPEG, WEBP o PNG.');
+      e.target.value = '';
+      return;
+    }
+
+    // 2. Validar tamaño máximo de archivo original (máx 8 MB)
+    const MAX_MB = 8;
+    if (file.size > MAX_MB * 1024 * 1024) {
+      setErrorFoto(`La imagen seleccionada supera el límite de ${MAX_MB} MB. Por favor sube una foto más liviana.`);
       e.target.value = '';
       return;
     }
@@ -122,16 +134,25 @@ export default function PerfilEstudiante() {
       const img = new Image();
       img.src = reader.result as string;
       img.onload = () => {
+        // 3. Recorte Cuadrado 1:1 Centrado Estándar (Center Crop a 320x320 px)
+        // No importa si la foto original es horizontal o vertical, se recorta el centro exacto sin deformar
+        const TARGET_SIZE = 320;
+        const minDim = Math.min(img.width, img.height);
+        const cropX = Math.round((img.width - minDim) / 2);
+        const cropY = Math.round((img.height - minDim) / 2);
+
         // Renderizar en Canvas con fondo blanco para eliminar cualquier transparencia
         const canvas = document.createElement('canvas');
-        canvas.width = img.width;
-        canvas.height = img.height;
+        canvas.width = TARGET_SIZE;
+        canvas.height = TARGET_SIZE;
         const ctx = canvas.getContext('2d');
         if (ctx) {
           ctx.fillStyle = '#ffffff'; // Fondo blanco opaco sin transparencia
-          ctx.fillRect(0, 0, canvas.width, canvas.height);
-          ctx.drawImage(img, 0, 0);
-          const jpegDataUrl = canvas.toDataURL('image/jpeg', 0.92);
+          ctx.fillRect(0, 0, TARGET_SIZE, TARGET_SIZE);
+          // Recortar la parte central cuadrada y proyectarla a 320x320 px
+          ctx.drawImage(img, cropX, cropY, minDim, minDim, 0, 0, TARGET_SIZE, TARGET_SIZE);
+          // Calidad 85% para un peso pluma (~20 a 30 KB por foto en Storage)
+          const jpegDataUrl = canvas.toDataURL('image/jpeg', 0.85);
           setFotoTemporal(jpegDataUrl);
         } else {
           setFotoTemporal(reader.result as string);
@@ -144,24 +165,44 @@ export default function PerfilEstudiante() {
 
   const guardarNuevaFoto = async () => {
     if (fotoTemporal) {
-      actualizarFotoPerfil(fotoTemporal);
+      setGuardandoFoto(true);
       try {
-        await fetch('/api/dashboard/perfil', {
+        const res = await fetch('/api/dashboard/perfil', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ action: 'actualizar_foto', foto_perfil: fotoTemporal })
         });
+        const data = await res.json();
+        // Usar la URL pública generada en Supabase Storage
+        const nuevaUrl = data.profile?.foto_perfil || fotoTemporal;
+        actualizarFotoPerfil(nuevaUrl);
       } catch (e) {
-        console.error('Error guardando foto en Supabase:', e);
+        console.error('Error guardando foto en Supabase Storage:', e);
+        actualizarFotoPerfil(fotoTemporal);
+      } finally {
+        setGuardandoFoto(false);
+        setFotoTemporal(null);
+        setErrorFoto(null);
       }
-      setFotoTemporal(null);
-      setErrorFoto(null);
     }
   };
 
   const cancelarFotoTemporal = () => {
     setFotoTemporal(null);
     setErrorFoto(null);
+  };
+
+  const handleQuitarFoto = async () => {
+    actualizarFotoPerfil(null);
+    try {
+      await fetch('/api/dashboard/perfil', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'actualizar_foto', foto_perfil: '' })
+      });
+    } catch (e) {
+      console.error('Error al quitar foto en Supabase:', e);
+    }
   };
 
   const abrirModalEdicion = () => {
@@ -251,15 +292,12 @@ export default function PerfilEstudiante() {
   return (
     <main className={`min-h-screen p-6 sm:p-10 lg:p-16 transition-colors duration-300 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
       <div className="max-w-4xl mx-auto">
-        <header className="mb-8">
-          <h1 className={`text-3xl font-bold tracking-tight flex items-center gap-3 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-            <User className="w-8 h-8 text-indigo-600" />
-            Mi perfil
-          </h1>
-          <p className={`mt-2 ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-            Consulta tu información personal y de residencia registrada en la plataforma.
-          </p>
-        </header>
+        {/* Encabezado Unificado */}
+        <StudentPageHeader
+          icon={User}
+          title="Mi perfil"
+          subtitle="Consulta tu información personal y de residencia registrada en la plataforma."
+        />
 
         {/* TARJETA CON AVATAR E IDENTIDAD DEL ESTUDIANTE */}
         <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-950 rounded-3xl p-6 sm:p-8 shadow-xl text-white relative overflow-hidden mb-8 border border-slate-800">
@@ -329,14 +367,16 @@ export default function PerfilEstudiante() {
                   <>
                     <button
                       onClick={guardarNuevaFoto}
-                      className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-all shadow-md flex items-center gap-2 animate-in fade-in"
+                      disabled={guardandoFoto}
+                      className="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 disabled:opacity-60 text-white font-semibold text-xs transition-all shadow-md flex items-center gap-2 animate-in fade-in cursor-pointer"
                     >
                       <Check className="w-4 h-4" />
-                      <span>Guardar foto</span>
+                      <span>{guardandoFoto ? 'Guardando en Storage...' : 'Guardar foto'}</span>
                     </button>
                     <button
                       onClick={cancelarFotoTemporal}
-                      className="px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs transition-all border border-slate-700"
+                      disabled={guardandoFoto}
+                      className="px-3.5 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 disabled:opacity-60 text-slate-300 font-semibold text-xs transition-all border border-slate-700 cursor-pointer"
                     >
                       <span>Cancelar</span>
                     </button>
@@ -344,8 +384,8 @@ export default function PerfilEstudiante() {
                 ) : (
                   fotoPerfil && (
                     <button
-                      onClick={() => actualizarFotoPerfil(null)}
-                      className="px-3.5 py-2.5 rounded-xl text-xs text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 font-semibold inline-flex items-center gap-1.5 transition-colors border border-rose-500/20"
+                      onClick={handleQuitarFoto}
+                      className="px-3.5 py-2.5 rounded-xl text-xs text-rose-400 hover:bg-rose-500/10 hover:text-rose-300 font-semibold inline-flex items-center gap-1.5 transition-colors border border-rose-500/20 cursor-pointer"
                     >
                       <Trash2 className="w-3.5 h-3.5" />
                       <span>Quitar foto</span>

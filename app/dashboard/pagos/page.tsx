@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
+import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 
 export default function PagosEstudiantePage() {
   const { esOscuro } = useTheme();
@@ -227,25 +228,18 @@ export default function PagosEstudiantePage() {
     }`}>
       <div className="max-w-6xl mx-auto">
         
-        {/* Cabecera Principal */}
-        <div className="mb-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <div>
-            <h1 className={`text-2xl sm:text-3xl font-bold tracking-tight flex items-center gap-3 ${
-              esOscuro ? 'text-white' : 'text-slate-900'
-            }`}>
-              <Wallet className={`w-7 h-7 ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`} />
-              Estado de cuenta y tesorería
-            </h1>
-            <p className={`mt-1.5 text-sm ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-              Consulta tus cuotas pagadas, historial de transacciones y recibos sincronizados directamente con Supabase.
-            </p>
-          </div>
+        {/* Encabezado Unificado */}
+        <StudentPageHeader
+          icon={Wallet}
+          title="Mis pagos"
+          subtitle="Consulta tus cuotas canceladas, fechas de vencimiento y comprobantes de pago oficiales."
+        >
           {profile && (
             <span className="text-xs font-mono font-bold px-3.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 rounded-full border border-indigo-200 dark:border-indigo-800 shrink-0">
               DNI: {profile.dni_ce} • Paquete: {profile.paquete_adquirido || 'FULL'}
             </span>
           )}
-        </div>
+        </StudentPageHeader>
 
         {/* BANNERS DE ESTADO FINANCIERO REAL */}
         {modoPrueba === 'al_dia' && (

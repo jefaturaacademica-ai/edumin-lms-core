@@ -30,7 +30,70 @@ export async function POST(request: Request) {
     // ACCIÓN A: Actualizar Foto de Perfil o Datos Secundarios (celular, residencia)
     if (action === 'actualizar_foto' || foto_perfil || celular || residencia) {
       const updates: any = {};
-      if (foto_perfil) updates.foto_perfil = foto_perfil;
+
+      // Manejo de eliminación explícita de foto de perfil
+      if (action === 'actualizar_foto' && (!foto_perfil || foto_perfil === '')) {
+        try {
+          const { data: files } = await admin.storage.from('avatars').list(profile.id);
+          if (files && files.length > 0) {
+            const filePaths = files.map((f) => `${profile.id}/${f.name}`);
+            await admin.storage.from('avatars').remove(filePaths);
+          }
+        } catch (delErr) {
+          console.warn('Advertencia limpiando foto en Supabase Storage:', delErr);
+        }
+        updates.foto_perfil = null;
+      } else if (foto_perfil) {
+        let finalFotoUrl = foto_perfil;
+
+        // Si viene como Data URL Base64 (data:image/...), subir al Storage de Supabase
+        if (typeof foto_perfil === 'string' && foto_perfil.startsWith('data:image/')) {
+          try {
+            const matches = foto_perfil.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/);
+            if (matches && matches.length === 3) {
+              const contentType = matches[1];
+              const base64Data = matches[2];
+              const buffer = Buffer.from(base64Data, 'base64');
+              // Usar ruta fija por usuario para no acumular archivos duplicados
+              const fileName = `${profile.id}/avatar.jpg`;
+
+              // 1. Asegurar existencia de bucket público 'avatars'
+              const { data: buckets } = await admin.storage.listBuckets();
+              const bucketExiste = buckets?.some((b) => b.name === 'avatars');
+              if (!bucketExiste) {
+                await admin.storage.createBucket('avatars', {
+                  public: true,
+                  fileSizeLimit: 5242880, // 5MB
+                  allowedMimeTypes: ['image/jpeg', 'image/png', 'image/webp', 'image/jpg']
+                });
+              }
+
+              // 2. Subir imagen al Storage de Supabase sobrescribiendo la anterior
+              const { error: uploadErr } = await admin.storage
+                .from('avatars')
+                .upload(fileName, buffer, {
+                  contentType: 'image/jpeg',
+                  upsert: true
+                });
+
+              if (!uploadErr) {
+                const { data: { publicUrl } } = admin.storage
+                  .from('avatars')
+                  .getPublicUrl(fileName);
+                // Parámetro de versión para forzar refresco en navegadores al cambiar de foto
+                finalFotoUrl = `${publicUrl}?v=${Date.now()}`;
+              } else {
+                console.warn('Advertencia al subir a Supabase Storage (usando fallback):', uploadErr.message);
+              }
+            }
+          } catch (storageErr) {
+            console.error('Error procesando imagen para Supabase Storage:', storageErr);
+          }
+        }
+
+        updates.foto_perfil = finalFotoUrl;
+      }
+
       if (celular) updates.telefono = celular;
       if (residencia) updates.residencia = residencia;
 

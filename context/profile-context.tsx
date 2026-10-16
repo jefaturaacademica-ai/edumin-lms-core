@@ -6,12 +6,13 @@ type ProfileContextType = {
   nombres: string;
   apellidos: string;
   iniciales: string;
+  dni: string;
   paqueteContratado: string;
   role: string;
   fotoPerfil: string | null;
   cargando: boolean;
   actualizarFotoPerfil: (nuevaFoto: string | null) => void;
-  actualizarDatosUsuario: (datos: { nombres: string; apellidos: string; paqueteContratado?: string }) => void;
+  actualizarDatosUsuario: (datos: { nombres: string; apellidos: string; paqueteContratado?: string; dni?: string }) => void;
   recargarPerfil: () => Promise<void>;
 };
 
@@ -19,6 +20,7 @@ const ProfileContext = createContext<ProfileContextType>({
   nombres: '',
   apellidos: '',
   iniciales: '',
+  dni: '',
   paqueteContratado: '',
   role: 'ESTUDIANTE',
   fotoPerfil: null,
@@ -31,6 +33,7 @@ const ProfileContext = createContext<ProfileContextType>({
 export function ProfileProvider({ children }: { children: React.ReactNode }) {
   const [nombres, setNombres] = useState('');
   const [apellidos, setApellidos] = useState('');
+  const [dni, setDni] = useState('');
   const [paqueteContratado, setPaqueteContratado] = useState('');
   const [role, setRole] = useState('ESTUDIANTE');
   const [fotoPerfil, setFotoPerfil] = useState<string | null>(null);
@@ -46,12 +49,14 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
         if (profile) {
           const nom = profile.nombres || '';
           const ape = profile.apellidos || '';
+          const userDni = profile.dni_ce || profile.dni || '';
           const paq = profile.paquete_adquirido || 'PROGRAMA FULL';
           const rol = profile.role || 'ESTUDIANTE';
           const foto = profile.foto_perfil || null;
 
           setNombres(nom);
           setApellidos(ape);
+          setDni(userDni);
           setPaqueteContratado(paq);
           setRole(rol);
 
@@ -62,6 +67,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
 
           if (nom) localStorage.setItem('edumin_nombres', nom);
           if (ape) localStorage.setItem('edumin_apellidos', ape);
+          if (userDni) localStorage.setItem('edumin_dni', userDni);
           if (paq) localStorage.setItem('edumin_paquete', paq);
           if (rol) localStorage.setItem('edumin_role', rol);
         }
@@ -77,13 +83,17 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
     // 1. Cargar almacenamiento local rápido si existe
     const nombresGuardados = localStorage.getItem('edumin_nombres');
     const apellidosGuardados = localStorage.getItem('edumin_apellidos');
+    const dniGuardado = localStorage.getItem('edumin_dni');
     const paqueteGuardado = localStorage.getItem('edumin_paquete');
     const fotoGuardada = localStorage.getItem('edumin_foto_perfil');
+    const rolGuardado = localStorage.getItem('edumin_role');
 
     if (nombresGuardados) setNombres(nombresGuardados);
     if (apellidosGuardados) setApellidos(apellidosGuardados);
+    if (dniGuardado) setDni(dniGuardado);
     if (paqueteGuardado) setPaqueteContratado(paqueteGuardado);
     if (fotoGuardada) setFotoPerfil(fotoGuardada);
+    if (rolGuardado) setRole(rolGuardado);
 
     // 2. Fetch directo a Supabase para sincronizar siempre con el perfil real logueado
     recargarPerfil();
@@ -98,11 +108,16 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
-  const actualizarDatosUsuario = (datos: { nombres: string; apellidos: string; paqueteContratado?: string }) => {
+  const actualizarDatosUsuario = (datos: { nombres: string; apellidos: string; paqueteContratado?: string; dni?: string }) => {
     setNombres(datos.nombres);
     setApellidos(datos.apellidos);
     localStorage.setItem('edumin_nombres', datos.nombres);
     localStorage.setItem('edumin_apellidos', datos.apellidos);
+
+    if (datos.dni) {
+      setDni(datos.dni);
+      localStorage.setItem('edumin_dni', datos.dni);
+    }
 
     if (datos.paqueteContratado) {
       setPaqueteContratado(datos.paqueteContratado);
@@ -119,6 +134,7 @@ export function ProfileProvider({ children }: { children: React.ReactNode }) {
       nombres,
       apellidos,
       iniciales,
+      dni,
       paqueteContratado,
       role,
       fotoPerfil,

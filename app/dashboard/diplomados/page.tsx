@@ -29,6 +29,7 @@ import Link from 'next/link';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
+import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 import { ALL_DIPLOMADOS, getDiplomadoBySlug, getDiplomadoByTitleOrSlug, DiplomadoCompleto } from '@/lib/data/diplomadosData';
 import { parseDiplomadosFromProfile, formatearCodigoModulo, calcularAvanceModuloGranular } from '@/lib/utils/profileParser';
 
@@ -80,33 +81,51 @@ export default function DiplomadosPage() {
       titulo: derechoMineroData?.titulo || 'DERECHO MINERO',
       avance: estadoSimuladoDev === 'completado' ? 100 : 0,
       imagen: derechoMineroData?.imagen || "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80",
-      modulos: (derechoMineroData?.modulos || []).map((m) => ({
-        id: m.codigo,
-        titulo: `${m.codigo}: ${m.nombre}`,
-        docente: m.docente
-      }))
+      modulos: (derechoMineroData?.modulos || []).map((m, idx) => {
+        const cod = formatearCodigoModulo(m.codigo, idx);
+        const nom = (m.nombre || '').toUpperCase();
+        return {
+          id: cod,
+          codigo: cod,
+          nombre: nom,
+          titulo: `${cod}: ${nom}`.toUpperCase(),
+          docente: m.docente
+        };
+      })
     },
     ...(estadoSimuladoDev === 'dos_diplomados' && planillasData ? [{
       id: planillasData.slug,
-      titulo: planillasData.titulo,
+      titulo: planillasData.titulo.toUpperCase(),
       avance: 20,
       imagen: planillasData.imagen,
-      modulos: planillasData.modulos.map((m) => ({
-        id: m.codigo,
-        titulo: `${m.codigo}: ${m.nombre}`,
-        docente: m.docente
-      }))
+      modulos: planillasData.modulos.map((m, idx) => {
+        const cod = formatearCodigoModulo(m.codigo, idx);
+        const nom = (m.nombre || '').toUpperCase();
+        return {
+          id: cod,
+          codigo: cod,
+          nombre: nom,
+          titulo: `${cod}: ${nom}`.toUpperCase(),
+          docente: m.docente
+        };
+      })
     }] : []),
     ...(estadoSimuladoDev === 'dos_diplomados' && seguridadSaludData ? [{
       id: seguridadSaludData.slug,
-      titulo: seguridadSaludData.titulo,
+      titulo: seguridadSaludData.titulo.toUpperCase(),
       avance: 100,
       imagen: seguridadSaludData.imagen,
-      modulos: seguridadSaludData.modulos.map((m) => ({
-        id: m.codigo,
-        titulo: `${m.codigo}: ${m.nombre}`,
-        docente: m.docente
-      }))
+      modulos: seguridadSaludData.modulos.map((m, idx) => {
+        const cod = formatearCodigoModulo(m.codigo, idx);
+        const nom = (m.nombre || '').toUpperCase();
+        return {
+          id: cod,
+          codigo: cod,
+          nombre: nom,
+          titulo: `${cod}: ${nom}`.toUpperCase(),
+          docente: m.docente
+        };
+      })
     }] : [])
   ];
 
@@ -209,12 +228,13 @@ export default function DiplomadosPage() {
               const modulosMap = modulosSource.map((mod: any, mIdx: number) => {
                 const modJson = dipJson?.modulos?.[mIdx];
                 const avanceMod = calcularAvanceModuloGranular(mod, mIdx, compMap, modJson);
-                const codigoFormateado = mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`;
+                const codigoFormateado = formatearCodigoModulo(mod.codigo, mIdx);
+                const nombreUpper = (mod.nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`).toUpperCase();
                 return {
                   id: codigoFormateado,
                   codigo: codigoFormateado,
-                  nombre: mod.nombre || `MÓDULO ${(mIdx + 1).toString().padStart(2, '0')}`,
-                  titulo: `${codigoFormateado}: ${mod.nombre || ''}`,
+                  nombre: nombreUpper,
+                  titulo: `${codigoFormateado}: ${nombreUpper}`.toUpperCase(),
                   docente: mod.docente || '',
                   clases: mod.clases || [],
                   avance: avanceMod,
@@ -320,16 +340,13 @@ export default function DiplomadosPage() {
     <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-300 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
       <div className="max-w-7xl mx-auto space-y-12">
         
-        {/* Encabezado Limpio */}
-        <header className="mb-10">
-          <h1 className={`text-3xl font-bold tracking-tight flex items-center gap-3 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-            <GraduationCap className={`w-8 h-8 ${esIlimitado ? 'text-amber-500' : 'text-indigo-600'}`} />
-            Mis Diplomados y Programas
-          </h1>
-          <p className={`mt-2 text-sm sm:text-base ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-            Accede a tus diplomados activos o explora el catálogo de especializaciones.
-          </p>
-        </header>
+        {/* Encabezado Unificado con StudentPageHeader */}
+        <StudentPageHeader
+          icon={GraduationCap}
+          title="Mis diplomados"
+          subtitle="Accede a tus diplomados activos o explora el catálogo de especializaciones."
+          iconClassName={esIlimitado ? 'text-amber-500' : 'text-indigo-600'}
+        />
 
         {/* ZONA DIPLOMADOS ACTIVOS O ESTADO SIN DIPLOMADO */}
         {estadoSimuladoDev === 'sin_diplomado' ? (
@@ -464,30 +481,44 @@ export default function DiplomadosPage() {
                   return (
                     <div key={diplomado.id} className="space-y-4">
                       
-                      {/* Cabecera Tipo Acordeón para el Diplomado (Estilo Plano Limpio: sin fondo, sin sombra, sin borde, sin ícono) */}
+                      {/* Cabecera Tipo Acordeón para el Diplomado (Estilo Plano Limpio: altura constante para 1 o 2 líneas) */}
                       <div 
                         onClick={() => toggleDiplomado(diplomado.id)}
-                        className="py-4 px-1 sm:px-2 border-b border-slate-200 dark:border-slate-800 transition-all cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-3 select-none group"
+                        className="py-3 px-1 sm:px-2 border-b border-slate-200 dark:border-slate-800 transition-all cursor-pointer flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-6 select-none group min-h-[4.25rem]"
                       >
-                        <div>
-                          <h2 className={`text-lg sm:text-xl font-bold tracking-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                        {/* Contenedor del título con altura uniforme para 1 o 2 líneas */}
+                        <div className="flex-1 min-w-0 h-12 flex items-center">
+                          <h2 
+                            title={diplomado.titulo}
+                            className={`text-base sm:text-lg font-bold tracking-tight line-clamp-2 leading-snug text-balance uppercase ${
+                              esOscuro ? 'text-white' : 'text-slate-900'
+                            }`}
+                          >
                             {diplomado.titulo}
                           </h2>
                         </div>
 
+                        {/* Contenedor de avance y chevron en 2 líneas */}
                         <div className="flex items-center justify-between sm:justify-end gap-4 shrink-0">
-                          <div className="flex items-center gap-2.5">
-                            <span className={`text-xs font-bold ${esCompletado ? (esOscuro ? 'text-emerald-400' : 'text-emerald-600') : (esOscuro ? 'text-indigo-400' : 'text-indigo-600')}`}>
-                              {modulosCompletadosCount} de {diplomado.modulos.length} módulos completados
-                            </span>
-                            <div className={`w-24 h-2 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-200'}`}>
+                          <div className="flex flex-col gap-1.5 min-w-[150px] sm:min-w-[180px]">
+                            <div className="flex items-center justify-end">
+                              <span className={`text-xs font-bold text-right ${
+                                esCompletado 
+                                  ? (esOscuro ? 'text-emerald-400' : 'text-emerald-600') 
+                                  : (esOscuro ? 'text-indigo-400' : 'text-indigo-600')
+                              }`}>
+                                {modulosCompletadosCount} de {diplomado.modulos.length} módulos completados
+                              </span>
+                            </div>
+                            <div className={`w-full h-2 rounded-full overflow-hidden ${esOscuro ? 'bg-slate-800' : 'bg-slate-200'}`}>
                               <div 
                                 className={`h-full rounded-full transition-all duration-500 ${esCompletado ? 'bg-emerald-600' : 'bg-indigo-600'}`}
                                 style={{ width: `${porcentajeModulos}%` }}
                               />
                             </div>
                           </div>
-                          <div className="p-1.5 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors">
+
+                          <div className="p-1.5 rounded-lg text-slate-400 group-hover:text-slate-600 dark:text-slate-500 dark:group-hover:text-slate-200 transition-colors">
                             {estaAbierto ? <ChevronUp className="size-5" /> : <ChevronDown className="size-5" />}
                           </div>
                         </div>
@@ -557,8 +588,8 @@ export default function DiplomadosPage() {
                                     className="object-cover w-full h-full opacity-90 transition-transform duration-300 group-hover:scale-105"
                                   />
                                   <div className="absolute top-3 inset-x-3 flex flex-wrap items-center justify-between gap-1.5 pointer-events-none">
-                                    <span className="text-[11px] font-semibold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0">
-                                      {formatearCodigoModulo(modulo.codigo || modulo.id, idx)}
+                                    <span className="text-[11px] font-bold text-white bg-slate-900/80 backdrop-blur-md px-2.5 py-1 rounded-lg border border-white/10 shrink-0 uppercase tracking-wide">
+                                      {formatearCodigoModulo(modulo.codigo || modulo.id, idx).toUpperCase()}
                                     </span>
                                     <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[11px] font-semibold border backdrop-blur-md shrink-0 ${infoEstadoModulo.badgeBg}`}>
                                       <IconoEstadoMod className="size-3.5" /> {infoEstadoModulo.label}
@@ -570,13 +601,10 @@ export default function DiplomadosPage() {
                                 <div className="p-6 flex-1 flex flex-col justify-between space-y-4">
                                   <div className="space-y-3">
                                     <div className="h-12 flex items-start overflow-hidden">
-                                      <h3 className={`text-base font-bold leading-snug line-clamp-2 text-balance ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                                        {modulo.titulo}
+                                      <h3 className={`text-base font-bold leading-snug line-clamp-2 text-balance uppercase ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                                        {modulo.titulo.toUpperCase()}
                                       </h3>
                                     </div>
-                                    <p className={`text-xs flex items-center gap-1.5 font-medium ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                                      <Clock className={`w-4 h-4 ${infoEstadoModulo.duracionIconColor}`} /> 15 horas académicas
-                                    </p>
                                   </div>
 
                                   {/* BLOQUE DE AVANCE DEL MÓDULO */}

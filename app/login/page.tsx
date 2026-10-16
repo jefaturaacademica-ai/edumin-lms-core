@@ -8,7 +8,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Acceso - EDUMIN Instituto de Minería",
+  title: "Acceso",
   description: "Portal oficial de acceso al Aula Virtual y Gestión Académica de EDUMIN.",
 };
 

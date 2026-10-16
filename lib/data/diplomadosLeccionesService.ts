@@ -16,6 +16,7 @@ export interface LeccionRow {
   ResumenVideoUrl?: string | null;
   ResumenAudioUrl?: string | null;
   ResumenInteractivo?: string | null;
+  ResumenMapaMental?: string | null;
   Material1?: string | null;
   Material2?: string | null;
   Material3?: string | null;
@@ -59,6 +60,7 @@ export function normalizeLeccionRow(r: any): LeccionRow {
     ResumenVideoUrl: (r.ResumenVideoUrl ?? r.resumenVideoUrl ?? r.videoResumenUrl ?? r.resumenvideourl ?? r.resumen_video_url ?? '').trim() || null,
     ResumenAudioUrl: (r.ResumenAudioUrl ?? r.resumenAudioUrl ?? r.audioResumenUrl ?? r.resumenaudiourl ?? r.resumen_audio_url ?? '').trim() || null,
     ResumenInteractivo: (r.ResumenInteractivo ?? r.resumenInteractivo ?? r.resumeninteractivo ?? r.resumen_interactivo ?? '').trim() || null,
+    ResumenMapaMental: (r.ResumenMapaMental ?? r.resumenMapaMental ?? r.resumenmapamental ?? r.resumen_mapa_mental ?? r.mapaMentalUrl ?? r.mapamental ?? '').trim() || null,
     Material1: (r.Material1 ?? r.material1 ?? r.excelUrl ?? r.excel_url ?? '').trim() || null,
     Material2: (r.Material2 ?? r.material2 ?? '').trim() || null,
     Material3: (r.Material3 ?? r.material3 ?? '').trim() || null,
@@ -149,7 +151,8 @@ export function generarFilasMaestrasIniciales(): LeccionRow[] {
             PdfUrl: isObj ? (claseItem.pdfUrl || claseItem.pdf_url || null) : null,
             ResumenVideoUrl: isObj ? (claseItem.resumenVideoUrl || claseItem.videoResumenUrl || null) : null,
             ResumenAudioUrl: isObj ? (claseItem.resumenAudioUrl || claseItem.audioResumenUrl || null) : null,
-            ResumenInteractivo: isObj ? (claseItem.resumenInteractivo || null) : null,
+            ResumenInteractivo: isObj ? (claseItem.resumenInteractivo || claseItem.ResumenInteractivo || null) : null,
+            ResumenMapaMental: isObj ? (claseItem.resumenMapaMental || claseItem.ResumenMapaMental || claseItem.mapaMentalUrl || null) : null,
             Material1: isObj ? (claseItem.material1 || null) : null,
             Material2: isObj ? (claseItem.material2 || null) : null,
             Material3: isObj ? (claseItem.material3 || null) : null,
@@ -188,6 +191,7 @@ export function generarFilasMaestrasIniciales(): LeccionRow[] {
           ResumenVideoUrl: isObj ? (caItem.resumenVideoUrl || null) : null,
           ResumenAudioUrl: isObj ? (caItem.resumenAudioUrl || null) : null,
           ResumenInteractivo: isObj ? (caItem.resumenInteractivo || null) : null,
+          ResumenMapaMental: isObj ? (caItem.resumenMapaMental || caItem.mapaMentalUrl || null) : null,
           Material1: null,
           Material2: null,
           Material3: null,
@@ -224,43 +228,55 @@ export function obtenerRecursosConLinks(row: LeccionRow, numClase: number) {
     });
   }
 
-  // 2. Resumen en Video
+  // 2. Resumen en video
   if (r.ResumenVideoUrl) {
     recursos.push({
       id: `rec-video-resumen-${numClase}`,
       tipo: 'video',
-      titulo: 'Resumen en Video',
+      titulo: 'Resumen en video',
       descripcion: 'Video sumario con los puntos más relevantes de la sesión',
       archivo: r.ResumenVideoUrl,
       url: r.ResumenVideoUrl
     });
   }
 
-  // 3. Resumen en Audio
+  // 3. Resumen en audio
   if (r.ResumenAudioUrl) {
     recursos.push({
       id: `rec-audio-${numClase}`,
       tipo: 'audio',
-      titulo: 'Resumen en Audio',
+      titulo: 'Resumen en audio',
       descripcion: 'Audio oficial o reproductor interactivo para estudio y repaso de la sesión',
       archivo: r.ResumenAudioUrl,
       url: r.ResumenAudioUrl
     });
   }
 
-  // 4. Resumen Interactivo
+  // 4. Resumen interactivo
   if (r.ResumenInteractivo) {
     recursos.push({
       id: `rec-interactivo-${numClase}`,
       tipo: 'interactivo',
-      titulo: 'Resumen Interactivo',
+      titulo: 'Resumen interactivo',
       descripcion: 'Guía interactiva de conceptos clave y validación dinámica',
       archivo: r.ResumenInteractivo,
       url: r.ResumenInteractivo
     });
   }
 
-  // 5. Materiales Adicionales (Material1 hasta Material8): sólo si tienen link
+  // 5. Mapa mental
+  if (r.ResumenMapaMental) {
+    recursos.push({
+      id: `rec-mapamental-${numClase}`,
+      tipo: 'mapamental',
+      titulo: 'Mapa mental',
+      descripcion: 'Esquema conceptual y mapa mental interactivo de la sesión',
+      archivo: r.ResumenMapaMental,
+      url: r.ResumenMapaMental
+    });
+  }
+
+  // 6. Materiales Adicionales (Material1 hasta Material8): sólo si tienen link
   const materialesKeys: (keyof LeccionRow)[] = [
     'Material1', 'Material2', 'Material3', 'Material4',
     'Material5', 'Material6', 'Material7', 'Material8'
@@ -323,6 +339,7 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
         resumenVideoUrl: r.ResumenVideoUrl,
         resumenAudioUrl: r.ResumenAudioUrl,
         resumenInteractivo: r.ResumenInteractivo,
+        resumenMapaMental: r.ResumenMapaMental,
         material1: r.Material1,
         material2: r.Material2,
         material3: r.Material3,
@@ -343,6 +360,7 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
         resumenVideoUrl: r.ResumenVideoUrl,
         resumenAudioUrl: r.ResumenAudioUrl,
         resumenInteractivo: r.ResumenInteractivo,
+        resumenMapaMental: r.ResumenMapaMental,
         material1: r.Material1,
         material2: r.Material2,
         material3: r.Material3,
@@ -398,6 +416,7 @@ export function convertirModulosALeccionRows(codigoDiplomado: string, tituloDipl
         const resumenVideoUrl = isObj ? (claseObj.resumenVideoUrl || claseObj.videoResumenUrl || claseObj.ResumenVideoUrl || '') : '';
         const resumenAudioUrl = isObj ? (claseObj.resumenAudioUrl || claseObj.audioResumenUrl || claseObj.ResumenAudioUrl || '') : '';
         const resumenInteractivo = isObj ? (claseObj.resumenInteractivo || claseObj.ResumenInteractivo || '') : '';
+        const resumenMapaMental = isObj ? (claseObj.resumenMapaMental || claseObj.ResumenMapaMental || claseObj.mapaMentalUrl || '') : '';
         const material1 = isObj ? (claseObj.material1 || claseObj.Material1 || claseObj.excel_url || claseObj.excelUrl || '') : '';
         const material2 = isObj ? (claseObj.material2 || claseObj.Material2 || '') : '';
         const material3 = isObj ? (claseObj.material3 || claseObj.Material3 || '') : '';
@@ -420,6 +439,7 @@ export function convertirModulosALeccionRows(codigoDiplomado: string, tituloDipl
           ResumenVideoUrl: resumenVideoUrl || null,
           ResumenAudioUrl: resumenAudioUrl || null,
           ResumenInteractivo: resumenInteractivo || null,
+          ResumenMapaMental: resumenMapaMental || null,
           Material1: material1 || null,
           Material2: material2 || null,
           Material3: material3 || null,
@@ -442,6 +462,7 @@ export function convertirModulosALeccionRows(codigoDiplomado: string, tituloDipl
         const resumenVideoUrl = isObj ? (ca.resumenVideoUrl || ca.videoResumenUrl || ca.ResumenVideoUrl || '') : '';
         const resumenAudioUrl = isObj ? (ca.resumenAudioUrl || ca.audioResumenUrl || ca.ResumenAudioUrl || '') : '';
         const resumenInteractivo = isObj ? (ca.resumenInteractivo || ca.ResumenInteractivo || '') : '';
+        const resumenMapaMental = isObj ? (ca.resumenMapaMental || ca.ResumenMapaMental || ca.mapaMentalUrl || '') : '';
         const material1 = isObj ? (ca.material1 || ca.Material1 || ca.excel_url || ca.excelUrl || '') : '';
         const material2 = isObj ? (ca.material2 || ca.Material2 || '') : '';
         const material3 = isObj ? (ca.material3 || ca.Material3 || '') : '';
@@ -464,6 +485,7 @@ export function convertirModulosALeccionRows(codigoDiplomado: string, tituloDipl
           ResumenVideoUrl: resumenVideoUrl || null,
           ResumenAudioUrl: resumenAudioUrl || null,
           ResumenInteractivo: resumenInteractivo || null,
+          ResumenMapaMental: resumenMapaMental || null,
           Material1: material1 || null,
           Material2: material2 || null,
           Material3: material3 || null,

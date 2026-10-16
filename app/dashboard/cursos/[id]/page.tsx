@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import { useTheme } from '@/context/theme-context';
 import { parseCursosFromProfile } from '@/lib/utils/profileParser';
+import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 
 function formatearUrlVideoEmbed(url?: string): string {
   if (!url) return '';
@@ -227,6 +228,12 @@ export default function ReproductorCursoPage() {
   const [videoActivo, setVideoActivo] = useState<any>(cursoActual.grabaciones[0] || null);
 
   useEffect(() => {
+    if (cursoActual.titulo) {
+      document.title = `${cursoActual.titulo} | EDUMIN`;
+    }
+  }, [cursoActual.titulo]);
+
+  useEffect(() => {
     if (cursoActual.grabaciones.length > 0) {
       setVideoActivo((prev: any) => {
         if (prev) {
@@ -343,14 +350,7 @@ export default function ReproductorCursoPage() {
   };
 
   if (loading) {
-    return (
-      <div className={`h-full min-h-screen grid place-items-center ${esOscuro ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}`}>
-        <div className="flex flex-col items-center gap-3">
-          <Loader2 className="w-8 h-8 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin text-indigo-500" />
-          <p className="text-xs font-semibold text-slate-400">Cargando curso desde Supabase...</p>
-        </div>
-      </div>
-    );
+    return <DashboardLoader minHeight="min-h-screen" />;
   }
 
   return (

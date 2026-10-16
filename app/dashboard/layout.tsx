@@ -3,19 +3,18 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Home, BookOpen, Award, User, LogOut, GraduationCap, Wallet, Sun, Moon, Menu, X } from 'lucide-react';
+import { Home, BookOpen, Award, LogOut, GraduationCap, Wallet, Menu, X, User } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { ThemeProvider, useTheme } from '@/context/theme-context';
-import { ProfileProvider, useProfile } from '@/context/profile-context';
-import InstitutionalUserDropdown from '@/components/navigation/InstitutionalUserDropdown';
+import { ProfileProvider } from '@/context/profile-context';
+import { UserProfileCard } from '@/components/navigation/UserProfileCard';
+import { ThemeMenuButton } from '@/components/navigation/ThemeMenuButton';
 
 function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
-  const { esOscuro, toggleTema } = useTheme();
-  const { nombres, apellidos, iniciales, paqueteContratado, fotoPerfil, role } = useProfile();
+  const { esOscuro } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const isAdminRole = role === 'ADMIN' || role === 'SUPERADMIN';
 
   const supabase = createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -24,6 +23,21 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMobileMenuOpen(false);
+
+    const TITLES_MAP: Record<string, string> = {
+      '/dashboard': 'Inicio',
+      '/dashboard/diplomados': 'Mis diplomados',
+      '/dashboard/cursos': 'Mis cursos',
+      '/dashboard/certificados': 'Mis certificados',
+      '/dashboard/pagos': 'Mis pagos',
+      '/dashboard/perfil': 'Mi perfil',
+      '/dashboard/canjear': 'Canjear código',
+      '/dashboard/reproductor': 'Reproductor',
+    };
+
+    if (TITLES_MAP[pathname]) {
+      document.title = `${TITLES_MAP[pathname]} | EDUMIN`;
+    }
   }, [pathname]);
 
   const handleLogout = async () => {
@@ -41,11 +55,13 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
     { name: 'Mi perfil', path: '/dashboard/perfil', icon: User },
   ];
 
-  const primerNombre = nombres ? nombres.trim().split(' ')[0] : 'Estudiante';
-  const primerApellido = apellidos ? apellidos.trim().split(' ')[0] : '';
-
   return (
-    <div className="min-h-screen md:h-screen md:overflow-hidden bg-slate-50 flex flex-col md:flex-row">
+    <div 
+      className={`min-h-screen md:h-screen md:overflow-hidden flex flex-col md:flex-row transition-colors duration-200 ${
+        esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
+      }`}
+      suppressHydrationWarning
+    >
       {/* Header Móvil (solo visible en pantallas < md) */}
       <header className="md:hidden bg-slate-950 text-slate-100 border-b border-slate-900 px-4 py-3 flex items-center justify-between sticky top-0 z-30 shrink-0">
         <Link href="/dashboard" className="flex items-center gap-2">
@@ -57,11 +73,10 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
         </Link>
 
         <div className="flex items-center gap-2">
-          <InstitutionalUserDropdown />
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Abrir menú"
-            className="p-2 rounded-xl text-slate-300 hover:bg-white/10 hover:text-white transition-colors border border-white/10"
+            className="p-2 rounded-xl text-slate-300 hover:bg-white/10 hover:text-white transition-colors border border-white/10 cursor-pointer"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -98,27 +113,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
             </button>
           </div>
 
-          <Link 
-            href="/dashboard/perfil"
-            onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 hover:bg-white/10 transition-colors border border-white/5 group"
-          >
-            <div className="relative size-10 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30 shrink-0 overflow-hidden">
-              {fotoPerfil ? (
-                <img src={fotoPerfil} alt="Foto de perfil" className="w-full h-full object-cover" />
-              ) : (
-                iniciales
-              )}
-            </div>
-            <div className="min-w-0 flex-1">
-              <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
-                {primerNombre} {primerApellido}
-              </h4>
-              <span className="inline-block mt-0.5 px-2 py-0.5 text-[10px] font-semibold text-indigo-300 bg-indigo-500/15 rounded-md border border-indigo-500/20 truncate max-w-full">
-                {paqueteContratado || 'Estudiante'}
-              </span>
-            </div>
-          </Link>
+          <UserProfileCard currentView="estudiante" onNavigate={() => setMobileMenuOpen(false)} />
         </div>
 
         <nav className="flex-1 py-4 px-4 space-y-2 overflow-y-auto">
@@ -157,23 +152,13 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
             <span>Cerrar sesión</span>
           </button>
 
-          <button
-            onClick={toggleTema}
-            title={esOscuro ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-            className="p-2.5 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors border border-white/5 flex items-center justify-center shrink-0"
-          >
-            {esOscuro ? (
-              <Sun className="w-4 h-4 text-amber-400" />
-            ) : (
-              <Moon className="w-4 h-4 text-indigo-400" />
-            )}
-          </button>
+          <ThemeMenuButton dropdownAlign="left" />
         </div>
       </aside>
 
       {/* Sidebar Oscuro Fijo en Pantalla para Escritorio (Desktop) */}
       <aside className="w-64 h-screen bg-slate-950 text-slate-300 flex flex-col hidden md:flex border-r border-slate-900 sticky top-0 shrink-0">
-        {/* Header / Logo + Avatar Opción 2 */}
+        {/* Header / Logo + Avatar */}
         <div className="p-5 flex flex-col gap-4 border-b border-white/5 shrink-0">
           <div className="flex items-center justify-center">
             <img 
@@ -183,26 +168,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
             />
           </div>
           
-          <Link 
-            href="/dashboard/perfil"
-            className="flex items-center gap-3 p-2.5 rounded-2xl bg-white/5 hover:bg-white/10 transition-all border border-white/5 group shadow-sm"
-          >
-            <div className="relative size-10 rounded-full bg-gradient-to-tr from-indigo-600 to-cyan-500 text-white font-extrabold flex items-center justify-center text-xs shadow-md ring-2 ring-indigo-400/30 shrink-0 overflow-hidden">
-              {fotoPerfil ? (
-                <img src={fotoPerfil} alt="Foto de perfil" className="w-full h-full object-cover" />
-              ) : (
-                iniciales
-              )}
-            </div>
-            <div className="min-w-0 flex-1">
-              <h4 className="text-xs font-bold text-white truncate group-hover:text-indigo-400 transition-colors">
-                {primerNombre} {primerApellido}
-              </h4>
-              <span className="inline-block mt-0.5 px-2 py-0.5 text-[10px] font-semibold text-indigo-300 bg-indigo-500/15 rounded-md border border-indigo-500/20 truncate max-w-full">
-                {paqueteContratado || 'Estudiante'}
-              </span>
-            </div>
-          </Link>
+          <UserProfileCard currentView="estudiante" />
         </div>
         
         {/* Links de Navegación Scrollable */}
@@ -232,57 +198,23 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
         <div className="p-4 border-t border-white/5 shrink-0 flex items-center gap-2">
           <button 
             onClick={handleLogout}
-            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 transition-colors text-xs font-medium"
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 transition-colors text-xs font-medium cursor-pointer"
           >
             <LogOut className="w-4 h-4" />
             <span>Cerrar sesión</span>
           </button>
 
-          <button
-            onClick={toggleTema}
-            title={esOscuro ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-            className="p-2.5 rounded-xl text-slate-400 hover:bg-white/10 hover:text-white transition-colors border border-white/5 flex items-center justify-center shrink-0"
-          >
-            {esOscuro ? (
-              <Sun className="w-4 h-4 text-amber-400" />
-            ) : (
-              <Moon className="w-4 h-4 text-indigo-400" />
-            )}
-          </button>
+          <ThemeMenuButton dropdownAlign="right" />
         </div>
       </aside>
 
-      {/* Área Principal Dinámica */}
-      <div className="flex-1 flex flex-col overflow-hidden min-w-0">
-        {/* Top Header Institucional Desktop */}
-        <header className="hidden md:flex items-center justify-between px-6 py-2.5 bg-slate-950 text-white border-b border-slate-900 shrink-0 z-20">
-          <div className="flex items-center gap-3">
-            <span className="font-extrabold tracking-tight text-xs text-slate-300 uppercase">CAMPUS EDUMIN</span>
-            <span className="text-slate-600 text-xs">/</span>
-            <span className="text-xs text-indigo-400 font-semibold">Aula Virtual</span>
-
-            {isAdminRole && (
-              <span className="ml-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20">
-                <span className="size-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-                Modo Simulación: Vista Estudiante FULL
-              </span>
-            )}
-          </div>
-
-          <div className="flex items-center gap-3">
-            {isAdminRole && (
-              <Link 
-                href="/admin" 
-                className="text-[11px] font-bold px-3 py-1 rounded-lg bg-indigo-600/20 text-indigo-300 hover:bg-indigo-600 hover:text-white border border-indigo-500/30 transition-all flex items-center gap-1.5"
-              >
-                <span>Volver a Administrador</span>
-                <span>→</span>
-              </Link>
-            )}
-            <InstitutionalUserDropdown />
-          </div>
-        </header>
-
+      {/* Área Principal Dinámica (Sin la barra superior redundante) */}
+      <div 
+        className={`flex-1 flex flex-col overflow-hidden min-w-0 transition-colors duration-200 ${
+          esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
+        }`}
+        suppressHydrationWarning
+      >
         <div className="flex-1 overflow-y-auto">
           {children}
         </div>

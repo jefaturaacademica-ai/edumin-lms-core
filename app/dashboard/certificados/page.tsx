@@ -25,6 +25,7 @@ import {
   QrCode
 } from 'lucide-react';
 import { useTheme } from '@/context/theme-context';
+import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
 import AvanzaCertificateRenderer from '@/components/certificates/AvanzaCertificateRenderer';
 
@@ -266,32 +267,24 @@ export default function CertificadosPage() {
     <main className={`min-h-screen p-6 sm:p-10 lg:p-16 pb-24 transition-colors duration-300 ${esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'}`}>
       <div className="max-w-6xl mx-auto space-y-10">
         
-        {/* Encabezado Principal */}
-        <header className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div>
-            <h1 className={`text-3xl font-bold tracking-tight flex items-center gap-3 ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-              <Award className="w-8 h-8 text-indigo-600" />
-              Muro de Certificados y Logros
-            </h1>
-            <p className={`mt-2 text-sm sm:text-base ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-              Visualiza en vista previa, descarga o comparte en LinkedIn tus certificaciones oficiales acreditadas.
-            </p>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <div className={`p-4 rounded-2xl border flex items-center gap-3 ${esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
-              <div className="size-10 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 grid place-items-center">
-                <GraduationCap className="size-5" />
-              </div>
-              <div>
-                <span className="text-xs text-slate-400 block font-medium">Certificados Totales</span>
-                <span className={`text-lg font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                  {certificadosModulares.length + certificadosCursos.length} Emitidos
-                </span>
-              </div>
+        {/* Encabezado Unificado */}
+        <StudentPageHeader
+          icon={Award}
+          title="Mis certificados"
+          subtitle="Visualiza en vista previa, descarga o comparte en LinkedIn tus certificaciones oficiales acreditadas."
+        >
+          <div className={`p-4 rounded-2xl border flex items-center gap-3 ${esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'}`}>
+            <div className="size-10 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 grid place-items-center">
+              <GraduationCap className="size-5" />
+            </div>
+            <div>
+              <span className="text-xs text-slate-400 block font-medium">Certificados Totales</span>
+              <span className={`text-lg font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                {certificadosModulares.length + certificadosCursos.length} Emitidos
+              </span>
             </div>
           </div>
-        </header>
+        </StudentPageHeader>
 
         {/* NAVEGACIÓN POR PESTAÑAS (TABS) */}
         <div className="space-y-4 pt-2">

@@ -24,6 +24,7 @@ import Link from 'next/link';
 import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
 import { parseDiplomadosFromProfile } from '@/lib/utils/profileParser';
 import { getDriveVideoForClass } from '@/lib/data/driveVideos';
+import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 
 function ReproductorContent() {
   const searchParams = useSearchParams();
@@ -228,12 +229,7 @@ function ReproductorContent() {
   };
 
   if (loading || !diplomadoObj) {
-    return (
-      <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center gap-3">
-        <Loader2 className="w-8 h-8 animate-spin text-indigo-500" />
-        <p className="text-xs font-bold text-slate-400">Sincronizando contenidos de Supabase...</p>
-      </div>
-    );
+    return <DashboardLoader minHeight="min-h-screen" />;
   }
 
   return (
@@ -657,7 +653,7 @@ function ReproductorContent() {
 
 export default function DerechoMineroReproductorPage() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-slate-950 text-white p-8">Cargando reproductor de clases...</div>}>
+    <Suspense fallback={<DashboardLoader minHeight="min-h-screen" />}>
       <ReproductorContent />
     </Suspense>
   );
