@@ -1,74 +1,57 @@
-import { GraduationCap, ShieldCheck, Sparkles } from "lucide-react";
-import { LoginForm } from "@/components/auth/login-form";
+import { Montserrat } from "next/font/google";
+import { AnimatedLoginForm } from "@/components/auth/AnimatedLoginForm";
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+});
 
 export const metadata = {
-  title: "Ingresar | Edumin",
-  description: "Accede a tu aula virtual Edumin.",
+  title: "Acceso - EDUMIN Instituto de Minería",
+  description: "Portal oficial de acceso al Aula Virtual y Gestión Académica de EDUMIN.",
 };
 
 export default function LoginPage() {
   return (
-    <main className="min-h-screen bg-slate-950 lg:grid lg:grid-cols-2">
-      <section
-        className="relative hidden overflow-hidden bg-slate-900 p-10 lg:flex lg:flex-col lg:justify-between xl:p-14"
-        style={{
-          backgroundImage:
-            "linear-gradient(135deg, rgba(15, 23, 42, 0.94), rgba(30, 27, 75, 0.78)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1800&q=85')",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="relative flex items-center gap-3 text-white">
-          <div className="grid size-11 place-items-center rounded-xl bg-white/15 ring-1 ring-white/20 backdrop-blur">
-            <GraduationCap className="size-6" />
-          </div>
-          <span className="text-xl font-bold tracking-tight">edumin</span>
-        </div>
+    <main className={`w-full min-h-screen bg-[#0f172a] overflow-x-hidden ${montserrat.className}`}>
+      <div className="flex w-full min-h-screen animate-fadeInPage opacity-0 [animation-fill-mode:forwards]">
+        
+        {/* Lado Izquierdo: Video Institucional con Personas en la Mina */}
+        <section className="relative hidden lg:block flex-1 overflow-hidden bg-[#0f172a]">
+          <video
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover z-[1] pointer-events-none"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          >
+            <source
+              src="https://res.cloudinary.com/pywzdfbb/video/upload/v1792166275/video1_final.mp4"
+              type="video/mp4"
+            />
+            Tu navegador no soporta videos HTML5.
+          </video>
 
-        <div className="relative max-w-xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-sm font-medium text-indigo-100 backdrop-blur">
-            <Sparkles className="size-4 text-indigo-300" />
-            Formación que transforma
-          </div>
-          <h1 className="text-4xl font-semibold leading-tight tracking-tight text-white xl:text-5xl">
-            Impulsa tu potencial, aprende sin límites.
-          </h1>
-          <p className="mt-5 max-w-md text-base leading-7 text-slate-200">
-            Una experiencia de aprendizaje diseñada para que avances con claridad,
-            acompañamiento y resultados reales.
-          </p>
-        </div>
+          {/* Gradiente Oscuro Superpuesto para Contraste y Elegancia */}
+          <div className="absolute inset-0 z-[2] bg-gradient-to-br from-[#0f172a]/30 via-[#0b1329]/45 to-[#0b1329]/80" />
 
-        <div className="relative flex items-center gap-3 text-sm text-slate-200">
-          <ShieldCheck className="size-5 text-emerald-300" />
-          Tu información está protegida y segura.
-        </div>
-      </section>
-
-      <section className="flex min-h-screen items-center justify-center bg-slate-50 px-5 py-10 sm:px-8">
-        <div className="w-full max-w-md rounded-3xl bg-white p-7 shadow-2xl shadow-slate-900/10 ring-1 ring-slate-200 sm:p-9">
-          <div className="mb-8 lg:hidden">
-            <div className="mb-6 flex items-center gap-3 text-indigo-950">
-              <div className="grid size-10 place-items-center rounded-xl bg-indigo-600 text-white">
-                <GraduationCap className="size-5" />
-              </div>
-              <span className="text-xl font-bold tracking-tight">edumin</span>
-            </div>
-          </div>
-          <div className="mb-8">
-            <p className="mb-2 text-sm font-semibold uppercase tracking-[0.16em] text-indigo-600">
-              Bienvenido de vuelta
-            </p>
-            <h2 className="text-3xl font-bold tracking-tight text-slate-950">
-              Ingresa a tu Aula Virtual
-            </h2>
-            <p className="mt-3 text-sm leading-6 text-slate-500">
-              Usa tu documento de identidad y contraseña para continuar.
+          {/* Badge de Marca Institucional (Inferior Izquierda con Acento Naranja) */}
+          <div className="absolute bottom-10 left-10 z-[3] text-white bg-[#0f172a]/80 px-7 py-4 rounded-xl backdrop-blur-md border-l-4 border-[#f97316] shadow-[0_10px_25px_rgba(0,0,0,0.3)] animate-fadeInUp-badge opacity-0 [animation-fill-mode:forwards]">
+            <h1 className="text-2xl font-black tracking-wide text-white">EDUMIN</h1>
+            <p className="text-xs sm:text-sm text-slate-300 mt-1 font-medium">
+              Centro de Alta Capacitación Especializada en Minería
             </p>
           </div>
-          <LoginForm />
-        </div>
-      </section>
+        </section>
+
+        {/* Lado Derecho: Panel Institucional en Azul Oscuro Elegante (#0b1329) */}
+        <section className="w-full lg:w-[500px] xl:w-[520px] min-h-screen bg-[#0b1329] flex flex-col justify-center items-center px-6 sm:px-12 py-10 relative text-white shadow-[-15px_0_40px_rgba(0,0,0,0.3)] z-10 border-l border-white/[0.08] animate-slideInRight opacity-0 [animation-fill-mode:forwards]">
+          <AnimatedLoginForm />
+        </section>
+
+      </div>
     </main>
   );
 }

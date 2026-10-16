@@ -39,6 +39,12 @@ export async function middleware(request: NextRequest) {
   const isDashboardRoute = pathname.startsWith("/dashboard");
   const isAdminRoute = pathname.startsWith("/admin");
 
+  if (pathname === "/") {
+    const redirectUrl = request.nextUrl.clone();
+    redirectUrl.pathname = user ? "/dashboard" : LOGIN_PATH;
+    return NextResponse.redirect(redirectUrl);
+  }
+
   if (!user) {
     if (isDashboardRoute || isAdminRoute) {
       const loginUrl = request.nextUrl.clone();
