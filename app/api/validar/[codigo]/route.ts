@@ -7,18 +7,19 @@ export async function GET(
 ) {
   try {
     const { codigo } = await params;
+    const codigoNormalizado = (codigo || '').trim().toUpperCase();
 
-    if (!codigo) {
+    if (!codigoNormalizado) {
       return NextResponse.json({ error: 'Código de verificación no proporcionado' }, { status: 400 });
     }
 
     const admin = createAdminClient();
 
-    // 1. Buscar en la tabla certificaciones en Supabase
+    // 1. Buscar en la tabla certificaciones en Supabase por código exacto normalizado
     const { data: cert, error } = await admin
       .from('certificaciones')
       .select('*')
-      .eq('codigo_verificacion', codigo)
+      .eq('codigo_verificacion', codigoNormalizado)
       .maybeSingle();
 
     if (cert) {
@@ -45,7 +46,7 @@ export async function GET(
     const { data: certList } = await admin
       .from('certificaciones')
       .select('*')
-      .ilike('codigo_verificacion', `%${codigo}%`)
+      .ilike('codigo_verificacion', `%${codigoNormalizado}%`)
       .limit(1);
 
     if (certList && certList.length > 0) {

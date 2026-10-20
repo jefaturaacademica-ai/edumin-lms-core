@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { parseDiplomadosFromProfile, parseCursosFromProfile, DiplomadoJSON, CursoJSON } from '@/lib/utils/profileParser';
 import { getDiplomadoByTitleOrSlug } from '@/lib/data/diplomadosData';
-import { generarCodigoUnicoCertificado, formatearNombreCertificado } from '@/lib/utils/certificateUtils';
+import { generarCodigoUnicoCertificado, formatearNombreCertificado, normalizarCodigoCertificado } from '@/lib/utils/certificateUtils';
 
 export async function POST(request: Request) {
   try {
@@ -169,7 +169,7 @@ export async function POST(request: Request) {
             if (body.nota >= 12) {
               targetDip.modulos[idxToUpdate].completado = true;
               const fechaHoy = new Date().toISOString().split('T')[0];
-              const codUnico = targetDip.modulos[idxToUpdate].codigo_cert || generarCodigoUnicoCertificado();
+              const codUnico = normalizarCodigoCertificado(targetDip.modulos[idxToUpdate].codigo_cert || generarCodigoUnicoCertificado());
               targetDip.modulos[idxToUpdate].codigo_cert = codUnico;
               targetDip.modulos[idxToUpdate].fecha = fechaHoy;
               targetDip.modulos[idxToUpdate].horas = targetDip.modulos[idxToUpdate].horas || '108 horas académicas';
@@ -246,7 +246,7 @@ export async function POST(request: Request) {
         const modActual = targetDip.modulos[idxToUpdate];
         const moduloNombreFinal = moduloNombre || modActual.nombre || modActual.codigo || `Módulo ${(idxToUpdate + 1).toString().padStart(2, '0')}`;
         const fechaEmisionHoy = new Date().toISOString().split('T')[0];
-        const codVerifModular = modActual.codigo_cert || generarCodigoUnicoCertificado();
+        const codVerifModular = normalizarCodigoCertificado(modActual.codigo_cert || generarCodigoUnicoCertificado());
         const nombreEstudianteOficial = formatearNombreCertificado(profile.nombres, profile.apellidos);
 
         // A. Certificado Modular
@@ -303,7 +303,7 @@ export async function POST(request: Request) {
             .eq('programa_titulo', targetDip.titulo)
             .maybeSingle();
 
-          const codVerifDip = targetDip.codigo || generarCodigoUnicoCertificado();
+          const codVerifDip = normalizarCodigoCertificado(targetDip.codigo || generarCodigoUnicoCertificado());
           targetDip.codigo = codVerifDip;
           targetDip.fecha = fechaEmisionHoy;
           targetDip.completado = true;

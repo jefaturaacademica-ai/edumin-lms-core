@@ -51,18 +51,36 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setModo(nuevoModo);
     setEsOscuro(isDark);
     if (typeof window !== 'undefined') {
-      localStorage.setItem('edumin_theme_mode', nuevoModo);
-      localStorage.setItem('edumin_theme', nuevoModo);
+      try {
+        localStorage.setItem('edumin_theme_mode', nuevoModo);
+        localStorage.setItem('edumin_theme', nuevoModo);
+        document.cookie = `edumin_theme=${nuevoModo}; path=/; max-age=31536000; SameSite=Lax`;
+      } catch (e) {}
       aplicarTemaAlDom(isDark, nuevoModo);
     }
   }, []);
 
   useEffect(() => {
     setMounted(true);
-    const saved = (localStorage.getItem('edumin_theme_mode') || localStorage.getItem('edumin_theme')) as ThemeMode | null;
-    const initialMode: ThemeMode = (saved === 'claro' || saved === 'oscuro' || saved === 'sistema') ? saved : 'oscuro';
+    let initialMode: ThemeMode = 'oscuro';
+    try {
+      const saved = (
+        localStorage.getItem('edumin_theme_mode') ||
+        localStorage.getItem('edumin_theme') ||
+        document.documentElement.getAttribute('data-theme-mode')
+      ) as ThemeMode | null;
+
+      if (saved === 'claro' || saved === 'oscuro' || saved === 'sistema') {
+        initialMode = saved;
+      } else {
+        const cookieMatch = document.cookie.match(new RegExp('(^| )edumin_theme=([^;]+)'));
+        if (cookieMatch && (cookieMatch[2] === 'claro' || cookieMatch[2] === 'oscuro' || cookieMatch[2] === 'sistema')) {
+          initialMode = cookieMatch[2] as ThemeMode;
+        }
+      }
+    } catch (e) {}
+
     const isDark = resolverEsOscuro(initialMode);
-    
     setModo(initialMode);
     setEsOscuro(isDark);
     aplicarTemaAlDom(isDark, initialMode);

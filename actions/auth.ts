@@ -4,8 +4,18 @@ import { redirect } from "next/navigation";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 
+export type UserRoleOption = {
+  id: 'estudiante' | 'admin' | 'docente';
+  titulo: string;
+  subtitulo: string;
+  ruta: string;
+};
+
 export type LoginState = {
   error?: string;
+  requiresRoleSelection?: boolean;
+  userRoles?: UserRoleOption[];
+  userName?: string;
 };
 
 export type UpdatePasswordState = {
@@ -24,13 +34,13 @@ export async function loginWithDni(
   const password = formData.get("password")?.toString()?.trim();
 
   if (!dni || !password) {
-    return { error: "Ingresa tu DNI/Carnet y contraseña para continuar." };
+    return { error: "Ingresa tu DNI o carnet y contraseña para continuar." };
   }
 
   const admin = createAdminClient();
   const { data: profile, error: profileError } = await admin
     .from("profiles")
-    .select("id, email, dni_ce, contrasena, role, bloqueado")
+    .select("id, email, dni_ce, contrasena, role, bloqueado, nombres, apellidos")
     .eq("dni_ce", dni)
     .maybeSingle();
 
@@ -107,8 +117,35 @@ export async function loginWithDni(
     }
   }
 
-  // Redirección según rol
-  if (profile.role === "ADMIN" || profile.role === "SUPERADMIN") {
+  // Detección de roles del usuario:
+  // Si el usuario es ADMIN o SUPERADMIN (como el usuario 11111111), posee 2 roles: Administrador y Estudiante
+  const esAdmin = profile.role === "ADMIN" || profile.role === "SUPERADMIN";
+  const esDocente = profile.role === "DOCENTE";
+
+  if (esAdmin) {
+    const nombreCompleto = `${profile.nombres || ''} ${profile.apellidos || ''}`.trim() || 'Usuario';
+    return {
+      requiresRoleSelection: true,
+      userName: nombreCompleto,
+      userRoles: [
+        {
+          id: 'estudiante',
+          titulo: 'Aula virtual',
+          subtitulo: 'Accede a tus clases, cursos y diplomados como estudiante',
+          ruta: '/dashboard',
+        },
+        {
+          id: 'admin',
+          titulo: 'Panel de gestión',
+          subtitulo: 'Administración ejecutiva, finanzas y certificaciones',
+          ruta: '/admin',
+        },
+      ],
+    };
+  }
+
+  // Si tiene un solo rol, redirige directamente sin mostrar selector
+  if (esDocente) {
     redirect("/admin");
   }
 

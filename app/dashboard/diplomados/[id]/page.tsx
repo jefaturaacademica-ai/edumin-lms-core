@@ -31,6 +31,7 @@ import { useTheme } from '@/context/theme-context';
 import { useProfile } from '@/context/profile-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { parseDiplomadosFromProfile, formatearCodigoModulo } from '@/lib/utils/profileParser';
+import { PreguntaExamenEstudiante, DetalleCalificacionPregunta } from '@/lib/types/examenes';
 import { 
   obtenerRecursosConLinks, 
   convertirFilasAListaModulos, 
@@ -96,6 +97,10 @@ export default function ReproductorClasesPage() {
   const [examenActivoModal, setExamenActivoModal] = useState<{ moduloCodigo: string; moduloNombre: string; moduloIdx: number } | null>(null);
   const [pasoModalExamen, setPasoModalExamen] = useState<'indicaciones' | 'cuestionario' | 'resultado' | 'ver_intento'>('indicaciones');
   const [respuestasExamen, setRespuestasExamen] = useState<Record<number, number>>({});
+  const [respuestasExamenDinamicas, setRespuestasExamenDinamicas] = useState<Record<string, number[]>>({});
+  const [preguntasExamenDinamicas, setPreguntasExamenDinamicas] = useState<PreguntaExamenEstudiante[]>([]);
+  const [cargandoPreguntasExamen, setCargandoPreguntasExamen] = useState(false);
+  const [detallesCalificacionExamen, setDetallesCalificacionExamen] = useState<DetalleCalificacionPregunta[] | null>(null);
   const [respuestasPorModulo, setRespuestasPorModulo] = useState<Record<string, Record<number, number>>>({});
   const [guardandoExamen, setGuardandoExamen] = useState(false);
   const [resultadoExamen, setResultadoExamen] = useState<{ nota: number; aprobado: boolean } | null>(null);
@@ -168,11 +173,39 @@ export default function ReproductorClasesPage() {
     ];
   };
 
-  const abrirModalExamen = (modCodigo: string, modNombre: string, modIdx: number) => {
+  const abrirModalExamen = async (modCodigo: string, modNombre: string, modIdx: number) => {
     setExamenActivoModal({ moduloCodigo: modCodigo, moduloNombre: modNombre, moduloIdx: modIdx });
     setPasoModalExamen('indicaciones');
     setRespuestasExamen({});
+    setRespuestasExamenDinamicas({});
     setResultadoExamen(null);
+    setDetallesCalificacionExamen(null);
+
+    // Cargar preguntas aleatorias del banco para este módulo
+    try {
+      setCargandoPreguntasExamen(true);
+      const codDip = (diplomadoActual as any)?.codigo || 'DIP-01';
+      const res = await fetch(`/api/dashboard/examenes?codigoDiplomado=${encodeURIComponent(codDip)}&modulo=${encodeURIComponent(modCodigo)}&cantidad=10`);
+      const data = await res.json();
+      if (data.success && data.preguntas && data.preguntas.length > 0) {
+        setPreguntasExamenDinamicas(data.preguntas);
+      } else {
+        // Fallback a preguntas locales si no hay cargadas
+        const locales = generarPreguntasExamenModulo(modCodigo, modNombre);
+        setPreguntasExamenDinamicas(locales.map((q: any) => ({
+          id: String(q.id),
+          codigo_diplomado: codDip,
+          modulo: modCodigo,
+          tipo: 'multiple_choice',
+          pregunta: q.pregunta,
+          opciones: q.opciones.map((o: string, idx: number) => ({ indice: idx, text: o }))
+        })));
+      }
+    } catch (err) {
+      console.error('Error al cargar preguntas de examen:', err);
+    } finally {
+      setCargandoPreguntasExamen(false);
+    }
   };
 
   const abrirVerIntento = (modCodigo: string, modNombre: string, modIdx: number) => {
@@ -185,29 +218,46 @@ export default function ReproductorClasesPage() {
   const rendirExamenModulo = async () => {
     if (!examenActivoModal) return;
 
-    const preguntas = generarPreguntasExamenModulo(examenActivoModal.moduloCodigo, examenActivoModal.moduloNombre);
-    let aciertos = 0;
-    preguntas.forEach((q, idx) => {
-      if (respuestasExamen[idx] === q.respuestaCorrecta) {
-        aciertos++;
-      }
-    });
-
-    const notaFinal = aciertos * 4; // 5 preguntas * 4 pts = 20 max
-    const aprobado = notaFinal >= 12; // Nota mínima aprobatoria 12/20
-
     setGuardandoExamen(true);
     try {
       const modCodigo = examenActivoModal.moduloCodigo;
+      const codDip = (diplomadoActual as any)?.codigo || 'DIP-01';
+
+      // Llamar al endpoint de calificación de examen
+      const resCalificacion = await fetch('/api/dashboard/examenes', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          codigoDiplomado: codDip,
+          modulo: modCodigo,
+          dni: dniAlumno || '71234567',
+          respuestasUsuario: respuestasExamenDinamicas
+        })
+      });
+
+      const dataCalificacion = await resCalificacion.json();
+      let notaFinal = 0;
+      let aprobado = false;
+      let detalles = null;
+
+      if (dataCalificacion.success && dataCalificacion.resultado) {
+        notaFinal = dataCalificacion.resultado.nota;
+        aprobado = dataCalificacion.resultado.aprobado;
+        detalles = dataCalificacion.resultado.detalles;
+        setDetallesCalificacionExamen(detalles);
+      } else {
+        // Fallback local en caso de error
+        let aciertos = 0;
+        preguntasExamenDinamicas.forEach((q) => {
+          const resp = respuestasExamenDinamicas[q.id];
+          if (resp && resp.length > 0) aciertos++;
+        });
+        notaFinal = Math.min(20, Math.round((aciertos * (20 / Math.max(1, preguntasExamenDinamicas.length)))));
+        aprobado = notaFinal >= 12;
+      }
 
       const nuevoNotasMap = { ...notasModulosMap, [modCodigo]: notaFinal };
       setNotasModulosMap(nuevoNotasMap);
-
-      // Guardar respuestas seleccionadas para "Ver intento"
-      setRespuestasPorModulo(prev => ({
-        ...prev,
-        [modCodigo]: { ...respuestasExamen }
-      }));
 
       const nuevoCompletadosMap = { ...completadosMap };
       if (aprobado) {
@@ -234,7 +284,7 @@ export default function ReproductorClasesPage() {
       }
       const nuevoAvance = totalClases > 0 ? Math.round((clasesCompletadas / totalClases) * 100) : 0;
 
-      // Guardar en Supabase via API
+      // Guardar en Supabase via API completar-leccion
       await fetch('/api/dashboard/completar-leccion', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -253,7 +303,7 @@ export default function ReproductorClasesPage() {
         })
       });
     } catch (err) {
-      console.error('Error al guardar nota de examen en Supabase:', err);
+      console.error('Error al calificar y guardar examen:', err);
     } finally {
       setGuardandoExamen(false);
     }
@@ -881,6 +931,26 @@ export default function ReproductorClasesPage() {
     }
   }, [diplomadoActual, modInicial, claseActual, moduloQuery]);
 
+  // Si la URL viene con ?accion=examen, abrir automáticamente el examen del módulo correspondiente
+  useEffect(() => {
+    if (!loading && diplomadoActual && diplomadoActual.modulos) {
+      const accion = searchParams.get('accion');
+      if (accion === 'examen') {
+        const targetMod = modInicial || diplomadoActual.modulos[0];
+        if (targetMod) {
+          const idx = diplomadoActual.modulos.findIndex((m: any) => m.id === targetMod.id || m.codigo === targetMod.codigo);
+          const modIdx = idx !== -1 ? idx : 0;
+          const cod = targetMod.codigo || targetMod.id;
+          if (notasModulosMap[cod] !== undefined) {
+            abrirVerIntento(cod, targetMod.nombre, modIdx);
+          } else {
+            abrirModalExamen(cod, targetMod.nombre, modIdx);
+          }
+        }
+      }
+    }
+  }, [loading, diplomadoActual, modInicial, searchParams, notasModulosMap]);
+
   // Actualizar el título de la pestaña del navegador con el nombre del diplomado en mayúsculas
   useEffect(() => {
     if (diplomadoActual?.titulo) {
@@ -1072,6 +1142,7 @@ export default function ReproductorClasesPage() {
   }, [completadosMap, diplomadoActual, diplomadoId]);
 
   const seleccionarTema = (moduloId: string, temaObj: any) => {
+    setExamenActivoModal(null);
     setModuloActivo(moduloId);
     if (temaObj.clases && temaObj.clases.length > 0) {
       const primeraClase = temaObj.clases[0];
@@ -1083,6 +1154,7 @@ export default function ReproductorClasesPage() {
   };
 
   const seleccionarSesion = (moduloId: string, claseObj: ClaseCompleta) => {
+    setExamenActivoModal(null);
     setModuloActivo(moduloId);
     setClaseActual(claseObj);
     setParteSeleccionada(1);
@@ -1128,7 +1200,7 @@ export default function ReproductorClasesPage() {
   );
 
   return (
-    <div className={`w-full min-h-full flex flex-col transition-colors duration-200 ${
+    <div className={`w-full h-full max-h-full flex flex-col overflow-hidden transition-colors duration-200 ${
       esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
     }`}>
       
@@ -1177,12 +1249,455 @@ export default function ReproductorClasesPage() {
       </header>
 
       {/* Layout Principal */}
-      <div className="flex-1 flex flex-col lg:flex-row">
+      <div className="flex-1 min-h-0 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden">
         
-        {/* ZONA PRINCIPAL DE REPRODUCCIÓN (70%) */}
-        <div id="zona-reproductor-principal" className={`flex-1 flex flex-col p-4 sm:p-8 lg:p-10 lg:border-r space-y-6 ${
+        {/* ZONA PRINCIPAL DE REPRODUCCIÓN (70%) O ENTORNO DE EVALUACIÓN */}
+        <div id="zona-reproductor-principal" className={`flex-1 lg:h-full lg:overflow-y-auto min-h-0 p-4 sm:p-8 lg:p-10 lg:border-r space-y-6 ${
           esOscuro ? 'lg:border-slate-800' : 'lg:border-slate-200'
         }`}>
+          {examenActivoModal ? (
+            /* ENTORNO DE EVALUACIÓN OFICIAL (INTEGRADO EN LA COLUMNA PRINCIPAL) */
+            <div className="space-y-6 animate-in fade-in duration-200">
+              {/* Header de la Evaluación */}
+              <div className={`p-5 sm:p-6 rounded-2xl border flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all ${
+                esOscuro ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
+              }`}>
+                <div className="flex items-center gap-3.5 min-w-0">
+                  <div className="size-11 rounded-xl bg-amber-500/15 text-amber-500 grid place-items-center shrink-0 border border-amber-500/30">
+                    <FileText className="w-5 h-5 text-amber-500" />
+                  </div>
+                  <div className="min-w-0">
+                    <span className="text-[11px] font-bold text-amber-500 uppercase tracking-wider block">
+                      Evaluación Académica · Módulo {examenActivoModal.moduloIdx + 1}
+                    </span>
+                    <h2 className="text-base sm:text-lg font-bold truncate mt-0.5 uppercase">
+                      {examenActivoModal.moduloNombre}
+                    </h2>
+                  </div>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => setExamenActivoModal(null)}
+                  className={`text-xs font-bold px-4 py-2.5 rounded-xl border flex items-center justify-center gap-2 transition-all cursor-pointer shrink-0 ${
+                    esOscuro 
+                      ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700' 
+                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200'
+                  }`}
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  <span>Volver a las clases</span>
+                </button>
+              </div>
+
+              {/* Contenedor Principal del Examen */}
+              <div className={`rounded-2xl border p-6 sm:p-8 transition-all ${
+                esOscuro ? 'bg-slate-900/90 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
+              }`}>
+                {/* PASO 1: INDICACIONES PREVIAS AL EXAMEN */}
+                {pasoModalExamen === 'indicaciones' && (
+                  <div className="space-y-6 max-w-2xl mx-auto py-2">
+                    <div className={`p-5 rounded-2xl border ${
+                      esOscuro ? 'bg-slate-800/60 border-slate-750' : 'bg-slate-50 border-slate-200'
+                    }`}>
+                      <h4 className="text-sm font-bold mb-4 flex items-center gap-2">
+                        <Sparkles className="w-4 h-4 text-amber-500" />
+                        Indicaciones para rendir tu evaluación modular
+                      </h4>
+                      <ul className="space-y-3.5 text-xs sm:text-sm leading-relaxed">
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-indigo-500 shrink-0">⏱️ Tiempo:</span>
+                          <span>Tendrás un tiempo límite de <strong>30 minutos</strong> para responder el cuestionario completo.</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-indigo-500 shrink-0">🎯 Intentos:</span>
+                          <span>Cuentas con <strong>1 solo intento</strong> para rendir este examen modular.</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-indigo-500 shrink-0">📝 Estructura:</span>
+                          <span>Consta de <strong>5 preguntas objetivas</strong> de opción múltiple relacionadas al módulo cursado.</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-indigo-500 shrink-0">🏆 Aprobación:</span>
+                          <span>La nota mínima aprobatoria es <strong>12 / 20</strong> (cada pregunta correcta suma 4 puntos).</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-indigo-500 shrink-0">📜 Certificación:</span>
+                          <span>Al aprobar con 12 o más, tu certificado modular se activará automáticamente para descarga en <strong>Mis Certificados</strong>.</span>
+                        </li>
+                        <li className="flex items-start gap-2.5">
+                          <span className="font-bold text-amber-500 shrink-0">⚠️ Sustitutorio:</span>
+                          <span>En caso de desaprobar, deberás abonar el derecho de <strong>S/ 25.00</strong> para habilitar un Examen Sustitutorio.</span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="pt-2 flex items-center justify-end gap-3">
+                      <button
+                        type="button"
+                        onClick={() => setExamenActivoModal(null)}
+                        className={`px-5 py-2.5 rounded-xl text-xs font-semibold border transition-colors cursor-pointer ${
+                          esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-700'
+                        }`}
+                      >
+                        Cancelar
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setPasoModalExamen('cuestionario')}
+                        className="bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md transition-colors flex items-center gap-2 cursor-pointer shadow-amber-600/20"
+                      >
+                        <FileText className="w-4 h-4" /> Comenzar Examen Ahora
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* PASO 2: CUESTIONARIO */}
+                {pasoModalExamen === 'cuestionario' && (
+                  <div className="space-y-6 max-w-3xl mx-auto">
+                    {cargandoPreguntasExamen ? (
+                      <div className="p-12 text-center text-slate-400 space-y-3">
+                        <Loader2 className="w-8 h-8 animate-spin mx-auto text-amber-500" />
+                        <p className="text-sm font-semibold">Generando tu examen con 10 preguntas aleatorias del banco...</p>
+                      </div>
+                    ) : (
+                      <>
+                        {preguntasExamenDinamicas.map((q, qIdx) => {
+                          const esMultiple = q.tipo === 'multiple_select';
+                          const seleccionadasActuales = respuestasExamenDinamicas[q.id] || [];
+
+                          return (
+                            <div
+                              key={q.id}
+                              className={`p-5 sm:p-6 rounded-2xl border space-y-4 ${
+                                esOscuro ? 'bg-slate-800/40 border-slate-750' : 'bg-slate-50/70 border-slate-200'
+                              }`}
+                            >
+                              <div className="flex flex-wrap items-center justify-between gap-2">
+                                <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-lg border ${
+                                  esMultiple 
+                                    ? 'bg-purple-500/10 border-purple-500/30 text-purple-400' 
+                                    : 'bg-sky-500/10 border-sky-500/30 text-sky-400'
+                                }`}>
+                                  {esMultiple ? '☑️ Selección Múltiple (marque varias alternativas)' : '🔘 Opción Única (marque 1 alternativa)'}
+                                </span>
+                                {q.dificultad && (
+                                  <span className="text-[10px] font-bold text-slate-400">
+                                    Nivel {q.dificultad}
+                                  </span>
+                                )}
+                              </div>
+
+                              <h4 className="text-sm sm:text-base font-bold leading-snug">
+                                {qIdx + 1}. {q.pregunta}
+                              </h4>
+
+                              <div className="space-y-2.5">
+                                {q.opciones.map((opt) => {
+                                  const optIdx = opt.indice;
+                                  const seleccionada = seleccionadasActuales.includes(optIdx);
+
+                                  return (
+                                    <button
+                                      key={optIdx}
+                                      type="button"
+                                      onClick={() => {
+                                        setRespuestasExamenDinamicas(prev => {
+                                          const prevList = prev[q.id] || [];
+                                          if (esMultiple) {
+                                            const yaEsta = prevList.includes(optIdx);
+                                            const nueva = yaEsta 
+                                              ? prevList.filter(x => x !== optIdx) 
+                                              : [...prevList, optIdx];
+                                            return { ...prev, [q.id]: nueva };
+                                          } else {
+                                            return { ...prev, [q.id]: [optIdx] };
+                                          }
+                                        });
+                                      }}
+                                      className={`w-full text-left p-3.5 sm:p-4 rounded-xl text-xs sm:text-sm flex items-center gap-3.5 transition-all border cursor-pointer ${
+                                        seleccionada
+                                          ? 'bg-amber-600 text-white border-amber-500 font-bold shadow-sm'
+                                          : esOscuro
+                                            ? 'bg-slate-900/80 border-slate-800 text-slate-200 hover:bg-slate-800'
+                                            : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+                                      }`}
+                                    >
+                                      <div className={`size-5 shrink-0 grid place-items-center border ${
+                                        esMultiple ? 'rounded-md' : 'rounded-full'
+                                      } ${
+                                        seleccionada ? 'border-white bg-white text-amber-600 font-bold' : 'border-slate-400 dark:border-slate-500'
+                                      }`}>
+                                        {seleccionada && (
+                                          esMultiple 
+                                            ? <Check className="w-3.5 h-3.5 stroke-[3] text-amber-600" />
+                                            : <div className="size-2.5 rounded-full bg-amber-600" />
+                                        )}
+                                      </div>
+                                      <span className="leading-snug">{opt.text}</span>
+                                    </button>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          );
+                        })}
+
+                        {/* Barra de Envío */}
+                        <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                          <span className={`text-xs sm:text-sm font-semibold ${esOscuro ? 'text-slate-400' : 'text-slate-600'}`}>
+                            Preguntas respondidas: <strong>{Object.values(respuestasExamenDinamicas).filter(arr => arr && arr.length > 0).length} de {preguntasExamenDinamicas.length}</strong>
+                          </span>
+                          <button
+                            onClick={rendirExamenModulo}
+                            disabled={Object.values(respuestasExamenDinamicas).filter(arr => arr && arr.length > 0).length < preguntasExamenDinamicas.length || guardandoExamen}
+                            className={`px-7 py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md ${
+                              Object.values(respuestasExamenDinamicas).filter(arr => arr && arr.length > 0).length === preguntasExamenDinamicas.length && !guardandoExamen
+                                ? 'bg-amber-600 hover:bg-amber-700 text-white cursor-pointer shadow-amber-600/20'
+                                : 'bg-slate-700 text-slate-400 cursor-not-allowed opacity-60'
+                            }`}
+                          >
+                            {guardandoExamen ? (
+                              <>
+                                <Loader2 className="w-4 h-4 animate-spin" /> Calificando examen...
+                              </>
+                            ) : (
+                              'Entregar y Finalizar Examen'
+                            )}
+                          </button>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                )}
+
+                {/* PASO 3: RESULTADOS INMEDIATOS */}
+                {pasoModalExamen === 'resultado' && resultadoExamen && (
+                  <div className="space-y-6 text-center max-w-xl mx-auto py-4">
+                    <div className={`p-8 rounded-3xl border ${
+                      resultadoExamen.aprobado
+                        ? esOscuro ? 'bg-emerald-950/40 border-emerald-800/60 text-emerald-300' : 'bg-emerald-50 border-emerald-200 text-emerald-900'
+                        : esOscuro ? 'bg-rose-950/40 border-rose-800/60 text-rose-300' : 'bg-rose-50 border-rose-200 text-rose-900'
+                    }`}>
+                      <div className="text-5xl mb-3">
+                        {resultadoExamen.aprobado ? '🎉' : '❌'}
+                      </div>
+                      <h4 className="text-xl font-bold">
+                        {resultadoExamen.aprobado ? '¡Examen Aprobado con Éxito!' : 'Examen No Aprobado'}
+                      </h4>
+                      <p className="text-4xl font-black my-3">
+                        Nota: {resultadoExamen.nota.toString().padStart(2, '0')} / 20
+                      </p>
+                      <p className="text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+                        {resultadoExamen.aprobado
+                          ? '¡Felicitaciones! Has superado la nota mínima aprobatoria (12/20). Tu certificado de este módulo ya se encuentra disponible para descargar en la sección Mis Certificados.'
+                          : 'Obtuviste una calificación menor a 12/20 y has completado tu único intento permitido. Para rendir tu Examen Sustitutorio y rehabilitar tu evaluación, abona el derecho de S/ 25.00 con soporte.'}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap justify-center gap-3">
+                      <button
+                        onClick={() => setPasoModalExamen('ver_intento')}
+                        className={`font-bold text-xs px-5 py-2.5 rounded-xl border transition-colors inline-flex items-center gap-1.5 cursor-pointer ${
+                          esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-white border-slate-300 hover:bg-slate-100 text-slate-800 shadow-2xs'
+                        }`}
+                      >
+                        <Eye className="w-4 h-4" /> Ver intento y revisión
+                      </button>
+
+                      {resultadoExamen.aprobado ? (
+                        <Link
+                          href="/dashboard/certificados"
+                          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+                        >
+                          <Award className="w-4 h-4" /> Descargar Certificado
+                        </Link>
+                      ) : (
+                        <a
+                          href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, rendí el Examen Modular ${examenActivoModal.moduloIdx + 1} con nota ${resultadoExamen.nota}/20 y deseo pagar los S/ 25.00 para habilitar el Examen Sustitutorio.`)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow transition-colors inline-flex items-center gap-1.5"
+                        >
+                          Solicitar Sustitutorio (S/ 25)
+                        </a>
+                      )}
+
+                      <button
+                        onClick={() => setExamenActivoModal(null)}
+                        className={`font-bold text-xs px-5 py-2.5 rounded-xl border transition-colors cursor-pointer ${
+                          esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-800'
+                        }`}
+                      >
+                        Volver a clases
+                      </button>
+                    </div>
+                  </div>
+                )}
+
+                {/* PASO 4: REVISIÓN DETALLADA DEL INTENTO ("VER INTENTO") */}
+                {pasoModalExamen === 'ver_intento' && (() => {
+                  const notaActual = notasModulosMap[examenActivoModal.moduloCodigo] ?? (resultadoExamen?.nota || 0);
+
+                  return (
+                    <div className="space-y-6 max-w-3xl mx-auto">
+                      {/* Resumen de Calificación */}
+                      <div className={`p-5 rounded-2xl border flex items-center justify-between ${
+                        notaActual >= 12 
+                          ? (esOscuro ? 'bg-emerald-950/30 border-emerald-800/40' : 'bg-emerald-50 border-emerald-200')
+                          : (esOscuro ? 'bg-rose-950/30 border-rose-800/40' : 'bg-rose-50 border-rose-200')
+                      }`}>
+                        <div>
+                          <span className="text-xs font-bold block">
+                            Calificación de la Evaluación: <span className="text-base font-black">{notaActual.toString().padStart(2, '0')} / 20</span>
+                          </span>
+                          <span className="text-[11px] text-slate-400">
+                            {notaActual >= 12 ? 'Examen Aprobado (Mínimo 12/20)' : 'Examen Desaprobado (Requiere Sustitutorio)'}
+                          </span>
+                        </div>
+                        <span className={`text-xs font-bold px-3 py-1 rounded-full border ${
+                          notaActual >= 12
+                            ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
+                            : 'bg-rose-500/20 text-rose-400 border-rose-500/30'
+                        }`}>
+                          {notaActual >= 12 ? 'Aprobado ✓' : 'Desaprobado ❌'}
+                        </span>
+                      </div>
+
+                      {/* Detalle con Retroalimentación Formativa (Rationale) */}
+                      <div className="space-y-4">
+                        {(detallesCalificacionExamen && detallesCalificacionExamen.length > 0) ? (
+                          detallesCalificacionExamen.map((det, dIdx) => (
+                            <div
+                              key={det.preguntaId || dIdx}
+                              className={`p-5 rounded-2xl border space-y-3.5 ${
+                                det.esCorrecta 
+                                  ? (esOscuro ? 'bg-emerald-950/20 border-emerald-800/30' : 'bg-emerald-50/50 border-emerald-200')
+                                  : (esOscuro ? 'bg-rose-950/20 border-rose-800/30' : 'bg-rose-50/50 border-rose-200')
+                              }`}
+                            >
+                              <div className="flex items-start justify-between gap-2">
+                                <div className="space-y-1">
+                                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border inline-block ${
+                                    det.tipo === 'multiple_select'
+                                      ? 'bg-purple-500/10 border-purple-500/30 text-purple-400'
+                                      : 'bg-sky-500/10 border-sky-500/30 text-sky-400'
+                                  }`}>
+                                    {det.tipo === 'multiple_select' ? 'Selección Múltiple' : 'Opción Única'}
+                                  </span>
+                                  <h4 className="text-xs sm:text-sm font-bold leading-snug">
+                                    {dIdx + 1}. {det.pregunta}
+                                  </h4>
+                                </div>
+
+                                <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md border shrink-0 ${
+                                  det.esCorrecta 
+                                    ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' 
+                                    : 'bg-rose-500/20 text-rose-400 border-rose-500/30'
+                                }`}>
+                                  {det.esCorrecta ? `+${det.puntajeObtenido} pts (Correcto)` : '0 pts (Incorrecto)'}
+                                </span>
+                              </div>
+
+                              {/* Opciones con Feedback */}
+                              <div className="space-y-2">
+                                {det.desgloseOpciones.map((opt) => {
+                                  let estilo = esOscuro 
+                                    ? 'bg-slate-900 border-slate-800 text-slate-300' 
+                                    : 'bg-white border-slate-200 text-slate-700';
+
+                                  if (opt.marcadaPorAlumno && opt.isCorrect) {
+                                    estilo = 'bg-emerald-600/20 border-emerald-500 text-emerald-300 font-bold';
+                                  } else if (opt.marcadaPorAlumno && !opt.isCorrect) {
+                                    estilo = 'bg-rose-600/20 border-rose-500 text-rose-300 font-bold';
+                                  } else if (!opt.marcadaPorAlumno && opt.isCorrect) {
+                                    estilo = 'bg-emerald-600/10 border-emerald-500/60 text-emerald-300 font-semibold';
+                                  }
+
+                                  return (
+                                    <div key={opt.indice} className={`p-3 rounded-xl text-xs border space-y-1.5 ${estilo}`}>
+                                      <div className="flex items-center justify-between gap-2">
+                                        <span>{opt.text}</span>
+                                        <span className="text-[10px] font-bold shrink-0">
+                                          {opt.marcadaPorAlumno && opt.isCorrect && '✓ Tu respuesta (Correcta)'}
+                                          {opt.marcadaPorAlumno && !opt.isCorrect && '✗ Tu respuesta (Incorrecta)'}
+                                          {!opt.marcadaPorAlumno && opt.isCorrect && '✓ Alternativa correcta'}
+                                        </span>
+                                      </div>
+                                      {opt.rationale && (
+                                        <div className="text-[11px] text-slate-400 pt-1 border-t border-slate-800/40">
+                                          💡 <strong className="text-slate-300">Retroalimentación:</strong> {opt.rationale}
+                                        </div>
+                                      )}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+
+                              {det.hint && (
+                                <div className="text-[11px] text-purple-300/80 bg-purple-950/20 border border-purple-900/30 px-3 py-1.5 rounded-xl">
+                                  🎯 <strong>Pista pedagógica:</strong> {det.hint}
+                                </div>
+                              )}
+                            </div>
+                          ))
+                        ) : (
+                          <div className="p-6 text-center text-xs text-slate-400">
+                            No hay desglose disponible para este intento previo.
+                          </div>
+                        )}
+                      </div>
+
+                      {/* Acciones del pie en Ver Intento */}
+                      <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                        <button
+                          type="button"
+                          onClick={() => setPasoModalExamen('resultado')}
+                          className={`px-4 py-2 rounded-xl text-xs font-semibold border transition-colors cursor-pointer ${
+                            esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-700'
+                          }`}
+                        >
+                          Volver al resultado
+                        </button>
+
+                        <div className="flex items-center gap-2">
+                          {notaActual >= 12 ? (
+                            <Link
+                              href="/dashboard/certificados"
+                              className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+                            >
+                              <Award className="w-4 h-4" /> Descargar Certificado
+                            </Link>
+                          ) : (
+                            <a
+                              href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el Examen Modular ${examenActivoModal.moduloIdx + 1} con nota ${notaActual}/20 y deseo pagar los S/ 25.00 para rendir el Examen Sustitutorio.`)}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs px-4 py-2 rounded-xl shadow transition-colors inline-flex items-center gap-1.5"
+                            >
+                              Sustitutorio (S/ 25)
+                            </a>
+                          )}
+
+                          <button
+                            type="button"
+                            onClick={() => setExamenActivoModal(null)}
+                            className={`font-bold text-xs px-4 py-2 rounded-xl border transition-colors cursor-pointer ${
+                              esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-800'
+                            }`}
+                          >
+                            Cerrar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })()}
+              </div>
+            </div>
+          ) : (
+            <>
           
           {/* CONTENEDOR INTEGRADO: BARRA DE CONTROL CONTINUA + VISOR MULTIMEDIA */}
           {(() => {
@@ -1235,7 +1750,7 @@ export default function ReproductorClasesPage() {
             const tieneRecursosAdicionales = (parteActiva.recursos && parteActiva.recursos.length > 0);
 
             return (
-              <div className={`w-full rounded-2xl overflow-hidden shadow-lg border flex flex-col ${
+              <div className={`w-full shrink-0 rounded-2xl overflow-hidden shadow-lg border flex flex-col ${
                 esOscuro ? 'border-slate-800 bg-slate-900/90' : 'border-slate-300 bg-white'
               }`}>
                 {/* BARRA SUPERIOR CONTINUA DEL VISOR */}
@@ -1298,7 +1813,7 @@ export default function ReproductorClasesPage() {
                           onClick={() => setMenuFormatoAbierto(!menuFormatoAbierto)}
                           className={`text-xs font-bold px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition-all cursor-pointer ${
                             menuFormatoAbierto || contenidoPrincipal !== 'video_clase'
-                              ? 'bg-indigo-500/20 text-indigo-300 border-indigo-500/40'
+                              ? 'bg-indigo-600 text-white border-indigo-500 shadow-2xs'
                               : esOscuro
                                 ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700'
                                 : 'bg-white hover:bg-slate-100 text-slate-800 border-slate-200 shadow-2xs'
@@ -1412,7 +1927,7 @@ export default function ReproductorClasesPage() {
                 </div>
 
                 {/* ÁREA DE VISOR / IFRAME */}
-                <div className="w-full aspect-video bg-black relative flex flex-col items-center justify-center">
+                <div className="w-full aspect-video shrink-0 bg-black relative flex flex-col items-center justify-center">
                   {contenidoPrincipal === 'video_clase' && (
                     <iframe 
                       key={`${claseActual.id}-p${parteActiva.numero}`}
@@ -1494,7 +2009,7 @@ export default function ReproductorClasesPage() {
             const tituloMostrar = (temaActual?.titulo || claseActual.tituloClase || '').toUpperCase();
 
             return (
-              <div className={`p-4 sm:p-5 rounded-2xl border transition-all ${
+              <div className={`p-4 sm:p-5 shrink-0 rounded-2xl border transition-all space-y-4 ${
                 esOscuro ? 'bg-slate-900/90 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
               }`}>
                 {/* Encabezado: Título en mayúsculas sin etiquetas redundantes */}
@@ -1505,9 +2020,6 @@ export default function ReproductorClasesPage() {
                     {tituloMostrar}
                   </h2>
                 </div>
-
-                {/* Raya interna divisoria */}
-                <div className={`my-3 border-t ${esOscuro ? 'border-slate-800' : 'border-slate-100'}`} />
 
                 {/* Selector de Partes con ancho fijo y flex-wrap para pasar a 2da fila cuando hay muchas partes */}
                 <div className="flex flex-wrap items-center gap-2.5 w-full">
@@ -1550,7 +2062,7 @@ export default function ReproductorClasesPage() {
                           )}
                         </div>
                         <span className="text-xs font-bold truncate uppercase flex-1 text-left">
-                          Parte {pIdx + 1}
+                          Parte {String(pIdx + 1).padStart(2, '0')}
                         </span>
                       </button>
                     );
@@ -1558,9 +2070,7 @@ export default function ReproductorClasesPage() {
                 </div>
 
                 {/* Navegación secuencial de temas (Anterior / Contador de Temas / Siguiente) */}
-                <div className={`mt-4 pt-3 border-t flex items-center justify-between gap-3 ${
-                  esOscuro ? 'border-slate-800' : 'border-slate-100'
-                }`}>
+                <div className="pt-1 flex items-center justify-between gap-3">
                   <button
                     type="button"
                     onClick={irAAnterior}
@@ -1871,11 +2381,13 @@ export default function ReproductorClasesPage() {
 
             </div>
           </div>
+            </>
+          )}
 
         </div>
 
         {/* SIDEBAR DERECHO (30%) - TEMARIO CONTINUO */}
-        <aside className={`w-full lg:w-96 border-t lg:border-t-0 lg:border-l flex flex-col shrink-0 lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:overflow-y-auto transition-colors ${
+        <aside className={`w-full lg:w-96 border-t lg:border-t-0 lg:border-l flex flex-col shrink-0 lg:h-full lg:overflow-y-auto transition-colors ${
           esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
         }`}>
           {/* Header del temario con avance integrado */}
@@ -1939,7 +2451,7 @@ export default function ReproductorClasesPage() {
                       {mod.temas.map((tema: any) => {
                         const temaClases = tema.clases || [];
                         const esTemaCompletado = temaClases.length > 0 && temaClases.every((c: any) => Boolean(completadosMap[c.id] || completadosMap[mod.codigo]));
-                        const esTemaSeleccionado = temaActual?.id === tema.id;
+                        const esTemaSeleccionado = !examenActivoModal && (temaActual?.id === tema.id);
 
                         return (
                           <button
@@ -1980,7 +2492,7 @@ export default function ReproductorClasesPage() {
                             ⭐ CLASE ADICIONAL
                           </span>
                           {mod.clasesAdicionales.map((clase: ClaseCompleta) => {
-                            const esClaseSeleccionada = claseActual?.id === clase.id;
+                            const esClaseSeleccionada = !examenActivoModal && (claseActual?.id === clase.id);
                             const estaCompletada = estaModCompletado || Boolean(completadosMap[clase.id]);
 
                             return (
@@ -2018,7 +2530,7 @@ export default function ReproductorClasesPage() {
                   ) : (
                     <div className="space-y-1">
                       {mod.clases.map((clase: ClaseCompleta) => {
-                        const esClaseSeleccionada = claseActual?.id === clase.id;
+                        const esClaseSeleccionada = !examenActivoModal && (claseActual?.id === clase.id);
                         const estaCompletada = estaModCompletado || Boolean(completadosMap[clase.id]);
 
                         return (
@@ -2055,76 +2567,113 @@ export default function ReproductorClasesPage() {
                         );
                       })}
                     </div>
-                  )}
+                  )}                  {/* Fila del Examen del Módulo (Estilo consistente con las filas de temas) */}
+                  {(() => {
+                    const esExamenActivo = Boolean(examenActivoModal && (
+                      examenActivoModal.moduloCodigo === mod.codigo || 
+                      examenActivoModal.moduloCodigo === mod.id ||
+                      examenActivoModal.moduloIdx === modIdx
+                    ));
 
-                  {/* Fila del Examen del Módulo (Ubicado después de los temas y clases) */}
-                  <div className={`mt-3 pt-2.5 border-t flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 rounded-xl p-3 ${
-                    esOscuro ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'
-                  }`}>
-                    <div className="flex items-center gap-2.5 min-w-0">
-                      <div className={`size-8 rounded-lg flex items-center justify-center shrink-0 ${
-                        notasModulosMap[mod.codigo] !== undefined
-                          ? (notasModulosMap[mod.codigo] >= 12 ? 'bg-emerald-500/10 text-emerald-500' : 'bg-rose-500/10 text-rose-500')
-                          : 'bg-amber-500/15 text-amber-500'
+                    return (
+                      <div className={`mt-2 p-3 rounded-xl border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition-all cursor-pointer ${
+                        esExamenActivo
+                          ? 'bg-amber-500 text-white border-amber-500 shadow-md font-bold'
+                          : esOscuro 
+                            ? 'bg-slate-800/60 border-slate-700/60 text-slate-200 hover:bg-slate-800 shadow-2xs' 
+                            : 'bg-slate-50 border-slate-200 text-slate-800 hover:bg-slate-100 shadow-2xs'
                       }`}>
-                        <FileText className="w-4 h-4" />
-                      </div>
-                      <div className="min-w-0">
-                        <span className={`text-xs font-bold block truncate uppercase ${esOscuro ? 'text-slate-100' : 'text-slate-800'}`}>
-                          EXAMEN MODULAR {modIdx + 1}
-                        </span>
-                        <span className="text-[11px] text-slate-400 block font-medium">
-                          {notasModulosMap[mod.codigo] !== undefined
-                            ? `Nota: ${notasModulosMap[mod.codigo].toString().padStart(2, '0')}/20 · ${notasModulosMap[mod.codigo] >= 12 ? 'Aprobado' : 'Desaprobado'}`
-                            : '1 intento - 30 min'
-                          }
-                        </span>
-                      </div>
-                    </div>
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <div className={`size-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                            esExamenActivo
+                              ? 'bg-white/20 text-white'
+                              : notasModulosMap[mod.codigo] !== undefined
+                                ? (notasModulosMap[mod.codigo] >= 12 ? 'bg-emerald-500/10 text-emerald-500' : 'bg-rose-500/10 text-rose-500')
+                                : 'bg-amber-500/15 text-amber-500'
+                          }`}>
+                            <FileText className={`w-4 h-4 ${esExamenActivo ? 'text-white' : ''}`} />
+                          </div>
+                          <div className="min-w-0">
+                            <span className={`text-xs font-bold block truncate uppercase ${
+                              esExamenActivo
+                                ? 'text-white'
+                                : esOscuro ? 'text-slate-100' : 'text-slate-800'
+                            }`}>
+                              EXAMEN MODULAR {modIdx + 1}
+                            </span>
+                            <span className={`text-[11px] block font-medium ${
+                              esExamenActivo
+                                ? 'text-white/80'
+                                : 'text-slate-400'
+                            }`}>
+                              {notasModulosMap[mod.codigo] !== undefined
+                                ? `Nota: ${notasModulosMap[mod.codigo].toString().padStart(2, '0')}/20 · ${notasModulosMap[mod.codigo] >= 12 ? 'Aprobado' : 'Desaprobado'}`
+                                : '1 intento - 30 min'
+                              }
+                            </span>
+                          </div>
+                        </div>
 
-                    {notasModulosMap[mod.codigo] !== undefined ? (
-                      <div className="flex items-center gap-2 shrink-0">
-                        <button
-                          type="button"
-                          onClick={() => abrirVerIntento(mod.codigo, mod.nombre, modIdx)}
-                          className={`text-xs font-bold px-3 py-1.5 rounded-lg border transition-colors flex items-center gap-1 cursor-pointer ${
-                            esOscuro 
-                              ? 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700' 
-                              : 'bg-white border-slate-300 text-slate-700 hover:bg-slate-100 shadow-2xs'
-                          }`}
-                        >
-                          <Eye className="w-3.5 h-3.5" /> Ver intento
-                        </button>
+                        {notasModulosMap[mod.codigo] !== undefined ? (
+                          <div className="flex items-center gap-2 shrink-0">
+                            <button
+                              type="button"
+                              onClick={() => abrirVerIntento(mod.codigo, mod.nombre, modIdx)}
+                              className={`text-xs font-bold px-3 py-1.5 rounded-xl border transition-colors flex items-center gap-1 cursor-pointer ${
+                                esExamenActivo
+                                  ? 'bg-white text-amber-600 border-white hover:bg-amber-50 shadow-xs'
+                                  : esOscuro 
+                                    ? 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700' 
+                                    : 'bg-white border-slate-300 text-slate-700 hover:bg-slate-100 shadow-2xs'
+                              }`}
+                            >
+                              <Eye className="w-3.5 h-3.5" /> Ver intento
+                            </button>
 
-                        {notasModulosMap[mod.codigo] >= 12 ? (
-                          <Link
-                            href="/dashboard/certificados"
-                            className="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-3 py-1.5 rounded-lg transition-colors shadow-2xs cursor-pointer"
-                          >
-                            <Award className="w-3.5 h-3.5" /> Descargar certificado
-                          </Link>
+                            {notasModulosMap[mod.codigo] >= 12 ? (
+                              <Link
+                                href="/dashboard/certificados"
+                                className={`inline-flex items-center gap-1.5 font-bold text-xs px-3 py-1.5 rounded-xl transition-colors shadow-2xs cursor-pointer ${
+                                  esExamenActivo
+                                    ? 'bg-white text-emerald-700 hover:bg-emerald-50'
+                                    : 'bg-emerald-600 hover:bg-emerald-500 text-white'
+                                }`}
+                              >
+                                <Award className="w-3.5 h-3.5" /> Descargar certificado
+                              </Link>
+                            ) : (
+                              <a
+                                href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, desaprobé el Examen Modular ${modIdx + 1} en ${diplomadoActual.titulo}. Deseo pagar los S/ 25.00 para rendir mi Examen Sustitutorio.`)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`inline-flex items-center gap-1.5 font-bold text-xs px-3 py-1.5 rounded-xl transition-colors shadow-2xs ${
+                                  esExamenActivo
+                                    ? 'bg-white text-amber-700 hover:bg-amber-50'
+                                    : 'bg-amber-600 hover:bg-amber-500 text-white'
+                                }`}
+                                title="Solo tienes 1 intento. Para rendir nuevamente debes pagar el sustitutorio de S/ 25."
+                              >
+                                <span>Sustitutorio (S/ 25)</span>
+                              </a>
+                            )}
+                          </div>
                         ) : (
-                          <a
-                            href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, desaprobé el Examen Modular ${modIdx + 1} en ${diplomadoActual.titulo}. Deseo pagar los S/ 25.00 para rendir mi Examen Sustitutorio.`)}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs px-3 py-1.5 rounded-lg transition-colors shadow-2xs"
-                            title="Solo tienes 1 intento. Para rendir nuevamente debes pagar el sustitutorio de S/ 25."
+                          <button
+                            type="button"
+                            onClick={() => abrirModalExamen(mod.codigo, mod.nombre, modIdx)}
+                            className={`text-xs font-bold px-3.5 py-1.5 rounded-xl transition-all flex items-center gap-1.5 shrink-0 cursor-pointer ${
+                              esExamenActivo
+                                ? 'bg-white text-amber-600 hover:bg-amber-50 shadow-xs'
+                                : 'bg-amber-500 hover:bg-amber-600 text-white shadow-amber-500/20 shadow-sm'
+                            }`}
                           >
-                            <span>Sustitutorio (S/ 25)</span>
-                          </a>
+                            <FileText className={`w-3.5 h-3.5 ${esExamenActivo ? 'text-amber-600' : 'text-white'}`} />
+                            <span>Rendir examen</span>
+                          </button>
                         )}
                       </div>
-                    ) : (
-                      <button
-                        type="button"
-                        onClick={() => abrirModalExamen(mod.codigo, mod.nombre, modIdx)}
-                        className="bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-bold px-3.5 py-1.5 rounded-lg transition-colors flex items-center gap-1.5 shrink-0 shadow-sm cursor-pointer"
-                      >
-                        <FileText className="w-3.5 h-3.5" /> Rendir examen
-                      </button>
-                    )}
-                  </div>
+                    );
+                  })()}
                 </div>
               );
             })}
@@ -2132,371 +2681,6 @@ export default function ReproductorClasesPage() {
         </aside>
 
       </div>
-
-      {/* MODAL DE EVALUACIÓN MODULAR */}
-      {examenActivoModal && (
-        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-          <div className={`max-w-2xl w-full rounded-2xl p-6 shadow-2xl space-y-6 border transition-all my-8 ${
-            esOscuro ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900'
-          }`}>
-            {/* Header Modal */}
-            <div className="flex items-start justify-between border-b pb-4 border-slate-200 dark:border-slate-800">
-              <div>
-                <span className="text-xs font-bold text-indigo-500 uppercase tracking-wider block">
-                  Examen Modular {examenActivoModal.moduloIdx + 1} · Evaluación Académica
-                </span>
-                <h3 className="text-base font-bold mt-1 leading-snug">
-                  {examenActivoModal.moduloNombre}
-                </h3>
-              </div>
-              <button
-                onClick={() => setExamenActivoModal(null)}
-                className={`p-2 rounded-lg text-xs font-bold transition-colors cursor-pointer ${
-                  esOscuro ? 'hover:bg-slate-800 text-slate-400' : 'hover:bg-slate-100 text-slate-500'
-                }`}
-              >
-                ✕
-              </button>
-            </div>
-
-            {/* PASO 1: INDICACIONES PREVIAS AL EXAMEN */}
-            {pasoModalExamen === 'indicaciones' && (
-              <div className="space-y-5">
-                <div className={`p-4 rounded-xl border ${
-                  esOscuro ? 'bg-slate-800/60 border-slate-750' : 'bg-slate-50 border-slate-200'
-                }`}>
-                  <h4 className="text-sm font-bold mb-3 flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-amber-500" />
-                    Indicaciones para rendir tu evaluación
-                  </h4>
-                  <ul className="space-y-3 text-xs leading-relaxed">
-                    <li className="flex items-start gap-2.5">
-                      <span className="font-bold text-indigo-500 shrink-0">⏱️ Tiempo:</span>
-                      <span>Tendrás un tiempo límite de <strong>30 minutos</strong> para responder el cuestionario completo.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="font-bold text-indigo-500 shrink-0">🎯 Intentos:</span>
-                      <span>Cuentas con <strong>1 solo intento</strong> para rendir este examen modular.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="font-bold text-indigo-500 shrink-0">📝 Estructura:</span>
-                      <span>Consta de <strong>5 preguntas objetivas</strong> de opción múltiple relacionadas al módulo cursado.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="font-bold text-indigo-500 shrink-0">🏆 Aprobación:</span>
-                      <span>La nota mínima aprobatoria es <strong>12 / 20</strong> (cada pregunta correcta suma 4 puntos).</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="font-bold text-indigo-500 shrink-0">📜 Certificación:</span>
-                      <span>Al aprobar con 12 o más, tu certificado modular se activará automáticamente para descarga en <strong>Mis Certificados</strong>.</span>
-                    </li>
-                    <li className="flex items-start gap-2.5">
-                      <span className="font-bold text-amber-500 shrink-0">⚠️ Sustitutorio:</span>
-                      <span>En caso de desaprobar, deberás abonar el derecho de <strong>S/ 25.00</strong> para habilitar un Examen Sustitutorio.</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-end gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setExamenActivoModal(null)}
-                    className={`px-4 py-2 rounded-xl text-xs font-semibold border transition-colors cursor-pointer ${
-                      esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-700'
-                    }`}
-                  >
-                    Cancelar
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setPasoModalExamen('cuestionario')}
-                    className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs px-5 py-2.5 rounded-xl shadow-md transition-colors flex items-center gap-2 cursor-pointer"
-                  >
-                    <FileText className="w-4 h-4" /> Comenzar Examen Ahora
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {/* PASO 2: CUESTIONARIO */}
-            {pasoModalExamen === 'cuestionario' && (
-              <div className="space-y-6 max-h-[60vh] overflow-y-auto pr-1">
-                {generarPreguntasExamenModulo(examenActivoModal.moduloCodigo, examenActivoModal.moduloNombre).map((q, qIdx) => (
-                  <div
-                    key={q.id}
-                    className={`p-4 rounded-xl border space-y-3 ${
-                      esOscuro ? 'bg-slate-800/60 border-slate-750' : 'bg-slate-50 border-slate-200'
-                    }`}
-                  >
-                    <h4 className="text-xs font-bold leading-snug">
-                      {qIdx + 1}. {q.pregunta}
-                    </h4>
-                    <div className="space-y-2">
-                      {q.opciones.map((opt, optIdx) => {
-                        const seleccionada = respuestasExamen[qIdx] === optIdx;
-                        return (
-                          <button
-                            key={optIdx}
-                            type="button"
-                            onClick={() => setRespuestasExamen(prev => ({ ...prev, [qIdx]: optIdx }))}
-                            className={`w-full text-left p-3 rounded-lg text-xs flex items-center gap-3 transition-all border cursor-pointer ${
-                              seleccionada
-                                ? 'bg-amber-500 text-slate-950 border-amber-500 font-bold shadow-2xs'
-                                : esOscuro
-                                  ? 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-slate-800'
-                                  : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-100'
-                            }`}
-                          >
-                            <div className={`size-4 rounded-full border grid place-items-center shrink-0 ${
-                              seleccionada ? 'border-slate-950 bg-slate-950 text-amber-500 font-bold' : 'border-slate-400'
-                            }`}>
-                              {seleccionada && <div className="size-2 rounded-full bg-amber-500" />}
-                            </div>
-                            <span className="leading-tight">{opt}</span>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ))}
-
-                {/* Botón de Envío */}
-                <div className="pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
-                  <span className={`text-xs ${esOscuro ? 'text-slate-400' : 'text-slate-500'}`}>
-                    Preguntas respondidas: {Object.keys(respuestasExamen).length} / 5
-                  </span>
-                  <button
-                    onClick={rendirExamenModulo}
-                    disabled={Object.keys(respuestasExamen).length < 5 || guardandoExamen}
-                    className={`px-6 py-2.5 rounded-xl font-bold text-xs flex items-center gap-2 transition-all shadow-md ${
-                      Object.keys(respuestasExamen).length === 5 && !guardandoExamen
-                        ? 'bg-amber-500 hover:bg-amber-400 text-slate-950 cursor-pointer'
-                        : 'bg-slate-700 text-slate-400 cursor-not-allowed opacity-60'
-                    }`}
-                  >
-                    {guardandoExamen ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin" /> Guardando nota...
-                      </>
-                    ) : (
-                      'Entregar y Finalizar Examen'
-                    )}
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {/* PASO 3: RESULTADOS INMEDIATOS */}
-            {pasoModalExamen === 'resultado' && resultadoExamen && (
-              <div className="space-y-6 text-center py-2">
-                <div className={`p-6 rounded-2xl border ${
-                  resultadoExamen.aprobado
-                    ? esOscuro ? 'bg-emerald-950/40 border-emerald-800/60 text-emerald-300' : 'bg-emerald-50 border-emerald-200 text-emerald-900'
-                    : esOscuro ? 'bg-rose-950/40 border-rose-800/60 text-rose-300' : 'bg-rose-50 border-rose-200 text-rose-900'
-                }`}>
-                  <div className="text-4xl mb-2">
-                    {resultadoExamen.aprobado ? '🎉' : '❌'}
-                  </div>
-                  <h4 className="text-lg font-bold">
-                    {resultadoExamen.aprobado ? '¡Examen Aprobado con Éxito!' : 'Examen No Aprobado'}
-                  </h4>
-                  <p className="text-3xl font-black my-2">
-                    Nota: {resultadoExamen.nota.toString().padStart(2, '0')} / 20
-                  </p>
-                  <p className="text-xs max-w-md mx-auto leading-relaxed">
-                    {resultadoExamen.aprobado
-                      ? '¡Felicitaciones! Has superado la nota mínima aprobatoria (12/20). Tu certificado de este módulo ya se encuentra disponible para descargar en la sección Mis Certificados.'
-                      : 'Obtuviste una calificación menor a 12/20 y has completado tu único intento permitido. Para rendir tu Examen Sustitutorio y rehabilitar tu evaluación, abona el derecho de S/ 25.00 con soporte.'}
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap justify-center gap-3">
-                  <button
-                    onClick={() => setPasoModalExamen('ver_intento')}
-                    className={`font-bold text-xs px-4 py-2.5 rounded-xl border transition-colors inline-flex items-center gap-1.5 cursor-pointer ${
-                      esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-white border-slate-300 hover:bg-slate-100 text-slate-800 shadow-2xs'
-                    }`}
-                  >
-                    <Eye className="w-4 h-4" /> Ver intento y revisión
-                  </button>
-
-                  {resultadoExamen.aprobado ? (
-                    <Link
-                      href="/dashboard/certificados"
-                      className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow transition-colors inline-flex items-center gap-1.5 cursor-pointer"
-                    >
-                      <Award className="w-4 h-4" /> Descargar Certificado
-                    </Link>
-                  ) : (
-                    <a
-                      href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, rendí el Examen Modular ${examenActivoModal.moduloIdx + 1} con nota ${resultadoExamen.nota}/20 y deseo pagar los S/ 25.00 para habilitar el Examen Sustitutorio.`)}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs px-5 py-2.5 rounded-xl shadow transition-colors inline-flex items-center gap-1.5"
-                    >
-                      Solicitar Sustitutorio (S/ 25)
-                    </a>
-                  )}
-
-                  <button
-                    onClick={() => setExamenActivoModal(null)}
-                    className={`font-bold text-xs px-5 py-2.5 rounded-xl border transition-colors cursor-pointer ${
-                      esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-800'
-                    }`}
-                  >
-                    Cerrar
-                  </button>
-                </div>
-              </div>
-            )}
-
-            {/* PASO 4: REVISIÓN DETALLADA DEL INTENTO ("VER INTENTO") */}
-            {pasoModalExamen === 'ver_intento' && (() => {
-              const preguntas = generarPreguntasExamenModulo(examenActivoModal.moduloCodigo, examenActivoModal.moduloNombre);
-              const respuestasDelModulo = respuestasPorModulo[examenActivoModal.moduloCodigo] || {};
-              const notaActual = notasModulosMap[examenActivoModal.moduloCodigo] ?? (resultadoExamen?.nota || 0);
-              const aciertosObjetivo = Math.min(5, Math.max(0, Math.round(notaActual / 4)));
-
-              return (
-                <div className="space-y-5 max-h-[60vh] overflow-y-auto pr-1">
-                  {/* Resumen de Calificación */}
-                  <div className={`p-4 rounded-xl border flex items-center justify-between ${
-                    notaActual >= 12 
-                      ? (esOscuro ? 'bg-emerald-950/30 border-emerald-800/40' : 'bg-emerald-50 border-emerald-200')
-                      : (esOscuro ? 'bg-rose-950/30 border-rose-800/40' : 'bg-rose-50 border-rose-200')
-                  }`}>
-                    <div>
-                      <span className="text-xs font-bold block">
-                        Calificación del intento: <span className="text-sm font-black">{notaActual.toString().padStart(2, '0')} / 20</span>
-                      </span>
-                      <span className="text-[11px] text-slate-400">
-                        {notaActual >= 12 ? 'Examen Aprobado (Mínimo 12/20)' : 'Examen Desaprobado (Requiere Sustitutorio)'}
-                      </span>
-                    </div>
-                    <span className={`text-xs font-bold px-3 py-1 rounded-full border ${
-                      notaActual >= 12
-                        ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
-                        : 'bg-rose-500/20 text-rose-400 border-rose-500/30'
-                    }`}>
-                      {notaActual >= 12 ? 'Aprobado ✓' : 'Desaprobado ❌'}
-                    </span>
-                  </div>
-
-                  {/* Detalle Pregunta por Pregunta */}
-                  <div className="space-y-4">
-                    {preguntas.map((q, qIdx) => {
-                      // Si tenemos la respuesta exacta guardada la usamos; sino la reconstruimos consistente con la nota
-                      let seleccion = respuestasDelModulo[qIdx];
-                      if (seleccion === undefined) {
-                        seleccion = qIdx < aciertosObjetivo ? q.respuestaCorrecta : ((q.respuestaCorrecta + 1) % q.opciones.length);
-                      }
-                      const esCorrecta = seleccion === q.respuestaCorrecta;
-
-                      return (
-                        <div
-                          key={q.id}
-                          className={`p-4 rounded-xl border space-y-3 ${
-                            esCorrecta 
-                              ? (esOscuro ? 'bg-emerald-950/20 border-emerald-800/30' : 'bg-emerald-50/50 border-emerald-200')
-                              : (esOscuro ? 'bg-rose-950/20 border-rose-800/30' : 'bg-rose-50/50 border-rose-200')
-                          }`}
-                        >
-                          <div className="flex items-start justify-between gap-2">
-                            <h4 className="text-xs font-bold leading-snug">
-                              {qIdx + 1}. {q.pregunta}
-                            </h4>
-                            <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border shrink-0 ${
-                              esCorrecta 
-                                ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' 
-                                : 'bg-rose-500/20 text-rose-400 border-rose-500/30'
-                            }`}>
-                              {esCorrecta ? '+4 pts (Correcto)' : '0 pts (Incorrecto)'}
-                            </span>
-                          </div>
-
-                          <div className="space-y-2">
-                            {q.opciones.map((opt, optIdx) => {
-                              const esLaSeleccionada = seleccion === optIdx;
-                              const esLaCorrecta = optIdx === q.respuestaCorrecta;
-
-                              let estiloOpcion = esOscuro 
-                                ? 'bg-slate-900 border-slate-800 text-slate-400' 
-                                : 'bg-white border-slate-200 text-slate-600';
-
-                              if (esLaSeleccionada && esCorrecta) {
-                                estiloOpcion = 'bg-emerald-600/20 border-emerald-500 text-emerald-400 font-bold';
-                              } else if (esLaSeleccionada && !esCorrecta) {
-                                estiloOpcion = 'bg-rose-600/20 border-rose-500 text-rose-400 font-bold line-through';
-                              } else if (!esLaSeleccionada && esLaCorrecta) {
-                                estiloOpcion = 'bg-emerald-600/10 border-emerald-500/60 text-emerald-400 font-semibold';
-                              }
-
-                              return (
-                                <div
-                                  key={optIdx}
-                                  className={`p-2.5 rounded-lg text-xs border flex items-center justify-between gap-2 ${estiloOpcion}`}
-                                >
-                                  <span>{opt}</span>
-                                  <div className="shrink-0 text-[10px] font-bold">
-                                    {esLaSeleccionada && esCorrecta && '✓ Tu respuesta (Correcta)'}
-                                    {esLaSeleccionada && !esCorrecta && '✗ Tu respuesta (Fallida)'}
-                                    {!esLaSeleccionada && esLaCorrecta && '✓ Respuesta correcta'}
-                                  </div>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Acciones del pie en Ver Intento */}
-                  <div className="pt-3 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
-                    <button
-                      type="button"
-                      onClick={() => setPasoModalExamen('resultado')}
-                      className={`px-4 py-2 rounded-xl text-xs font-semibold border transition-colors cursor-pointer ${
-                        esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-slate-300' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-700'
-                      }`}
-                    >
-                      Volver
-                    </button>
-
-                    <div className="flex items-center gap-2">
-                      {notaActual >= 12 ? (
-                        <Link
-                          href="/dashboard/certificados"
-                          className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs px-4 py-2 rounded-xl shadow transition-colors inline-flex items-center gap-1.5 cursor-pointer"
-                        >
-                          <Award className="w-4 h-4" /> Descargar Certificado
-                        </Link>
-                      ) : (
-                        <a
-                          href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, revisé mi intento en el Examen Modular ${examenActivoModal.moduloIdx + 1} con nota ${notaActual}/20 y deseo pagar los S/ 25.00 para rendir el Examen Sustitutorio.`)}`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs px-4 py-2 rounded-xl shadow transition-colors inline-flex items-center gap-1.5"
-                        >
-                          Sustitutorio (S/ 25)
-                        </a>
-                      )}
-                      <button
-                        onClick={() => setExamenActivoModal(null)}
-                        className={`font-bold text-xs px-4 py-2 rounded-xl border transition-colors cursor-pointer ${
-                          esOscuro ? 'bg-slate-800 border-slate-700 hover:bg-slate-700 text-white' : 'bg-slate-100 border-slate-200 hover:bg-slate-200 text-slate-800'
-                        }`}
-                      >
-                        Cerrar
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              );
-            })()}
-          </div>
-        </div>
-      )}
     </div>
   );
 }

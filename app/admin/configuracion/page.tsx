@@ -11,9 +11,10 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import AdminHeader from '@/components/admin/admin-header';
+import { LoginPersonalizacionTab } from '@/components/admin/configuracion/LoginPersonalizacionTab';
 
 export default function ConfiguracionRolesPage() {
-  const [activeTab, setActiveTab] = useState<'rbac' | 'paquetes' | 'simulador'>('rbac');
+  const [activeTab, setActiveTab] = useState<'rbac' | 'paquetes' | 'simulador' | 'login'>('rbac');
   const [usuarios, setUsuarios] = useState<any[]>([]);
   const [cargando, setCargando] = useState(true);
   const [busqueda, setBusqueda] = useState('');
@@ -139,6 +140,12 @@ export default function ConfiguracionRolesPage() {
               className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'simulador' ? 'border-emerald-600 text-emerald-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
             >
               <GraduationCap className="w-4 h-4" /> Vista Estudiante FULL (Simulador)
+            </button>
+            <button
+              onClick={() => setActiveTab('login')}
+              className={`pb-3 px-6 font-bold text-sm transition border-b-2 cursor-pointer flex items-center gap-2 shrink-0 ${activeTab === 'login' ? 'border-amber-500 text-amber-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+            >
+              <Sparkles className="w-4 h-4 text-amber-500" /> Personalización del Login
             </button>
           </div>
 
@@ -372,7 +379,7 @@ export default function ConfiguracionRolesPage() {
                 </button>
               </div>
             </div>
-          ) : (
+          ) : activeTab === 'simulador' ? (
             /* TAB: SIMULADOR DE VISTA ESTUDIANTE FULL */
             <div className="space-y-6">
               {/* Tarjeta de Inicio Rápido de Simulación */}
@@ -503,6 +510,8 @@ export default function ConfiguracionRolesPage() {
                 </div>
               </div>
             </div>
+          ) : (
+            <LoginPersonalizacionTab />
           )}
 
         </div>

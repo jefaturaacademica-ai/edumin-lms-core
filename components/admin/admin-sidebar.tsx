@@ -6,7 +6,7 @@ import { usePathname, useRouter } from 'next/navigation';
 import { 
   ShieldCheck, Users, BookOpen, Settings, LogOut,
   Activity, Award, UserCheck, Server, LayoutDashboard,
-  Menu, X, Sun, Moon, Sparkles
+  Menu, X, Sun, Moon, Sparkles, FileQuestion
 } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
 import { useTheme } from '@/context/theme-context';
@@ -43,6 +43,7 @@ export default function AdminSidebar() {
     const adminTitles: Record<string, string> = {
       '/admin': 'Dashboard y Finanzas 360°',
       '/admin/catalogo': 'Catálogo y Programas',
+      '/admin/examenes': 'Evaluaciones y Exámenes Modulares',
       '/admin/estudiantes': 'Estudiantes y Secretaría',
       '/admin/certificaciones': 'Certificaciones y Convenios',
       '/admin/alumnos-riesgo': 'Alumnos en Riesgo',
@@ -72,6 +73,12 @@ export default function AdminSidebar() {
           label: 'Catálogo y programas',
           icon: BookOpen,
           color: 'text-indigo-400'
+        },
+        {
+          href: '/admin/examenes',
+          label: 'Evaluaciones y exámenes',
+          icon: FileQuestion,
+          color: 'text-purple-400'
         },
         {
           href: '/admin/estudiantes',

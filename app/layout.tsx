@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 
@@ -33,14 +32,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       suppressHydrationWarning
     >
       <head>
-        <Script
-          id="edumin-theme-script"
-          strategy="beforeInteractive"
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
                 try {
-                  var mode = localStorage.getItem('edumin_theme_mode') || localStorage.getItem('edumin_theme') || 'oscuro';
+                  var mode = localStorage.getItem('edumin_theme_mode') || localStorage.getItem('edumin_theme');
+                  if (!mode) {
+                    var m = document.cookie.match(new RegExp('(^| )edumin_theme=([^;]+)'));
+                    if (m) mode = m[2];
+                  }
+                  if (!mode) mode = 'oscuro';
                   var isDark = true;
                   if (mode === 'claro') {
                     isDark = false;
@@ -49,21 +51,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   } else {
                     isDark = true;
                   }
+                  var root = document.documentElement;
                   if (isDark) {
-                    document.documentElement.classList.add('dark');
-                    document.documentElement.setAttribute('data-theme', 'oscuro');
+                    root.classList.add('dark');
+                    root.setAttribute('data-theme', 'oscuro');
                   } else {
-                    document.documentElement.classList.remove('dark');
-                    document.documentElement.setAttribute('data-theme', 'claro');
+                    root.classList.remove('dark');
+                    root.setAttribute('data-theme', 'claro');
                   }
-                  document.documentElement.setAttribute('data-theme-mode', mode);
+                  root.setAttribute('data-theme-mode', mode);
                 } catch (e) {}
               })();
             `,
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col font-sans" suppressHydrationWarning>{children}</body>
+      <body className="min-h-full flex flex-col font-sans bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100" suppressHydrationWarning>{children}</body>
     </html>
   );
 }

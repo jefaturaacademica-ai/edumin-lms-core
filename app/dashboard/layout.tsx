@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { Home, BookOpen, Award, LogOut, GraduationCap, Wallet, Menu, X, User } from 'lucide-react';
 import { createBrowserClient } from '@supabase/ssr';
-import { ThemeProvider, useTheme } from '@/context/theme-context';
+import { ThemeProvider } from '@/context/theme-context';
 import { ProfileProvider } from '@/context/profile-context';
 import { UserProfileCard } from '@/components/navigation/UserProfileCard';
 import { ThemeMenuButton } from '@/components/navigation/ThemeMenuButton';
@@ -13,7 +13,6 @@ import { ThemeMenuButton } from '@/components/navigation/ThemeMenuButton';
 function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
-  const { esOscuro } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const supabase = createBrowserClient(
@@ -57,16 +56,14 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
 
   return (
     <div 
-      className={`min-h-screen md:h-screen md:overflow-hidden flex flex-col md:flex-row transition-colors duration-200 ${
-        esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
-      }`}
+      className="min-h-screen md:h-screen md:overflow-hidden flex flex-col md:flex-row bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-200"
       suppressHydrationWarning
     >
       {/* Header Móvil (solo visible en pantallas < md) */}
       <header className="md:hidden bg-slate-950 text-slate-100 border-b border-slate-900 px-4 py-3 flex items-center justify-between sticky top-0 z-30 shrink-0">
         <Link href="/dashboard" className="flex items-center gap-2">
           <img 
-            src="https://raw.githubusercontent.com/videoconferenciasdiplomado-alt/imagenes/main/logo/logo%20blanco.png" 
+            src="/logo-blanco.png" 
             alt="Edumin Logo" 
             className="h-9 w-auto object-contain" 
           />
@@ -101,7 +98,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
         <div className="p-4 border-b border-white/5 shrink-0 flex flex-col gap-3">
           <div className="flex items-center justify-between">
             <img 
-              src="https://raw.githubusercontent.com/videoconferenciasdiplomado-alt/imagenes/main/logo/logo%20blanco.png" 
+              src="/logo-blanco.png" 
               alt="Edumin Logo" 
               className="h-9 w-auto object-contain" 
             />
@@ -162,7 +159,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
         <div className="p-5 flex flex-col gap-4 border-b border-white/5 shrink-0">
           <div className="flex items-center justify-center">
             <img 
-              src="https://raw.githubusercontent.com/videoconferenciasdiplomado-alt/imagenes/main/logo/logo%20blanco.png" 
+              src="/logo-blanco.png" 
               alt="Edumin Logo" 
               className="h-12 w-auto object-contain" 
             />
@@ -210,12 +207,14 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
 
       {/* Área Principal Dinámica (Sin la barra superior redundante) */}
       <div 
-        className={`flex-1 flex flex-col overflow-hidden min-w-0 transition-colors duration-200 ${
-          esOscuro ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
-        }`}
+        className="flex-1 flex flex-col overflow-hidden min-w-0 bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-200"
         suppressHydrationWarning
       >
-        <div className="flex-1 overflow-y-auto">
+        <div className={`flex-1 min-h-0 ${
+          pathname.startsWith('/dashboard/diplomados/') || pathname.startsWith('/dashboard/cursos/')
+            ? 'h-full overflow-hidden flex flex-col'
+            : 'overflow-y-auto'
+        }`}>
           {children}
         </div>
       </div>

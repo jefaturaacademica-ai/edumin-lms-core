@@ -238,7 +238,8 @@ export default function DiplomadosPage() {
                   docente: mod.docente || '',
                   clases: mod.clases || [],
                   avance: avanceMod,
-                  nota: modJson?.nota ?? 0,
+                  nota: modJson?.nota !== undefined ? Number(modJson.nota) : undefined,
+                  rendido: Boolean(modJson?.rendido || (modJson?.nota !== undefined && modJson?.nota !== null && Number(modJson?.nota) > 0)),
                   completado: avanceMod === 100
                 };
               });
@@ -536,8 +537,25 @@ export default function DiplomadosPage() {
                             const esModuloEnProgreso = avanceModulo > 0 && avanceModulo < 100;
                             const esModuloPorIniciar = avanceModulo === 0;
 
+                            // Verificar estado del examen del módulo
+                            const examenRendido = Boolean(modulo.rendido || (modulo.nota !== undefined && modulo.nota !== null && modulo.nota > 0));
+                            const examenAprobado = examenRendido && Number(modulo.nota) >= 12;
+                            const tieneExamenPendiente = esModuloCompletado && !examenRendido;
+
                             // Centralización de estilos e información por estado del módulo
-                            const infoEstadoModulo = esModuloCompletado
+                            const infoEstadoModulo = tieneExamenPendiente
+                              ? {
+                                  label: 'Examen pendiente',
+                                  Icono: FileText,
+                                  badgeBg: 'bg-amber-500/90 border-amber-400/30 text-white',
+                                  duracionIconColor: 'text-amber-400',
+                                  porcentajeColor: esOscuro ? 'text-amber-400' : 'text-amber-600',
+                                  barraBg: 'bg-amber-500',
+                                  botonBg: 'bg-amber-500 hover:bg-amber-600 shadow-amber-500/20 text-white font-bold',
+                                  botonTexto: 'Dar examen',
+                                  enlaceHref: `/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}&accion=examen`
+                                }
+                              : esModuloCompletado
                               ? {
                                   label: 'Completado',
                                   Icono: CheckCircle2,
@@ -545,19 +563,21 @@ export default function DiplomadosPage() {
                                   duracionIconColor: 'text-emerald-400',
                                   porcentajeColor: esOscuro ? 'text-emerald-400' : 'text-emerald-600',
                                   barraBg: 'bg-emerald-600',
-                                  botonBg: 'bg-emerald-600 group-hover:bg-emerald-700 shadow-emerald-600/20 text-white',
-                                  botonTexto: 'Repasar clases'
+                                  botonBg: 'bg-emerald-600 group-hover:bg-emerald-700 shadow-emerald-600/20 text-white font-bold',
+                                  botonTexto: 'Repasar clases',
+                                  enlaceHref: `/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}`
                                 }
                               : esModuloPorIniciar
                               ? {
                                   label: 'Por iniciar',
                                   Icono: CircleDashed,
-                                  badgeBg: 'bg-amber-500/90 border-amber-400/30 text-white',
-                                  duracionIconColor: 'text-amber-400',
+                                  badgeBg: 'bg-slate-700/90 border-slate-600/30 text-white',
+                                  duracionIconColor: 'text-slate-400',
                                   porcentajeColor: esOscuro ? 'text-slate-400' : 'text-slate-500',
                                   barraBg: 'bg-slate-300 dark:bg-slate-700',
-                                  botonBg: 'bg-amber-600 group-hover:bg-amber-700 shadow-amber-600/20 text-white',
-                                  botonTexto: 'Iniciar clases'
+                                  botonBg: 'bg-slate-700 group-hover:bg-slate-800 text-white font-bold shadow-slate-700/20',
+                                  botonTexto: 'Iniciar clases',
+                                  enlaceHref: `/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}`
                                 }
                               : {
                                   label: 'En progreso',
@@ -566,8 +586,9 @@ export default function DiplomadosPage() {
                                   duracionIconColor: 'text-indigo-400',
                                   porcentajeColor: esOscuro ? 'text-indigo-400' : 'text-indigo-600',
                                   barraBg: 'bg-indigo-600',
-                                  botonBg: 'bg-indigo-600 group-hover:bg-indigo-700 shadow-indigo-600/20 text-white',
-                                  botonTexto: 'Continuar clases'
+                                  botonBg: 'bg-indigo-600 group-hover:bg-indigo-700 shadow-indigo-600/20 text-white font-bold',
+                                  botonTexto: 'Continuar clases',
+                                  enlaceHref: `/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}`
                                 };
 
                             const IconoEstadoMod = infoEstadoModulo.Icono;
@@ -575,7 +596,7 @@ export default function DiplomadosPage() {
                             return (
                               <Link
                                 key={modulo.id} 
-                                href={`/dashboard/diplomados/${diplomado.id}?modulo=${modulo.id}`}
+                                href={infoEstadoModulo.enlaceHref}
                                 className={`group rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between transition-all hover:shadow-md cursor-pointer ${
                                   esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
                                 }`}

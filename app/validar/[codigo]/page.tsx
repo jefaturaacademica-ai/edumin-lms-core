@@ -1,20 +1,39 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
-import { ShieldCheck, CheckCircle2, Award, FileText, QrCode, ArrowLeft, Download, ExternalLink, GraduationCap, Clock, AlertTriangle } from 'lucide-react';
+import { useParams, useRouter } from 'next/navigation';
+import { 
+  ShieldCheck, 
+  ArrowLeft, 
+  Search,
+  BookOpen,
+  Calendar,
+  UserCheck,
+  GraduationCap,
+  Clock,
+  AlertCircle
+} from 'lucide-react';
 import Link from 'next/link';
+import AvanzaCertificateRenderer from '@/components/certificates/AvanzaCertificateRenderer';
+import { 
+  desencriptarTokenCertificado, 
+  encriptarTokenCertificado, 
+  normalizarCodigoCertificado 
+} from '@/lib/utils/certificateUtils';
 
 export default function ValidarCertificadoPage() {
   const params = useParams();
-  const codigo = params?.codigo as string;
+  const router = useRouter();
+  const rawParam = params?.codigo as string;
+  const codigo = desencriptarTokenCertificado(rawParam) || normalizarCodigoCertificado(rawParam);
 
   const [cargando, setCargando] = useState(true);
   const [certificado, setCertificado] = useState<any>(null);
   const [error, setError] = useState<string | null>(null);
+  const [nuevoCodigo, setNuevoCodigo] = useState('');
 
   useEffect(() => {
-    document.title = 'Validación de Certificado | EDUMIN';
+    document.title = 'Validación de certificado | EDUMIN';
     if (!codigo) return;
     validarCertificado();
   }, [codigo]);
@@ -26,200 +45,246 @@ export default function ValidarCertificadoPage() {
       const res = await fetch(`/api/validar/${encodeURIComponent(codigo)}`);
       if (!res.ok) {
         const errData = await res.json();
-        setError(errData.error || 'Código de certificado no encontrado o no válido.');
+        setError(errData.error || 'Código de certificado no válido o no encontrado.');
         setCertificado(null);
       } else {
         const data = await res.json();
         setCertificado(data.certificado);
       }
-    } catch (e: any) {
+    } catch {
       setError('Error de conexión al validar el certificado.');
     } finally {
       setCargando(false);
     }
   };
 
-  return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans selection:bg-indigo-500 selection:text-white">
-      {/* Header Público de Validación */}
-      <header className="border-b border-slate-800 bg-slate-900/60 backdrop-blur-md sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="size-10 rounded-xl bg-indigo-600/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-black text-sm">
-              EM
-            </div>
-            <div>
-              <span className="text-[10px] font-mono tracking-widest text-slate-400 block uppercase">
-                Sistema Oficial de Verificación QR
-              </span>
-              <h1 className="text-sm sm:text-base font-extrabold text-white">
-                INSTITUTO INTERNACIONAL EDUMIN
-              </h1>
-            </div>
-          </div>
+  const handleBuscarNuevo = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!nuevoCodigo.trim()) return;
+    const token = encriptarTokenCertificado(nuevoCodigo.trim());
+    router.push(`/validar?v=${encodeURIComponent(token)}`);
+  };
 
-          <Link 
-            href="/login"
-            className="text-xs font-bold text-slate-400 hover:text-white transition flex items-center gap-1 bg-slate-800/80 px-3 py-1.5 rounded-xl border border-slate-700"
-          >
-            <span>Aula Virtual</span>
-            <ExternalLink className="w-3.5 h-3.5" />
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans antialiased">
+      {/* Barra de Encabezado Oscura */}
+      <header className="bg-slate-950 border-b border-slate-800 text-white sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+          <Link href="/validar" className="flex items-center gap-3 hover:opacity-90 transition">
+            <img
+              src="/logo-blanco.png"
+              alt="EDUMIN"
+              className="h-8 sm:h-9 w-auto object-contain"
+            />
+            <div className="h-5 w-px bg-slate-700 hidden sm:block" />
+            <h1 className="text-sm sm:text-base font-bold text-white tracking-tight">
+              Sistema oficial de verificación
+            </h1>
           </Link>
         </div>
       </header>
 
       {/* Contenido Principal */}
-      <main className="flex-1 max-w-4xl w-full mx-auto p-4 sm:p-8 space-y-6">
-        
+      <main className="flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 flex flex-col justify-center">
+
         {cargando ? (
-          <div className="text-center py-20 space-y-4">
-            <div className="inline-block animate-spin rounded-full h-10 w-10 border-4 border-indigo-500 border-t-transparent"></div>
-            <p className="text-xs font-mono text-slate-400">Verificando autenticidad en la red de Supabase...</p>
+          /* Estado de Verificación Inmediata */
+          <div className="bg-white border border-slate-200 rounded-2xl p-8 sm:p-10 text-center space-y-5 max-w-md mx-auto shadow-sm my-auto w-full animate-in fade-in duration-150">
+            <div className="relative size-16 mx-auto flex items-center justify-center">
+              <div className="absolute inset-0 rounded-full border-4 border-indigo-200 animate-ping opacity-60"></div>
+              <div className="size-16 rounded-full bg-indigo-50 border-2 border-indigo-200 grid place-items-center text-indigo-600 relative z-10 shadow-xs">
+                <ShieldCheck className="w-8 h-8 animate-pulse text-indigo-600" />
+              </div>
+            </div>
+
+            <div className="space-y-1.5">
+              <h2 className="text-base sm:text-lg font-bold text-slate-900">
+                Verificando documento oficial
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 leading-relaxed">
+                Comprobando firma digital y autenticidad del registro en EDUMIN...
+              </p>
+            </div>
+
+            <div className="pt-1 flex justify-center items-center gap-1.5">
+              <div className="size-2 rounded-full bg-indigo-600 animate-bounce"></div>
+              <div className="size-2 rounded-full bg-indigo-600 animate-bounce [animation-delay:0.15s]"></div>
+              <div className="size-2 rounded-full bg-indigo-600 animate-bounce [animation-delay:0.3s]"></div>
+            </div>
           </div>
         ) : error ? (
-          <div className="bg-rose-950/40 border border-rose-800/60 rounded-3xl p-8 text-center space-y-4 max-w-lg mx-auto">
-            <div className="size-14 rounded-2xl bg-rose-500/10 border border-rose-500/30 grid place-items-center mx-auto text-rose-400">
-              <AlertTriangle className="size-8" />
+          /* Estado Erróneo / No Encontrado */
+          <div className="bg-white border border-rose-200 rounded-2xl p-6 sm:p-8 text-center space-y-5 max-w-lg mx-auto shadow-sm my-auto w-full">
+            <div className="size-12 rounded-full bg-rose-100 text-rose-600 grid place-items-center mx-auto">
+              <AlertCircle className="w-6 h-6" />
             </div>
-            <h2 className="text-xl font-bold text-rose-200">Certificado No Encontrado</h2>
-            <p className="text-xs text-rose-300/80 leading-relaxed">
-              El código de verificación <code className="bg-rose-900/60 px-2 py-0.5 rounded font-mono text-rose-200">{codigo}</code> no coincide con ningún registro activo o emitido.
-            </p>
+
+            <div className="space-y-1">
+              <h2 className="text-lg sm:text-xl font-bold text-slate-900">
+                Certificado no encontrado
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                El código <strong className="font-mono bg-slate-100 text-slate-900 px-2 py-0.5 rounded border border-slate-200">{codigo}</strong> no es válido o no coincide con ningún registro emitido.
+              </p>
+            </div>
+
+            {/* Reintentar búsqueda */}
+            <form onSubmit={handleBuscarNuevo} className="flex gap-2 pt-2">
+              <input
+                type="text"
+                value={nuevoCodigo}
+                onChange={(e) => setNuevoCodigo(e.target.value.toUpperCase())}
+                placeholder="Código del certificado"
+                className="flex-1 bg-slate-50 border border-slate-300 focus:bg-white focus:border-indigo-600 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-mono text-slate-900 outline-none uppercase"
+              />
+              <button
+                type="submit"
+                className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-4 py-2.5 rounded-xl text-xs sm:text-sm transition cursor-pointer"
+              >
+                Buscar
+              </button>
+            </form>
+
+            <div>
+              <Link
+                href="/validar"
+                className="text-xs text-slate-500 hover:text-slate-800 transition font-medium inline-flex items-center gap-1 cursor-pointer"
+              >
+                <ArrowLeft className="w-3.5 h-3.5" />
+                <span>Volver a la búsqueda principal</span>
+              </Link>
+            </div>
           </div>
         ) : certificado && (
-          <div className="space-y-6 animate-in fade-in">
+          /* Estado Válido */
+          <div className="space-y-5 my-auto w-full animate-in fade-in duration-200">
             
-            {/* Banner de Verificación Exitosa */}
-            <div className="bg-emerald-950/40 border border-emerald-500/40 rounded-3xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xl shadow-emerald-950/20">
-              <div className="flex items-center gap-4 text-center sm:text-left">
-                <div className="size-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 grid place-items-center shrink-0 text-emerald-400">
-                  <ShieldCheck className="size-8" />
+            {/* Banner de Verificación con el ÚNICO botón de "Validar otro certificado" */}
+            <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs">
+              <div className="flex items-center gap-3.5 text-center sm:text-left">
+                <div className="size-11 rounded-xl bg-emerald-100 border border-emerald-300 grid place-items-center shrink-0 text-emerald-700">
+                  <ShieldCheck className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="flex items-center justify-center sm:justify-start gap-2">
-                    <span className="bg-emerald-500/20 text-emerald-300 text-[10px] font-black px-2.5 py-0.5 rounded-full border border-emerald-500/30 uppercase tracking-wider">
-                      ✓ Documento Oficial Verificado
-                    </span>
+                  <div className="inline-block bg-emerald-100 text-emerald-800 text-[10px] font-black px-2 py-0.5 rounded-md uppercase tracking-wider mb-1">
+                    ✓ Documento oficial verificado
                   </div>
-                  <h2 className="text-lg font-black text-white mt-1">
-                    Certificado Válido y Registrado en la Plataforma EDUMIN
+                  <h2 className="text-base sm:text-lg font-bold text-slate-900">
+                    Certificado auténtico y registrado en EDUMIN
                   </h2>
-                  <p className="text-xs text-emerald-200/80 font-mono mt-0.5">
-                    Código de Registro: {certificado.codigo}
+                  <p className="text-xs text-slate-600 font-mono">
+                    Código de registro: <strong className="text-slate-900">{certificado.codigo}</strong>
                   </p>
                 </div>
               </div>
 
-              <div className="shrink-0 text-right sm:border-l border-emerald-800/50 sm:pl-6">
-                <span className="text-[10px] text-slate-400 font-mono block">Estado de Habilitación:</span>
-                <span className="text-xs font-bold text-emerald-400 bg-emerald-950 border border-emerald-800 px-3 py-1 rounded-xl inline-block mt-0.5">
-                  100% Habilitado
-                </span>
-              </div>
+              {/* Botón único de Validar otro certificado */}
+              <Link
+                href="/validar"
+                className="text-xs font-bold text-indigo-700 hover:text-indigo-900 bg-white border border-slate-200 hover:border-slate-300 px-4 py-2.5 rounded-xl transition shadow-xs flex items-center gap-1.5 shrink-0 cursor-pointer"
+              >
+                <Search className="w-3.5 h-3.5 text-indigo-600" />
+                <span>Validar otro certificado</span>
+              </Link>
             </div>
 
-            {/* Ficha de Detalles Técnicos del Documento */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-1">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Titular del Certificado</span>
-                <p className="text-sm font-black text-white truncate">{certificado.estudiante}</p>
-                <p className="text-xs text-indigo-400 font-mono">DNI: {certificado.dni}</p>
-              </div>
-
-              <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-1">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Modalidad & Horas</span>
-                <p className="text-sm font-bold text-slate-200">{certificado.horas}</p>
-                <p className="text-xs text-emerald-400 font-bold">Nota Aprobatoria: {certificado.nota} / 20</p>
-              </div>
-
-              <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-1">
-                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Fecha de Emisión</span>
-                <p className="text-sm font-bold text-slate-200">{certificado.fecha}</p>
-                <p className="text-xs text-slate-400 font-mono">Tipo: {certificado.tipo}</p>
-              </div>
-            </div>
-
-            {/* Previsualización Fiel Máster A4 */}
-            <div className="p-4 sm:p-8 bg-slate-900/60 border border-slate-800 rounded-3xl space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
-                  <Award className="w-4 h-4 text-amber-500" />
-                  Previsualización Digital Oficial A4 (Documento Snapshot)
+            {/* Disposición en 2 Columnas para Desktop (Datos a la izquierda + Certificado a la derecha) */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+              
+              {/* Columna Izquierda: Datos del Certificado */}
+              <div className="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-sm space-y-3.5">
+                <h3 className="text-xs font-bold text-slate-500 uppercase tracking-wider border-b border-slate-100 pb-2.5">
+                  Datos del certificado
                 </h3>
 
-                <button 
-                  onClick={() => window.print()}
-                  className="bg-indigo-600 hover:bg-indigo-500 text-white px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-1.5 shadow-md cursor-pointer"
+                {/* Estudiante */}
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5 space-y-0.5">
+                  <div className="flex items-center gap-1.5 text-slate-500 text-[11px] font-semibold">
+                    <UserCheck className="w-3.5 h-3.5 text-indigo-600" />
+                    <span>Estudiante acreditado</span>
+                  </div>
+                  <p className="text-sm font-bold text-slate-900">{certificado.estudiante}</p>
+                  <p className="text-xs font-mono text-slate-500">DNI / CE: {certificado.dni}</p>
+                </div>
+
+                {/* Programa / Diplomado */}
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5 space-y-0.5">
+                  <div className="flex items-center gap-1.5 text-slate-500 text-[11px] font-semibold">
+                    <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
+                    <span>Programa académico</span>
+                  </div>
+                  <p className="text-sm font-bold text-slate-900">{certificado.programa}</p>
+                  {certificado.modulo && (
+                    <p className="text-xs text-indigo-700 font-medium mt-0.5">
+                      Módulo: <span className="text-slate-700">{certificado.modulo}</span>
+                    </p>
+                  )}
+                </div>
+
+                {/* Horas y Calificación en 2 columnas internas */}
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-3 space-y-0.5">
+                    <div className="flex items-center gap-1.5 text-slate-500 text-[11px] font-semibold">
+                      <Clock className="w-3.5 h-3.5 text-indigo-600" />
+                      <span>Horas lectivas</span>
+                    </div>
+                    <p className="text-xs sm:text-sm font-bold text-slate-900">{certificado.horas}</p>
+                  </div>
+
+                  <div className="bg-slate-50 border border-slate-100 rounded-xl p-3 space-y-0.5">
+                    <div className="flex items-center gap-1.5 text-slate-500 text-[11px] font-semibold">
+                      <GraduationCap className="w-3.5 h-3.5 text-emerald-600" />
+                      <span>Nota final</span>
+                    </div>
+                    <p className="text-xs sm:text-sm font-bold text-emerald-700">{certificado.nota} / 20</p>
+                  </div>
+                </div>
+
+                {/* Fecha y Tipo */}
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3.5 space-y-0.5">
+                  <div className="flex items-center gap-1.5 text-slate-500 text-[11px] font-semibold">
+                    <Calendar className="w-3.5 h-3.5 text-indigo-600" />
+                    <span>Emisión y tipo</span>
+                  </div>
+                  <p className="text-sm font-bold text-slate-900">{certificado.fecha}</p>
+                  <p className="text-xs text-slate-500">Tipo: {certificado.tipo}</p>
+                </div>
+              </div>
+
+              {/* Columna Derecha: Certificado Oficial Emitido (Directo, sin textos de previsualización) */}
+              <div className="lg:col-span-7 bg-white border border-slate-200 rounded-2xl p-3 sm:p-5 shadow-sm">
+                <div 
+                  className="bg-slate-100/70 border border-slate-200 rounded-xl p-2 sm:p-4 flex items-center justify-center select-none relative overflow-hidden"
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
                 >
-                  <Download className="w-3.5 h-3.5" />
-                  <span>Imprimir / PDF</span>
-                </button>
-              </div>
+                  {(() => {
+                    const snap = certificado.plantilla_snapshot || {};
+                    const orientacionFinal = snap.orientacion || 'horizontal';
+                    return (
+                      <div className={`w-full flex items-center justify-center relative ${orientacionFinal === 'vertical' ? 'max-w-sm' : 'max-w-xl'}`}>
+                        <AvanzaCertificateRenderer
+                          tipo={certificado.tipo}
+                          orientacion={orientacionFinal}
+                          estudiante={certificado.estudiante}
+                          programa={certificado.programa}
+                          modulo={certificado.modulo}
+                          horas={certificado.horas}
+                          fecha={certificado.fecha}
+                          codigo={certificado.codigo}
+                          imagenFondoUrl={snap.imagenFondoUrl}
+                          incluyeQr={true}
+                        />
 
-              {/* Canvas A4 Certificado */}
-              <div className="rounded-2xl border-8 border-amber-600/40 bg-gradient-to-br from-amber-50 via-white to-amber-50/60 p-8 text-center shadow-2xl relative text-slate-900">
-                <div className="flex justify-between items-center border-b border-black/10 pb-3 mb-4">
-                  <div className="text-left">
-                    <span className="text-[9px] font-mono font-bold tracking-widest block opacity-70 text-slate-600">
-                      ESCUELA DE POSTGRADO & MINERÍA
-                    </span>
-                    <h4 className="text-xs font-black text-slate-900">INSTITUTO INTERNACIONAL EDUMIN</h4>
-                  </div>
-                  <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center text-indigo-700 font-black text-xs shrink-0">
-                    EM
-                  </div>
-                </div>
-
-                <span className="text-[10px] uppercase font-bold tracking-widest opacity-80 block text-slate-700">
-                  {certificado.tipo === 'DIPLOMA' ? 'DIPLOMA DE ALTA ESPECIALIZACIÓN' : certificado.tipo === 'MODULAR' ? 'CERTIFICADO MODULAR OFICIAL' : 'CERTIFICADO DE ESPECIALIZACIÓN PROFESIONAL'}
-                </span>
-
-                <p className="text-[11px] opacity-70 mt-2 text-slate-600">Otorgado a favor de:</p>
-                
-                <h3 className="text-xl sm:text-2xl font-extrabold font-serif text-slate-900 my-2 underline decoration-amber-500 underline-offset-4">
-                  {certificado.estudiante}
-                </h3>
-                <p className="text-[10px] opacity-60 font-mono text-slate-600">DNI / CE: {certificado.dni}</p>
-
-                <p className="text-xs mt-3 px-4 leading-relaxed opacity-85 text-slate-700">
-                  Por haber cumplido y aprobado con excelencia los requisitos del programa oficial de:
-                </p>
-                <p className="text-sm sm:text-base font-black mt-1 uppercase px-4 text-indigo-950 tracking-wide">
-                  {certificado.modulo ? `${certificado.modulo} • ${certificado.programa}` : certificado.programa}
-                </p>
-
-                <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold text-slate-800">
-                  <span className="px-3 py-1 rounded-lg border border-black/10 bg-black/5">
-                    ⏱️ {certificado.horas}
-                  </span>
-                  <span className="px-3 py-1 rounded-lg border border-black/10 bg-black/5">
-                    🏆 Calificación: {certificado.nota} / 20
-                  </span>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-black/10 flex justify-between items-end text-[9px] opacity-80 text-slate-700">
-                  <div className="text-left font-mono">
-                    <p>Fecha de emisión: {certificado.fecha}</p>
-                    <p className="font-bold mt-0.5 text-indigo-900">Código: {certificado.codigo}</p>
-                  </div>
-
-                  <div className="flex gap-4 sm:gap-6">
-                    <div className="text-center">
-                      <div className="w-16 sm:w-20 border-b border-black/30 mb-1"></div>
-                      <span className="text-[8px] block font-bold text-slate-800">Director Académico</span>
-                      <span className="text-[7px] opacity-70 text-slate-500">EDUMIN LMS</span>
-                    </div>
-                    <div className="text-center">
-                      <div className="w-16 sm:w-20 border-b border-black/30 mb-1"></div>
-                      <span className="text-[8px] block font-bold text-slate-800">Coordinador General</span>
-                      <span className="text-[7px] opacity-70 text-slate-500">EDUMIN LMS</span>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm shrink-0">
-                    <QrCode className="w-7 h-7 text-slate-900" />
-                    <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
-                  </div>
+                        {/* Capa protectora transparente */}
+                        <div 
+                          className="absolute inset-0 z-30 cursor-default bg-transparent select-none"
+                          onContextMenu={(e) => e.preventDefault()}
+                          onDragStart={(e) => e.preventDefault()}
+                        />
+                      </div>
+                    );
+                  })()}
                 </div>
               </div>
 

@@ -117,7 +117,7 @@ export default async function DashboardPage() {
     : 'Estudiante';
 
   return (
-    <main className="min-h-screen overflow-hidden bg-slate-50 text-slate-950 pb-20">
+    <main className="min-h-screen overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 pb-20 transition-colors duration-150">
       {/* Hero Section */}
       <section className="relative isolate overflow-hidden px-6 py-12 sm:px-10 lg:px-16 lg:py-16 border-b border-slate-800 bg-slate-950">
         <div 
@@ -156,12 +156,12 @@ export default async function DashboardPage() {
 
       {/* SECCIÓN 1 (PRIMERA): PROGRESO ACADÉMICO */}
       <section className="mx-auto max-w-6xl px-6 sm:px-10 lg:px-16 pt-10">
-        <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-200">
+        <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 shadow-sm border border-slate-200 dark:border-slate-800">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
             <div>
-              <span className="text-xs font-bold text-indigo-600 uppercase tracking-wider block mb-1">Progreso Académico</span>
-              <h2 className="text-2xl font-bold text-slate-900">Continuar donde te quedaste</h2>
-              <p className="text-xs text-slate-500 mt-1">Retoma tus sesiones de estudio activas en tus programas y cursos cortos.</p>
+              <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block mb-1">Progreso Académico</span>
+              <h2 className="text-2xl font-bold text-slate-900 dark:text-white">Continuar donde te quedaste</h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Retoma tus sesiones de estudio activas en tus programas y cursos cortos.</p>
             </div>
             
             <div className="flex items-center gap-3">
@@ -173,7 +173,7 @@ export default async function DashboardPage() {
               </Link>
               <Link 
                 href="/dashboard/cursos"
-                className="bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold px-4 py-2.5 rounded-xl transition"
+                className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 text-xs font-bold px-4 py-2.5 rounded-xl transition"
               >
                 Ver mis Cursos
               </Link>
@@ -183,15 +183,15 @@ export default async function DashboardPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             {/* Tarjeta de Diplomado (Dinamico de Supabase) */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-4 hover:border-indigo-300 transition">
+            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
               <div className="flex items-start gap-4">
                 <div className="size-12 rounded-xl bg-indigo-600 text-white grid place-items-center shrink-0 shadow-sm">
                   <Award className="size-6" />
                 </div>
                 <div>
                   <span className="text-[10px] font-bold text-indigo-600 uppercase tracking-widest block">Programa Principal</span>
-                  <h3 className="font-bold text-base text-slate-900 mt-0.5 line-clamp-1">{diplomadoPrincipal.titulo}</h3>
-                  <p className="text-xs text-slate-500 mt-1 line-clamp-1">
+                  <h3 className="font-bold text-base text-slate-900 dark:text-white mt-0.5 line-clamp-1">{diplomadoPrincipal.titulo}</h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-1">
                     {diplomadoPrincipal.modulos[0] ? `${diplomadoPrincipal.modulos[0].codigo}: ${diplomadoPrincipal.modulos[0].nombre}` : 'Módulo I'}
                   </p>
                 </div>
@@ -200,15 +200,15 @@ export default async function DashboardPage() {
               {/* Barra de Progreso Visual */}
               <div className="space-y-1.5 pt-2">
                 <div className="flex justify-between text-xs font-bold">
-                  <span className="text-slate-600">Avance del programa</span>
-                  <span className="text-indigo-600">{avanceEstudiante}%</span>
+                  <span className="text-slate-600 dark:text-slate-400">Avance del programa</span>
+                  <span className="text-indigo-600 dark:text-indigo-400">{avanceEstudiante}%</span>
                 </div>
-                <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
                   <div className="bg-indigo-600 h-full rounded-full" style={{ width: `${avanceEstudiante}%` }} />
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-200 flex items-center justify-end">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-end">
                 <Link 
                   href={`/dashboard/reproductor?slug=${diplomadoPrincipal.slug}`}
                   className="inline-flex items-center gap-2 text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl shadow-sm transition"
@@ -222,30 +222,30 @@ export default async function DashboardPage() {
             </div>
 
             {/* Tarjeta de Curso (Dinamico) */}
-            <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between space-y-4 hover:border-indigo-300 transition">
+            <div className="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 flex flex-col justify-between space-y-4 hover:border-indigo-300 dark:hover:border-indigo-500/40 transition">
               <div className="flex items-start gap-4">
                 <div className="size-12 rounded-xl bg-emerald-600 text-white grid place-items-center shrink-0 shadow-sm">
                   <BookOpenCheck className="size-6" />
                 </div>
                 <div>
                   <span className="text-[10px] font-bold text-emerald-600 uppercase tracking-widest block">Curso Asincrónico</span>
-                  <h3 className="font-bold text-base text-slate-900 mt-0.5">MANEJO DE EPPS Y RIESGOS EN MINERÍA</h3>
-                  <p className="text-xs text-slate-500 mt-1">Sesión 2: Clasificación y Equipos</p>
+                  <h3 className="font-bold text-base text-slate-900 dark:text-white mt-0.5">MANEJO DE EPPS Y RIESGOS EN MINERÍA</h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">Sesión 2: Clasificación y Equipos</p>
                 </div>
               </div>
 
               {/* Barra de Progreso Visual */}
               <div className="space-y-1.5 pt-2">
                 <div className="flex justify-between text-xs font-bold">
-                  <span className="text-slate-600">Avance del curso</span>
-                  <span className="text-emerald-600">75%</span>
+                  <span className="text-slate-600 dark:text-slate-400">Avance del curso</span>
+                  <span className="text-emerald-600 dark:text-emerald-400">75%</span>
                 </div>
-                <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                <div className="w-full bg-slate-200 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
                   <div className="bg-emerald-600 h-full rounded-full" style={{ width: '75%' }} />
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-200 flex items-center justify-end">
+              <div className="pt-3 border-t border-slate-200 dark:border-slate-700/60 flex items-center justify-end">
                 <Link 
                   href="/dashboard/cursos"
                   className="inline-flex items-center gap-2 text-xs font-bold bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-xl shadow-sm transition"
@@ -266,26 +266,26 @@ export default async function DashboardPage() {
       <section className="mx-auto grid max-w-6xl gap-6 px-6 py-10 sm:px-10 lg:grid-cols-3 lg:px-16 lg:py-10">
         
         {/* Widget 1: Créditos disponibles */}
-        <article className="relative overflow-hidden rounded-3xl bg-white p-7 shadow-sm ring-1 ring-slate-200 sm:p-9 flex flex-col justify-between">
-          <div className="absolute -right-12 -top-12 size-44 rounded-full bg-indigo-100/50" />
+        <article className="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 p-7 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 sm:p-9 flex flex-col justify-between">
+          <div className="absolute -right-12 -top-12 size-44 rounded-full bg-indigo-100/50 dark:bg-indigo-950/40" />
           <div className="relative">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-sm font-bold uppercase tracking-[0.16em] text-indigo-600">Créditos disponibles</p>
-                <h2 className="mt-3 text-5xl font-bold tracking-tighter text-slate-950">{availableCredits}</h2>
+                <p className="text-sm font-bold uppercase tracking-[0.16em] text-indigo-600 dark:text-indigo-400">Créditos disponibles</p>
+                <h2 className="mt-3 text-5xl font-bold tracking-tighter text-slate-950 dark:text-white">{availableCredits}</h2>
               </div>
               <div className="grid size-12 place-items-center rounded-2xl bg-indigo-600 text-white shadow-lg shadow-indigo-600/25">
                 <BookOpenCheck className="size-6" />
               </div>
             </div>
-            <p className="mt-4 text-sm leading-6 text-slate-600">
+            <p className="mt-4 text-sm leading-6 text-slate-600 dark:text-slate-300">
               {availableCredits > 0 ? (
-                <>Tienes <strong className="font-bold text-slate-950">{availableCredits} cupos pendientes</strong> para canjear en tu diplomado.</>
+                <>Tienes <strong className="font-bold text-slate-950 dark:text-white">{availableCredits} cupos pendientes</strong> para canjear en tu diplomado.</>
               ) : (
                 <>Has canjeado todos tus cupos disponibles de tu plan actual.</>
               )}
             </p>
-            <p className="mt-1 text-xs text-slate-400">
+            <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">
               {releasedCredits} liberados por cuota · {safeProfile.cupos_diplomados || 0} usados
             </p>
           </div>
@@ -301,41 +301,41 @@ export default async function DashboardPage() {
         </article>
 
         {/* Widget 2: Estado Financiero (con botón a Mis Pagos) */}
-        <article className="relative overflow-hidden rounded-3xl bg-white p-7 shadow-sm ring-1 ring-slate-200 sm:p-9 flex flex-col justify-between">
+        <article className="relative overflow-hidden rounded-3xl bg-white dark:bg-slate-900 p-7 shadow-sm ring-1 ring-slate-200 dark:ring-slate-800 sm:p-9 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between gap-3 mb-5">
               <div className="flex items-center gap-3">
-                <div className="grid size-10 place-items-center rounded-xl bg-emerald-100 text-emerald-600">
+                <div className="grid size-10 place-items-center rounded-xl bg-emerald-100 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400">
                   <Wallet className="size-5" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900">Estado de Cuenta</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white">Estado de Cuenta</h3>
               </div>
             </div>
             
             <div className="space-y-4">
-              <div className="flex justify-between items-center border-b border-slate-100 pb-3">
-                <span className="text-sm text-slate-500">Monto total</span>
-                <span className="font-semibold text-slate-900">S/ {costoTotal}</span>
+              <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
+                <span className="text-sm text-slate-500 dark:text-slate-400">Monto total</span>
+                <span className="font-semibold text-slate-900 dark:text-white">S/ {costoTotal}</span>
               </div>
-              <div className="flex justify-between items-center border-b border-slate-100 pb-3">
-                <span className="text-sm text-slate-500">Total pagado</span>
-                <span className="font-semibold text-emerald-600">S/ {montoPagado}</span>
+              <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
+                <span className="text-sm text-slate-500 dark:text-slate-400">Total pagado</span>
+                <span className="font-semibold text-emerald-600 dark:text-emerald-400">S/ {montoPagado}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-sm text-slate-500">Saldo pendiente</span>
-                <span className="font-bold text-slate-900">S/ {saldoPendiente}</span>
+                <span className="text-sm text-slate-500 dark:text-slate-400">Saldo pendiente</span>
+                <span className="font-bold text-slate-900 dark:text-white">S/ {saldoPendiente}</span>
               </div>
             </div>
           </div>
 
           <div className="mt-6 space-y-3">
             {deudaSaldada ? (
-              <div className="flex items-center gap-2 bg-emerald-50 text-emerald-700 px-4 py-3 rounded-xl text-sm font-semibold">
+              <div className="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 px-4 py-3 rounded-xl text-sm font-semibold border border-emerald-100 dark:border-emerald-800/50">
                 <CheckCircle2 className="size-5" />
                 Cuenta al día. ¡Gracias!
               </div>
             ) : (
-              <div className="flex items-center gap-3 bg-amber-50 text-amber-700 px-4 py-3 rounded-xl text-sm font-medium">
+              <div className="flex items-center gap-3 bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 px-4 py-3 rounded-xl text-sm font-medium border border-amber-100 dark:border-amber-800/50">
                 <CalendarDays className="size-5 shrink-0" />
                 <span>Próximo pago: <strong>{stringFechaPago}</strong></span>
               </div>
@@ -343,7 +343,7 @@ export default async function DashboardPage() {
 
             <Link
               href="/dashboard/pagos"
-              className="inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white px-4 text-xs font-bold transition shadow-sm"
+              className="inline-flex h-11 w-full justify-center items-center gap-2 rounded-2xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 text-white px-4 text-xs font-bold transition shadow-sm border border-slate-800 dark:border-slate-700"
             >
               Ver Mis Pagos <ArrowUpRight className="size-4" />
             </Link>
@@ -380,7 +380,7 @@ export default async function DashboardPage() {
                 <h3 className="text-lg font-bold flex items-center gap-2">
                   <Briefcase className="size-5 text-emerald-400" /> Bolsa de Trabajo
                 </h3>
-                <p className="mt-1 text-xs text-slate-400">Ofertas exclusivas para tu paquete.</p>
+                <p className="mt-1 text-xs text-slate-400 dark:text-slate-500">Ofertas exclusivas para tu paquete.</p>
               </div>
               <a
                 className="mt-4 inline-flex h-9 w-full items-center justify-center gap-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 px-4 text-sm font-bold text-white transition"
@@ -392,10 +392,10 @@ export default async function DashboardPage() {
               </a>
             </article>
           ) : (
-            <article className="flex-1 rounded-3xl border border-dashed border-slate-300 bg-slate-50 flex flex-col items-center justify-center p-6 text-center">
-              <Briefcase className="size-8 text-slate-300 mb-2" />
-              <p className="text-sm font-semibold text-slate-600">Bolsa de Trabajo</p>
-              <p className="text-xs text-slate-400 mt-1">Beneficio disponible en paquetes FULL e ILIMITADO.</p>
+            <article className="flex-1 rounded-3xl border border-dashed border-slate-300 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex flex-col items-center justify-center p-6 text-center">
+              <Briefcase className="size-8 text-slate-300 dark:text-slate-600 mb-2" />
+              <p className="text-sm font-semibold text-slate-600 dark:text-slate-300">Bolsa de Trabajo</p>
+              <p className="text-xs text-slate-400 dark:text-slate-500 mt-1">Beneficio disponible en paquetes FULL e ILIMITADO.</p>
             </article>
           )}
         </div>

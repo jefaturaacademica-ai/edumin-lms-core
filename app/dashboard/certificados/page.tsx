@@ -28,6 +28,8 @@ import { useTheme } from '@/context/theme-context';
 import { StudentPageHeader } from '@/components/dashboard/StudentPageHeader';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
 import AvanzaCertificateRenderer from '@/components/certificates/AvanzaCertificateRenderer';
+import { generarUrlQRValidacion } from '@/lib/utils/certificateUtils';
+import { descargarCertificadoA4Pdf } from '@/lib/utils/certificatePdf';
 
 export default function CertificadosPage() {
   const { esOscuro } = useTheme();
@@ -249,14 +251,16 @@ export default function CertificadosPage() {
 
   const copiarLinkValidacion = () => {
     if (!modalVistaPrevia) return;
-    navigator.clipboard.writeText(`https://edumin.pe/validar/${modalVistaPrevia.codigo}`);
+    const urlValidacion = generarUrlQRValidacion(modalVistaPrevia.codigo);
+    navigator.clipboard.writeText(urlValidacion);
     setCopiadoLink(true);
     setTimeout(() => setCopiadoLink(false), 2500);
   };
 
   const compartirLinkedIn = () => {
     if (!modalVistaPrevia) return;
-    const url = `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(modalVistaPrevia.titulo)}&organizationName=${encodeURIComponent('EDUMIN - Escuela de Especialización Minera')}&issueYear=2026&issueMonth=3&certUrl=${encodeURIComponent(`https://edumin.pe/validar/${modalVistaPrevia.codigo}`)}`;
+    const urlValidacion = generarUrlQRValidacion(modalVistaPrevia.codigo);
+    const url = `https://www.linkedin.com/profile/add?startTask=CERTIFICATION_NAME&name=${encodeURIComponent(modalVistaPrevia.titulo)}&organizationName=${encodeURIComponent('EDUMIN - Escuela de Especialización Minera')}&issueYear=2026&issueMonth=3&certUrl=${encodeURIComponent(urlValidacion)}`;
     window.open(url, '_blank');
   };
 
@@ -977,8 +981,28 @@ export default function CertificadosPage() {
                       <Share2 className="size-4" /> Añadir a LinkedIn
                     </button>
 
-                    <button className="flex-1 sm:flex-initial bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-md cursor-pointer">
-                      <Download className="size-4" /> Descargar
+                    <button 
+                      onClick={async () => {
+                        try {
+                          await descargarCertificadoA4Pdf({
+                            tipo: modalVistaPrevia.tipo === 'Diplomado' ? 'DIPLOMA' : (modalVistaPrevia.tipo === 'Modular' ? 'MODULAR' : 'CURSO'),
+                            estudiante: nombreEstudianteCompleto || 'ESTUDIANTE EDUMIN',
+                            programa: modalVistaPrevia.tipo === 'Diplomado' ? modalVistaPrevia.titulo : (modalVistaPrevia.subtitulo || modalVistaPrevia.titulo),
+                            modulo: modalVistaPrevia.tipo === 'Modular' ? modalVistaPrevia.titulo : undefined,
+                            horas: modalVistaPrevia.horas || (modalVistaPrevia.tipo === 'Diplomado' ? '325 horas académicas y 13 créditos académicos' : '108 horas académicas'),
+                            fecha: modalVistaPrevia.fecha,
+                            codigo: modalVistaPrevia.codigo || 'HNYNXT2',
+                            orientacion: 'horizontal',
+                            incluyeQr: true
+                          }, `Certificado_${modalVistaPrevia.codigo || 'EDUMIN'}_A4.pdf`);
+                        } catch (e) {
+                          console.error('Error al descargar certificado:', e);
+                          alert('Error al descargar el certificado en PDF.');
+                        }
+                      }}
+                      className="flex-1 sm:flex-initial bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center justify-center gap-2 shadow-md cursor-pointer"
+                    >
+                      <Download className="size-4" /> Descargar PDF
                     </button>
                   </div>
                 </div>

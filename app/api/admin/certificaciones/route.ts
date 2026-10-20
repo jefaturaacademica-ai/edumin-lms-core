@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { createAdminClient } from '@/lib/supabase/admin';
 import { parseDiplomadosFromProfile, parseCursosFromProfile } from '@/lib/utils/profileParser';
-import { generarCodigoUnicoCertificado, formatearNombreCertificado } from '@/lib/utils/certificateUtils';
+import { generarCodigoUnicoCertificado, formatearNombreCertificado, normalizarCodigoCertificado } from '@/lib/utils/certificateUtils';
 
 export async function GET() {
   try {
@@ -88,7 +88,7 @@ export async function GET() {
           // Diploma general SOLO si aprueba los 3 módulos con nota >= 12
           if (esDiplomaGeneral) {
             counter++;
-            const codDiploma = d.codigo || generarCodigoUnicoCertificado();
+            const codDiploma = normalizarCodigoCertificado(d.codigo || generarCodigoUnicoCertificado());
             const keyUnica = `${dni}-DIPLOMA-${d.titulo || d.slug || 'DIP'}-GENERAL`;
 
             if (!codigosExistentes.has(codDiploma) && !codigosExistentes.has(keyUnica)) {
@@ -154,7 +154,7 @@ export async function GET() {
               const moduloNombreStr = m.nombre && m.nombre !== m.codigo 
                 ? `${m.codigo || `Módulo 0${mIdx + 1}`}: ${m.nombre}` 
                 : (m.nombre || m.codigo || `Módulo 0${mIdx + 1}`);
-              const codModular = m.codigo_cert || generarCodigoUnicoCertificado();
+              const codModular = normalizarCodigoCertificado(m.codigo_cert || generarCodigoUnicoCertificado());
               const keyModular = `${dni}-MODULAR-${d.titulo || d.slug}-${m.codigo || moduloNombreStr}`;
 
               if (!codigosExistentes.has(codModular) && !codigosExistentes.has(keyModular)) {
@@ -217,7 +217,7 @@ export async function GET() {
           if (c.completado) {
             counter++;
             const esTaller = (c.categoria || '').toLowerCase().includes('taller') || (c.id || '').includes('taller');
-            const codCurso = c.codigo || generarCodigoUnicoCertificado();
+            const codCurso = normalizarCodigoCertificado(c.codigo || generarCodigoUnicoCertificado());
             const keyCurso = `${dni}-${esTaller ? 'TALLER' : 'CURSO'}-${c.titulo}`;
 
             if (!codigosExistentes.has(codCurso) && !codigosExistentes.has(keyCurso)) {
@@ -327,7 +327,7 @@ export async function PATCH(request: Request) {
       if (updatedRows === 0 && (codigo || isUuid)) {
         try {
           await admin.from('certificaciones').insert({
-            codigo_verificacion: codigo || `EDM-CERT-${Date.now()}`,
+            codigo_verificacion: normalizarCodigoCertificado(codigo || `EDM-CERT-${Date.now()}`),
             tipo: body.tipo || (body.modulo ? 'MODULAR' : 'DIPLOMA'),
             estudiante_nombre: body.estudiante || 'ESTUDIANTE EDUMIN',
             dni_ce: body.dni || '71234567',

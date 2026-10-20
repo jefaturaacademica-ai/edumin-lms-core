@@ -7,22 +7,35 @@ import {
   UserCheck, Server, X, Plus, Eye, Send, RefreshCw, Search, Filter,
   Check, Copy, Sparkles, GraduationCap, AlertTriangle, Printer, Share2,
   Edit3, Trash2, LayoutTemplate, Palette, BookmarkCheck, Upload, Image as ImageIcon,
-  ArrowLeft, FileCheck, Building2, Bell
+  ArrowLeft, FileCheck, Building2, Bell, Loader2,
+  Sliders, Move, AlignCenter, AlignLeft, AlignRight, RotateCcw, ChevronUp, ChevronDown, ChevronLeft, ChevronRight,
+  Shuffle, Type, Bold, Italic, Underline
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import AdminHeader from '@/components/admin/admin-header';
-import AvanzaCertificateRenderer from '@/components/certificates/AvanzaCertificateRenderer';
+import AvanzaCertificateRenderer, { 
+  DisenoCoordenadas, 
+  PosicionElemento, 
+  ElementoAlineacion, 
+  DISENO_DEFAULT_HORIZONTAL, 
+  DISENO_DEFAULT_VERTICAL,
+  FUENTES_CERTIFICADO,
+  TipoFuenteCertificado,
+  FormatoFechaCertificado,
+  formatearFechaSegunEstilo
+} from '@/components/certificates/AvanzaCertificateRenderer';
+import { descargarCertificadoA4Pdf, optimizarImagenFondo } from '@/lib/utils/certificatePdf';
 
 export interface ModeloCertificado {
   id: string;
   nombre: string;
   tipo: 'DIPLOMA' | 'MODULAR' | 'CURSO' | 'CIP' | 'MIAMI' | 'TALLER';
-  tituloCertificado: string;
-  textoOtorgamiento: string;
-  estiloMarco: 'dorado' | 'azul' | 'esmeralda' | 'granate' | 'tecnologico';
+  tituloCertificado?: string;
+  textoOtorgamiento?: string;
+  estiloMarco?: 'dorado' | 'azul' | 'esmeralda' | 'granate' | 'tecnologico';
   orientacion: 'horizontal' | 'vertical';
-  horas: string;
-  firmas: string[];
+  horas?: string;
+  firmas?: string[];
   incluyeQr: boolean;
   esPredeterminado: boolean;
   fechaCreacion: string;
@@ -30,6 +43,7 @@ export interface ModeloCertificado {
   asignacionAlcance: 'SUPERPLANTILLA_GLOBAL' | 'PRODUCTO_ESPECIFICO';
   recursoAsignadoNombre?: string;
   recursoAsignadoId?: string;
+  disenoCoordenadas?: DisenoCoordenadas;
 }
 
 export default function CertificacionesAdminPage() {
@@ -93,11 +107,8 @@ export default function CertificacionesAdminPage() {
   const [modelosCertificados, setModelosCertificados] = useState<ModeloCertificado[]>([
     {
       id: 'mod-avanza-dip',
-      nombre: 'Modelo Oficial Avanza & EDUMIN - Diploma de Alta Especialización',
+      nombre: 'Superplantilla Oficial Avanza & EDUMIN - Diploma de Alta Especialización',
       tipo: 'DIPLOMA',
-      tituloCertificado: 'DIPLOMA',
-      textoOtorgamiento: 'En mérito de haber cumplido y aprobado con los requisitos de evaluación de las asignaturas correspondientes al:',
-      estiloMarco: 'dorado',
       orientacion: 'horizontal',
       horas: '325 horas académicas y 13 créditos académicos',
       firmas: ['Italo Carrera Yepez (Gerente General)', 'Alejandra Alva Porto (Coordinadora Académica)'],
@@ -110,11 +121,8 @@ export default function CertificacionesAdminPage() {
     },
     {
       id: 'mod-avanza-mod',
-      nombre: 'Modelo Oficial Avanza & EDUMIN - Certificado Modular',
+      nombre: 'Superplantilla Oficial Avanza & EDUMIN - Certificado Modular',
       tipo: 'MODULAR',
-      tituloCertificado: 'CERTIFICADO',
-      textoOtorgamiento: 'Por haber concluido satisfactoriamente el',
-      estiloMarco: 'azul',
       orientacion: 'horizontal',
       horas: '108 horas académicas',
       firmas: ['Italo Carrera Yepez (Gerente General)', 'Alejandra Alva Porto (Coordinadora Académica)'],
@@ -124,122 +132,130 @@ export default function CertificacionesAdminPage() {
       imagenFondoUrl: '/assets/certificates/plantilla_avanza_modular_bg.png',
       asignacionAlcance: 'SUPERPLANTILLA_GLOBAL',
       recursoAsignadoNombre: 'Todos los módulos de diplomados Avanza - EDUMIN'
-    },
-    {
-      id: 'mod-01',
-      nombre: 'Superplantilla maestra - Diplomas oficiales DAEM',
-      tipo: 'DIPLOMA',
-      tituloCertificado: 'DIPLOMA DE ALTA ESPECIALIZACIÓN',
-      textoOtorgamiento: 'Por haber cumplido y aprobado con excelencia los 3 módulos del programa oficial de:',
-      estiloMarco: 'dorado',
-      orientacion: 'horizontal',
-      horas: '120 horas cronológicas',
-      firmas: ['Director Académico', 'Coordinador General'],
-      incluyeQr: true,
-      esPredeterminado: false,
-      fechaCreacion: '2026-09-01',
-      asignacionAlcance: 'SUPERPLANTILLA_GLOBAL',
-      recursoAsignadoNombre: 'Todos los diplomados oficiales (22 diplomados)'
-    },
-    {
-      id: 'mod-02',
-      nombre: 'Superplantilla maestra - Certificados modulares',
-      tipo: 'MODULAR',
-      tituloCertificado: 'CERTIFICADO MODULAR OFICIAL',
-      textoOtorgamiento: 'Por haber completado satisfactoriamente la evaluación y contenidos del módulo:',
-      estiloMarco: 'azul',
-      orientacion: 'horizontal',
-      horas: '40 horas cronológicas',
-      firmas: ['Director Académico'],
-      incluyeQr: true,
-      esPredeterminado: true,
-      fechaCreacion: '2026-09-05',
-      asignacionAlcance: 'SUPERPLANTILLA_GLOBAL',
-      recursoAsignadoNombre: 'Todos los módulos de diplomados'
-    },
-    {
-      id: 'mod-03',
-      nombre: 'Superplantilla maestra - Cursos de especialización',
-      tipo: 'CURSO',
-      tituloCertificado: 'CERTIFICADO DE ESPECIALIZACIÓN PROFESIONAL',
-      textoOtorgamiento: 'Por su destacada participación y aprobación del curso técnico intensivo de:',
-      estiloMarco: 'esmeralda',
-      orientacion: 'horizontal',
-      horas: '24 a 30 horas cronológicas',
-      firmas: ['Director Académico', 'Docente Titular'],
-      incluyeQr: true,
-      esPredeterminado: true,
-      fechaCreacion: '2026-09-10',
-      asignacionAlcance: 'SUPERPLANTILLA_GLOBAL',
-      recursoAsignadoNombre: 'Todos los cursos de especialización (76 cursos)'
-    },
-    {
-      id: 'mod-04',
-      nombre: 'Plantilla de convenio - CIP Nacional',
-      tipo: 'CIP',
-      tituloCertificado: 'CERTIFICACIÓN CONVENIO OFICIAL CIP',
-      textoOtorgamiento: 'En convenio interinstitucional con el Colegio de Ingenieros del Perú (CIP), acredita a:',
-      estiloMarco: 'granate',
-      orientacion: 'horizontal',
-      horas: '120 horas cronológicas',
-      firmas: ['Decano CIP Nacional', 'Director EDUMIN'],
-      incluyeQr: true,
-      esPredeterminado: false,
-      fechaCreacion: '2026-09-12',
-      asignacionAlcance: 'PRODUCTO_ESPECIFICO',
-      recursoAsignadoNombre: 'Diplomado en seguridad y salud ocupacional'
-    },
-    {
-      id: 'mod-05',
-      nombre: 'Plantilla de convenio - Miami Internacional',
-      tipo: 'MIAMI',
-      tituloCertificado: 'INTERNATIONAL CERTIFICATE OF COMPLETION',
-      textoOtorgamiento: 'University international partner certificate awarded for professional excellence in:',
-      estiloMarco: 'azul',
-      orientacion: 'horizontal',
-      horas: '150 horas internacionales',
-      firmas: ['International Dean', 'Executive Director'],
-      incluyeQr: true,
-      esPredeterminado: false,
-      fechaCreacion: '2026-09-15',
-      asignacionAlcance: 'PRODUCTO_ESPECIFICO',
-      recursoAsignadoNombre: 'Minería 4.0, automatización y digitalización'
-    },
-    {
-      id: 'mod-06',
-      nombre: 'Superplantilla maestra - Talleres y masterclasses',
-      tipo: 'TALLER',
-      tituloCertificado: 'CONSTANCIA DE TALLER PRÁCTICO EN VIVO',
-      textoOtorgamiento: 'Por su asistencia y participación en el taller especializado de:',
-      estiloMarco: 'tecnologico',
-      orientacion: 'horizontal',
-      horas: '08 horas prácticas',
-      firmas: ['Director Académico'],
-      incluyeQr: true,
-      esPredeterminado: false,
-      fechaCreacion: '2026-09-18',
-      asignacionAlcance: 'SUPERPLANTILLA_GLOBAL',
-      recursoAsignadoNombre: 'Todos los talleres y masterclasses'
     }
   ]);
 
-  // Estado del editor de certificados
-  const [editorNombre, setEditorNombre] = useState('Superplantilla maestra - Cursos 2026');
+  // Estado del editor de certificados (se inicia limpio o con la plantilla elegida)
+  const [editorNombre, setEditorNombre] = useState('Nuevo modelo de certificado A4');
   const [editorTipo, setEditorTipo] = useState<'DIPLOMA' | 'MODULAR' | 'CURSO' | 'CIP' | 'MIAMI' | 'TALLER'>('DIPLOMA');
-  const [editorTitulo, setEditorTitulo] = useState('DIPLOMA DE ALTA ESPECIALIZACIÓN');
-  const [editorTextoOtorgamiento, setEditorTextoOtorgamiento] = useState('Por haber aprobado con excelencia todos los requisitos académicos del programa de:');
-  const [editorEstiloMarco, setEditorEstiloMarco] = useState<'dorado' | 'azul' | 'esmeralda' | 'granate' | 'tecnologico'>('dorado');
   const [editorOrientacion, setEditorOrientacion] = useState<'horizontal' | 'vertical'>('horizontal');
-  const [editorHoras, setEditorHoras] = useState('120 horas cronológicas');
   const [editorFirmas, setEditorFirmas] = useState<string[]>(['Director Académico', 'Coordinador General']);
   const [editorIncluyeQr, setEditorIncluyeQr] = useState(true);
   const [editorImagenFondo, setEditorImagenFondo] = useState<string | null>(null);
   const [editorAlcance, setEditorAlcance] = useState<'SUPERPLANTILLA_GLOBAL' | 'PRODUCTO_ESPECIFICO'>('SUPERPLANTILLA_GLOBAL');
   const [editorRecursoEspecifico, setEditorRecursoEspecifico] = useState<string>('');
   const [modeloSeleccionadoId, setModeloSeleccionadoId] = useState<string | null>(null);
+  const [subiendoFondo, setSubiendoFondo] = useState(false);
+  const [descargandoPdf, setDescargandoPdf] = useState(false);
+  const [limpiandoStorage, setLimpiandoStorage] = useState(false);
+  const [resultadoLimpieza, setResultadoLimpieza] = useState<{ eliminados: number; liberadosKb: number; message: string } | null>(null);
+  const [archivoFondoPendiente, setArchivoFondoPendiente] = useState<File | null>(null);
+
+  // Estados para simulación interactiva manual y en tiempo real sobre el lienzo
+  const [nombreSimuladoPrueba, setNombreSimuladoPrueba] = useState('Quispe Ramos, Juan Carlos');
+  const [programaSimuladoPrueba, setProgramaSimuladoPrueba] = useState('');
+  const [moduloSimuladoPrueba, setModuloSimuladoPrueba] = useState('Módulo 01: Legislación Minera y Marco Legal del Sector');
+  const [estadoSnapshotInicial, setEstadoSnapshotInicial] = useState<string>('');
+
+  // Sistema de coordenadas y posicionamiento milimétrico A4
+  const [editorDisenoCoordenadas, setEditorDisenoCoordenadas] = useState<DisenoCoordenadas>(DISENO_DEFAULT_HORIZONTAL);
+  const [elementoSeleccionado, setElementoSeleccionado] = useState<keyof DisenoCoordenadas>('estudiante');
+
+  // Medidas físicas de la hoja A4 (Landscape: 29.7 x 21.0 cm | Portrait: 21.0 x 29.7 cm)
+  const anchoHojaCm = editorOrientacion === 'vertical' ? 21.0 : 29.7;
+  const altoHojaCm = editorOrientacion === 'vertical' ? 29.7 : 21.0;
+
+  const pctToCmX = (pct: number) => Number(((pct / 100) * anchoHojaCm).toFixed(1));
+  const cmToPctX = (cm: number) => Number(Math.max(0, Math.min(100, (cm / anchoHojaCm) * 100)).toFixed(1));
+  const pctToCmY = (pct: number) => Number(((pct / 100) * altoHojaCm).toFixed(1));
+  const cmToPctY = (cm: number) => Number(Math.max(0, Math.min(100, (cm / altoHojaCm) * 100)).toFixed(1));
+
+  const getAnchoCm = (el: PosicionElemento, defecto: number = 25.0) => {
+    if (el.anchoMaximoCm) return el.anchoMaximoCm;
+    if (el.anchoMaximo) return Number(((el.anchoMaximo / 100) * anchoHojaCm).toFixed(1));
+    return defecto;
+  };
+
+  const actualizarPosicionElemento = (
+    campo: keyof DisenoCoordenadas,
+    cambios: Partial<PosicionElemento>
+  ) => {
+    setEditorDisenoCoordenadas(prev => ({
+      ...prev,
+      [campo]: {
+        ...prev[campo],
+        ...cambios
+      }
+    }));
+  };
+
+  const ajustarCoordenadaDelta = (
+    campo: keyof DisenoCoordenadas,
+    deltaX: number,
+    deltaY: number
+  ) => {
+    setEditorDisenoCoordenadas(prev => {
+      const act = prev[campo];
+      const nuevoX = Math.max(0, Math.min(100, Math.round((act.x + deltaX) * 10) / 10));
+      const nuevoY = Math.max(0, Math.min(100, Math.round((act.y + deltaY) * 10) / 10));
+      return {
+        ...prev,
+        [campo]: {
+          ...act,
+          x: nuevoX,
+          y: nuevoY
+        }
+      };
+    });
+  };
+
+  const restablecerDisenoPorDefecto = () => {
+    if (confirm('¿Restablecer las coordenadas de todos los elementos a sus posiciones estándar?')) {
+      setEditorDisenoCoordenadas(
+        editorOrientacion === 'vertical' ? { ...DISENO_DEFAULT_VERTICAL } : { ...DISENO_DEFAULT_HORIZONTAL }
+      );
+    }
+  };
+
+  const handleLimpiarStorageHuerfanos = async () => {
+    if (!confirm('¿Deseas analizar y limpiar imágenes huérfanas de Supabase Storage?\n\nSolo se eliminarán imágenes que nunca se guardaron en ningún modelo ni se emitieron a ningún estudiante. Las imágenes activas y de certificados emitidos están 100% protegidas y nunca se tocarán.')) {
+      return;
+    }
+
+    setLimpiandoStorage(true);
+    try {
+      const res = await fetch('/api/admin/certificaciones/storage-clean', { method: 'POST' });
+      const data = await res.json();
+      if (res.ok) {
+        setResultadoLimpieza(data);
+        setMensajeExito(data.message || `Limpieza completada: ${data.eliminados} archivos eliminados.`);
+        setTimeout(() => setMensajeExito(null), 6000);
+      } else {
+        alert(data.error || 'Error al ejecutar limpieza de almacenamiento.');
+      }
+    } catch (err: any) {
+      console.error('Error limpiando storage:', err);
+      alert('Error al conectar con el servidor.');
+    } finally {
+      setLimpiandoStorage(false);
+    }
+  };
 
   useEffect(() => {
     cargarDatosIniciales();
+    if (typeof window !== 'undefined') {
+      try {
+        const guardados = localStorage.getItem('edumin_modelos_certificados_v2');
+        if (guardados) {
+          const parsed = JSON.parse(guardados);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            setModelosCertificados(parsed);
+          }
+        }
+      } catch (e) {
+        console.error('Error recuperando modelos de localStorage:', e);
+      }
+    }
   }, []);
 
   const cargarDatosIniciales = async () => {
@@ -265,10 +281,38 @@ export default function CertificacionesAdminPage() {
           setDiplomadoEmisionMasiva(dips[0].titulo || dips[0].nombre);
         }
       }
+
+      // 3. Cargar modelos de certificados guardados permanentemente en Supabase
+      try {
+        const resModelos = await fetch('/api/admin/certificaciones/modelos');
+        if (resModelos.ok) {
+          const dataModelos = await resModelos.json();
+          if (Array.isArray(dataModelos.modelos) && dataModelos.modelos.length > 0) {
+            setModelosCertificados(dataModelos.modelos);
+            if (typeof window !== 'undefined') {
+              localStorage.setItem('edumin_modelos_certificados_v2', JSON.stringify(dataModelos.modelos));
+            }
+          }
+        }
+      } catch (errM) {
+        console.warn('Error cargando modelos desde Supabase:', errM);
+      }
     } catch (e) {
       console.error('Error cargando datos de certificaciones y catálogo:', e);
     } finally {
       setCargando(false);
+    }
+  };
+
+  const sincronizarModelosEnSupabase = async (lista: ModeloCertificado[]) => {
+    try {
+      await fetch('/api/admin/certificaciones/modelos', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ modelos: lista })
+      });
+    } catch (e) {
+      console.warn('Error sincronizando modelos con Supabase:', e);
     }
   };
 
@@ -389,38 +433,190 @@ export default function CertificacionesAdminPage() {
     return coincideTexto && coincideTipo && coincidePrograma && coincideEstado && coincideMes && coincideNota;
   });
 
+  const serializarEstadoEditor = (
+    nombre: string,
+    tipo: string,
+    orientacion: string,
+    firmas: string[],
+    incluyeQr: boolean,
+    imagenFondo: string | null,
+    alcance: string,
+    recurso: string,
+    diseno: DisenoCoordenadas
+  ) => {
+    return JSON.stringify({
+      nombre: nombre.trim(),
+      tipo,
+      orientacion,
+      firmas,
+      incluyeQr,
+      imagenFondo,
+      alcance,
+      recurso: recurso.trim(),
+      diseno
+    });
+  };
+
+  const hayCambiosSinGuardar = () => {
+    if (activeTab !== 'editor') return false;
+    if (archivoFondoPendiente !== null) return true;
+    if (!estadoSnapshotInicial) return false;
+    const estadoActual = serializarEstadoEditor(
+      editorNombre,
+      editorTipo,
+      editorOrientacion,
+      editorFirmas,
+      editorIncluyeQr,
+      editorImagenFondo,
+      editorAlcance,
+      editorRecursoEspecifico,
+      editorDisenoCoordenadas
+    );
+    return estadoActual !== estadoSnapshotInicial;
+  };
+
+  // Protección contra pérdida de cambios al cerrar pestaña o recargar el navegador (solo si hay cambios reales)
+  useEffect(() => {
+    if (activeTab !== 'editor') return;
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      if (hayCambiosSinGuardar()) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [
+    activeTab,
+    editorNombre,
+    editorTipo,
+    editorOrientacion,
+    editorFirmas,
+    editorIncluyeQr,
+    editorImagenFondo,
+    archivoFondoPendiente,
+    editorAlcance,
+    editorRecursoEspecifico,
+    editorDisenoCoordenadas,
+    estadoSnapshotInicial
+  ]);
+
+  // Interceptar navegación por enlaces externos o del panel izquierdo/sidebar si hay cambios sin guardar
+  useEffect(() => {
+    if (activeTab !== 'editor') return;
+
+    const handleCapturingClick = (e: MouseEvent) => {
+      if (!hayCambiosSinGuardar()) return;
+
+      const target = e.target as HTMLElement | null;
+      const anchor = target?.closest('a');
+      if (!anchor) return;
+
+      const href = anchor.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+
+      const confirmar = window.confirm('¿Deseas salir del editor de modelo? Los cambios no guardados se descartarán.');
+      if (!confirmar) {
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+      }
+    };
+
+    document.addEventListener('click', handleCapturingClick, true);
+    return () => {
+      document.removeEventListener('click', handleCapturingClick, true);
+    };
+  }, [
+    activeTab,
+    editorNombre,
+    editorTipo,
+    editorOrientacion,
+    editorFirmas,
+    editorIncluyeQr,
+    editorImagenFondo,
+    archivoFondoPendiente,
+    editorAlcance,
+    editorRecursoEspecifico,
+    editorDisenoCoordenadas,
+    estadoSnapshotInicial
+  ]);
+
+  const salirDelEditorConConfirmacion = (accion: () => void) => {
+    if (hayCambiosSinGuardar()) {
+      if (window.confirm('¿Deseas salir del editor de modelo? Los cambios no guardados se descartarán.')) {
+        accion();
+      }
+    } else {
+      accion();
+    }
+  };
+
   // Cargar modelo seleccionado al editor visual
   const cargarModeloEnEditor = (modelo: ModeloCertificado) => {
+    if (activeTab === 'editor' && modeloSeleccionadoId !== modelo.id && hayCambiosSinGuardar()) {
+      if (!window.confirm('¿Deseas descartar los cambios actuales para abrir y editar este otro modelo?')) {
+        return;
+      }
+    }
+    const coordsFinales = modelo.disenoCoordenadas || (modelo.orientacion === 'vertical' ? { ...DISENO_DEFAULT_VERTICAL } : { ...DISENO_DEFAULT_HORIZONTAL });
     setModeloSeleccionadoId(modelo.id);
     setEditorNombre(modelo.nombre);
     setEditorTipo(modelo.tipo);
-    setEditorTitulo(modelo.tituloCertificado);
-    setEditorTextoOtorgamiento(modelo.textoOtorgamiento);
-    setEditorEstiloMarco(modelo.estiloMarco);
     setEditorOrientacion(modelo.orientacion || 'horizontal');
-    setEditorHoras(modelo.horas);
-    setEditorFirmas(modelo.firmas);
-    setEditorIncluyeQr(modelo.incluyeQr);
+    setEditorFirmas(modelo.firmas || ['Director Académico', 'Coordinador General']);
+    setEditorIncluyeQr(modelo.incluyeQr !== false);
     setEditorImagenFondo(modelo.imagenFondoUrl || null);
+    setArchivoFondoPendiente(null);
     setEditorAlcance(modelo.asignacionAlcance);
     setEditorRecursoEspecifico(modelo.recursoAsignadoNombre || '');
+    setEditorDisenoCoordenadas(coordsFinales);
+    setElementoSeleccionado('estudiante');
+    setEstadoSnapshotInicial(serializarEstadoEditor(
+      modelo.nombre,
+      modelo.tipo,
+      modelo.orientacion || 'horizontal',
+      modelo.firmas || ['Director Académico', 'Coordinador General'],
+      modelo.incluyeQr !== false,
+      modelo.imagenFondoUrl || null,
+      modelo.asignacionAlcance,
+      modelo.recursoAsignadoNombre || '',
+      coordsFinales
+    ));
     setActiveTab('editor');
   };
 
   const iniciarNuevoModelo = () => {
+    if (activeTab === 'editor' && hayCambiosSinGuardar()) {
+      if (!window.confirm('¿Deseas descartar la edición actual para iniciar un nuevo modelo en blanco?')) {
+        return;
+      }
+    }
+    const nombreNuevo = `Nuevo modelo A4 #${modelosCertificados.length + 1}`;
+    const coordsDefault = { ...DISENO_DEFAULT_HORIZONTAL };
     setModeloSeleccionadoId(null);
-    setEditorNombre(`Nuevo modelo de certificado #${modelosCertificados.length + 1}`);
+    setEditorNombre(nombreNuevo);
     setEditorTipo('DIPLOMA');
-    setEditorTitulo('DIPLOMA DE ALTA ESPECIALIZACIÓN');
-    setEditorTextoOtorgamiento('Por haber completado satisfactoriamente los requisitos académicos del programa de:');
-    setEditorEstiloMarco('dorado');
     setEditorOrientacion('horizontal');
-    setEditorHoras('120 horas cronológicas');
     setEditorFirmas(['Director Académico']);
     setEditorIncluyeQr(true);
-    setEditorImagenFondo(null);
+    setEditorImagenFondo(null); // Inicia completamente en blanco
+    setArchivoFondoPendiente(null);
     setEditorAlcance('SUPERPLANTILLA_GLOBAL');
     setEditorRecursoEspecifico('');
+    setEditorDisenoCoordenadas(coordsDefault);
+    setElementoSeleccionado('estudiante');
+    setEstadoSnapshotInicial(serializarEstadoEditor(
+      nombreNuevo,
+      'DIPLOMA',
+      'horizontal',
+      ['Director Académico'],
+      true,
+      null,
+      'SUPERPLANTILLA_GLOBAL',
+      '',
+      coordsDefault
+    ));
     setActiveTab('editor');
   };
 
@@ -437,9 +633,43 @@ export default function CertificacionesAdminPage() {
     }
   };
 
-  const guardarModeloEnGaleria = (e: React.FormEvent) => {
+  const guardarModeloEnGaleria = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!editorNombre.trim()) return;
+
+    let urlFondoFinal = editorImagenFondo;
+
+    // Si el usuario subió una imagen local para vista previa, optimizarla y subirla AHORA de forma permanente a Supabase
+    if (archivoFondoPendiente) {
+      setSubiendoFondo(true);
+      try {
+        const { blob } = await optimizarImagenFondo(archivoFondoPendiente);
+        const formData = new FormData();
+        formData.append('file', blob, `fondo_${Date.now()}.webp`);
+        if (modeloSeleccionadoId) formData.append('modeloId', modeloSeleccionadoId);
+
+        const res = await fetch('/api/admin/certificaciones/upload-fondo', {
+          method: 'POST',
+          body: formData
+        });
+
+        const data = await res.json();
+        if (!res.ok || !data.url) {
+          throw new Error(data.error || 'Error al almacenar el fondo en Supabase Storage.');
+        }
+
+        urlFondoFinal = data.url;
+        setEditorImagenFondo(urlFondoFinal);
+        setArchivoFondoPendiente(null);
+      } catch (err: any) {
+        console.error('Error al subir imagen de fondo definitiva:', err);
+        alert(`No se pudo optimizar y subir el fondo: ${err.message || 'Error de conexión'}`);
+        setSubiendoFondo(false);
+        return;
+      } finally {
+        setSubiendoFondo(false);
+      }
+    }
 
     const nombreRecursoFinal = editorAlcance === 'SUPERPLANTILLA_GLOBAL' 
       ? (editorTipo === 'DIPLOMA' ? 'Todos los diplomados oficiales (22 diplomados)' :
@@ -448,46 +678,53 @@ export default function CertificacionesAdminPage() {
          editorTipo === 'TALLER' ? 'Todos los talleres y masterclasses' : 'Todos los programas de esta categoría')
       : (editorRecursoEspecifico || 'Programa específico asignado');
 
+    let listaActualizada: ModeloCertificado[] = [];
+
     if (modeloSeleccionadoId) {
-      setModelosCertificados(prev => prev.map(m => m.id === modeloSeleccionadoId ? {
+      listaActualizada = modelosCertificados.map(m => m.id === modeloSeleccionadoId ? {
         ...m,
         nombre: editorNombre,
         tipo: editorTipo,
-        tituloCertificado: editorTitulo,
-        textoOtorgamiento: editorTextoOtorgamiento,
-        estiloMarco: editorEstiloMarco,
         orientacion: editorOrientacion,
-        horas: editorHoras,
         firmas: editorFirmas,
         incluyeQr: editorIncluyeQr,
-        imagenFondoUrl: editorImagenFondo,
+        imagenFondoUrl: urlFondoFinal,
         asignacionAlcance: editorAlcance,
-        recursoAsignadoNombre: nombreRecursoFinal
-      } : m));
+        recursoAsignadoNombre: nombreRecursoFinal,
+        disenoCoordenadas: editorDisenoCoordenadas
+      } : m);
       setMensajeExito(`¡Modelo "${editorNombre}" actualizado con éxito!`);
     } else {
-      const nuevoId = `mod-${(modelosCertificados.length + 1).toString().padStart(2, '0')}`;
+      const nuevoId = `mod-${Date.now().toString().slice(-6)}`;
       const nuevoModelo: ModeloCertificado = {
         id: nuevoId,
         nombre: editorNombre,
         tipo: editorTipo,
-        tituloCertificado: editorTitulo,
-        textoOtorgamiento: editorTextoOtorgamiento,
-        estiloMarco: editorEstiloMarco,
         orientacion: editorOrientacion,
-        horas: editorHoras,
+        horas: editorTipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos',
         firmas: editorFirmas,
         incluyeQr: editorIncluyeQr,
-        imagenFondoUrl: editorImagenFondo,
+        imagenFondoUrl: urlFondoFinal,
         asignacionAlcance: editorAlcance,
         recursoAsignadoNombre: nombreRecursoFinal,
         esPredeterminado: editorAlcance === 'SUPERPLANTILLA_GLOBAL',
-        fechaCreacion: new Date().toISOString().split('T')[0]
+        fechaCreacion: new Date().toISOString().split('T')[0],
+        disenoCoordenadas: editorDisenoCoordenadas
       };
-      setModelosCertificados(prev => [nuevoModelo, ...prev]);
+      listaActualizada = [nuevoModelo, ...modelosCertificados];
       setModeloSeleccionadoId(nuevoId);
       setMensajeExito(`¡Nuevo modelo guardado y asignado a: ${nombreRecursoFinal}!`);
     }
+
+    setModelosCertificados(listaActualizada);
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.setItem('edumin_modelos_certificados_v2', JSON.stringify(listaActualizada));
+      } catch (e) {
+        console.warn('Error guardando en localStorage:', e);
+      }
+    }
+    sincronizarModelosEnSupabase(listaActualizada);
 
     setActiveTab('modelos');
     setTimeout(() => setMensajeExito(null), 4000);
@@ -502,14 +739,28 @@ export default function CertificacionesAdminPage() {
       esPredeterminado: false,
       fechaCreacion: new Date().toISOString().split('T')[0]
     };
-    setModelosCertificados(prev => [clon, ...prev]);
+    const listaActualizada = [clon, ...modelosCertificados];
+    setModelosCertificados(listaActualizada);
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.setItem('edumin_modelos_certificados_v2', JSON.stringify(listaActualizada));
+      } catch (e) {}
+    }
+    sincronizarModelosEnSupabase(listaActualizada);
     setMensajeExito(`¡Modelo duplicado como "${clon.nombre}"!`);
     setTimeout(() => setMensajeExito(null), 3000);
   };
 
   const eliminarModelo = (id: string) => {
     if (confirm('¿Estás seguro de eliminar este modelo de certificado de la galería?')) {
-      setModelosCertificados(prev => prev.filter(m => m.id !== id));
+      const listaActualizada = modelosCertificados.filter(m => m.id !== id);
+      setModelosCertificados(listaActualizada);
+      if (typeof window !== 'undefined') {
+        try {
+          localStorage.setItem('edumin_modelos_certificados_v2', JSON.stringify(listaActualizada));
+        } catch (e) {}
+      }
+      sincronizarModelosEnSupabase(listaActualizada);
       setMensajeExito('Modelo eliminado de la galería.');
       setTimeout(() => setMensajeExito(null), 3000);
     }
@@ -517,15 +768,25 @@ export default function CertificacionesAdminPage() {
 
   const handleSubirImagenFondo = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        if (event.target?.result) {
-          setEditorImagenFondo(event.target.result as string);
-        }
-      };
-      reader.readAsDataURL(file);
+    if (!file) return;
+
+    if (!file.type.startsWith('image/')) {
+      alert('Por favor selecciona un archivo de imagen válido (PNG, JPG o WEBP).');
+      return;
     }
+
+    if (file.size > 20 * 1024 * 1024) {
+      alert('La imagen original excede los 20MB. Selecciona una imagen más liviana.');
+      return;
+    }
+
+    // Carga de vista previa instantánea local sin demoras de subida ni saturar Storage con pruebas
+    const previewUrl = URL.createObjectURL(file);
+    setEditorImagenFondo(previewUrl);
+    setArchivoFondoPendiente(file);
+    setMensajeExito('Fondo cargado en vista previa inmediata. Se optimizará y guardará en Supabase al guardar el modelo.');
+    setTimeout(() => setMensajeExito(null), 4500);
+    e.target.value = '';
   };
 
   // Registrar certificación externa directa
@@ -973,14 +1234,46 @@ export default function CertificacionesAdminPage() {
           {activeTab === 'modelos' && (
             <div className="space-y-6">
               
-              {/* Encabezado limpio sin filtros */}
+              {/* Notificación tras depuración segura de storage */}
+              {resultadoLimpieza && (
+                <div className="p-4 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-3xl flex items-center justify-between text-xs text-emerald-800 dark:text-emerald-200 shadow-sm animate-fade-in">
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                    <div>
+                      <p className="font-bold">{resultadoLimpieza.message}</p>
+                      <p className="text-[11px] text-emerald-700/80 dark:text-emerald-300/80 mt-0.5">
+                        Espacio liberado: {Math.round(resultadoLimpieza.liberadosKb)} KB • Los fondos de certificados emitidos y modelos en galería se preservan intactos.
+                      </p>
+                    </div>
+                  </div>
+                  <button 
+                    onClick={() => setResultadoLimpieza(null)} 
+                    className="p-1.5 text-emerald-600 hover:text-emerald-800 rounded-lg hover:bg-emerald-100 transition cursor-pointer"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+              )}
+
+              {/* Encabezado limpio sin filtros con acción de mantenimiento de almacenamiento */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
                 <div>
                   <h3 className="text-lg font-bold text-slate-900 dark:text-white">Modelos de certificados y plantillas A4</h3>
                   <p className="text-xs text-slate-500 mt-0.5">Superplantillas maestras y plantillas asignadas a programas específicos.</p>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5">
+                  <button
+                    type="button"
+                    onClick={handleLimpiarStorageHuerfanos}
+                    disabled={limpiandoStorage}
+                    className="bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 px-3.5 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 cursor-pointer shrink-0 border border-slate-200 dark:border-slate-700 disabled:opacity-50"
+                    title="Analiza y elimina imágenes huérfanas en Supabase Storage que nunca fueron emitidas ni guardadas en modelos"
+                  >
+                    {limpiandoStorage ? <Loader2 className="w-3.5 h-3.5 animate-spin text-indigo-600" /> : <Trash2 className="w-3.5 h-3.5 text-slate-500" />}
+                    <span>{limpiandoStorage ? 'Depurando Storage...' : 'Limpiar fondos huérfanos'}</span>
+                  </button>
+
                   <button
                     onClick={iniciarNuevoModelo}
                     className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-xl text-xs font-bold transition flex items-center gap-2 cursor-pointer shrink-0 shadow-md"
@@ -998,39 +1291,43 @@ export default function CertificacionesAdminPage() {
                     key={modelo.id}
                     className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group"
                   >
-                    {/* Miniatura Simulada A4 del Modelo */}
-                    <div className="p-4 bg-slate-950 flex items-center justify-center relative min-h-[170px]">
+                    {/* Miniatura A4 del Modelo */}
+                    <div className="p-4 bg-slate-950 flex items-center justify-center relative min-h-[180px]">
                       <div 
-                        className={`p-4 rounded-xl border-4 text-center w-full shadow-lg relative overflow-hidden transition-all ${
-                          modelo.orientacion === 'vertical' ? 'max-w-[200px] min-h-[220px]' : 'max-w-[280px]'
+                        className={`rounded-lg border border-slate-700/80 shadow-lg relative overflow-hidden transition-all flex flex-col justify-between p-2.5 ${
+                          modelo.orientacion === 'vertical' ? 'w-[145px] aspect-[210/297]' : 'w-[230px] aspect-[297/210]'
                         } ${
-                          modelo.imagenFondoUrl ? 'bg-cover bg-center border-slate-700 text-slate-900' :
-                          modelo.estiloMarco === 'dorado' ? 'border-amber-500/60 bg-gradient-to-br from-amber-50 via-white to-amber-50/60 text-slate-900' :
-                          modelo.estiloMarco === 'azul' ? 'border-blue-500/60 bg-gradient-to-br from-blue-50 via-white to-blue-50/60 text-slate-900' :
-                          modelo.estiloMarco === 'esmeralda' ? 'border-emerald-500/60 bg-gradient-to-br from-emerald-50 via-white to-emerald-50/60 text-slate-900' :
-                          modelo.estiloMarco === 'granate' ? 'border-rose-600/60 bg-gradient-to-br from-rose-50 via-white to-amber-50/50 text-slate-900' :
-                          'border-purple-500/60 bg-slate-900 text-white'
+                          modelo.imagenFondoUrl ? 'bg-cover bg-center text-slate-900' : 'bg-white text-slate-800'
                         }`}
-                        style={modelo.imagenFondoUrl ? { backgroundImage: `url(${modelo.imagenFondoUrl})` } : {}}
+                        style={modelo.imagenFondoUrl ? { backgroundImage: `url(${modelo.imagenFondoUrl})`, backgroundSize: 'cover', backgroundPosition: 'center center' } : {}}
                       >
-                        <div className="flex justify-between items-center pb-1 mb-1 border-b border-black/10">
-                          <span className="text-[7px] font-mono font-bold tracking-widest uppercase opacity-70">EDUMIN LMS</span>
-                          <Award className="w-3.5 h-3.5 text-amber-600" />
+                        {!modelo.imagenFondoUrl && (
+                          <div className="absolute inset-0 flex flex-col items-center justify-center p-2 text-center pointer-events-none border border-dashed border-slate-300 m-1 rounded bg-slate-50/50">
+                            <span className="text-[7px] font-bold text-slate-400">Lienzo en blanco</span>
+                            <span className="text-[6px] text-slate-400">Sin plantilla de fondo</span>
+                          </div>
+                        )}
+
+                        <div className="flex justify-between items-center z-10">
+                          <span className="text-[6px] font-mono font-bold tracking-widest uppercase opacity-70">EDUMIN LMS</span>
+                          <Award className="w-2.5 h-2.5 text-amber-500" />
                         </div>
-                        <h5 className="text-[10px] font-black tracking-tight uppercase leading-tight line-clamp-1">{modelo.tituloCertificado}</h5>
-                        <div className="my-1 py-0.5 border-y border-black/10 text-[8px] font-serif font-bold underline opacity-80">[Nombre del estudiante]</div>
-                        <p className="text-[7px] font-bold opacity-80 line-clamp-1 text-indigo-900">
-                          {modelo.recursoAsignadoNombre || 'Programa académico oficial'}
-                        </p>
+
+                        <div className="text-center z-10 my-auto">
+                          <div className="text-[7px] font-serif font-black underline decoration-amber-500 opacity-90 truncate">[Nombre Alumno]</div>
+                          <p className="text-[6px] font-black uppercase opacity-85 line-clamp-1 text-indigo-950">
+                            {modelo.recursoAsignadoNombre || 'DIPLOMADO / CURSO'}
+                          </p>
+                        </div>
                         
-                        <div className="mt-2 pt-1 border-t border-black/10 flex justify-between items-center text-[7px] opacity-60 font-mono">
-                          <span>{modelo.horas}</span>
-                          <QrCode className="w-3 h-3" />
+                        <div className="z-10 pt-1 border-t border-black/10 flex justify-between items-center text-[6px] opacity-70 font-mono">
+                          <span className="truncate max-w-[70%]">{modelo.horas || 'Horas oficiales'}</span>
+                          <QrCode className="w-2.5 h-2.5" />
                         </div>
                       </div>
 
                       <div className="absolute top-3 right-3 flex items-center gap-1.5">
-                        <span className="bg-slate-800/90 text-slate-300 text-[8px] font-mono px-2 py-0.5 rounded-full border border-slate-700">
+                        <span className="bg-slate-900/90 text-slate-300 text-[8px] font-mono px-2 py-0.5 rounded-full border border-slate-700 shadow-sm">
                           {modelo.orientacion === 'vertical' ? 'Vertical A4' : 'Horizontal A4'}
                         </span>
                         {modelo.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' ? (
@@ -1053,7 +1350,7 @@ export default function CertificacionesAdminPage() {
                             {modelo.tipo}
                           </span>
                           <span className="text-[10px] text-slate-400 capitalize">
-                            {modelo.imagenFondoUrl ? 'Con fondo membretado' : `Marco ${modelo.estiloMarco}`}
+                            {modelo.imagenFondoUrl ? 'Con fondo membretado A4' : 'Plantilla en blanco'}
                           </span>
                         </div>
                         
@@ -1125,7 +1422,7 @@ export default function CertificacionesAdminPage() {
                 <div>
                   <button
                     type="button"
-                    onClick={() => setActiveTab('modelos')}
+                    onClick={() => salirDelEditorConConfirmacion(() => setActiveTab('modelos'))}
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline mb-1 cursor-pointer"
                   >
                     <ArrowLeft className="w-4 h-4" /> Volver a modelos de certificados
@@ -1139,7 +1436,7 @@ export default function CertificacionesAdminPage() {
                 <div className="flex items-center gap-2">
                   <button
                     type="button"
-                    onClick={() => setActiveTab('modelos')}
+                    onClick={() => salirDelEditorConConfirmacion(() => setActiveTab('modelos'))}
                     className="px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold transition cursor-pointer"
                   >
                     Cancelar
@@ -1147,7 +1444,7 @@ export default function CertificacionesAdminPage() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                 
                 {/* Panel de Configuración Lateral */}
                 <form onSubmit={guardarModeloEnGaleria} className="lg:col-span-5 space-y-4 bg-white dark:bg-slate-900 p-6 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
@@ -1178,7 +1475,10 @@ export default function CertificacionesAdminPage() {
                     <div className="grid grid-cols-2 gap-2">
                       <button
                         type="button"
-                        onClick={() => setEditorOrientacion('horizontal')}
+                        onClick={() => {
+                          setEditorOrientacion('horizontal');
+                          setEditorDisenoCoordenadas({ ...DISENO_DEFAULT_HORIZONTAL });
+                        }}
                         className={`py-2 px-3 rounded-xl text-xs font-bold border transition flex items-center justify-center gap-1.5 cursor-pointer ${
                           editorOrientacion === 'horizontal' 
                             ? 'bg-indigo-50 dark:bg-indigo-950/60 border-indigo-600 text-indigo-600 dark:text-indigo-300 shadow-sm'
@@ -1189,7 +1489,10 @@ export default function CertificacionesAdminPage() {
                       </button>
                       <button
                         type="button"
-                        onClick={() => setEditorOrientacion('vertical')}
+                        onClick={() => {
+                          setEditorOrientacion('vertical');
+                          setEditorDisenoCoordenadas({ ...DISENO_DEFAULT_VERTICAL });
+                        }}
                         className={`py-2 px-3 rounded-xl text-xs font-bold border transition flex items-center justify-center gap-1.5 cursor-pointer ${
                           editorOrientacion === 'vertical' 
                             ? 'bg-indigo-50 dark:bg-indigo-950/60 border-indigo-600 text-indigo-600 dark:text-indigo-300 shadow-sm'
@@ -1201,42 +1504,23 @@ export default function CertificacionesAdminPage() {
                     </div>
                   </div>
 
-                  {/* Tipo de certificado y estilo de marco */}
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">
-                        Tipo de certificado
-                      </label>
-                      <select 
-                        value={editorTipo}
-                        onChange={(e) => setEditorTipo(e.target.value as any)}
-                        className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
-                      >
-                        <option value="DIPLOMA">Diploma oficial (3 módulos)</option>
-                        <option value="MODULAR">Certificado modular</option>
-                        <option value="CURSO">Curso de especialización</option>
-                        <option value="CIP">Convenio CIP nacional</option>
-                        <option value="MIAMI">Convenio Miami internacional</option>
-                        <option value="TALLER">Taller / masterclass</option>
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">
-                        Estilo de marco
-                      </label>
-                      <select 
-                        value={editorEstiloMarco}
-                        onChange={(e) => setEditorEstiloMarco(e.target.value as any)}
-                        className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
-                      >
-                        <option value="dorado">Dorado clásico</option>
-                        <option value="azul">Azul institucional</option>
-                        <option value="esmeralda">Esmeralda moderno</option>
-                        <option value="granate">Granate académico</option>
-                        <option value="tecnologico">Tecnológico oscuro</option>
-                      </select>
-                    </div>
+                  {/* Tipo de certificado */}
+                  <div>
+                    <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">
+                      Tipo de certificado
+                    </label>
+                    <select 
+                      value={editorTipo}
+                      onChange={(e) => setEditorTipo(e.target.value as any)}
+                      className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                    >
+                      <option value="DIPLOMA">Diploma oficial (3 módulos)</option>
+                      <option value="MODULAR">Certificado modular</option>
+                      <option value="CURSO">Curso de especialización</option>
+                      <option value="CIP">Convenio CIP nacional</option>
+                      <option value="MIAMI">Convenio Miami internacional</option>
+                      <option value="TALLER">Taller / masterclass</option>
+                    </select>
                   </div>
 
                   {/* Asignación de alcance: Superplantilla vs Producto específico */}
@@ -1293,19 +1577,48 @@ export default function CertificacionesAdminPage() {
                     )}
                   </div>
 
-                  {/* Carga de imagen de fondo / membrete */}
-                  <div className="p-3.5 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/60 space-y-2">
-                    <label className="block text-[10px] font-black uppercase tracking-wider text-slate-500 flex items-center gap-1.5">
-                      <ImageIcon className="w-3.5 h-3.5 text-indigo-500" /> Imagen de fondo o membrete oficial A4
-                    </label>
+                  {/* Carga de imagen de fondo / membrete en Supabase Storage con Preview Instantáneo */}
+                  <div className="p-3.5 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/60 space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <label className="text-[10px] font-black uppercase tracking-wider text-slate-600 dark:text-slate-300 flex items-center gap-1.5">
+                        <ImageIcon className="w-3.5 h-3.5 text-indigo-500" /> Imagen de fondo oficial A4 (Membrete)
+                      </label>
+                      {archivoFondoPendiente ? (
+                        <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 font-bold border border-amber-300 dark:border-amber-800">
+                          Vista previa local (se optimizará al guardar)
+                        </span>
+                      ) : editorImagenFondo ? (
+                        <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold border border-emerald-300 dark:border-emerald-800">
+                          En Storage
+                        </span>
+                      ) : null}
+                    </div>
+
+                    <p className="text-[11px] text-slate-500 leading-snug">
+                      Elige el fondo membretado en formato A4 (PNG, JPG o WEBP). La vista previa es instantánea y sin demoras. Al hacer clic en <strong>Guardar en galería</strong>, el sistema optimizará la imagen a 300 DPI y la almacenará en Supabase Storage.
+                    </p>
                     
                     <div className="flex items-center gap-2">
-                      <label className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-white dark:bg-slate-900 border border-dashed border-slate-300 dark:border-slate-600 hover:border-indigo-500 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-300 cursor-pointer transition">
-                        <Upload className="w-3.5 h-3.5 text-indigo-600" />
-                        <span>{editorImagenFondo ? 'Cambiar imagen de fondo' : 'Subir imagen A4 (PNG o JPG)'}</span>
+                      <label className={`flex-1 flex items-center justify-center gap-2 px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-dashed rounded-xl text-xs font-bold transition ${
+                        subiendoFondo 
+                          ? 'opacity-60 cursor-wait border-indigo-400 bg-indigo-50/50 dark:bg-indigo-950/20 text-indigo-600'
+                          : 'border-slate-300 dark:border-slate-600 hover:border-indigo-500 text-slate-700 dark:text-slate-300 cursor-pointer'
+                      }`}>
+                        {subiendoFondo ? (
+                          <>
+                            <Loader2 className="w-4 h-4 animate-spin text-indigo-600" />
+                            <span>Optimizando y guardando imagen en Supabase...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Upload className="w-3.5 h-3.5 text-indigo-600" />
+                            <span>{editorImagenFondo ? 'Cambiar plantilla membretada A4' : 'Seleccionar plantilla A4 de tu computadora'}</span>
+                          </>
+                        )}
                         <input 
                           type="file" 
-                          accept="image/*" 
+                          accept="image/png,image/jpeg,image/webp" 
+                          disabled={subiendoFondo}
                           onChange={handleSubirImagenFondo} 
                           className="hidden" 
                         />
@@ -1314,9 +1627,12 @@ export default function CertificacionesAdminPage() {
                       {editorImagenFondo && (
                         <button
                           type="button"
-                          onClick={() => setEditorImagenFondo(null)}
-                          className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/50 rounded-xl transition text-xs font-bold"
-                          title="Quitar imagen y usar marco vectorial"
+                          onClick={() => {
+                            setEditorImagenFondo(null);
+                            setArchivoFondoPendiente(null);
+                          }}
+                          className="p-2 text-red-500 hover:bg-red-50 dark:hover:bg-red-950/50 rounded-xl transition text-xs font-bold border border-red-200 dark:border-red-900/60 cursor-pointer"
+                          title="Volver a lienzo en blanco"
                         >
                           <X className="w-4 h-4" />
                         </button>
@@ -1324,161 +1640,814 @@ export default function CertificacionesAdminPage() {
                     </div>
                   </div>
 
-                  {/* Título de encabezado */}
-                  <div>
-                    <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">
-                      Título del encabezado
-                    </label>
-                    <input 
-                      type="text"
-                      value={editorTitulo}
-                      onChange={(e) => setEditorTitulo(e.target.value)}
-                      required
-                      placeholder="Ej. DIPLOMA DE ALTA ESPECIALIZACIÓN"
-                      className="w-full px-3.5 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-600"
-                    />
-                  </div>
-
-                  {/* Texto de otorgamiento */}
-                  <div>
-                    <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">
-                      Texto de otorgamiento
-                    </label>
-                    <textarea 
-                      rows={2}
-                      value={editorTextoOtorgamiento}
-                      onChange={(e) => setEditorTextoOtorgamiento(e.target.value)}
-                      placeholder="Por haber cumplido y aprobado con excelencia..."
-                      className="w-full px-3.5 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-600"
-                    />
-                  </div>
-
-                  {/* Horas */}
-                  <div>
-                    <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1">
-                      Horas cronológicas
-                    </label>
-                    <input 
-                      type="text"
-                      value={editorHoras}
-                      onChange={(e) => setEditorHoras(e.target.value)}
-                      placeholder="Ej. 120 horas cronológicas"
-                      className="w-full px-3.5 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-medium text-slate-900 dark:text-white focus:ring-2 focus:ring-indigo-600"
-                    />
-                  </div>
-
-                  {/* Variables dinámicas */}
-                  <div className="p-3 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700/60">
-                    <label className="block text-[10px] font-extrabold uppercase text-slate-400 mb-1.5">
-                      Variables dinámicas automáticas
-                    </label>
-                    <div className="flex flex-wrap gap-1.5 text-[10px] font-mono">
-                      <span className="px-2 py-0.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700 text-indigo-600">[Nombre alumno]</span>
-                      <span className="px-2 py-0.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700 text-indigo-600">[Programa]</span>
-                      <span className="px-2 py-0.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700 text-indigo-600">[Módulo]</span>
-                      <span className="px-2 py-0.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700 text-indigo-600">[Fecha]</span>
-                      <span className="px-2 py-0.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700 text-indigo-600">[Código QR]</span>
-                      <span className="px-2 py-0.5 bg-white dark:bg-slate-900 rounded-md border border-slate-200 dark:border-slate-700 text-indigo-600">[Nota]</span>
+                  {/* Panel de Posicionamiento, Coordenadas y Tipografías A4 */}
+                  <div className="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700/60 space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <label className="text-[10px] font-black uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                          <Sliders className="w-3.5 h-3.5 text-indigo-500" /> Posicionamiento y formato de variables A4
+                        </label>
+                        <span className="text-[9px] font-mono text-slate-400">
+                          Lienzo {editorOrientacion === 'vertical' ? 'Vertical 21.0 × 29.7 cm' : 'Horizontal 29.7 × 21.0 cm'}
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={restablecerDisenoPorDefecto}
+                        className="text-[10px] text-slate-500 hover:text-indigo-600 flex items-center gap-1 transition cursor-pointer"
+                        title="Restablecer posiciones originales"
+                      >
+                        <RotateCcw className="w-3 h-3" />
+                        <span>Restablecer</span>
+                      </button>
                     </div>
+
+                    <p className="text-[11px] text-slate-500 leading-snug">
+                      Ajusta coordenadas exactas en <strong className="text-slate-700 dark:text-slate-300">centímetros (cm)</strong>, tamaño de fuente, colores y tipografía. También puedes <strong className="text-indigo-600 dark:text-indigo-400">arrastrar con el mouse</strong> cada variable directamente sobre el lienzo.
+                    </p>
+
+                    {/* Selector de variable activa */}
+                    <div className="grid grid-cols-3 gap-1.5 p-1 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
+                      {[
+                        { key: 'estudiante', label: 'Estudiante' },
+                        { key: 'programa', label: 'Programa' },
+                        { key: 'horas', label: 'Horas' },
+                        { key: 'fecha', label: 'Fecha' },
+                        { key: 'codigo', label: 'Código' },
+                        { key: 'qr', label: 'Código QR (1:1)' }
+                      ].map((item) => (
+                        <button
+                          key={item.key}
+                          type="button"
+                          onClick={() => setElementoSeleccionado(item.key as keyof DisenoCoordenadas)}
+                          className={`px-2 py-1.5 rounded-lg text-[11px] font-bold transition cursor-pointer text-center truncate ${
+                            elementoSeleccionado === item.key
+                              ? 'bg-indigo-600 text-white shadow-xs'
+                              : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+                          }`}
+                        >
+                          {item.label}
+                        </button>
+                      ))}
+                    </div>
+
+                    {/* Controles para la variable seleccionada */}
+                    {(() => {
+                      const act = editorDisenoCoordenadas[elementoSeleccionado];
+                      return (
+                        <div className="space-y-3 pt-1">
+                          {/* Toggle visibilidad y coordenadas actuales en CM y % */}
+                          <div className="flex items-center justify-between text-xs">
+                            <label className="flex items-center gap-1.5 font-bold text-slate-700 dark:text-slate-300 cursor-pointer">
+                              <input
+                                type="checkbox"
+                                checked={act.visible}
+                                onChange={(e) => {
+                                  const val = e.target.checked;
+                                  actualizarPosicionElemento(elementoSeleccionado, { visible: val });
+                                  if (elementoSeleccionado === 'qr') {
+                                    setEditorIncluyeQr(val);
+                                  }
+                                }}
+                                className="rounded text-indigo-600 focus:ring-indigo-500 size-3.5"
+                              />
+                              <span>Mostrar esta variable</span>
+                            </label>
+
+                            <span className="text-[10px] font-mono text-indigo-600 dark:text-indigo-400 font-bold bg-indigo-50 dark:bg-indigo-950/60 px-2 py-0.5 rounded-md border border-indigo-200 dark:border-indigo-800">
+                              X: {pctToCmX(act.x)} cm ({act.x}%) • Y: {pctToCmY(act.y)} cm ({act.y}%)
+                            </span>
+                          </div>
+
+                          {/* Coordenadas en Centímetros (cm) y porcentaje */}
+                          <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2">
+                            <div className="flex items-center justify-between text-[10px] font-bold text-slate-600 dark:text-slate-400">
+                              <span>Coordenadas exactas en la hoja A4:</span>
+                              <span className="text-slate-400 font-normal">Base: {anchoHojaCm} × {altoHojaCm} cm</span>
+                            </div>
+
+                            {/* Eje X (Horizontal) */}
+                            <div className="space-y-1">
+                              <div className="flex justify-between items-center text-[10px]">
+                                <span className="font-bold text-slate-700 dark:text-slate-300">Posición X (desde la izquierda):</span>
+                                <span className="font-mono text-indigo-600 font-bold">{pctToCmX(act.x)} cm ({act.x}%)</span>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <input
+                                  type="range"
+                                  min="0"
+                                  max={anchoHojaCm}
+                                  step="0.1"
+                                  value={pctToCmX(act.x)}
+                                  onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { x: cmToPctX(Number(e.target.value)) })}
+                                  className="flex-1 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                />
+                                <div className="flex items-center gap-1 shrink-0">
+                                  <input
+                                    type="number"
+                                    min="0"
+                                    max={anchoHojaCm}
+                                    step="0.1"
+                                    value={pctToCmX(act.x)}
+                                    onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { x: cmToPctX(Number(e.target.value)) })}
+                                    className="w-14 px-1.5 py-0.5 text-[11px] font-mono text-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md font-bold"
+                                  />
+                                  <span className="text-[10px] text-slate-400 font-mono">cm</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Eje Y (Vertical) */}
+                            <div className="space-y-1">
+                              <div className="flex justify-between items-center text-[10px]">
+                                <span className="font-bold text-slate-700 dark:text-slate-300">Posición Y (desde arriba):</span>
+                                <span className="font-mono text-indigo-600 font-bold">{pctToCmY(act.y)} cm ({act.y}%)</span>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <input
+                                  type="range"
+                                  min="0"
+                                  max={altoHojaCm}
+                                  step="0.1"
+                                  value={pctToCmY(act.y)}
+                                  onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { y: cmToPctY(Number(e.target.value)) })}
+                                  className="flex-1 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                />
+                                <div className="flex items-center gap-1 shrink-0">
+                                  <input
+                                    type="number"
+                                    min="0"
+                                    max={altoHojaCm}
+                                    step="0.1"
+                                    value={pctToCmY(act.y)}
+                                    onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { y: cmToPctY(Number(e.target.value)) })}
+                                    className="w-14 px-1.5 py-0.5 text-[11px] font-mono text-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md font-bold"
+                                  />
+                                  <span className="text-[10px] text-slate-400 font-mono">cm</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Flechas de microajuste y Presets rápidos */}
+                          <div className="space-y-2">
+                            <div className="flex items-center justify-between text-[10px] font-bold text-slate-500">
+                              <span>Ajustes rápidos:</span>
+                            </div>
+                            <div className="flex flex-wrap gap-1">
+                              <button
+                                type="button"
+                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { x: 50, alineacion: 'center' })}
+                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
+                              >
+                                Centrar H (50%)
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { x: 10, alineacion: 'left' })}
+                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
+                              >
+                                Izquierda (10%)
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { x: 90, alineacion: 'right' })}
+                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
+                              >
+                                Derecha (90%)
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { y: 25 })}
+                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
+                              >
+                                Arriba (25%)
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { y: 50 })}
+                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
+                              >
+                                Centro V (50%)
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { y: 88 })}
+                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
+                              >
+                                Abajo (88%)
+                              </button>
+                            </div>
+
+                            {/* Botonera de micro-ajuste (Nudge) */}
+                            <div className="flex items-center gap-2 pt-1">
+                              <span className="text-[10px] font-bold text-slate-500">Mover ±1 mm:</span>
+                              <div className="flex items-center gap-1">
+                                <button
+                                  type="button"
+                                  onClick={() => ajustarCoordenadaDelta(elementoSeleccionado, -0.5, 0)}
+                                  className="p-1 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 rounded text-slate-700 dark:text-slate-300 text-[10px] font-bold flex items-center gap-0.5"
+                                  title="Mover a la izquierda"
+                                >
+                                  <ChevronLeft className="w-3 h-3" /> Izq
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => ajustarCoordenadaDelta(elementoSeleccionado, 0.5, 0)}
+                                  className="p-1 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 rounded text-slate-700 dark:text-slate-300 text-[10px] font-bold flex items-center gap-0.5"
+                                  title="Mover a la derecha"
+                                >
+                                  Der <ChevronRight className="w-3 h-3" />
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => ajustarCoordenadaDelta(elementoSeleccionado, 0, -0.5)}
+                                  className="p-1 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 rounded text-slate-700 dark:text-slate-300 text-[10px] font-bold flex items-center gap-0.5"
+                                  title="Subir"
+                                >
+                                  <ChevronUp className="w-3 h-3" /> Arriba
+                                </button>
+                                <button
+                                  type="button"
+                                  onClick={() => ajustarCoordenadaDelta(elementoSeleccionado, 0, 0.5)}
+                                  className="p-1 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 rounded text-slate-700 dark:text-slate-300 text-[10px] font-bold flex items-center gap-0.5"
+                                  title="Bajar"
+                                >
+                                  Abajo <ChevronDown className="w-3 h-3" />
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Alineación de texto / bloque */}
+                          <div>
+                            <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                              Alineación respecto al punto de anclaje:
+                            </label>
+                            <div className="grid grid-cols-3 gap-1 bg-white dark:bg-slate-900 p-1 rounded-xl border border-slate-200 dark:border-slate-700">
+                              <button
+                                type="button"
+                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { alineacion: 'left' })}
+                                className={`py-1 text-xs font-bold rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
+                                  act.alineacion === 'left' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+                                }`}
+                              >
+                                <AlignLeft className="w-3 h-3" /> Izquierda
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { alineacion: 'center' })}
+                                className={`py-1 text-xs font-bold rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
+                                  act.alineacion === 'center' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+                                }`}
+                              >
+                                <AlignCenter className="w-3 h-3" /> Centro
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { alineacion: 'right' })}
+                                className={`py-1 text-xs font-bold rounded-lg transition flex items-center justify-center gap-1 cursor-pointer ${
+                                  act.alineacion === 'right' ? 'bg-indigo-600 text-white shadow-xs' : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
+                                }`}
+                              >
+                                <AlignRight className="w-3 h-3" /> Derecha
+                              </button>
+                            </div>
+                          </div>
+
+                          {/* Configuración Tipográfica y Visual (solo para variables de texto) */}
+                          {elementoSeleccionado !== 'qr' && (
+                            <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2.5">
+                              {/* Fuente */}
+                              <div>
+                                <label className="block text-[10px] font-bold text-slate-500 mb-1 flex items-center gap-1">
+                                  <Type className="w-3 h-3 text-indigo-500" /> Fuente tipográfica:
+                                </label>
+                                <select
+                                  value={act.fuente || (elementoSeleccionado === 'estudiante' ? 'serif-institucional' : elementoSeleccionado === 'programa' ? 'sans-moderna' : 'sans-formal')}
+                                  onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { fuente: e.target.value as TipoFuenteCertificado })}
+                                  className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                >
+                                  {FUENTES_CERTIFICADO.map(f => (
+                                    <option key={f.id} value={f.id}>{f.nombre}</option>
+                                  ))}
+                                </select>
+                              </div>
+
+                              {/* Tamaño de fuente */}
+                              <div className="space-y-1">
+                                <div className="flex justify-between items-center text-[10px]">
+                                  <span className="font-bold text-slate-700 dark:text-slate-300">Tamaño del texto:</span>
+                                  <span className="font-mono text-indigo-600 font-bold">{act.tamanoFuente || (elementoSeleccionado === 'estudiante' ? 36 : elementoSeleccionado === 'programa' ? 22 : 12)} pt</span>
+                                </div>
+                                <input
+                                  type="range"
+                                  min={elementoSeleccionado === 'estudiante' ? 18 : elementoSeleccionado === 'programa' ? 14 : 8}
+                                  max={elementoSeleccionado === 'estudiante' ? 52 : elementoSeleccionado === 'programa' ? 38 : 22}
+                                  step="1"
+                                  value={act.tamanoFuente || (elementoSeleccionado === 'estudiante' ? 36 : elementoSeleccionado === 'programa' ? 22 : 12)}
+                                  onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { tamanoFuente: Number(e.target.value) })}
+                                  className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                />
+                              </div>
+
+                              {/* Estilo tipográfico: Negrita, Cursiva, Subrayado */}
+                              <div className="flex items-center gap-1.5 pt-0.5">
+                                <span className="text-[10px] font-bold text-slate-500 mr-1">Estilo:</span>
+                                <button
+                                  type="button"
+                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { negrita: act.negrita !== undefined ? !act.negrita : false })}
+                                  className={`px-2.5 py-1 rounded-lg border text-xs font-bold transition flex items-center gap-1 cursor-pointer ${
+                                    act.negrita !== false
+                                      ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
+                                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:bg-slate-200'
+                                  }`}
+                                  title="Negrita"
+                                >
+                                  <Bold className="w-3 h-3" />
+                                  <span className="text-[10px]">Negrita</span>
+                                </button>
+
+                                <button
+                                  type="button"
+                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { cursiva: !act.cursiva })}
+                                  className={`px-2.5 py-1 rounded-lg border text-xs font-bold transition flex items-center gap-1 cursor-pointer ${
+                                    act.cursiva
+                                      ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
+                                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:bg-slate-200'
+                                  }`}
+                                  title="Cursiva"
+                                >
+                                  <Italic className="w-3 h-3" />
+                                  <span className="text-[10px]">Cursiva</span>
+                                </button>
+
+                                <button
+                                  type="button"
+                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { subrayado: !act.subrayado })}
+                                  className={`px-2.5 py-1 rounded-lg border text-xs font-bold transition flex items-center gap-1 cursor-pointer ${
+                                    act.subrayado
+                                      ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
+                                      : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:bg-slate-200'
+                                  }`}
+                                  title="Subrayado"
+                                >
+                                  <Underline className="w-3 h-3" />
+                                  <span className="text-[10px]">Subrayado</span>
+                                </button>
+                              </div>
+
+                              {/* Color del texto: Selector RGB libre + Input directo Hex/RGB + Botón Negro Puro */}
+                              <div className="space-y-1.5 pt-1 border-t border-slate-100 dark:border-slate-800">
+                                <div className="flex justify-between items-center text-[10px]">
+                                  <span className="font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1">
+                                    <Palette className="w-3 h-3 text-indigo-500" /> Color del texto (Sin fondos):
+                                  </span>
+                                  <span className="font-mono text-slate-500 font-bold">{act.color || '#000000'}</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                  <input
+                                    type="color"
+                                    value={act.color && act.color.startsWith('#') && act.color.length === 7 ? act.color : '#000000'}
+                                    onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { color: e.target.value })}
+                                    className="w-8 h-8 rounded-lg border border-slate-300 dark:border-slate-700 cursor-pointer p-0.5 bg-transparent shrink-0"
+                                    title="Elegir color RGB / Hexadecimal"
+                                  />
+                                  <input
+                                    type="text"
+                                    value={act.color || '#000000'}
+                                    onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { color: e.target.value })}
+                                    placeholder="#000000 o rgb(0,0,0)"
+                                    className="flex-1 px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-mono font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                  />
+                                  <button
+                                    type="button"
+                                    onClick={() => actualizarPosicionElemento(elementoSeleccionado, { color: '#000000' })}
+                                    className="px-2.5 py-1.5 text-[10px] font-bold rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 transition shrink-0"
+                                    title="Restablecer color a negro oficial"
+                                  >
+                                    Negro (#000000)
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Configuración especial: Ancho delimitado en CM y 1 sola línea para Estudiante */}
+                          {elementoSeleccionado === 'estudiante' && (
+                            <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1.5">
+                              <div className="flex justify-between items-center text-[10px]">
+                                <span className="font-bold text-slate-700 dark:text-slate-300">Ancho físico máximo (Siempre 1 sola línea):</span>
+                                <span className="font-mono text-indigo-600 font-bold">
+                                  {getAnchoCm(act, 25.0)} cm ({Math.round((getAnchoCm(act, 25.0) / anchoHojaCm) * 100)}%)
+                                </span>
+                              </div>
+                              <div className="flex items-center gap-2">
+                                <input
+                                  type="range"
+                                  min="12.0"
+                                  max={anchoHojaCm}
+                                  step="0.5"
+                                  value={getAnchoCm(act, 25.0)}
+                                  onChange={(e) => {
+                                    const cmVal = Number(e.target.value);
+                                    actualizarPosicionElemento('estudiante', { 
+                                      anchoMaximoCm: cmVal,
+                                      anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
+                                    });
+                                  }}
+                                  className="flex-1 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                />
+                                <div className="flex items-center gap-1 shrink-0">
+                                  <input
+                                    type="number"
+                                    min="12.0"
+                                    max={anchoHojaCm}
+                                    step="0.5"
+                                    value={getAnchoCm(act, 25.0)}
+                                    onChange={(e) => {
+                                      const cmVal = Number(e.target.value);
+                                      actualizarPosicionElemento('estudiante', { 
+                                        anchoMaximoCm: cmVal,
+                                        anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
+                                      });
+                                    }}
+                                    className="w-14 px-1.5 py-0.5 text-[11px] font-mono text-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md font-bold"
+                                  />
+                                  <span className="text-[10px] text-slate-400 font-mono">cm</span>
+                                </div>
+                              </div>
+                              <p className="text-[10px] text-slate-400 leading-tight">
+                                Si el nombre es muy largo, el sistema aplicará automáticamente reducción de escala y letter-spacing para no cortarse jamás ni salirse del papel A4.
+                              </p>
+                            </div>
+                          )}
+
+                          {/* Configuración especial: Ancho en CM, Interlineado y Balance conector "Y" para Programa */}
+                          {elementoSeleccionado === 'programa' && (
+                            <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2.5">
+                              <div className="space-y-1.5">
+                                <div className="flex justify-between items-center text-[10px]">
+                                  <span className="font-bold text-slate-700 dark:text-slate-300">Ancho físico del título (Máx. 2 líneas):</span>
+                                  <span className="font-mono text-indigo-600 font-bold">
+                                    {getAnchoCm(act, 25.5)} cm ({Math.round((getAnchoCm(act, 25.5) / anchoHojaCm) * 100)}%)
+                                  </span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                  <input
+                                    type="range"
+                                    min="12.0"
+                                    max={anchoHojaCm}
+                                    step="0.5"
+                                    value={getAnchoCm(act, 25.5)}
+                                    onChange={(e) => {
+                                      const cmVal = Number(e.target.value);
+                                      actualizarPosicionElemento('programa', { 
+                                        anchoMaximoCm: cmVal,
+                                        anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
+                                      });
+                                    }}
+                                    className="flex-1 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                  />
+                                  <div className="flex items-center gap-1 shrink-0">
+                                    <input
+                                      type="number"
+                                      min="12.0"
+                                      max={anchoHojaCm}
+                                      step="0.5"
+                                      value={getAnchoCm(act, 25.5)}
+                                      onChange={(e) => {
+                                        const cmVal = Number(e.target.value);
+                                        actualizarPosicionElemento('programa', { 
+                                          anchoMaximoCm: cmVal,
+                                          anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
+                                        });
+                                      }}
+                                      className="w-14 px-1.5 py-0.5 text-[11px] font-mono text-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md font-bold"
+                                    />
+                                    <span className="text-[10px] text-slate-400 font-mono">cm</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              {/* Selector de Interlineado / Line Height */}
+                              <div className="space-y-1 pt-1.5 border-t border-slate-100 dark:border-slate-800">
+                                <div className="flex justify-between items-center text-[10px]">
+                                  <span className="font-bold text-slate-700 dark:text-slate-300">Interlineado (Espacio entre filas de texto):</span>
+                                  <span className="font-mono text-indigo-600 font-bold">{(act.interlineado || 1.25).toFixed(2)}x</span>
+                                </div>
+                                <input
+                                  type="range"
+                                  min="0.9"
+                                  max="2.0"
+                                  step="0.05"
+                                  value={act.interlineado || 1.25}
+                                  onChange={(e) => actualizarPosicionElemento('programa', { interlineado: Number(e.target.value) })}
+                                  className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                />
+                              </div>
+
+                              <p className="text-[10px] text-slate-400 leading-tight">
+                                Limita a 2 líneas con balance visual y mantiene la conjunción &quot;Y&quot; unida a la palabra anterior para evitar quiebres huérfanos.
+                              </p>
+                            </div>
+                          )}
+
+                          {/* Configuración especial: Fecha con Prefijo y Selector de Formato */}
+                          {elementoSeleccionado === 'fecha' && (
+                            <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2">
+                              <div>
+                                <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                  Prefijo o texto antes de la fecha:
+                                </label>
+                                <input
+                                  type="text"
+                                  value={act.textoPrefijo !== undefined ? act.textoPrefijo : 'Fecha de emisión: '}
+                                  onChange={(e) => actualizarPosicionElemento('fecha', { textoPrefijo: e.target.value })}
+                                  placeholder='Ej: "Fecha de emisión: ", "Arequipa, ", o vacío'
+                                  className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                />
+                              </div>
+
+                              <div>
+                                <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                  Formato de la fecha:
+                                </label>
+                                <select
+                                  value={act.formatoFecha || 'larga'}
+                                  onChange={(e) => actualizarPosicionElemento('fecha', { formatoFecha: e.target.value as FormatoFechaCertificado })}
+                                  className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                >
+                                  <option value="larga">Completa (Ej: 20 de octubre de 2026)</option>
+                                  <option value="corta">Corta Numérica (Ej: 20/10/2026)</option>
+                                  <option value="mes-ano">Solo Mes y Año (Ej: Octubre de 2026)</option>
+                                </select>
+                              </div>
+
+                              <div className="p-2 bg-slate-50 dark:bg-slate-800/70 rounded-lg border border-slate-100 dark:border-slate-700/60">
+                                <span className="text-[10px] text-slate-400 block font-bold mb-0.5">Resultado en el certificado:</span>
+                                <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                                  &quot;{act.textoPrefijo !== undefined ? act.textoPrefijo : 'Fecha de emisión: '}{formatearFechaSegunEstilo(new Date().toISOString(), act.formatoFecha || 'larga')}&quot;
+                                </span>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Configuración especial: Código alfanumérico limpio */}
+                          {elementoSeleccionado === 'codigo' && (
+                            <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2">
+                              <div>
+                                <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                  Prefijo o texto antes del código:
+                                </label>
+                                <input
+                                  type="text"
+                                  value={act.textoPrefijo !== undefined ? act.textoPrefijo : 'CÓD.: '}
+                                  onChange={(e) => actualizarPosicionElemento('codigo', { textoPrefijo: e.target.value })}
+                                  placeholder='Ej: "CÓD.: ", "REGISTRO N° ", o vacío'
+                                  className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                />
+                              </div>
+
+                              <div className="p-2 bg-emerald-50 dark:bg-emerald-950/40 rounded-lg border border-emerald-200 dark:border-emerald-800 text-[10px] text-emerald-800 dark:text-emerald-300 leading-snug">
+                                <span className="font-bold block">✓ Texto puro y sin duplicados:</span>
+                                Se imprime como texto limpio sin cuadros de fondo. Los códigos se generan con algoritmo Crockford Base32 (34 mil millones de variantes) con índice UNIQUE garantizado en base de datos.
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Si es QR, control de tamaño 1:1 estricto */}
+                          {elementoSeleccionado === 'qr' && (
+                            <div className="pt-2 border-t border-slate-200 dark:border-slate-700/60 space-y-1">
+                              <div className="flex justify-between items-center text-[10px]">
+                                <span className="font-bold text-slate-700 dark:text-slate-300">Tamaño QR (Relación 1:1 estricta):</span>
+                                <span className="font-mono text-indigo-600 font-bold">{act.tamano || 52}px (~{(((act.tamano || 52) / 300) * 2.54).toFixed(1)} cm)</span>
+                              </div>
+                              <input
+                                type="range"
+                                min="35"
+                                max="120"
+                                step="2"
+                                value={act.tamano || 52}
+                                onChange={(e) => actualizarPosicionElemento('qr', { tamano: Number(e.target.value) })}
+                                className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                              />
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })()}
                   </div>
 
-                  <div className="pt-2 flex items-center justify-between">
-                    <label className="flex items-center gap-2 cursor-pointer text-xs font-bold text-slate-700 dark:text-slate-300">
-                      <input 
-                        type="checkbox"
-                        checked={editorIncluyeQr}
-                        onChange={(e) => setEditorIncluyeQr(e.target.checked)}
-                        className="rounded text-indigo-600 focus:ring-indigo-500 size-4"
-                      />
-                      <span>Incluir código QR</span>
-                    </label>
-
+                  <div className="pt-2 flex items-center justify-end gap-2.5">
+                    <button
+                      type="button"
+                      onClick={() => salirDelEditorConConfirmacion(() => setActiveTab('modelos'))}
+                      className="px-4 py-2.5 rounded-xl font-bold text-xs border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
+                    >
+                      Descartar cambios
+                    </button>
                     <button
                       type="submit"
-                      className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer"
+                      disabled={subiendoFondo}
+                      className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer disabled:opacity-60"
                     >
-                      <BookmarkCheck className="w-4 h-4" />
-                      <span>{modeloSeleccionadoId ? 'Guardar cambios' : 'Guardar en galería'}</span>
+                      {subiendoFondo ? <Loader2 className="w-4 h-4 animate-spin" /> : <BookmarkCheck className="w-4 h-4" />}
+                      <span>{subiendoFondo ? 'Optimizando y guardando...' : (modeloSeleccionadoId ? 'Guardar cambios' : 'Guardar en galería')}</span>
                     </button>
                   </div>
                 </form>
 
-                {/* Canvas A4 en Tiempo Real (Adaptable Horizontal / Vertical) */}
-                <div className="lg:col-span-7 bg-slate-950 p-6 sm:p-8 rounded-3xl flex flex-col items-center justify-center min-h-[460px] border border-slate-800">
-                  <span className="text-[10px] font-mono text-slate-400 mb-3 uppercase tracking-widest flex items-center gap-1.5">
-                    <Eye className="w-3.5 h-3.5 text-indigo-400" /> Vista previa del lienzo A4 {editorOrientacion === 'vertical' ? 'Vertical (Portrait)' : 'Horizontal (Landscape)'}
-                  </span>
-
-                  <div 
-                    className={`rounded-2xl border-8 text-center shadow-2xl relative transition-all overflow-hidden ${
-                      editorOrientacion === 'vertical' ? 'w-full max-w-sm py-10 px-6' : 'w-full max-w-lg p-8'
-                    } ${
-                      editorImagenFondo ? 'bg-cover bg-center border-slate-700 text-slate-900' : marcoEstilos[editorEstiloMarco]
-                    }`}
-                    style={editorImagenFondo ? { backgroundImage: `url(${editorImagenFondo})` } : {}}
-                  >
-                    {/* Header Institucional */}
-                    <div className="flex justify-between items-center border-b border-black/10 dark:border-white/10 pb-3 mb-4">
-                      <div className="text-left">
-                        <span className="text-[8px] font-mono font-bold tracking-widest block opacity-70">ESCUELA DE POSTGRADO & MINERÍA</span>
-                        <h4 className="text-[11px] font-black tracking-tight">INSTITUTO INTERNACIONAL EDUMIN</h4>
-                      </div>
-                      <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center font-black text-xs text-indigo-600">
-                        EM
-                      </div>
+                {/* Columna de Previsualización A4 Fija / Sticky (Permite hacer scroll libre en la configuración) */}
+                <div className="lg:col-span-7 lg:sticky lg:top-4 self-start">
+                  <div className="bg-slate-950 p-5 sm:p-6 rounded-3xl flex flex-col items-center justify-start border border-slate-800 shadow-xl max-h-[calc(100vh-2rem)] overflow-y-auto">
+                    <div className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 px-2">
+                    <div>
+                      <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+                        <Eye className="w-3.5 h-3.5 text-indigo-400" /> Vista previa lienzo A4 {editorOrientacion === 'vertical' ? 'Vertical (21.0×29.7 cm)' : 'Horizontal (29.7×21.0 cm)'}
+                      </span>
+                      <p className="text-[11px] text-slate-500">
+                        ✨ Arrastra cualquier variable directamente sobre el lienzo para ubicarla libremente
+                      </p>
                     </div>
 
-                    <span className="text-[9px] uppercase font-bold tracking-widest opacity-75 block">
-                      {editorTitulo}
-                    </span>
+                    <button
+                      type="button"
+                      disabled={descargandoPdf}
+                      onClick={async () => {
+                        try {
+                          setDescargandoPdf(true);
+                          const esNombreAlcanceGlobal = (nombre?: string) => 
+                            !nombre || nombre.startsWith('TODOS LOS') || nombre.startsWith('SUPERPLANTILLA');
+                          const programaParaPdf = programaSimuladoPrueba || (
+                            !esNombreAlcanceGlobal(editorRecursoEspecifico)
+                              ? editorRecursoEspecifico
+                              : (editorTipo === 'CURSO' 
+                                  ? (catalogoCursos[0]?.titulo || 'GESTIÓN DE SEGURIDAD MINERA')
+                                  : (catalogoDiplomados[0]?.titulo || 'GESTIÓN DE SEGURIDAD MINERA'))
+                          );
+                          await descargarCertificadoA4Pdf({
+                            tipo: editorTipo,
+                            orientacion: editorOrientacion,
+                            estudiante: nombreSimuladoPrueba || 'Quispe Ramos, Juan Carlos',
+                            programa: programaParaPdf,
+                            modulo: editorTipo === 'MODULAR' ? moduloSimuladoPrueba : undefined,
+                            horas: editorTipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos',
+                            fecha: new Date().toISOString().split('T')[0],
+                            codigo: 'HNYNXT2',
+                            imagenFondoUrl: editorImagenFondo,
+                            incluyeQr: editorDisenoCoordenadas.qr.visible,
+                            diseno: editorDisenoCoordenadas
+                          }, `Modelo_${editorNombre.replace(/[^a-zA-Z0-9_-]/g, '_')}_A4.pdf`);
+                        } catch (e) {
+                          console.error('Error generando PDF:', e);
+                          alert('Error al descargar el PDF de muestra.');
+                        } finally {
+                          setDescargandoPdf(false);
+                        }
+                      }}
+                      className="px-3.5 py-2 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition shadow-sm cursor-pointer flex items-center gap-1.5 disabled:opacity-50 shrink-0 self-start sm:self-auto"
+                      title="Descargar este modelo de certificado en PDF A4 exacto"
+                    >
+                      {descargandoPdf ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Download className="w-3.5 h-3.5" />}
+                      <span>Descargar PDF</span>
+                    </button>
+                  </div>
 
-                    <p className="text-[10px] opacity-70 mt-2">Otorgado a favor de:</p>
-                    
-                    <h3 className="text-lg font-extrabold font-serif my-2 underline decoration-amber-500 underline-offset-4">
-                      [Nombre del estudiante]
-                    </h3>
-                    <p className="text-[9px] opacity-60 font-mono">DNI / CE: [DNI del estudiante]</p>
-
-                    <p className="text-xs mt-3 px-2 leading-relaxed opacity-85">
-                      {editorTextoOtorgamiento}
-                    </p>
-                    <p className="text-xs font-black mt-1 uppercase px-2">
-                      {editorRecursoEspecifico || '[Nombre del programa académico / diplomado]'}
-                    </p>
-
-                    <div className="my-3 flex items-center justify-center gap-3 text-[10px] font-bold">
-                      <span className="px-2.5 py-0.5 rounded-md border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
-                        ⏱️ {editorHoras}
-                      </span>
-                      <span className="px-2.5 py-0.5 rounded-md border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
-                        🏆 Calificación: [Nota]
-                      </span>
-                    </div>
-
-                    {/* Footer del Certificado */}
-                    <div className="mt-4 pt-3 border-t border-black/10 dark:border-white/10 flex justify-between items-end text-[8px] opacity-80">
-                      <div className="text-left font-mono">
-                        <p>Emisión: [Fecha actual]</p>
-                        <p className="font-bold mt-0.5">Código: EDM-2026-CERT-9X2K</p>
-                      </div>
-
-                      <div className="flex gap-4">
-                        {editorFirmas.map((f, i) => (
-                          <div key={i} className="text-center">
-                            <div className="w-16 border-b border-black/30 dark:border-white/30 mb-0.5"></div>
-                            <span className="text-[7px] block font-bold">{f}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {editorIncluyeQr && (
-                        <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-md border border-slate-200 shadow-sm">
-                          <QrCode className="w-5 h-5" />
-                          <span className="text-[6px] font-mono font-bold">QR VÁLIDO</span>
+                  {/* Barra de Simulación Interactiva (Nombres manuales y Selección de programas reales) */}
+                  <div className="w-full mb-4 p-3 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2.5">
+                    {/* Simulación manual de nombre */}
+                    <div>
+                      <div className="flex items-center justify-between mb-1">
+                        <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1">
+                          <Type className="w-3 h-3 text-indigo-400" /> Probar nombre de estudiante (Simulación en vivo):
+                        </label>
+                        <div className="flex items-center gap-1">
+                          <button
+                            type="button"
+                            onClick={() => setNombreSimuladoPrueba('Ana Paz')}
+                            className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+                          >
+                            Corto
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setNombreSimuladoPrueba('Quispe Ramos, Juan Carlos')}
+                            className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+                          >
+                            Estándar
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setNombreSimuladoPrueba('De la Flor Montenegro de los Ríos, María de los Ángeles')}
+                            className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-slate-800 hover:bg-slate-700 text-slate-300 transition cursor-pointer"
+                          >
+                            Largo (1 línea)
+                          </button>
                         </div>
-                      )}
+                      </div>
+                      <input
+                        type="text"
+                        value={nombreSimuladoPrueba}
+                        onChange={(e) => setNombreSimuladoPrueba(e.target.value)}
+                        placeholder="Escribe cualquier nombre largo o corto para verificar que nunca se corte..."
+                        className="w-full px-3 py-1.5 bg-slate-950 border border-slate-700 rounded-xl text-xs font-bold text-white placeholder-slate-500 focus:ring-2 focus:ring-indigo-500"
+                      />
                     </div>
 
+                    {/* Selector interactivo de programas del catálogo */}
+                    <div>
+                      <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1">
+                        <BookOpen className="w-3 h-3 text-indigo-400" /> Probar con programa del catálogo:
+                      </label>
+                      <select
+                        value={programaSimuladoPrueba}
+                        onChange={(e) => setProgramaSimuladoPrueba(e.target.value)}
+                        className="w-full px-3 py-1.5 bg-slate-950 border border-slate-700 rounded-xl text-xs font-bold text-white focus:ring-2 focus:ring-indigo-500"
+                      >
+                        <option value="">-- Usar asignado o predeterminado --</option>
+                        <optgroup label="Casos especiales de tipografía">
+                          <option value="GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA">
+                            GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA (Prueba conector &quot;Y&quot;)
+                          </option>
+                          <option value="SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE EN OPERACIONES MINERAS">
+                            SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE EN OPERACIONES MINERAS (Título largo 2 líneas)
+                          </option>
+                          <option value="DERECHO MINERO">
+                            DERECHO MINERO (Título corto)
+                          </option>
+                        </optgroup>
+                        {catalogoDiplomados.length > 0 && (
+                          <optgroup label="Catálogo de Diplomados">
+                            {catalogoDiplomados.map((d: any) => (
+                              <option key={d.id || d.titulo} value={d.titulo || d.nombre}>
+                                {d.titulo || d.nombre}
+                              </option>
+                            ))}
+                          </optgroup>
+                        )}
+                        {catalogoCursos.length > 0 && (
+                          <optgroup label="Catálogo de Cursos">
+                            {catalogoCursos.map((c: any) => (
+                              <option key={c.id || c.titulo} value={c.titulo || c.nombre}>
+                                {c.titulo || c.nombre}
+                              </option>
+                            ))}
+                          </optgroup>
+                        )}
+                      </select>
+                    </div>
+
+                    {/* Si es modular, input para probar módulo */}
+                    {editorTipo === 'MODULAR' && (
+                      <div>
+                        <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
+                          Título del módulo de prueba:
+                        </label>
+                        <input
+                          type="text"
+                          value={moduloSimuladoPrueba}
+                          onChange={(e) => setModuloSimuladoPrueba(e.target.value)}
+                          placeholder="Módulo 01: ..."
+                          className="w-full px-3 py-1.5 bg-slate-950 border border-slate-700 rounded-xl text-xs font-bold text-white focus:ring-2 focus:ring-indigo-500"
+                        />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Lienzo del certificado A4 con Drag & Drop interactivo */}
+                  {(() => {
+                    const esNombreAlcanceGlobal = (nombre?: string) => 
+                      !nombre || nombre.startsWith('TODOS LOS') || nombre.startsWith('SUPERPLANTILLA');
+                    const programaParaLienzo = programaSimuladoPrueba || (
+                      !esNombreAlcanceGlobal(editorRecursoEspecifico)
+                        ? editorRecursoEspecifico
+                        : (editorTipo === 'CURSO' 
+                            ? (catalogoCursos[0]?.titulo || 'GESTIÓN DE SEGURIDAD MINERA')
+                            : (catalogoDiplomados[0]?.titulo || 'GESTIÓN DE SEGURIDAD MINERA'))
+                    );
+                    return (
+                      <div className={`w-full flex items-center justify-center ${editorOrientacion === 'vertical' ? 'max-w-sm' : 'max-w-xl'}`}>
+                        <AvanzaCertificateRenderer
+                          tipo={editorTipo}
+                          orientacion={editorOrientacion}
+                          estudiante={nombreSimuladoPrueba || 'Quispe Ramos, Juan Carlos'}
+                          programa={programaParaLienzo}
+                          modulo={editorTipo === 'MODULAR' ? moduloSimuladoPrueba : undefined}
+                          horas={editorTipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos'}
+                          fecha={new Date().toISOString().split('T')[0]}
+                          codigo="HNYNXT2"
+                          imagenFondoUrl={editorImagenFondo}
+                          incluyeQr={editorDisenoCoordenadas.qr.visible}
+                          diseno={editorDisenoCoordenadas}
+                          elementoActivo={elementoSeleccionado}
+                          modoArrastrable={true}
+                          onMoverElemento={(campo, x, y) => actualizarPosicionElemento(campo, { x, y })}
+                          onSeleccionarElemento={(campo) => setElementoSeleccionado(campo)}
+                        />
+                      </div>
+                    );
+                  })()}
                   </div>
                 </div>
 
@@ -1704,7 +2673,7 @@ export default function CertificacionesAdminPage() {
                 >
                   {modelosCertificados.map((m) => (
                     <option key={m.id} value={m.id}>
-                      {m.nombre} · Marco {m.estiloMarco.toUpperCase()} ({m.tipo})
+                      {m.nombre} · Marco {(m.estiloMarco || 'dorado').toUpperCase()} ({m.tipo})
                     </option>
                   ))}
                 </select>
@@ -1841,102 +2810,63 @@ export default function CertificacionesAdminPage() {
 
             {/* Certificado Canvas A4 Simulado */}
             <div className="p-4 sm:p-6 bg-slate-950 flex items-center justify-center">
-              {modeloParaPrevisualizar.id === 'mod-avanza-dip' || modeloParaPrevisualizar.id === 'mod-avanza-mod' || modeloParaPrevisualizar.imagenFondoUrl?.includes('plantilla_avanza') ? (
-                <div className="w-full max-w-xl">
-                  <AvanzaCertificateRenderer
-                    tipo={modeloParaPrevisualizar.tipo}
-                    estudiante="QUISPE RAMOS, JUAN CARLOS"
-                    programa={programaSimuladoEnModal}
-                    modulo={modeloParaPrevisualizar.tipo === 'MODULAR' ? 'Módulo 01: Legislación Minera y Marco Legal del Sector' : undefined}
-                    horas={modeloParaPrevisualizar.horas}
-                    fecha={new Date().toISOString().split('T')[0]}
-                    codigo="HNYNXT2"
-                  />
-                </div>
-              ) : (
-                <div 
-                  className={`rounded-2xl border-8 text-center shadow-2xl relative transition-all overflow-hidden ${
-                    modeloParaPrevisualizar.orientacion === 'vertical' ? 'w-full max-w-sm py-10 px-6' : 'w-full max-w-lg p-8'
-                  } ${
-                    modeloParaPrevisualizar.imagenFondoUrl ? 'bg-cover bg-center border-slate-700 text-slate-900' : marcoEstilos[modeloParaPrevisualizar.estiloMarco]
-                  }`}
-                  style={modeloParaPrevisualizar.imagenFondoUrl ? { backgroundImage: `url(${modeloParaPrevisualizar.imagenFondoUrl})` } : {}}
-                >
-                  
-                  {/* Logo y Encabezado */}
-                  <div className="flex justify-between items-center border-b border-black/10 dark:border-white/10 pb-3 mb-4">
-                    <div className="text-left">
-                      <span className="text-[9px] font-mono font-bold tracking-widest block opacity-70">ESCUELA DE POSTGRADO & MINERÍA</span>
-                      <h4 className="text-xs font-black">INSTITUTO INTERNACIONAL EDUMIN</h4>
-                    </div>
-                    <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center text-indigo-700 font-black text-xs">
-                      EM
-                    </div>
-                  </div>
-
-                  <span className="text-[10px] uppercase font-bold tracking-widest opacity-80 block">
-                    {modeloParaPrevisualizar.tituloCertificado}
-                  </span>
-
-                  <p className="text-[11px] opacity-70 mt-2">Otorgado a favor de:</p>
-                  
-                  <h3 className="text-xl font-extrabold font-serif my-2 underline decoration-amber-500 underline-offset-4">
-                    Ing. Carlos Mendoza Quispe
-                  </h3>
-                  <p className="text-[10px] opacity-60 font-mono">DNI / CE: 74589210</p>
-
-                  <p className="text-xs mt-3 px-4 leading-relaxed opacity-85">
-                    {modeloParaPrevisualizar.textoOtorgamiento}
-                  </p>
-                  <p className="text-sm font-black mt-1 uppercase px-4 text-indigo-950 dark:text-indigo-200">
-                    {programaSimuladoEnModal}
-                  </p>
-
-                  <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold">
-                    <span className="px-3 py-1 rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
-                      ⏱️ {modeloParaPrevisualizar.horas}
-                    </span>
-                    <span className="px-3 py-1 rounded-lg border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5">
-                      🏆 Calificación: 19
-                    </span>
-                  </div>
-
-                  {/* Footer del Certificado */}
-                  <div className="mt-6 pt-4 border-t border-black/10 dark:border-white/10 flex justify-between items-end text-[9px] opacity-80">
-                    <div className="text-left font-mono">
-                      <p>Fecha de emisión: {new Date().toISOString().split('T')[0]}</p>
-                      <p className="font-bold mt-0.5">Código: EDM-2026-DIP-8F4K2A</p>
-                    </div>
-
-                    <div className="flex gap-6">
-                      {modeloParaPrevisualizar.firmas.map((f, i) => (
-                        <div key={i} className="text-center">
-                          <div className="w-20 border-b border-black/30 dark:border-white/30 mb-1"></div>
-                          <span className="text-[8px] block font-bold">{f}</span>
-                          <span className="text-[7px] opacity-70">EDUMIN LMS</span>
-                        </div>
-                      ))}
-                    </div>
-
-                    {modeloParaPrevisualizar.incluyeQr && (
-                      <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm">
-                        <QrCode className="w-7 h-7" />
-                        <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
-                      </div>
-                    )}
-                  </div>
-
-                </div>
-              )}
+              <div className={`w-full flex items-center justify-center ${modeloParaPrevisualizar.orientacion === 'vertical' ? 'max-w-sm' : 'max-w-xl'}`}>
+                <AvanzaCertificateRenderer
+                  tipo={modeloParaPrevisualizar.tipo}
+                  orientacion={modeloParaPrevisualizar.orientacion || 'horizontal'}
+                  estudiante="QUISPE RAMOS, JUAN CARLOS"
+                  programa={programaSimuladoEnModal}
+                  modulo={modeloParaPrevisualizar.tipo === 'MODULAR' ? 'Módulo 01: Legislación Minera y Marco Legal del Sector' : undefined}
+                  horas={modeloParaPrevisualizar.horas || (modeloParaPrevisualizar.tipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos')}
+                  fecha={new Date().toISOString().split('T')[0]}
+                  codigo="HNYNXT2"
+                  imagenFondoUrl={modeloParaPrevisualizar.imagenFondoUrl}
+                  incluyeQr={modeloParaPrevisualizar.incluyeQr !== false}
+                  diseno={modeloParaPrevisualizar.disenoCoordenadas}
+                />
+              </div>
             </div>
 
             {/* Footer con Acciones */}
-            <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 flex items-center justify-between">
+            <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 flex flex-wrap items-center justify-between gap-3">
               <span className="text-xs text-slate-500 font-mono">
-                {modeloParaPrevisualizar.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' ? 'Superplantilla global' : 'Asignación específica'}
+                {modeloParaPrevisualizar.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' ? 'Superplantilla global' : 'Asignación específica'} • {modeloParaPrevisualizar.orientacion === 'vertical' ? 'A4 Vertical (Portrait)' : 'A4 Horizontal (Landscape)'}
               </span>
 
               <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  disabled={descargandoPdf}
+                  onClick={async () => {
+                    try {
+                      setDescargandoPdf(true);
+                      await descargarCertificadoA4Pdf({
+                        tipo: modeloParaPrevisualizar.tipo,
+                        orientacion: modeloParaPrevisualizar.orientacion || 'horizontal',
+                        estudiante: 'QUISPE RAMOS, JUAN CARLOS',
+                        programa: programaSimuladoEnModal,
+                        modulo: modeloParaPrevisualizar.tipo === 'MODULAR' ? 'Módulo 01: Legislación Minera y Marco Legal del Sector' : undefined,
+                        horas: modeloParaPrevisualizar.horas || (modeloParaPrevisualizar.tipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos'),
+                        fecha: new Date().toISOString().split('T')[0],
+                        codigo: 'HNYNXT2',
+                        imagenFondoUrl: modeloParaPrevisualizar.imagenFondoUrl,
+                        incluyeQr: modeloParaPrevisualizar.incluyeQr !== false,
+                        diseno: modeloParaPrevisualizar.disenoCoordenadas
+                      }, `Modelo_${modeloParaPrevisualizar.nombre.replace(/[^a-zA-Z0-9_-]/g, '_')}_A4.pdf`);
+                    } catch (e) {
+                      console.error('Error generando PDF de muestra:', e);
+                      alert('Error al descargar el PDF de muestra.');
+                    } finally {
+                      setDescargandoPdf(false);
+                    }
+                  }}
+                  className="px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition shadow-md cursor-pointer flex items-center gap-1.5 disabled:opacity-50"
+                  title="Descargar este modelo como documento PDF A4"
+                >
+                  {descargandoPdf ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                  <span>Descargar PDF de muestra</span>
+                </button>
+
                 <button
                   onClick={() => {
                     const m = modeloParaPrevisualizar;
@@ -1985,97 +2915,30 @@ export default function CertificacionesAdminPage() {
             {/* Certificado Canvas A4 Simulado */}
             <div className="p-4 sm:p-6 bg-slate-950 flex items-center justify-center">
               {(() => {
-                const modeloActual = modelosCertificados.find(m => m.id === certificadoParaVer.modelo_id) || 
+                const snapshot = certificadoParaVer.plantilla_snapshot || {};
+                const modeloActual = modelosCertificados.find(m => m.id === (snapshot.modelo_id || certificadoParaVer.modelo_id)) || 
                   (certificadoParaVer.tipo === 'DIPLOMA' ? modelosCertificados.find(m => m.id === 'mod-avanza-dip') : modelosCertificados.find(m => m.id === 'mod-avanza-mod')) || 
                   modelosCertificados[0];
 
-                const esAvanza = modeloActual.id === 'mod-avanza-dip' || modeloActual.id === 'mod-avanza-mod' || modeloActual.imagenFondoUrl?.includes('plantilla_avanza');
-
-                if (esAvanza) {
-                  return (
-                    <div className="w-full max-w-xl">
-                      <AvanzaCertificateRenderer
-                        tipo={certificadoParaVer.tipo}
-                        estudiante={certificadoParaVer.estudiante}
-                        programa={certificadoParaVer.programa}
-                        modulo={certificadoParaVer.modulo}
-                        horas={certificadoParaVer.horas}
-                        fecha={certificadoParaVer.fecha}
-                        codigo={certificadoParaVer.codigo}
-                      />
-                    </div>
-                  );
-                }
+                const orientacionFinal = snapshot.orientacion || modeloActual?.orientacion || 'horizontal';
+                const imagenFondoFinal = snapshot.imagenFondoUrl !== undefined ? snapshot.imagenFondoUrl : modeloActual?.imagenFondoUrl;
+                const disenoFinal = snapshot.disenoCoordenadas || modeloActual?.disenoCoordenadas;
 
                 return (
-                  <div 
-                    className={`rounded-2xl border-8 text-center shadow-2xl relative transition-all overflow-hidden ${
-                      modeloActual.orientacion === 'vertical' ? 'w-full max-w-sm py-10 px-6' : 'w-full max-w-lg p-8'
-                    } ${
-                      modeloActual.imagenFondoUrl ? 'bg-cover bg-center border-slate-700 text-slate-900' : (marcoEstilos[modeloActual.estiloMarco] || 'bg-gradient-to-br from-amber-50 via-white to-amber-50/60 border-amber-600/40 text-slate-900')
-                    }`}
-                    style={modeloActual.imagenFondoUrl ? { backgroundImage: `url(${modeloActual.imagenFondoUrl})` } : {}}
-                  >
-                    {/* Logo y Encabezado */}
-                    <div className="flex justify-between items-center border-b border-black/10 dark:border-white/10 pb-3 mb-4">
-                      <div className="text-left">
-                        <span className="text-[9px] font-mono font-bold tracking-widest block opacity-70">ESCUELA DE POSTGRADO & MINERÍA</span>
-                        <h4 className="text-xs font-black">INSTITUTO INTERNACIONAL EDUMIN</h4>
-                      </div>
-                      <div className="size-8 rounded-full bg-indigo-600/10 border border-indigo-600/30 flex items-center justify-center text-indigo-700 font-black text-xs">
-                        EM
-                      </div>
-                    </div>
-
-                    <span className="text-[10px] uppercase font-bold tracking-widest text-indigo-900 dark:text-indigo-400">
-                      {certificadoParaVer.tipo === 'DIPLOMA' ? 'DIPLOMA DE ALTA ESPECIALIZACIÓN' : certificadoParaVer.tipo === 'MODULAR' ? 'CERTIFICADO MODULAR OFICIAL' : 'CERTIFICADO DE ESPECIALIZACIÓN'}
-                    </span>
-
-                    <p className="text-[11px] opacity-70 mt-2">Otorgado con distinción a:</p>
-                    
-                    <h3 className="text-xl font-extrabold font-serif text-indigo-950 dark:text-white my-2 underline decoration-amber-500 underline-offset-4">
-                      {certificadoParaVer.estudiante}
-                    </h3>
-                    <p className="text-[10px] opacity-60 font-mono">DNI / CE: {certificadoParaVer.dni}</p>
-
-                    <p className="text-xs opacity-80 mt-3 px-4 leading-relaxed">
-                      Por haber cursado y aprobado satisfactoriamente los requisitos académicos del programa de:
-                    </p>
-                    <p className="text-sm font-black mt-1 uppercase px-4 text-slate-900 dark:text-white">
-                      {certificadoParaVer.modulo ? `${certificadoParaVer.modulo} • ${certificadoParaVer.programa}` : certificadoParaVer.programa}
-                    </p>
-
-                    <div className="my-4 flex items-center justify-center gap-4 text-xs font-bold">
-                      <span className="bg-amber-100/80 text-amber-900 px-3 py-1 rounded-lg border border-amber-300">
-                        ⏱️ {certificadoParaVer.horas}
-                      </span>
-                      <span className="bg-indigo-100/80 text-indigo-900 px-3 py-1 rounded-lg border border-indigo-300">
-                        🏆 Calificación: {certificadoParaVer.nota}
-                      </span>
-                    </div>
-
-                    {/* Footer del Certificado con QR y Firmas */}
-                    <div className="mt-6 pt-4 border-t border-black/10 flex justify-between items-end text-[9px] opacity-80">
-                      <div className="text-left font-mono">
-                        <p>Fecha de emisión: {certificadoParaVer.fecha}</p>
-                        <p className="font-bold text-indigo-900 dark:text-indigo-400 mt-0.5">Código: {certificadoParaVer.codigo}</p>
-                      </div>
-
-                      {/* Firmas Simuladas */}
-                      <div className="flex gap-6">
-                        <div className="text-center">
-                          <div className="w-20 border-b border-black/30 dark:border-white/30 mb-1"></div>
-                          <span className="text-[8px] block font-bold">Director Académico</span>
-                          <span className="text-[7px] opacity-70">EDUMIN LMS</span>
-                        </div>
-                      </div>
-
-                      {/* Código QR */}
-                      <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm">
-                        <QrCode className="w-7 h-7 text-slate-900" />
-                        <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
-                      </div>
-                    </div>
+                  <div className={`w-full flex items-center justify-center ${orientacionFinal === 'vertical' ? 'max-w-sm' : 'max-w-xl'}`}>
+                    <AvanzaCertificateRenderer
+                      tipo={certificadoParaVer.tipo}
+                      orientacion={orientacionFinal}
+                      estudiante={certificadoParaVer.estudiante}
+                      programa={certificadoParaVer.programa}
+                      modulo={certificadoParaVer.modulo}
+                      horas={certificadoParaVer.horas}
+                      fecha={certificadoParaVer.fecha}
+                      codigo={certificadoParaVer.codigo}
+                      imagenFondoUrl={imagenFondoFinal}
+                      incluyeQr={true}
+                      diseno={disenoFinal}
+                    />
                   </div>
                 );
               })()}
@@ -2095,11 +2958,50 @@ export default function CertificacionesAdminPage() {
 
               <div className="flex items-center gap-2">
                 <button
+                  type="button"
+                  disabled={descargandoPdf}
+                  onClick={async () => {
+                    try {
+                      setDescargandoPdf(true);
+                      const snapshot = certificadoParaVer.plantilla_snapshot || {};
+                      const modeloActual = modelosCertificados.find(m => m.id === (snapshot.modelo_id || certificadoParaVer.modelo_id)) || modelosCertificados[0];
+                      const orientacionFinal = snapshot.orientacion || modeloActual?.orientacion || 'horizontal';
+                      const imagenFondoFinal = snapshot.imagenFondoUrl !== undefined ? snapshot.imagenFondoUrl : modeloActual?.imagenFondoUrl;
+                      const disenoFinal = snapshot.disenoCoordenadas || modeloActual?.disenoCoordenadas;
+
+                      await descargarCertificadoA4Pdf({
+                        tipo: certificadoParaVer.tipo,
+                        orientacion: orientacionFinal,
+                        estudiante: certificadoParaVer.estudiante,
+                        programa: certificadoParaVer.programa,
+                        modulo: certificadoParaVer.modulo,
+                        horas: certificadoParaVer.horas,
+                        fecha: certificadoParaVer.fecha,
+                        codigo: certificadoParaVer.codigo,
+                        imagenFondoUrl: imagenFondoFinal,
+                        incluyeQr: true,
+                        diseno: disenoFinal
+                      }, `Certificado_${certificadoParaVer.codigo}_${certificadoParaVer.dni}.pdf`);
+                    } catch (e) {
+                      console.error('Error al descargar PDF:', e);
+                      alert('Error generando el archivo PDF.');
+                    } finally {
+                      setDescargandoPdf(false);
+                    }
+                  }}
+                  className="px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition shadow-md cursor-pointer flex items-center gap-1.5 disabled:opacity-50"
+                  title="Descargar duplicado oficial en formato A4 exacto"
+                >
+                  {descargandoPdf ? <Loader2 className="w-4 h-4 animate-spin" /> : <Download className="w-4 h-4" />}
+                  <span>Descargar PDF</span>
+                </button>
+
+                <button
                   onClick={() => window.print()}
                   className="px-4 py-2 rounded-xl text-xs font-bold bg-indigo-600 hover:bg-indigo-700 text-white transition shadow-md cursor-pointer flex items-center gap-2"
                 >
                   <Printer className="w-4 h-4" />
-                  <span>Imprimir / Descargar PDF</span>
+                  <span>Imprimir</span>
                 </button>
                 <button
                   onClick={() => setCertificadoParaVer(null)}
