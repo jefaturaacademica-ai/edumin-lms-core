@@ -114,7 +114,7 @@ export async function matricularCurso(
               cuotas_pagadas: enrolledStudent.cuotas_pagadas,
               cupos_diplomados: enrolledStudent.cupos_diplomados,
             },
-            curso: { id: course.id, nombre: course.name },
+            curso: { id: cursoId, nombre: nombreCurso },
           }),
           cache: "no-store",
           signal: AbortSignal.timeout(10_000),
@@ -129,7 +129,7 @@ export async function matricularCurso(
 
     return {
       success: true,
-      message: `Tu matrícula en ${course.name} fue registrada correctamente.`,
+      message: `Tu matrícula en ${nombreCurso} fue registrada correctamente.`,
       webhookDelivered,
     };
   } catch (error) {

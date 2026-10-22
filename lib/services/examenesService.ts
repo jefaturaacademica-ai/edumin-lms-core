@@ -17,18 +17,18 @@ function getSupabaseClient() {
 // Fallback local en disco
 function getLocalFallbackFile(codigoDiplomado?: string): string {
   const mapaArchivos: Record<string, string> = {
-    'DIP-01': 'lib/data/banco_preguntas_derecho_minero.json',
-    'DIP-02': 'lib/data/banco_preguntas_comercio_internacional.json',
-    'DIP-03': 'lib/data/banco_preguntas_geologia_minera.json',
-    'DIP-04': 'lib/data/banco_preguntas_geomecanica.json',
-    'DIP-05': 'lib/data/banco_preguntas_geometalurgia.json',
-    'DIP-06': 'lib/data/banco_preguntas_geotecnia_minera.json',
-    'DIP-07': 'lib/data/banco_preguntas_sistemas_integrados_hseq.json',
-    'DIP-08': 'lib/data/banco_preguntas_gerencia_estrategica_liderazgo.json',
-    'DIP-09': 'lib/data/banco_preguntas_gestion_ambiental.json'
+    'DIP-01': 'banco_preguntas_derecho_minero.json',
+    'DIP-02': 'banco_preguntas_comercio_internacional.json',
+    'DIP-03': 'banco_preguntas_geologia_minera.json',
+    'DIP-04': 'banco_preguntas_geomecanica.json',
+    'DIP-05': 'banco_preguntas_geometalurgia.json',
+    'DIP-06': 'banco_preguntas_geotecnia_minera.json',
+    'DIP-07': 'banco_preguntas_sistemas_integrados_hseq.json',
+    'DIP-08': 'banco_preguntas_gerencia_estrategica_liderazgo.json',
+    'DIP-09': 'banco_preguntas_gestion_ambiental.json'
   };
-  const relPath = (codigoDiplomado && mapaArchivos[codigoDiplomado]) || mapaArchivos['DIP-01'];
-  return path.resolve(process.cwd(), relPath);
+  const fileName = (codigoDiplomado && mapaArchivos[codigoDiplomado]) || mapaArchivos['DIP-01'];
+  return path.join(process.cwd(), 'lib', 'data', fileName);
 }
 
 function leerBancoLocal(codigoDiplomado?: string): PreguntaBanco[] {
