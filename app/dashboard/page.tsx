@@ -315,15 +315,15 @@ export default async function DashboardPage() {
             <div className="space-y-4">
               <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
                 <span className="text-sm text-slate-500 dark:text-slate-400">Monto total</span>
-                <span className="font-semibold text-slate-900 dark:text-white">S/ {costoTotal}</span>
+                <span className="font-semibold tabular-nums text-slate-900 dark:text-white">S/ {costoTotal}</span>
               </div>
               <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-3">
                 <span className="text-sm text-slate-500 dark:text-slate-400">Total pagado</span>
-                <span className="font-semibold text-emerald-600 dark:text-emerald-400">S/ {montoPagado}</span>
+                <span className="font-semibold tabular-nums text-emerald-600 dark:text-emerald-400">S/ {montoPagado}</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-sm text-slate-500 dark:text-slate-400">Saldo pendiente</span>
-                <span className="font-bold text-slate-900 dark:text-white">S/ {saldoPendiente}</span>
+                <span className="font-bold tabular-nums text-slate-900 dark:text-white">S/ {saldoPendiente}</span>
               </div>
             </div>
           </div>

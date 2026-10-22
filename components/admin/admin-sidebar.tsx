@@ -43,9 +43,9 @@ export default function AdminSidebar() {
     const adminTitles: Record<string, string> = {
       '/admin': 'Dashboard y Finanzas 360°',
       '/admin/catalogo': 'Catálogo y Programas',
-      '/admin/examenes': 'Evaluaciones y Exámenes Modulares',
+      '/admin/examenes': 'Evaluaciones',
       '/admin/estudiantes': 'Estudiantes y Secretaría',
-      '/admin/certificaciones': 'Certificaciones y Convenios',
+      '/admin/certificaciones': 'Certificaciones',
       '/admin/alumnos-riesgo': 'Alumnos en Riesgo',
       '/admin/reportes': 'Reportes y Datos',
       '/admin/auditoria': 'Auditoría y Webhooks',
@@ -76,7 +76,7 @@ export default function AdminSidebar() {
         },
         {
           href: '/admin/examenes',
-          label: 'Evaluaciones y exámenes',
+          label: 'Evaluaciones',
           icon: FileQuestion,
           color: 'text-purple-400'
         },
@@ -88,7 +88,7 @@ export default function AdminSidebar() {
         },
         {
           href: '/admin/certificaciones',
-          label: 'Certificaciones y convenios',
+          label: 'Certificaciones',
           icon: Award,
           color: 'text-amber-400'
         }
@@ -150,7 +150,7 @@ export default function AdminSidebar() {
           <ShieldCheck className="w-7 h-7 text-indigo-500" />
           <div className="flex flex-col">
             <span className="font-black text-sm text-white tracking-tight leading-none">EDUMIN ADMIN</span>
-            <span className="text-[9px] font-mono text-emerald-400 font-bold">Plataforma Ejecutiva</span>
+            <span className="text-[9px] tabular-nums text-emerald-400 font-bold">Plataforma Ejecutiva</span>
           </div>
         </Link>
 
@@ -179,12 +179,12 @@ export default function AdminSidebar() {
           mobileOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="p-4 border-b border-slate-800 shrink-0 flex items-center justify-between">
+        <div className="p-4 border-b border-white/5 shrink-0 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <ShieldCheck className="w-7 h-7 text-indigo-500 shrink-0" />
             <div>
               <h2 className="text-sm font-black text-white tracking-tight leading-none">ADMIN PRO</h2>
-              <span className="text-[9px] font-mono text-emerald-400 font-bold">EDUMIN LMS v1.0</span>
+              <span className="text-[9px] tabular-nums text-emerald-400 font-bold">EDUMIN LMS v1.0</span>
             </div>
           </div>
           <button
@@ -196,7 +196,7 @@ export default function AdminSidebar() {
         </div>
 
         {/* Tarjeta de Usuario Admin en Móvil */}
-        <div className="p-4 border-b border-slate-900 shrink-0">
+        <div className="p-4 border-b border-white/5 shrink-0">
           <UserProfileCard currentView="admin" onNavigate={() => setMobileOpen(false)} />
         </div>
 
@@ -236,13 +236,13 @@ export default function AdminSidebar() {
         </nav>
 
         {/* Footer del Drawer Móvil */}
-        <div className="p-4 border-t border-slate-800 bg-slate-950/60 shrink-0 flex items-center gap-2">
+        <div className="p-4 border-t border-white/5 shrink-0 flex items-center gap-2">
           <button 
             onClick={() => {
               setMobileOpen(false);
               handleLogout();
             }}
-            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-red-400 hover:bg-red-500/10 hover:text-red-300 transition-colors text-xs font-bold cursor-pointer"
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-colors border border-white/5 shadow-sm text-xs font-medium cursor-pointer"
           >
             <LogOut className="w-4 h-4" />
             <span>Cerrar sesión</span>
@@ -253,20 +253,20 @@ export default function AdminSidebar() {
       </aside>
 
       {/* Sidebar Fijo Desktop */}
-      <aside className="w-64 h-screen bg-slate-900 dark:bg-slate-950 text-slate-300 flex flex-col hidden md:flex shrink-0 z-20 border-r border-slate-800 dark:border-slate-900 sticky top-0">
+      <aside className="w-64 h-screen bg-slate-950 text-slate-300 flex flex-col hidden md:flex shrink-0 z-20 border-r border-slate-900 sticky top-0">
         {/* Header Logo Desktop */}
-        <div className="p-5 flex items-center justify-between border-b border-slate-800 shrink-0">
+        <div className="p-5 flex items-center justify-between border-b border-white/5 shrink-0">
           <div className="flex items-center gap-3">
             <ShieldCheck className="w-8 h-8 text-indigo-500 shrink-0" />
             <div>
               <h2 className="text-xl font-black text-white tracking-tight leading-none">ADMIN PRO</h2>
-              <span className="text-[9px] font-mono font-bold text-emerald-400 tracking-wider">EDUMIN LMS v1.0</span>
+              <span className="text-[9px] tabular-nums font-bold text-emerald-400 tracking-wider">EDUMIN LMS v1.0</span>
             </div>
           </div>
         </div>
 
         {/* Tarjeta Admin Desktop */}
-        <div className="p-4 border-b border-slate-800/80 shrink-0">
+        <div className="p-4 border-b border-white/5 shrink-0">
           <UserProfileCard currentView="admin" />
         </div>
         
@@ -306,10 +306,10 @@ export default function AdminSidebar() {
         </nav>
 
         {/* Footer Logout Desktop con Selector de Tema */}
-        <div className="p-4 border-t border-slate-800 bg-slate-950/60 shrink-0 flex items-center gap-2">
+        <div className="p-4 border-t border-white/5 shrink-0 flex items-center gap-2">
           <button 
-            onClick={handleLogout} 
-            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-red-400 hover:bg-red-500/10 hover:text-red-300 transition-colors cursor-pointer text-xs font-bold"
+            onClick={handleLogout}
+            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-slate-400 hover:bg-red-500/10 hover:text-red-400 hover:border-red-500/20 transition-colors border border-white/5 shadow-sm text-xs font-medium cursor-pointer"
           >
             <LogOut className="w-4 h-4" />
             <span>Cerrar sesión</span>

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   CreditCard, ShieldCheck, Users, BookOpen, Settings, LogOut,
   Activity, Award, CheckCircle2, QrCode, FileText, Download, Layers, 
-  UserCheck, Server, X, Plus, Eye, Send, RefreshCw, Search, Filter,
+  UserCheck, Server, X, Plus, Eye, EyeOff, Send, RefreshCw, Search, Filter,
   Check, Copy, Sparkles, GraduationCap, AlertTriangle, Printer, Share2,
   Edit3, Trash2, LayoutTemplate, Palette, BookmarkCheck, Upload, Image as ImageIcon,
   ArrowLeft, FileCheck, Building2, Bell, Loader2,
@@ -46,6 +46,80 @@ export interface ModeloCertificado {
   disenoCoordenadas?: DisenoCoordenadas;
 }
 
+
+// Control numérico compacto con flechitas para subir/bajar (0.1 en 0.1 cm, 1 en 1 pt) o edición directa
+function ControlPasoNumero({
+  valor,
+  alCambiar,
+  min,
+  max,
+  paso = 0.1,
+  unidad = 'cm',
+  precision = 1,
+  ancho = 'w-14'
+}: {
+  valor: number;
+  alCambiar: (nuevo: number) => void;
+  min?: number;
+  max?: number;
+  paso?: number;
+  unidad?: string;
+  precision?: number;
+  ancho?: string;
+}) {
+  const decrementar = () => {
+    let nuevo = Number((valor - paso).toFixed(precision));
+    if (min !== undefined && nuevo < min) nuevo = min;
+    alCambiar(nuevo);
+  };
+  const incrementar = () => {
+    let nuevo = Number((valor + paso).toFixed(precision));
+    if (max !== undefined && nuevo > max) nuevo = max;
+    alCambiar(nuevo);
+  };
+
+  return (
+    <div className="inline-flex items-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-2xs hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors">
+      <button
+        type="button"
+        onClick={decrementar}
+        className="px-2 py-1.5 flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer select-none font-bold active:scale-95"
+        title="Disminuir valor"
+      >
+        <ChevronDown className="w-3.5 h-3.5" />
+      </button>
+      <div className="flex items-center px-1">
+        <input
+          type="number"
+          value={Number(valor.toFixed(precision))}
+          step={paso}
+          min={min}
+          max={max}
+          onChange={(e) => {
+            const val = parseFloat(e.target.value);
+            if (!isNaN(val)) {
+              let v = Number(val.toFixed(precision));
+              if (min !== undefined && v < min) v = min;
+              if (max !== undefined && v > max) v = max;
+              alCambiar(v);
+            }
+          }}
+          className={`${ancho} text-center text-xs font-bold bg-transparent border-0 focus:outline-none text-slate-900 dark:text-white [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`}
+        />
+        {unidad && <span className="text-[10px] font-semibold text-slate-500 select-none mr-1">{unidad}</span>}
+      </div>
+      <button
+        type="button"
+        onClick={incrementar}
+        className="px-2 py-1.5 flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer select-none font-bold active:scale-95"
+        title="Aumentar valor"
+      >
+        <ChevronUp className="w-3.5 h-3.5" />
+      </button>
+    </div>
+  );
+}
+
 export default function CertificacionesAdminPage() {
   const [activeTab, setActiveTab] = useState<'emitidos' | 'modelos' | 'editor' | 'cip' | 'emision'>('emitidos');
   const [mensajeExito, setMensajeExito] = useState<string | null>(null);
@@ -76,6 +150,24 @@ export default function CertificacionesAdminPage() {
   const [modeloSeleccionadoParaCert, setModeloSeleccionadoParaCert] = useState<string>('mod-avanza-mod');
   const [horasParaEditarCert, setHorasParaEditarCert] = useState<string>('');
   const [fechaParaEditarCert, setFechaParaEditarCert] = useState<string>('');
+
+  // Estados para Habilitar y Emitir Certificado Manualmente a un Estudiante (sin examen requerido)
+  const [mostrarModalHabilitarManual, setMostrarModalHabilitarManual] = useState(false);
+  const [listaEstudiantesPlataforma, setListaEstudiantesPlataforma] = useState<any[]>([]);
+  const [estudianteManualSeleccionado, setEstudianteManualSeleccionado] = useState<string>('');
+  const [nombreManualInput, setNombreManualInput] = useState('');
+  const [dniManualInput, setDniManualInput] = useState('');
+  const [tipoManual, setTipoManual] = useState<'DIPLOMA' | 'MODULAR' | 'CURSO' | 'TALLER' | 'CIP' | 'MIAMI'>('DIPLOMA');
+  const [programaManual, setProgramaManual] = useState('');
+  const [moduloManual, setModuloManual] = useState('');
+  const [modeloManualId, setModeloManualId] = useState('');
+  const [horasManual, setHorasManual] = useState('325 horas académicas y 13 créditos académicos');
+  const [notaManual, setNotaManual] = useState('18');
+  const [fechaManual, setFechaManual] = useState(new Date().toISOString().split('T')[0]);
+  const [guardandoManual, setGuardandoManual] = useState(false);
+  const [filtroEstudianteManual, setFiltroEstudianteManual] = useState('');
+
+
 
   // Estados para Emisión Masiva
   const [diplomadoEmisionMasiva, setDiplomadoEmisionMasiva] = useState<string>('');
@@ -282,6 +374,19 @@ export default function CertificacionesAdminPage() {
         }
       }
 
+      // Cargar estudiantes registrados para selector de emisión manual
+      try {
+        const resEst = await fetch('/api/admin/estudiantes');
+        if (resEst.ok) {
+          const dataEst = await resEst.json();
+          if (Array.isArray(dataEst.estudiantes)) {
+            setListaEstudiantesPlataforma(dataEst.estudiantes);
+          }
+        }
+      } catch (errEst) {
+        console.warn('Error cargando estudiantes para emision manual:', errEst);
+      }
+
       // 3. Cargar modelos de certificados guardados permanentemente en Supabase
       try {
         const resModelos = await fetch('/api/admin/certificaciones/modelos');
@@ -301,6 +406,119 @@ export default function CertificacionesAdminPage() {
       console.error('Error cargando datos de certificaciones y catálogo:', e);
     } finally {
       setCargando(false);
+    }
+  };
+
+
+  const abrirModalHabilitarManual = () => {
+    setEstudianteManualSeleccionado('');
+    setNombreManualInput('');
+    setDniManualInput('');
+    setTipoManual('DIPLOMA');
+    const progInicial = catalogoDiplomados[0]?.titulo || 'DIPLOMADO DE ALTA ESPECIALIZACIÓN';
+    setProgramaManual(progInicial);
+    setModuloManual('');
+    const modeloDefault = modelosCertificados.find(m => m.tipo === 'DIPLOMA' && m.esPredeterminado) || modelosCertificados[0];
+    setModeloManualId(modeloDefault?.id || 'mod-avanza-dip');
+    setHorasManual('325 horas académicas y 13 créditos académicos');
+    setNotaManual('18');
+    setFechaManual(new Date().toISOString().split('T')[0]);
+    setFiltroEstudianteManual('');
+    setMostrarModalHabilitarManual(true);
+  };
+
+  const handleCambioTipoManual = (nuevoTipo: 'DIPLOMA' | 'MODULAR' | 'CURSO' | 'TALLER' | 'CIP' | 'MIAMI') => {
+    setTipoManual(nuevoTipo);
+    if (nuevoTipo === 'DIPLOMA' || nuevoTipo === 'CIP' || nuevoTipo === 'MIAMI') {
+      const prog = catalogoDiplomados[0]?.titulo || 'DIPLOMADO';
+      setProgramaManual(prog);
+      setModuloManual('');
+      setHorasManual('325 horas académicas y 13 créditos académicos');
+      const mod = modelosCertificados.find(m => m.tipo === nuevoTipo && m.esPredeterminado) || modelosCertificados.find(m => m.tipo === nuevoTipo) || modelosCertificados[0];
+      if (mod) setModeloManualId(mod.id);
+    } else if (nuevoTipo === 'MODULAR') {
+      const prog = catalogoDiplomados[0]?.titulo || 'DIPLOMADO';
+      setProgramaManual(prog);
+      const primerDip = catalogoDiplomados.find(d => (d.titulo || d.nombre) === prog) || catalogoDiplomados[0];
+      const modNombre = primerDip?.modulos?.[0]?.nombre || primerDip?.modulos?.[0]?.titulo || 'Módulo 01: Marco Legal y Fundamentos';
+      setModuloManual(modNombre);
+      setHorasManual('108 horas académicas');
+      const mod = modelosCertificados.find(m => m.tipo === 'MODULAR' && m.esPredeterminado) || modelosCertificados.find(m => m.tipo === 'MODULAR') || modelosCertificados[0];
+      if (mod) setModeloManualId(mod.id);
+    } else if (nuevoTipo === 'CURSO') {
+      const prog = catalogoCursos[0]?.titulo || 'CURSO DE ESPECIALIZACIÓN';
+      setProgramaManual(prog);
+      setModuloManual('');
+      setHorasManual('24 horas cronológicas');
+      const mod = modelosCertificados.find(m => m.tipo === 'CURSO') || modelosCertificados[0];
+      if (mod) setModeloManualId(mod.id);
+    } else if (nuevoTipo === 'TALLER') {
+      const prog = catalogoTalleres[0]?.titulo || 'TALLER ESPECIALIZADO';
+      setProgramaManual(prog);
+      setModuloManual('');
+      setHorasManual('16 horas cronológicas');
+      const mod = modelosCertificados.find(m => m.tipo === 'TALLER') || modelosCertificados[0];
+      if (mod) setModeloManualId(mod.id);
+    }
+  };
+
+  const handleSeleccionarEstudianteManual = (dni: string) => {
+    setEstudianteManualSeleccionado(dni);
+    const est = listaEstudiantesPlataforma.find(e => e.dni_ce === dni);
+    if (est) {
+      setNombreManualInput(est.nombre || `${est.nombres || ''} ${est.apellidos || ''}`.trim());
+      setDniManualInput(est.dni_ce || dni);
+    }
+  };
+
+  const guardarEmisionManual = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!nombreManualInput.trim() || !dniManualInput.trim() || !programaManual.trim()) {
+      alert('Por favor completa el nombre del estudiante, DNI y programa académico.');
+      return;
+    }
+
+    setGuardandoManual(true);
+    const modeloElegido = modelosCertificados.find(m => m.id === modeloManualId) || modelosCertificados[0];
+
+    try {
+      const res = await fetch('/api/admin/certificaciones', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          accion: 'EMITIR_MANUAL',
+          estudiante: nombreManualInput.trim().toUpperCase(),
+          dni: dniManualInput.trim(),
+          programa: programaManual.trim(),
+          modulo: tipoManual === 'MODULAR' ? moduloManual.trim() : null,
+          tipo: tipoManual,
+          horas: horasManual.trim(),
+          nota: Number(notaManual) || 18,
+          fecha: fechaManual,
+          modelo_id: modeloElegido.id,
+          habilitado: true,
+          plantilla_snapshot: {
+            ...modeloElegido,
+            horas: horasManual.trim()
+          }
+        })
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        if (data.certificado) {
+          setCertificadosEmitidos(prev => [data.certificado, ...prev]);
+        }
+        setMensajeExito(data.message || '¡Certificado habilitado y emitido con éxito!');
+        setMostrarModalHabilitarManual(false);
+        setTimeout(() => setMensajeExito(null), 5000);
+      } else {
+        alert(data.error || 'Error al emitir el certificado.');
+      }
+    } catch (err: any) {
+      alert('Error de conexión al emitir certificado: ' + err.message);
+    } finally {
+      setGuardandoManual(false);
     }
   };
 
@@ -378,10 +596,10 @@ export default function CertificacionesAdminPage() {
 
   // Obtener lista dinámica de programas válidos según el tipo seleccionado
   const obtenerProgramasSegunTipo = () => {
-    if (filtroTipo === 'DIPLOMA' || filtroTipo === 'MODULAR') {
+    if (filtroTipo === 'DIPLOMA' || filtroTipo === 'MODULAR' || filtroTipo === 'CIP' || filtroTipo === 'MIAMI') {
       return catalogoDiplomados.length > 0 
         ? catalogoDiplomados.map(d => d.titulo) 
-        : Array.from(new Set(certificadosEmitidos.filter(c => c.tipo === 'DIPLOMA' || c.tipo === 'MODULAR').map(c => c.programa)));
+        : Array.from(new Set(certificadosEmitidos.filter(c => c.tipo === 'DIPLOMA' || c.tipo === 'MODULAR' || c.tipo === 'CIP' || c.tipo === 'MIAMI').map(c => c.programa)));
     }
     if (filtroTipo === 'CURSO') {
       return catalogoCursos.length > 0 
@@ -586,6 +804,8 @@ export default function CertificacionesAdminPage() {
     setActiveTab('editor');
   };
 
+
+
   const iniciarNuevoModelo = () => {
     if (activeTab === 'editor' && hayCambiosSinGuardar()) {
       if (!window.confirm('¿Deseas descartar la edición actual para iniciar un nuevo modelo en blanco?')) {
@@ -593,29 +813,39 @@ export default function CertificacionesAdminPage() {
       }
     }
     const nombreNuevo = `Nuevo modelo A4 #${modelosCertificados.length + 1}`;
-    const coordsDefault = { ...DISENO_DEFAULT_HORIZONTAL };
+    // Inicia desde cero con todas las variables apagadas (visible: false)
+    const coordsVacias: DisenoCoordenadas = {
+      estudiante: { ...DISENO_DEFAULT_HORIZONTAL.estudiante, visible: false },
+      programa: { ...DISENO_DEFAULT_HORIZONTAL.programa, visible: false },
+      horas: { ...DISENO_DEFAULT_HORIZONTAL.horas, visible: false },
+      fecha: { ...DISENO_DEFAULT_HORIZONTAL.fecha, visible: false },
+      codigo: { ...DISENO_DEFAULT_HORIZONTAL.codigo, visible: false },
+      qr: { ...DISENO_DEFAULT_HORIZONTAL.qr, visible: false }
+    };
+
     setModeloSeleccionadoId(null);
     setEditorNombre(nombreNuevo);
     setEditorTipo('DIPLOMA');
     setEditorOrientacion('horizontal');
     setEditorFirmas(['Director Académico']);
-    setEditorIncluyeQr(true);
-    setEditorImagenFondo(null); // Inicia completamente en blanco
+    setEditorIncluyeQr(false);
+    setEditorImagenFondo(null);
     setArchivoFondoPendiente(null);
     setEditorAlcance('SUPERPLANTILLA_GLOBAL');
     setEditorRecursoEspecifico('');
-    setEditorDisenoCoordenadas(coordsDefault);
+    setEditorDisenoCoordenadas(coordsVacias);
     setElementoSeleccionado('estudiante');
+    setProgramaSimuladoPrueba('');
     setEstadoSnapshotInicial(serializarEstadoEditor(
       nombreNuevo,
       'DIPLOMA',
       'horizontal',
       ['Director Académico'],
-      true,
+      false,
       null,
       'SUPERPLANTILLA_GLOBAL',
       '',
-      coordsDefault
+      coordsVacias
     ));
     setActiveTab('editor');
   };
@@ -675,7 +905,9 @@ export default function CertificacionesAdminPage() {
       ? (editorTipo === 'DIPLOMA' ? 'Todos los diplomados oficiales (22 diplomados)' :
          editorTipo === 'MODULAR' ? 'Todos los módulos de diplomados' :
          editorTipo === 'CURSO' ? 'Todos los cursos de especialización (76 cursos)' :
-         editorTipo === 'TALLER' ? 'Todos los talleres y masterclasses' : 'Todos los programas de esta categoría')
+         editorTipo === 'TALLER' ? 'Todos los talleres y masterclasses' :
+         editorTipo === 'CIP' ? 'Todos los diplomados con Certificado CIP' :
+         editorTipo === 'MIAMI' ? 'Todos los diplomados con Certificado Miami' : 'Todos los programas de esta categoría')
       : (editorRecursoEspecifico || 'Programa específico asignado');
 
     let listaActualizada: ModeloCertificado[] = [];
@@ -730,6 +962,27 @@ export default function CertificacionesAdminPage() {
     setTimeout(() => setMensajeExito(null), 4000);
   };
 
+  const establecerComoPredeterminado = (modelo: ModeloCertificado) => {
+    const listaActualizada = modelosCertificados.map(m => {
+      if (m.tipo === modelo.tipo) {
+        return {
+          ...m,
+          esPredeterminado: m.id === modelo.id
+        };
+      }
+      return m;
+    });
+    setModelosCertificados(listaActualizada);
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.setItem('edumin_modelos_certificados_v2', JSON.stringify(listaActualizada));
+      } catch (e) {}
+    }
+    sincronizarModelosEnSupabase(listaActualizada);
+    setMensajeExito(`¡El modelo "${modelo.nombre}" ahora es el Oficial Predeterminado para ${modelo.tipo}!`);
+    setTimeout(() => setMensajeExito(null), 3500);
+  };
+
   const duplicarModelo = (modelo: ModeloCertificado) => {
     const nuevoId = `mod-${Date.now().toString().slice(-4)}`;
     const clon: ModeloCertificado = {
@@ -752,7 +1005,12 @@ export default function CertificacionesAdminPage() {
   };
 
   const eliminarModelo = (id: string) => {
-    if (confirm('¿Estás seguro de eliminar este modelo de certificado de la galería?')) {
+    const modeloAEliminar = modelosCertificados.find(m => m.id === id);
+    if (modeloAEliminar?.esPredeterminado) {
+      alert('Esta plantilla está configurada como la oficial activa para emitir certificados automáticos. Si deseas eliminarla, primero marca otra plantilla como oficial activa con el botón "Hacer Oficial".');
+      return;
+    }
+    if (confirm('¿Estás seguro de eliminar este modelo de certificado de la galería?\n\nNOTA DE SEGURIDAD: Los certificados que ya fueron emitidos anteriormente con este diseño NO se verán afectados ni darán error, ya que su diseño fue sellado de forma permanente e inmutable al momento de emitirse.')) {
       const listaActualizada = modelosCertificados.filter(m => m.id !== id);
       setModelosCertificados(listaActualizada);
       if (typeof window !== 'undefined') {
@@ -875,25 +1133,9 @@ export default function CertificacionesAdminPage() {
           
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <div className="flex items-center gap-2">
-                <span className="bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-indigo-200 dark:border-indigo-800">
-                  Acreditación y diseño
-                </span>
-                <span className="text-slate-400 dark:text-slate-500 text-xs font-mono">• Superplantillas dinámicas y duplicados</span>
-              </div>
               <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">
                 Centro de certificaciones y modelos A4
               </h1>
-            </div>
-            
-            <div className="flex items-center gap-2">
-              <button 
-                onClick={iniciarNuevoModelo}
-                className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer"
-              >
-                <Plus className="w-4 h-4" />
-                Crear nuevo modelo
-              </button>
             </div>
           </div>
 
@@ -975,9 +1217,18 @@ export default function CertificacionesAdminPage() {
                       Búsqueda y filtros por tipo y catálogo
                     </h3>
                   </div>
-                  <span className="text-[11px] font-bold text-indigo-600 bg-indigo-50 dark:bg-indigo-950/60 px-2.5 py-1 rounded-full border border-indigo-100 dark:border-indigo-900">
-                    {certificadosFiltrados.length} certificados encontrados
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={abrirModalHabilitarManual}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl shadow-sm transition cursor-pointer"
+                    >
+                      <Plus className="w-3.5 h-3.5" />
+                      <span>Habilitar certificado a estudiante</span>
+                    </button>
+                    <span className="text-[11px] font-bold text-indigo-600 bg-indigo-50 dark:bg-indigo-950/60 px-2.5 py-1 rounded-full border border-indigo-100 dark:border-indigo-900">
+                      {certificadosFiltrados.length} certificados encontrados
+                    </span>
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
@@ -1010,10 +1261,12 @@ export default function CertificacionesAdminPage() {
                       className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer"
                     >
                       <option value="todos">Todos</option>
-                      <option value="DIPLOMA">Diplomas generales</option>
-                      <option value="MODULAR">Certificados modulares</option>
-                      <option value="CURSO">Cursos</option>
-                      <option value="TALLER">Talleres</option>
+                      <option value="DIPLOMA">Diploma general</option>
+                      <option value="MODULAR">Certificado modular</option>
+                      <option value="CURSO">Curso</option>
+                      <option value="TALLER">Taller</option>
+                      <option value="CIP">Certificado CIP</option>
+                      <option value="MIAMI">Certificado Miami</option>
                     </select>
                   </div>
 
@@ -1098,7 +1351,7 @@ export default function CertificacionesAdminPage() {
                             {/* Estudiante (sin correo según solicitud) */}
                             <td className="py-3.5 px-4">
                               <div className="font-bold text-slate-900 dark:text-white">{cert.estudiante}</div>
-                              <div className="text-[10px] text-slate-400 font-mono mt-0.5">
+                              <div className="text-[10px] text-slate-400 tabular-nums mt-0.5">
                                 DNI: {cert.dni}
                               </div>
                             </td>
@@ -1126,6 +1379,16 @@ export default function CertificacionesAdminPage() {
                                     Taller
                                   </span>
                                 )}
+                                {cert.tipo === 'CIP' && (
+                                  <span className="bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 px-2 py-0.5 rounded-md text-[9px] font-extrabold border border-rose-200 dark:border-rose-800">
+                                    Certificado CIP
+                                  </span>
+                                )}
+                                {cert.tipo === 'MIAMI' && (
+                                  <span className="bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 px-2 py-0.5 rounded-md text-[9px] font-extrabold border border-indigo-200 dark:border-indigo-800">
+                                    Certificado Miami
+                                  </span>
+                                )}
                               </div>
 
                               <div className="font-semibold text-slate-800 dark:text-slate-200 leading-snug truncate">
@@ -1138,19 +1401,18 @@ export default function CertificacionesAdminPage() {
                               )}
                             </td>
 
-                            {/* Código QR Seguro */}
-                            <td className="py-3.5 px-4 font-mono">
-                              <span className="text-xs font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950/50 px-2 py-1 rounded-lg border border-indigo-100 dark:border-indigo-900/60">
+                            {/* Código de validación (texto limpio sin badge ni bordes) */}
+                            <td className="py-3.5 px-4 tabular-nums">
+                              <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
                                 {cert.codigo}
                               </span>
                             </td>
 
-                            {/* Calificación (solo el número, sin /20 según solicitud) */}
+                            {/* Calificación (solo número como texto limpio sin icono) */}
                             <td className="py-3.5 px-4">
-                              <div className="inline-flex items-center gap-1 font-bold text-xs px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200">
-                                <Award className="w-3.5 h-3.5 text-amber-500" />
-                                <span>{cert.nota}</span>
-                              </div>
+                              <span className="font-bold text-xs text-slate-800 dark:text-slate-200">
+                                {cert.nota}
+                              </span>
                             </td>
 
                             {/* Fecha */}
@@ -1291,51 +1553,58 @@ export default function CertificacionesAdminPage() {
                     key={modelo.id}
                     className="bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col group"
                   >
-                    {/* Miniatura A4 del Modelo */}
-                    <div className="p-4 bg-slate-950 flex items-center justify-center relative min-h-[180px]">
+                    {/* Miniatura A4 del Modelo (refleja fielmente el diseño, fondo y coordenadas modificadas) */}
+                    <div className="p-4 bg-slate-950 flex items-center justify-center relative min-h-[195px] overflow-hidden">
                       <div 
-                        className={`rounded-lg border border-slate-700/80 shadow-lg relative overflow-hidden transition-all flex flex-col justify-between p-2.5 ${
-                          modelo.orientacion === 'vertical' ? 'w-[145px] aspect-[210/297]' : 'w-[230px] aspect-[297/210]'
-                        } ${
-                          modelo.imagenFondoUrl ? 'bg-cover bg-center text-slate-900' : 'bg-white text-slate-800'
+                        className={`relative shadow-xl pointer-events-none select-none transition-transform duration-300 ${
+                          modelo.orientacion === 'vertical' ? 'w-[145px]' : 'w-[230px]'
                         }`}
-                        style={modelo.imagenFondoUrl ? { backgroundImage: `url(${modelo.imagenFondoUrl})`, backgroundSize: 'cover', backgroundPosition: 'center center' } : {}}
                       >
-                        {!modelo.imagenFondoUrl && (
-                          <div className="absolute inset-0 flex flex-col items-center justify-center p-2 text-center pointer-events-none border border-dashed border-slate-300 m-1 rounded bg-slate-50/50">
-                            <span className="text-[7px] font-bold text-slate-400">Lienzo en blanco</span>
-                            <span className="text-[6px] text-slate-400">Sin plantilla de fondo</span>
-                          </div>
-                        )}
-
-                        <div className="flex justify-between items-center z-10">
-                          <span className="text-[6px] font-mono font-bold tracking-widest uppercase opacity-70">EDUMIN LMS</span>
-                          <Award className="w-2.5 h-2.5 text-amber-500" />
-                        </div>
-
-                        <div className="text-center z-10 my-auto">
-                          <div className="text-[7px] font-serif font-black underline decoration-amber-500 opacity-90 truncate">[Nombre Alumno]</div>
-                          <p className="text-[6px] font-black uppercase opacity-85 line-clamp-1 text-indigo-950">
-                            {modelo.recursoAsignadoNombre || 'DIPLOMADO / CURSO'}
-                          </p>
-                        </div>
-                        
-                        <div className="z-10 pt-1 border-t border-black/10 flex justify-between items-center text-[6px] opacity-70 font-mono">
-                          <span className="truncate max-w-[70%]">{modelo.horas || 'Horas oficiales'}</span>
-                          <QrCode className="w-2.5 h-2.5" />
-                        </div>
+                        <AvanzaCertificateRenderer
+                          tipo={modelo.tipo}
+                          orientacion={modelo.orientacion || 'horizontal'}
+                          estudiante="QUISPE RAMOS, JUAN CARLOS"
+                          programa={
+                            modelo.recursoAsignadoNombre && modelo.asignacionAlcance === 'PRODUCTO_ESPECIFICO'
+                              ? modelo.recursoAsignadoNombre
+                              : (modelo.tipo === 'CURSO' 
+                                  ? (catalogoCursos[0]?.titulo || 'GESTIÓN DE SEGURIDAD MINERA')
+                                  : (catalogoDiplomados[0]?.titulo || 'SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA'))
+                          }
+                          modulo={modelo.tipo === 'MODULAR' ? 'Módulo 01: Legislación Minera y Marco Legal' : undefined}
+                          horas={modelo.horas || (modelo.tipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos')}
+                          codigo="EDM-2026-A4"
+                          fecha="2026-10-20"
+                          imagenFondoUrl={modelo.imagenFondoUrl}
+                          incluyeQr={modelo.incluyeQr !== false}
+                          diseno={modelo.disenoCoordenadas}
+                          modoArrastrable={false}
+                          className="rounded-lg border border-slate-700/80 shadow-md"
+                        />
                       </div>
 
-                      <div className="absolute top-3 right-3 flex items-center gap-1.5">
-                        <span className="bg-slate-900/90 text-slate-300 text-[8px] font-mono px-2 py-0.5 rounded-full border border-slate-700 shadow-sm">
-                          {modelo.orientacion === 'vertical' ? 'Vertical A4' : 'Horizontal A4'}
-                        </span>
+                      <div className="absolute top-3 right-3 z-20 flex items-center gap-1.5 flex-wrap justify-end">
+                        
+                        {modelo.esPredeterminado ? (
+                          <span className="bg-emerald-600 text-white text-[9px] font-extrabold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
+                            <CheckCircle2 className="w-3 h-3 text-emerald-200" /> Oficial Activo
+                          </span>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={() => establecerComoPredeterminado(modelo)}
+                            className="bg-slate-900/90 hover:bg-emerald-600 text-slate-300 hover:text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow transition cursor-pointer flex items-center gap-1 border border-slate-700"
+                            title="Establecer como la plantilla oficial activa para certificados automáticos"
+                          >
+                            <Check className="w-3 h-3" /> Hacer Oficial
+                          </button>
+                        )}
                         {modelo.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' ? (
-                          <span className="bg-indigo-600 text-white text-[9px] font-extrabold px-2.5 py-0.5 rounded-full shadow flex items-center gap-1">
+                          <span className="bg-indigo-600 text-white text-[9px] font-extrabold px-2 py-0.5 rounded-full shadow flex items-center gap-1">
                             <Sparkles className="w-3 h-3 text-amber-300" /> Superplantilla
                           </span>
                         ) : (
-                          <span className="bg-amber-500 text-white text-[9px] font-extrabold px-2.5 py-0.5 rounded-full shadow">
+                          <span className="bg-amber-500 text-white text-[9px] font-extrabold px-2 py-0.5 rounded-full shadow">
                             Específico
                           </span>
                         )}
@@ -1346,11 +1615,13 @@ export default function CertificacionesAdminPage() {
                     <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
                       <div>
                         <div className="flex items-center gap-2 mb-1.5">
-                          <span className="text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
-                            {modelo.tipo}
-                          </span>
-                          <span className="text-[10px] text-slate-400 capitalize">
-                            {modelo.imagenFondoUrl ? 'Con fondo membretado A4' : 'Plantilla en blanco'}
+                          <span className="text-[9px] font-extrabold px-2 py-0.5 rounded-md bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+                            {modelo.tipo === 'DIPLOMA' ? 'Diploma general' :
+                             modelo.tipo === 'MODULAR' ? 'Certificado modular' :
+                             modelo.tipo === 'CURSO' ? 'Curso' :
+                             modelo.tipo === 'TALLER' ? 'Taller' :
+                             modelo.tipo === 'CIP' ? 'Certificado CIP' :
+                             modelo.tipo === 'MIAMI' ? 'Certificado Miami' : modelo.tipo}
                           </span>
                         </div>
                         
@@ -1365,47 +1636,42 @@ export default function CertificacionesAdminPage() {
                         </div>
                       </div>
 
-                      <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
-                        <div className="text-[11px] text-slate-400 font-mono">
-                          {modelo.horas}
-                        </div>
-                        
-                        <div className="flex items-center gap-1.5">
-                          {/* Botón de Previsualización según diplomado o curso */}
-                          <button
-                            onClick={() => abrirPrevisualizacionModelo(modelo)}
-                            className="px-2.5 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-xl font-bold text-xs transition flex items-center gap-1 cursor-pointer"
-                            title="Previsualizar cómo se vería con cualquier curso o diplomado"
-                          >
-                            <Eye className="w-3.5 h-3.5" />
-                            <span>Previsualizar</span>
-                          </button>
+                      {/* Pie del card: exclusivamente los botones de acción sin horas ni créditos */}
+                      <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-end gap-1.5 text-xs w-full">
+                        {/* Botón de Previsualización según diplomado o curso */}
+                        <button
+                          onClick={() => abrirPrevisualizacionModelo(modelo)}
+                          className="px-2.5 py-1.5 bg-slate-100 dark:bg-slate-800 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-xl font-bold text-xs transition flex items-center gap-1 cursor-pointer"
+                          title="Previsualizar cómo se vería con cualquier curso o diplomado"
+                        >
+                          <Eye className="w-3.5 h-3.5" />
+                          <span>Previsualizar</span>
+                        </button>
 
-                          <button
-                            onClick={() => cargarModeloEnEditor(modelo)}
-                            className="px-2.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900 rounded-xl font-bold text-xs transition flex items-center gap-1 cursor-pointer"
-                            title="Editar plantilla"
-                          >
-                            <Edit3 className="w-3.5 h-3.5" />
-                            <span>Editar</span>
-                          </button>
+                        <button
+                          onClick={() => cargarModeloEnEditor(modelo)}
+                          className="px-2.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900 rounded-xl font-bold text-xs transition flex items-center gap-1 cursor-pointer"
+                          title="Editar plantilla"
+                        >
+                          <Edit3 className="w-3.5 h-3.5" />
+                          <span>Editar</span>
+                        </button>
 
-                          <button
-                            onClick={() => duplicarModelo(modelo)}
-                            className="p-1.5 text-slate-500 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition"
-                            title="Duplicar modelo"
-                          >
-                            <Copy className="w-3.5 h-3.5" />
-                          </button>
+                        <button
+                          onClick={() => duplicarModelo(modelo)}
+                          className="p-1.5 text-slate-500 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition"
+                          title="Duplicar modelo"
+                        >
+                          <Copy className="w-3.5 h-3.5" />
+                        </button>
 
-                          <button
-                            onClick={() => eliminarModelo(modelo.id)}
-                            className="p-1.5 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/50 rounded-lg transition"
-                            title="Eliminar modelo"
-                          >
-                            <Trash2 className="w-3.5 h-3.5" />
-                          </button>
-                        </div>
+                        <button
+                          onClick={() => eliminarModelo(modelo.id)}
+                          className="p-1.5 text-slate-400 hover:text-red-500 hover:bg-red-50 dark:hover:bg-red-950/50 rounded-lg transition"
+                          title="Eliminar modelo"
+                        >
+                          <Trash2 className="w-3.5 h-3.5" />
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1418,29 +1684,23 @@ export default function CertificacionesAdminPage() {
           {activeTab === 'editor' && (
             <div className="space-y-6">
               
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-slate-900 p-5 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
-                <div>
+              <div className="flex items-center justify-between gap-4 bg-white dark:bg-slate-900 px-5 py-3.5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <div className="flex items-center gap-3 min-w-0">
                   <button
                     type="button"
                     onClick={() => salirDelEditorConConfirmacion(() => setActiveTab('modelos'))}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-600 dark:text-indigo-400 hover:underline mb-1 cursor-pointer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 transition cursor-pointer shrink-0"
+                    title="Volver a la galería de modelos"
                   >
-                    <ArrowLeft className="w-4 h-4" /> Volver a modelos de certificados
+                    <ArrowLeft className="w-4 h-4" />
+                    <span>Volver</span>
                   </button>
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white">
+
+                  <div className="h-4 w-px bg-slate-200 dark:bg-slate-700 hidden sm:block" />
+
+                  <h3 className="text-sm sm:text-base font-bold text-slate-900 dark:text-white truncate">
                     {modeloSeleccionadoId ? `Editando: ${editorNombre}` : 'Diseñar nuevo modelo de certificado A4'}
                   </h3>
-                  <p className="text-xs text-slate-500">Configura orientación horizontal/vertical, marco, fondo membretado y alcance del modelo.</p>
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => salirDelEditorConConfirmacion(() => setActiveTab('modelos'))}
-                    className="px-4 py-2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 text-slate-700 dark:text-slate-300 rounded-xl text-xs font-bold transition cursor-pointer"
-                  >
-                    Cancelar
-                  </button>
                 </div>
               </div>
 
@@ -1511,15 +1771,19 @@ export default function CertificacionesAdminPage() {
                     </label>
                     <select 
                       value={editorTipo}
-                      onChange={(e) => setEditorTipo(e.target.value as any)}
+                      onChange={(e) => {
+                        const nuevoTipo = e.target.value as any;
+                        setEditorTipo(nuevoTipo);
+                        setProgramaSimuladoPrueba('');
+                      }}
                       className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
                     >
-                      <option value="DIPLOMA">Diploma oficial (3 módulos)</option>
+                      <option value="DIPLOMA">Diploma general</option>
                       <option value="MODULAR">Certificado modular</option>
-                      <option value="CURSO">Curso de especialización</option>
-                      <option value="CIP">Convenio CIP nacional</option>
-                      <option value="MIAMI">Convenio Miami internacional</option>
-                      <option value="TALLER">Taller / masterclass</option>
+                      <option value="CURSO">Curso</option>
+                      <option value="TALLER">Taller</option>
+                      <option value="CIP">Certificado CIP</option>
+                      <option value="MIAMI">Certificado Miami</option>
                     </select>
                   </div>
 
@@ -1577,26 +1841,13 @@ export default function CertificacionesAdminPage() {
                     )}
                   </div>
 
-                  {/* Carga de imagen de fondo / membrete en Supabase Storage con Preview Instantáneo */}
+                  {/* Carga de imagen de fondo */}
                   <div className="p-3.5 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700/60 space-y-2.5">
                     <div className="flex items-center justify-between">
                       <label className="text-[10px] font-black uppercase tracking-wider text-slate-600 dark:text-slate-300 flex items-center gap-1.5">
-                        <ImageIcon className="w-3.5 h-3.5 text-indigo-500" /> Imagen de fondo oficial A4 (Membrete)
+                        <ImageIcon className="w-3.5 h-3.5 text-indigo-500" /> Imagen de fondo
                       </label>
-                      {archivoFondoPendiente ? (
-                        <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 font-bold border border-amber-300 dark:border-amber-800">
-                          Vista previa local (se optimizará al guardar)
-                        </span>
-                      ) : editorImagenFondo ? (
-                        <span className="text-[9px] font-mono px-2 py-0.5 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 font-bold border border-emerald-300 dark:border-emerald-800">
-                          En Storage
-                        </span>
-                      ) : null}
                     </div>
-
-                    <p className="text-[11px] text-slate-500 leading-snug">
-                      Elige el fondo membretado en formato A4 (PNG, JPG o WEBP). La vista previa es instantánea y sin demoras. Al hacer clic en <strong>Guardar en galería</strong>, el sistema optimizará la imagen a 300 DPI y la almacenará en Supabase Storage.
-                    </p>
                     
                     <div className="flex items-center gap-2">
                       <label className={`flex-1 flex items-center justify-center gap-2 px-3.5 py-2.5 bg-white dark:bg-slate-900 border border-dashed rounded-xl text-xs font-bold transition ${
@@ -1640,17 +1891,12 @@ export default function CertificacionesAdminPage() {
                     </div>
                   </div>
 
-                  {/* Panel de Posicionamiento, Coordenadas y Tipografías A4 */}
+                  {/* Panel de Posicionamiento y formato de variables */}
                   <div className="p-3.5 bg-slate-50 dark:bg-slate-800/60 rounded-2xl border border-slate-200 dark:border-slate-700/60 space-y-3">
                     <div className="flex items-center justify-between">
-                      <div>
-                        <label className="text-[10px] font-black uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-                          <Sliders className="w-3.5 h-3.5 text-indigo-500" /> Posicionamiento y formato de variables A4
-                        </label>
-                        <span className="text-[9px] font-mono text-slate-400">
-                          Lienzo {editorOrientacion === 'vertical' ? 'Vertical 21.0 × 29.7 cm' : 'Horizontal 29.7 × 21.0 cm'}
-                        </span>
-                      </div>
+                      <label className="text-[10px] font-black uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                        <Sliders className="w-3.5 h-3.5 text-indigo-500" /> Posicionamiento y formato de variables
+                      </label>
                       <button
                         type="button"
                         onClick={restablecerDisenoPorDefecto}
@@ -1662,33 +1908,52 @@ export default function CertificacionesAdminPage() {
                       </button>
                     </div>
 
-                    <p className="text-[11px] text-slate-500 leading-snug">
-                      Ajusta coordenadas exactas en <strong className="text-slate-700 dark:text-slate-300">centímetros (cm)</strong>, tamaño de fuente, colores y tipografía. También puedes <strong className="text-indigo-600 dark:text-indigo-400">arrastrar con el mouse</strong> cada variable directamente sobre el lienzo.
-                    </p>
-
-                    {/* Selector de variable activa */}
-                    <div className="grid grid-cols-3 gap-1.5 p-1 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
+                    {/* Selector de variable activa: todo el chip es clickeable para seleccionar */}
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 p-1.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700">
                       {[
                         { key: 'estudiante', label: 'Estudiante' },
                         { key: 'programa', label: 'Programa' },
-                        { key: 'horas', label: 'Horas' },
+                        { key: 'horas', label: 'Horas / Créd.' },
                         { key: 'fecha', label: 'Fecha' },
                         { key: 'codigo', label: 'Código' },
-                        { key: 'qr', label: 'Código QR (1:1)' }
-                      ].map((item) => (
-                        <button
-                          key={item.key}
-                          type="button"
-                          onClick={() => setElementoSeleccionado(item.key as keyof DisenoCoordenadas)}
-                          className={`px-2 py-1.5 rounded-lg text-[11px] font-bold transition cursor-pointer text-center truncate ${
-                            elementoSeleccionado === item.key
-                              ? 'bg-indigo-600 text-white shadow-xs'
-                              : 'text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800'
-                          }`}
-                        >
-                          {item.label}
-                        </button>
-                      ))}
+                        { key: 'qr', label: 'Código QR' }
+                      ].map((item) => {
+                        const estaVisible = editorDisenoCoordenadas[item.key as keyof DisenoCoordenadas]?.visible !== false;
+                        const esSeleccionado = elementoSeleccionado === item.key;
+                        return (
+                          <div
+                            key={item.key}
+                            onClick={() => setElementoSeleccionado(item.key as keyof DisenoCoordenadas)}
+                            className={`flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer select-none ${
+                              esSeleccionado
+                                ? 'bg-indigo-600 text-white shadow-sm ring-1 ring-indigo-500'
+                                : 'bg-slate-50 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200/60 dark:border-slate-700/60'
+                            }`}
+                            title={`Seleccionar ${item.label} para editar`}
+                          >
+                            <span className="truncate flex-1">
+                              {item.label}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                const nuevoEstado = !estaVisible;
+                                actualizarPosicionElemento(item.key as keyof DisenoCoordenadas, { visible: nuevoEstado });
+                                if (item.key === 'qr') setEditorIncluyeQr(nuevoEstado);
+                              }}
+                              className={`p-1 rounded-md transition cursor-pointer shrink-0 ml-1 ${
+                                esSeleccionado 
+                                  ? (estaVisible ? 'text-white hover:bg-indigo-700' : 'text-indigo-200 hover:bg-indigo-700 opacity-60')
+                                  : (estaVisible ? 'text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/50' : 'text-slate-400 dark:text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700 opacity-50')
+                              }`}
+                              title={estaVisible ? 'Visible en este certificado (clic para ocultar)' : 'Oculto (clic para activar)'}
+                            >
+                              {estaVisible ? <Eye className="w-3.5 h-3.5 text-white" /> : <EyeOff className={`w-3.5 h-3.5 ${esSeleccionado ? 'text-white/60' : ''}`} />}
+                            </button>
+                          </div>
+                        );
+                      })}
                     </div>
 
                     {/* Controles para la variable seleccionada */}
@@ -1696,184 +1961,64 @@ export default function CertificacionesAdminPage() {
                       const act = editorDisenoCoordenadas[elementoSeleccionado];
                       return (
                         <div className="space-y-3 pt-1">
-                          {/* Toggle visibilidad y coordenadas actuales en CM y % */}
-                          <div className="flex items-center justify-between text-xs">
-                            <label className="flex items-center gap-1.5 font-bold text-slate-700 dark:text-slate-300 cursor-pointer">
-                              <input
-                                type="checkbox"
-                                checked={act.visible}
-                                onChange={(e) => {
-                                  const val = e.target.checked;
-                                  actualizarPosicionElemento(elementoSeleccionado, { visible: val });
-                                  if (elementoSeleccionado === 'qr') {
-                                    setEditorIncluyeQr(val);
-                                  }
-                                }}
-                                className="rounded text-indigo-600 focus:ring-indigo-500 size-3.5"
-                              />
-                              <span>Mostrar esta variable</span>
-                            </label>
 
-                            <span className="text-[10px] font-mono text-indigo-600 dark:text-indigo-400 font-bold bg-indigo-50 dark:bg-indigo-950/60 px-2 py-0.5 rounded-md border border-indigo-200 dark:border-indigo-800">
-                              X: {pctToCmX(act.x)} cm ({act.x}%) • Y: {pctToCmY(act.y)} cm ({act.y}%)
-                            </span>
-                          </div>
-
-                          {/* Coordenadas en Centímetros (cm) y porcentaje */}
-                          <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2">
-                            <div className="flex items-center justify-between text-[10px] font-bold text-slate-600 dark:text-slate-400">
-                              <span>Coordenadas exactas en la hoja A4:</span>
-                              <span className="text-slate-400 font-normal">Base: {anchoHojaCm} × {altoHojaCm} cm</span>
-                            </div>
-
-                            {/* Eje X (Horizontal) */}
-                            <div className="space-y-1">
-                              <div className="flex justify-between items-center text-[10px]">
-                                <span className="font-bold text-slate-700 dark:text-slate-300">Posición X (desde la izquierda):</span>
-                                <span className="font-mono text-indigo-600 font-bold">{pctToCmX(act.x)} cm ({act.x}%)</span>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <input
-                                  type="range"
-                                  min="0"
+                          {/* Coordenadas en Centímetros (cm) limpias con control de paso 0.1 cm y presets esenciales */}
+                          <div className="p-3 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-3">
+                            <div className="grid grid-cols-2 gap-3">
+                              {/* Eje X */}
+                              <div className="space-y-1">
+                                <span className="block text-[10px] font-bold text-slate-600 dark:text-slate-400">
+                                  Posición X (horizontal):
+                                </span>
+                                <ControlPasoNumero
+                                  valor={pctToCmX(act.x)}
+                                  min={0}
                                   max={anchoHojaCm}
-                                  step="0.1"
-                                  value={pctToCmX(act.x)}
-                                  onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { x: cmToPctX(Number(e.target.value)) })}
-                                  className="flex-1 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                  paso={0.1}
+                                  unidad="cm"
+                                  precision={1}
+                                  ancho="w-14"
+                                  alCambiar={(nuevoCm) => actualizarPosicionElemento(elementoSeleccionado, { x: cmToPctX(nuevoCm) })}
                                 />
-                                <div className="flex items-center gap-1 shrink-0">
-                                  <input
-                                    type="number"
-                                    min="0"
-                                    max={anchoHojaCm}
-                                    step="0.1"
-                                    value={pctToCmX(act.x)}
-                                    onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { x: cmToPctX(Number(e.target.value)) })}
-                                    className="w-14 px-1.5 py-0.5 text-[11px] font-mono text-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md font-bold"
-                                  />
-                                  <span className="text-[10px] text-slate-400 font-mono">cm</span>
-                                </div>
                               </div>
-                            </div>
 
-                            {/* Eje Y (Vertical) */}
-                            <div className="space-y-1">
-                              <div className="flex justify-between items-center text-[10px]">
-                                <span className="font-bold text-slate-700 dark:text-slate-300">Posición Y (desde arriba):</span>
-                                <span className="font-mono text-indigo-600 font-bold">{pctToCmY(act.y)} cm ({act.y}%)</span>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <input
-                                  type="range"
-                                  min="0"
+                              {/* Eje Y */}
+                              <div className="space-y-1">
+                                <span className="block text-[10px] font-bold text-slate-600 dark:text-slate-400">
+                                  Posición Y (vertical):
+                                </span>
+                                <ControlPasoNumero
+                                  valor={pctToCmY(act.y)}
+                                  min={0}
                                   max={altoHojaCm}
-                                  step="0.1"
-                                  value={pctToCmY(act.y)}
-                                  onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { y: cmToPctY(Number(e.target.value)) })}
-                                  className="flex-1 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                  paso={0.1}
+                                  unidad="cm"
+                                  precision={1}
+                                  ancho="w-14"
+                                  alCambiar={(nuevoCm) => actualizarPosicionElemento(elementoSeleccionado, { y: cmToPctY(nuevoCm) })}
                                 />
-                                <div className="flex items-center gap-1 shrink-0">
-                                  <input
-                                    type="number"
-                                    min="0"
-                                    max={altoHojaCm}
-                                    step="0.1"
-                                    value={pctToCmY(act.y)}
-                                    onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { y: cmToPctY(Number(e.target.value)) })}
-                                    className="w-14 px-1.5 py-0.5 text-[11px] font-mono text-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md font-bold"
-                                  />
-                                  <span className="text-[10px] text-slate-400 font-mono">cm</span>
-                                </div>
                               </div>
                             </div>
-                          </div>
 
-                          {/* Flechas de microajuste y Presets rápidos */}
-                          <div className="space-y-2">
-                            <div className="flex items-center justify-between text-[10px] font-bold text-slate-500">
-                              <span>Ajustes rápidos:</span>
-                            </div>
-                            <div className="flex flex-wrap gap-1">
-                              <button
-                                type="button"
-                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { x: 50, alineacion: 'center' })}
-                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
-                              >
-                                Centrar H (50%)
-                              </button>
-                              <button
-                                type="button"
-                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { x: 10, alineacion: 'left' })}
-                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
-                              >
-                                Izquierda (10%)
-                              </button>
-                              <button
-                                type="button"
-                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { x: 90, alineacion: 'right' })}
-                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
-                              >
-                                Derecha (90%)
-                              </button>
-                              <button
-                                type="button"
-                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { y: 25 })}
-                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
-                              >
-                                Arriba (25%)
-                              </button>
-                              <button
-                                type="button"
-                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { y: 50 })}
-                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
-                              >
-                                Centro V (50%)
-                              </button>
-                              <button
-                                type="button"
-                                onClick={() => actualizarPosicionElemento(elementoSeleccionado, { y: 88 })}
-                                className="px-2 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-indigo-400 rounded-lg text-[10px] font-bold text-slate-700 dark:text-slate-300 transition cursor-pointer"
-                              >
-                                Abajo (88%)
-                              </button>
-                            </div>
-
-                            {/* Botonera de micro-ajuste (Nudge) */}
-                            <div className="flex items-center gap-2 pt-1">
-                              <span className="text-[10px] font-bold text-slate-500">Mover ±1 mm:</span>
-                              <div className="flex items-center gap-1">
+                            {/* Atajos de centrado esenciales */}
+                            <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                              <span className="text-[10px] font-bold text-slate-400">Atajos rápidos:</span>
+                              <div className="flex items-center gap-1.5">
                                 <button
                                   type="button"
-                                  onClick={() => ajustarCoordenadaDelta(elementoSeleccionado, -0.5, 0)}
-                                  className="p-1 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 rounded text-slate-700 dark:text-slate-300 text-[10px] font-bold flex items-center gap-0.5"
-                                  title="Mover a la izquierda"
+                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { x: 50, alineacion: 'center' })}
+                                  className="px-2 py-1 bg-slate-50 dark:bg-slate-800 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/60 border border-slate-200 dark:border-slate-700 rounded-lg text-[10px] font-bold transition cursor-pointer"
+                                  title="Centrar horizontalmente"
                                 >
-                                  <ChevronLeft className="w-3 h-3" /> Izq
+                                  Centrar H (50%)
                                 </button>
                                 <button
                                   type="button"
-                                  onClick={() => ajustarCoordenadaDelta(elementoSeleccionado, 0.5, 0)}
-                                  className="p-1 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 rounded text-slate-700 dark:text-slate-300 text-[10px] font-bold flex items-center gap-0.5"
-                                  title="Mover a la derecha"
+                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { y: 50 })}
+                                  className="px-2 py-1 bg-slate-50 dark:bg-slate-800 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/60 border border-slate-200 dark:border-slate-700 rounded-lg text-[10px] font-bold transition cursor-pointer"
+                                  title="Centrar verticalmente"
                                 >
-                                  Der <ChevronRight className="w-3 h-3" />
-                                </button>
-                                <button
-                                  type="button"
-                                  onClick={() => ajustarCoordenadaDelta(elementoSeleccionado, 0, -0.5)}
-                                  className="p-1 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 rounded text-slate-700 dark:text-slate-300 text-[10px] font-bold flex items-center gap-0.5"
-                                  title="Subir"
-                                >
-                                  <ChevronUp className="w-3 h-3" /> Arriba
-                                </button>
-                                <button
-                                  type="button"
-                                  onClick={() => ajustarCoordenadaDelta(elementoSeleccionado, 0, 0.5)}
-                                  className="p-1 px-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 rounded text-slate-700 dark:text-slate-300 text-[10px] font-bold flex items-center gap-0.5"
-                                  title="Bajar"
-                                >
-                                  Abajo <ChevronDown className="w-3 h-3" />
+                                  Centrar V (50%)
                                 </button>
                               </div>
                             </div>
@@ -1929,25 +2074,34 @@ export default function CertificacionesAdminPage() {
                                   className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
                                 >
                                   {FUENTES_CERTIFICADO.map(f => (
-                                    <option key={f.id} value={f.id}>{f.nombre}</option>
+                                    <option key={f.id} value={f.id} style={{ fontFamily: f.fontFamily }}>{f.nombre}</option>
                                   ))}
                                 </select>
+                                <div className="mt-1 flex items-center justify-between px-2 py-1 bg-slate-50 dark:bg-slate-800/60 rounded-md border border-slate-100 dark:border-slate-700/60 text-[11px]">
+                                  <span className="text-[10px] text-slate-400 font-medium">Muestra en vivo:</span>
+                                  <span 
+                                    style={{ fontFamily: FUENTES_CERTIFICADO.find(f => f.id === (act.fuente || (elementoSeleccionado === 'estudiante' ? 'serif-institucional' : elementoSeleccionado === 'programa' ? 'sans-moderna' : 'sans-formal')))?.fontFamily }}
+                                    className="font-bold text-slate-900 dark:text-white"
+                                  >
+                                    Tipografía Oficial (Aa Bb Gg 123)
+                                  </span>
+                                </div>
                               </div>
 
-                              {/* Tamaño de fuente */}
-                              <div className="space-y-1">
-                                <div className="flex justify-between items-center text-[10px]">
-                                  <span className="font-bold text-slate-700 dark:text-slate-300">Tamaño del texto:</span>
-                                  <span className="font-mono text-indigo-600 font-bold">{act.tamanoFuente || (elementoSeleccionado === 'estudiante' ? 36 : elementoSeleccionado === 'programa' ? 22 : 12)} pt</span>
-                                </div>
-                                <input
-                                  type="range"
-                                  min={elementoSeleccionado === 'estudiante' ? 18 : elementoSeleccionado === 'programa' ? 14 : 8}
-                                  max={elementoSeleccionado === 'estudiante' ? 52 : elementoSeleccionado === 'programa' ? 38 : 22}
-                                  step="1"
-                                  value={act.tamanoFuente || (elementoSeleccionado === 'estudiante' ? 36 : elementoSeleccionado === 'programa' ? 22 : 12)}
-                                  onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { tamanoFuente: Number(e.target.value) })}
-                                  className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                              {/* Tamaño de fuente compacto (de 1 en 1 pt con flechitas o entrada directa) */}
+                              <div className="flex items-center justify-between py-0.5">
+                                <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
+                                  Tamaño del texto:
+                                </span>
+                                <ControlPasoNumero
+                                  valor={act.tamanoFuente || (elementoSeleccionado === 'estudiante' ? 36 : elementoSeleccionado === 'programa' ? 22 : 12)}
+                                  min={6}
+                                  max={72}
+                                  paso={1}
+                                  unidad="pt"
+                                  precision={0}
+                                  ancho="w-12"
+                                  alCambiar={(nuevoPt) => actualizarPosicionElemento(elementoSeleccionado, { tamanoFuente: nuevoPt })}
                                 />
                               </div>
 
@@ -1997,88 +2151,74 @@ export default function CertificacionesAdminPage() {
                                 </button>
                               </div>
 
-                              {/* Color del texto: Selector RGB libre + Input directo Hex/RGB + Botón Negro Puro */}
-                              <div className="space-y-1.5 pt-1 border-t border-slate-100 dark:border-slate-800">
-                                <div className="flex justify-between items-center text-[10px]">
-                                  <span className="font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1">
-                                    <Palette className="w-3 h-3 text-indigo-500" /> Color del texto (Sin fondos):
-                                  </span>
-                                  <span className="font-mono text-slate-500 font-bold">{act.color || '#000000'}</span>
-                                </div>
+                              {/* Color del texto limpio */}
+                              <div className="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-800">
+                                <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1">
+                                  <Palette className="w-3 h-3 text-indigo-500" /> Color del texto:
+                                </span>
                                 <div className="flex items-center gap-2">
                                   <input
                                     type="color"
                                     value={act.color && act.color.startsWith('#') && act.color.length === 7 ? act.color : '#000000'}
                                     onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { color: e.target.value })}
-                                    className="w-8 h-8 rounded-lg border border-slate-300 dark:border-slate-700 cursor-pointer p-0.5 bg-transparent shrink-0"
-                                    title="Elegir color RGB / Hexadecimal"
+                                    className="w-7 h-7 rounded-lg border border-slate-300 dark:border-slate-700 cursor-pointer p-0.5 bg-transparent shrink-0"
+                                    title="Elegir color"
                                   />
                                   <input
                                     type="text"
                                     value={act.color || '#000000'}
                                     onChange={(e) => actualizarPosicionElemento(elementoSeleccionado, { color: e.target.value })}
-                                    placeholder="#000000 o rgb(0,0,0)"
-                                    className="flex-1 px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-mono font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                    placeholder="#000000"
+                                    maxLength={7}
+                                    className="w-20 px-2 py-1 text-xs font-bold text-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-slate-800 dark:text-slate-200 uppercase"
                                   />
-                                  <button
-                                    type="button"
-                                    onClick={() => actualizarPosicionElemento(elementoSeleccionado, { color: '#000000' })}
-                                    className="px-2.5 py-1.5 text-[10px] font-bold rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 transition shrink-0"
-                                    title="Restablecer color a negro oficial"
-                                  >
-                                    Negro (#000000)
-                                  </button>
                                 </div>
                               </div>
                             </div>
                           )}
 
-                          {/* Configuración especial: Ancho delimitado en CM y 1 sola línea para Estudiante */}
+                          {/* Configuración especial: Ancho delimitado en CM, Formato de Nombre y 1 sola línea para Estudiante */}
                           {elementoSeleccionado === 'estudiante' && (
-                            <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-1.5">
-                              <div className="flex justify-between items-center text-[10px]">
-                                <span className="font-bold text-slate-700 dark:text-slate-300">Ancho físico máximo (Siempre 1 sola línea):</span>
-                                <span className="font-mono text-indigo-600 font-bold">
-                                  {getAnchoCm(act, 25.0)} cm ({Math.round((getAnchoCm(act, 25.0) / anchoHojaCm) * 100)}%)
+                            <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2.5">
+                              <div className="flex items-center justify-between">
+                                <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
+                                  Ancho físico máximo (1 sola línea):
                                 </span>
-                              </div>
-                              <div className="flex items-center gap-2">
-                                <input
-                                  type="range"
-                                  min="12.0"
+                                <ControlPasoNumero
+                                  valor={getAnchoCm(act, 25.0)}
+                                  min={5.0}
                                   max={anchoHojaCm}
-                                  step="0.5"
-                                  value={getAnchoCm(act, 25.0)}
-                                  onChange={(e) => {
-                                    const cmVal = Number(e.target.value);
+                                  paso={0.1}
+                                  unidad="cm"
+                                  precision={1}
+                                  ancho="w-14"
+                                  alCambiar={(cmVal) => {
                                     actualizarPosicionElemento('estudiante', { 
                                       anchoMaximoCm: cmVal,
                                       anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
                                     });
                                   }}
-                                  className="flex-1 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
                                 />
-                                <div className="flex items-center gap-1 shrink-0">
-                                  <input
-                                    type="number"
-                                    min="12.0"
-                                    max={anchoHojaCm}
-                                    step="0.5"
-                                    value={getAnchoCm(act, 25.0)}
-                                    onChange={(e) => {
-                                      const cmVal = Number(e.target.value);
-                                      actualizarPosicionElemento('estudiante', { 
-                                        anchoMaximoCm: cmVal,
-                                        anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
-                                      });
-                                    }}
-                                    className="w-14 px-1.5 py-0.5 text-[11px] font-mono text-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md font-bold"
-                                  />
-                                  <span className="text-[10px] text-slate-400 font-mono">cm</span>
-                                </div>
                               </div>
+
+                              {/* Selector de formato de nombre */}
+                              <div className="pt-2 border-t border-slate-100 dark:border-slate-800 space-y-1">
+                                <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300">
+                                  Formato de presentación del nombre:
+                                </label>
+                                <select
+                                  value={act.formatoNombre || 'apellidos-nombres'}
+                                  onChange={(e) => actualizarPosicionElemento('estudiante', { formatoNombre: e.target.value as any })}
+                                  className="w-full px-2.5 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                >
+                                  <option value="apellidos-nombres">Apellidos, Nombres (Ej: Quispe Ramos, Juan Carlos)</option>
+                                  <option value="nombres-apellidos">Nombres y Apellidos (Ej: Juan Carlos Quispe Ramos)</option>
+                                  <option value="mayusculas">MAYÚSCULAS COMPLETAS (Ej: QUISPE RAMOS, JUAN CARLOS)</option>
+                                </select>
+                              </div>
+
                               <p className="text-[10px] text-slate-400 leading-tight">
-                                Si el nombre es muy largo, el sistema aplicará automáticamente reducción de escala y letter-spacing para no cortarse jamás ni salirse del papel A4.
+                                Si el nombre es muy largo, el sistema ajustará automáticamente el tamaño de fuente para encajar con nitidez en el ancho delimitado sin desbordar.
                               </p>
                             </div>
                           )}
@@ -2086,70 +2226,134 @@ export default function CertificacionesAdminPage() {
                           {/* Configuración especial: Ancho en CM, Interlineado y Balance conector "Y" para Programa */}
                           {elementoSeleccionado === 'programa' && (
                             <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2.5">
-                              <div className="space-y-1.5">
-                                <div className="flex justify-between items-center text-[10px]">
-                                  <span className="font-bold text-slate-700 dark:text-slate-300">Ancho físico del título (Máx. 2 líneas):</span>
-                                  <span className="font-mono text-indigo-600 font-bold">
-                                    {getAnchoCm(act, 25.5)} cm ({Math.round((getAnchoCm(act, 25.5) / anchoHojaCm) * 100)}%)
-                                  </span>
-                                </div>
-                                <div className="flex items-center gap-2">
-                                  <input
-                                    type="range"
-                                    min="12.0"
-                                    max={anchoHojaCm}
-                                    step="0.5"
-                                    value={getAnchoCm(act, 25.5)}
-                                    onChange={(e) => {
-                                      const cmVal = Number(e.target.value);
-                                      actualizarPosicionElemento('programa', { 
-                                        anchoMaximoCm: cmVal,
-                                        anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
-                                      });
-                                    }}
-                                    className="flex-1 h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
-                                  />
-                                  <div className="flex items-center gap-1 shrink-0">
-                                    <input
-                                      type="number"
-                                      min="12.0"
-                                      max={anchoHojaCm}
-                                      step="0.5"
-                                      value={getAnchoCm(act, 25.5)}
-                                      onChange={(e) => {
-                                        const cmVal = Number(e.target.value);
-                                        actualizarPosicionElemento('programa', { 
-                                          anchoMaximoCm: cmVal,
-                                          anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
-                                        });
-                                      }}
-                                      className="w-14 px-1.5 py-0.5 text-[11px] font-mono text-center bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md font-bold"
-                                    />
-                                    <span className="text-[10px] text-slate-400 font-mono">cm</span>
-                                  </div>
-                                </div>
+                              <div className="flex items-center justify-between">
+                                <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
+                                  Ancho físico del título (Máx. 2 líneas):
+                                </span>
+                                <ControlPasoNumero
+                                  valor={getAnchoCm(act, 25.5)}
+                                  min={5.0}
+                                  max={anchoHojaCm}
+                                  paso={0.1}
+                                  unidad="cm"
+                                  precision={1}
+                                  ancho="w-14"
+                                  alCambiar={(cmVal) => {
+                                    actualizarPosicionElemento('programa', { 
+                                      anchoMaximoCm: cmVal,
+                                      anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
+                                    });
+                                  }}
+                                />
                               </div>
 
                               {/* Selector de Interlineado / Line Height */}
-                              <div className="space-y-1 pt-1.5 border-t border-slate-100 dark:border-slate-800">
-                                <div className="flex justify-between items-center text-[10px]">
-                                  <span className="font-bold text-slate-700 dark:text-slate-300">Interlineado (Espacio entre filas de texto):</span>
-                                  <span className="font-mono text-indigo-600 font-bold">{(act.interlineado || 1.25).toFixed(2)}x</span>
-                                </div>
-                                <input
-                                  type="range"
-                                  min="0.9"
-                                  max="2.0"
-                                  step="0.05"
-                                  value={act.interlineado || 1.25}
-                                  onChange={(e) => actualizarPosicionElemento('programa', { interlineado: Number(e.target.value) })}
-                                  className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                              <div className="flex items-center justify-between pt-1.5 border-t border-slate-100 dark:border-slate-800">
+                                <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
+                                  Interlineado (entre filas):
+                                </span>
+                                <ControlPasoNumero
+                                  valor={act.interlineado || 1.25}
+                                  min={0.8}
+                                  max={2.5}
+                                  paso={0.05}
+                                  unidad="x"
+                                  precision={2}
+                                  ancho="w-14"
+                                  alCambiar={(val) => actualizarPosicionElemento('programa', { interlineado: val })}
                                 />
                               </div>
 
                               <p className="text-[10px] text-slate-400 leading-tight">
                                 Limita a 2 líneas con balance visual y mantiene la conjunción &quot;Y&quot; unida a la palabra anterior para evitar quiebres huérfanos.
                               </p>
+                            </div>
+                          )}
+
+                          {/* Configuración especial: Horas / Créditos (juntas, solo horas, solo créditos o personalizada) */}
+                          {elementoSeleccionado === 'horas' && (
+                            <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2.5">
+                              <div>
+                                <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                  Modalidad de acreditación:
+                                </label>
+                                <select
+                                  value={act.modoHorasCreditos || 'horas-y-creditos'}
+                                  onChange={(e) => actualizarPosicionElemento('horas', { modoHorasCreditos: e.target.value as any })}
+                                  className="w-full px-2.5 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                >
+                                  <option value="horas-y-creditos">Horas y Créditos (Ambos juntos)</option>
+                                  <option value="solo-horas">Solo Horas académicas</option>
+                                  <option value="solo-creditos">Solo Créditos académicos</option>
+                                  <option value="personalizado">Texto libre personalizado</option>
+                                </select>
+                              </div>
+
+                              {(act.modoHorasCreditos === 'horas-y-creditos' || act.modoHorasCreditos === 'solo-horas' || !act.modoHorasCreditos) && (
+                                <div>
+                                  <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                    Texto de horas:
+                                  </label>
+                                  <input
+                                    type="text"
+                                    value={act.horasValor !== undefined ? act.horasValor : (editorTipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas')}
+                                    onChange={(e) => actualizarPosicionElemento('horas', { horasValor: e.target.value })}
+                                    placeholder="Ej: 325 horas académicas o 120 horas cronológicas"
+                                    className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                  />
+                                </div>
+                              )}
+
+                              {(act.modoHorasCreditos === 'horas-y-creditos' || act.modoHorasCreditos === 'solo-creditos' || !act.modoHorasCreditos) && (
+                                <div>
+                                  <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                    Texto de créditos:
+                                  </label>
+                                  <input
+                                    type="text"
+                                    value={act.creditosValor !== undefined ? act.creditosValor : '13 créditos académicos'}
+                                    onChange={(e) => actualizarPosicionElemento('horas', { creditosValor: e.target.value })}
+                                    placeholder="Ej: 13 créditos académicos"
+                                    className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                  />
+                                </div>
+                              )}
+
+                              {act.modoHorasCreditos === 'personalizado' && (
+                                <div>
+                                  <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                    Frase completa personalizada:
+                                  </label>
+                                  <input
+                                    type="text"
+                                    value={act.textoHorasPersonalizado || ''}
+                                    onChange={(e) => actualizarPosicionElemento('horas', { textoHorasPersonalizado: e.target.value })}
+                                    placeholder="Ej: con un total de 200 horas cronológicas aprobadas"
+                                    className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                  />
+                                </div>
+                              )}
+
+                              <div className="pt-1.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                                <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
+                                  Ancho de caja de texto:
+                                </span>
+                                <ControlPasoNumero
+                                  valor={getAnchoCm(act, 25.0)}
+                                  min={5.0}
+                                  max={anchoHojaCm}
+                                  paso={0.1}
+                                  unidad="cm"
+                                  precision={1}
+                                  ancho="w-14"
+                                  alCambiar={(cmVal) => {
+                                    actualizarPosicionElemento('horas', { 
+                                      anchoMaximoCm: cmVal,
+                                      anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
+                                    });
+                                  }}
+                                />
+                              </div>
                             </div>
                           )}
 
@@ -2216,22 +2420,32 @@ export default function CertificacionesAdminPage() {
                             </div>
                           )}
 
-                          {/* Si es QR, control de tamaño 1:1 estricto */}
+                          {/* Si es QR, control de tamaño en CM y relación 1:1 estricta */}
                           {elementoSeleccionado === 'qr' && (
-                            <div className="pt-2 border-t border-slate-200 dark:border-slate-700/60 space-y-1">
-                              <div className="flex justify-between items-center text-[10px]">
-                                <span className="font-bold text-slate-700 dark:text-slate-300">Tamaño QR (Relación 1:1 estricta):</span>
-                                <span className="font-mono text-indigo-600 font-bold">{act.tamano || 52}px (~{(((act.tamano || 52) / 300) * 2.54).toFixed(1)} cm)</span>
+                            <div className="pt-2 border-t border-slate-200 dark:border-slate-700/60 space-y-2">
+                              <div className="flex items-center justify-between">
+                                <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
+                                  Tamaño del Código QR (1:1):
+                                </span>
+                                <ControlPasoNumero
+                                  valor={act.tamanoCm || (act.tamano ? Number((act.tamano / 28.346).toFixed(1)) : 2.0)}
+                                  min={1.0}
+                                  max={6.0}
+                                  paso={0.1}
+                                  unidad="cm"
+                                  precision={1}
+                                  ancho="w-14"
+                                  alCambiar={(cm) => {
+                                    actualizarPosicionElemento('qr', { 
+                                      tamanoCm: cm,
+                                      tamano: Math.round(cm * 28.346)
+                                    });
+                                  }}
+                                />
                               </div>
-                              <input
-                                type="range"
-                                min="35"
-                                max="120"
-                                step="2"
-                                value={act.tamano || 52}
-                                onChange={(e) => actualizarPosicionElemento('qr', { tamano: Number(e.target.value) })}
-                                className="w-full h-1.5 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-indigo-600"
-                              />
+                              <p className="text-[10px] text-slate-400 leading-tight">
+                                Proporción cuadrada 1:1 exacta sin sombras ni distorsión en el PDF.
+                              </p>
                             </div>
                           )}
                         </div>
@@ -2263,7 +2477,7 @@ export default function CertificacionesAdminPage() {
                   <div className="bg-slate-950 p-5 sm:p-6 rounded-3xl flex flex-col items-center justify-start border border-slate-800 shadow-xl max-h-[calc(100vh-2rem)] overflow-y-auto">
                     <div className="w-full flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 px-2">
                     <div>
-                      <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
+                      <span className="text-[10px] tabular-nums text-slate-400 uppercase tracking-widest flex items-center gap-1.5">
                         <Eye className="w-3.5 h-3.5 text-indigo-400" /> Vista previa lienzo A4 {editorOrientacion === 'vertical' ? 'Vertical (21.0×29.7 cm)' : 'Horizontal (29.7×21.0 cm)'}
                       </span>
                       <p className="text-[11px] text-slate-500">
@@ -2283,8 +2497,10 @@ export default function CertificacionesAdminPage() {
                             !esNombreAlcanceGlobal(editorRecursoEspecifico)
                               ? editorRecursoEspecifico
                               : (editorTipo === 'CURSO' 
-                                  ? (catalogoCursos[0]?.titulo || 'GESTIÓN DE SEGURIDAD MINERA')
-                                  : (catalogoDiplomados[0]?.titulo || 'GESTIÓN DE SEGURIDAD MINERA'))
+                                  ? (catalogoCursos[0]?.titulo || 'GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA')
+                                  : editorTipo === 'TALLER'
+                                  ? (catalogoTalleres[0]?.titulo || 'PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS')
+                                  : (catalogoDiplomados[0]?.titulo || 'SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA'))
                           );
                           await descargarCertificadoA4Pdf({
                             tipo: editorTipo,
@@ -2355,10 +2571,10 @@ export default function CertificacionesAdminPage() {
                       />
                     </div>
 
-                    {/* Selector interactivo de programas del catálogo */}
+                    {/* Selector interactivo de programas del catálogo filtrado según el tipo de certificado */}
                     <div>
                       <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1">
-                        <BookOpen className="w-3 h-3 text-indigo-400" /> Probar con programa del catálogo:
+                        <BookOpen className="w-3 h-3 text-indigo-400" /> Probar con {editorTipo === 'CURSO' ? 'curso' : editorTipo === 'TALLER' ? 'taller' : 'diplomado'}:
                       </label>
                       <select
                         value={programaSimuladoPrueba}
@@ -2366,34 +2582,76 @@ export default function CertificacionesAdminPage() {
                         className="w-full px-3 py-1.5 bg-slate-950 border border-slate-700 rounded-xl text-xs font-bold text-white focus:ring-2 focus:ring-indigo-500"
                       >
                         <option value="">-- Usar asignado o predeterminado --</option>
-                        <optgroup label="Casos especiales de tipografía">
-                          <option value="GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA">
-                            GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA (Prueba conector &quot;Y&quot;)
-                          </option>
-                          <option value="SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE EN OPERACIONES MINERAS">
-                            SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE EN OPERACIONES MINERAS (Título largo 2 líneas)
-                          </option>
-                          <option value="DERECHO MINERO">
-                            DERECHO MINERO (Título corto)
-                          </option>
-                        </optgroup>
-                        {catalogoDiplomados.length > 0 && (
-                          <optgroup label="Catálogo de Diplomados">
-                            {catalogoDiplomados.map((d: any) => (
-                              <option key={d.id || d.titulo} value={d.titulo || d.nombre}>
-                                {d.titulo || d.nombre}
+                        
+                        {editorTipo === 'CURSO' ? (
+                          <>
+                            <optgroup label="Cursos de Especialización">
+                              {catalogoCursos.map((c: any) => (
+                                <option key={c.id || c.titulo} value={c.titulo || c.nombre}>
+                                  {c.titulo || c.nombre}
+                                </option>
+                              ))}
+                              {catalogoCursos.length === 0 && (
+                                <>
+                                  <option value="GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA">
+                                    GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA
+                                  </option>
+                                  <option value="SOFTWARE APLICADO: LEAPFROG GEO Y DATAMINE">
+                                    SOFTWARE APLICADO: LEAPFROG GEO Y DATAMINE
+                                  </option>
+                                  <option value="TOPOGRAFÍA MINERA SUBTERRÁNEA">
+                                    TOPOGRAFÍA MINERA SUBTERRÁNEA
+                                  </option>
+                                </>
+                              )}
+                            </optgroup>
+                          </>
+                        ) : editorTipo === 'TALLER' ? (
+                          <>
+                            <optgroup label="Talleres y Masterclasses">
+                              {catalogoTalleres.map((t: any) => (
+                                <option key={t.id || t.titulo} value={t.titulo || t.nombre}>
+                                  {t.titulo || t.nombre}
+                                </option>
+                              ))}
+                              {catalogoTalleres.length === 0 && (
+                                <option value="PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS">
+                                  PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS
+                                </option>
+                              )}
+                            </optgroup>
+                          </>
+                        ) : (
+                          <>
+                            <optgroup label="Casos especiales de tipografía">
+                              <option value="GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA">
+                                GESTIÓN LOGÍSTICA Y ALMACENES EN MINERÍA (Prueba conector &quot;Y&quot;)
                               </option>
-                            ))}
-                          </optgroup>
-                        )}
-                        {catalogoCursos.length > 0 && (
-                          <optgroup label="Catálogo de Cursos">
-                            {catalogoCursos.map((c: any) => (
-                              <option key={c.id || c.titulo} value={c.titulo || c.nombre}>
-                                {c.titulo || c.nombre}
+                              <option value="SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE EN OPERACIONES MINERAS">
+                                SEGURIDAD, SALUD OCUPACIONAL Y MEDIO AMBIENTE EN OPERACIONES MINERAS (Título largo 2 líneas)
                               </option>
-                            ))}
-                          </optgroup>
+                              <option value="DERECHO MINERO">
+                                DERECHO MINERO (Título corto)
+                              </option>
+                            </optgroup>
+                            <optgroup label="Diplomados Oficiales">
+                              {catalogoDiplomados.map((d: any) => (
+                                <option key={d.id || d.titulo} value={d.titulo || d.nombre}>
+                                  {d.titulo || d.nombre}
+                                </option>
+                              ))}
+                              {catalogoDiplomados.length === 0 && (
+                                <>
+                                  <option value="SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA">
+                                    SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA
+                                  </option>
+                                  <option value="DERECHO MINERO Y GESTIÓN DE TIERRAS">
+                                    DERECHO MINERO Y GESTIÓN DE TIERRAS
+                                  </option>
+                                </>
+                              )}
+                            </optgroup>
+                          </>
                         )}
                       </select>
                     </div>
@@ -2423,8 +2681,10 @@ export default function CertificacionesAdminPage() {
                       !esNombreAlcanceGlobal(editorRecursoEspecifico)
                         ? editorRecursoEspecifico
                         : (editorTipo === 'CURSO' 
-                            ? (catalogoCursos[0]?.titulo || 'GESTIÓN DE SEGURIDAD MINERA')
-                            : (catalogoDiplomados[0]?.titulo || 'GESTIÓN DE SEGURIDAD MINERA'))
+                            ? (catalogoCursos[0]?.titulo || 'GESTIÓN DE TRABAJO EN ALTO RIESGO EN MINERÍA')
+                            : editorTipo === 'TALLER'
+                            ? (catalogoTalleres[0]?.titulo || 'PRIMEROS AUXILIOS Y EMERGENCIAS MINERAS')
+                            : (catalogoDiplomados[0]?.titulo || 'SEGURIDAD Y SALUD OCUPACIONAL EN MINERÍA'))
                     );
                     return (
                       <div className={`w-full flex items-center justify-center ${editorOrientacion === 'vertical' ? 'max-w-sm' : 'max-w-xl'}`}>
@@ -2500,7 +2760,7 @@ export default function CertificacionesAdminPage() {
                     {solicitudesCip.length > 0 ? (
                       solicitudesCip.map((s) => (
                         <tr key={s.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                          <td className="py-4 px-4 font-mono font-bold text-indigo-600 dark:text-indigo-400">{s.dni}</td>
+                          <td className="py-4 px-4 tabular-nums font-bold text-indigo-600 dark:text-indigo-400">{s.dni}</td>
                           <td className="py-4 px-4 font-bold text-slate-800 dark:text-slate-200">
                             {s.estudiante}
                           </td>
@@ -2654,7 +2914,7 @@ export default function CertificacionesAdminPage() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400 font-medium">Código:</span>
-                  <span className="font-mono font-bold text-indigo-600 dark:text-indigo-400">{certificadoParaCambiarModelo.codigo}</span>
+                  <span className="tabular-nums font-bold text-indigo-600 dark:text-indigo-400">{certificadoParaCambiarModelo.codigo}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400 font-medium">Calificación:</span>
@@ -2774,37 +3034,51 @@ export default function CertificacionesAdminPage() {
                 onChange={(e) => setProgramaSimuladoEnModal(e.target.value)}
                 className="px-3 py-1.5 bg-white dark:bg-slate-800 border border-indigo-200 dark:border-indigo-800 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200 max-w-sm truncate"
               >
-                <optgroup label="Diplomados oficiales">
-                  {catalogoDiplomados.map(d => (
-                    <option key={d.id} value={d.titulo}>{d.titulo}</option>
-                  ))}
-                  {catalogoDiplomados.length === 0 && (
-                    <>
-                      <option value="Seguridad y salud ocupacional en minería">Seguridad y salud ocupacional en minería</option>
-                      <option value="Derecho minero y gestión de tierras">Derecho minero y gestión de tierras</option>
-                      <option value="Geología minera, yacimientos y exploración">Geología minera, yacimientos y exploración</option>
-                    </>
-                  )}
-                </optgroup>
-                <optgroup label="Cursos de especialización">
-                  {catalogoCursos.map(c => (
-                    <option key={c.id} value={c.titulo}>{c.titulo}</option>
-                  ))}
-                  {catalogoCursos.length === 0 && (
-                    <>
-                      <option value="Gestión de trabajo en alto riesgo en minería">Gestión de trabajo en alto riesgo en minería</option>
-                      <option value="Software aplicado: Leapfrog Geo y Datamine">Software aplicado: Leapfrog Geo y Datamine</option>
-                    </>
-                  )}
-                </optgroup>
-                <optgroup label="Talleres">
-                  {catalogoTalleres.map(t => (
-                    <option key={t.id} value={t.titulo}>{t.titulo}</option>
-                  ))}
-                  {catalogoTalleres.length === 0 && (
-                    <option value="Primeros auxilios y emergencias mineras">Primeros auxilios y emergencias mineras</option>
-                  )}
-                </optgroup>
+                {/* Si el modelo está asignado a un recurso específico, permitir seleccionarlo */}
+                {modeloParaPrevisualizar.asignacionAlcance === 'PRODUCTO_ESPECIFICO' && modeloParaPrevisualizar.recursoAsignadoNombre && (
+                  <option value={modeloParaPrevisualizar.recursoAsignadoNombre}>
+                    {modeloParaPrevisualizar.recursoAsignadoNombre} (Asignado al modelo)
+                  </option>
+                )}
+
+                {/* Si es certificado para cursos, mostrar ÚNICAMENTE cursos */}
+                {modeloParaPrevisualizar.tipo === 'CURSO' ? (
+                  <optgroup label="Cursos de especialización">
+                    {catalogoCursos.map(c => (
+                      <option key={c.id || c.titulo} value={c.titulo}>{c.titulo}</option>
+                    ))}
+                    {catalogoCursos.length === 0 && (
+                      <>
+                        <option value="Gestión de trabajo en alto riesgo en minería">Gestión de trabajo en alto riesgo en minería</option>
+                        <option value="Software aplicado: Leapfrog Geo y Datamine">Software aplicado: Leapfrog Geo y Datamine</option>
+                        <option value="Topografía minera subterránea con escáner láser">Topografía minera subterránea con escáner láser</option>
+                      </>
+                    )}
+                  </optgroup>
+                ) : modeloParaPrevisualizar.tipo === 'TALLER' ? (
+                  <optgroup label="Talleres y Masterclasses">
+                    {catalogoTalleres.map(t => (
+                      <option key={t.id || t.titulo} value={t.titulo}>{t.titulo}</option>
+                    ))}
+                    {catalogoTalleres.length === 0 && (
+                      <option value="Primeros auxilios y emergencias mineras">Primeros auxilios y emergencias mineras</option>
+                    )}
+                  </optgroup>
+                ) : (
+                  /* Para diplomas generales y modulares, mostrar ÚNICAMENTE diplomados */
+                  <optgroup label="Diplomados oficiales">
+                    {catalogoDiplomados.map(d => (
+                      <option key={d.id || d.titulo} value={d.titulo}>{d.titulo}</option>
+                    ))}
+                    {catalogoDiplomados.length === 0 && (
+                      <>
+                        <option value="Seguridad y salud ocupacional en minería">Seguridad y salud ocupacional en minería</option>
+                        <option value="Derecho minero y gestión de tierras">Derecho minero y gestión de tierras</option>
+                        <option value="Geología minera, yacimientos y exploración">Geología minera, yacimientos y exploración</option>
+                      </>
+                    )}
+                  </optgroup>
+                )}
               </select>
             </div>
 
@@ -2829,7 +3103,7 @@ export default function CertificacionesAdminPage() {
 
             {/* Footer con Acciones */}
             <div className="p-4 border-t border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 flex flex-wrap items-center justify-between gap-3">
-              <span className="text-xs text-slate-500 font-mono">
+              <span className="text-xs text-slate-500 tabular-nums">
                 {modeloParaPrevisualizar.asignacionAlcance === 'SUPERPLANTILLA_GLOBAL' ? 'Superplantilla global' : 'Asignación específica'} • {modeloParaPrevisualizar.orientacion === 'vertical' ? 'A4 Vertical (Portrait)' : 'A4 Horizontal (Landscape)'}
               </span>
 
@@ -2889,6 +3163,344 @@ export default function CertificacionesAdminPage() {
 
           </div>
         </div>
+      )}
+
+      
+      {/* MODAL PARA HABILITAR / EMITIR CERTIFICADO MANUALMENTE A UN ESTUDIANTE */}
+      {mostrarModalHabilitarManual && (
+        <div className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 overflow-y-auto">
+          <div className="min-h-full flex items-start sm:items-center justify-center p-4 py-8">
+            <div className="bg-white dark:bg-slate-900 rounded-3xl max-w-2xl w-full border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
+            
+            {/* Header del Modal */}
+            <div className="p-6 border-b border-slate-100 dark:border-slate-800 flex items-center justify-between bg-gradient-to-r from-indigo-500/10 via-purple-500/5 to-transparent">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-indigo-600 text-white flex items-center justify-center shadow-md shadow-indigo-600/30">
+                  <Award className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-black text-slate-900 dark:text-white">
+                    Habilitar Certificado a Estudiante
+                  </h3>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">
+                    Emite y habilita de forma inmediata el certificado oficial con código de validación QR sin requerir examen previo
+                  </p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setMostrarModalHabilitarManual(false)}
+                className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Formulario */}
+            <form onSubmit={guardarEmisionManual} className="p-6 space-y-5 text-xs">
+              
+              {/* Sección 1: Estudiante */}
+              <div className="bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-3">
+                <div className="flex items-center justify-between">
+                  <label className="text-[11px] font-black uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                    <UserCheck className="w-3.5 h-3.5 text-indigo-600" />
+                    1. Datos del Estudiante
+                  </label>
+                  {listaEstudiantesPlataforma.length > 0 && (
+                    <span className="text-[10px] text-slate-400">
+                      {listaEstudiantesPlataforma.length} alumnos registrados
+                    </span>
+                  )}
+                </div>
+
+                {/* Seleccionar alumno registrado existente */}
+                {listaEstudiantesPlataforma.length > 0 && (
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                      Seleccionar de la lista de estudiantes registrados (o escribir abajo):
+                    </label>
+                    <select
+                      value={estudianteManualSeleccionado}
+                      onChange={(e) => handleSeleccionarEstudianteManual(e.target.value)}
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer"
+                    >
+                      <option value="">-- Seleccionar un estudiante registrado --</option>
+                      {listaEstudiantesPlataforma.map((est) => (
+                        <option key={est.id || est.dni_ce} value={est.dni_ce}>
+                          {est.nombre || `${est.nombres || ''} ${est.apellidos || ''}`.trim()} — DNI: {est.dni_ce}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                      Nombre completo del estudiante *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Ej. QUISPE RAMOS, JUAN CARLOS"
+                      value={nombreManualInput}
+                      onChange={(e) => setNombreManualInput(e.target.value)}
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-bold uppercase text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                      DNI / Documento de identidad *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Ej. 74839201"
+                      value={dniManualInput}
+                      onChange={(e) => setDniManualInput(e.target.value)}
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl tabular-nums font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Sección 2: Tipo de Certificado y Programa */}
+              <div className="bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-3">
+                <label className="text-[11px] font-black uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <GraduationCap className="w-3.5 h-3.5 text-indigo-600" />
+                  2. Certificación y Programa Académico
+                </label>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                      Tipo de Certificado
+                    </label>
+                    <select
+                      value={tipoManual}
+                      onChange={(e) => handleCambioTipoManual(e.target.value as any)}
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer"
+                    >
+                      <option value="DIPLOMA">Diploma general</option>
+                      <option value="MODULAR">Certificado modular</option>
+                      <option value="CURSO">Curso</option>
+                      <option value="TALLER">Taller</option>
+                      <option value="CIP">Certificado CIP</option>
+                      <option value="MIAMI">Certificado Miami</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                      Programa Académico *
+                    </label>
+                    {(tipoManual === 'DIPLOMA' || tipoManual === 'MODULAR' || tipoManual === 'CIP' || tipoManual === 'MIAMI') && catalogoDiplomados.length > 0 ? (
+                      <select
+                        value={programaManual}
+                        onChange={(e) => {
+                          const p = e.target.value;
+                          setProgramaManual(p);
+                          if (tipoManual === 'MODULAR') {
+                            const dip = catalogoDiplomados.find(d => (d.titulo || d.nombre) === p);
+                            const modNombre = dip?.modulos?.[0]?.nombre || dip?.modulos?.[0]?.titulo || 'Módulo 01: Marco Legal y Fundamentos';
+                            setModuloManual(modNombre);
+                          }
+                        }}
+                        className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer truncate"
+                      >
+                        {catalogoDiplomados.map((d, i) => (
+                          <option key={d.id || i} value={d.titulo || d.nombre}>
+                            {d.titulo || d.nombre}
+                          </option>
+                        ))}
+                      </select>
+                    ) : tipoManual === 'CURSO' && catalogoCursos.length > 0 ? (
+                      <select
+                        value={programaManual}
+                        onChange={(e) => setProgramaManual(e.target.value)}
+                        className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer truncate"
+                      >
+                        {catalogoCursos.map((c, i) => (
+                          <option key={c.id || i} value={c.titulo}>
+                            {c.titulo}
+                          </option>
+                        ))}
+                      </select>
+                    ) : tipoManual === 'TALLER' && catalogoTalleres.length > 0 ? (
+                      <select
+                        value={programaManual}
+                        onChange={(e) => setProgramaManual(e.target.value)}
+                        className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer truncate"
+                      >
+                        {catalogoTalleres.map((t, i) => (
+                          <option key={t.id || i} value={t.titulo}>
+                            {t.titulo}
+                          </option>
+                        ))}
+                      </select>
+                    ) : (
+                      <input
+                        type="text"
+                        required
+                        placeholder="Nombre del programa"
+                        value={programaManual}
+                        onChange={(e) => setProgramaManual(e.target.value)}
+                        className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                      />
+                    )}
+                  </div>
+                </div>
+
+                {/* Si es modular, seleccionar o ingresar módulo */}
+                {tipoManual === 'MODULAR' && (
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                      Módulo Específico *
+                    </label>
+                    {(() => {
+                      const dipSel = catalogoDiplomados.find(d => (d.titulo || d.nombre) === programaManual);
+                      if (dipSel?.modulos && dipSel.modulos.length > 0) {
+                        return (
+                          <select
+                            value={moduloManual}
+                            onChange={(e) => setModuloManual(e.target.value)}
+                            className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer"
+                          >
+                            {dipSel.modulos.map((m: any, idx: number) => {
+                              const mNombre = m.nombre || m.titulo || `Módulo 0${idx + 1}`;
+                              return (
+                                <option key={idx} value={mNombre}>
+                                  {mNombre}
+                                </option>
+                              );
+                            })}
+                          </select>
+                        );
+                      }
+                      return (
+                        <input
+                          type="text"
+                          required
+                          placeholder="Ej. Módulo 01: Marco Legal y Fundamentos"
+                          value={moduloManual}
+                          onChange={(e) => setModuloManual(e.target.value)}
+                          className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                        />
+                      );
+                    })()}
+                  </div>
+                )}
+              </div>
+
+              {/* Sección 3: Plantilla, Horas, Nota y Fecha */}
+              <div className="bg-slate-50 dark:bg-slate-800/40 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-800 space-y-3">
+                <label className="text-[11px] font-black uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <LayoutTemplate className="w-3.5 h-3.5 text-indigo-600" />
+                  3. Modelo de Diseño y Parámetros Oficiales
+                </label>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                      Modelo / Plantilla A4
+                    </label>
+                    <select
+                      value={modeloManualId}
+                      onChange={(e) => setModeloManualId(e.target.value)}
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer truncate"
+                    >
+                      {modelosCertificados.map((m) => (
+                        <option key={m.id} value={m.id}>
+                          {m.nombre} {m.esPredeterminado ? '★ (Oficial Activa)' : ''}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                      Horas Lectivas / Académicas
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Ej. 325 horas académicas y 13 créditos"
+                      value={horasManual}
+                      onChange={(e) => setHorasManual(e.target.value)}
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                      Calificación (Nota aprobatoria)
+                    </label>
+                    <input
+                      type="number"
+                      min={12}
+                      max={20}
+                      required
+                      value={notaManual}
+                      onChange={(e) => setNotaManual(e.target.value)}
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-bold text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-[10px] font-bold text-slate-500 mb-1">
+                      Fecha de Emisión
+                    </label>
+                    <input
+                      type="date"
+                      required
+                      value={fechaManual}
+                      onChange={(e) => setFechaManual(e.target.value)}
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                    />
+                  </div>
+                </div>
+
+                {/* Banner de estado habilitado */}
+                <div className="bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl p-3 flex items-center gap-2.5 text-emerald-800 dark:text-emerald-300">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span className="text-[11px] font-semibold">
+                    El certificado se emitirá con <strong>código QR oficial único</strong>, quedará <strong>habilitado para descarga inmediata</strong> y disponible en el validador público.
+                  </span>
+                </div>
+              </div>
+
+              {/* Botones de acción */}
+              <div className="flex items-center justify-end gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setMostrarModalHabilitarManual(false)}
+                  className="px-4 py-2.5 text-slate-600 dark:text-slate-400 font-bold hover:bg-slate-100 dark:hover:bg-slate-800 rounded-xl transition cursor-pointer"
+                >
+                  Cancelar
+                </button>
+                <button
+                  type="submit"
+                  disabled={guardandoManual}
+                  className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-50 text-white font-bold rounded-xl shadow-md transition flex items-center gap-2 cursor-pointer"
+                >
+                  {guardandoManual ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      Habilitando certificado...
+                    </>
+                  ) : (
+                    <>
+                      <Check className="w-4 h-4" />
+                      Habilitar y Emitir Certificado
+                    </>
+                  )}
+                </button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
       )}
 
       {/* MODAL 2: VISTA PREVIA Y DUPLICADO A4 DE CERTIFICADO EMITIDO */}
@@ -3031,7 +3643,7 @@ export default function CertificacionesAdminPage() {
               <div>
                 <p className="text-xs text-slate-500 mb-1">Estudiante solicitante:</p>
                 <div className="p-3 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-bold text-slate-800 dark:text-slate-200">
-                  {solicitudSeleccionada.estudiante} <span className="text-indigo-600 dark:text-indigo-400 font-mono">({solicitudSeleccionada.dni})</span>
+                  {solicitudSeleccionada.estudiante} <span className="text-indigo-600 dark:text-indigo-400 tabular-nums">({solicitudSeleccionada.dni})</span>
                 </div>
               </div>
 
@@ -3043,7 +3655,7 @@ export default function CertificacionesAdminPage() {
                   type="text" 
                   value={codigoQrGen}
                   onChange={(e) => setCodigoQrGen(e.target.value)}
-                  className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-indigo-600"
+                  className="w-full px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl text-xs tabular-nums font-bold bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-indigo-600"
                 />
               </div>
 
@@ -3184,7 +3796,7 @@ export default function CertificacionesAdminPage() {
                   <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-1.5">
                     Código de validación
                   </label>
-                  <div className="px-3 py-2 bg-slate-100 dark:bg-slate-800 rounded-xl text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400 border border-slate-200 dark:border-slate-700">
+                  <div className="px-3 py-2 bg-slate-100 dark:bg-slate-800 rounded-xl text-xs tabular-nums font-bold text-indigo-600 dark:text-indigo-400 border border-slate-200 dark:border-slate-700">
                     Auto: EDM-2026-EXT-...
                   </div>
                 </div>

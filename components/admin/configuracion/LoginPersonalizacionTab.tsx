@@ -255,7 +255,7 @@ export function LoginPersonalizacionTab() {
                 <span>Editor de contenido HTML para la campaña</span>
               </h3>
               <p className="text-xs text-slate-500 mt-0.5">
-                Puedes subir un archivo <code className="font-mono bg-slate-100 px-1 py-0.5 rounded">.html</code> que hayas diseñado o escribir el código directamente.
+                Puedes subir un archivo <code className="tabular-nums bg-slate-100 px-1 py-0.5 rounded">.html</code> que hayas diseñado o escribir el código directamente.
               </p>
             </div>
 
@@ -337,7 +337,7 @@ export function LoginPersonalizacionTab() {
             <div className="space-y-1.5">
               <div className="flex items-center justify-between text-xs text-slate-500 font-semibold px-1">
                 <span>Código HTML & Tailwind / CSS:</span>
-                <span className="font-mono text-[10px] text-slate-400">
+                <span className="tabular-nums text-[10px] text-slate-400">
                   {htmlPersonalizado.length} caracteres
                 </span>
               </div>
@@ -347,7 +347,7 @@ export function LoginPersonalizacionTab() {
                 placeholder="Pega aquí tu código HTML con clases de Tailwind CSS o estilos en línea..."
                 rows={16}
                 spellCheck={false}
-                className="w-full bg-slate-950 text-emerald-400 font-mono text-xs p-4 rounded-xl border border-slate-800 focus:border-indigo-500 outline-none resize-y leading-relaxed shadow-inner"
+                className="w-full bg-slate-950 text-emerald-400 tabular-nums text-xs p-4 rounded-xl border border-slate-800 focus:border-indigo-500 outline-none resize-y leading-relaxed shadow-inner"
               />
               <p className="text-[11px] text-slate-400 leading-relaxed">
                 💡 <strong>Tip:</strong> Puedes usar clases estándar de Tailwind CSS (como <code>bg-amber-500</code>, <code>rounded-2xl</code>, <code>text-white</code>, <code>font-bold</code>), imágenes con etiquetas <code>&lt;img&gt;</code> y enlaces con <code>&lt;a target=&quot;_blank&quot;&gt;</code>.
@@ -384,7 +384,7 @@ export function LoginPersonalizacionTab() {
                     alt="EDUMIN"
                     className="h-7 w-auto object-contain"
                   />
-                  <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">
+                  <span className="text-[10px] tabular-nums text-slate-400 uppercase tracking-wider">
                     Simulación de Login
                   </span>
                 </div>
@@ -401,11 +401,6 @@ export function LoginPersonalizacionTab() {
                       Escribe o pega código HTML a la izquierda para ver cómo lucirá aquí.
                     </div>
                   )}
-                </div>
-
-                {/* Footer del login simulado */}
-                <div className="relative z-10 text-[10px] text-slate-500 border-t border-slate-800/60 pt-2">
-                  Instituto Internacional EDUMIN • Plataforma de especialización minera
                 </div>
               </div>
             </div>

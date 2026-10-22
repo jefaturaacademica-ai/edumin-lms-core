@@ -235,7 +235,7 @@ export default function PagosEstudiantePage() {
           subtitle="Consulta tus cuotas canceladas, fechas de vencimiento y comprobantes de pago oficiales."
         >
           {profile && (
-            <span className="text-xs font-mono font-bold px-3.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 rounded-full border border-indigo-200 dark:border-indigo-800 shrink-0">
+            <span className="text-xs tabular-nums font-bold px-3.5 py-1.5 bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 rounded-full border border-indigo-200 dark:border-indigo-800 shrink-0">
               DNI: {profile.dni_ce} • Paquete: {profile.paquete_adquirido || 'FULL'}
             </span>
           )}
@@ -368,7 +368,7 @@ export default function PagosEstudiantePage() {
               <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
                 Desglose de Cuotas y Vencimientos
               </h3>
-              <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+              <span className="text-xs tabular-nums text-slate-500 dark:text-slate-400">
                 Coincidencia por DNI: {profile?.dni_ce}
               </span>
             </div>
@@ -391,9 +391,9 @@ export default function PagosEstudiantePage() {
                     <tr key={item.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
                       <td className="py-4 px-4 font-bold text-slate-900 dark:text-white">{item.cuota}</td>
                       <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{item.concepto}</td>
-                      <td className="py-4 px-4 font-mono font-bold text-slate-900 dark:text-white">S/ {Number(item.monto).toFixed(2)}</td>
-                      <td className="py-4 px-4 font-mono text-slate-600 dark:text-slate-400">{item.fecha}</td>
-                      <td className="py-4 px-4 font-mono text-slate-600 dark:text-slate-400">{item.comprobante}</td>
+                      <td className="py-4 px-4 tabular-nums font-bold text-slate-900 dark:text-white">S/ {Number(item.monto).toFixed(2)}</td>
+                      <td className="py-4 px-4 tabular-nums text-slate-600 dark:text-slate-400">{item.fecha}</td>
+                      <td className="py-4 px-4 tabular-nums text-slate-600 dark:text-slate-400">{item.comprobante}</td>
                       <td className="py-4 px-4">
                         <span className={`px-2.5 py-1 rounded-full text-[10px] font-bold ${
                           item.estado === 'Pagado' || item.estado === 'APROBADO' || item.estado === 'Completado'
@@ -432,7 +432,7 @@ export default function PagosEstudiantePage() {
               <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
                 Historial de Recibos y Comprobantes Emitidos
               </h3>
-              <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
+              <span className="text-xs tabular-nums text-slate-500 dark:text-slate-400">
                 Total Emitidos: {historialComprobantes.length}
               </span>
             </div>
@@ -453,11 +453,11 @@ export default function PagosEstudiantePage() {
                   {historialComprobantes.length > 0 ? (
                     historialComprobantes.map((item) => (
                       <tr key={item.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition">
-                        <td className="py-4 px-4 font-mono font-bold text-slate-900 dark:text-white">{item.comprobante}</td>
+                        <td className="py-4 px-4 tabular-nums font-bold text-slate-900 dark:text-white">{item.comprobante}</td>
                         <td className="py-4 px-4 text-slate-700 dark:text-slate-300">{item.concepto}</td>
-                        <td className="py-4 px-4 font-mono font-bold text-emerald-600 dark:text-emerald-400">S/ {Number(item.monto).toFixed(2)}</td>
+                        <td className="py-4 px-4 tabular-nums font-bold text-emerald-600 dark:text-emerald-400">S/ {Number(item.monto).toFixed(2)}</td>
                         <td className="py-4 px-4 text-slate-600 dark:text-slate-400">{item.medio}</td>
-                        <td className="py-4 px-4 font-mono text-slate-600 dark:text-slate-400">{item.fecha}</td>
+                        <td className="py-4 px-4 tabular-nums text-slate-600 dark:text-slate-400">{item.fecha}</td>
                         <td className="py-4 px-4 text-right">
                           <button
                             onClick={() => setReciboSeleccionado(item)}
@@ -493,10 +493,10 @@ export default function PagosEstudiantePage() {
                 <p className="text-[10px] text-slate-500 dark:text-slate-400">Educación Ejecutiva en Minería y Seguridad</p>
               </div>
               <div className="text-right">
-                <span className="bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 font-mono font-black text-xs px-2.5 py-1 rounded-md border border-indigo-200 dark:border-indigo-800 block">
+                <span className="bg-indigo-50 dark:bg-indigo-950/80 text-indigo-700 dark:text-indigo-300 tabular-nums font-black text-xs px-2.5 py-1 rounded-md border border-indigo-200 dark:border-indigo-800 block">
                   RECIBO - {reciboSeleccionado.comprobante}
                 </span>
-                <span className="text-[10px] font-mono text-slate-400 block mt-1">{reciboSeleccionado.fecha}</span>
+                <span className="text-[10px] tabular-nums text-slate-400 block mt-1">{reciboSeleccionado.fecha}</span>
               </div>
             </div>
 
@@ -507,7 +507,7 @@ export default function PagosEstudiantePage() {
               </div>
               <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                 <span className="text-slate-500 font-semibold">DNI / CE:</span>
-                <strong className="font-mono">{profile?.dni_ce || 'Sin DNI'}</strong>
+                <strong className="tabular-nums">{profile?.dni_ce || 'Sin DNI'}</strong>
               </div>
               <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                 <span className="text-slate-500 font-semibold">Concepto:</span>
@@ -519,7 +519,7 @@ export default function PagosEstudiantePage() {
               </div>
               <div className="flex justify-between bg-emerald-50 dark:bg-emerald-950/50 p-3 rounded-xl border border-emerald-200 dark:border-emerald-800 text-sm">
                 <span className="text-emerald-900 dark:text-emerald-300 font-bold">Monto Total Pagado:</span>
-                <strong className="text-emerald-700 dark:text-emerald-400 font-black">S/ {Number(reciboSeleccionado.monto).toFixed(2)}</strong>
+                <strong className="text-emerald-700 dark:text-emerald-400 font-black tabular-nums">S/ {Number(reciboSeleccionado.monto).toFixed(2)}</strong>
               </div>
             </div>
 

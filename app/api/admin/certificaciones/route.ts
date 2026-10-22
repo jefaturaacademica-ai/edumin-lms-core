@@ -65,188 +65,6 @@ export async function GET() {
       console.error('Error al consultar tabla certificaciones:', err);
     }
 
-    // 2. Incorporar dinámicamente certificaciones de TODOS los estudiantes en Supabase (evitando duplicados)
-    if (profiles && profiles.length > 0) {
-      let counter = 100;
-      for (const p of profiles) {
-        const estudiante = formatearNombreCertificado(p.nombres, p.apellidos);
-        const dni = p.dni_ce || '00000000';
-        const email = p.email || `${dni}@edumin.pe`;
-        const habilitado = !p.bloqueado;
-
-        // Parse Diplomados
-        const dList = parseDiplomadosFromProfile(p);
-        for (const d of dList) {
-          // Solo consideramos módulos aprobados con nota >= 12
-          const modulosAprobados = (d.modulos || []).filter((m: any) => {
-            const nota = m.nota !== undefined ? Number(m.nota) : (m.completado ? 18 : 0);
-            return Boolean(m.completado) && nota >= 12;
-          });
-          const modularesAprobadosCount = modulosAprobados.length;
-          const esDiplomaGeneral = modularesAprobadosCount >= 3;
-
-          // Diploma general SOLO si aprueba los 3 módulos con nota >= 12
-          if (esDiplomaGeneral) {
-            counter++;
-            const codDiploma = normalizarCodigoCertificado(d.codigo || generarCodigoUnicoCertificado());
-            const keyUnica = `${dni}-DIPLOMA-${d.titulo || d.slug || 'DIP'}-GENERAL`;
-
-            if (!codigosExistentes.has(codDiploma) && !codigosExistentes.has(keyUnica)) {
-              codigosExistentes.add(codDiploma);
-              codigosExistentes.add(keyUnica);
-
-              const sumaNotas = modulosAprobados.reduce((sum: number, m: any) => sum + (Number(m.nota) || 18), 0);
-              const promedio = modularesAprobadosCount > 0 ? Number((sumaNotas / modularesAprobadosCount).toFixed(1)) : 18;
-              const fechaEmision = d.fecha || new Date().toISOString().split('T')[0];
-              const horasDiploma = d.horas || '325 horas académicas y 13 créditos académicos';
-
-              realEmitidos.push({
-                id: `cert-dip-${dni}-${d.id || counter}`,
-                codigo: codDiploma,
-                tipo: 'DIPLOMA',
-                estudiante,
-                dni,
-                email,
-                programa: d.titulo || 'DIPLOMADO OFICIAL',
-                modulo: null,
-                nota: d.promedio || promedio,
-                horas: horasDiploma,
-                fecha: fechaEmision,
-                estadoFinanciero: habilitado ? 'AL_DIA' : 'DEUDA_PENDIENTE',
-                habilitado,
-                modelo_id: (d as any).modelo_id || 'mod-avanza-dip',
-                categoria: 'Diplomados Oficiales'
-              });
-
-              // Sincronizar en DB si no existía
-              try {
-                await admin.from('certificaciones').insert({
-                  codigo_verificacion: codDiploma,
-                  profile_id: p.id,
-                  dni_ce: dni,
-                  estudiante_nombre: estudiante,
-                  tipo: 'DIPLOMA',
-                  programa_titulo: d.titulo || 'DIPLOMADO OFICIAL',
-                  modulo_titulo: null,
-                  horas_lectivas: horasDiploma,
-                  nota_final: promedio,
-                  fecha_emision: fechaEmision,
-                  estado_financiero_al_dia: habilitado,
-                  plantilla_snapshot: {
-                    modelo_id: (d as any).modelo_id || 'mod-avanza-dip',
-                    nombrePlantilla: 'Modelo Oficial Avanza & EDUMIN - Diploma de Alta Especialización',
-                    horas: horasDiploma,
-                    ciudad: 'Arequipa'
-                  }
-                });
-              } catch (e) {
-                // Ignore sync insert error
-              }
-            }
-          }
-
-          // Modulares completados y aprobados (nota >= 12)
-          for (let mIdx = 0; mIdx < (d.modulos || []).length; mIdx++) {
-            const m = d.modulos[mIdx];
-            const nota = m.nota !== undefined ? Number(m.nota) : (m.completado ? 18 : 0);
-            if (Boolean(m.completado) && nota >= 12) {
-              counter++;
-              const moduloNombreStr = m.nombre && m.nombre !== m.codigo 
-                ? `${m.codigo || `Módulo 0${mIdx + 1}`}: ${m.nombre}` 
-                : (m.nombre || m.codigo || `Módulo 0${mIdx + 1}`);
-              const codModular = normalizarCodigoCertificado(m.codigo_cert || generarCodigoUnicoCertificado());
-              const keyModular = `${dni}-MODULAR-${d.titulo || d.slug}-${m.codigo || moduloNombreStr}`;
-
-              if (!codigosExistentes.has(codModular) && !codigosExistentes.has(keyModular)) {
-                codigosExistentes.add(codModular);
-                codigosExistentes.add(keyModular);
-
-                const fechaModular = m.fecha || new Date().toISOString().split('T')[0];
-                const horasModular = m.horas || '108 horas académicas';
-
-                realEmitidos.push({
-                  id: `cert-mod-${dni}-${mIdx + 1}-${counter}`,
-                  codigo: codModular,
-                  tipo: 'MODULAR',
-                  estudiante,
-                  dni,
-                  email,
-                  programa: d.titulo,
-                  modulo: moduloNombreStr,
-                  nota: nota,
-                  horas: horasModular,
-                  fecha: fechaModular,
-                  estadoFinanciero: habilitado ? 'AL_DIA' : 'DEUDA_PENDIENTE',
-                  habilitado,
-                  modelo_id: (m as any).modelo_id || 'mod-avanza-mod',
-                  categoria: 'Diplomados Oficiales'
-                });
-
-                // Sincronizar en DB si no existía
-                try {
-                  await admin.from('certificaciones').insert({
-                    codigo_verificacion: codModular,
-                    profile_id: p.id,
-                    dni_ce: dni,
-                    estudiante_nombre: estudiante,
-                    tipo: 'MODULAR',
-                    programa_titulo: d.titulo,
-                    modulo_titulo: moduloNombreStr,
-                    horas_lectivas: horasModular,
-                    nota_final: nota,
-                    fecha_emision: fechaModular,
-                    estado_financiero_al_dia: habilitado,
-                    plantilla_snapshot: {
-                      modelo_id: (m as any).modelo_id || 'mod-avanza-mod',
-                      nombrePlantilla: 'Modelo Oficial Avanza & EDUMIN - Certificado Modular',
-                      horas: horasModular,
-                      ciudad: 'Arequipa'
-                    }
-                  });
-                } catch (e) {
-                  // Ignore sync insert error
-                }
-              }
-            }
-          }
-        }
-
-        // Parse Cursos
-        const cList = parseCursosFromProfile(p);
-        cList.forEach((c: any, cIdx: number) => {
-          if (c.completado) {
-            counter++;
-            const esTaller = (c.categoria || '').toLowerCase().includes('taller') || (c.id || '').includes('taller');
-            const codCurso = normalizarCodigoCertificado(c.codigo || generarCodigoUnicoCertificado());
-            const keyCurso = `${dni}-${esTaller ? 'TALLER' : 'CURSO'}-${c.titulo}`;
-
-            if (!codigosExistentes.has(codCurso) && !codigosExistentes.has(keyCurso)) {
-              codigosExistentes.add(codCurso);
-              codigosExistentes.add(keyCurso);
-
-              realEmitidos.push({
-                id: `cert-cur-${dni}-${cIdx + 1}-${counter}`,
-                codigo: codCurso,
-                tipo: esTaller ? 'TALLER' : 'CURSO',
-                estudiante,
-                dni,
-                email,
-                programa: c.titulo,
-                modulo: null,
-                nota: Number(c.nota) || 18,
-                horas: c.horas || '24 horas cronológicas',
-                fecha: c.fecha || '2026-02-18',
-                estadoFinanciero: habilitado ? 'AL_DIA' : 'DEUDA_PENDIENTE',
-                habilitado,
-                modelo_id: (c as any).modelo_id || 'mod-03',
-                categoria: esTaller ? 'Talleres' : 'Cursos de Alta Especialización'
-              });
-            }
-          }
-        });
-      }
-    }
-
     return NextResponse.json({
       solicitudes,
       emitidos: realEmitidos,
@@ -267,9 +85,175 @@ export async function GET() {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { id, dni, codigoQr } = body;
-
     const admin = createAdminClient();
+
+    // Emisión manual directa de certificado (sin requerir examen previo del estudiante)
+    if (body.accion === 'EMITIR_MANUAL') {
+      const {
+        estudiante,
+        dni,
+        programa,
+        modulo,
+        tipo,
+        horas,
+        nota,
+        fecha,
+        modelo_id,
+        habilitado,
+        plantilla_snapshot
+      } = body;
+
+      const codigoGenerado = normalizarCodigoCertificado(
+        body.codigo || generarCodigoUnicoCertificado()
+      );
+
+      const fechaEmision = fecha || new Date().toISOString().split('T')[0];
+      const horasLectivas = horas || (tipo === 'MODULAR' ? '108 horas académicas' : (tipo === 'DIPLOMA' ? '325 horas académicas y 13 créditos académicos' : '24 horas cronológicas'));
+      const notaFinal = Number(nota) || 18;
+      const estadoHabilitado = habilitado !== false;
+
+      // 1. Guardar en tabla certificaciones
+      let certId = `cert-man-${Date.now()}`;
+      try {
+        const { data: certInsertado, error: errInsert } = await admin
+          .from('certificaciones')
+          .insert({
+            codigo_verificacion: codigoGenerado,
+            estudiante_nombre: estudiante,
+            dni_ce: dni,
+            tipo: tipo || 'DIPLOMA',
+            programa_titulo: programa,
+            modulo_titulo: modulo || null,
+            horas_lectivas: horasLectivas,
+            nota_final: notaFinal,
+            fecha_emision: fechaEmision,
+            estado_financiero_al_dia: estadoHabilitado,
+            plantilla_snapshot: {
+              ...(plantilla_snapshot || {}),
+              modelo_id: modelo_id || plantilla_snapshot?.modelo_id || 'mod-avanza-dip',
+              horas: horasLectivas
+            }
+          })
+          .select()
+          .maybeSingle();
+
+        if (certInsertado) {
+          certId = certInsertado.id;
+        } else if (errInsert) {
+          console.warn('Advertencia insertando en tabla certificaciones:', errInsert.message);
+        }
+      } catch (errDb) {
+        console.error('Error insertando en certificaciones:', errDb);
+      }
+
+      // 2. Si el estudiante existe en profiles, sincronizar su aula virtual
+      try {
+        const { data: profile } = await admin
+          .from('profiles')
+          .select('id, diplomados, cursos')
+          .eq('dni_ce', dni)
+          .maybeSingle();
+
+        if (profile) {
+          if (tipo === 'DIPLOMA' || tipo === 'MODULAR') {
+            const dList = parseDiplomadosFromProfile(profile);
+            let dipTarget = dList.find(d => (d.titulo || '').toLowerCase() === (programa || '').toLowerCase());
+            if (!dipTarget && dList.length > 0) {
+              dipTarget = dList[0];
+            }
+            if (dipTarget) {
+              if (tipo === 'DIPLOMA') {
+                dipTarget.completado = true;
+                dipTarget.avance = 100;
+                dipTarget.codigo = codigoGenerado;
+                dipTarget.fecha = fechaEmision;
+                dipTarget.horas = horasLectivas;
+                (dipTarget as any).modelo_id = modelo_id;
+              } else if (tipo === 'MODULAR') {
+                const targetMod = (dipTarget.modulos || []).find((m: any) => 
+                  (m.nombre || m.titulo || '').toLowerCase().includes((modulo || '').toLowerCase())
+                );
+                if (targetMod) {
+                  targetMod.completado = true;
+                  targetMod.nota = notaFinal;
+                  targetMod.codigo_cert = codigoGenerado;
+                  (targetMod as any).fecha_emision = fechaEmision;
+                  (targetMod as any).modelo_id = modelo_id;
+                }
+              }
+              await admin.from('profiles').update({
+                diplomados: `DIPLOMADOS_LIST|${JSON.stringify(dList)}`
+              }).eq('id', profile.id);
+            }
+          } else if (tipo === 'CURSO' || tipo === 'TALLER') {
+            const cList = parseCursosFromProfile(profile);
+            let curTarget = cList.find(c => (c.titulo || '').toLowerCase() === (programa || '').toLowerCase());
+            if (curTarget) {
+              curTarget.completado = true;
+              curTarget.codigo = codigoGenerado;
+              curTarget.fecha = fechaEmision;
+              curTarget.nota = notaFinal;
+              curTarget.horas = horasLectivas;
+              (curTarget as any).modelo_id = modelo_id;
+              await admin.from('profiles').update({
+                cursos: `CURSOS_LIST|${JSON.stringify(cList)}`
+              }).eq('id', profile.id);
+            }
+          }
+        }
+      } catch (eProf) {
+        console.warn('Error sincronizando con profile del estudiante:', eProf);
+      }
+
+      // 3. Auditoría de emisión manual
+      try {
+        await admin.from('audit_logs').insert({
+          usuario_email: 'admin@edumin.pe',
+          accion: 'EMISION_MANUAL_CERTIFICADO',
+          detalles: {
+            estudiante,
+            dni_ce: dni,
+            programa,
+            modulo,
+            tipo,
+            codigo: codigoGenerado,
+            horas: horasLectivas,
+            nota: notaFinal
+          }
+        });
+      } catch (e) {
+        console.error(e);
+      }
+
+      return NextResponse.json({
+        success: true,
+        message: `¡Certificado emitido y habilitado con éxito! Código oficial: ${codigoGenerado}`,
+        certificado: {
+          id: certId,
+          codigo: codigoGenerado,
+          tipo,
+          estudiante,
+          dni,
+          email: `${dni}@edumin.pe`,
+          programa,
+          modulo: modulo || null,
+          nota: notaFinal,
+          horas: horasLectivas,
+          fecha: fechaEmision,
+          estadoFinanciero: estadoHabilitado ? 'AL_DIA' : 'DEUDA_PENDIENTE',
+          habilitado: estadoHabilitado,
+          modelo_id: modelo_id || 'mod-avanza-dip',
+          plantilla_snapshot: {
+            ...(plantilla_snapshot || {}),
+            modelo_id: modelo_id || 'mod-avanza-dip',
+            horas: horasLectivas
+          },
+          categoria: tipo === 'DIPLOMA' || tipo === 'MODULAR' ? 'Diplomados Oficiales' : (tipo === 'TALLER' ? 'Talleres' : 'Cursos de Alta Especialización')
+        }
+      });
+    }
+
+    const { id, dni, codigoQr } = body;
 
     // Registrar en auditoría
     try {
@@ -282,7 +266,7 @@ export async function POST(request: Request) {
           codigoQr: codigoQr || `EDM-CIP-2026-${Math.floor(1000 + Math.random() * 9000)}`
         }
       });
-    } catch (e: any) {
+    } catch (e) {
       console.error(e);
     }
 

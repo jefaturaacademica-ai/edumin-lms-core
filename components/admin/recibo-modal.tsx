@@ -25,10 +25,10 @@ export default function ReciboModal({
             <p className="text-[10px] text-slate-500 dark:text-slate-400">Educación Ejecutiva en Minería y Seguridad</p>
           </div>
           <div className="text-right">
-            <span className="bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 font-mono font-black text-xs px-2.5 py-1 rounded-md border border-indigo-200 dark:border-indigo-800 block">
+            <span className="bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 tabular-nums font-black text-xs px-2.5 py-1 rounded-md border border-indigo-200 dark:border-indigo-800 block">
               RECIBO INTERNO - {reciboImprimir.id ? String(reciboImprimir.id).substring(0, 6) : '1187'}
             </span>
-            <span className="text-[10px] font-mono text-slate-400 block mt-1">{new Date().toLocaleDateString()}</span>
+            <span className="text-[10px] tabular-nums text-slate-400 block mt-1">{new Date().toLocaleDateString()}</span>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export default function ReciboModal({
           </div>
           <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
             <span className="text-slate-500 dark:text-slate-400 font-semibold">DNI / CE:</span>
-            <strong className="font-mono text-slate-900 dark:text-white">{alumnoSeleccionado?.dni_ce}</strong>
+            <strong className="tabular-nums text-slate-900 dark:text-white">{alumnoSeleccionado?.dni_ce}</strong>
           </div>
           <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
             <span className="text-slate-500 dark:text-slate-400 font-semibold">Programa:</span>
@@ -51,11 +51,11 @@ export default function ReciboModal({
           </div>
           <div className="flex justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
             <span className="text-slate-500 dark:text-slate-400 font-semibold">Nº Operación / Comprobante:</span>
-            <strong className="font-mono text-slate-900 dark:text-white">{reciboImprimir.comprobante || 'OP-984321'}</strong>
+            <strong className="tabular-nums text-slate-900 dark:text-white">{reciboImprimir.comprobante || 'OP-984321'}</strong>
           </div>
           <div className="flex justify-between bg-emerald-50 dark:bg-emerald-950/40 p-3 rounded-xl border border-emerald-200 dark:border-emerald-800 text-sm">
             <span className="text-emerald-900 dark:text-emerald-300 font-bold">Monto Total Pagado:</span>
-            <strong className="text-emerald-700 dark:text-emerald-400 font-black">S/ {Number(reciboImprimir.monto || 150).toFixed(2)}</strong>
+            <strong className="text-emerald-700 dark:text-emerald-400 font-black tabular-nums">S/ {Number(reciboImprimir.monto || 150).toFixed(2)}</strong>
           </div>
         </div>
 

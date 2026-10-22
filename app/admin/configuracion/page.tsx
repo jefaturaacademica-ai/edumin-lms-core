@@ -109,7 +109,7 @@ export default function ConfiguracionRolesPage() {
               <h1 className="text-3xl font-bold text-slate-900">Configuración & Roles (RBAC)</h1>
               <p className="text-slate-500 mt-1">Gestión de permisos de usuarios, control de accesos y reglas de paquetes.</p>
             </div>
-            <div className="bg-slate-900 text-slate-300 text-xs px-4 py-2 rounded-2xl font-mono font-bold border border-slate-800">
+            <div className="bg-slate-900 text-slate-300 text-xs px-4 py-2 rounded-2xl tabular-nums font-bold border border-slate-800">
               🔒 Supabase RLS Protegido
             </div>
           </div>
@@ -197,7 +197,7 @@ export default function ConfiguracionRolesPage() {
                     {usuariosFiltrados.length > 0 ? (
                       usuariosFiltrados.map((u) => (
                         <tr key={u.id} className="hover:bg-slate-50 transition-colors">
-                          <td className="py-4 px-4 font-mono font-bold text-indigo-600">{u.dni_ce}</td>
+                          <td className="py-4 px-4 tabular-nums font-bold text-indigo-600">{u.dni_ce}</td>
                           <td className="py-4 px-4 font-bold text-slate-800">
                             {u.nombres} {u.apellidos}
                             <div className="text-[10px] text-slate-400 font-normal">{u.email}</div>
@@ -399,7 +399,7 @@ export default function ConfiguracionRolesPage() {
                   </h2>
 
                   <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                    Como administrador, puedes ingresar directamente al Aula Virtual (<code className="text-indigo-300 bg-white/10 px-1.5 py-0.5 rounded font-mono">/dashboard</code>). Tu sesión ejecutará automáticamente los privilegios de un alumno con <strong>Paquete FULL</strong>, con todas las cuotas al día, acceso irrestricto a los 3 módulos de <strong>Derecho Minero</strong> y opción de rendir exámenes y generar certificados.
+                    Como administrador, puedes ingresar directamente al Aula Virtual (<code className="text-indigo-300 bg-white/10 px-1.5 py-0.5 rounded tabular-nums">/dashboard</code>). Tu sesión ejecutará automáticamente los privilegios de un alumno con <strong>Paquete FULL</strong>, con todas las cuotas al día, acceso irrestricto a los 3 módulos de <strong>Derecho Minero</strong> y opción de rendir exámenes y generar certificados.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
@@ -460,7 +460,7 @@ export default function ConfiguracionRolesPage() {
                       <span className="size-5 rounded-full bg-indigo-600 text-white inline-flex items-center justify-center text-[10px]">1</span>
                       Abre tu panel de Supabase y ve a la tabla:
                     </p>
-                    <code className="block bg-slate-900 text-emerald-400 p-2.5 rounded-xl font-mono text-[11px]">
+                    <code className="block bg-slate-900 text-emerald-400 p-2.5 rounded-xl tabular-nums text-[11px]">
                       Table Editor ➔ tabla "profiles"
                     </code>
                   </div>
@@ -474,25 +474,25 @@ export default function ConfiguracionRolesPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 font-sans">
                       <div className="p-3 bg-white rounded-xl border border-slate-200">
                         <span className="text-[10px] uppercase font-bold text-slate-400">Columna diplomado_1</span>
-                        <p className="font-mono text-indigo-600 font-bold text-xs mt-1">Derecho Minero</p>
+                        <p className="tabular-nums text-indigo-600 font-bold text-xs mt-1">Derecho Minero</p>
                         <p className="text-[11px] text-slate-500 mt-0.5">O el nombre oficial: <em>"Diplomado en Derecho Minero y Gestión Ambiental"</em>.</p>
                       </div>
 
                       <div className="p-3 bg-white rounded-xl border border-slate-200">
                         <span className="text-[10px] uppercase font-bold text-slate-400">Columna role</span>
-                        <p className="font-mono text-indigo-600 font-bold text-xs mt-1">ESTUDIANTE</p>
+                        <p className="tabular-nums text-indigo-600 font-bold text-xs mt-1">ESTUDIANTE</p>
                         <p className="text-[11px] text-slate-500 mt-0.5">(Para administradores pon <code>ADMIN</code> o <code>SUPERADMIN</code>).</p>
                       </div>
 
                       <div className="p-3 bg-white rounded-xl border border-slate-200">
                         <span className="text-[10px] uppercase font-bold text-slate-400">Columna paquete_adquirido</span>
-                        <p className="font-mono text-emerald-600 font-bold text-xs mt-1">FULL</p>
+                        <p className="tabular-nums text-emerald-600 font-bold text-xs mt-1">FULL</p>
                         <p className="text-[11px] text-slate-500 mt-0.5">Habilita acceso completo a cursos libres y certificaciones.</p>
                       </div>
 
                       <div className="p-3 bg-white rounded-xl border border-slate-200">
                         <span className="text-[10px] uppercase font-bold text-slate-400">Columna cuotas_pagadas</span>
-                        <p className="font-mono text-sky-600 font-bold text-xs mt-1">6</p>
+                        <p className="tabular-nums text-sky-600 font-bold text-xs mt-1">6</p>
                         <p className="text-[11px] text-slate-500 mt-0.5">Evita cualquier bloqueo por pago pendiente.</p>
                       </div>
                     </div>

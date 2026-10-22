@@ -1,6 +1,6 @@
 {
-  "modo": "contactos",
-  "tituloCampana": "Canales de soporte institucional",
-  "htmlPersonalizado": "",
-  "fechaActualizacion": "2026-10-20T16:22:00.000Z"
+  "modo": "html",
+  "tituloCampana": "Inscripciones y Nuevos Diplomados",
+  "htmlPersonalizado": "<div class=\"space-y-5 text-center sm:text-left bg-gradient-to-br from-slate-900/90 via-slate-900/80 to-indigo-950/40 border border-indigo-500/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-2xl relative overflow-hidden\">\n  <div class=\"inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 text-xs font-bold\">\n    <span>📢 Convocatoria Oficial Abierta</span>\n  </div>\n  <h2 class=\"text-2xl sm:text-3xl font-black text-white tracking-tight\">\n    Nuevos Diplomados de Especialización Minera\n  </h2>\n  <p class=\"text-xs sm:text-sm text-slate-300 leading-relaxed max-w-lg\">\n    Inicia tu formación de alto impacto con certificación universitaria y docentes referentes de la industria minera peruana e internacional.\n  </p>\n  <div class=\"pt-2 flex flex-wrap gap-3\">\n    <a href=\"https://wa.me/51980694497?text=Hola%2C%20deseo%20conocer%20el%20cat%C3%A1logo%20de%20nuevos%20diplomados\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center justify-center px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-xs transition shadow-lg\">\n      Ver catálogo de diplomados\n    </a>\n  </div>\n</div>",
+  "fechaActualizacion": "2026-10-21T14:52:12.849Z"
 }

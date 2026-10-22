@@ -176,7 +176,7 @@ export default function AlumnosRiesgoPage() {
               <Calendar className="w-5 h-5 text-amber-600 shrink-0" />
               <div className="text-xs">
                 <span className="font-bold block">Corte Automático Programado</span>
-                <span>Bloqueo masivo el <strong className="font-mono underline">24/09/2026</strong></span>
+                <span>Bloqueo masivo el <strong className="tabular-nums underline">24/09/2026</strong></span>
               </div>
             </div>
           </div>
@@ -303,7 +303,7 @@ export default function AlumnosRiesgoPage() {
                   ) : estudiantesFiltrados.length > 0 ? (
                     estudiantesFiltrados.map((est) => (
                       <tr key={est.id} className="hover:bg-slate-50 transition-colors">
-                        <td className="py-4 px-4 font-mono font-bold text-indigo-600">{est.dni}</td>
+                        <td className="py-4 px-4 tabular-nums font-bold text-indigo-600">{est.dni}</td>
                         <td className="py-4 px-4 font-bold text-slate-800">
                           {est.nombre}
                           <div className="text-[10px] text-slate-400 font-normal">{est.email}</div>
@@ -376,7 +376,7 @@ export default function AlumnosRiesgoPage() {
               <div>
                 <p className="text-xs text-slate-500 mb-2">Estudiante seleccionado:</p>
                 <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs font-bold text-slate-800">
-                  {alumnoSeleccionadoProrroga.nombre} <span className="text-indigo-600 font-mono font-normal">({alumnoSeleccionadoProrroga.dni})</span>
+                  {alumnoSeleccionadoProrroga.nombre} <span className="text-indigo-600 tabular-nums font-normal">({alumnoSeleccionadoProrroga.dni})</span>
                 </div>
               </div>
 

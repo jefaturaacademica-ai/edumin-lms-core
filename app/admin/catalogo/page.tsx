@@ -41,7 +41,7 @@ export default function CatalogoAdminPage() {
   const [nuevaVersion, setNuevaVersion] = useState('Versión 1');
   const [nuevoAno, setNuevoAno] = useState('2026');
   const [nuevoTitulo, setNuevoTitulo] = useState('');
-  const [nuevoDocente, setNuevoDocente] = useState('Ing. Mario Hilasaca');
+  const [nuevoDocente, setNuevoDocente] = useState('');
   const [nuevoNumModulos, setNuevoNumModulos] = useState('3');
   const [nuevoTallerAplicable, setNuevoTallerAplicable] = useState('Ninguno');
   const [nuevoPrecio, setNuevoPrecio] = useState('150.00');
@@ -1688,7 +1688,7 @@ export default function CatalogoAdminPage() {
             <div>
               <div className="flex items-center gap-2">
                 <span className="bg-emerald-100 text-emerald-800 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">Catálogo Sincronizado</span>
-                <span className="text-slate-400 text-xs font-mono">• Supabase public.cursos</span>
+                <span className="text-slate-400 text-xs tabular-nums">• Supabase public.cursos</span>
               </div>
               <h1 className="text-3xl font-bold text-slate-900 dark:text-white mt-1">Gestión del Catálogo Académico</h1>
             </div>
@@ -1854,12 +1854,12 @@ export default function CatalogoAdminPage() {
                             className="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500 cursor-pointer"
                           />
                         </td>
-                        <td className="py-4 px-4 font-mono font-black text-indigo-700 bg-indigo-50/40 rounded-lg">{item.codigo}</td>
+                        <td className="py-4 px-4 tabular-nums font-black text-indigo-700 bg-indigo-50/40 rounded-lg">{item.codigo}</td>
 
                         {activeTab === 'diplomados' ? (
                           <>
                             <td className="py-4 px-4 font-bold text-slate-600">{item.version || 'Versión 1'}</td>
-                            <td className="py-4 px-4 font-mono text-slate-600">{item.ano || 2026}</td>
+                            <td className="py-4 px-4 tabular-nums text-slate-600">{item.ano || 2026}</td>
                             <td className="py-4 px-4 font-bold text-slate-800">{item.titulo}</td>
                             <td className="py-4 px-4 font-bold text-slate-700 text-center">
                               <span className="bg-slate-100 px-2.5 py-1 rounded-md text-[11px]">
@@ -1874,7 +1874,7 @@ export default function CatalogoAdminPage() {
                           </>
                         ) : (
                           <>
-                            <td className="py-4 px-4 font-mono text-slate-600">{item.ano || 2026}</td>
+                            <td className="py-4 px-4 tabular-nums text-slate-600">{item.ano || 2026}</td>
                             <td className="py-4 px-4 font-bold text-slate-800">{item.titulo}</td>
                             <td className="py-4 px-4 font-semibold text-indigo-600">{item.docente || 'Por asignar'}</td>
                           </>
@@ -1941,7 +1941,7 @@ export default function CatalogoAdminPage() {
                     type="text" 
                     value={itemEditando.codigo}
                     onChange={(e) => setItemEditando({ ...itemEditando, codigo: e.target.value.toUpperCase() })}
-                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900"
+                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs tabular-nums font-bold text-slate-900"
                   />
                 </div>
 
@@ -1962,7 +1962,7 @@ export default function CatalogoAdminPage() {
                         type="number" 
                         value={itemEditando.ano || 2026}
                         onChange={(e) => setItemEditando({ ...itemEditando, ano: Number(e.target.value) })}
-                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900"
+                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs tabular-nums font-bold text-slate-900"
                       />
                     </div>
                   </>
@@ -1974,7 +1974,7 @@ export default function CatalogoAdminPage() {
                         type="number" 
                         value={itemEditando.ano || 2026}
                         onChange={(e) => setItemEditando({ ...itemEditando, ano: Number(e.target.value) })}
-                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-mono font-bold text-slate-900"
+                        className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs tabular-nums font-bold text-slate-900"
                       />
                     </div>
                     <div>
@@ -2082,7 +2082,7 @@ export default function CatalogoAdminPage() {
                         <div key={mIdx} className="bg-slate-50 border border-slate-200 p-5 rounded-2xl space-y-3">
                           <div className="flex justify-between items-center gap-3">
                             <div className="flex items-center gap-2 flex-1">
-                              <span className="bg-indigo-600 text-white font-mono font-bold px-3 py-1.5 rounded-lg text-xs shrink-0">
+                              <span className="bg-indigo-600 text-white tabular-nums font-bold px-3 py-1.5 rounded-lg text-xs shrink-0">
                                 {mod.codigo || `Módulo ${(mIdx + 1).toString().padStart(2, '0')}`}
                               </span>
                               <input 
@@ -2143,7 +2143,7 @@ export default function CatalogoAdminPage() {
                                       {/* Cabecera del Tema */}
                                       <div className="flex items-center justify-between gap-3 bg-white p-2.5 rounded-lg border border-slate-200 shadow-2xs">
                                         <div className="flex items-center gap-2 flex-1">
-                                          <span className="bg-indigo-100 text-indigo-800 font-bold px-2.5 py-1 rounded-md text-[11px] shrink-0 font-mono">
+                                          <span className="bg-indigo-100 text-indigo-800 font-bold px-2.5 py-1 rounded-md text-[11px] shrink-0 tabular-nums">
                                             Tema {tIdx + 1}
                                           </span>
                                           <input
@@ -2191,13 +2191,13 @@ export default function CatalogoAdminPage() {
                                             return (
                                               <div key={sIdx} className="p-3 bg-white border border-slate-200 rounded-xl space-y-2 shadow-2xs">
                                                 <div className="flex items-center gap-2">
-                                                  <span className="text-[10px] font-bold text-slate-400 font-mono">Sesión {sIdx + 1}:</span>
+                                                  <span className="text-[10px] font-bold text-slate-400 tabular-nums">Sesión {sIdx + 1}:</span>
                                                   <input
                                                     type="text"
                                                     value={tituloClase}
                                                     placeholder="Título de la sesión/clase..."
                                                     onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'titulo', e.target.value)}
-                                                    className="flex-1 px-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-800 font-mono"
+                                                    className="flex-1 px-3 py-1 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-800 tabular-nums"
                                                   />
                                                   <button
                                                     type="button"
@@ -2217,7 +2217,7 @@ export default function CatalogoAdminPage() {
                                                       placeholder="https://drive.google.com/file/d/.../preview"
                                                       value={iframeUrl}
                                                       onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'iframe_url', e.target.value)}
-                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
                                                     />
                                                   </div>
                                                   <div>
@@ -2227,7 +2227,7 @@ export default function CatalogoAdminPage() {
                                                       placeholder="https://.../separata.pdf"
                                                       value={pdfUrl}
                                                       onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'pdf_url', e.target.value)}
-                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
                                                     />
                                                   </div>
                                                   <div>
@@ -2237,7 +2237,7 @@ export default function CatalogoAdminPage() {
                                                       placeholder="https://.../resumen.mp4"
                                                       value={videoResumenUrl}
                                                       onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'videoResumenUrl', e.target.value)}
-                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
                                                     />
                                                   </div>
                                                   <div>
@@ -2247,7 +2247,7 @@ export default function CatalogoAdminPage() {
                                                       placeholder="https://.../audio.mp3"
                                                       value={audioResumenUrl}
                                                       onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'audioResumenUrl', e.target.value)}
-                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                                      className="w-full px-2.5 py-1 bg-white border border-slate-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
                                                     />
                                                   </div>
                                                   <div className="md:col-span-2">
@@ -2257,7 +2257,7 @@ export default function CatalogoAdminPage() {
                                                       placeholder="https://.../actividad_interactiva.html"
                                                       value={resumenInteractivo}
                                                       onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, 'resumenInteractivo', e.target.value)}
-                                                      className="w-full px-2.5 py-1 bg-white border border-indigo-200 rounded-lg text-[11px] text-indigo-800 font-mono"
+                                                      className="w-full px-2.5 py-1 bg-white border border-indigo-200 rounded-lg text-[11px] text-indigo-800 tabular-nums"
                                                     />
                                                   </div>
                                                 </div>
@@ -2276,13 +2276,13 @@ export default function CatalogoAdminPage() {
                                                       const matVal = typeof claseObj === 'object' && claseObj !== null ? (claseObj[matKey] || (matNum === 1 ? claseObj.excel_url : '') || '') : '';
                                                       return (
                                                         <div key={matNum} className="relative">
-                                                          <span className="absolute left-2 top-1.5 text-[8px] font-black text-slate-400 font-mono">M{matNum}</span>
+                                                          <span className="absolute left-2 top-1.5 text-[8px] font-black text-slate-400 tabular-nums">M{matNum}</span>
                                                           <input
                                                             type="text"
                                                             placeholder={`Material ${matNum}...`}
                                                             value={matVal}
                                                             onChange={(e) => actualizarCampoSesion(mIdx, tIdx, sIdx, matKey, e.target.value)}
-                                                            className="w-full pl-6 pr-2 py-1 bg-slate-50 border border-slate-200 rounded-lg text-[10px] text-slate-700 font-mono"
+                                                            className="w-full pl-6 pr-2 py-1 bg-slate-50 border border-slate-200 rounded-lg text-[10px] text-slate-700 tabular-nums"
                                                           />
                                                         </div>
                                                       );
@@ -2338,7 +2338,7 @@ export default function CatalogoAdminPage() {
                                              placeholder="Título de la clase adicional..."
                                              value={adicTitle}
                                              onChange={(e) => actualizarCampoClaseAdicional(mIdx, caIdx, 'titulo', e.target.value)}
-                                             className="flex-1 px-2.5 py-1 bg-white border border-amber-200 rounded-lg text-xs font-bold text-slate-800 font-mono"
+                                             className="flex-1 px-2.5 py-1 bg-white border border-amber-200 rounded-lg text-xs font-bold text-slate-800 tabular-nums"
                                            />
                                            <button
                                              type="button"
@@ -2357,7 +2357,7 @@ export default function CatalogoAdminPage() {
                                                placeholder="https://drive.google.com/file/d/.../preview"
                                                value={adicVideo}
                                                onChange={(e) => actualizarCampoClaseAdicional(mIdx, caIdx, 'iframe_url', e.target.value)}
-                                               className="w-full px-2.5 py-1 bg-white border border-amber-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                               className="w-full px-2.5 py-1 bg-white border border-amber-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
                                              />
                                            </div>
                                            <div>
@@ -2367,7 +2367,7 @@ export default function CatalogoAdminPage() {
                                                placeholder="https://.../material.pdf"
                                                value={adicPdf}
                                                onChange={(e) => actualizarCampoClaseAdicional(mIdx, caIdx, 'pdf_url', e.target.value)}
-                                               className="w-full px-2.5 py-1 bg-white border border-amber-200 rounded-lg text-[11px] text-slate-700 font-mono"
+                                               className="w-full px-2.5 py-1 bg-white border border-amber-200 rounded-lg text-[11px] text-slate-700 tabular-nums"
                                              />
                                            </div>
                                          </div>
@@ -2432,7 +2432,7 @@ export default function CatalogoAdminPage() {
                             <div key={pIdx} className="bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5 space-y-3 shadow-xs">
                               <div className="flex items-center justify-between border-b border-slate-200/80 pb-2.5">
                                 <div className="flex items-center gap-2">
-                                  <span className="bg-indigo-600 text-white font-mono font-black text-xs px-2.5 py-1 rounded-lg">
+                                  <span className="bg-indigo-600 text-white tabular-nums font-black text-xs px-2.5 py-1 rounded-lg">
                                     Parte {parteNum}
                                   </span>
                                   <span className="text-xs font-bold text-slate-800">
@@ -2463,7 +2463,7 @@ export default function CatalogoAdminPage() {
                                     placeholder="https://drive.google.com/file/d/.../view o https://youtu.be/..."
                                     value={videoVal}
                                     onChange={(e) => actualizarCampoParteCurso(pIdx, 'videoUrl', e.target.value)}
-                                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-mono text-slate-800"
+                                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs tabular-nums text-slate-800"
                                   />
                                 </div>
 
@@ -2479,7 +2479,7 @@ export default function CatalogoAdminPage() {
                                       placeholder="https://... (PDF, HTML interactivo o repo GitHub)"
                                       value={mat1Val}
                                       onChange={(e) => actualizarCampoParteCurso(pIdx, 'material1', e.target.value)}
-                                      className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-mono text-slate-800"
+                                      className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs tabular-nums text-slate-800"
                                     />
                                     <span className="text-[10px] text-slate-400 mt-0.5 block">
                                       Para ver o descargar (admite PDF, HTML interactivo o repositorio GitHub Pages)
@@ -2496,7 +2496,7 @@ export default function CatalogoAdminPage() {
                                       placeholder="https://... (PDF, HTML interactivo o repo GitHub)"
                                       value={mat2Val}
                                       onChange={(e) => actualizarCampoParteCurso(pIdx, 'material2', e.target.value)}
-                                      className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-mono text-slate-800"
+                                      className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs tabular-nums text-slate-800"
                                     />
                                     <span className="text-[10px] text-slate-400 mt-0.5 block">
                                       Opcional. Se mostrará sólo si contiene un link.
@@ -2614,7 +2614,7 @@ export default function CatalogoAdminPage() {
                   placeholder={`"Modulo","NombreModulo","Docente","Tema","Sesion","VideoUrl","VideoResumenUrl","AudioResumenUrl","PdfUrl","ExcelUrl"\n"Módulo 01","GEOTECNIA","Ing. Aucapuri","Tema 01: Fundamentos","Clase 1: Introducción","https://drive.google.com/file/d/1/preview","","","",""`}
                   value={bulkModulesJson}
                   onChange={(e) => setBulkModulesJson(e.target.value)}
-                  className="w-full p-4 bg-slate-900 text-emerald-400 font-mono text-xs rounded-2xl border border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+                  className="w-full p-4 bg-slate-900 text-emerald-400 tabular-nums text-xs rounded-2xl border border-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-600"
                 />
               </div>
 
@@ -2678,7 +2678,7 @@ export default function CatalogoAdminPage() {
                     required
                     value={nuevoCodigo}
                     onChange={(e) => setNuevoCodigo(e.target.value.toUpperCase())}
-                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-mono font-bold bg-slate-50 text-slate-900 uppercase"
+                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs tabular-nums font-bold bg-slate-50 text-slate-900 uppercase"
                   />
                 </div>
 
@@ -2689,7 +2689,7 @@ export default function CatalogoAdminPage() {
                     required
                     value={nuevoAno}
                     onChange={(e) => setNuevoAno(e.target.value)}
-                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-mono font-bold bg-slate-50 text-slate-900"
+                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs tabular-nums font-bold bg-slate-50 text-slate-900"
                   />
                 </div>
               </div>

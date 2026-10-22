@@ -54,7 +54,7 @@ export default function AnularPagoModal({
           </div>
           <div>
             <span className="text-slate-500 dark:text-slate-400">Monto A Anular:</span>{' '}
-            <strong className="text-red-600 dark:text-red-400 font-bold">S/ {Number(pagoParaAnular.monto || 150).toFixed(2)}</strong>
+            <strong className="text-red-600 dark:text-red-400 font-bold tabular-nums">S/ {Number(pagoParaAnular.monto || 150).toFixed(2)}</strong>
           </div>
         </div>
 

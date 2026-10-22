@@ -321,7 +321,7 @@ export default function AdminDashboard360() {
                 <span className="bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-indigo-200 dark:border-indigo-800">
                   Mando Central 360°
                 </span>
-                <span className="text-slate-400 dark:text-slate-500 text-xs font-mono">• Estrategia Comercial & Deserción Cero</span>
+                <span className="text-slate-400 dark:text-slate-500 text-xs tabular-nums">• Estrategia Comercial & Deserción Cero</span>
               </div>
               <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">
                 Dashboard 360° & Analítica Ejecutiva
@@ -477,7 +477,7 @@ export default function AdminDashboard360() {
                   {cargandoEstudiantes ? (
                     <div className="h-8 bg-slate-200 dark:bg-slate-800 rounded-lg animate-pulse mt-3 w-32" />
                   ) : (
-                    <h3 className="text-3xl font-black text-slate-900 dark:text-white mt-3">S/ {totalRecaudado.toFixed(2)}</h3>
+                    <h3 className="text-3xl font-black tabular-nums text-slate-900 dark:text-white mt-3">S/ {totalRecaudado.toFixed(2)}</h3>
                   )}
                   <p className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold mt-1 flex items-center gap-1">
                     <TrendingUp className="size-3" /> Cobrado a tiempo
@@ -494,7 +494,7 @@ export default function AdminDashboard360() {
                   {cargandoEstudiantes ? (
                     <div className="h-8 bg-slate-200 dark:bg-slate-800 rounded-lg animate-pulse mt-3 w-32" />
                   ) : (
-                    <h3 className="text-3xl font-black text-red-600 dark:text-red-400 mt-3">S/ {totalDeudaPendiente.toFixed(2)}</h3>
+                    <h3 className="text-3xl font-black tabular-nums text-red-600 dark:text-red-400 mt-3">S/ {totalDeudaPendiente.toFixed(2)}</h3>
                   )}
                   <p className="text-[10px] text-red-500 dark:text-red-400 font-bold mt-1">Suma de cuotas por vencer/vencidas</p>
                 </div>
@@ -579,7 +579,7 @@ export default function AdminDashboard360() {
 
                           return (
                             <tr key={e.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                              <td className="py-4 px-4 font-mono font-bold text-indigo-600 dark:text-indigo-400">{e.dni_ce}</td>
+                              <td className="py-4 px-4 tabular-nums font-bold text-indigo-600 dark:text-indigo-400">{e.dni_ce}</td>
                               <td className="py-4 px-4 font-bold text-slate-800 dark:text-slate-200">
                                 {e.nombres} {e.apellidos}
                                 <div className="text-[10px] text-slate-400 dark:text-slate-500 font-normal">{e.email}</div>
@@ -593,7 +593,7 @@ export default function AdminDashboard360() {
                                   {e.diplomado_2 && <div className="text-[10px] text-indigo-600 dark:text-indigo-400 font-bold mt-0.5">+ {e.diplomado_2}</div>}
                                 </span>
                               </td>
-                              <td className="py-4 px-4 font-mono text-[11px] text-slate-600 dark:text-slate-400">
+                              <td className="py-4 px-4 tabular-nums text-[11px] text-slate-600 dark:text-slate-400">
                                 <span className="flex items-center gap-1">
                                   <Clock className="w-3 h-3 text-slate-400 dark:text-slate-500" /> {e.ultima_conexion}
                                 </span>
@@ -731,15 +731,15 @@ export default function AdminDashboard360() {
                             const esAprobado = pag.estado === 'APROBADO' || pag.estado === 'VALIDADO';
                             return (
                               <tr key={pIdx} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                                <td className="py-4 px-4 font-mono text-slate-500 dark:text-slate-400 text-[11px] whitespace-nowrap">
+                                <td className="py-4 px-4 tabular-nums text-slate-500 dark:text-slate-400 text-[11px] whitespace-nowrap">
                                   {pag.created_at ? new Date(pag.created_at).toLocaleString('es-PE', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', hour12: true }) : '-'}
                                 </td>
-                                <td className="py-4 px-4 font-mono font-bold text-slate-700 dark:text-slate-300">
+                                <td className="py-4 px-4 tabular-nums font-bold text-slate-700 dark:text-slate-300">
                                   {pag.comprobante || 'OP-984321'}
                                 </td>
                                 <td className="py-4 px-4 font-bold text-slate-800 dark:text-slate-200">
                                   {pag.estudiante_nombre}
-                                  <div className="text-[10px] font-mono text-slate-400 dark:text-slate-500 font-normal">{pag.estudiante_dni}</div>
+                                  <div className="text-[10px] tabular-nums text-slate-400 dark:text-slate-500 font-normal">{pag.estudiante_dni}</div>
                                 </td>
                                 <td className="py-4 px-4 text-slate-600 dark:text-slate-400 font-medium">{pag.programa}</td>
                                 <td className="py-4 px-4 text-indigo-700 dark:text-indigo-400 font-bold">{pag.nro_cuota}</td>

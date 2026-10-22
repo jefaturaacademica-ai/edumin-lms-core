@@ -126,7 +126,7 @@ export default function Ficha360Modal({
               <span className="text-[10px] font-black uppercase tracking-wider bg-indigo-500 text-white px-2.5 py-0.5 rounded-full">
                 Ficha 360° Estudiantil
               </span>
-              <span className="text-xs font-mono font-bold text-slate-300">DNI / CE: {alumnoSeleccionado.dni_ce}</span>
+              <span className="text-xs tabular-nums font-bold text-slate-300">DNI / CE: {alumnoSeleccionado.dni_ce}</span>
               {alumnoSeleccionado.deuda_total_pendiente === 0 && (
                 <span className="text-[10px] font-bold bg-emerald-500 text-white px-2 py-0.5 rounded-full flex items-center gap-1">
                   <CheckCircle2 className="size-3" /> Constancia de no adeudo Activa
@@ -183,20 +183,20 @@ export default function Ficha360Modal({
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50 dark:bg-slate-800/50 p-4 rounded-2xl border border-slate-200 dark:border-slate-800">
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
                   <div>
-                    <span className="font-mono text-[10px] text-slate-400 uppercase block">Pagaré Nº</span>
-                    <strong className="font-mono text-sm text-slate-900 dark:text-white">2026-I-000{alumnoSeleccionado.dni_ce.substring(0, 4)}</strong>
+                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block">Pagaré Nº</span>
+                    <strong className="tabular-nums text-sm text-slate-900 dark:text-white">2026-I-000{alumnoSeleccionado.dni_ce.substring(0, 4)}</strong>
                   </div>
                   <div>
-                    <span className="font-mono text-[10px] text-slate-400 uppercase block">Programa Inscrito</span>
+                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block">Programa Inscrito</span>
                     <strong className="text-indigo-600 dark:text-indigo-400 truncate block">{alumnoSeleccionado.diplomado_actual}</strong>
                   </div>
                   <div>
-                    <span className="font-mono text-[10px] text-slate-400 uppercase block">Monto Total Programa</span>
-                    <strong className="text-emerald-600 dark:text-emerald-400 font-black text-sm">S/ {alumnoSeleccionado.monto_total_programa.toFixed(2)}</strong>
+                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block">Monto Total Programa</span>
+                    <strong className="text-emerald-600 dark:text-emerald-400 font-black tabular-nums text-sm">S/ {alumnoSeleccionado.monto_total_programa.toFixed(2)}</strong>
                   </div>
                   <div>
-                    <span className="font-mono text-[10px] text-slate-400 uppercase block">Deuda Pendiente</span>
-                    <strong className="text-red-600 dark:text-red-400 font-black text-sm">S/ {alumnoSeleccionado.deuda_total_pendiente.toFixed(2)}</strong>
+                    <span className="tabular-nums text-[10px] text-slate-400 uppercase block">Deuda Pendiente</span>
+                    <strong className="text-red-600 dark:text-red-400 font-black tabular-nums text-sm">S/ {alumnoSeleccionado.deuda_total_pendiente.toFixed(2)}</strong>
                   </div>
                 </div>
 
@@ -239,15 +239,15 @@ export default function Ficha360Modal({
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                   <div className="bg-slate-50 dark:bg-slate-800/40 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800">
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Monto Crédito #{creditoSeleccionado.num_credito || (selectedCreditoIdx + 1)}</span>
-                    <p className="text-lg font-black text-slate-900 dark:text-white mt-0.5">S/ {Number(creditoSeleccionado.monto || 0).toFixed(2)}</p>
+                    <p className="text-lg font-black tabular-nums text-slate-900 dark:text-white mt-0.5">S/ {Number(creditoSeleccionado.monto || 0).toFixed(2)}</p>
                   </div>
                   <div className="bg-slate-50 dark:bg-slate-800/40 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800">
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Total Pagado</span>
-                    <p className="text-lg font-black text-emerald-600 dark:text-emerald-400 mt-0.5">S/ {Number(creditoSeleccionado.total_pagado || 0).toFixed(2)}</p>
+                    <p className="text-lg font-black tabular-nums text-emerald-600 dark:text-emerald-400 mt-0.5">S/ {Number(creditoSeleccionado.total_pagado || 0).toFixed(2)}</p>
                   </div>
                   <div className="bg-slate-50 dark:bg-slate-800/40 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800">
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Capital Pendiente</span>
-                    <p className="text-lg font-black text-red-600 dark:text-red-400 mt-0.5">S/ {Number(creditoSeleccionado.total_deuda || 0).toFixed(2)}</p>
+                    <p className="text-lg font-black tabular-nums text-red-600 dark:text-red-400 mt-0.5">S/ {Number(creditoSeleccionado.total_deuda || 0).toFixed(2)}</p>
                   </div>
                   <div className="bg-slate-50 dark:bg-slate-800/40 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-800">
                     <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Estado Crédito</span>
@@ -264,7 +264,7 @@ export default function Ficha360Modal({
                   <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
                     <Calendar className="size-4 text-indigo-600 dark:text-indigo-400" /> Desglose de Cuotas (Cuota 01 - Cuota 06)
                   </h4>
-                  <span className="text-[10px] text-slate-400 font-mono">1 Fila por Crédito en Supabase</span>
+                  <span className="text-[10px] text-slate-400 tabular-nums">1 Fila por Crédito en Supabase</span>
                 </div>
 
                 <div className="overflow-x-auto border border-slate-200 dark:border-slate-800 rounded-2xl bg-white dark:bg-slate-900 shadow-sm">
@@ -294,7 +294,7 @@ export default function Ficha360Modal({
                               <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">
                                 Cuota {nroFmt} - {alumnoSeleccionado.diplomado_actual}
                               </td>
-                              <td className="py-3 px-4 font-mono font-bold text-slate-800 dark:text-slate-200">
+                              <td className="py-3 px-4 tabular-nums font-bold text-slate-800 dark:text-slate-200">
                                 {esNoCorresponde ? (
                                   <span className="text-slate-400 italic">no corresponde</span>
                                 ) : (
@@ -374,7 +374,7 @@ export default function Ficha360Modal({
                       type="text"
                       value={comprobante}
                       onChange={(e) => setComprobante(e.target.value)}
-                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold text-slate-900 dark:text-white"
+                      className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-xs tabular-nums font-bold text-slate-900 dark:text-white"
                     />
                   </div>
                   <div>
@@ -436,12 +436,12 @@ export default function Ficha360Modal({
 
                           return (
                           <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-800/40">
-                            <td className="py-3 px-4 font-mono text-slate-600 dark:text-slate-400 text-[11px] whitespace-nowrap">
+                            <td className="py-3 px-4 tabular-nums text-slate-600 dark:text-slate-400 text-[11px] whitespace-nowrap">
                               {fechaDisplay}
                             </td>
                             <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">{p.concepto || p.nro_cuota}</td>
-                            <td className="py-3 px-4 font-mono text-slate-600 dark:text-slate-400">{p.comprobante || 'OP-984321'}</td>
-                            <td className="py-3 px-4 font-mono font-bold text-emerald-600 dark:text-emerald-400">S/ {Number(p.monto || 0).toFixed(2)}</td>
+                            <td className="py-3 px-4 tabular-nums text-slate-600 dark:text-slate-400">{p.comprobante || 'OP-984321'}</td>
+                            <td className="py-3 px-4 tabular-nums font-bold text-emerald-600 dark:text-emerald-400">S/ {Number(p.monto || 0).toFixed(2)}</td>
                             <td className="py-3 px-4 text-slate-600 dark:text-slate-400">{p.metodo || 'Yape / Plin'}</td>
                             <td className="py-3 px-4">
                               <span className="bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">
@@ -554,8 +554,8 @@ export default function Ficha360Modal({
                         cargosExtras.map((cg: any, idx: number) => (
                           <tr key={idx} className="hover:bg-slate-50 dark:hover:bg-slate-800/40">
                             <td className="py-3 px-4 font-bold text-slate-900 dark:text-white">{cg.concepto || 'Examen Sustitutorio'}</td>
-                            <td className="py-3 px-4 font-mono font-bold text-indigo-600 dark:text-indigo-400">S/ {Number(cg.monto || 0).toFixed(2)}</td>
-                            <td className="py-3 px-4 text-slate-500 dark:text-slate-400 font-mono text-[10px]">
+                            <td className="py-3 px-4 tabular-nums font-bold text-indigo-600 dark:text-indigo-400">S/ {Number(cg.monto || 0).toFixed(2)}</td>
+                            <td className="py-3 px-4 text-slate-500 dark:text-slate-400 tabular-nums text-[10px]">
                               {new Date(cg.created_at || Date.now()).toLocaleDateString()}
                             </td>
                             <td className="py-3 px-4">
@@ -897,7 +897,7 @@ export default function Ficha360Modal({
                             </span>
                             <h5 className="font-black text-sm text-slate-900 dark:text-white">{nombreDipStr}</h5>
                           </div>
-                          <span className="text-[10px] font-mono text-slate-400">
+                          <span className="text-[10px] tabular-nums text-slate-400">
                             Código: {dipObj?.codigo || `DIP-0${dipIdx + 1}`} | Módulos: {modulosArray.length}
                           </span>
                         </div>
@@ -906,7 +906,7 @@ export default function Ficha360Modal({
                         <div className="space-y-1">
                           <div className="flex justify-between text-[10px] font-bold text-slate-500 dark:text-slate-400">
                             <span>Progreso Académico del Diplomado</span>
-                            <span className="text-indigo-600 dark:text-indigo-400 font-mono">{avanceDip}% completado</span>
+                            <span className="text-indigo-600 dark:text-indigo-400 tabular-nums">{avanceDip}% completado</span>
                           </div>
                           <div className="h-2 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
                             <div className="h-full bg-gradient-to-r from-indigo-600 to-cyan-500 rounded-full" style={{ width: `${avanceDip}%` }}></div>
@@ -979,7 +979,7 @@ export default function Ficha360Modal({
                                             <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
                                             {tituloFinal}
                                           </span>
-                                          <span className="text-[10px] text-slate-400 font-mono">{c.duracion || '45 min'}</span>
+                                          <span className="text-[10px] text-slate-400 tabular-nums">{c.duracion || '45 min'}</span>
                                         </div>
                                       );
                                     })

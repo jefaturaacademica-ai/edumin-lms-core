@@ -812,8 +812,8 @@ export default function DiplomadosPage() {
                             </>
                           ) : (
                             <>
-                              <span className="text-xs font-bold uppercase tracking-wider text-slate-500 line-through">S/ {dip.precioRegular}</span>
-                              <span className={`text-xl font-black ${esOscuro ? 'text-emerald-400' : 'text-emerald-600'}`}>S/ {dip.precioOferta}</span>
+                              <span className="text-xs font-bold tabular-nums uppercase tracking-wider text-slate-500 line-through">S/ {dip.precioRegular}</span>
+                              <span className={`text-xl font-black tabular-nums ${esOscuro ? 'text-emerald-400' : 'text-emerald-600'}`}>S/ {dip.precioOferta}</span>
                             </>
                           )}
                         </div>
@@ -907,8 +907,8 @@ export default function DiplomadosPage() {
                     </span>
                   ) : (
                     <div className="flex items-baseline gap-2 mt-0.5">
-                      <span className="text-xs text-slate-400 line-through">S/ {modalDiplomado.precioRegular}</span>
-                      <span className="text-2xl font-black text-emerald-600 dark:text-emerald-400">S/ {modalDiplomado.precioOferta}</span>
+                      <span className="text-xs tabular-nums text-slate-400 line-through">S/ {modalDiplomado.precioRegular}</span>
+                      <span className="text-2xl font-black tabular-nums text-emerald-600 dark:text-emerald-400">S/ {modalDiplomado.precioOferta}</span>
                     </div>
                   )}
                 </div>
@@ -1009,7 +1009,7 @@ export default function DiplomadosPage() {
               <Wrench className="size-3.5" /> Simulador Dev (Interno)
             </span>
             <div className="flex items-center gap-2">
-              <span className="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded-md font-mono">v1.0</span>
+              <span className="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded-md tabular-nums">v1.0</span>
               <button 
                 onClick={() => setMostrarPanelDev(false)}
                 className="text-slate-400 hover:text-white transition p-0.5 rounded-lg hover:bg-slate-800 cursor-pointer"

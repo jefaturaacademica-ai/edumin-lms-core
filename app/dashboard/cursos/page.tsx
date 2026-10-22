@@ -171,13 +171,13 @@ export default function CursosPage() {
 
     { titulo: "FUNDAMENTOS DE BIG DATA", categoria: "Tecnología & Minería 4.0", duracion: "25 Horas Académicas", precio: 99, estado: "Más vendido", nivel: "Principiante", imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" },
     { titulo: "MÉTODOS DE CAPTURA DE INFORMACIÓN EN BIG DATA", categoria: "Tecnología & Minería 4.0", duracion: "20 Horas Académicas", precio: 99, estado: "Nuevo", nivel: "Principiante", imagen: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80" },
-    { titulo: "TENDENCIAS 2025-2026 CLAVES DE BIG DATA", categoria: "Tecnología & Minería 4.0", duracion: "15 Horas Académicas", precio: 99, estado: "Especial", nivel: "Principiante", imagen: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" },
+    { titulo: "TENDENCIAS 2025-2026: CLAVES DE BIG DATA", categoria: "Tecnología & Minería 4.0", duracion: "15 Horas Académicas", precio: 99, estado: "Especial", nivel: "Principiante", imagen: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" },
     { titulo: "BIG DATA: TRANSFORMACIÓN DE DATOS (PYTHON Y R)", categoria: "Tecnología & Minería 4.0", duracion: "35 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Avanzado", imagen: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" },
-    { titulo: "MINERÍA 4.0 ESSENTIALS (NUEVAS HERRAMIENTAS)", categoria: "Tecnología & Minería 4.0", duracion: "25 Horas Académicas", precio: 159, estado: "Nuevo", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" },
+    { titulo: "MINERÍA 4.0 ESSENTIALS: NUEVAS HERRAMIENTAS", categoria: "Tecnología & Minería 4.0", duracion: "25 Horas Académicas", precio: 159, estado: "Nuevo", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" },
     { titulo: "INNOVACIÓN EN MINERÍA: APLICACIONES DE INTELIGENCIA ARTIFICIAL", categoria: "Tecnología & Minería 4.0", duracion: "30 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" },
     { titulo: "AUTOMATIZACIÓN 4.0 EN PROCESOS MINEROS", categoria: "Tecnología & Minería 4.0", duracion: "30 Horas Académicas", precio: 159, estado: "Nuevo", nivel: "Avanzado", imagen: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" },
     { titulo: "INTRODUCCIÓN A LA GESTIÓN DE PROYECTOS", categoria: "Tecnología & Minería 4.0", duracion: "20 Horas Académicas", precio: 99, estado: "Especial", nivel: "Principiante", imagen: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" },
-    { titulo: "ARQUITECTURA DE DATOS: DISEÑO, COMPONENTES, FUNCIÓN Y PATRONES", categoria: "Tecnología & Minería 4.0", duracion: "40 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Avanzado", imagen: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" },
+    { titulo: "ARQUITECTURA DE DATOS: LA IMPORTANCIA DEL DISEÑO, COMPONENTES, FUNCIÓN, CONFIGURACIÓN Y PATRONES", categoria: "Tecnología & Minería 4.0", duracion: "40 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Avanzado", imagen: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" },
     { titulo: "ECOSISTEMA BIG DATA: HERRAMIENTAS Y TECNOLOGÍAS ESENCIALES", categoria: "Tecnología & Minería 4.0", duracion: "30 Horas Académicas", precio: 159, estado: "Nuevo", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" },
     { titulo: "INTRODUCCIÓN A MACHINE LEARNING PARA BIG DATA", categoria: "Tecnología & Minería 4.0", duracion: "35 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Avanzado", imagen: "https://images.unsplash.com/photo-1527474322635-a2d9f588acac?auto=format&fit=crop&w=600&q=80" },
     { titulo: "PROYECTOS CON HERRAMIENTAS DIGITALES PARA MINERÍA", categoria: "Tecnología & Minería 4.0", duracion: "25 Horas Académicas", precio: 159, estado: "Especial", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" },
@@ -185,7 +185,7 @@ export default function CursosPage() {
     { titulo: "TIPOS DE INTELIGENCIA ARTIFICIAL APLICADAS A LA MINERÍA", categoria: "Tecnología & Minería 4.0", duracion: "25 Horas Académicas", precio: 159, estado: "Nuevo", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=600&q=80" },
     { titulo: "HERRAMIENTAS DE BIG DATA APLICADA A MINERÍA", categoria: "Tecnología & Minería 4.0", duracion: "30 Horas Académicas", precio: 159, estado: "Especial", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" },
     { titulo: "CONTROL Y SUPERVISIÓN DE PROCESOS CON SOFTWARE SCADA", categoria: "Tecnología & Minería 4.0", duracion: "30 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80" },
-    { titulo: "PROCESO DE OPTIMIZACIÓN DE MANTENIMIENTO CON TÉCNICAS DE INDUSTRIA 4.0", categoria: "Tecnología & Minería 4.0", duracion: "30 Horas Académicas", precio: 159, estado: "Nuevo", nivel: "Avanzado", imagen: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" },
+    { titulo: "PROCESO DE OPTIMIZACIÓN DEL MANTENIMIENTO A PARTIR DEL USO DE TÉCNICAS DE LA INDUSTRIA 4.0", categoria: "Tecnología & Minería 4.0", duracion: "30 Horas Académicas", precio: 159, estado: "Nuevo", nivel: "Avanzado", imagen: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80" },
     { titulo: "ANÁLISIS DE DATOS PARA OPTIMIZAR OPERACIONES MINERAS", categoria: "Tecnología & Minería 4.0", duracion: "25 Horas Académicas", precio: 159, estado: "Especial", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=600&q=80" },
 
     { titulo: "LOGÍSTICA Y DISTRIBUCIÓN EN LA INDUSTRIA Y MINERÍA", categoria: "Logística & Suministro", duracion: "30 Horas Académicas", precio: 159, estado: "Más vendido", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" },
@@ -202,7 +202,7 @@ export default function CursosPage() {
 
     { titulo: "IMPORTACIÓN Y EXPORTACIÓN DESDE 0: CLAVES PARA EL ÉXITO", categoria: "Legal & Negocios", duracion: "20 Horas Académicas", precio: 99, estado: "Más vendido", nivel: "Principiante", imagen: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" },
     { titulo: "IMPLEMENTACIÓN DE LA NORMA ISO 9001:2015", categoria: "Legal & Negocios", duracion: "30 Horas Académicas", precio: 159, estado: "Nuevo", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" },
-    { titulo: "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN", categoria: "Legal & Negocios", duracion: "25 Horas Académicas", precio: 159, estado: "Especial", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80" },
+    { titulo: "ANÁLISIS DE MERCADOS INTERNACIONALES: ESTRATEGIAS DE IMPORTACIÓN Y EXPORTACIÓN 2025-2026", categoria: "Legal & Negocios", duracion: "25 Horas Académicas", precio: 159, estado: "Especial", nivel: "Intermedio", imagen: "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=600&q=80" },
     { titulo: "DE LA IMPORTACIÓN A LA VENTA ONLINE: IMPLEMENTA TU TIENDA VIRTUAL DESDE CERO", categoria: "Legal & Negocios", duracion: "20 Horas Académicas", precio: 99, estado: "Más vendido", nivel: "Principiante", imagen: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" },
     { titulo: "DOCUMENTACIÓN Y TRÁMITES ADUANEROS", categoria: "Legal & Negocios", duracion: "20 Horas Académicas", precio: 99, estado: "Nuevo", nivel: "Principiante", imagen: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80" },
     { titulo: "REVISIÓN DE PROVEEDORES PARA EVITAR ESTAFAS EN IMPORTACIONES CHINAS", categoria: "Legal & Negocios", duracion: "15 Horas Académicas", precio: 99, estado: "Especial", nivel: "Principiante", imagen: "https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=600&q=80" },
@@ -746,7 +746,7 @@ export default function CursosPage() {
                         </h3>
 
                         <div className="mt-4 flex items-baseline gap-2">
-                          <span className="text-2xl font-black text-emerald-400">S/ {curso.precio}</span>
+                          <span className="text-2xl font-black tabular-nums text-emerald-400">S/ {curso.precio}</span>
                         </div>
                       </div>
 
@@ -783,7 +783,7 @@ export default function CursosPage() {
               <Wrench className="size-3.5" /> Simulador Dev (Interno)
             </span>
             <div className="flex items-center gap-2">
-              <span className="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded-md font-mono">v1.0</span>
+              <span className="text-[10px] text-slate-400 bg-slate-800 px-2 py-0.5 rounded-md tabular-nums">v1.0</span>
               <button 
                 onClick={() => setMostrarPanelDev(false)}
                 className="text-slate-400 hover:text-white transition p-0.5 rounded-lg hover:bg-slate-800 cursor-pointer"

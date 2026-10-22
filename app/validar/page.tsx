@@ -185,7 +185,7 @@ function ValidarCertificadoContent() {
                     if (errorInput) setErrorInput(null);
                   }}
                   placeholder="Código del certificado"
-                  className="w-full bg-slate-50 border border-slate-300 focus:bg-white focus:border-indigo-600 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-mono text-slate-900 outline-none uppercase"
+                  className="w-full bg-slate-50 border border-slate-300 focus:bg-white focus:border-indigo-600 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm tabular-nums text-slate-900 outline-none uppercase"
                   autoFocus
                 />
               </div>
@@ -226,7 +226,7 @@ function ValidarCertificadoContent() {
                   <h2 className="text-base sm:text-lg font-bold text-slate-900">
                     Certificado auténtico y registrado en EDUMIN
                   </h2>
-                  <p className="text-xs text-slate-600 font-mono">
+                  <p className="text-xs text-slate-600 tabular-nums">
                     Código de registro: <strong className="text-slate-900">{certificado.codigo}</strong>
                   </p>
                 </div>
@@ -258,7 +258,7 @@ function ValidarCertificadoContent() {
                     <span>Estudiante acreditado</span>
                   </div>
                   <p className="text-sm font-bold text-slate-900">{certificado.estudiante}</p>
-                  <p className="text-xs font-mono text-slate-500">DNI / CE: {certificado.dni}</p>
+                  <p className="text-xs tabular-nums text-slate-500">DNI / CE: {certificado.dni}</p>
                 </div>
 
                 {/* Programa / Diplomado */}
@@ -372,7 +372,7 @@ function ValidarCertificadoContent() {
                       if (errorInput) setErrorInput(null);
                     }}
                     placeholder="Código del certificado"
-                    className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 rounded-xl text-slate-900 placeholder:text-slate-400 text-sm sm:text-base outline-none transition font-mono uppercase"
+                    className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-300 focus:bg-white focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 rounded-xl text-slate-900 placeholder:text-slate-400 text-sm sm:text-base outline-none transition tabular-nums uppercase"
                     autoFocus
                   />
                 </div>

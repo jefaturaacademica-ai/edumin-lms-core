@@ -2,7 +2,6 @@
 
 import { revalidatePath } from "next/cache";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { AVAILABLE_COURSES } from "@/lib/data/courses";
 import { createClient } from "@/lib/supabase/server";
 import { calculateReleasedCredits } from "@/lib/utils/credits";
 
@@ -18,12 +17,7 @@ export async function matricularCurso(
   cursoId: string,
   nombreCurso: string,
 ): Promise<MatriculaResult> {
-  const course = AVAILABLE_COURSES.find(
-    (availableCourse) =>
-      availableCourse.id === cursoId && availableCourse.name === nombreCurso,
-  );
-
-  if (!course) {
+  if (!cursoId || !nombreCurso) {
     return { success: false, message: "El curso seleccionado no es válido." };
   }
 

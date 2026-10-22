@@ -21,7 +21,11 @@ import {
   Loader2,
   Table,
   ExternalLink,
-  Network
+  Network,
+  PanelRightClose,
+  PanelRightOpen,
+  Timer,
+  AlertCircle
 } from 'lucide-react';
 import { useParams, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
@@ -32,6 +36,9 @@ import { useProfile } from '@/context/profile-context';
 import { DashboardLoader } from '@/components/dashboard/dashboard-loader';
 import { parseDiplomadosFromProfile, formatearCodigoModulo } from '@/lib/utils/profileParser';
 import { PreguntaExamenEstudiante, DetalleCalificacionPregunta } from '@/lib/types/examenes';
+import { formatearTextoCientifico } from '@/lib/utils/textoCientifico';
+import { parsearResumenTexto, ResumenData } from '@/lib/utils/resumenParser';
+import resumenesCacheJson from '@/lib/data/resumenes_clases_cache.json';
 import { 
   obtenerRecursosConLinks, 
   convertirFilasAListaModulos, 
@@ -56,10 +63,7 @@ export interface ParteClase {
   duracion: string;
   videoUrl: string;
   completada: boolean;
-  resumen: {
-    objetivo: string;
-    puntosClave: string[];
-  };
+  resumen?: ResumenData | null;
   recursos: RecursoItem[];
 }
 
@@ -91,6 +95,7 @@ export default function ReproductorClasesPage() {
   const [guardandoAvance, setGuardandoAvance] = useState(false);
   const [temasAbiertosMap, setTemasAbiertosMap] = useState<Record<string, boolean>>({});
   const [dniAlumno, setDniAlumno] = useState<string>('71234567');
+  const [modoCine, setModoCine] = useState(false);
 
   // Estados del Examen del Módulo
   const [notasModulosMap, setNotasModulosMap] = useState<Record<string, number>>({});
@@ -101,6 +106,9 @@ export default function ReproductorClasesPage() {
   const [preguntasExamenDinamicas, setPreguntasExamenDinamicas] = useState<PreguntaExamenEstudiante[]>([]);
   const [cargandoPreguntasExamen, setCargandoPreguntasExamen] = useState(false);
   const [detallesCalificacionExamen, setDetallesCalificacionExamen] = useState<DetalleCalificacionPregunta[] | null>(null);
+  const [modulosConExamenDisponibles, setModulosConExamenDisponibles] = useState<string[]>([]);
+  const [tiempoRestanteSegundos, setTiempoRestanteSegundos] = useState<number>(30 * 60);
+  const [preguntaFaltanteAlertaId, setPreguntaFaltanteAlertaId] = useState<string | null>(null);
   const [respuestasPorModulo, setRespuestasPorModulo] = useState<Record<string, Record<number, number>>>({});
   const [guardandoExamen, setGuardandoExamen] = useState(false);
   const [resultadoExamen, setResultadoExamen] = useState<{ nota: number; aprobado: boolean } | null>(null);
@@ -110,6 +118,70 @@ export default function ReproductorClasesPage() {
       ...prev,
       [temaId]: prev[temaId] === undefined ? false : !prev[temaId]
     }));
+  };
+
+  // Resolver el código oficial de diplomado (DIP-01 .. DIP-22)
+  const codigoDipActual: string = useMemo(() => {
+    if (leccionesTabla && leccionesTabla[0]?.CodigoDiplomado) {
+      return leccionesTabla[0].CodigoDiplomado;
+    }
+    if (/^dip-\d+$/i.test(diplomadoId)) {
+      const num = diplomadoId.replace(/[^0-9]/g, '').padStart(2, '0');
+      return `DIP-${num}`;
+    }
+    const matched = getDiplomadoBySlug(diplomadoId);
+    if (matched && (matched as any).numId) {
+      return `DIP-${(matched as any).numId.toString().padStart(2, '0')}`;
+    }
+    return 'DIP-01';
+  }, [leccionesTabla, diplomadoId]);
+
+  // Cargar disponibilidad de exámenes para el diplomado matriculado
+  useEffect(() => {
+    if (!codigoDipActual) return;
+    fetch(`/api/dashboard/examenes?codigoDiplomado=${encodeURIComponent(codigoDipActual)}&accion=disponibilidad`)
+      .then(r => r.json())
+      .then(d => {
+        if (d.success && Array.isArray(d.modulosConPreguntas)) {
+          setModulosConExamenDisponibles(d.modulosConPreguntas);
+        }
+      })
+      .catch(err => console.warn('Error al verificar modulos con examen:', err));
+  }, [codigoDipActual]);
+
+  const esModuloConExamenDisponible = useCallback((modCodigo: string) => {
+    if (!modulosConExamenDisponibles || modulosConExamenDisponibles.length === 0) {
+      return false;
+    }
+    const norm = modCodigo.toLowerCase().replace('ó', 'o');
+    return modulosConExamenDisponibles.some(m => m.toLowerCase().replace('ó', 'o').includes(norm));
+  }, [modulosConExamenDisponibles]);
+
+  // Contador de tiempo regresivo para el examen
+  useEffect(() => {
+    if (pasoModalExamen !== 'cuestionario' || cargandoPreguntasExamen || guardandoExamen) {
+      return;
+    }
+
+    const interval = setInterval(() => {
+      setTiempoRestanteSegundos(prev => {
+        if (prev <= 1) {
+          clearInterval(interval);
+          // Tiempo agotado: entregar y calificar automáticamente en el estado en que se encuentre
+          rendirExamenModulo(true);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [pasoModalExamen, cargandoPreguntasExamen, guardandoExamen]);
+
+  const formatearTiempoDisponible = (segundos: number) => {
+    const m = Math.floor(segundos / 60);
+    const s = segundos % 60;
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
   };
 
   // Generador de 5 preguntas objetivas por módulo
@@ -174,54 +246,81 @@ export default function ReproductorClasesPage() {
   };
 
   const abrirModalExamen = async (modCodigo: string, modNombre: string, modIdx: number) => {
+    if (!esModuloConExamenDisponible(modCodigo) && notasModulosMap[modCodigo] === undefined) {
+      return;
+    }
+
     setExamenActivoModal({ moduloCodigo: modCodigo, moduloNombre: modNombre, moduloIdx: modIdx });
     setPasoModalExamen('indicaciones');
     setRespuestasExamen({});
     setRespuestasExamenDinamicas({});
     setResultadoExamen(null);
     setDetallesCalificacionExamen(null);
+    setPreguntaFaltanteAlertaId(null);
+    setTiempoRestanteSegundos(30 * 60);
 
-    // Cargar preguntas aleatorias del banco para este módulo
+    // Cargar preguntas aleatorias del banco para este módulo y diplomado
     try {
       setCargandoPreguntasExamen(true);
-      const codDip = (diplomadoActual as any)?.codigo || 'DIP-01';
-      const res = await fetch(`/api/dashboard/examenes?codigoDiplomado=${encodeURIComponent(codDip)}&modulo=${encodeURIComponent(modCodigo)}&cantidad=10`);
+      const res = await fetch(`/api/dashboard/examenes?codigoDiplomado=${encodeURIComponent(codigoDipActual)}&modulo=${encodeURIComponent(modCodigo)}&cantidad=10`);
       const data = await res.json();
       if (data.success && data.preguntas && data.preguntas.length > 0) {
         setPreguntasExamenDinamicas(data.preguntas);
       } else {
-        // Fallback a preguntas locales si no hay cargadas
-        const locales = generarPreguntasExamenModulo(modCodigo, modNombre);
-        setPreguntasExamenDinamicas(locales.map((q: any) => ({
-          id: String(q.id),
-          codigo_diplomado: codDip,
-          modulo: modCodigo,
-          tipo: 'multiple_choice',
-          pregunta: q.pregunta,
-          opciones: q.opciones.map((o: string, idx: number) => ({ indice: idx, text: o }))
-        })));
+        setPreguntasExamenDinamicas([]);
       }
     } catch (err) {
       console.error('Error al cargar preguntas de examen:', err);
+      setPreguntasExamenDinamicas([]);
     } finally {
       setCargandoPreguntasExamen(false);
     }
   };
 
-  const abrirVerIntento = (modCodigo: string, modNombre: string, modIdx: number) => {
+  const abrirVerIntento = async (modCodigo: string, modNombre: string, modIdx: number) => {
     setExamenActivoModal({ moduloCodigo: modCodigo, moduloNombre: modNombre, moduloIdx: modIdx });
     setPasoModalExamen('ver_intento');
     const nota = notasModulosMap[modCodigo] || 0;
     setResultadoExamen({ nota, aprobado: nota >= 12 });
+
+    // Si no tenemos en memoria los detalles, consultarlos desde notas_modulos
+    if (!detallesCalificacionExamen || detallesCalificacionExamen.length === 0) {
+      try {
+        const codDip = (diplomadoActual as any)?.codigo || 'DIP-01';
+        const res = await fetch(`/api/dashboard/examenes?codigoDiplomado=${encodeURIComponent(codDip)}&modulo=${encodeURIComponent(modCodigo)}&dni=${encodeURIComponent(dniAlumno || '71234567')}&accion=ver_intento`);
+        const data = await res.json();
+        if (data.success && data.intento?.detalles_examen) {
+          setDetallesCalificacionExamen(data.intento.detalles_examen);
+        }
+      } catch (e) {
+        console.warn('No se pudo recuperar intento previo de notas_modulos:', e);
+      }
+    }
   };
 
-  const rendirExamenModulo = async () => {
+  const rendirExamenModulo = async (forzadoPorTiempo: boolean = false) => {
     if (!examenActivoModal) return;
+
+    // Si no es forzado por límite de tiempo, verificar que todas las preguntas estén respondidas
+    if (!forzadoPorTiempo && preguntasExamenDinamicas.length > 0) {
+      const faltante = preguntasExamenDinamicas.find(
+        q => !respuestasExamenDinamicas[q.id] || respuestasExamenDinamicas[q.id].length === 0
+      );
+
+      if (faltante) {
+        setPreguntaFaltanteAlertaId(faltante.id);
+        const elem = document.getElementById(`pregunta-card-${faltante.id}`);
+        if (elem) {
+          elem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        return;
+      }
+    }
 
     setGuardandoExamen(true);
     try {
       const modCodigo = examenActivoModal.moduloCodigo;
-      const codDip = (diplomadoActual as any)?.codigo || 'DIP-01';
+      const codDip = codigoDipActual;
 
       // Llamar al endpoint de calificación de examen
       const resCalificacion = await fetch('/api/dashboard/examenes', {
@@ -445,6 +544,10 @@ export default function ReproductorClasesPage() {
 
             const recursos = isObj ? obtenerRecursosConLinks(claseRow, numClase) : [];
 
+            const rawTextoResumen = (isObj ? (claseRow.resumenTexto || claseRow.ResumenTexto) : null) 
+              || (isObj && claseRow.id ? (resumenesCacheJson as Record<string, any>)[claseRow.id]?.markdown : null);
+            const resumenData = parsearResumenTexto(rawTextoResumen);
+
             const partes: ParteClase[] = [
               {
                 id: `${claseId}-p1`,
@@ -454,14 +557,7 @@ export default function ReproductorClasesPage() {
                 duracion: '60 min',
                 videoUrl: driveVideoUrl,
                 completada: esCompletada,
-                resumen: {
-                  objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
-                  puntosClave: [
-                    `Revisión de la normativa vigente y estándares técnicos aplicables.`,
-                    `Criterios clave para la toma de decisiones operativas y de gestión.`,
-                    `Estrategias de análisis y resolución de problemas en el sector.`
-                  ]
-                },
+                resumen: resumenData,
                 recursos
               }
             ];
@@ -503,6 +599,10 @@ export default function ReproductorClasesPage() {
 
           const recursos = isObj ? obtenerRecursosConLinks(caRow, numClase) : [];
 
+          const rawTextoResumen = (isObj ? (caRow.resumenTexto || caRow.ResumenTexto) : null) 
+            || (isObj && caRow.id ? (resumenesCacheJson as Record<string, any>)[caRow.id]?.markdown : null);
+          const resumenData = parsearResumenTexto(rawTextoResumen);
+
           const partes: ParteClase[] = [
             {
               id: `${claseId}-p1`,
@@ -512,14 +612,7 @@ export default function ReproductorClasesPage() {
               duracion: '60 min',
               videoUrl: driveVideoUrl,
               completada: esCompletada,
-              resumen: {
-                objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
-                puntosClave: [
-                  `Revisión de la normativa vigente y estándares técnicos aplicables.`,
-                  `Criterios clave para la toma de decisiones operativas y de gestión.`,
-                  `Estrategias de análisis y resolución de problemas en el sector.`
-                ]
-              },
+              resumen: resumenData,
               recursos
             }
           ];
@@ -558,6 +651,7 @@ export default function ReproductorClasesPage() {
 
       return {
         id: diplomadoId,
+        codigo: leccionesTabla[0]?.CodigoDiplomado || codigoDipActual,
         titulo: (leccionesTabla[0]?.Diplomado || tituloBase).toUpperCase(),
         avancePorcentaje,
         progreso: avancePorcentaje,
@@ -697,14 +791,7 @@ export default function ReproductorClasesPage() {
               duracion: '60 min',
               videoUrl: videoUrlFromCatalog,
               completada: esCompletada,
-              resumen: {
-                objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
-                puntosClave: [
-                  `Revisión de la normativa vigente y estándares técnicos aplicables.`,
-                  `Criterios clave para la toma de decisiones operativas y de gestión.`,
-                  `Estrategias de análisis y resolución de problemas en el sector.`
-                ]
-              },
+              resumen: null,
               recursos: isObj 
                 ? obtenerRecursosConLinks(claseTitleStr, numClase) 
                 : (pdfUrlFromCatalog ? [{
@@ -778,14 +865,7 @@ export default function ReproductorClasesPage() {
               duracion: '60 min',
               videoUrl: videoUrlFromCatalog,
               completada: esCompletada,
-              resumen: {
-                objetivo: `Comprender los conceptos principales y aplicación práctica de: ${claseTitle}.`,
-                puntosClave: [
-                  `Revisión de la normativa vigente y estándares técnicos aplicables.`,
-                  `Criterios clave para la toma de decisiones operativas y de gestión.`,
-                  `Estrategias de análisis y resolución de problemas en el sector.`
-                ]
-              },
+              resumen: null,
               recursos: typeof claseTitleStr === 'object' 
                 ? obtenerRecursosConLinks(claseTitleStr, numClase)
                 : (pdfUrlFromCatalog ? [{
@@ -1040,6 +1120,19 @@ export default function ReproductorClasesPage() {
     return claseActual.partes.find((p) => p.numero === parteSeleccionada) || claseActual.partes[0];
   }, [claseActual, parteSeleccionada]);
 
+  // Determina si la clase actual tiene un resumen real asignado
+  const tieneResumen = Boolean(
+    parteActiva?.resumen?.parrafo || 
+    (parteActiva?.resumen?.temasClave && parteActiva.resumen.temasClave.length > 0)
+  );
+
+  // Si la clase no tiene resumen y se estaba en la pestaña resumen, redirigir a recursos multimedia
+  useEffect(() => {
+    if (!tieneResumen && tabActiva === 'resumen') {
+      setTabActiva('recursos');
+    }
+  }, [tieneResumen, tabActiva]);
+
   const tieneMultiplesPartes = (claseActual?.partes?.length ?? 0) > 1;
 
   const indiceActualPlano = useMemo(() => {
@@ -1230,21 +1323,30 @@ export default function ReproductorClasesPage() {
           </div>
         </div>
 
-        {/* Indicador de Avance y Estado de Lección en Encabezado */}
-        <div className="flex items-center gap-3 shrink-0">
-          <div className={`text-xs font-bold px-3.5 py-1.5 rounded-xl border flex items-center gap-2 transition-all ${
-            esOscuro 
-              ? 'bg-indigo-950/60 border-indigo-800/60 text-indigo-300' 
-              : 'bg-indigo-50 border-indigo-200 text-indigo-900'
-          }`}>
-            <span className="font-extrabold uppercase tracking-wider text-[11px]">
-              {claseActual.tituloClase.split(':')[0] || `Clase ${claseActual.numeroClase}`}
-            </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-[10px] font-bold text-emerald-500 hidden sm:inline">
-              ✓ Guardado
-            </span>
-          </div>
+        {/* Botón Ocultar / Mostrar Temario */}
+        <div className="flex items-center gap-2.5 shrink-0">
+          <button
+            type="button"
+            onClick={() => setModoCine(!modoCine)}
+            className={`text-xs font-semibold px-3 py-1.5 rounded-xl border flex items-center gap-1.5 transition-all cursor-pointer ${
+              esOscuro
+                ? 'bg-slate-800/80 hover:bg-slate-700 text-slate-300 border-slate-700'
+                : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200'
+            }`}
+            title={modoCine ? 'Mostrar temario' : 'Ocultar temario'}
+          >
+            {modoCine ? (
+              <>
+                <PanelRightOpen className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                <span className="hidden sm:inline">Mostrar temario</span>
+              </>
+            ) : (
+              <>
+                <PanelRightClose className="w-4 h-4 text-slate-500 dark:text-slate-400" />
+                <span className="hidden sm:inline">Ocultar temario</span>
+              </>
+            )}
+          </button>
         </div>
       </header>
 
@@ -1252,7 +1354,7 @@ export default function ReproductorClasesPage() {
       <div className="flex-1 min-h-0 flex flex-col lg:flex-row overflow-y-auto lg:overflow-hidden">
         
         {/* ZONA PRINCIPAL DE REPRODUCCIÓN (70%) O ENTORNO DE EVALUACIÓN */}
-        <div id="zona-reproductor-principal" className={`flex-1 lg:h-full lg:overflow-y-auto min-h-0 p-4 sm:p-8 lg:p-10 lg:border-r space-y-6 ${
+        <div id="zona-reproductor-principal" className={`flex-1 lg:h-full lg:overflow-y-auto min-h-0 p-4 sm:p-8 lg:p-10 ${modoCine ? 'lg:border-r-0' : 'lg:border-r'} space-y-6 ${
           esOscuro ? 'lg:border-slate-800' : 'lg:border-slate-200'
         }`}>
           {examenActivoModal ? (
@@ -1263,11 +1365,11 @@ export default function ReproductorClasesPage() {
                 esOscuro ? 'bg-slate-900 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
               }`}>
                 <div className="flex items-center gap-3.5 min-w-0">
-                  <div className="size-11 rounded-xl bg-amber-500/15 text-amber-500 grid place-items-center shrink-0 border border-amber-500/30">
-                    <FileText className="w-5 h-5 text-amber-500" />
+                  <div className="size-11 rounded-xl bg-indigo-500/15 text-indigo-500 dark:text-indigo-400 grid place-items-center shrink-0 border border-indigo-500/30">
+                    <FileText className="w-5 h-5 text-indigo-500 dark:text-indigo-400" />
                   </div>
                   <div className="min-w-0">
-                    <span className="text-[11px] font-bold text-amber-500 uppercase tracking-wider block">
+                    <span className="text-[11px] font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider block">
                       Evaluación Académica · Módulo {examenActivoModal.moduloIdx + 1}
                     </span>
                     <h2 className="text-base sm:text-lg font-bold truncate mt-0.5 uppercase">
@@ -1276,23 +1378,43 @@ export default function ReproductorClasesPage() {
                   </div>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => setExamenActivoModal(null)}
-                  className={`text-xs font-bold px-4 py-2.5 rounded-xl border flex items-center justify-center gap-2 transition-all cursor-pointer shrink-0 ${
-                    esOscuro 
-                      ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700' 
-                      : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200'
-                  }`}
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                  <span>Volver a las clases</span>
-                </button>
+                <div className="flex items-center gap-3 shrink-0">
+                  {pasoModalExamen === 'cuestionario' && (
+                    <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl border bg-slate-100 dark:bg-slate-800/80 border-slate-200 dark:border-slate-700/80 shadow-xs">
+                      <Timer className={`w-4 h-4 ${tiempoRestanteSegundos <= 300 ? 'text-rose-500 animate-pulse' : 'text-indigo-500'}`} />
+                      <span className="text-xs text-slate-500 dark:text-slate-400 font-medium hidden sm:inline">Tiempo disponible:</span>
+                      <span className={`tabular-nums text-xs sm:text-sm font-bold ${
+                        tiempoRestanteSegundos <= 300 
+                          ? 'text-rose-500 animate-pulse' 
+                          : 'text-indigo-600 dark:text-indigo-400'
+                      }`}>
+                        {formatearTiempoDisponible(tiempoRestanteSegundos)}
+                      </span>
+                    </div>
+                  )}
+
+                  <button
+                    type="button"
+                    onClick={() => setExamenActivoModal(null)}
+                    className={`text-xs font-bold px-4 py-2.5 rounded-xl border flex items-center justify-center gap-2 transition-all cursor-pointer shrink-0 ${
+                      esOscuro 
+                        ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700' 
+                        : 'bg-slate-100 hover:bg-slate-200 text-slate-700 border-slate-200'
+                    }`}
+                  >
+                    <ArrowLeft className="w-4 h-4" />
+                    <span>Volver a las clases</span>
+                  </button>
+                </div>
               </div>
 
               {/* Contenedor Principal del Examen */}
-              <div className={`rounded-2xl border p-6 sm:p-8 transition-all ${
-                esOscuro ? 'bg-slate-900/90 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
+              <div className={`transition-all ${
+                pasoModalExamen === 'cuestionario'
+                  ? esOscuro ? 'text-white' : 'text-slate-900'
+                  : `rounded-2xl border p-6 sm:p-8 ${
+                      esOscuro ? 'bg-slate-900/90 border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-900 shadow-sm'
+                    }`
               }`}>
                 {/* PASO 1: INDICACIONES PREVIAS AL EXAMEN */}
                 {pasoModalExamen === 'indicaciones' && (
@@ -1345,7 +1467,7 @@ export default function ReproductorClasesPage() {
                       <button
                         type="button"
                         onClick={() => setPasoModalExamen('cuestionario')}
-                        className="bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md transition-colors flex items-center gap-2 cursor-pointer shadow-amber-600/20"
+                        className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs sm:text-sm px-6 py-2.5 rounded-xl shadow-md transition-colors flex items-center gap-2 cursor-pointer shadow-indigo-600/20"
                       >
                         <FileText className="w-4 h-4" /> Comenzar Examen Ahora
                       </button>
@@ -1358,39 +1480,80 @@ export default function ReproductorClasesPage() {
                   <div className="space-y-6 max-w-3xl mx-auto">
                     {cargandoPreguntasExamen ? (
                       <div className="p-12 text-center text-slate-400 space-y-3">
-                        <Loader2 className="w-8 h-8 animate-spin mx-auto text-amber-500" />
-                        <p className="text-sm font-semibold">Generando tu examen con 10 preguntas aleatorias del banco...</p>
+                        <Loader2 className="w-8 h-8 animate-spin mx-auto text-indigo-500" />
+                        <p className="text-sm font-semibold">Cargando las preguntas oficiales de tu diplomado...</p>
+                      </div>
+                    ) : preguntasExamenDinamicas.length === 0 ? (
+                      <div className="p-10 text-center space-y-3 border rounded-2xl border-dashed border-slate-300 dark:border-slate-800">
+                        <AlertCircle className="w-10 h-10 text-slate-400 mx-auto" />
+                        <h4 className="font-bold text-sm">Examen en preparación</h4>
+                        <p className="text-xs text-slate-500 max-w-md mx-auto">
+                          Aún no se han publicado las preguntas para este módulo de tu diplomado. La coordinación académica las habilitará próximamente.
+                        </p>
+                        <button
+                          type="button"
+                          onClick={() => setExamenActivoModal(null)}
+                          className="mt-2 text-xs font-bold px-4 py-2 bg-indigo-600 text-white rounded-xl"
+                        >
+                          Volver a las clases
+                        </button>
                       </div>
                     ) : (
                       <>
+                        {/* Barra de progreso rápida */}
+                        <div className="sticky top-2 z-20 p-3.5 rounded-2xl border backdrop-blur-md flex items-center justify-between gap-3 shadow-sm bg-white/90 dark:bg-slate-900/90 border-slate-200 dark:border-slate-800">
+                          <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold">
+                            <span className="text-slate-500 dark:text-slate-400">Progreso:</span>
+                            <strong className="text-indigo-600 dark:text-indigo-400">
+                              {Object.values(respuestasExamenDinamicas).filter(arr => arr && arr.length > 0).length} de {preguntasExamenDinamicas.length}
+                            </strong>
+                          </div>
+
+                          <div className="flex items-center gap-2 tabular-nums text-xs sm:text-sm font-bold">
+                            <Timer className={`w-4 h-4 ${tiempoRestanteSegundos <= 300 ? 'text-rose-500 animate-pulse' : 'text-indigo-500'}`} />
+                            <span className={`${
+                              tiempoRestanteSegundos <= 300 
+                                ? 'text-rose-500 animate-pulse' 
+                                : 'text-indigo-600 dark:text-indigo-400'
+                            }`}>
+                              {formatearTiempoDisponible(tiempoRestanteSegundos)}
+                            </span>
+                          </div>
+                        </div>
+
                         {preguntasExamenDinamicas.map((q, qIdx) => {
                           const esMultiple = q.tipo === 'multiple_select';
                           const seleccionadasActuales = respuestasExamenDinamicas[q.id] || [];
+                          const esFaltante = preguntaFaltanteAlertaId === q.id;
 
                           return (
                             <div
+                              id={`pregunta-card-${q.id}`}
                               key={q.id}
-                              className={`p-5 sm:p-6 rounded-2xl border space-y-4 ${
-                                esOscuro ? 'bg-slate-800/40 border-slate-750' : 'bg-slate-50/70 border-slate-200'
+                              className={`p-5 sm:p-6 rounded-2xl border space-y-4 transition-all scroll-mt-24 ${
+                                esFaltante
+                                  ? 'border-rose-500 ring-2 ring-rose-500/30 bg-rose-500/5'
+                                  : esOscuro ? 'bg-slate-900/70 border-slate-800' : 'bg-white border-slate-200 shadow-sm'
                               }`}
                             >
                               <div className="flex flex-wrap items-center justify-between gap-2">
                                 <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-lg border ${
                                   esMultiple 
                                     ? 'bg-purple-500/10 border-purple-500/30 text-purple-400' 
-                                    : 'bg-sky-500/10 border-sky-500/30 text-sky-400'
+                                    : 'bg-indigo-500/10 border-indigo-500/30 text-indigo-500 dark:text-indigo-400'
                                 }`}>
-                                  {esMultiple ? '☑️ Selección Múltiple (marque varias alternativas)' : '🔘 Opción Única (marque 1 alternativa)'}
+                                  {esMultiple ? 'Selección múltiple (marque varias alternativas)' : 'Opción única (marque 1 alternativa)'}
                                 </span>
-                                {q.dificultad && (
-                                  <span className="text-[10px] font-bold text-slate-400">
-                                    Nivel {q.dificultad}
+
+                                {esFaltante && (
+                                  <span className="text-[11px] font-bold text-rose-500 flex items-center gap-1">
+                                    <AlertCircle className="w-3.5 h-3.5" /> Falta responder esta pregunta
                                   </span>
                                 )}
                               </div>
 
                               <h4 className="text-sm sm:text-base font-bold leading-snug">
-                                {qIdx + 1}. {q.pregunta}
+                                {qIdx + 1}. {formatearTextoCientifico(q.pregunta)}
                               </h4>
 
                               <div className="space-y-2.5">
@@ -1403,6 +1566,9 @@ export default function ReproductorClasesPage() {
                                       key={optIdx}
                                       type="button"
                                       onClick={() => {
+                                        if (preguntaFaltanteAlertaId === q.id) {
+                                          setPreguntaFaltanteAlertaId(null);
+                                        }
                                         setRespuestasExamenDinamicas(prev => {
                                           const prevList = prev[q.id] || [];
                                           if (esMultiple) {
@@ -1416,26 +1582,26 @@ export default function ReproductorClasesPage() {
                                           }
                                         });
                                       }}
-                                      className={`w-full text-left p-3.5 sm:p-4 rounded-xl text-xs sm:text-sm flex items-center gap-3.5 transition-all border cursor-pointer ${
-                                        seleccionada
-                                          ? 'bg-amber-600 text-white border-amber-500 font-bold shadow-sm'
-                                          : esOscuro
-                                            ? 'bg-slate-900/80 border-slate-800 text-slate-200 hover:bg-slate-800'
-                                            : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+                                      className={`w-full text-left p-3.5 sm:p-4 rounded-xl text-xs sm:text-sm flex items-center gap-3.5 transition-colors border cursor-pointer ${
+                                        esOscuro
+                                          ? 'bg-slate-900/60 border-slate-800 text-slate-200 hover:bg-slate-800 hover:border-slate-700'
+                                          : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300'
                                       }`}
                                     >
-                                      <div className={`size-5 shrink-0 grid place-items-center border ${
+                                      <div className={`size-5 shrink-0 grid place-items-center border-2 transition-colors ${
                                         esMultiple ? 'rounded-md' : 'rounded-full'
                                       } ${
-                                        seleccionada ? 'border-white bg-white text-amber-600 font-bold' : 'border-slate-400 dark:border-slate-500'
+                                        seleccionada
+                                          ? 'border-indigo-600 bg-indigo-600'
+                                          : 'border-slate-400 dark:border-slate-500 bg-transparent'
                                       }`}>
                                         {seleccionada && (
-                                          esMultiple 
-                                            ? <Check className="w-3.5 h-3.5 stroke-[3] text-amber-600" />
-                                            : <div className="size-2.5 rounded-full bg-amber-600" />
+                                          esMultiple
+                                            ? <Check className="w-3.5 h-3.5 stroke-[3] text-white" />
+                                            : <div className="size-2 rounded-full bg-white" />
                                         )}
                                       </div>
-                                      <span className="leading-snug">{opt.text}</span>
+                                      <span className="leading-snug">{formatearTextoCientifico(opt.text)}</span>
                                     </button>
                                   );
                                 })}
@@ -1450,13 +1616,10 @@ export default function ReproductorClasesPage() {
                             Preguntas respondidas: <strong>{Object.values(respuestasExamenDinamicas).filter(arr => arr && arr.length > 0).length} de {preguntasExamenDinamicas.length}</strong>
                           </span>
                           <button
-                            onClick={rendirExamenModulo}
-                            disabled={Object.values(respuestasExamenDinamicas).filter(arr => arr && arr.length > 0).length < preguntasExamenDinamicas.length || guardandoExamen}
-                            className={`px-7 py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md ${
-                              Object.values(respuestasExamenDinamicas).filter(arr => arr && arr.length > 0).length === preguntasExamenDinamicas.length && !guardandoExamen
-                                ? 'bg-amber-600 hover:bg-amber-700 text-white cursor-pointer shadow-amber-600/20'
-                                : 'bg-slate-700 text-slate-400 cursor-not-allowed opacity-60'
-                            }`}
+                            type="button"
+                            onClick={() => rendirExamenModulo(false)}
+                            disabled={guardandoExamen}
+                            className="px-7 py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-md bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer shadow-indigo-600/20 active:scale-[0.99]"
                           >
                             {guardandoExamen ? (
                               <>
@@ -1584,19 +1747,25 @@ export default function ReproductorClasesPage() {
                                       ? 'bg-purple-500/10 border-purple-500/30 text-purple-400'
                                       : 'bg-sky-500/10 border-sky-500/30 text-sky-400'
                                   }`}>
-                                    {det.tipo === 'multiple_select' ? 'Selección Múltiple' : 'Opción Única'}
+                                    {det.tipo === 'multiple_select' ? 'Selección múltiple' : 'Opción única'}
                                   </span>
                                   <h4 className="text-xs sm:text-sm font-bold leading-snug">
-                                    {dIdx + 1}. {det.pregunta}
+                                    {dIdx + 1}. {formatearTextoCientifico(det.pregunta)}
                                   </h4>
                                 </div>
 
                                 <span className={`text-[10px] font-bold px-2.5 py-1 rounded-md border shrink-0 ${
-                                  det.esCorrecta 
-                                    ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30' 
-                                    : 'bg-rose-500/20 text-rose-400 border-rose-500/30'
+                                  det.puntajeObtenido >= det.puntajeMaximoPregunta
+                                    ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
+                                    : det.puntajeObtenido > 0
+                                      ? 'bg-amber-500/20 text-amber-400 border-amber-500/30'
+                                      : 'bg-rose-500/20 text-rose-400 border-rose-500/30'
                                 }`}>
-                                  {det.esCorrecta ? `+${det.puntajeObtenido} pts (Correcto)` : '0 pts (Incorrecto)'}
+                                  {det.puntajeObtenido >= det.puntajeMaximoPregunta
+                                    ? `+${det.puntajeObtenido} pts (Correcto)`
+                                    : det.puntajeObtenido > 0
+                                      ? `+${det.puntajeObtenido} pts (Parcial)`
+                                      : '0 pts (Incorrecto)'}
                                 </span>
                               </div>
 
@@ -1618,7 +1787,7 @@ export default function ReproductorClasesPage() {
                                   return (
                                     <div key={opt.indice} className={`p-3 rounded-xl text-xs border space-y-1.5 ${estilo}`}>
                                       <div className="flex items-center justify-between gap-2">
-                                        <span>{opt.text}</span>
+                                        <span>{formatearTextoCientifico(opt.text)}</span>
                                         <span className="text-[10px] font-bold shrink-0">
                                           {opt.marcadaPorAlumno && opt.isCorrect && '✓ Tu respuesta (Correcta)'}
                                           {opt.marcadaPorAlumno && !opt.isCorrect && '✗ Tu respuesta (Incorrecta)'}
@@ -1627,7 +1796,7 @@ export default function ReproductorClasesPage() {
                                       </div>
                                       {opt.rationale && (
                                         <div className="text-[11px] text-slate-400 pt-1 border-t border-slate-800/40">
-                                          💡 <strong className="text-slate-300">Retroalimentación:</strong> {opt.rationale}
+                                          💡 <strong className="text-slate-300">Retroalimentación:</strong> {formatearTextoCientifico(opt.rationale)}
                                         </div>
                                       )}
                                     </div>
@@ -1637,7 +1806,7 @@ export default function ReproductorClasesPage() {
 
                               {det.hint && (
                                 <div className="text-[11px] text-purple-300/80 bg-purple-950/20 border border-purple-900/30 px-3 py-1.5 rounded-xl">
-                                  🎯 <strong>Pista pedagógica:</strong> {det.hint}
+                                  🎯 <strong>Pista pedagógica:</strong> {formatearTextoCientifico(det.hint)}
                                 </div>
                               )}
                             </div>
@@ -2116,18 +2285,20 @@ export default function ReproductorClasesPage() {
             <div className={`flex flex-wrap items-center gap-2 border-b pb-3 ${
               esOscuro ? 'border-slate-800' : 'border-slate-200'
             }`}>
-              <button
-                onClick={() => setTabActiva('resumen')}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                  tabActiva === 'resumen' 
-                    ? 'bg-indigo-600 text-white shadow-sm' 
-                    : esOscuro 
-                      ? 'text-slate-400 hover:text-white hover:bg-slate-900' 
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                }`}
-              >
-                Resumen
-              </button>
+              {tieneResumen && (
+                <button
+                  onClick={() => setTabActiva('resumen')}
+                  className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
+                    tabActiva === 'resumen' 
+                      ? 'bg-indigo-600 text-white shadow-sm' 
+                      : esOscuro 
+                        ? 'text-slate-400 hover:text-white hover:bg-slate-900' 
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                  }`}
+                >
+                  Resumen
+                </button>
+              )}
               <button
                 onClick={() => setTabActiva('recursos')}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
@@ -2157,27 +2328,53 @@ export default function ReproductorClasesPage() {
             <div className="mt-5 text-sm leading-relaxed">
               
               {/* TAB RESUMEN */}
-              {tabActiva === 'resumen' && (
-                <div className={`p-6 rounded-2xl border space-y-4 ${
+              {tabActiva === 'resumen' && tieneResumen && parteActiva.resumen && (
+                <div className={`p-6 sm:p-7 rounded-2xl border space-y-6 ${
                   esOscuro ? 'bg-slate-900/60 border-slate-800 text-slate-300' : 'bg-white border-slate-200 text-slate-700 shadow-sm'
                 }`}>
-                  <h4 className={`font-bold text-sm tracking-tight ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                    Objetivos y Puntos Clave de la Sesión:
-                  </h4>
-                  
-                  <p className={`text-xs sm:text-sm leading-relaxed ${esOscuro ? 'text-slate-300' : 'text-slate-600'}`}>
-                    En esta sesión se abordaron los principios fundamentales de {claseActual.tituloClase}. Los contenidos han sido validados por el equipo académico de EDUMIN y están alineados a los estándares de la industria minera.
-                  </p>
+                  {/* SECCIÓN RESUMEN */}
+                  {parteActiva.resumen.parrafo && (
+                    <div className="space-y-2">
+                      <h4 className={`text-xs font-black uppercase tracking-wider ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
+                        Resumen:
+                      </h4>
+                      <p className={`text-xs sm:text-sm leading-relaxed ${esOscuro ? 'text-slate-200' : 'text-slate-700'}`}>
+                        {parteActiva.resumen.parrafo}
+                      </p>
+                    </div>
+                  )}
 
-                  <ul className={`list-disc list-outside pl-5 space-y-2 text-xs sm:text-sm leading-relaxed ${
-                    esOscuro ? 'text-slate-300 marker:text-indigo-400' : 'text-slate-700 marker:text-indigo-600'
-                  }`}>
-                    {parteActiva.resumen.puntosClave.map((punto, idx) => (
-                      <li key={idx}>
-                        {punto}
-                      </li>
-                    ))}
-                  </ul>
+                  {/* SECCIÓN TEMAS CLAVE */}
+                  {parteActiva.resumen.temasClave && parteActiva.resumen.temasClave.length > 0 && (
+                    <div className="space-y-3 pt-4 border-t border-slate-200/60 dark:border-slate-800/60">
+                      <h4 className={`text-xs font-black uppercase tracking-wider ${esOscuro ? 'text-indigo-400' : 'text-indigo-600'}`}>
+                        Temas clave:
+                      </h4>
+                      <ul className="space-y-2.5">
+                        {parteActiva.resumen.temasClave.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm leading-relaxed">
+                            <span className="text-indigo-500 font-bold text-base leading-none select-none shrink-0 mt-0.5">•</span>
+                            <div className="flex-1">
+                              {item.titulo ? (
+                                <>
+                                  <strong className={`font-bold ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                                    {item.titulo}:
+                                  </strong>{' '}
+                                  <span className={esOscuro ? 'text-slate-300' : 'text-slate-700'}>
+                                    {item.descripcion}
+                                  </span>
+                                </>
+                              ) : (
+                                <span className={esOscuro ? 'text-slate-300' : 'text-slate-700'}>
+                                  {item.descripcion}
+                                </span>
+                              )}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </div>
               )}
 
@@ -2387,6 +2584,7 @@ export default function ReproductorClasesPage() {
         </div>
 
         {/* SIDEBAR DERECHO (30%) - TEMARIO CONTINUO */}
+        {!modoCine && (
         <aside className={`w-full lg:w-96 border-t lg:border-t-0 lg:border-l flex flex-col shrink-0 lg:h-full lg:overflow-y-auto transition-colors ${
           esOscuro ? 'bg-slate-900 border-slate-800' : 'bg-white border-slate-200'
         }`}>
@@ -2422,27 +2620,31 @@ export default function ReproductorClasesPage() {
           {/* Lista Continua de Módulos y Clases (Directo en la columna, separados por línea divisoria completa) */}
           <div className="divide-y divide-slate-200 dark:divide-slate-800 pb-8">
             {diplomadoActual.modulos.map((mod: any, modIdx: number) => {
+              const totalClasesMod = mod.clases?.length || 0;
               const estaModCompletado = Boolean(completadosMap[mod.codigo] || mod.completado);
+              const completadasMod = estaModCompletado
+                ? totalClasesMod
+                : (mod.clases || []).filter((c: any) => Boolean(completadosMap[c.id])).length;
+              const esModTotalmenteCompletado = estaModCompletado || (totalClasesMod > 0 && completadasMod === totalClasesMod);
 
               return (
                 <div key={mod.id} className="p-4 space-y-3">
-                  {/* Encabezado del Módulo en mayúsculas y badge de clases */}
-                  <div className="flex items-start justify-between gap-2 pb-1">
-                    <div className="min-w-0 flex-1">
-                      <span className="text-[10px] font-bold text-indigo-500 uppercase tracking-widest block">
+                  {/* Encabezado del Módulo: Fila 1 = Código y Contador | Fila 2 = Título Completo */}
+                  <div className="space-y-1 pb-1">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-[10px] font-bold text-indigo-500 uppercase tracking-widest">
                         {formatearCodigoModulo(mod.codigo, modIdx).toUpperCase()}
                       </span>
-                      <h4 className={`font-bold text-xs mt-0.5 leading-snug uppercase ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
-                        {(mod.nombre || '').toUpperCase()}
-                      </h4>
+                      <span className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-1 shrink-0">
+                        <span>{`${completadasMod}/${totalClasesMod} clases`}</span>
+                        {esModTotalmenteCompletado && (
+                          <Check className="w-3.5 h-3.5 text-emerald-500 shrink-0" strokeWidth={2.8} />
+                        )}
+                      </span>
                     </div>
-                    <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-md shrink-0 border ${
-                      estaModCompletado
-                        ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
-                        : esOscuro ? 'bg-slate-800 text-slate-400 border-slate-700' : 'bg-slate-100 text-slate-600 border-slate-200'
-                    }`}>
-                      {estaModCompletado ? 'Completado ✓' : `${mod.clases.length} clases`}
-                    </span>
+                    <h4 className={`font-bold text-xs leading-snug uppercase ${esOscuro ? 'text-white' : 'text-slate-900'}`}>
+                      {(mod.nombre || '').toUpperCase()}
+                    </h4>
                   </div>
 
                   {/* Lista de Temas */}
@@ -2567,7 +2769,7 @@ export default function ReproductorClasesPage() {
                         );
                       })}
                     </div>
-                  )}                  {/* Fila del Examen del Módulo (Estilo consistente con las filas de temas) */}
+                  )}                  {/* Fila del Examen del Módulo (Diseño optimizado: botones nunca solapan los textos) */}
                   {(() => {
                     const esExamenActivo = Boolean(examenActivoModal && (
                       examenActivoModal.moduloCodigo === mod.codigo || 
@@ -2576,100 +2778,140 @@ export default function ReproductorClasesPage() {
                     ));
 
                     return (
-                      <div className={`mt-2 p-3 rounded-xl border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 transition-all cursor-pointer ${
+                      <div 
+                        role="button"
+                        tabIndex={0}
+                        onClick={() => {
+                          if (notasModulosMap[mod.codigo] !== undefined) {
+                            abrirVerIntento(mod.codigo, mod.nombre, modIdx);
+                          } else {
+                            abrirModalExamen(mod.codigo, mod.nombre, modIdx);
+                          }
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            if (notasModulosMap[mod.codigo] !== undefined) {
+                              abrirVerIntento(mod.codigo, mod.nombre, modIdx);
+                            } else {
+                              abrirModalExamen(mod.codigo, mod.nombre, modIdx);
+                            }
+                          }
+                        }}
+                        className={`mt-2 p-3 rounded-xl border transition-all cursor-pointer select-none space-y-2.5 ${
                         esExamenActivo
                           ? 'bg-amber-500 text-white border-amber-500 shadow-md font-bold'
                           : esOscuro 
                             ? 'bg-slate-800/60 border-slate-700/60 text-slate-200 hover:bg-slate-800 shadow-2xs' 
                             : 'bg-slate-50 border-slate-200 text-slate-800 hover:bg-slate-100 shadow-2xs'
                       }`}>
-                        <div className="flex items-center gap-2.5 min-w-0">
-                          <div className={`size-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
-                            esExamenActivo
-                              ? 'bg-white/20 text-white'
-                              : notasModulosMap[mod.codigo] !== undefined
-                                ? (notasModulosMap[mod.codigo] >= 12 ? 'bg-emerald-500/10 text-emerald-500' : 'bg-rose-500/10 text-rose-500')
-                                : 'bg-amber-500/15 text-amber-500'
-                          }`}>
-                            <FileText className={`w-4 h-4 ${esExamenActivo ? 'text-white' : ''}`} />
-                          </div>
-                          <div className="min-w-0">
-                            <span className={`text-xs font-bold block truncate uppercase ${
+                        {/* Fila Superior: Icono + Título + Subtítulo / Botón Rendir Examen */}
+                        <div className="flex items-center justify-between gap-2.5 min-w-0">
+                          <div className="flex items-center gap-2.5 min-w-0 flex-1">
+                            <div className={`size-8 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
                               esExamenActivo
-                                ? 'text-white'
-                                : esOscuro ? 'text-slate-100' : 'text-slate-800'
+                                ? 'bg-white/20 text-white'
+                                : notasModulosMap[mod.codigo] !== undefined
+                                  ? (notasModulosMap[mod.codigo] >= 12 ? 'bg-emerald-500/10 text-emerald-500' : 'bg-rose-500/10 text-rose-500')
+                                  : 'bg-amber-500/15 text-amber-500'
                             }`}>
-                              EXAMEN MODULAR {modIdx + 1}
-                            </span>
-                            <span className={`text-[11px] block font-medium ${
-                              esExamenActivo
-                                ? 'text-white/80'
-                                : 'text-slate-400'
-                            }`}>
-                              {notasModulosMap[mod.codigo] !== undefined
-                                ? `Nota: ${notasModulosMap[mod.codigo].toString().padStart(2, '0')}/20 · ${notasModulosMap[mod.codigo] >= 12 ? 'Aprobado' : 'Desaprobado'}`
-                                : '1 intento - 30 min'
-                              }
-                            </span>
+                              <FileText className={`w-4 h-4 ${esExamenActivo ? 'text-white' : ''}`} />
+                            </div>
+                            <div className="min-w-0 flex-1">
+                              <span className={`text-xs font-bold block truncate uppercase ${
+                                esExamenActivo
+                                  ? 'text-white'
+                                  : esOscuro ? 'text-slate-100' : 'text-slate-800'
+                              }`}>
+                                EXAMEN MODULAR {modIdx + 1}
+                              </span>
+                              <span className={`text-[11px] block font-medium truncate ${
+                                esExamenActivo
+                                  ? 'text-white/80'
+                                  : 'text-slate-400'
+                              }`}>
+                                {notasModulosMap[mod.codigo] !== undefined
+                                  ? `Nota: ${notasModulosMap[mod.codigo].toString().padStart(2, '0')}/20 · ${notasModulosMap[mod.codigo] >= 12 ? 'Aprobado' : 'Desaprobado'}`
+                                  : '1 intento · 30 min'
+                                }
+                              </span>
+                            </div>
                           </div>
-                        </div>
 
-                        {notasModulosMap[mod.codigo] !== undefined ? (
-                          <div className="flex items-center gap-2 shrink-0">
+                          {notasModulosMap[mod.codigo] === undefined && (
                             <button
                               type="button"
-                              onClick={() => abrirVerIntento(mod.codigo, mod.nombre, modIdx)}
-                              className={`text-xs font-bold px-3 py-1.5 rounded-xl border transition-colors flex items-center gap-1 cursor-pointer ${
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                abrirModalExamen(mod.codigo, mod.nombre, modIdx);
+                              }}
+                              className={`text-xs font-bold px-3 py-1.5 rounded-xl transition-all flex items-center justify-center shrink-0 cursor-pointer ${
+                                esExamenActivo
+                                  ? 'bg-white text-amber-600 hover:bg-amber-50 shadow-xs'
+                                  : 'bg-amber-500 hover:bg-amber-600 text-white shadow-amber-500/20 shadow-sm'
+                              }`}
+                            >
+                              <span>Rendir examen</span>
+                            </button>
+                          )}
+                        </div>
+
+                        {/* Fila Inferior: Botones de Acción (Cuando el examen ya fue rendido) */}
+                        {notasModulosMap[mod.codigo] !== undefined && (
+                          <div className={`pt-2 border-t flex items-center gap-2 ${
+                            esExamenActivo 
+                              ? 'border-white/20' 
+                              : esOscuro ? 'border-slate-700/60' : 'border-slate-200'
+                          }`}>
+                            <button
+                              type="button"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                abrirVerIntento(mod.codigo, mod.nombre, modIdx);
+                              }}
+                              className={`flex-1 text-xs font-bold px-2.5 py-1.5 rounded-xl border transition-colors flex items-center justify-center gap-1.5 cursor-pointer truncate ${
                                 esExamenActivo
                                   ? 'bg-white text-amber-600 border-white hover:bg-amber-50 shadow-xs'
                                   : esOscuro 
-                                    ? 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700' 
+                                    ? 'bg-slate-800 border-slate-700 text-slate-200 hover:bg-slate-700' 
                                     : 'bg-white border-slate-300 text-slate-700 hover:bg-slate-100 shadow-2xs'
                               }`}
                             >
-                              <Eye className="w-3.5 h-3.5" /> Ver intento
+                              <Eye className="w-3.5 h-3.5 shrink-0" />
+                              <span className="truncate">Ver intento</span>
                             </button>
 
                             {notasModulosMap[mod.codigo] >= 12 ? (
                               <Link
                                 href="/dashboard/certificados"
-                                className={`inline-flex items-center gap-1.5 font-bold text-xs px-3 py-1.5 rounded-xl transition-colors shadow-2xs cursor-pointer ${
+                                onClick={(e) => e.stopPropagation()}
+                                className={`flex-1 inline-flex items-center justify-center gap-1.5 font-bold text-xs px-2.5 py-1.5 rounded-xl transition-colors shadow-2xs cursor-pointer truncate ${
                                   esExamenActivo
                                     ? 'bg-white text-emerald-700 hover:bg-emerald-50'
                                     : 'bg-emerald-600 hover:bg-emerald-500 text-white'
                                 }`}
+                                title="Descargar certificado modular"
                               >
-                                <Award className="w-3.5 h-3.5" /> Descargar certificado
+                                <Award className="w-3.5 h-3.5 shrink-0" />
+                                <span className="truncate">Certificado</span>
                               </Link>
                             ) : (
                               <a
                                 href={`https://wa.me/51924400268?text=${encodeURIComponent(`Hola EDUMIN, desaprobé el Examen Modular ${modIdx + 1} en ${diplomadoActual.titulo}. Deseo pagar los S/ 25.00 para rendir mi Examen Sustitutorio.`)}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`inline-flex items-center gap-1.5 font-bold text-xs px-3 py-1.5 rounded-xl transition-colors shadow-2xs ${
+                                onClick={(e) => e.stopPropagation()}
+                                className={`flex-1 inline-flex items-center justify-center gap-1.5 font-bold text-xs px-2.5 py-1.5 rounded-xl transition-colors shadow-2xs truncate ${
                                   esExamenActivo
                                     ? 'bg-white text-amber-700 hover:bg-amber-50'
                                     : 'bg-amber-600 hover:bg-amber-500 text-white'
                                 }`}
                                 title="Solo tienes 1 intento. Para rendir nuevamente debes pagar el sustitutorio de S/ 25."
                               >
-                                <span>Sustitutorio (S/ 25)</span>
+                                <span className="truncate">Sustitutorio (S/ 25)</span>
                               </a>
                             )}
                           </div>
-                        ) : (
-                          <button
-                            type="button"
-                            onClick={() => abrirModalExamen(mod.codigo, mod.nombre, modIdx)}
-                            className={`text-xs font-bold px-3.5 py-1.5 rounded-xl transition-all flex items-center gap-1.5 shrink-0 cursor-pointer ${
-                              esExamenActivo
-                                ? 'bg-white text-amber-600 hover:bg-amber-50 shadow-xs'
-                                : 'bg-amber-500 hover:bg-amber-600 text-white shadow-amber-500/20 shadow-sm'
-                            }`}
-                          >
-                            <FileText className={`w-3.5 h-3.5 ${esExamenActivo ? 'text-amber-600' : 'text-white'}`} />
-                            <span>Rendir examen</span>
-                          </button>
                         )}
                       </div>
                     );
@@ -2679,6 +2921,7 @@ export default function ReproductorClasesPage() {
             })}
           </div>
         </aside>
+        )}
 
       </div>
     </div>

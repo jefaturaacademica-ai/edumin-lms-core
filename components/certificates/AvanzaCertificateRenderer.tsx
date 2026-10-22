@@ -15,7 +15,9 @@ export type TipoFuenteCertificado =
   | 'serif-cormorant'     // Cormorant Garamond, serif (Académica de Lujo)
   | 'serif-lora'          // Lora, Georgia, serif (Editorial Formal)
   | 'sans-moderna'        // Montserrat, Segoe UI, sans-serif
-  | 'sans-formal';        // Inter, Roboto, sans-serif
+  | 'sans-formal'         // Inter, sans-serif
+  | 'sans-roboto'         // Roboto, sans-serif
+  | 'sans-outfit';        // Outfit, sans-serif (Geométrica Moderna Vanguardista)
 
 export type FormatoFechaCertificado = 
   | 'larga'          // 20 de octubre de 2026
@@ -23,15 +25,21 @@ export type FormatoFechaCertificado =
   | 'mes-ano'        // Octubre de 2026
   | 'completa-texto'; // 20 de octubre de 2026
 
+export type FormatoNombreEstudiante = 'apellidos-nombres' | 'nombres-apellidos' | 'mayusculas';
+
+export type ModoHorasCreditos = 'horas-y-creditos' | 'solo-horas' | 'solo-creditos' | 'personalizado';
+
 export const FUENTES_CERTIFICADO = [
-  { id: 'serif-institucional', nombre: 'Times New Roman (Institucional)', fontFamily: '"Times New Roman", Times, Georgia, serif' },
-  { id: 'serif-elegante', nombre: 'Georgia (Elegante Clásica)', fontFamily: 'Georgia, "Times New Roman", serif' },
-  { id: 'serif-titular', nombre: 'Playfair Display (Distinción / Título)', fontFamily: '"Playfair Display", Georgia, serif' },
-  { id: 'serif-romana', nombre: 'Cinzel (Romana Imperial / Solemne)', fontFamily: '"Cinzel", Georgia, "Times New Roman", serif' },
-  { id: 'serif-cormorant', nombre: 'Cormorant Garamond (Académica de Lujo)', fontFamily: '"Cormorant Garamond", Garamond, Georgia, serif' },
-  { id: 'serif-lora', nombre: 'Lora (Editorial Formal)', fontFamily: '"Lora", Georgia, serif' },
-  { id: 'sans-moderna', nombre: 'Montserrat (Solemne / Moderna)', fontFamily: '"Montserrat", "Segoe UI", Arial, sans-serif' },
-  { id: 'sans-formal', nombre: 'Inter (Limpia / Técnica Oficial)', fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }
+  { id: 'serif-institucional', nombre: 'Times New Roman', fontFamily: '"Times New Roman", Times, Georgia, serif' },
+  { id: 'serif-elegante', nombre: 'Georgia', fontFamily: 'Georgia, "Times New Roman", serif' },
+  { id: 'serif-titular', nombre: 'Playfair Display', fontFamily: '"Playfair Display", Georgia, serif' },
+  { id: 'serif-romana', nombre: 'Cinzel', fontFamily: '"Cinzel", Georgia, "Times New Roman", serif' },
+  { id: 'serif-cormorant', nombre: 'Cormorant Garamond', fontFamily: '"Cormorant Garamond", Garamond, Georgia, serif' },
+  { id: 'serif-lora', nombre: 'Lora', fontFamily: '"Lora", Georgia, serif' },
+  { id: 'sans-outfit', nombre: 'Outfit', fontFamily: '"Outfit", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' },
+  { id: 'sans-moderna', nombre: 'Montserrat', fontFamily: '"Montserrat", "Segoe UI", Arial, sans-serif' },
+  { id: 'sans-formal', nombre: 'Inter', fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' },
+  { id: 'sans-roboto', nombre: 'Roboto', fontFamily: '"Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }
 ] as const;
 
 // Dimensiones de referencia física estándar A4 en puntos tipográficos (72 pt / pulgada)
@@ -62,6 +70,47 @@ export function obtenerFontFamily(fuenteId?: TipoFuenteCertificado, fallback: st
   if (!fuenteId) return fallback;
   const match = FUENTES_CERTIFICADO.find(f => f.id === fuenteId);
   return match ? match.fontFamily : fallback;
+}
+
+let _measureCanvas: HTMLCanvasElement | null = null;
+
+/**
+ * Mide el ancho exacto del texto en puntos tipográficos (pt) utilizando el contexto 2D de Canvas.
+ * Garantiza métricas idénticas entre la vista previa del navegador y el motor de PDF final.
+ */
+export function medirAnchoTextoPt(
+  texto: string,
+  tamanoPt: number,
+  fuenteId?: TipoFuenteCertificado,
+  esNegrita: boolean = true,
+  esCursiva: boolean = false
+): number {
+  if (!texto) return 0;
+  if (typeof document === 'undefined') {
+    // Estimación conservadora en SSR para evitar saltos
+    return texto.length * (tamanoPt * 0.62);
+  }
+  if (!_measureCanvas) {
+    _measureCanvas = document.createElement('canvas');
+  }
+  const ctx = _measureCanvas.getContext('2d');
+  if (!ctx) return texto.length * (tamanoPt * 0.62);
+
+  const fontFam = obtenerFontFamily(fuenteId, '"Times New Roman", Times, Georgia, serif');
+  const style = esCursiva ? 'italic ' : '';
+  const weight = esNegrita ? 'bold ' : 'normal ';
+  ctx.font = `${style}${weight}${tamanoPt}px ${fontFam}`;
+  return ctx.measureText(texto).width;
+}
+
+/**
+ * Resuelve el tamaño del QR en puntos (pt) para A4 (1 cm ≈ 28.346 pt)
+ */
+export function resolverTamanoQrPt(cfgQr: PosicionElemento): number {
+  if (cfgQr.tamanoCm && cfgQr.tamanoCm > 0) {
+    return Math.round(cfgQr.tamanoCm * 28.346);
+  }
+  return cfgQr.tamano || 56;
 }
 
 /**
@@ -128,17 +177,99 @@ export function formatearFechaSegunEstilo(
   }
 }
 
+/**
+ * Formatea el nombre del estudiante según el formato deseado en el certificado:
+ * - 'apellidos-nombres': Quispe Ramos, Juan Carlos
+ * - 'nombres-apellidos': Juan Carlos Quispe Ramos
+ * - 'mayusculas': QUISPE RAMOS, JUAN CARLOS
+ */
+export function formatearNombreSegunEstilo(
+  nombre: string,
+  formato: FormatoNombreEstudiante = 'apellidos-nombres'
+): string {
+  if (!nombre) return '';
+  const limpio = nombre.trim();
+  if (formato === 'mayusculas') {
+    return limpio.toUpperCase();
+  }
+  if (formato === 'nombres-apellidos') {
+    if (limpio.includes(',')) {
+      const [apellidos, nombres] = limpio.split(',').map(s => s.trim());
+      return nombres ? `${nombres} ${apellidos}` : limpio;
+    }
+    return limpio;
+  }
+  // 'apellidos-nombres':
+  if (limpio.includes(',')) {
+    return limpio;
+  }
+  const partes = limpio.split(/\s+/);
+  if (partes.length >= 3) {
+    const apellidos = partes.slice(-2).join(' ');
+    const nombres = partes.slice(0, -2).join(' ');
+    return `${apellidos}, ${nombres}`;
+  }
+  return limpio;
+}
+
+/**
+ * Resuelve la redacción de horas y créditos según la configuración del certificado:
+ * - 'horas-y-creditos': Horas y créditos juntos
+ * - 'solo-horas': Únicamente horas
+ * - 'solo-creditos': Únicamente créditos
+ * - 'personalizado': Texto libre
+ */
+export function resolverTextoHorasCreditos(
+  cfgHoras: PosicionElemento,
+  horasOriginales?: string,
+  esDiploma: boolean = false
+): string {
+  if (cfgHoras.modoHorasCreditos === 'personalizado' && cfgHoras.textoHorasPersonalizado) {
+    return cfgHoras.textoHorasPersonalizado.trim();
+  }
+
+  const baseDefecto = esDiploma 
+    ? '325 horas académicas y 13 créditos académicos' 
+    : '108 horas académicas';
+  const rawHoras = (cfgHoras.horasValor || horasOriginales || baseDefecto).trim();
+
+  let contenido = rawHoras;
+  if (cfgHoras.modoHorasCreditos === 'solo-horas') {
+    contenido = cfgHoras.horasValor || rawHoras.split(/\s+y\s+|\s*\(/i)[0].trim();
+  } else if (cfgHoras.modoHorasCreditos === 'solo-creditos') {
+    contenido = cfgHoras.creditosValor || (rawHoras.match(/(\d+\s*cr[ée]ditos[^\,\.]*)/i)?.[1] || '13 créditos académicos');
+  } else if (cfgHoras.modoHorasCreditos === 'horas-y-creditos') {
+    if (cfgHoras.horasValor && cfgHoras.creditosValor) {
+      contenido = `${cfgHoras.horasValor.trim()} y ${cfgHoras.creditosValor.trim()}`;
+    }
+  }
+
+  if (cfgHoras.textoPrefijo !== undefined && cfgHoras.textoPrefijo !== '') {
+    return `${cfgHoras.textoPrefijo}${contenido}`.trim();
+  }
+
+  return esDiploma
+    ? `con un total de ${contenido},`
+    : `desarrollado según la malla curricular establecida con un total de ${contenido}`;
+}
+
 export interface PosicionElemento {
   x: number; // Porcentaje 0 a 100 respecto al ancho A4
   y: number; // Porcentaje 0 a 100 respecto al alto A4
   alineacion: ElementoAlineacion;
-  tamano?: number; // Tamaño en px para QR
+  tamano?: number; // Tamaño en pt para QR
+  tamanoCm?: number; // Tamaño físico en centímetros para QR (1 cm ≈ 28.346 pt)
   tamanoFuente?: number; // Tamaño de fuente en pt/px
   color?: string; // Color hexadecimal o rgb de texto (por defecto #000000)
   visible: boolean;
   fuente?: TipoFuenteCertificado;
   textoPrefijo?: string; // Prefijo personalizable (ej: "Fecha de emisión: ", "CÓD.: ", "Arequipa, ")
   formatoFecha?: FormatoFechaCertificado;
+  formatoNombre?: FormatoNombreEstudiante;
+  modoHorasCreditos?: ModoHorasCreditos;
+  horasValor?: string;
+  creditosValor?: string;
+  textoHorasPersonalizado?: string;
   anchoMaximoCm?: number; // Ancho máximo físico en centímetros A4
   anchoMaximo?: number; // Porcentaje de ancho máximo (compatibilidad)
   interlineado?: number; // Altura de línea / espacio entre filas (multiplicador, ej: 1.25)
@@ -157,21 +288,21 @@ export interface DisenoCoordenadas {
 }
 
 export const DISENO_DEFAULT_HORIZONTAL: DisenoCoordenadas = {
-  estudiante: { x: 50, y: 35, alineacion: 'center', visible: true, fuente: 'serif-institucional', anchoMaximoCm: 25.0, tamanoFuente: 36, color: '#000000', negrita: true, interlineado: 1.25 },
+  estudiante: { x: 50, y: 35, alineacion: 'center', visible: true, fuente: 'serif-institucional', formatoNombre: 'apellidos-nombres', anchoMaximoCm: 25.0, tamanoFuente: 36, color: '#000000', negrita: true, interlineado: 1.25 },
   programa: { x: 50, y: 53.5, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 25.5, tamanoFuente: 22, color: '#000000', negrita: true, interlineado: 1.25 },
-  horas: { x: 50, y: 63, alineacion: 'center', visible: true, fuente: 'sans-formal', tamanoFuente: 12, color: '#000000' },
-  fecha: { x: 86, y: 88, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
-  codigo: { x: 86, y: 94, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', tamanoFuente: 11, color: '#000000', negrita: true },
-  qr: { x: 86, y: 74, alineacion: 'right', tamano: 56, visible: true }
+  horas: { x: 50, y: 63, alineacion: 'center', visible: true, fuente: 'sans-formal', modoHorasCreditos: 'horas-y-creditos', anchoMaximoCm: 25.0, tamanoFuente: 12, color: '#000000' },
+  fecha: { x: 86, y: 88, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', anchoMaximoCm: 10.0, tamanoFuente: 10, color: '#000000' },
+  codigo: { x: 86, y: 94, alineacion: 'right', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', anchoMaximoCm: 10.0, tamanoFuente: 11, color: '#000000', negrita: true },
+  qr: { x: 86, y: 74, alineacion: 'right', tamano: 56, tamanoCm: 2.0, visible: true }
 };
 
 export const DISENO_DEFAULT_VERTICAL: DisenoCoordenadas = {
-  estudiante: { x: 50, y: 38, alineacion: 'center', visible: true, fuente: 'serif-institucional', anchoMaximoCm: 18.5, tamanoFuente: 30, color: '#000000', negrita: true, interlineado: 1.25 },
+  estudiante: { x: 50, y: 38, alineacion: 'center', visible: true, fuente: 'serif-institucional', formatoNombre: 'apellidos-nombres', anchoMaximoCm: 18.5, tamanoFuente: 30, color: '#000000', negrita: true, interlineado: 1.25 },
   programa: { x: 50, y: 52, alineacion: 'center', visible: true, fuente: 'sans-moderna', anchoMaximoCm: 18.5, tamanoFuente: 18, color: '#000000', negrita: true, interlineado: 1.25 },
-  horas: { x: 50, y: 61, alineacion: 'center', visible: true, fuente: 'sans-formal', tamanoFuente: 10, color: '#000000' },
-  fecha: { x: 50, y: 86, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', tamanoFuente: 10, color: '#000000' },
-  codigo: { x: 50, y: 92, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', tamanoFuente: 11, color: '#000000', negrita: true },
-  qr: { x: 50, y: 74, alineacion: 'center', tamano: 56, visible: true }
+  horas: { x: 50, y: 61, alineacion: 'center', visible: true, fuente: 'sans-formal', modoHorasCreditos: 'horas-y-creditos', anchoMaximoCm: 18.5, tamanoFuente: 10, color: '#000000' },
+  fecha: { x: 50, y: 86, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'Fecha de emisión: ', formatoFecha: 'larga', anchoMaximoCm: 15.0, tamanoFuente: 10, color: '#000000' },
+  codigo: { x: 50, y: 92, alineacion: 'center', visible: true, fuente: 'sans-formal', textoPrefijo: 'CÓD.: ', anchoMaximoCm: 15.0, tamanoFuente: 11, color: '#000000', negrita: true },
+  qr: { x: 50, y: 74, alineacion: 'center', tamano: 56, tamanoCm: 2.0, visible: true }
 };
 
 export interface AvanzaCertificateProps {
@@ -220,13 +351,6 @@ export default function AvanzaCertificateRenderer({
   // Dimensiones físicas A4 exactas en centímetros
   const anchoA4Cm = esVertical ? 21.0 : 29.7;
   const altoA4Cm = esVertical ? 29.7 : 21.0;
-
-  const horasDefecto = esDiploma 
-    ? '325 horas académicas y 13 créditos académicos' 
-    : '108 horas académicas';
-  const horasFinal = horas || horasDefecto;
-
-  const nombreEstudiante = (estudiante || 'Quispe Ramos, Juan Carlos').trim();
 
   let bgImg: string | null = null;
   if (imagenFondoUrl !== undefined) {
@@ -289,35 +413,59 @@ export default function AvanzaCertificateRenderer({
     return fallbackPct;
   };
 
+  // Formateo del nombre según preferencia (Apellidos, Nombres | Nombres y Apellidos | Mayúsculas)
+  const nombreRaw = (estudiante || 'Quispe Ramos, Juan Carlos').trim();
+  const nombreEstudiante = formatearNombreSegunEstilo(nombreRaw, cfg.estudiante.formatoNombre);
+
+  // Redacción de horas y créditos según modalidad (horas y créditos, solo horas, solo créditos, libre)
+  const textoHorasCompleto = resolverTextoHorasCreditos(cfg.horas, horas, esDiploma);
+
   const anchoEstudiantePct = resolverAnchoPct(cfg.estudiante.anchoMaximoCm, cfg.estudiante.anchoMaximo || 84);
   const anchoProgramaPct = resolverAnchoPct(cfg.programa.anchoMaximoCm, cfg.programa.anchoMaximo || 86);
+  const anchoHorasPct = resolverAnchoPct(cfg.horas.anchoMaximoCm, cfg.horas.anchoMaximo || (esVertical ? 85 : 84));
+  const anchoFechaPct = resolverAnchoPct(cfg.fecha.anchoMaximoCm, cfg.fecha.anchoMaximo || (esVertical ? 60 : 35));
+  const anchoCodigoPct = resolverAnchoPct(cfg.codigo.anchoMaximoCm, cfg.codigo.anchoMaximo || (esVertical ? 60 : 35));
 
   // 1. AJUSTE EXCLUSIVO DE TAMAÑO PARA NOMBRE (Sin letter-spacing):
   // Se evalúa si el nombre sobrepasa el ancho físico máximo en cm (anchoEstudianteCm).
   // Solo cuando supera este límite físico se reduce proporcionalmente el font size en pt.
-  const lenEstudiante = nombreEstudiante.length;
   const tamanoBaseEstPt = cfg.estudiante.tamanoFuente || (esVertical ? 28 : 36);
   const anchoEstudianteCm = cfg.estudiante.anchoMaximoCm || (esVertical ? 18.5 : 25.0);
-  // Ancho estimado por carácter (~0.46 em para nombres como "Quispe Ramos, Juan Carlos", 1 pt = 0.03528 cm)
-  const anchoEstimadoEstCm = lenEstudiante * (tamanoBaseEstPt * 0.03528 * 0.46);
+  const anchoA4Pt = esVertical ? A4_ANCHO_PT_VERTICAL : A4_ANCHO_PT_HORIZONTAL;
+  const maxEstudiantePt = (anchoEstudianteCm / anchoA4Cm) * anchoA4Pt;
+
+  // Medición matemática real con canvas idéntica al generador de PDF
+  const anchoMedidoEstPt = medirAnchoTextoPt(
+    nombreEstudiante,
+    tamanoBaseEstPt,
+    cfg.estudiante.fuente,
+    cfg.estudiante.negrita !== false,
+    !!cfg.estudiante.cursiva
+  );
 
   let tamanoEstudiantePt = tamanoBaseEstPt;
-  if (anchoEstimadoEstCm > anchoEstudianteCm) {
-    const factorEst = anchoEstudianteCm / anchoEstimadoEstCm;
-    tamanoEstudiantePt = Math.max(14, Number((tamanoBaseEstPt * factorEst).toFixed(1)));
+  if (anchoMedidoEstPt > maxEstudiantePt && maxEstudiantePt > 0) {
+    const factorEst = maxEstudiantePt / anchoMedidoEstPt;
+    tamanoEstudiantePt = Math.max(12, Number((tamanoBaseEstPt * factorEst).toFixed(1)));
   }
 
   // 2. AJUSTE EXACTO DE LÍNEAS Y TAMAÑO PARA PROGRAMA (Idéntico a PDF, sin elipsis ni truncamiento)
-  const textoProgFinal = esDiploma ? tituloProgramaLimpio : tituloModuloLimpio;
+  const esModular = String(tipo).toUpperCase() === 'MODULAR' && Boolean(modulo);
+  const textoProgFinal = esModular ? tituloModuloLimpio : tituloProgramaLimpio;
   const palabrasProg = textoProgFinal.split(' ');
   const tamanoBaseProgPt = cfg.programa.tamanoFuente || (esVertical ? 18 : 22);
   const anchoProgCm = cfg.programa.anchoMaximoCm || (esVertical ? 18.5 : 25.5);
-  // Ancho estimado por carácter en cm (~0.0215 cm para Montserrat mayúsculas a 1pt)
-  const factorCharCm = 0.03528 * 0.58;
+  const maxProgPt = (anchoProgCm / anchoA4Cm) * anchoA4Pt;
 
-  // Ancho estimado si estuviera en 1 sola línea
-  const anchoProg1LineaCm = textoProgFinal.length * (tamanoBaseProgPt * factorCharCm);
-  const cabeProgramaEn1Linea = anchoProg1LineaCm <= anchoProgCm;
+  // Medir ancho real de 1 línea con la fuente elegida
+  const anchoProg1LineaPt = medirAnchoTextoPt(
+    textoProgFinal,
+    tamanoBaseProgPt,
+    cfg.programa.fuente,
+    cfg.programa.negrita !== false,
+    !!cfg.programa.cursiva
+  );
+  const cabeProgramaEn1Linea = anchoProg1LineaPt <= maxProgPt;
 
   let lineaProg1 = textoProgFinal;
   let lineaProg2 = '';
@@ -341,20 +489,20 @@ export default function AvanzaCertificateRenderer({
     lineaProg1 = palabrasProg.slice(0, mejorCorte).join(' ');
     lineaProg2 = palabrasProg.slice(mejorCorte).join(' ');
 
-    // Determinar la línea más larga de las dos
-    const maxLineChars = Math.max(lineaProg1.length, lineaProg2.length);
-    const anchoMaxLineaCm = maxLineChars * (tamanoBaseProgPt * factorCharCm);
+    const anchoL1 = medirAnchoTextoPt(lineaProg1, tamanoBaseProgPt, cfg.programa.fuente, cfg.programa.negrita !== false, !!cfg.programa.cursiva);
+    const anchoL2 = medirAnchoTextoPt(lineaProg2, tamanoBaseProgPt, cfg.programa.fuente, cfg.programa.negrita !== false, !!cfg.programa.cursiva);
+    const anchoMaxLineaPt = Math.max(anchoL1, anchoL2);
 
     // Si la línea más larga excede el ancho físico máximo en cm, reducimos font size automáticamente
-    if (anchoMaxLineaCm > anchoProgCm) {
-      const escala = anchoProgCm / anchoMaxLineaCm;
-      tamanoProgPt = Math.max(11, Number((tamanoBaseProgPt * escala).toFixed(1)));
+    if (anchoMaxLineaPt > maxProgPt && maxProgPt > 0) {
+      const escala = maxProgPt / anchoMaxLineaPt;
+      tamanoProgPt = Math.max(10, Number((tamanoBaseProgPt * escala).toFixed(1)));
     }
   } else if (!cabeProgramaEn1Linea) {
     // Palabra única muy larga
-    if (anchoProg1LineaCm > anchoProgCm) {
-      const escala = anchoProgCm / anchoProg1LineaCm;
-      tamanoProgPt = Math.max(11, Number((tamanoBaseProgPt * escala).toFixed(1)));
+    if (anchoProg1LineaPt > maxProgPt && maxProgPt > 0) {
+      const escala = maxProgPt / anchoProg1LineaPt;
+      tamanoProgPt = Math.max(10, Number((tamanoBaseProgPt * escala).toFixed(1)));
     }
   }
 
@@ -370,11 +518,9 @@ export default function AvanzaCertificateRenderer({
   // Relaciones de aspecto A4 exactas:
   const a4AspectClass = esVertical ? 'aspect-[210/297]' : 'aspect-[297/210]';
 
-  const getTransform = (alineacion: ElementoAlineacion) => {
-    if (alineacion === 'center') return 'translate(-50%, -50%)';
-    if (alineacion === 'right') return 'translate(-100%, -50%)';
-    return 'translate(0, -50%)';
-  };
+  // El contenedor permanece fijado exactamente en (x, y).
+  // La alineación ('left' | 'center' | 'right') únicamente alinea el texto DENTRO de la caja sin mover el contenedor.
+  const getTransform = () => 'translate(-50%, -50%)';
 
   // Manejador interactivo de Drag & Drop para ubicar elementos directamente en el canvas A4
   // REGLA SOLICITADA: Solo permite arrastrar la variable ACTIVA.
@@ -441,10 +587,10 @@ export default function AvanzaCertificateRenderer({
       {!bgImg && (
         <div className="absolute inset-0 flex flex-col items-center justify-between p-6 pointer-events-none bg-radial from-slate-50 via-white to-slate-100/60 border-2 border-dashed border-slate-300 rounded-xl m-2">
           <div className="flex items-center justify-between w-full opacity-40">
-            <span className="text-[9px] font-mono font-bold tracking-widest text-slate-500 uppercase">
+            <span className="text-[9px] tabular-nums font-bold tracking-widest text-slate-500 uppercase">
               Lienzo A4 {esVertical ? 'Vertical (21.0×29.7 cm)' : 'Horizontal (29.7×21.0 cm)'}
             </span>
-            <span className="text-[9px] font-mono text-slate-400">Sin plantilla de fondo</span>
+            <span className="text-[9px] tabular-nums text-slate-400">Sin plantilla de fondo</span>
           </div>
 
           <div className="text-center opacity-30 my-auto">
@@ -454,7 +600,7 @@ export default function AvanzaCertificateRenderer({
           </div>
 
           <div className="w-full flex justify-end opacity-30">
-            <span className="text-[8px] font-mono">EDUMIN • Modelo Base</span>
+            <span className="text-[8px] tabular-nums">EDUMIN • Modelo Base</span>
           </div>
         </div>
       )}
@@ -471,11 +617,11 @@ export default function AvanzaCertificateRenderer({
           className={`absolute z-10 transition-all duration-150 flex items-center ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-none'
           } ${
-            cfg.estudiante.alineacion === 'center' ? 'justify-center' :
-            cfg.estudiante.alineacion === 'right' ? 'justify-end' : 'justify-start'
+            cfg.estudiante.alineacion === 'center' ? 'justify-center text-center' :
+            cfg.estudiante.alineacion === 'right' ? 'justify-end text-right' : 'justify-start text-left'
           } ${
             elementoActivo === 'estudiante' 
-              ? 'outline outline-2 outline-dashed outline-indigo-500 outline-offset-4 rounded-md bg-indigo-500/[0.04]' 
+              ? 'outline outline-2 outline-indigo-500 outline-offset-4 rounded-md bg-indigo-500/[0.04]' 
               : ''
           }`}
           style={{
@@ -483,12 +629,12 @@ export default function AvanzaCertificateRenderer({
             top: `${cfg.estudiante.y}%`,
             width: `${anchoEstudiantePct}%`,
             maxWidth: `${anchoEstudiantePct}%`,
-            transform: getTransform(cfg.estudiante.alineacion),
+            transform: getTransform(),
             textAlign: cfg.estudiante.alineacion
           }}
         >
           <h2 
-            className="leading-none whitespace-nowrap"
+            className="leading-none whitespace-nowrap w-full"
             style={{
               fontFamily: obtenerFontFamily(cfg.estudiante.fuente, '"Times New Roman", Times, Georgia, serif'),
               fontSize: calcularTamanoCqw(tamanoEstudiantePt, orientacion),
@@ -496,7 +642,7 @@ export default function AvanzaCertificateRenderer({
               fontWeight: cfg.estudiante.negrita !== false ? 'bold' : 'normal',
               fontStyle: cfg.estudiante.cursiva ? 'italic' : 'normal',
               textDecoration: cfg.estudiante.subrayado ? 'underline' : 'none',
-              transformOrigin: cfg.estudiante.alineacion === 'center' ? 'center' : cfg.estudiante.alineacion === 'right' ? 'right' : 'left'
+              textAlign: cfg.estudiante.alineacion
             }}
           >
             {nombreEstudiante}
@@ -520,7 +666,7 @@ export default function AvanzaCertificateRenderer({
             cfg.programa.alineacion === 'right' ? 'items-end text-right' : 'items-start text-left'
           } ${
             elementoActivo === 'programa' 
-              ? 'outline outline-2 outline-dashed outline-indigo-500 outline-offset-4 rounded-md bg-indigo-500/[0.04]' 
+              ? 'outline outline-2 outline-indigo-500 outline-offset-4 rounded-md bg-indigo-500/[0.04]' 
               : ''
           }`}
           style={{
@@ -528,11 +674,11 @@ export default function AvanzaCertificateRenderer({
             top: `${cfg.programa.y}%`,
             width: `${anchoProgramaPct}%`,
             maxWidth: `${anchoProgramaPct}%`,
-            transform: getTransform(cfg.programa.alineacion)
+            transform: getTransform()
           }}
         >
           <h3 
-            className="uppercase tracking-wide font-black w-full"
+            className="uppercase font-black w-full"
             style={{
               fontFamily: obtenerFontFamily(cfg.programa.fuente, '"Montserrat", "Segoe UI", Arial, sans-serif'),
               fontSize: calcularTamanoCqw(tamanoProgPt, orientacion),
@@ -565,17 +711,22 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('horas');
           }}
-          className={`absolute z-10 max-w-[90%] transition-all duration-150 ${
+          className={`absolute z-10 transition-all duration-150 flex items-center ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-none'
           } ${
+            cfg.horas.alineacion === 'center' ? 'justify-center text-center' :
+            cfg.horas.alineacion === 'right' ? 'justify-end text-right' : 'justify-start text-left'
+          } ${
             elementoActivo === 'horas' 
-              ? 'outline outline-2 outline-dashed outline-indigo-500 outline-offset-4 rounded-md bg-indigo-500/[0.04]' 
+              ? 'outline outline-2 outline-indigo-500 outline-offset-4 rounded-md bg-indigo-500/[0.04]' 
               : ''
           }`}
           style={{
             left: `${cfg.horas.x}%`,
             top: `${cfg.horas.y}%`,
-            transform: getTransform(cfg.horas.alineacion),
+            width: `${anchoHorasPct}%`,
+            maxWidth: `${anchoHorasPct}%`,
+            transform: getTransform(),
             textAlign: cfg.horas.alineacion,
             fontFamily: obtenerFontFamily(cfg.horas.fuente, '"Segoe UI", Arial, sans-serif'),
             color: cfg.horas.color || '#000000',
@@ -584,21 +735,16 @@ export default function AvanzaCertificateRenderer({
             textDecoration: cfg.horas.subrayado ? 'underline' : 'none'
           }}
         >
-          {esDiploma ? (
-            <p 
-              className="whitespace-nowrap"
-              style={{ fontSize: calcularTamanoCqw(cfg.horas.tamanoFuente || 12, orientacion) }}
-            >
-              con un total de <strong className="font-bold">{horasFinal}</strong>,
-            </p>
-          ) : (
-            <p 
-              className="whitespace-nowrap"
-              style={{ fontSize: calcularTamanoCqw(cfg.horas.tamanoFuente || 11, orientacion) }}
-            >
-              desarrollado según la malla curricular establecida con un total de <strong className="font-bold">{horasFinal}</strong>
-            </p>
-          )}
+          <p 
+            className="whitespace-nowrap w-full"
+            style={{ 
+              fontFamily: obtenerFontFamily(cfg.horas.fuente, '"Segoe UI", Arial, sans-serif'),
+              fontSize: calcularTamanoCqw(cfg.horas.tamanoFuente || (esDiploma ? 12 : 11), orientacion),
+              textAlign: cfg.horas.alineacion 
+            }}
+          >
+            {textoHorasCompleto}
+          </p>
         </div>
       )}
 
@@ -611,17 +757,17 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('qr');
           }}
-          className={`absolute z-20 flex flex-col items-center justify-center bg-white p-1 rounded-lg shadow-sm border border-slate-200 aspect-square transition-all duration-150 ${
+          className={`absolute z-20 flex flex-col items-center justify-center bg-white p-1 rounded-lg border border-slate-200 aspect-square transition-all duration-150 ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-auto'
           } ${
-            elementoActivo === 'qr' ? 'outline outline-2 outline-dashed outline-indigo-500 outline-offset-4 rounded-lg' : ''
+            elementoActivo === 'qr' ? 'outline outline-2 outline-indigo-500 outline-offset-4 rounded-lg bg-indigo-500/[0.04]' : ''
           }`}
           style={{
             left: `${cfg.qr.x}%`,
             top: `${cfg.qr.y}%`,
-            transform: getTransform(cfg.qr.alineacion),
-            width: calcularTamanoCqw(cfg.qr.tamano || 56, orientacion),
-            height: calcularTamanoCqw(cfg.qr.tamano || 56, orientacion),
+            transform: getTransform(),
+            width: calcularTamanoCqw(resolverTamanoQrPt(cfg.qr), orientacion),
+            height: calcularTamanoCqw(resolverTamanoQrPt(cfg.qr), orientacion),
             aspectRatio: '1 / 1'
           }}
         >
@@ -648,29 +794,36 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('fecha');
           }}
-          className={`absolute z-20 transition-all duration-150 ${
+          className={`absolute z-20 transition-all duration-150 flex items-center ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-none'
           } ${
+            cfg.fecha.alineacion === 'center' ? 'justify-center text-center' :
+            cfg.fecha.alineacion === 'right' ? 'justify-end text-right' : 'justify-start text-left'
+          } ${
             elementoActivo === 'fecha' 
-              ? 'outline outline-2 outline-dashed outline-indigo-500 outline-offset-4 rounded-md bg-indigo-500/[0.04]' 
+              ? 'outline outline-2 outline-indigo-500 outline-offset-4 rounded-md bg-indigo-500/[0.04]' 
               : ''
           }`}
           style={{
             left: `${cfg.fecha.x}%`,
             top: `${cfg.fecha.y}%`,
-            transform: getTransform(cfg.fecha.alineacion),
+            width: `${anchoFechaPct}%`,
+            maxWidth: `${anchoFechaPct}%`,
+            transform: getTransform(),
             textAlign: cfg.fecha.alineacion,
             fontFamily: obtenerFontFamily(cfg.fecha.fuente, '"Segoe UI", Arial, sans-serif')
           }}
         >
           <p 
-            className="whitespace-nowrap"
+            className="whitespace-nowrap w-full"
             style={{ 
+              fontFamily: obtenerFontFamily(cfg.fecha.fuente, '"Segoe UI", Arial, sans-serif'),
               fontSize: calcularTamanoCqw(cfg.fecha.tamanoFuente || 10, orientacion),
               color: cfg.fecha.color || '#000000',
               fontWeight: cfg.fecha.negrita ? 'bold' : 'normal',
               fontStyle: cfg.fecha.cursiva ? 'italic' : 'normal',
-              textDecoration: cfg.fecha.subrayado ? 'underline' : 'none'
+              textDecoration: cfg.fecha.subrayado ? 'underline' : 'none',
+              textAlign: cfg.fecha.alineacion
             }}
           >
             {textoFechaCompleto}
@@ -687,29 +840,35 @@ export default function AvanzaCertificateRenderer({
             e.stopPropagation();
             if (onSeleccionarElemento) onSeleccionarElemento('codigo');
           }}
-          className={`absolute z-20 transition-all duration-150 ${
+          className={`absolute z-20 transition-all duration-150 flex items-center ${
             modoArrastrable ? 'cursor-grab active:cursor-grabbing pointer-events-auto' : 'pointer-events-none'
           } ${
+            cfg.codigo.alineacion === 'center' ? 'justify-center text-center' :
+            cfg.codigo.alineacion === 'right' ? 'justify-end text-right' : 'justify-start text-left'
+          } ${
             elementoActivo === 'codigo' 
-              ? 'outline outline-2 outline-dashed outline-indigo-500 outline-offset-4 rounded-md bg-indigo-500/[0.04]' 
+              ? 'outline outline-2 outline-indigo-500 outline-offset-4 rounded-md bg-indigo-500/[0.04]' 
               : ''
           }`}
           style={{
             left: `${cfg.codigo.x}%`,
             top: `${cfg.codigo.y}%`,
-            transform: getTransform(cfg.codigo.alineacion),
+            width: `${anchoCodigoPct}%`,
+            maxWidth: `${anchoCodigoPct}%`,
+            transform: getTransform(),
             textAlign: cfg.codigo.alineacion
           }}
         >
           <span 
-            className="tracking-wider whitespace-nowrap"
+            className="whitespace-nowrap w-full block"
             style={{
               fontSize: calcularTamanoCqw(cfg.codigo.tamanoFuente || 11, orientacion),
               color: cfg.codigo.color || '#000000',
               fontFamily: obtenerFontFamily(cfg.codigo.fuente, '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'),
               fontWeight: cfg.codigo.negrita !== false ? 'bold' : 'normal',
               fontStyle: cfg.codigo.cursiva ? 'italic' : 'normal',
-              textDecoration: cfg.codigo.subrayado ? 'underline' : 'none'
+              textDecoration: cfg.codigo.subrayado ? 'underline' : 'none',
+              textAlign: cfg.codigo.alineacion
             }}
           >
             {textoCodigoCompleto}

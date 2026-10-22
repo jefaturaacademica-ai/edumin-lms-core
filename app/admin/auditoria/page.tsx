@@ -131,7 +131,7 @@ export default function AuditoriaWebhooksPage() {
               </div>
             )}
 
-            <div className="bg-slate-900 p-4 rounded-2xl border border-slate-800 text-xs font-mono text-emerald-400 flex justify-between items-center overflow-x-auto">
+            <div className="bg-slate-900 p-4 rounded-2xl border border-slate-800 text-xs tabular-nums text-emerald-400 flex justify-between items-center overflow-x-auto">
               <div className="flex items-center gap-2">
                 <Terminal className="w-4 h-4 text-slate-400 shrink-0" />
                 <span>POST https://n8n.gcg-corp.com/webhook/edumin-plataforma</span>
@@ -186,7 +186,7 @@ export default function AuditoriaWebhooksPage() {
                   {logsFiltrados.length > 0 ? (
                     logsFiltrados.map((log, idx) => (
                       <tr key={log.id || idx} className="hover:bg-slate-50 transition-colors">
-                        <td className="py-4 px-4 font-mono text-slate-500 text-[11px] whitespace-nowrap">
+                        <td className="py-4 px-4 tabular-nums text-slate-500 text-[11px] whitespace-nowrap">
                           <span className="flex items-center gap-1.5">
                             <Clock className="w-3.5 h-3.5 text-slate-400" />
                             {new Date(log.created_at).toLocaleString('es-PE')}
@@ -195,13 +195,13 @@ export default function AuditoriaWebhooksPage() {
                         <td className="py-4 px-4 font-bold text-slate-800">
                           {log.usuario_email || 'Sistema Webhook'}
                         </td>
-                        <td className="py-4 px-4 font-mono font-bold text-indigo-700">
+                        <td className="py-4 px-4 tabular-nums font-bold text-indigo-700">
                           <span className="bg-indigo-50 px-2.5 py-1 rounded-lg">
                             {log.accion}
                           </span>
                         </td>
                         <td className="py-4 px-4">
-                          <pre className="bg-slate-50 p-2 rounded-xl text-[10px] font-mono text-slate-600 border border-slate-200 max-w-md overflow-x-auto">
+                          <pre className="bg-slate-50 p-2 rounded-xl text-[10px] tabular-nums text-slate-600 border border-slate-200 max-w-md overflow-x-auto">
                             {JSON.stringify(log.detalles, null, 2)}
                           </pre>
                         </td>

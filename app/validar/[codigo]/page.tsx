@@ -124,7 +124,7 @@ export default function ValidarCertificadoPage() {
                 Certificado no encontrado
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                El código <strong className="font-mono bg-slate-100 text-slate-900 px-2 py-0.5 rounded border border-slate-200">{codigo}</strong> no es válido o no coincide con ningún registro emitido.
+                El código <strong className="tabular-nums bg-slate-100 text-slate-900 px-2 py-0.5 rounded border border-slate-200">{codigo}</strong> no es válido o no coincide con ningún registro emitido.
               </p>
             </div>
 
@@ -135,7 +135,7 @@ export default function ValidarCertificadoPage() {
                 value={nuevoCodigo}
                 onChange={(e) => setNuevoCodigo(e.target.value.toUpperCase())}
                 placeholder="Código del certificado"
-                className="flex-1 bg-slate-50 border border-slate-300 focus:bg-white focus:border-indigo-600 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-mono text-slate-900 outline-none uppercase"
+                className="flex-1 bg-slate-50 border border-slate-300 focus:bg-white focus:border-indigo-600 px-3.5 py-2.5 rounded-xl text-xs sm:text-sm tabular-nums text-slate-900 outline-none uppercase"
               />
               <button
                 type="submit"
@@ -172,7 +172,7 @@ export default function ValidarCertificadoPage() {
                   <h2 className="text-base sm:text-lg font-bold text-slate-900">
                     Certificado auténtico y registrado en EDUMIN
                   </h2>
-                  <p className="text-xs text-slate-600 font-mono">
+                  <p className="text-xs text-slate-600 tabular-nums">
                     Código de registro: <strong className="text-slate-900">{certificado.codigo}</strong>
                   </p>
                 </div>
@@ -204,7 +204,7 @@ export default function ValidarCertificadoPage() {
                     <span>Estudiante acreditado</span>
                   </div>
                   <p className="text-sm font-bold text-slate-900">{certificado.estudiante}</p>
-                  <p className="text-xs font-mono text-slate-500">DNI / CE: {certificado.dni}</p>
+                  <p className="text-xs tabular-nums text-slate-500">DNI / CE: {certificado.dni}</p>
                 </div>
 
                 {/* Programa / Diplomado */}

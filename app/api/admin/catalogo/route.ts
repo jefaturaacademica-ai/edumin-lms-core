@@ -140,17 +140,11 @@ function getLocalCatalogoData() {
   });
 
   // 2. 76 Cursos de Alta Especialización
-  const docentesMock = [
-    "Ing. Mario Hilasaca", "Dr. Reginaldo Andía", "Mg. Andrea Tejada",
-    "Ing. Juan Briones", "Ing. Raul Jacinto", "Lic. Javier Rivera",
-    "Ing. Manuel Aucapuri", "Mg. Esteban Hermoza"
-  ];
-
   cursosData.forEach((c: any, index: number) => {
     const numStr = (index + 1).toString().padStart(2, '0');
     const id = `cur-${numStr}`;
     const codigo = `CUR-${numStr}`;
-    const docenteAsignado = docentesMock[index % docentesMock.length];
+    const docenteAsignado = c.docente || '';
 
     cursosFormateados.push({
       id,
@@ -178,12 +172,12 @@ function getLocalCatalogoData() {
       codigo: 'TAL-01',
       version: 'Versión 1',
       ano: 2026,
-      titulo: 'TALLER DE SOFTSKILLS EN LA INDUSTRIA Y MINERÍA',
+      titulo: 'TALLER DE SOFT SKILLS EN LA INDUSTRIA Y MINERÍA',
       tipo: 'taller',
       categoria: 'Talleres',
       num_modulos: 1,
       taller_aplicable: 'Ninguno',
-      docente: 'Mg. María Jesús Burga',
+      docente: '',
       duracion: '20 horas',
       imagen: '/assets/images/daem/gestion-minera.webp',
       nivel: 'Práctico',
@@ -200,7 +194,7 @@ function getLocalCatalogoData() {
       categoria: 'Talleres',
       num_modulos: 1,
       taller_aplicable: 'Ninguno',
-      docente: 'Dr. Alberto Mendoza',
+      docente: '',
       duracion: '20 horas',
       imagen: '/assets/images/daem/gestion-minera.webp',
       nivel: 'Práctico',
@@ -442,7 +436,7 @@ export async function GET() {
         categoria: c.categoria || localItem?.categoria || (tipo === 'taller' ? 'Talleres' : 'Cursos de Alta Especialización'),
         num_modulos: c.num_modulos || localItem?.num_modulos || 1,
         taller_aplicable: c.taller_aplicable || localItem?.taller_aplicable || 'Ninguno',
-        docente: c.docente || localItem?.docente || 'Por asignar',
+        docente: c.docente || localItem?.docente || '',
         duracion: c.duracion || (tipo === 'taller' ? '20 horas' : '40 horas'),
         imagen: c.imagen || '/assets/images/daem/gestion-minera.webp',
         nivel: c.nivel || (tipo === 'taller' ? 'Práctico' : 'Especialización'),
@@ -531,7 +525,7 @@ export async function POST(request: Request) {
           categoria: c.categoria || localItem?.categoria,
           num_modulos: c.num_modulos || localItem?.num_modulos || 3,
           taller_aplicable: c.taller_aplicable || localItem?.taller_aplicable || 'Ninguno',
-          docente: c.docente || localItem?.docente || 'Por asignar',
+          docente: c.docente || localItem?.docente || '',
           duracion: c.duracion || '40 horas',
           precio: c.precio || 150.00,
           modulos: (c.modulos && Array.isArray(c.modulos) && c.modulos.length > 0) ? c.modulos : (localItem?.modulos || [])
@@ -574,7 +568,7 @@ export async function POST(request: Request) {
       categoria: categoria || (tipoNormalizado === 'diplomado' ? 'Diplomados Oficiales' : tipoNormalizado === 'taller' ? 'Talleres' : 'Cursos de Alta Especialización'),
       num_modulos: Number(num_modulos) || (modulos ? modulos.length : 3),
       taller_aplicable: taller_aplicable || 'Ninguno',
-      docente: docente || 'Reginaldo Andía',
+      docente: docente || '',
       duracion: tipoNormalizado === 'diplomado' ? '120 horas' : '40 horas',
       imagen: '/assets/images/daem/gestion-minera.webp',
       nivel: 'Especialización',

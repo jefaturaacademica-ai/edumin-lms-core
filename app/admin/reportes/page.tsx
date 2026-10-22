@@ -153,7 +153,7 @@ export default function ReportesPage() {
                   <DollarSign className="size-5" />
                 </div>
               </div>
-              <h3 className="text-3xl font-black text-slate-900 mt-3">S/ {kpis.totalRecaudado.toFixed(2)}</h3>
+              <h3 className="text-3xl font-black tabular-nums text-slate-900 mt-3">S/ {kpis.totalRecaudado.toFixed(2)}</h3>
               <p className="text-[10px] text-emerald-600 font-bold mt-1 flex items-center gap-1">
                 <TrendingUp className="size-3" /> Total cuotas validadas en BD
               </p>

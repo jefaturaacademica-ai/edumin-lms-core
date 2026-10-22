@@ -881,7 +881,7 @@ export default function CertificadosPage() {
                       {/* Header: Escuela + Instituto (izq) e Insignia EM (der) */}
                       <div className="flex justify-between items-center border-b border-black/10 pb-3 mb-4">
                         <div className="text-left">
-                          <span className="text-[9px] font-mono font-bold tracking-widest block opacity-70 text-slate-600">
+                          <span className="text-[9px] tabular-nums font-bold tracking-widest block opacity-70 text-slate-600">
                             {estilo.escuelaHeader}
                           </span>
                           <h4 className="text-xs font-black text-slate-900">
@@ -904,7 +904,7 @@ export default function CertificadosPage() {
                       <h3 className="text-xl sm:text-2xl font-extrabold font-serif text-slate-900 my-2 underline decoration-amber-500 underline-offset-4">
                         {nombreEstudianteCompleto || 'JUAN CARLOS QUISPE RAMOS'}
                       </h3>
-                      <p className="text-[10px] opacity-60 font-mono text-slate-600">
+                      <p className="text-[10px] opacity-60 tabular-nums text-slate-600">
                         DNI / CE: {perfilEstudiante?.dni || '71234567'}
                       </p>
 
@@ -935,7 +935,7 @@ export default function CertificadosPage() {
 
                       {/* Footer del Certificado con Fechas, Firmas y Código QR */}
                       <div className="mt-6 pt-4 border-t border-black/10 flex justify-between items-end text-[9px] opacity-80 text-slate-700">
-                        <div className="text-left font-mono">
+                        <div className="text-left tabular-nums">
                           <p>Fecha de emisión: {modalVistaPrevia.fecha || '2026-10-06'}</p>
                           <p className="font-bold mt-0.5 text-indigo-900">Código: {modalVistaPrevia.codigo}</p>
                         </div>
@@ -952,7 +952,7 @@ export default function CertificadosPage() {
 
                         <div className="flex flex-col items-center p-1 bg-white text-slate-900 rounded-lg border border-slate-200 shadow-sm shrink-0">
                           <QrCode className="w-7 h-7 text-slate-900" />
-                          <span className="text-[7px] font-mono mt-0.5 font-bold">VÁLIDO</span>
+                          <span className="text-[7px] tabular-nums mt-0.5 font-bold">VÁLIDO</span>
                         </div>
                       </div>
                     </div>

@@ -17,6 +17,7 @@ export interface LeccionRow {
   ResumenAudioUrl?: string | null;
   ResumenInteractivo?: string | null;
   ResumenMapaMental?: string | null;
+  ResumenTexto?: string | null;
   Material1?: string | null;
   Material2?: string | null;
   Material3?: string | null;
@@ -61,6 +62,7 @@ export function normalizeLeccionRow(r: any): LeccionRow {
     ResumenAudioUrl: (r.ResumenAudioUrl ?? r.resumenAudioUrl ?? r.audioResumenUrl ?? r.resumenaudiourl ?? r.resumen_audio_url ?? '').trim() || null,
     ResumenInteractivo: (r.ResumenInteractivo ?? r.resumenInteractivo ?? r.resumeninteractivo ?? r.resumen_interactivo ?? '').trim() || null,
     ResumenMapaMental: (r.ResumenMapaMental ?? r.resumenMapaMental ?? r.resumenmapamental ?? r.resumen_mapa_mental ?? r.mapaMentalUrl ?? r.mapamental ?? '').trim() || null,
+    ResumenTexto: (r.ResumenTexto ?? r.resumenTexto ?? r.resumentexto ?? r.resumen_texto ?? '').trim() || null,
     Material1: (r.Material1 ?? r.material1 ?? r.excelUrl ?? r.excel_url ?? '').trim() || null,
     Material2: (r.Material2 ?? r.material2 ?? '').trim() || null,
     Material3: (r.Material3 ?? r.material3 ?? '').trim() || null,
@@ -333,6 +335,7 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
 
     if (r.Tema.includes('CLASE ADICIONAL') || r.Tema.includes('ADICIONAL')) {
       modObj.clasesAdicionales.push({
+        id: r.id,
         titulo: r.Sesion,
         videoUrl: r.VideoUrl,
         pdfUrl: r.PdfUrl,
@@ -340,6 +343,7 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
         resumenAudioUrl: r.ResumenAudioUrl,
         resumenInteractivo: r.ResumenInteractivo,
         resumenMapaMental: r.ResumenMapaMental,
+        resumenTexto: r.ResumenTexto,
         material1: r.Material1,
         material2: r.Material2,
         material3: r.Material3,
@@ -354,6 +358,7 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
         modObj.temasMap.set(r.Tema, []);
       }
       modObj.temasMap.get(r.Tema)!.push({
+        id: r.id,
         titulo: r.Sesion,
         videoUrl: r.VideoUrl,
         pdfUrl: r.PdfUrl,
@@ -361,6 +366,7 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
         resumenAudioUrl: r.ResumenAudioUrl,
         resumenInteractivo: r.ResumenInteractivo,
         resumenMapaMental: r.ResumenMapaMental,
+        resumenTexto: r.ResumenTexto,
         material1: r.Material1,
         material2: r.Material2,
         material3: r.Material3,

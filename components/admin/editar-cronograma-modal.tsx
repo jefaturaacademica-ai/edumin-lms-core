@@ -56,7 +56,7 @@ export default function EditarCronogramaModal({
 
         <div className="bg-slate-50 dark:bg-slate-800/50 p-3.5 rounded-2xl border border-slate-200 dark:border-slate-700 text-xs space-y-1 font-medium">
           <div><span className="text-slate-500 dark:text-slate-400">Alumno:</span> <strong className="text-slate-900 dark:text-white">{alumnoSeleccionado.nombres} {alumnoSeleccionado.apellidos}</strong></div>
-          <div><span className="text-slate-500 dark:text-slate-400">DNI:</span> <strong className="font-mono text-indigo-600 dark:text-indigo-400">{alumnoSeleccionado.dni_ce}</strong></div>
+          <div><span className="text-slate-500 dark:text-slate-400">DNI:</span> <strong className="tabular-nums text-indigo-600 dark:text-indigo-400">{alumnoSeleccionado.dni_ce}</strong></div>
           <div><span className="text-slate-500 dark:text-slate-400">Programa:</span> <strong className="text-slate-800 dark:text-slate-200">{alumnoSeleccionado.diplomado_actual}</strong></div>
         </div>
 
@@ -106,7 +106,7 @@ export default function EditarCronogramaModal({
                           copy[idx] = { val: newVal };
                           setEditCuotas6(copy);
                         }}
-                        className={`w-full px-2.5 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-mono font-bold text-slate-900 dark:text-white ${esNoCorresponde ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 italic' : ''}`}
+                        className={`w-full px-2.5 py-1 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-xs tabular-nums font-bold text-slate-900 dark:text-white ${esNoCorresponde ? 'bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500 italic' : ''}`}
                       />
                       <label className="flex items-center gap-1 cursor-pointer select-none text-[10px] font-bold text-slate-600 dark:text-slate-400 whitespace-nowrap">
                         <input

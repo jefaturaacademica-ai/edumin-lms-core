@@ -4,7 +4,6 @@ import { createClient } from '@supabase/supabase-js';
 import type { 
   PreguntaBanco, 
   PreguntaExamenEstudiante, 
-  ExamenModuloConfig, 
   ResultadoEvaluacionExamen,
   DetalleCalificacionPregunta
 } from '@/lib/types/examenes';
@@ -16,13 +15,25 @@ function getSupabaseClient() {
 }
 
 // Fallback local en disco
-function getLocalFallbackFile(): string {
-  return path.resolve(process.cwd(), 'lib/data/banco_preguntas_derecho_minero.json');
+function getLocalFallbackFile(codigoDiplomado?: string): string {
+  const mapaArchivos: Record<string, string> = {
+    'DIP-01': 'lib/data/banco_preguntas_derecho_minero.json',
+    'DIP-02': 'lib/data/banco_preguntas_comercio_internacional.json',
+    'DIP-03': 'lib/data/banco_preguntas_geologia_minera.json',
+    'DIP-04': 'lib/data/banco_preguntas_geomecanica.json',
+    'DIP-05': 'lib/data/banco_preguntas_geometalurgia.json',
+    'DIP-06': 'lib/data/banco_preguntas_geotecnia_minera.json',
+    'DIP-07': 'lib/data/banco_preguntas_sistemas_integrados_hseq.json',
+    'DIP-08': 'lib/data/banco_preguntas_gerencia_estrategica_liderazgo.json',
+    'DIP-09': 'lib/data/banco_preguntas_gestion_ambiental.json'
+  };
+  const relPath = (codigoDiplomado && mapaArchivos[codigoDiplomado]) || mapaArchivos['DIP-01'];
+  return path.resolve(process.cwd(), relPath);
 }
 
-function leerBancoLocal(): PreguntaBanco[] {
+function leerBancoLocal(codigoDiplomado?: string): PreguntaBanco[] {
   try {
-    const file = getLocalFallbackFile();
+    const file = getLocalFallbackFile(codigoDiplomado);
     if (fs.existsSync(file)) {
       const data = JSON.parse(fs.readFileSync(file, 'utf8'));
       return data.map((item: any, idx: number) => ({
@@ -59,7 +70,7 @@ export async function obtenerPreguntasBanco(filtros?: {
   const sb = getSupabaseClient();
   
   try {
-    let query = sb.from('banco_preguntas').select('*').order('created_at', { ascending: false });
+    let query = sb.from('banco_preguntas').select('*').order('created_at', { ascending: false }).limit(5000);
 
     if (filtros?.codigoDiplomado && filtros.codigoDiplomado !== 'TODOS') {
       query = query.eq('codigo_diplomado', filtros.codigoDiplomado);
@@ -90,7 +101,7 @@ export async function obtenerPreguntasBanco(filtros?: {
   }
 
   // Fallback local
-  let locales = leerBancoLocal();
+  let locales = leerBancoLocal(filtros?.codigoDiplomado);
   if (filtros?.codigoDiplomado && filtros.codigoDiplomado !== 'TODOS') {
     locales = locales.filter(p => p.codigo_diplomado === filtros.codigoDiplomado);
   }
@@ -212,15 +223,28 @@ export async function alternarEstadoPreguntaBanco(id: string, activo: boolean): 
 }
 
 /**
- * Sortear N preguntas aleatorias (por defecto 10) para el examen de un estudiante.
- * Oculta isCorrect y rationale para garantizar máxima integridad.
+ * Configuración de sorteo por nivel de dificultad para cada examen modular.
+ * Por defecto: 7 preguntas de nivel MEDIO y 3 preguntas de nivel ALTO (total = 10 preguntas).
+ * Si en el banco hay menos de las requeridas en un nivel, se completa automáticamente con el otro nivel.
+ */
+export const CONFIGURACION_SORTEO_DIFICULTAD = {
+  totalPreguntas: 10,
+  distribucion: {
+    MEDIO: 7, // 7 preguntas nivel medio
+    ALTO: 3   // 3 preguntas nivel alto / avanzado
+  }
+};
+
+/**
+ * Sortear N preguntas aleatorias para el examen de un estudiante con balance de dificultad.
+ * Oculta isCorrect y rationale para garantizar máxima integridad pedagógica.
  */
 export async function sortearPreguntasExamen(params: {
   codigoDiplomado: string;
   modulo: string;
   cantidad?: number;
+  distribucionDificultad?: { MEDIO?: number; ALTO?: number; FACIL?: number };
 }): Promise<PreguntaExamenEstudiante[]> {
-  const cantidad = params.cantidad || 10;
   const preguntasBanco = await obtenerPreguntasBanco({
     codigoDiplomado: params.codigoDiplomado,
     modulo: params.modulo,
@@ -231,18 +255,48 @@ export async function sortearPreguntasExamen(params: {
     return [];
   }
 
-  // Algoritmo Fisher-Yates para mezcla aleatoria uniforme
-  const mezcladas = [...preguntasBanco];
-  for (let i = mezcladas.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [mezcladas[i], mezcladas[j]] = [mezcladas[j], mezcladas[i]];
+  const cantidadTotal = params.cantidad || CONFIGURACION_SORTEO_DIFICULTAD.totalPreguntas;
+  const distribucion = params.distribucionDificultad || CONFIGURACION_SORTEO_DIFICULTAD.distribucion;
+
+  // Helper para mezcla aleatoria uniforme (Fisher-Yates)
+  const mezclar = (arr: PreguntaBanco[]) => {
+    const res = [...arr];
+    for (let i = res.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [res[i], res[j]] = [res[j], res[i]];
+    }
+    return res;
+  };
+
+  // Separar banco activo por dificultad
+  const bancoMedio = preguntasBanco.filter(p => (p.dificultad || 'MEDIO').toUpperCase() === 'MEDIO');
+  const bancoAlto = preguntasBanco.filter(p => ['ALTO', 'AVANZADO'].includes((p.dificultad || '').toUpperCase()));
+
+  const cuantasMedioDeseadas = distribucion.MEDIO ?? 7;
+  const cuantasAltoDeseadas = distribucion.ALTO ?? 3;
+
+  const medioMezcladas = mezclar(bancoMedio);
+  const altoMezcladas = mezclar(bancoAlto);
+
+  const seleccionadasMedio = medioMezcladas.slice(0, cuantasMedioDeseadas);
+  const seleccionadasAlto = altoMezcladas.slice(0, cuantasAltoDeseadas);
+
+  let seleccionadas = [...seleccionadasMedio, ...seleccionadasAlto];
+
+  // Si faltaron preguntas para completar la cantidad requerida (ej: si hay pocas de nivel alto),
+  // se completan automáticamente con las restantes preguntas activas disponibles
+  if (seleccionadas.length < cantidadTotal) {
+    const yaElegidasIds = new Set(seleccionadas.map(p => p.id));
+    const restantes = mezclar(preguntasBanco.filter(p => !yaElegidasIds.has(p.id)));
+    const faltantes = cantidadTotal - seleccionadas.length;
+    seleccionadas = [...seleccionadas, ...restantes.slice(0, faltantes)];
   }
 
-  // Tomar las primeras N
-  const seleccionadas = mezcladas.slice(0, Math.min(cantidad, mezcladas.length));
+  // Mezclar el examen final para intercalar niveles naturalmente
+  const examenFinalMezclado = mezclar(seleccionadas.slice(0, cantidadTotal));
 
   // Transformar para el estudiante: eliminar respuestas correctas y rationales
-  return seleccionadas.map(p => ({
+  return examenFinalMezclado.map(p => ({
     id: p.id,
     codigo_diplomado: p.codigo_diplomado,
     modulo: p.modulo,
@@ -258,7 +312,8 @@ export async function sortearPreguntasExamen(params: {
 }
 
 /**
- * Calificar el examen entregado por el estudiante y generar retroalimentación detallada
+ * Calificar el examen entregado por el estudiante, generar retroalimentación formativa y
+ * almacenar el registro detallado en public.notas_modulos de Supabase.
  */
 export async function calificarExamen(params: {
   codigoDiplomado: string;
@@ -301,21 +356,35 @@ export async function calificarExamen(params: {
     });
 
     let esCorrecta = false;
+    let puntajeObtenido = 0;
+
     if (preguntaOriginal.tipo === 'multiple_select') {
-      // En selección múltiple, deben coincidir exactamente todas las correctas
-      const sonIguales = correctas.length === marcadas.length &&
-        correctas.every(c => marcadas.includes(c));
-      esCorrecta = sonIguales;
+      // Criterio proporcional para selección múltiple:
+      // Cada acierto correcto suma proporcionalmente según el total de opciones correctas.
+      // Las alternativas incorrectas marcadas descuentan proporcionalmente para evitar adivinanza aleatoria.
+      const correctasMarcadas = marcadas.filter(c => correctas.includes(c)).length;
+      const incorrectasMarcadas = marcadas.filter(c => !correctas.includes(c)).length;
+      const totalIncorrectas = Math.max(1, preguntaOriginal.opciones.length - correctas.length);
+
+      if (correctas.length > 0) {
+        const fraccionAciertos = correctasMarcadas / correctas.length;
+        const fraccionErrores = incorrectasMarcadas / totalIncorrectas;
+        const fraccionNeta = Math.max(0, fraccionAciertos - fraccionErrores);
+        puntajeObtenido = Number((fraccionNeta * puntosPorPregunta).toFixed(2));
+      } else {
+        puntajeObtenido = 0;
+      }
+      esCorrecta = puntajeObtenido > 0;
     } else {
-      // En opción única, debe coincidir la única opción correcta
       esCorrecta = marcadas.length === 1 && correctas.includes(marcadas[0]);
+      puntajeObtenido = esCorrecta ? Number(puntosPorPregunta.toFixed(2)) : 0;
     }
 
-    if (esCorrecta) {
-      aciertosTotales++;
+    if (puntajeObtenido >= puntosPorPregunta) {
+      aciertosTotales += 1;
+    } else if (puntajeObtenido > 0) {
+      aciertosTotales += Number((puntajeObtenido / puntosPorPregunta).toFixed(2));
     }
-
-    const puntajeObtenido = esCorrecta ? Number(puntosPorPregunta.toFixed(2)) : 0;
 
     detalles.push({
       preguntaId: pId,
@@ -337,8 +406,9 @@ export async function calificarExamen(params: {
     });
   }
 
-  // Nota final sobre 20 redondeada a 2 decimales o entero
-  const notaFinal = Math.min(20, Math.round((aciertosTotales * puntosPorPregunta) * 10) / 10);
+  // Nota final sobre 20 calculada a partir de la suma de puntajes obtenidos
+  const sumaPuntajes = detalles.reduce((acc, d) => acc + d.puntajeObtenido, 0);
+  const notaFinal = Math.min(20, Math.round(sumaPuntajes * 10) / 10);
   const notaAprobatoria = 12.00;
   const aprobado = notaFinal >= notaAprobatoria;
 
@@ -351,23 +421,102 @@ export async function calificarExamen(params: {
     detalles: detalles
   };
 
-  // Guardar intento en Supabase si la tabla existe
+  // Guardar en public.notas_modulos de Supabase (sin requerir tablas extras)
   try {
     const sb = getSupabaseClient();
-    await sb.from('examenes_intentos').insert([{
-      dni: params.dni || '71234567',
-      codigo_diplomado: params.codigoDiplomado,
-      modulo: params.modulo,
-      preguntas_ids: preguntasIds,
-      respuestas: params.respuestasUsuario,
-      detalles_calificacion: detalles,
+    const dniLimpio = params.dni || '71234567';
+    const modNorm = params.modulo;
+    const nombreDip = todasDelModulo[0]?.diplomado || 'DIPLOMADO';
+
+    const { data: existente } = await sb
+      .from('notas_modulos')
+      .select('id')
+      .eq('dni_ce', dniLimpio)
+      .eq('diplomado_numero', params.codigoDiplomado)
+      .eq('modulo_nombre', modNorm)
+      .limit(1);
+
+    const payloadNotas = {
+      dni_ce: dniLimpio,
+      diplomado_numero: params.codigoDiplomado,
+      diplomado_nombre: nombreDip,
+      modulo_nombre: modNorm,
       nota: notaFinal,
-      aprobado: aprobado,
-      fecha_envio: new Date().toISOString()
-    }]);
+      estado: aprobado ? 'APROBADO' : 'DESAPROBADO',
+      respuestas: params.respuestasUsuario,
+      detalles_examen: detalles,
+      updated_at: new Date().toISOString()
+    };
+
+    if (existente && existente.length > 0) {
+      await sb.from('notas_modulos').update(payloadNotas).eq('id', existente[0].id);
+    } else {
+      await sb.from('notas_modulos').insert([payloadNotas]);
+    }
   } catch (err) {
-    console.warn('No se pudo registrar intento en Supabase:', err);
+    console.warn('No se pudo registrar intento en notas_modulos de Supabase:', err);
   }
 
   return resultado;
+}
+
+/**
+ * Obtener el último intento y retroalimentación guardados en notas_modulos
+ */
+export async function obtenerIntentoNotasModulos(params: {
+  codigoDiplomado: string;
+  modulo: string;
+  dni: string;
+}): Promise<any | null> {
+  try {
+    const sb = getSupabaseClient();
+    const { data } = await sb
+      .from('notas_modulos')
+      .select('*')
+      .eq('dni_ce', params.dni)
+      .eq('diplomado_numero', params.codigoDiplomado)
+      .eq('modulo_nombre', params.modulo)
+      .order('updated_at', { ascending: false })
+      .limit(1);
+
+    if (data && data.length > 0) {
+      return data[0];
+    }
+  } catch (e) {
+    console.warn('Error al obtener intento de notas_modulos:', e);
+  }
+  return null;
+}
+
+
+/**
+ * Obtiene los módulos que tienen preguntas cargadas y activas en el banco para un diplomado
+ */
+export async function obtenerModulosConExamen(codigoDiplomado: string): Promise<string[]> {
+  const sb = getSupabaseClient();
+  try {
+    const { data, error } = await sb
+      .from('banco_preguntas')
+      .select('modulo')
+      .eq('codigo_diplomado', codigoDiplomado)
+      .eq('activo', true);
+
+    if (!error && data && data.length > 0) {
+      const set = new Set<string>();
+      data.forEach((r: any) => {
+        if (r.modulo) set.add(r.modulo);
+      });
+      return Array.from(set);
+    }
+  } catch (e) {
+    console.warn('Error al consultar modulos con examen en Supabase:', e);
+  }
+
+  // Fallback local
+  const locales = leerBancoLocal(codigoDiplomado);
+  const set = new Set<string>();
+  locales.filter(p => p.codigo_diplomado === codigoDiplomado && p.activo).forEach(p => {
+    if (p.modulo) set.add(p.modulo);
+  });
+  return Array.from(set);
 }

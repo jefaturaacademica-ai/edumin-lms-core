@@ -106,7 +106,7 @@ export default function InstitutionalUserDropdown({ className = '' }: Institutio
           {/* Cabecera del Usuario (Identificación rápida) */}
           <div className="px-4 py-2.5 bg-slate-50 dark:bg-slate-800/40">
             <p className="font-bold text-slate-900 dark:text-white text-xs truncate">{userName}</p>
-            {userEmail && <p className="text-[10px] text-slate-400 font-mono truncate">{userEmail}</p>}
+            {userEmail && <p className="text-[10px] text-slate-400 tabular-nums truncate">{userEmail}</p>}
           </div>
 
           {/* Opciones de Navegación según Rol Real */}

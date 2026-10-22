@@ -200,7 +200,7 @@ export default function SolicitudesDatosAdminPage() {
                 <span className="bg-indigo-100 dark:bg-indigo-950/80 text-indigo-800 dark:text-indigo-300 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider border border-indigo-200 dark:border-indigo-800">
                   Secretaría académica
                 </span>
-                <span className="text-slate-400 dark:text-slate-500 text-xs font-mono">• Fichas de estudiantes y constancias</span>
+                <span className="text-slate-400 dark:text-slate-500 text-xs tabular-nums">• Fichas de estudiantes y constancias</span>
               </div>
               <h1 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white mt-1 tracking-tight">
                 Gestión de estudiantes y actualización de datos
@@ -305,7 +305,7 @@ export default function SolicitudesDatosAdminPage() {
                               <div className="font-bold text-slate-900 dark:text-white">
                                 {est.nombres} {est.apellidos}
                               </div>
-                              <div className="text-[10px] text-slate-400 font-mono mt-0.5">
+                              <div className="text-[10px] text-slate-400 tabular-nums mt-0.5">
                                 DNI: {est.dni_ce}
                               </div>
                             </td>
@@ -420,14 +420,14 @@ export default function SolicitudesDatosAdminPage() {
                     {solicitudesFiltradas.length > 0 ? (
                       solicitudesFiltradas.map((s) => (
                         <tr key={s.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
-                          <td className="py-4 px-4 font-mono font-bold text-indigo-600 dark:text-indigo-400">{s.dniActual}</td>
+                          <td className="py-4 px-4 tabular-nums font-bold text-indigo-600 dark:text-indigo-400">{s.dniActual}</td>
                           <td className="py-4 px-4 font-bold text-slate-800 dark:text-slate-200">
                             {s.nombreActual}
                             <div className="text-[10px] text-slate-400 font-normal">{s.email}</div>
                           </td>
                           <td className="py-4 px-4 font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50/50 dark:bg-emerald-950/30 rounded-xl">
                             {s.nombresSolicitados} {s.apellidosSolicitados}
-                            <div className="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono">DNI: {s.dniSolicitado}</div>
+                            <div className="text-[10px] text-emerald-600 dark:text-emerald-400 tabular-nums">DNI: {s.dniSolicitado}</div>
                           </td>
                           <td className="py-4 px-4">
                             <a
@@ -516,7 +516,7 @@ export default function SolicitudesDatosAdminPage() {
                 {/* Membrete Oficial */}
                 <div className="flex justify-between items-center border-b-2 border-indigo-900 pb-4 mb-6">
                   <div className="text-left">
-                    <span className="text-[9px] font-mono font-bold tracking-widest text-indigo-900 uppercase block">ESCUELA DE POSTGRADO & MINERÍA</span>
+                    <span className="text-[9px] tabular-nums font-bold tracking-widest text-indigo-900 uppercase block">ESCUELA DE POSTGRADO & MINERÍA</span>
                     <h4 className="text-sm font-black tracking-tight text-slate-900">INSTITUTO INTERNACIONAL EDUMIN</h4>
                     <span className="text-[8px] text-slate-500 block">RUC: 20608945123 • Registro de Secretaría Académica</span>
                   </div>
@@ -530,7 +530,7 @@ export default function SolicitudesDatosAdminPage() {
                   <h3 className="text-base font-black uppercase tracking-wider text-indigo-950 border-b-2 border-indigo-600 inline-block pb-1">
                     CONSTANCIA DE ESTUDIOS Y MATRÍCULA
                   </h3>
-                  <p className="text-[10px] font-mono text-slate-400 mt-1">CÓDIGO: EDM-2026-CST-{estudianteConstancia.dni_ce}</p>
+                  <p className="text-[10px] tabular-nums text-slate-400 mt-1">CÓDIGO: EDM-2026-CST-{estudianteConstancia.dni_ce}</p>
                 </div>
 
                 {/* Cuerpo del Texto Formal */}
@@ -563,7 +563,7 @@ export default function SolicitudesDatosAdminPage() {
 
                 {/* Pie de Firma y QR */}
                 <div className="mt-8 pt-6 border-t border-slate-200 flex justify-between items-end text-[9px] text-slate-600">
-                  <div className="text-left font-mono">
+                  <div className="text-left tabular-nums">
                     <p>Fecha de emisión: {new Date().toLocaleDateString('es-PE', { day: '2-digit', month: 'long', year: 'numeric' })}</p>
                     <p className="mt-0.5">Lima, Perú</p>
                   </div>
@@ -578,7 +578,7 @@ export default function SolicitudesDatosAdminPage() {
                   {/* QR de Verificación */}
                   <div className="flex flex-col items-center p-1 bg-white rounded-lg border border-slate-200 shadow-sm">
                     <QrCode className="w-7 h-7 text-slate-900" />
-                    <span className="text-[6px] font-mono mt-0.5 font-bold">CÓDIGO VÁLIDO</span>
+                    <span className="text-[6px] tabular-nums mt-0.5 font-bold">CÓDIGO VÁLIDO</span>
                   </div>
                 </div>
 
@@ -673,7 +673,7 @@ export default function SolicitudesDatosAdminPage() {
                     required
                     value={alumnoEditando.dni_ce}
                     onChange={(e) => setAlumnoEditando({ ...alumnoEditando, dni_ce: e.target.value })}
-                    className="w-full px-3.5 py-2 border border-slate-200 dark:border-slate-700 rounded-xl text-xs font-mono font-bold bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-indigo-600"
+                    className="w-full px-3.5 py-2 border border-slate-200 dark:border-slate-700 rounded-xl text-xs tabular-nums font-bold bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-indigo-600"
                   />
                 </div>
 

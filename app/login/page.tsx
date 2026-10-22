@@ -6,9 +6,8 @@ import {
   Mail, 
   Phone, 
   Clock, 
-  HelpCircle,
-  GraduationCap,
-  CreditCard
+  GraduationCap, 
+  CreditCard 
 } from "lucide-react";
 import { LOGIN_CONTACT_INFO } from "@/lib/data/loginContactInfo";
 import { obtenerConfiguracionLogin } from "@/lib/services/loginBannerService";
@@ -50,15 +49,21 @@ export default async function LoginPage() {
             Tu navegador no soporta videos HTML5.
           </video>
 
-          {/* Gradiente Oscuro Superpuesto para Contraste y Legibilidad */}
-          <div className="absolute inset-0 z-[1] bg-gradient-to-br from-slate-950/80 via-slate-950/75 to-slate-950/90 backdrop-blur-[1.5px]" />
+          {/* Capa de contraste: más luminosa y vistosa si solo se muestra el video de fondo, u oscura si hay elementos encima */}
+          <div 
+            className={`absolute inset-0 z-[1] transition-all duration-700 pointer-events-none ${
+              esModoVacio
+                ? 'bg-gradient-to-t from-slate-950/40 via-transparent to-slate-950/20'
+                : 'bg-gradient-to-br from-slate-950/80 via-slate-950/75 to-slate-950/90 backdrop-blur-[1.5px]'
+            }`} 
+          />
 
           {/* Header Superior Izquierdo: Logotipo Oficial */}
           <div className="relative z-10">
             <img
               src="/logo-blanco.png"
               alt="EDUMIN"
-              className="h-10 w-auto object-contain"
+              className="h-10 w-auto object-contain drop-shadow"
             />
           </div>
 
@@ -78,10 +83,6 @@ export default async function LoginPage() {
               
               {/* Mensaje de Bienvenida */}
               <div className="space-y-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/15 border border-indigo-500/30 text-indigo-300 text-xs font-semibold">
-                  <HelpCircle className="w-3.5 h-3.5 text-indigo-400" />
-                  <span>Centro de atención y soporte al estudiante</span>
-                </div>
                 <h2 className="text-2xl xl:text-3xl font-black text-white tracking-tight">
                   {LOGIN_CONTACT_INFO.tituloBienvenida}
                 </h2>
@@ -103,7 +104,7 @@ export default async function LoginPage() {
                     <span className="size-2 rounded-full bg-emerald-400 animate-pulse" title="Canal activo" />
                   </div>
                   <div>
-                    <p className="text-base font-black text-white font-mono tracking-tight">
+                    <p className="text-base font-black text-white tabular-nums tracking-tight">
                       {canales.academicas.valor}
                     </p>
                   </div>
@@ -128,7 +129,7 @@ export default async function LoginPage() {
                     <span className="size-2 rounded-full bg-emerald-400 animate-pulse" title="Canal activo" />
                   </div>
                   <div>
-                    <p className="text-base font-black text-white font-mono tracking-tight">
+                    <p className="text-base font-black text-white tabular-nums tracking-tight">
                       {canales.pagos.valor}
                     </p>
                   </div>
@@ -150,7 +151,7 @@ export default async function LoginPage() {
                     <span>{canales.correo.titulo}</span>
                   </div>
                   <div>
-                    <p className="text-xs xl:text-sm font-bold text-white font-mono truncate" title={canales.correo.valor}>
+                    <p className="text-xs xl:text-sm font-bold text-white tabular-nums truncate" title={canales.correo.valor}>
                       {canales.correo.valor}
                     </p>
                   </div>
@@ -170,7 +171,7 @@ export default async function LoginPage() {
                     <span>{canales.telefonoFijo.titulo}</span>
                   </div>
                   <div>
-                    <p className="text-base font-black text-white font-mono tracking-tight">
+                    <p className="text-base font-black text-white tabular-nums tracking-tight">
                       {canales.telefonoFijo.valor}
                     </p>
                   </div>
@@ -196,12 +197,8 @@ export default async function LoginPage() {
             </div>
           )}
 
-          {/* Footer Inferior Izquierdo */}
-          <div className="relative z-10 flex items-center justify-between text-xs text-slate-400 border-t border-slate-800/60 pt-4">
-            <span className="text-[11px]">
-              Instituto Internacional EDUMIN • Plataforma de especialización minera
-            </span>
-          </div>
+          {/* Espaciador inferior limpio */}
+          <div className="relative z-10" />
         </section>
 
         {/* Lado Derecho: Formulario de Inicio de Sesión */}

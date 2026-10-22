@@ -276,7 +276,7 @@ export default function AdminEstudiantesPage() {
                 <span className="bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">
                   Sincronizado Supabase
                 </span>
-                <span className="text-slate-400 text-xs font-mono">• public.profiles</span>
+                <span className="text-slate-400 text-xs tabular-nums">• public.profiles</span>
               </div>
               <h1 className="text-3xl font-bold text-slate-900 dark:text-white mt-1 flex items-center gap-2">
                 <Users className="w-8 h-8 text-indigo-600 dark:text-indigo-400" /> 
@@ -375,7 +375,7 @@ export default function AdminEstudiantesPage() {
                   ) : estudiantesFiltrados.length > 0 ? (
                     estudiantesFiltrados.map((est) => (
                       <tr key={est.id} className="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition-colors">
-                        <td className="py-4 px-4 font-mono font-bold text-indigo-600 dark:text-indigo-400">{est.dni_ce}</td>
+                        <td className="py-4 px-4 tabular-nums font-bold text-indigo-600 dark:text-indigo-400">{est.dni_ce}</td>
                         <td className="py-4 px-4 font-bold text-slate-800 dark:text-slate-100">
                           <div>{est.nombres} {est.apellidos}</div>
                           <div className="text-[10px] font-normal text-slate-400">{est.email}</div>
