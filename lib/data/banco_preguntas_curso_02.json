@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al estructurar la base de una matriz IPERC en una operación minera, ¿cuál es la secuencia metodológica correcta que debe seguirse para desglosar el puesto de trabajo antes de realizar la identificación directa de peligros y evaluación de riesgos?",
+    "opciones": [
+      {
+        "text": "Proceso -> Actividades -> Tareas",
+        "isCorrect": true,
+        "rationale": "Esta secuencia permite descomponer la operación desde el nivel general de gestión hasta las operaciones específicas de trabajo donde se manifiestan puntualmente los peligros y riesgos."
+      },
+      {
+        "text": "Actividades -> Procedimientos -> Indicadores",
+        "isCorrect": false,
+        "rationale": "Los procedimientos e indicadores corresponden a la etapa de control y medición del desempeño, no a la secuencia previa de desglose del puesto de trabajo."
+      },
+      {
+        "text": "Tareas -> Procesos -> Puestos de trabajo",
+        "isCorrect": false,
+        "rationale": "Esta estructura invierte el orden jerárquico, partiendo del desglose individual antes de definir el marco operativo general."
+      },
+      {
+        "text": "Tareas -> Controles -> Actividades",
+        "isCorrect": false,
+        "rationale": "Los controles solo pueden establecerse una vez identificados los peligros y evaluados los riesgos, por lo que no forman parte del desglose inicial del puesto de trabajo."
+      },
+      {
+        "text": "Operaciones -> Procedimientos -> Tareas",
+        "isCorrect": false,
+        "rationale": "Mezcla documentos de gestión operativa como los procedimientos dentro de la descomposición física del proceso laboral."
+      }
+    ],
+    "hint": "Piense en la jerarquía funcional desde el nivel de gestión general hasta el desglose operativo paso a paso.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la legislación en seguridad laboral y las mejores prácticas en operaciones mineras complejas, ¿cuándo debe actualizarse la matriz IPERC general de un puesto de trabajo?",
+    "opciones": [
+      {
+        "text": "Obligatoriamente una vez al año de forma periódica o ante cualquier cambio significativo en procesos, equipos, infraestructura o personal.",
+        "isCorrect": true,
+        "rationale": "Mantiene el carácter de documento vivo exigido por ley, garantizando que el IPERC se adecúe de inmediato a las variaciones de las condiciones de trabajo."
+      },
+      {
+        "text": "Exclusivamente cuando la autoridad de fiscalización laboral emite una sanción administrativa.",
+        "isCorrect": false,
+        "rationale": "La actualización del IPERC es preventiva y no debe condicionarse únicamente a la aplicación de medidas punitivas por parte del fiscalizador."
+      },
+      {
+        "text": "De manera trimestral obligatoria, independientemente de si existen o no modificaciones operativas.",
+        "isCorrect": false,
+        "rationale": "Si bien las revisiones pueden ser periódicas, la norma establece la actualización anual obligatoria o la inmediata modificación ante cambios específicos en las labores."
+      },
+      {
+        "text": "Únicamente tras la ocurrencia de un accidente fatal dentro de la unidad minera.",
+        "isCorrect": false,
+        "rationale": "Esperar a que ocurra una fatalidad vulnera el principio de prevención proactiva que rige la identificación de peligros."
+      },
+      {
+        "text": "Cada dos años, siempre que el comité paritario de seguridad no solicite revisiones anticipadas.",
+        "isCorrect": false,
+        "rationale": "Exceder el plazo de un año contraviene la exigencia legal mínima de revisión periódica anual establecida en la legislación laboral."
+      }
+    ],
+    "hint": "Considere tanto la periodicidad legal mínima como las situaciones que alteren el entorno u operación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con la guía de evaluación de riesgos expuesta en la normativa minera (DS 024-2016-EM, Anexo 6), ¿cómo se determina el nivel de riesgo asociado a un peligro identificado?",
+    "opciones": [
+      {
+        "text": "Mediante la combinación sistemática del índice de probabilidad y el índice de severidad.",
+        "isCorrect": true,
+        "rationale": "Permite cuantificar la magnitud del riesgo ponderando la frecuencia esperada del evento no deseado frente a la gravedad potencial del daño."
+      },
+      {
+        "text": "Multiplicando el número de trabajadores expuestos por la frecuencia de inspecciones semanales.",
+        "isCorrect": false,
+        "rationale": "El número de inspecciones es una medida de control y seguimiento, no una variable de cálculo de la magnitud del riesgo intrínseco."
+      },
+      {
+        "text": "Evaluando exclusivamente el costo económico de la medida de control necesaria.",
+        "isCorrect": false,
+        "rationale": "El costo financiero del control no determina la severidad ni la probabilidad de que un peligro afecte a la persona."
+      },
+      {
+        "text": "Restando el riesgo residual del nivel de vulnerabilidad de la infraestructura de soporte.",
+        "isCorrect": false,
+        "rationale": "El riesgo residual se calcula de manera posterior al riesgo puro o inicial, una vez aplicadas las medidas de control."
+      },
+      {
+        "text": "Promediando las horas trabajadas con el histórico acumulado de días perdidos por incapacidad.",
+        "isCorrect": false,
+        "rationale": "Estos valores corresponden a indicadores reactivos de siniestralidad y no a la fórmula cualitativa/cuantitativa de evaluación en la matriz de riesgo."
+      }
+    ],
+    "hint": "El cálculo combina la frecuencia estimada de ocurrencia con la gravedad del daño potencial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿En cuáles de las siguientes situaciones operativas en minería está indicado el uso de un IPERC Continuo en lugar de limitarse a la matriz IPERC base?",
+    "opciones": [
+      {
+        "text": "Antes de iniciar una operación de voladura para evaluar cambios en las condiciones climáticas o del terreno.",
+        "isCorrect": true,
+        "rationale": "Las voladuras implican riesgos de muy alto impacto que varían en tiempo real según factores atmosféricos o estabilidad geotécnica inmediata."
+      },
+      {
+        "text": "Ante la activación de labores en áreas subterráneas donde las condiciones ambientales cambian constantemente.",
+        "isCorrect": true,
+        "rationale": "Las labores en socavón presentan un entorno altamente cambiante respecto a acumulación de gases, ventilación o desprendimiento de rocas que exigen evaluación diaria in situ."
+      },
+      {
+        "text": "Al realizar labores operativas críticas o de alto impacto previo al inicio de la jornada diaria.",
+        "isCorrect": true,
+        "rationale": "El IPERC Continuo es la herramienta operativa clave para verificar que las condiciones del puesto crítico sean seguras antes de arrancar los trabajos."
+      },
+      {
+        "text": "Para el archivo documental exclusivo de la auditoría contable anual de la empresa minera.",
+        "isCorrect": false,
+        "rationale": "El IPERC Continuo es un formato de campo de aplicación operativa inmediata y no una herramienta para auditorías contables."
+      },
+      {
+        "text": "Durante tareas rutinarias de oficina administrativa sin variación en su entorno físico.",
+        "isCorrect": false,
+        "rationale": "Las tareas administrativas estables se gestionan de manera adecuada con la matriz IPERC base y no requieren IPERC Continuo antes de cada jornada."
+      }
+    ],
+    "hint": "Analice escenarios donde las condiciones del entorno o de la tarea varían dinámicamente en el día a día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la jerarquía de controles de la matriz IPERC, ¿cuál de las siguientes medidas representa un control de ingeniería para mitigar el riesgo de desprendimiento o caída de rocas en un túnel?",
+    "opciones": [
+      {
+        "text": "Instalación de mallas metálicas y pernos de sostenimiento en el techo de la galería.",
+        "isCorrect": true,
+        "rationale": "Constituye un diseño de infraestructura física que contiene el material rocoso y aísla físicamente el peligro respecto al personal."
+      },
+      {
+        "text": "Establecimiento de turnos de rotación de trabajo de cuatro horas para evitar la fatiga.",
+        "isCorrect": false,
+        "rationale": "La rotación de turnos corresponde a un control administrativo enfocado en la organización del trabajo y la reducción de la exposición."
+      },
+      {
+        "text": "Dotación de cascos de protección con barboquejo al personal operario.",
+        "isCorrect": false,
+        "rationale": "La entrega de cascos es una medida de equipo de protección personal (EPP), ubicada en el nivel más bajo de efectividad de la jerarquía."
+      },
+      {
+        "text": "Redacción de un procedimiento escrito sobre el tránsito de maquinaria pesada.",
+        "isCorrect": false,
+        "rationale": "La elaboración de procedimientos es una medida de control administrativo que norma el comportamiento, pero no altera físicamente la masa rocosa."
+      },
+      {
+        "text": "Clausura definitiva y sellado permanente del acceso a la unidad minera.",
+        "isCorrect": false,
+        "rationale": "El sellado definitivo representa una medida de eliminación completa del área de trabajo, superando la categoría de aislamiento por ingeniería."
+      }
+    ],
+    "hint": "Busque la opción que implica modificar físicamente la infraestructura para aislar o barrer el peligro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué propósito cumple la evaluación del riesgo residual dentro del proceso IPERC una vez que se han establecido e implementado las medidas de control iniciales?",
+    "opciones": [
+      {
+        "text": "Verificar si el riesgo que persiste tras aplicar los controles se encuentra en un nivel aceptable o requiere medidas adicionales.",
+        "isCorrect": true,
+        "rationale": "Asegura que el nivel de riesgo remanente no exponga al trabajador a daños intolerables, identificando la necesidad de aplicar controles complementarios."
+      },
+      {
+        "text": "Justificar la eliminación del monitoreo continuo en puestos de trabajo con tareas críticas.",
+        "isCorrect": false,
+        "rationale": "El riesgo residual no elimina la obligación de supervisión y monitoreo continuo sobre el puesto evaluado."
+      },
+      {
+        "text": "Reemplazar la obligación legal de entregar equipos de protección personal a los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Los EPP suelen actuar precisamente como medida mitigante secundaria frente al riesgo residual detectado."
+      },
+      {
+        "text": "Eximir al empleador de realizar las inspecciones periódicas programadas en el plan anual.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones son obligatorias por marco legal para constatar que los controles previstos permanezcan operativos."
+      },
+      {
+        "text": "Incrementar teóricamente la severidad del peligro para justificar mayores solicitudes presupuestarias.",
+        "isCorrect": false,
+        "rationale": "La severidad intrínseca del peligro no cambia ficticiamente; lo que se reduce es la probabilidad o el impacto real mediante la efectividad del control."
+      }
+    ],
+    "hint": "Su objetivo es analizar qué nivel de riesgo persiste tras aplicar la jerarquía de controles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el principio fundamental que define a la 'prevención de riesgos en su origen' en la gestión de seguridad minera?",
+    "opciones": [
+      {
+        "text": "Controlar o eliminar los peligros en el lugar exacto donde se generan antes de que puedan materializarse en daños a los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Se basa en intervenir la fuente o raíz de la condición insegura de manera previa a la exposición del personal para evitar el accidente."
+      },
+      {
+        "text": "Limitar la gestión de seguridad a la contratación de pólizas de seguro de indemnización tras los accidentes.",
+        "isCorrect": false,
+        "rationale": "La indemnización es una respuesta reactiva posterior a la ocurrencia del daño y contraviene el concepto de prevención previa."
+      },
+      {
+        "text": "Concentrar los recursos de la empresa exclusivamente en brindar atención médica rápida posterior a un siniestro.",
+        "isCorrect": false,
+        "rationale": "La atención médica es una acción reactiva de mitigar lesiones ya producidas, no una intervención en el origen del riesgo."
+      },
+      {
+        "text": "Sancionar administrativamente al operario inmediatamente después de detectar una condición insegura.",
+        "isCorrect": false,
+        "rationale": "Las sanciones administrativas no eliminan la causa raíz técnica ni ambiental en la fuente de generación del peligro."
+      },
+      {
+        "text": "Transferir contractualmente la responsabilidad operativa de la seguridad a las empresas contratistas.",
+        "isCorrect": false,
+        "rationale": "La ley establece que la prevención en su origen es responsabilidad irrenunciable del titular de la actividad minera."
+      }
+    ],
+    "hint": "Se enfoca en intervenir en la raíz o punto de generación de la condición riesgosa antes de la exposición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Respecto a la provisión de Equipos de Protección Personal (EPP), ¿cuál es una exigencia legal estricta para el empleador de acuerdo con la modificatoria de la normativa de seguridad laboral expuesta en el curso?",
+    "opciones": [
+      {
+        "text": "Entregar de manera gratuita EPP adecuados al riesgo que cuenten obligatoriamente con certificación de calidad.",
+        "isCorrect": true,
+        "rationale": "Garantiza que la última barrera de protección cumpla con estándares técnicos internacionales o nacionales comprobados de resistencia."
+      },
+      {
+        "text": "Permitir que los trabajadores adquieran sus propios EPP y luego solicitar el reembolso del gasto.",
+        "isCorrect": false,
+        "rationale": "La norma exige que la provisión sea directa, gratuita y garantizada por el empleador, sin trasladar la gestión de compra al operario."
+      },
+      {
+        "text": "Proporcionar EPP únicamente cuando el comité paritario de seguridad lo solicite formalmente por escrito.",
+        "isCorrect": false,
+        "rationale": "La entrega de EPP adecuados al riesgo es una obligación primaria del empleador establecida en la matriz IPERC y la ley, sin requerir petición previa."
+      },
+      {
+        "text": "Descontar un porcentaje del costo de los equipos de protección directamente de la planilla del trabajador.",
+        "isCorrect": false,
+        "rationale": "La legislación laboral prohíbe explícitamente cualquier cobro o descuento al trabajador por concepto de insumos de seguridad."
+      },
+      {
+        "text": "Eximir a la empresa de entregar EPP si los trabajadores cuentan con capacitaciones teóricas aprobadas.",
+        "isCorrect": false,
+        "rationale": "La capacitación no reemplaza el uso de la protección física frente a riesgos residuales inevitables en operaciones críticas."
+      }
+    ],
+    "hint": "Considere tanto la gratuidad de la entrega como las características de homologación técnica del equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del marco de la Ley 29783 y el sector minero, ¿cuáles de las siguientes corresponden a facultades y derechos legalmente respaldados del empleador?",
+    "opciones": [
+      {
+        "text": "Exigir el cumplimiento estricto de los protocolos, políticas y procedimientos de seguridad a todo el personal.",
+        "isCorrect": true,
+        "rationale": "Faculta a la gerencia para fiscalizar que las normas internas y legales de seguridad sean aplicadas sin excepción por la fuerza laboral."
+      },
+      {
+        "text": "Aplicar sanciones administrativas graduadas a los trabajadores que incumplan injustificadamente las normas de seguridad.",
+        "isCorrect": true,
+        "rationale": "Respalda la potestad disciplinaria del empleador para corregir comportamientos de riesgo y velar por la integridad colectiva."
+      },
+      {
+        "text": "Programar y solicitar auditorías internas o externas para evaluar la efectividad del sistema de gestión.",
+        "isCorrect": true,
+        "rationale": "Permite al empleador examinar objetivamente si sus controles y procesos previenen efectivamente los accidentes."
+      },
+      {
+        "text": "Adquirir y distribuir EPP no certificados para reducir los costos operativos de la unidad minera.",
+        "isCorrect": false,
+        "rationale": "Representa una infracción grave a la modificatoria legal que exige certificaciones obligatorias de calidad en la protección."
+      },
+      {
+        "text": "Delegar de forma absoluta y total la responsabilidad legal de la seguridad en el supervisor de turno.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad legal de garantizar la seguridad en el centro de trabajo recae primordialmente en el titular de la empresa."
+      }
+    ],
+    "hint": "Identifique aquellas atribuciones legales que permiten al empleador exigir cumplimiento, sancionar faltas y auditar el sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una unidad minera ubicada a alta montaña, los operadores de maquinaria pesada experimentan fatiga debido a las condiciones de altitud y jornadas extensas. ¿Qué control administrativo es el adecuado para gestionar este riesgo?",
+    "opciones": [
+      {
+        "text": "Diseñar e implementar un protocolo obligatorio de rotación de turnos y pausas programadas.",
+        "isCorrect": true,
+        "rationale": "Norma el tiempo máximo de exposición continua para evitar el sobreesfuerzo y la pérdida de atención del operario en altitud."
+      },
+      {
+        "text": "Modificar mecánicamente la relación de transmisión de los motores de los camiones de acarreo.",
+        "isCorrect": false,
+        "rationale": "Altera la parte mecánica de la máquina y constituye una intervención de ingeniería, no una regla de gestión organizativa."
+      },
+      {
+        "text": "Reemplazar la flota de camiones de acarreo por un sistema automatizado de fajas transportadoras.",
+        "isCorrect": false,
+        "rationale": "Es una medida estructural de sustitución tecnológica de envergadura, no una disposición administrativa de trabajo."
+      },
+      {
+        "text": "Limitar la medida a la entrega de lentes de protección solar con filtro UV a los conductores.",
+        "isCorrect": false,
+        "rationale": "Los lentes atenúan la radiación solar en los ojos, pero no reducen la fatiga mental ni cardiorrespiratoria por hipoxia."
+      },
+      {
+        "text": "Suspender de forma definitiva el uso de todo tipo de maquinaria pesada en la unidad minera.",
+        "isCorrect": false,
+        "rationale": "Representa una eliminación inviable de la actividad productiva en lugar de una adecuada regulación organizativa del turno."
+      }
+    ],
+    "hint": "Piense en medidas organizativas que modifiquen la duración o distribución del tiempo de exposición del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la prevención de riesgos en su origen, ¿cuál es la responsabilidad directa del trabajador durante sus labores diarias según la normativa legal?",
+    "opciones": [
+      {
+        "text": "Reportar condiciones e incidentes inseguros, cumplir los procedimientos operativos y participar en la identificación de peligros.",
+        "isCorrect": true,
+        "rationale": "Define la contribución proactiva indispensable del trabajador en campo para retroalimentar el sistema de seguridad y operar bajo norma."
+      },
+      {
+        "text": "Elaborar los planes de mantenimiento preventivo y correctivo de la maquinaria pesada de la empresa.",
+        "isCorrect": false,
+        "rationale": "La elaboración de planes de mantenimiento es competencia del área técnica y de ingeniería asignada por el empleador."
+      },
+      {
+        "text": "Autorizar y aprobar el presupuesto económico del plan anual de seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "La aprobación de asignaciones presupuestarias corresponde a la alta gerencia del titular minero."
+      },
+      {
+        "text": "Determinar de forma autónoma qué EPP utilizar sin considerar la matriz IPERC ni el estándar corporativo.",
+        "isCorrect": false,
+        "rationale": "El uso de EPP debe alinearse estrictamente con las especificaciones técnicas del IPERC y las directrices del área de seguridad."
+      },
+      {
+        "text": "Asumir el financiamiento de las auditorías externas exigidas por la autoridad competente.",
+        "isCorrect": false,
+        "rationale": "Los costos de auditorías, inspecciones e implementación de medidas son asumidos en su totalidad por la empresa."
+      }
+    ],
+    "hint": "El trabajador actúa como un agente activo en el reporte de condiciones, cumplimiento de estándares y consulta de peligros.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Por qué la exigencia de un Permiso Escrito para Trabajos de Alto Riesgo (PETAR) se clasifica operativamente como un control administrativo?",
+    "opciones": [
+      {
+        "text": "Es un mecanismo documental de autorización e inspección previa que asegura el cumplimiento de controles antes de ejecutar una tarea crítica.",
+        "isCorrect": true,
+        "rationale": "Actúa mediante reglas, listas de verificación y firmas que autorizan formalmente el inicio de actividades de alto impacto."
+      },
+      {
+        "text": "Modifica la estructura geológica o física del terreno para eliminar mecánicamente el peligro en la zona.",
+        "isCorrect": false,
+        "rationale": "Un documento no altera la naturaleza física o geotécnica de la roca ni confina físicamente la masa inestable."
+      },
+      {
+        "text": "Sustituye la obligación legal del empleador de capacitar al personal involucrado en la maniobra.",
+        "isCorrect": false,
+        "rationale": "La firma de un PETAR requiere previamente que los ejecutantes cuenten con las competencias y capacitaciones aprobadas."
+      },
+      {
+        "text": "Sirve como una barrera física encargada de absorber el impacto directo en caso de una caída de rocas.",
+        "isCorrect": false,
+        "rationale": "No constituye un dispositivo de retención mecánica, sino una pauta documental de control del comportamiento y del entorno."
+      },
+      {
+        "text": "Elimina automáticamente la presencia de gases tóxicos en el ambiente de trabajo sin necesidad de ventilación.",
+        "isCorrect": false,
+        "rationale": "El PETAR exige que se efectúen monitoreos y se active la ventilación, pero la hoja de papel no extrae químicamente los gases."
+      }
+    ],
+    "hint": "Su función radica en la autorización formal y verificación de estándares previos al inicio de la tarea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se articulan las etapas del ciclo de Deming (PHVA) dentro del Sistema de Gestión de Seguridad y Salud en el Trabajo según el Artículo 19 de la Ley 29783?",
+    "opciones": [
+      {
+        "text": "Planificar los objetivos de prevención, Hacer/implementar las políticas y controles, Verificar mediante monitoreo e indicadores, y Actuar aplicando la mejora continua.",
+        "isCorrect": true,
+        "rationale": "Estructura la mejora sistemática del SGSST guiando la gestión en una espiral continua de evaluación y corrección."
+      },
+      {
+        "text": "Presupuestar los gastos operativos, Hacer inspecciones informales, Verificar únicamente accidentes fatales y Autorizar la producción.",
+        "isCorrect": false,
+        "rationale": "Desvirtúa el enfoque preventivo centrándose solo en costos e inspecciones no reglamentadas."
+      },
+      {
+        "text": "Prevenir los riesgos imprevistos, Habilitar la entrega de EPP, Verificar los costos financieros y Aprobación del comité.",
+        "isCorrect": false,
+        "rationale": "Confunde las fases metodológicas del ciclo con acciones operativas puntuales y revisiones presupuestarias."
+      },
+      {
+        "text": "Proyectar metas productivas, Homologar empresas contratistas, Valorar costos de operación y Auditar externamente.",
+        "isCorrect": false,
+        "rationale": "Centra las etapas en la productividad y contrataciones sin contemplar la prevención de salud y seguridad."
+      },
+      {
+        "text": "Planificar sanciones disciplinarias, Hacer despidos preventivos, Verificar asistencias y Actualizar contratos laborales.",
+        "isCorrect": false,
+        "rationale": "Sustituye el ciclo de gestión de seguridad por un enfoque puramente punitivo y de administración de recursos humanos."
+      }
+    ],
+    "hint": "Relacione la secuencia lógica de fijar objetivos, aplicar medidas, medir desempeño y ajustar los procesos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes principios rectores establecidos en la Ley 29783 aplican directamente a la gestión del SGSST en el sector minero?",
+    "opciones": [
+      {
+        "text": "Principio de Prevención, mediante el cual el empleador garantiza condiciones que protejan la vida y salud de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Constituye el pilar central que obliga a la empresa a implementar medidas previas para evitar daños en la salud."
+      },
+      {
+        "text": "Principio de Primacía de la Realidad, donde prevalecen los hechos constatados en la práctica sobre los documentos formales.",
+        "isCorrect": true,
+        "rationale": "Obliga a que la seguridad sea efectiva en el campo y no se reduzca a meros registros de papel ante discrepancias."
+      },
+      {
+        "text": "Principio de Cooperación, que promueve el trabajo coordinado entre el Estado, empleadores y trabajadores.",
+        "isCorrect": true,
+        "rationale": "Asegura que la gestión sea participativa involucrando activamente a todos los actores del sistema laboral."
+      },
+      {
+        "text": "Principio de Exoneración Total, que deslinda de responsabilidad legal al empleador ante cualquier siniestro.",
+        "isCorrect": false,
+        "rationale": "Es un postulado falso; la ley consagra la responsabilidad del empleador en la gestión y prevención de riesgos."
+      },
+      {
+        "text": "Principio de Cero Inversión, que prohíbe la asignación de presupuesto a capacitaciones en seguridad laboral.",
+        "isCorrect": false,
+        "rationale": "Contraviene la obligación legal de destinar recursos y realizar capacitaciones mínimas en el SGSST."
+      }
+    ],
+    "hint": "Recuerde los pilares legales que exigen protección, prevalencia de hechos reales y trabajo coordinado entre partes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es un requisito fundamental respecto al liderazgo y formalización de la Política del Sistema de Gestión de Seguridad y Salud en el Trabajo en una empresa minera?",
+    "opciones": [
+      {
+        "text": "Debe ser redactada acorde a la realidad de la empresa, estar firmada por la alta gerencia y ser difundida a todos los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Refleja el compromiso formal del máximo nivel corporativo y asegura que las directrices de seguridad sean conocidas por toda la fuerza laboral."
+      },
+      {
+        "text": "Debe redactarse mediante copia genérica de otra organización y mantenerse en custodia confidencial por el área legal.",
+        "isCorrect": false,
+        "rationale": "La política debe responder al principio de realidad de la unidad minera y su difusión pública obligatoria es exigida por ley."
+      },
+      {
+        "text": "Requiere de la aprobación previa de la entidad fiscalizadora antes de poder ser comunicada internamente.",
+        "isCorrect": false,
+        "rationale": "La redacción y aprobación de la política es responsabilidad directa de la alta gerencia de la empresa, supervisada luego en fiscalizaciones."
+      },
+      {
+        "text": "Debe conservarse en reserva para evitar que el personal conozca los compromisos asumidos por la empresa.",
+        "isCorrect": false,
+        "rationale": "Ocultar la política destruye el principio de información y transmisión de la cultura preventiva en la organización."
+      },
+      {
+        "text": "Puede ser modificada de forma unilateral por el supervisor de turno sin autorización de la gerencia general.",
+        "isCorrect": false,
+        "rationale": "Su emisión y modificación es potestad exclusiva de la alta dirección, garantizando el respaldo gerencial del SGSST."
+      }
+    ],
+    "hint": "La política requiere un compromiso formal del máximo nivel jerárquico y su difusión a toda la organización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el funcionamiento del SGSST en una unidad minera, ¿cuál de las siguientes acciones corresponde específicamente a la fase de 'Verificación'?",
+    "opciones": [
+      {
+        "text": "Realizar auditorías internas, monitoreos de agentes ambientales y medir indicadores de desempeño (KPIs).",
+        "isCorrect": true,
+        "rationale": "Permite comprobar técnicamente el grado de cumplimiento de los objetivos planificados e identificar desvíos en el sistema."
+      },
+      {
+        "text": "Definir la visión estratégica corporativa y redactar los compromisos iniciales del empleador.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la fase inicial de Planificación del SGSST."
+      },
+      {
+        "text": "Comprar los equipos de protección personal y proceder a su distribución entre los operarios.",
+        "isCorrect": false,
+        "rationale": "Representa la fase de Hacer/Implementar dentro del ciclo de gestión."
+      },
+      {
+        "text": "Diseñar los planos de ingeniería estructural para la instalación de los ventiladores principales.",
+        "isCorrect": false,
+        "rationale": "Esta tarea forma parte del diseño técnico en la etapa de Planificación."
+      },
+      {
+        "text": "Clausurar de forma definitiva la operación minera por decisión estratégica de la junta de accionistas.",
+        "isCorrect": false,
+        "rationale": "Es una decisión corporativa y operativa que trasciende la medición del desempeño del SGSST."
+      }
+    ],
+    "hint": "Esta etapa involucra la revisión objetiva, seguimiento de métricas y evaluación del cumplimiento de metas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se diferencia fundamentalmente una medida de prevención de una medida de protección dentro del SGSST?",
+    "opciones": [
+      {
+        "text": "La medida de prevención busca evitar que el riesgo se materialice, mientras que la de protección minimiza el impacto del daño si ocurre el evento.",
+        "isCorrect": true,
+        "rationale": "La prevención actúa antes para impedir el accidente, mientras que la protección interviene al momento del evento para atenuar la lesión."
+      },
+      {
+        "text": "La medida de prevención aplica únicamente en áreas administrativas, mientras que la de protección es de uso exclusivo en socavón.",
+        "isCorrect": false,
+        "rationale": "Ambas tipologías de medidas se aplican en todas las áreas de la mina según la naturaleza de los peligros evaluados."
+      },
+      {
+        "text": "La medida de prevención es opcional para la empresa, mientras que la de protección constituye la única exigida por ley.",
+        "isCorrect": false,
+        "rationale": "La Ley 29783 exige prioritariamente la prevención de los riesgos como obligación irrenunciable del empleador."
+      },
+      {
+        "text": "La medida de prevención consiste en la entrega de EPP, mientras que la de protección se fundamenta en la realización de talleres.",
+        "isCorrect": false,
+        "rationale": "Invierte los conceptos: los EPP son medidas de protección frente a la exposición y los talleres aportan a la prevención de conductas."
+      },
+      {
+        "text": "La medida de prevención es ejecutada por el Estado, mientras que la de protección recae sobre el trabajador individual.",
+        "isCorrect": false,
+        "rationale": "El empleador es el responsable de diseñar e implementar tanto las medidas preventivas como las de protección en el centro laboral."
+      }
+    ],
+    "hint": "Observe si la medida busca evitar la ocurrencia del evento o atenuar las consecuencias si el evento llega a suceder.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el principio de gestión integral del SGSST, ¿cómo debe articularse el sistema de seguridad y salud en el trabajo dentro de la estructura de la empresa minera?",
+    "opciones": [
+      {
+        "text": "Debe integrarse plenamente con los demás sistemas de gestión de la organización, como el ambiental, de calidad y administrativo.",
+        "isCorrect": true,
+        "rationale": "Evita esfuerzos aislados haciendo que la seguridad forme parte natural de las decisiones operativas, financieras y de gestión general."
+      },
+      {
+        "text": "Debe funcionar como un departamento autónomo e aislado, sin vinculación con las áreas productivas ni financieras.",
+        "isCorrect": false,
+        "rationale": "Aislar la seguridad genera inconsistencias con las metas operativas y debilita la cultura preventiva en campo."
+      },
+      {
+        "text": "Debe peditarse de forma exclusiva a las metas de producción diaria, omitiendo restricciones de seguridad.",
+        "isCorrect": false,
+        "rationale": "Subordinar la seguridad a la velocidad de producción vulnera el principio de protección de la vida exigido legalmente."
+      },
+      {
+        "text": "Debe ser gestionado externamente por una consultora privada sin presencia ni seguimiento físico en la mina.",
+        "isCorrect": false,
+        "rationale": "Requiere la participación directa y liderazgo del titular de la empresa y supervisión constante in situ."
+      },
+      {
+        "text": "Debe activarse únicamente durante las inspecciones de la autoridad competente y desactivarse en la operación normal.",
+        "isCorrect": false,
+        "rationale": "El SGSST es un sistema de funcionamiento continuo e ininterrumpido en la rutina operativa."
+      }
+    ],
+    "hint": "El SGSST no debe funcionar como una isla, sino integrarse con las demás áreas operativas y estratégicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según los artículos 98 y 99 del Decreto Supremo 024-2016-EM, ¿qué exigencia técnica recae sobre la elaboración y revisión de los Procedimientos Escritos de Trabajo Seguro (PETS) en actividades críticas?",
+    "opciones": [
+      {
+        "text": "Deben elaborarse con la participación de trabajadores y supervisores, y revisarse periódicamente o ante cambios en procesos y normativas.",
+        "isCorrect": true,
+        "rationale": "Garantiza que la pauta escrita recoja el conocimiento directo del operario en campo y permanezca adaptada a las variaciones del entorno."
+      },
+      {
+        "text": "Deben redactarse exclusivamente por consultores externos sin participación del personal operativo de la mina.",
+        "isCorrect": false,
+        "rationale": "Excluir a los trabajadores vulnera la exigencia de participación efectiva fijada en el artículo 98 del reglamento minero."
+      },
+      {
+        "text": "Tienen vigencia indefinida y no pueden ser modificados una vez que reciben la firma del gerente general.",
+        "isCorrect": false,
+        "rationale": "El artículo 99 exige su revisión periódica y actualización inmediata obligatoria ante incidentes o cambios en la tarea."
+      },
+      {
+        "text": "Sustituyen de forma permanente la obligación legal de elaborar y actualizar la matriz IPERC base.",
+        "isCorrect": false,
+        "rationale": "Los PETS derivan de la matriz IPERC para estandarizar tareas específicas, sin anular la matriz de riesgos general."
+      },
+      {
+        "text": "Aplican únicamente para trabajadores que se encuentran bajo contratos de entrenamiento o prácticas temporales.",
+        "isCorrect": false,
+        "rationale": "Los PETS son de cumplimiento estricto y obligatorio para todo el personal, independientemente de su modalidad de contratación."
+      }
+    ],
+    "hint": "La norma exige representatividad en su elaboración y actualización ante cambios operativos o normativos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al diseñar un control de ingeniería para mitigar la acumulación de gases tóxicos en socavón, ¿qué implica que el diseño cumpla con los principios de adaptabilidad, efectividad y sostenibilidad?",
+    "opciones": [
+      {
+        "text": "Que sea ajustable a variaciones operativas/geológicas, reduzca el riesgo al nivel más bajo posible y sea viable a largo plazo.",
+        "isCorrect": true,
+        "rationale": "Combina la capacidad de respuesta a cambios del entorno, la mitigación real del peligro y su viabilidad técnica/económica continua."
+      },
+      {
+        "text": "Que utilice materiales descartables de bajo costo, no requiera presupuesto y se aplique en una sola oportunidad.",
+        "isCorrect": false,
+        "rationale": "La falta de recursos y el carácter descartable comprometen la durabilidad y la efectividad del control en minería."
+      },
+      {
+        "text": "Que incremente la velocidad de extracción de mineral sin considerar la fatiga o sobrecarga de los operarios.",
+        "isCorrect": false,
+        "rationale": "Priorizar la velocidad sobre el factor humano vulnera el concepto de efectividad y sostenibilidad de la seguridad."
+      },
+      {
+        "text": "Que elimine completamente la necesidad de contar con procedimientos escritos y supervisión en campo.",
+        "isCorrect": false,
+        "rationale": "Los controles de ingeniería no suprimen la exigencia de mantener controles administrativos complementarios."
+      },
+      {
+        "text": "Que dependa exclusivamente del criterio individual e imprevisto del trabajador presente en el turno.",
+        "isCorrect": false,
+        "rationale": "Los controles de ingeniería deben ser sistemas estandarizados que no dependan del comportamiento subjetivo del operario."
+      }
+    ],
+    "hint": "El diseño debe responder a fluctuaciones del entorno, lograr una reducción sustancial del riesgo y perdurar en el tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes factores deben integrarse técnicamente durante la etapa de diseño de medidas de control de riesgos mineros?",
+    "opciones": [
+      {
+        "text": "Factores ambientales, tales como presencia de polvo, humedad, calidad de aire y temperaturas extremas.",
+        "isCorrect": true,
+        "rationale": "Asegura que el dispositivo o sistema resista las condiciones agresivas específicas del entorno minero."
+      },
+      {
+        "text": "Factores tecnológicos, mediante la incorporación de sensores de monitoreo en tiempo real y sistemas automatizados.",
+        "isCorrect": true,
+        "rationale": "Aporta precisión en la detección temprana de anomalías e independiza la medición del error humano directo."
+      },
+      {
+        "text": "Factores humanos, garantizando que los controles sean compatibles con las capacidades físicas y psicológicas del personal.",
+        "isCorrect": true,
+        "rationale": "Evita que la medida diseñada genere ergonomía inadecuada, sobrecarga mental o mayor fatiga en el trabajador."
+      },
+      {
+        "text": "Factores de ocultamiento, que permitan disimular fallas de infraestructura durante las auditorías oficiales.",
+        "isCorrect": false,
+        "rationale": "Es una práctica ilícita y peligrosa que atenta contra el principio de verdad y prevención de accidentes."
+      },
+      {
+        "text": "Factores de omisión, que eliminen el uso de equipos de protección personal en áreas clasificadas como críticas.",
+        "isCorrect": false,
+        "rationale": "Omitir la protección en áreas críticas expone de manera inadmisible al personal a los riesgos residuales del área."
+      }
+    ],
+    "hint": "Considere las variables del entorno natural, las herramientas tecnológicas disponibles y los límites psico-físicos humanos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la secuencia correcta de acciones requeridas para garantizar la correcta implementación de un control de riesgo diseñado en una unidad minera?",
+    "opciones": [
+      {
+        "text": "Planificación de la implementación -> Asignación de recursos -> Capacitación del personal -> Supervisión y seguimiento.",
+        "isCorrect": true,
+        "rationale": "Sigue el proceso ordenado que va desde la previsión técnica y presupuestaria hasta la preparación del operario y la verificación en campo."
+      },
+      {
+        "text": "Adquisición de insumos -> Aplicación de sanciones -> Cancelación de PETS -> Redacción de la política.",
+        "isCorrect": false,
+        "rationale": "Mezcla decisiones punitivas y eliminación de estándares sin una secuencia lógica de implementación."
+      },
+      {
+        "text": "Inicio de la operación -> Evaluación de accidentes -> Diseño del control -> Solicitud de presupuesto.",
+        "isCorrect": false,
+        "rationale": "Plantea un ciclo reactivo que espera la ocurrencia de siniestros antes de planificar e invertir en controles."
+      },
+      {
+        "text": "Entrenamiento de trabajadores -> Eliminación de la supervisión -> Retiro de EPP -> Archivo de registros.",
+        "isCorrect": false,
+        "rationale": "Eliminar la supervisión y retirar los EPP destruye la efectividad operacional del control en la práctica."
+      },
+      {
+        "text": "Redacción del PETS -> Paro de labores -> Despido de operarios -> Auditoría externa.",
+        "isCorrect": false,
+        "rationale": "Incluye decisiones administrativas desproporcionadas que no corresponden al despliegue técnico de un control."
+      }
+    ],
+    "hint": "Ordene cronológicamente desde la programación inicial y la asignación de medios hasta la instrucción del personal y el seguimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo principal de realizar inspecciones regulares como método de revisión de controles de seguridad ya implementados?",
+    "opciones": [
+      {
+        "text": "Comprobar in situ el estado, operatividad y cumplimiento efectivo de las medidas de control en el entorno de trabajo.",
+        "isCorrect": true,
+        "rationale": "Verifica directamente en campo que las barreras físicas y administrativas se mantengan activas y no hayan sufrido desgaste o deterioro."
+      },
+      {
+        "text": "Cumplir un requisito puramente burocrático sin generar reportes ni compromisos de acción correctiva.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones pierden su utilidad preventiva si no alimentan el ciclo de corrección y mejora continua."
+      },
+      {
+        "text": "Sustituir la ejecución de los planes de mantenimiento preventivo de los equipos de transporte.",
+        "isCorrect": false,
+        "rationale": "La inspección detecta fallas pero no reemplaza las intervenciones mecánicas programadas por mantenimiento."
+      },
+      {
+        "text": "Modificar de forma unilateral la Política de Seguridad y Salud en el Trabajo aprobada por la alta dirección.",
+        "isCorrect": false,
+        "rationale": "Las revisiones de política requieren un proceso de evaluación estratégica gerencial y no cambian mediante una inspección de rutina."
+      },
+      {
+        "text": "Aplicar multas económicas directas a la empresa minera por iniciativa del comité de seguridad.",
+        "isCorrect": false,
+        "rationale": "El comité emite recomendaciones y supervisa la seguridad, pero no impone sanciones financieras a la empresa."
+      }
+    ],
+    "hint": "Se busca verificar directamente en el lugar de trabajo el estado físico y la operatividad real de los controles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al revisar la efectividad de un sistema de sostenimiento en un túnel minero, se detecta un riesgo residual de caída de pequeñas rocas. ¿Qué acción corresponde según el enfoque de mejora continua?",
+    "opciones": [
+      {
+        "text": "Evaluar si el riesgo residual está en un nivel aceptable o implementar controles complementarios (como mallas y EPP) para mitigarlo.",
+        "isCorrect": true,
+        "rationale": "Reconoce la presencia del riesgo remanente tras el control principal y añade medidas secundarias para garantizar la seguridad completa."
+      },
+      {
+        "text": "Ignorar el hallazgo dado que el control principal ya absorbe la mayor parte del peligro de colapso de la galería.",
+        "isCorrect": false,
+        "rationale": "Desatender los riesgos residuales expone a los trabajadores a lesiones por impactos menores o fallas no detectadas."
+      },
+      {
+        "text": "Desarmar e inutilizar por completo toda la infraestructura de ingeniería instalada en el túnel.",
+        "isCorrect": false,
+        "rationale": "Retirar la infraestructura principal incrementa drásticamente el peligro de colapso masivo en el área."
+      },
+      {
+        "text": "Detener definitivamente las operaciones mineras de la empresa sin plazo determinado para su reapertura.",
+        "isCorrect": false,
+        "rationale": "Constituye una decisión desproporcionada en lugar de ajustar los controles existentes mediante la mejora continua."
+      },
+      {
+        "text": "Desactivar los sensores de monitoreo geotécnico para no registrar variaciones en los informes de seguridad.",
+        "isCorrect": false,
+        "rationale": "Ocultar o deshabilitar mediciones viola el principio de transparencia y pone en grave peligro a la brigada de trabajo."
+      }
+    ],
+    "hint": "Si el control principal deja una pequeña fracción de riesgo, deben integrarse medidas complementarias para mitigarla.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes metodologías son adecuadas para revisar y evaluar de forma continua si los controles de seguridad implementados en una mina siguen siendo eficaces?",
+    "opciones": [
+      {
+        "text": "Ejecución de auditorías internas periódicas al sistema de gestión y sus procedimientos.",
+        "isCorrect": true,
+        "rationale": "Examina formalmente la consistencia documental y operativa de los controles frente a los estándares fijados."
+      },
+      {
+        "text": "Análisis exhaustivo de incidentes, incidentes peligrosos y accidentes ocurridos en la operación.",
+        "isCorrect": true,
+        "rationale": "Aporta evidencias valiosas sobre fallas imprevistas en los controles actuales para prevenir su repetición."
+      },
+      {
+        "text": "Inspecciones regulares y continuas del estado y funcionamiento de los equipos e instalaciones.",
+        "isCorrect": true,
+        "rationale": "Proporciona datos inmediatos en el terreno sobre el estado físico y desempeño real de las barreras de protección."
+      },
+      {
+        "text": "Anulación definitiva de las reuniones del comité de seguridad y salud en el trabajo.",
+        "isCorrect": false,
+        "rationale": "Suprimir las reuniones del comité elimina el canal principal de revisión participativa y supervisión de los trabajadores."
+      },
+      {
+        "text": "Eliminación de los registros de accidentabilidad e indicadores clave de desempeño (KPIs).",
+        "isCorrect": false,
+        "rationale": "Eliminar registros impide medir objetivamente la evolución del desempeño en seguridad y realizar mejoras."
+      }
+    ],
+    "hint": "Incluya mecanismos de auditoría formal, aprendizaje de fallas o eventos pasados e inspecciones continuas en campo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el marco legal peruano en seguridad minera, ¿cómo se define el concepto de 'Peligro' en la matriz IPERC?",
+    "opciones": [
+      {
+        "text": "Toda fuente, situación o característica intrínseca con potencial de causar daño a las personas, equipos, procesos y medio ambiente.",
+        "isCorrect": true,
+        "rationale": "El peligro representa la condición física, material o situación intrínseca que posee la capacidad o potencial latente de generar lesiones o pérdidas."
+      },
+      {
+        "text": "La probabilidad combinada con la severidad de que un evento no deseado ocurra en el lugar de trabajo.",
+        "isCorrect": false,
+        "rationale": "Esta definición corresponde al concepto de riesgo y no a la fuente o situación que origina el daño."
+      },
+      {
+        "text": "El resultado final de implementar una medida de control de ingeniería en una labor crítica.",
+        "isCorrect": false,
+        "rationale": "La implementación de controles busca mitigar el riesgo, no define la fuente u origen del peligro."
+      },
+      {
+        "text": "La cantidad de accidentes registrados en una operación minera durante un periodo anual determinado.",
+        "isCorrect": false,
+        "rationale": "El registro de accidentes refleja los índices de siniestralidad o desempeño en seguridad, no la definición conceptual de peligro."
+      },
+      {
+        "text": "El procedimiento administrativo utilizado para sancionar el incumplimiento de normas de seguridad.",
+        "isCorrect": false,
+        "rationale": "Las sanciones administrativas corresponden a medidas disciplinarias laborales, no a una fuente o condición con potencial de daño."
+      }
+    ],
+    "hint": "Piensa en aquello presente en el entorno de trabajo que tiene la capacidad inherente de provocar una lesión o deterioro.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el Artículo 49 de la Ley 29783 (Ley de Seguridad y Salud en el Trabajo), ¿cuál es una obligación directa del empleador?",
+    "opciones": [
+      {
+        "text": "Identificar los peligros y evaluar los riesgos en cada puesto de trabajo de manera obligatoria.",
+        "isCorrect": true,
+        "rationale": "La legislación establece la obligatoriedad del empleador de realizar la identificación de peligros y evaluación de riesgos en todos los puestos laborales."
+      },
+      {
+        "text": "Delegar la responsabilidad legal de la seguridad exclusivamente en los contratistas externos.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad de la gestión de la seguridad es inalienable del empleador y no se puede deslindar totalmente en terceros."
+      },
+      {
+        "text": "Realizar la matriz IPERC únicamente cuando se presente una fiscalización de las autoridades.",
+        "isCorrect": false,
+        "rationale": "El proceso IPERC es una herramienta preventiva continua e inherente al sistema de gestión, no un trámite reactivo de inspección."
+      },
+      {
+        "text": "Eximir del uso de equipos de protección personal al personal que realiza labores administrativas.",
+        "isCorrect": false,
+        "rationale": "Aunque las medidas varían según el puesto, el Artículo 49 se centra específicamente en la obligación de identificar peligros y evaluar riesgos en el trabajo."
+      },
+      {
+        "text": "Actualizar la matriz IPERC únicamente si ocurre una fatalidad dentro de las instalaciones.",
+        "isCorrect": false,
+        "rationale": "La actualización debe ser continua o al menos anual, así como ante cualquier cambio en los procesos o infraestructura, no solo tras accidentes fatales."
+      }
+    ],
+    "hint": "Considera el deber genérico y fundamental de evaluación que exige la ley para proteger a los trabajadores en sus labores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos constituyen los componentes fundamentales y secuenciales de la metodología IPERC?",
+    "opciones": [
+      {
+        "text": "Identificación de peligros.",
+        "isCorrect": true,
+        "rationale": "Constituye la primera fase del proceso, orientada a reconocer visualmente y documentar las fuentes con potencial de daño."
+      },
+      {
+        "text": "Evaluación de riesgos.",
+        "isCorrect": true,
+        "rationale": "Representa el segundo paso secuencial donde se analiza la probabilidad y la severidad asociadas al peligro previamente identificado."
+      },
+      {
+        "text": "Establecimiento de medidas de control.",
+        "isCorrect": true,
+        "rationale": "Es la etapa final del proceso metódico destinada a aplicar acciones que reduzcan o eliminen los niveles de riesgo cuantificados."
+      },
+      {
+        "text": "Cálculo de la rentabilidad financiera del proyecto.",
+        "isCorrect": false,
+        "rationale": "La evaluación financiera forma parte de la gestión económica del negocio y no de la metodología técnica de seguridad IPERC."
+      },
+      {
+        "text": "Sanción penal directa por omisión de fiscalización.",
+        "isCorrect": false,
+        "rationale": "Las consecuencias punitivas legales no forman parte de los componentes metodológicos para la gestión de riesgos en planta o mina."
+      }
+    ],
+    "hint": "Recuerda el significado exacto de las siglas que nombran a esta herramienta fundamental de gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Decreto Supremo 024-2016-EM para el sector minero, ¿cuál es el objetivo principal de aplicar un 'IPERC Continuo'?",
+    "opciones": [
+      {
+        "text": "Evaluar los peligros y riesgos en tiempo real antes y durante la ejecución de labores diarias dinámicas o de alto riesgo.",
+        "isCorrect": true,
+        "rationale": "El IPERC Continuo es una herramienta práctica orientada a la identificación diaria y continua de condiciones cambiantes en el frente de trabajo."
+      },
+      {
+        "text": "Reemplazar por completo la matriz IPERC Base de la empresa minera.",
+        "isCorrect": false,
+        "rationale": "El IPERC Continuo complementa la matriz base pero no la invalida ni la sustituye formalmente dentro del sistema documentario."
+      },
+      {
+        "text": "Servir como un reporte exclusivo para la contratación de seguros contra accidentes de trabajo.",
+        "isCorrect": false,
+        "rationale": "Su finalidad es operativa y preventiva, orientada directamente a la protección del trabajador en el campo y no a trámites comerciales."
+      },
+      {
+        "text": "Registrar la asistencia y la puntualidad diaria del personal de guardia.",
+        "isCorrect": false,
+        "rationale": "El control de asistencia es una función administrativa de recursos humanos sin relación directa con el análisis técnico de seguridad."
+      },
+      {
+        "text": "Elaborar la política anual de seguridad de la corporación.",
+        "isCorrect": false,
+        "rationale": "La política de seguridad es una declaración de alto nivel elaborada por la gerencia, no una herramienta operativa de campo."
+      }
+    ],
+    "hint": "Piensa en una herramienta que el trabajador diligencia diariamente en su zona operativa frente a condiciones cambiantes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuáles son las dos variables clave que se combinan en la matriz de evaluación para determinar el 'Nivel de Riesgo'?",
+    "opciones": [
+      {
+        "text": "Probabilidad y Severidad.",
+        "isCorrect": true,
+        "rationale": "El nivel de riesgo se cuantifica mediante la interrelación entre la frecuencia o posibilidad de ocurrencia y la gravedad del daño potencial."
+      },
+      {
+        "text": "Costo y Tiempo de ejecución.",
+        "isCorrect": false,
+        "rationale": "Estas variables corresponden a la planificación presupuestal y de cronogramas en la gestión de proyectos."
+      },
+      {
+        "text": "Capacitación y Experiencia del operador.",
+        "isCorrect": false,
+        "rationale": "Aunque influyen en el índice de personas expuestas o competencias, no son los dos ejes primarios de la matriz de riesgo."
+      },
+      {
+        "text": "Profundidad de la mina y Temperatura ambiental.",
+        "isCorrect": false,
+        "rationale": "Son factores ambientales específicos que generan peligros, pero no constituyen los ejes matemáticos de evaluación del riesgo."
+      },
+      {
+        "text": "Número de trabajadores y Marca de la maquinaria.",
+        "isCorrect": false,
+        "rationale": "Representan datos operativos específicos y no las variables fundamentales de cálculo de riesgo de la norma."
+      }
+    ],
+    "hint": "Enfócate en la frecuencia con la que puede ocurrir un evento no deseado y la gravedad del daño que este provocaría.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Quiénes deben participar activamente en la elaboración, validación o revisión de las matrices IPERC según la normativa de seguridad?",
+    "opciones": [
+      {
+        "text": "Los trabajadores del área específica.",
+        "isCorrect": true,
+        "rationale": "Su experiencia directa en el puesto de trabajo es fundamental para identificar peligros no evidentes para el personal administrativo."
+      },
+      {
+        "text": "El responsable o especialista del área de Seguridad y Salud Ocupacional (SSO).",
+        "isCorrect": true,
+        "rationale": "Aporta el soporte técnico y metodológico para estructurar y gerenciar la matriz conforme a los estándares legales."
+      },
+      {
+        "text": "El Comité o Supervisor de Seguridad y Salud en el Trabajo para su revisión/aprobación.",
+        "isCorrect": true,
+        "rationale": "Representa el órgano bipartito que evalúa y aprueba formalmente las herramientas del sistema de gestión."
+      },
+      {
+        "text": "Proveedores externos de alimentos sin relación con el proceso evaluado.",
+        "isCorrect": false,
+        "rationale": "Solo deben intervenir las personas involucradas directamente en los procesos operativos evaluados o la gestión de SST."
+      },
+      {
+        "text": "Inspectores de fiscalización ambiental exclusivamente.",
+        "isCorrect": false,
+        "rationale": "Aunque las autoridades supervisan el cumplimiento de normas, la elaboración interna corresponde a la organización y sus trabajadores."
+      }
+    ],
+    "hint": "Piensa en el principio de participación que involucra tanto a la línea operativa como a los supervisores y comités de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste esencialmente el principio de 'Prevención de riesgos en su origen'?",
+    "opciones": [
+      {
+        "text": "En intervenir y controlar los peligros en el lugar exacto donde se generan antes de que puedan impactar al trabajador.",
+        "isCorrect": true,
+        "rationale": "Busca abordar la fuente raíz de la condición insegura de forma temprana para evitar la exposición o materialización del daño."
+      },
+      {
+        "text": "En entregar un equipo de protección personal adicional cuando el peligro ya se ha manifestado.",
+        "isCorrect": false,
+        "rationale": "El uso de EPP actúa sobre el receptor del riesgo y no en la fuente original del peligro."
+      },
+      {
+        "text": "En atender medicamente al trabajador accidentado en la enfermería de la mina de manera inmediata.",
+        "isCorrect": false,
+        "rationale": "La atención médica es una medida reactiva de auxilio posterior al evento y no una acción preventiva en la fuente."
+      },
+      {
+        "text": "En indemnizar económicamente a la familia del trabajador tras la ocurrencia de un siniestro.",
+        "isCorrect": false,
+        "rationale": "La indemnización compensa las consecuencias de un daño ocurrido, situándose completamente fuera del ámbito preventivo."
+      },
+      {
+        "text": "En adquirir pólizas de seguro de alta cobertura ante pérdidas materiales.",
+        "isCorrect": false,
+        "rationale": "La transferencia financiera del riesgo no elimina ni previene la causa física que origina el peligro operativo."
+      }
+    ],
+    "hint": "Orientado a neutralizar o abordar la causa inicial o fuente del peligro antes de recurrir a la protección del usuario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la jerarquía de controles de riesgo, ¿cuál es el nivel considerado como la última barrera de defensa y el menos efectivo por no eliminar el peligro?",
+    "opciones": [
+      {
+        "text": "Equipos de Protección Personal (EPP).",
+        "isCorrect": true,
+        "rationale": "Los EPP solo reducen o mitigan el efecto del impacto sobre el trabajador, manteniendo la presencia activa del peligro en el entorno."
+      },
+      {
+        "text": "Eliminación del peligro.",
+        "isCorrect": false,
+        "rationale": "La eliminación es la medida de mayor efectividad dentro de la jerarquía al remover el peligro al 100%."
+      },
+      {
+        "text": "Controles de ingeniería.",
+        "isCorrect": false,
+        "rationale": "Los controles de ingeniería se ubican en un nivel intermedio-alto de eficacia al aislar físicamente la fuente del peligro."
+      },
+      {
+        "text": "Sustitución de insumos.",
+        "isCorrect": false,
+        "rationale": "La sustitución reemplaza una condición peligrosa por otra de menor nivel de riesgo, siendo más efectiva que las medidas administrativas o EPP."
+      },
+      {
+        "text": "Controles administrativos y señalización.",
+        "isCorrect": false,
+        "rationale": "Aunque dependen del comportamiento humano, se posicionan jerárquicamente por encima de la protección individual (EPP)."
+      }
+    ],
+    "hint": "Se refiere a la implementación de elementos de uso individual portados por el trabajador para aminorar la severidad de una lesión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Según la Ley 29783, ¿cuáles de las siguientes son obligaciones fundamentales a cargo del empleador en materia de seguridad?",
+    "opciones": [
+      {
+        "text": "Garantizar un ambiente laboral seguro que proteja la integridad física y mental de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Es el deber rector principal de la ley, orientado a la prevención de accidentes y enfermedades ocupacionales en el entorno de trabajo."
+      },
+      {
+        "text": "Proporcionar capacitaciones oportunas y periódicas en seguridad según los riesgos específicos de cada puesto.",
+        "isCorrect": true,
+        "rationale": "El empleador está obligado a instruir y formar de manera continua a sus colaboradores para el desempeño seguro de sus labores."
+      },
+      {
+        "text": "Entregar equipos de protección personal adecuados y sin costo alguno para el trabajador.",
+        "isCorrect": true,
+        "rationale": "La legislación prohíbe trasladar el costo de los elementos de seguridad individual o colectiva a los trabajadores."
+      },
+      {
+        "text": "Cobrar una tarifa mensual a los empleados por el mantenimiento del sistema de ventilación.",
+        "isCorrect": false,
+        "rationale": "Los costos de implementación y mantenimiento de las medidas de seguridad corren enteramente por cuenta del empleador."
+      },
+      {
+        "text": "Transferir la responsabilidad penal de los accidentes de trabajo a los supervisores de turno.",
+        "isCorrect": false,
+        "rationale": "Las responsabilidades legales del empleador no pueden ser traspasadas ni anuladas mediante acuerdos internos."
+      }
+    ],
+    "hint": "Selecciona las opciones que reflejan compromisos de protección, dotación gratuita y formación por parte de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Respecto a la entrega de Equipos de Protección Personal (EPP), ¿qué exigencia normativa reciente se destaca en las modificatorias de la legislación de SST?",
+    "opciones": [
+      {
+        "text": "Que todos los EPP entregados deben contar de manera obligatoria con homologación y certificación de calidad.",
+        "isCorrect": true,
+        "rationale": "La norma exige que los EPP cumplan con estándares y certificaciones nacionales e internacionales para garantizar su eficacia protectora."
+      },
+      {
+        "text": "Que los trabajadores deben adquirir sus propios EPP y solicitar un reembolso posterior.",
+        "isCorrect": false,
+        "rationale": "La entrega debe ser directa y provista directamente por el empleador desde el inicio de la relación laboral o actividad."
+      },
+      {
+        "text": "Que el uso de EPP certificados únicamente se aplica en trabajos de oficina o administrativos.",
+        "isCorrect": false,
+        "rationale": "El rigor técnico de certificación aplica críticamente a las operaciones de campo e industriales de alto riesgo."
+      },
+      {
+        "text": "Que la certificación del EPP sustituye la necesidad de realizar capacitaciones sobre su uso.",
+        "isCorrect": false,
+        "rationale": "La adquisición de un EPP certificado no exime al empleador de la obligación de entrenar al personal en su correcto uso y mantenimiento."
+      },
+      {
+        "text": "Que los EPP solo se deben inspeccionar cada cinco años tras su fabricación.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones de preuso e inspecciones periódicas de los EPP son continuas y deben responder a las pautas del fabricante."
+      }
+    ],
+    "hint": "Piensa en el requisito de validez técnica oficial que asegura que el elemento protector haya superado pruebas de resistencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de los 'Controles Administrativos' dentro de la jerarquía de control de riesgos?",
+    "opciones": [
+      {
+        "text": "Establecer procedimientos, reglas, rotación de turnos, señalización y capacitaciones para regular la conducta y exposición al trabajo.",
+        "isCorrect": true,
+        "rationale": "Los controles administrativos actúan sobre la organización del trabajo, estableciendo pautas operativas y de comportamiento para reducir la exposición al peligro."
+      },
+      {
+        "text": "Modificar físicamente la estructura geológica de la mina mediante barreras de concreto.",
+        "isCorrect": false,
+        "rationale": "La modificación física de estructuras u obras físicas corresponde a controles de ingeniería."
+      },
+      {
+        "text": "Eliminar por completo la presencia del peligro en el entorno de trabajo.",
+        "isCorrect": false,
+        "rationale": "El peligro permanece en el entorno; el control administrativo solo limita o reglamenta la forma en que las personas interactúan con él."
+      },
+      {
+        "text": "Reemplazar los productos químicos peligrosos por reactivos de agua destilada exclusivamente.",
+        "isCorrect": false,
+        "rationale": "La sustitución de insumos por alternativas menos peligrosas se clasifica formalmente como el nivel de sustitución."
+      },
+      {
+        "text": "Suministrar tapones auditivos y cascos de protección a la cuadrilla de trabajo.",
+        "isCorrect": false,
+        "rationale": "La provisión de indumentaria individual corresponde al nivel de Equipos de Protección Personal (EPP)."
+      }
+    ],
+    "hint": "Relacionado con la parte documental, instructivos, permisos de trabajo y entrenamiento de las personas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son las ventajas operativas y económicas de implementar la prevención de riesgos desde su origen en las operaciones mineras?",
+    "opciones": [
+      {
+        "text": "Reducción de costos derivados de accidentes, paralizaciones e indemnizaciones.",
+        "isCorrect": true,
+        "rationale": "Evitar la ocurrencia de eventos no deseados elimina pérdidas asociadas a paradas de planta, daños a equipos y procesos judiciales."
+      },
+      {
+        "text": "Protección efectiva de la salud física y mental de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "Garantiza un entorno donde los colaboradores puedan desempeñar sus funciones sin deteriorar su bienestar físico ni psicosocial."
+      },
+      {
+        "text": "Aumento de la productividad y continuidad de las operaciones.",
+        "isCorrect": true,
+        "rationale": "Los entornos seguros reducen la interrupción de procesos, optimizando el rendimiento y la eficiencia operativa."
+      },
+      {
+        "text": "Eliminación total del pago de impuestos corporativos estatales.",
+        "isCorrect": false,
+        "rationale": "La gestión de seguridad no exonera a las empresas del cumplimiento de sus cargas tributarias ordinarias."
+      },
+      {
+        "text": "Anulación de la obligación de contar con un Reglamento Interno de Seguridad.",
+        "isCorrect": false,
+        "rationale": "Las normativas exigen la elaboración y vigencia del Reglamento Interno de Seguridad independientemente del nivel de prevención alcanzado."
+      }
+    ],
+    "hint": "Considera los beneficios integrales de evitar incidentes en términos de costos, clima laboral, fluidez de trabajo y cumplimiento legal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué metodología continua de gestión se basa el Sistema de Gestión de Seguridad y Salud en el Trabajo (SGSST) según la Ley 29783?",
+    "opciones": [
+      {
+        "text": "El ciclo PHVA o Ciclo de Deming (Planificar, Hacer, Verificar, Actuar).",
+        "isCorrect": true,
+        "rationale": "El SGSST se estructura bajo el ciclo dinámico de mejora continua: Planificar, Hacer, Verificar y Actuar."
+      },
+      {
+        "text": "El principio de análisis financiero retrospectivo de caja.",
+        "isCorrect": false,
+        "rationale": "El análisis de caja es una herramienta contable que no constituye la metodología técnica estructurada del SGSST."
+      },
+      {
+        "text": "El modelo estático de inspecciones únicas sin retroalimentación.",
+        "isCorrect": false,
+        "rationale": "El sistema exige un enfoque dinámico y cíclico, no un proceso estático de verificación aislada."
+      },
+      {
+        "text": "La jerarquía de compras de maquinarias pesadas.",
+        "isCorrect": false,
+        "rationale": "El ciclo de compras responde a logística y abastecimiento, no al ciclo de gestión de la prevención de riesgos."
+      },
+      {
+        "text": "La metodología de corrección exclusiva posterior a los accidentes.",
+        "isCorrect": false,
+        "rationale": "El SGSST se enfoca prioritariamente en la prevención proactiva antes que en la actuación meramente reactiva."
+      }
+    ],
+    "hint": "Identifica las cuatro etapas cíclicas que permiten planificar las acciones, ejecutarlas, evaluar su desempeño y aplicar mejoras.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Artículo 18 de la Ley 29783, ¿cuál es el mandato explícito respecto al Sistema de Gestión de SST?",
+    "opciones": [
+      {
+        "text": "Que todo empleador debe implementar y mantener un Sistema de Gestión de Seguridad y Salud en el Trabajo en la organización.",
+        "isCorrect": true,
+        "rationale": "El Artículo 18 establece la obligatoriedad legal de instaurar, ejecutar y sostener activamente el SGSST en la empresa."
+      },
+      {
+        "text": "Que el Sistema de Gestión solo es aplicable si la empresa cuenta con más de 500 trabajadores.",
+        "isCorrect": false,
+        "rationale": "La implementación del SGSST es obligatoria para todos los empleadores, independientemente del sector o número de trabajadores."
+      },
+      {
+        "text": "Que los costos del sistema deben financiarse mediante aportes del sindicato de trabajadores.",
+        "isCorrect": false,
+        "rationale": "El financiamiento de la implementación y mantenimiento del SGSST es responsabilidad exclusiva y económica del empleador."
+      },
+      {
+        "text": "Que la gestión de seguridad es opcional y queda a criterio de la junta directiva.",
+        "isCorrect": false,
+        "rationale": "No es una decisión voluntaria, sino una norma de orden público e imperativo cumplimiento legal."
+      },
+      {
+        "text": "Que el sistema solo debe auditarse cuando el Ministerio de Energía y Minas lo requiera de forma extraordinaria.",
+        "isCorrect": false,
+        "rationale": "El sistema exige evaluaciones y auditorías internas/externas periódicas según un programa establecido."
+      }
+    ],
+    "hint": "Esta disposición legal manda la creación y mantenimiento continuo de un marco de gestión obligatorio para la salud laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes principios forman parte de los principios rectores de la Ley 29783 aplicables al Sistema de Gestión de SST?",
+    "opciones": [
+      {
+        "text": "Principio de Prevención.",
+        "isCorrect": true,
+        "rationale": "Garantiza que el empleador asegure condiciones que protejan la vida y la salud de los trabajadores."
+      },
+      {
+        "text": "Principio de Primacía de la Realidad.",
+        "isCorrect": true,
+        "rationale": "Otorga validez determinante a lo que ocurre en los hechos de la práctica por encima de lo plasmado en documentos."
+      },
+      {
+        "text": "Principio de Consulta y Participación.",
+        "isCorrect": true,
+        "rationale": "Promueve que los trabajadores y sus organizaciones sindicales sean consultados e involucrados en el SGSST."
+      },
+      {
+        "text": "Principio de Confidencialidad de los Incidentes de Trabajo.",
+        "isCorrect": false,
+        "rationale": "Los incidentes y accidentes deben ser reportados, investigados y documentados de manera transparente conforme a la ley."
+      },
+      {
+        "text": "Principio de Exoneración de Responsabilidad Gerencial.",
+        "isCorrect": false,
+        "rationale": "La legislación asigna la responsabilidad legal de la prevención directamente a la alta gerencia y titular de la actividad."
+      }
+    ],
+    "hint": "Piensa en las garantías fundamentales de protección, veracidad de los hechos y representación de los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Quién tiene la responsabilidad formal de suscribir y respaldar la Política del Sistema de Gestión de Seguridad y Salud en el Trabajo?",
+    "opciones": [
+      {
+        "text": "La máxima autoridad o alta gerencia de la empresa.",
+        "isCorrect": true,
+        "rationale": "La Política de SST debe estar firmada por la gerencia general o máxima autoridad, visibilizando el compromiso al más alto nivel."
+      },
+      {
+        "text": "Un técnico externo de mantenimiento de equipos.",
+        "isCorrect": false,
+        "rationale": "Los técnicos ejecutan tareas operativas pero carecen del nivel de decisión corporativa para fijar la política de la organización."
+      },
+      {
+        "text": "Exclusivamente el médico ocupacional del centro médico.",
+        "isCorrect": false,
+        "rationale": "El médico asesora el área de salud, pero el liderazgo estratégico y normativo formal recae en la alta dirección."
+      },
+      {
+        "text": "El Ministerio de Trabajo mediante un inspector asignado.",
+        "isCorrect": false,
+        "rationale": "Las entidades estatales fiscalizan el cumplimiento, pero la formulación e institucionalización de la política es interna."
+      },
+      {
+        "text": "El proveedor de insumos químicos de la mina.",
+        "isCorrect": false,
+        "rationale": "Un proveedor comercial externo no posee facultad legal ni administrativa dentro de la estructura gerencial de la empresa."
+      }
+    ],
+    "hint": "Se requiere la firma del ejecutivo de mayor jerarquía dentro de la organización para comprometer los recursos necesarios.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la etapa de Planificación del SGSST, ¿qué característica debe cumplir la formulación de objetivos de seguridad?",
+    "opciones": [
+      {
+        "text": "Ser claros, específicos, medibles, alcanzables y delimitados en un periodo de tiempo determinado.",
+        "isCorrect": true,
+        "rationale": "Los objetivos deben construirse de forma cuantitativa y verificable (criterio SMART) para evaluar objetivamente el desempeño del sistema."
+      },
+      {
+        "text": "Ser redactados de manera abstracta sin incluir metas numéricas ni plazos.",
+        "isCorrect": false,
+        "rationale": "Los objetivos ambiguos impiden medir de forma rigurosa el progreso o la efectividad de las acciones implementadas."
+      },
+      {
+        "text": "Centrarse únicamente en el cumplimiento del presupuesto financiero de la empresa.",
+        "isCorrect": false,
+        "rationale": "Aunque se asignan recursos, el objetivo primario en SST es la reducción de riesgos y protección del trabajador."
+      },
+      {
+        "text": "Modificarse semanalmente a criterio del supervisor de turno sin registro formal.",
+        "isCorrect": false,
+        "rationale": "La planificación requiere estabilidad formal y seguimiento estructurado mediante indicadores y revisiones periódicas."
+      },
+      {
+        "text": "Definir que el 100% de los accidentes son inevitables por la naturaleza del trabajo minero.",
+        "isCorrect": false,
+        "rationale": "La filosofía preventiva del SGSST sostiene que los accidentes pueden y deben prevenirse mediante una gestión adecuada."
+      }
+    ],
+    "hint": "Aplica criterios que permitan cuantificar el avance, fijar metas realizables y establecer fechas de cumplimiento.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Dentro del marco del SGSST, ¿cuáles son ejemplos de medidas clasificadas como organizativas o administrativas para prevenir riesgos?",
+    "opciones": [
+      {
+        "text": "Elaboración e implementación de procedimientos escritos de trabajo seguro (PETS).",
+        "isCorrect": true,
+        "rationale": "Documentan la secuencia correcta y segura para realizar labores de forma estandarizada."
+      },
+      {
+        "text": "Establecimiento de cronogramas para inspecciones periódicas en áreas críticas.",
+        "isCorrect": true,
+        "rationale": "Constituyen una herramienta de planificación documental e institucional para la supervisión del entorno."
+      },
+      {
+        "text": "Programación de sistemas de rotación de personal para limitar el tiempo de exposición.",
+        "isCorrect": true,
+        "rationale": "Regula el aspecto administrativo de la jornada laboral para evitar la fatiga o sobreexposición a un agente dañino."
+      },
+      {
+        "text": "Instalación de ventiladores de gran capacidad física en túneles subterráneos.",
+        "isCorrect": false,
+        "rationale": "La instalación física de ventiladores corresponde a una medida o control de ingeniería."
+      },
+      {
+        "text": "Entrega de respiradores de media cara con filtros contra polvo.",
+        "isCorrect": false,
+        "rationale": "La dotación de respiradores es una medida que corresponde a la categoría de Equipos de Protección Personal (EPP)."
+      }
+    ],
+    "hint": "Enfócate en acciones basadas en documentos, normas internas, calendarios, permisos y organización de los turnos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Artículo 98 del Decreto Supremo 024-2016-EM, ¿qué es un Procedimiento Escrito de Trabajo Seguro (PETS)?",
+    "opciones": [
+      {
+        "text": "Un documento que describe el paso a paso detallado para realizar una tarea de manera segura, identificando peligros y controles.",
+        "isCorrect": true,
+        "rationale": "El PETS establece la secuencia lógica, clara y obligatoria de pasos técnicos y medidas preventivas para ejecutar labores específicas."
+      },
+      {
+        "text": "Un contrato comercial suscrito entre el titular minero y los compradores de mineral.",
+        "isCorrect": false,
+        "rationale": "Los contratos de comercialización pertenecen al ámbito mercantil de la empresa y no a la seguridad operativa."
+      },
+      {
+        "text": "Un recibo de pago donde el trabajador confirma haber recibido su salario mensual.",
+        "isCorrect": false,
+        "rationale": "Corresponde a la boleta de pago o comprobante de la gestión de gestión humana y nómina."
+      },
+      {
+        "text": "Un manual de uso exclusivo para el mantenimiento técnico de vehículos administrativos.",
+        "isCorrect": false,
+        "rationale": "Los PETS se diseñan para tareas de operación y mantenimiento en actividades críticas de la mina en su conjunto."
+      },
+      {
+        "text": "Un informe estadístico de accidentes elaborado por la autoridad gubernamental.",
+        "isCorrect": false,
+        "rationale": "El PETS es un documento de trabajo interno antes y durante la labor, no una memoria de estadísticas estatales."
+      }
+    ],
+    "hint": "Consiste en la guía operativa estandarizada que le indica al trabajador la secuencia exacta de pasos seguros para su tarea.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son principios esenciales que deben considerarse al momento de realizar el 'Diseño de Controles' de seguridad?",
+    "opciones": [
+      {
+        "text": "Adaptabilidad.",
+        "isCorrect": true,
+        "rationale": "Permite que los controles se ajusten flexiblemente a los cambios en las condiciones geológicas, climáticas u operativas."
+      },
+      {
+        "text": "Efectividad.",
+        "isCorrect": true,
+        "rationale": "Asegura que el control logre reducir la probabilidad y severidad del riesgo al nivel más bajo posible."
+      },
+      {
+        "text": "Sostenibilidad.",
+        "isCorrect": true,
+        "rationale": "Garantiza que el control sea viable y mantenible en el tiempo desde el punto de vista operacional y económico."
+      },
+      {
+        "text": "Inflexibilidad absoluta.",
+        "isCorrect": false,
+        "rationale": "Los controles rígidos que no se adaptan a variaciones del entorno pierden eficacia y pueden ser omitidos."
+      },
+      {
+        "text": "Dependencia del azar.",
+        "isCorrect": false,
+        "rationale": "El diseño de controles se basa en análisis riguroso e ingeniería, eliminando la improvisación o la suerte."
+      }
+    ],
+    "hint": "Considera la capacidad de ajuste al entorno, la capacidad real de reducir el riesgo y la durabilidad en el tiempo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Al diseñar controles para operaciones mineras, ¿qué factores clave deben ser analizados de manera integral?",
+    "opciones": [
+      {
+        "text": "Factores ambientales.",
+        "isCorrect": true,
+        "rationale": "Involucra evaluar condiciones del entorno como polvo, humedad, calidad del aire, temperatura y estabilidad del terreno."
+      },
+      {
+        "text": "Factores tecnológicos.",
+        "isCorrect": true,
+        "rationale": "Abarca la incorporación de sensores, sistemas automatizados y maquinarias que mejoren la precisión del control."
+      },
+      {
+        "text": "Factores humanos.",
+        "isCorrect": true,
+        "rationale": "Analiza las capacidades físicas, psicológicas, ergonomía y prevención de la fatiga del trabajador."
+      },
+      {
+        "text": "Horóscopo y astrología del personal.",
+        "isCorrect": false,
+        "rationale": "Las creencias esotéricas carecen de validez científica o metodológica dentro de la prevención de riesgos."
+      },
+      {
+        "text": "Valor de la cotización bursátil del oro en tiempo real.",
+        "isCorrect": false,
+        "rationale": "Las fluctuaciones del mercado financiero son externas al análisis técnico de la prevención física en la labor."
+      }
+    ],
+    "hint": "Piensa en el entorno físico, las herramientas modernas disponibles y las capacidades individuales o ergonómicas de la persona.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Previo a poner en marcha operacional un nuevo control diseñado en el frente de trabajo, ¿qué paso crítico debe ejecutarse obligatoriamente?",
+    "opciones": [
+      {
+        "text": "Capacitar y entrenar al personal en el funcionamiento, uso adecuado y mantenimiento del control.",
+        "isCorrect": true,
+        "rationale": "Un control no será efectivo si los trabajadores desconocen cómo utilizarlo, operarlo o reaccionar frente a él."
+      },
+      {
+        "text": "Desmontar las señalizaciones de seguridad previamente existentes.",
+        "isCorrect": false,
+        "rationale": "Las señalizaciones complementan la seguridad y no deben retirarse arbitrariamente al implementar un control."
+      },
+      {
+        "text": "Aumentar inmediatamente la velocidad de producción al doble sin pruebas previas.",
+        "isCorrect": false,
+        "rationale": "Aumentar la carga de trabajo sin verificar el comportamiento del nuevo control incrementa el nivel de riesgo."
+      },
+      {
+        "text": "Despedir al personal supervisado para reducir costos.",
+        "isCorrect": false,
+        "rationale": "La supervisión es indispensable en la fase de prueba e implementación de un nuevo diseño de control."
+      },
+      {
+        "text": "Ocultar la modificación realizada al Comité de Seguridad y Salud en el Trabajo.",
+        "isCorrect": false,
+        "rationale": "El Comité de SST debe conocer, vigilar y ser informado sobre los cambios relevantes en las medidas de control."
+      }
+    ],
+    "hint": "Consiste en la etapa formativa que asegura que el trabajador entienda cómo opera el nuevo dispositivo o instructivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad principal de realizar revisiones, inspecciones y auditorías a las medidas de control ya implementadas?",
+    "opciones": [
+      {
+        "text": "Verificar la efectividad real del control, identificar fallas o variaciones del entorno y aplicar mejoras continuas.",
+        "isCorrect": true,
+        "rationale": "La revisión periódica permite corroborar si el control sigue funcionando según lo diseñado o requiere ajustes por riesgos residuales."
+      },
+      {
+        "text": "Demostrar que los peligros desaparecen permanentemente sin requerir más atención.",
+        "isCorrect": false,
+        "rationale": "Los entornos mineros son cambiantes, por lo que los controles pueden desgastarse u obsolecer si no se revisan."
+      },
+      {
+        "text": "Eliminar la necesidad de contar con la matriz IPERC.",
+        "isCorrect": false,
+        "rationale": "La auditoría retroalimenta la matriz IPERC para su actualización, pero de ningún modo busca eliminarla."
+      },
+      {
+        "text": "Sancionar económicamente a todos los operarios de la planta.",
+        "isCorrect": false,
+        "rationale": "El objetivo primario de la revisión es la mejora preventiva del sistema, no un enfoque punitivo hacia el trabajador."
+      },
+      {
+        "text": "Reducir las horas de descanso semanales del personal de seguridad.",
+        "isCorrect": false,
+        "rationale": "Las auditorías evalúan la conformidad técnica del sistema de gestión, sin modificar los derechos laborales sobre descansos."
+      }
+    ],
+    "hint": "Enfocado en evaluar si las soluciones adoptadas siguen protegiendo de manera óptima o si han surgido fallas en la práctica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el módulo sobre tipos y diseños de controles, ¿cuál es la función precisa del Equipo de Protección Personal (EPP)?",
+    "opciones": [
+      {
+        "text": "Servir como una barrera de protección individual para mitigar la severidad de una lesión, sin eliminar el peligro existente.",
+        "isCorrect": true,
+        "rationale": "El EPP resguarda el cuerpo del trabajador ante el contacto con el agente dañino, pero el peligro continúa presente en el área."
+      },
+      {
+        "text": "Hacer desaparecer la fuente de polvo, ruido o gases en la atmósfera de trabajo.",
+        "isCorrect": false,
+        "rationale": "Los agentes físicos o químicos siguen flotando en el aire; el EPP solo evita el ingreso al organismo del usuario."
+      },
+      {
+        "text": "Sustituir de manera permanente el uso de sistemas de ventilación en minas subterráneas.",
+        "isCorrect": false,
+        "rationale": "El EPP no reemplaza a los controles de ingeniería como la ventilación; actúa como un complemento secundario."
+      },
+      {
+        "text": "Invalidad la obligación legal de elaborar un PETS en labores críticas.",
+        "isCorrect": false,
+        "rationale": "El PETS sigue siendo exigido por la norma legal independientemente de que el trabajador porte su EPP completo."
+      },
+      {
+        "text": "Garantizar que el trabajador sea completamente inmune a cualquier accidente físico.",
+        "isCorrect": false,
+        "rationale": "Ningún EPP ofrece inmunidad total; si la energía de un impacto supera la resistencia del equipo, ocurrirá la lesión."
+      }
+    ],
+    "hint": "Piensa en un escudo que amortigua o bloquea la agresión física hacia el cuerpo pero que no desmantela la fuente que produce el riesgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-02",
+    "diplomado": "IMPLEMENTACIÓN DE MEDIDAS DE CONTROL EN RIESGOS MINEROS",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles son métodos reconocidos para llevar a cabo la revisión y evaluación del desempeño de los controles en una operación?",
+    "opciones": [
+      {
+        "text": "Auditorías internas y externas de seguridad.",
+        "isCorrect": true,
+        "rationale": "Evalúan sistemáticamente el cumplimiento documentario y operativo del sistema de control frente a la norma."
+      },
+      {
+        "text": "Análisis e investigación profunda de incidentes y accidentes.",
+        "isCorrect": true,
+        "rationale": "Permite identificar si una falla en los controles existentes facilitó la ocurrencia del evento no deseado."
+      },
+      {
+        "text": "Inspecciones periódicas de seguridad en el campo de trabajo.",
+        "isCorrect": true,
+        "rationale": "Consiste en la observación directa in situ para verificar el estado físico y correcto funcionamiento de los dispositivos instalados."
+      },
+      {
+        "text": "Encuestas de satisfacción sobre la comida del comedor corporativo únicamente.",
+        "isCorrect": false,
+        "rationale": "Las encuestas de servicio de comedor no evalúan la eficacia técnica de las medidas de control contra riesgos operacionales."
+      },
+      {
+        "text": "Aumento arbitrario del precio de venta de los minerales.",
+        "isCorrect": false,
+        "rationale": "El precio de los minerales es un factor de mercado comercial sin relevancia en el método de revisión técnica de los controles."
+      }
+    ],
+    "hint": "Incluye herramientas sistemáticas de supervisión directa, exámenes del sistema e investigaciones posteriores a eventos no deseados.",
+    "activo": true
+  }
+]

@@ -32,7 +32,20 @@ const MAP_ARCHIVOS = {
   'resumenes_de_clases_geotecnia_minera.md': 'DIP-06',
   'resumenes_de_clases_gerencia_de_sistemas_integrados_de_gesti.md': 'DIP-07',
   'resumenes_de_clases_gerencia_estrategica_y_liderazgo.md': 'DIP-08',
-  'resumenes_de_clases_gestion_ambiental_para_el_sector_minero_.md': 'DIP-09'
+  'resumenes_de_clases_gestion_ambiental_para_el_sector_minero_.md': 'DIP-09',
+  'resumenes_de_clases_gestion_de_control_operativo_en_procesos.md': 'DIP-10',
+  'resumenes_de_clases_gestion_de_operaciones.md': 'DIP-11',
+  'resumenes_de_clases_gestion_estrategica_para_empresas.md': 'DIP-12',
+  'resumenes_de_clases_gestion_logistica_compras_inventarios_y_.md': 'DIP-13',
+  'resumenes_de_clases_gestion_logistica_y_almacenes_en_mineria.md': 'DIP-14',
+  'resumenes_de_clases_gestion_logistica_y_proveedores_en_indus.md': 'DIP-15',
+  'resumenes_de_clases_gestion_minera.md': 'DIP-16',
+  'resumenes_de_clases_legislacion_laboral_y_elaboracion_de_pla.md': 'DIP-17',
+  'resumenes_de_clases_mineria_4_0_y_digitalizacion_minera.md': 'DIP-18',
+  'resumenes_de_clases_prevencion_de_la_conflictividad_riesgos_.md': 'DIP-19',
+  'resumenes_de_clases_seguridad_industrial.md': 'DIP-20',
+  'resumenes_de_clases_seguridad_y_salud_ocupacional_en_la_indu.md': 'DIP-21',
+  'resumenes_de_clases_supply_chain_management_en_industria_y_m.md': 'DIP-22'
 };
 
 function parsearMarkdown(filePath) {
@@ -126,7 +139,7 @@ async function sincronizar() {
 
     // Obtener las filas de Supabase para este diplomado ordenadas
     const { data: rowsDB, error } = await sb
-      .from('diplomados_lecciones')
+      .from('lecciones')
       .select('id, CodigoDiplomado, Modulo, Tema, Sesion, orden')
       .eq('CodigoDiplomado', codDip)
       .order('orden', { ascending: true })
@@ -182,7 +195,7 @@ async function sincronizar() {
       if (!mdClase) {
         console.warn(`   ⚠️ Fila ${i + 1} (${row.Sesion}) NO tiene resumen en el MD -> se limpiará ResumenTexto (null).`);
         await sb
-          .from('diplomados_lecciones')
+          .from('lecciones')
           .update({ ResumenTexto: null })
           .eq('id', row.id);
         continue;
@@ -198,7 +211,7 @@ async function sincronizar() {
 
       // Actualizar en Supabase en la columna ResumenTexto
       const { error: updErr } = await sb
-        .from('diplomados_lecciones')
+        .from('lecciones')
         .update({ ResumenTexto: mdClase.markdown })
         .eq('id', row.id);
 

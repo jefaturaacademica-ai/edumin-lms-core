@@ -14,12 +14,16 @@ import {
   calcularTamanoPxCanvas,
   resolverTamanoQrPt,
   formatearNombreSegunEstilo,
-  resolverTextoHorasCreditos
+  resolverTextoHorasCreditos,
+  resolverTextoHoras,
+  resolverTextoCreditos,
+  dividirTextoProgramaEnLineas
 } from '@/components/certificates/AvanzaCertificateRenderer';
 import QRCode from 'qrcode';
 import { generarUrlQRValidacion } from '@/lib/utils/certificateUtils';
 
 export interface CertificadoPdfData {
+  creditos?: string | number;
   tipo: 'DIPLOMA' | 'MODULAR' | 'CURSO' | 'CIP' | 'MIAMI' | 'TALLER' | string;
   orientacion?: 'horizontal' | 'vertical';
   estudiante: string;
@@ -295,6 +299,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     estudiante: { ...baseDefaults.estudiante, ...(data.diseno?.estudiante || {}) },
     programa: { ...baseDefaults.programa, ...(data.diseno?.programa || {}) },
     horas: { ...baseDefaults.horas, ...(data.diseno?.horas || {}) },
+    creditos: { ...baseDefaults.creditos, ...(data.diseno?.creditos || {}) },
     fecha: { ...baseDefaults.fecha, ...(data.diseno?.fecha || {}) },
     codigo: { ...baseDefaults.codigo, ...(data.diseno?.codigo || {}) },
     qr: { ...baseDefaults.qr, ...(data.diseno?.qr || {}) }
@@ -318,7 +323,23 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
   const textoProgramaFinal = ajustarConectorSinHuerfana(textoProgramaBase);
 
   // Redacción oficial de horas y créditos (horas y créditos, solo horas, solo créditos o personalizada)
-  const horasTexto = resolverTextoHorasCreditos(cfg.horas, data.horas, esDiploma);
+  const horasTexto = resolverTextoHoras(
+    cfg.horas,
+    data.horas,
+    esDiploma,
+    data.creditos,
+    (data as any).horasNumero
+  );
+
+  const creditosTexto = cfg.creditos
+    ? resolverTextoCreditos(
+        cfg.creditos,
+        data.creditos,
+        esDiploma,
+        data.horas,
+        (data as any).horasNumero
+      )
+    : '';
   
   // Fecha pura y prefijo configurable
   const fechaPura = formatearFechaSegunEstilo(data.fecha, cfg.fecha.formatoFecha || 'larga');
@@ -342,7 +363,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
 
     const fontEstudiante = obtenerFontFamily(cfg.estudiante.fuente, '"Times New Roman", Times, Georgia, serif');
     const colorEstudiante = cfg.estudiante.color || '#000000';
-    const esNegrita = cfg.estudiante.negrita !== false;
+    const esNegrita = !!cfg.estudiante.negrita;
     const esCursiva = !!cfg.estudiante.cursiva;
 
     let fontSize = calcularTamanoPxCanvas(
@@ -373,7 +394,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     drawStyledText(ctx, nombreEstudiante, estDrawX, estY, fontSize, cfg.estudiante.subrayado);
   }
 
-  // 2. TÍTULO DEL PROGRAMA O MÓDULO: Hasta 2 líneas máximo, balanceado en CM y conector "Y" indivisible
+  // 2. TÍTULO DEL PROGRAMA O MÓDULO: Máximo 2 líneas en Horizontal / Máximo 3 líneas en Vertical
   if (cfg.programa.visible) {
     const progX = (cfg.programa.x / 100) * canvasW;
     const progY = (cfg.programa.y / 100) * canvasH;
@@ -387,14 +408,23 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
 
     const fontProg = obtenerFontFamily(cfg.programa.fuente, '"Montserrat", "Segoe UI", Arial, sans-serif');
     const colorProg = cfg.programa.color || '#000000';
-    const esNegritaProg = cfg.programa.negrita !== false;
+    const esNegritaProg = !!cfg.programa.negrita;
     const esCursivaProg = !!cfg.programa.cursiva;
 
-    let progFontSize = calcularTamanoPxCanvas(
-      cfg.programa.tamanoFuente || (isLandscape ? 22 : 18),
+    const baseProgPt = cfg.programa.tamanoFuente || (isLandscape ? 22 : 18);
+    const anchoProgPt = (cfg.programa.anchoMaximoCm || (isLandscape ? 25.5 : 18.5)) / anchoA4Cm * (isLandscape ? 841.89 : 595.28);
+
+    const { lineas: progLineas, tamanoFuentePt: progSizePt } = dividirTextoProgramaEnLineas(
+      textoProgramaFinal,
       orientacion,
-      canvasW
+      anchoProgPt,
+      baseProgPt,
+      cfg.programa.fuente,
+      esNegritaProg,
+      esCursivaProg
     );
+
+    const progFontSize = calcularTamanoPxCanvas(progSizePt, orientacion, canvasW);
 
     ctx.font = buildCanvasFont(progFontSize, fontProg, esNegritaProg, esCursivaProg);
     ctx.fillStyle = colorProg;
@@ -407,44 +437,20 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
       progDrawX = progX + (maxProgW / 2);
     }
 
-    const widthTotal = ctx.measureText(textoProgramaFinal).width;
-
-    if (widthTotal <= maxProgW) {
-      drawStyledText(ctx, textoProgramaFinal, progDrawX, progY, progFontSize, cfg.programa.subrayado);
-    } else {
-      // Dividir en máximo 2 líneas balanceadas respetando palabras y no-separables (\u00A0)
-      const palabras = textoProgramaFinal.split(' ');
-      let mejorDiff = Infinity;
-      let mejorCorte = Math.floor(palabras.length / 2);
-
-      for (let i = 1; i < palabras.length; i++) {
-        const parte1 = palabras.slice(0, i).join(' ');
-        const parte2 = palabras.slice(i).join(' ');
-        const w1 = ctx.measureText(parte1).width;
-        const w2 = ctx.measureText(parte2).width;
-        const diff = Math.abs(w1 - w2);
-        if (diff < mejorDiff) {
-          mejorDiff = diff;
-          mejorCorte = i;
-        }
-      }
-
-      const linea1 = palabras.slice(0, mejorCorte).join(' ');
-      const linea2 = palabras.slice(mejorCorte).join(' ');
-
-      const maxLineW = Math.max(ctx.measureText(linea1).width, ctx.measureText(linea2).width);
-      if (maxLineW > maxProgW) {
-        progFontSize = Math.max(12, Math.floor(progFontSize * (maxProgW / maxLineW)));
-        ctx.font = buildCanvasFont(progFontSize, fontProg, esNegritaProg, esCursivaProg);
-      }
-
-      const lineSpacing = progFontSize * (cfg.programa.interlineado || 1.25);
-      drawStyledText(ctx, linea1, progDrawX, progY - (lineSpacing / 2), progFontSize, cfg.programa.subrayado);
-      drawStyledText(ctx, linea2, progDrawX, progY + (lineSpacing / 2), progFontSize, cfg.programa.subrayado);
+    const lineSpacing = progFontSize * (cfg.programa.interlineado || 1.25);
+    if (progLineas.length === 1) {
+      drawStyledText(ctx, progLineas[0], progDrawX, progY, progFontSize, cfg.programa.subrayado);
+    } else if (progLineas.length === 2) {
+      drawStyledText(ctx, progLineas[0], progDrawX, progY - (lineSpacing / 2), progFontSize, cfg.programa.subrayado);
+      drawStyledText(ctx, progLineas[1], progDrawX, progY + (lineSpacing / 2), progFontSize, cfg.programa.subrayado);
+    } else if (progLineas.length === 3) {
+      drawStyledText(ctx, progLineas[0], progDrawX, progY - lineSpacing, progFontSize, cfg.programa.subrayado);
+      drawStyledText(ctx, progLineas[1], progDrawX, progY, progFontSize, cfg.programa.subrayado);
+      drawStyledText(ctx, progLineas[2], progDrawX, progY + lineSpacing, progFontSize, cfg.programa.subrayado);
     }
   }
 
-  // 3. Horas y créditos
+  // 3. Horas y créditos: Ancho máximo estandarizado y auto-escala
   if (cfg.horas.visible) {
     const horasX = (cfg.horas.x / 100) * canvasW;
     const horasY = (cfg.horas.y / 100) * canvasH;
@@ -457,24 +463,59 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
 
     const fontHoras = obtenerFontFamily(cfg.horas.fuente, '"Segoe UI", Arial, sans-serif');
     const colorHoras = cfg.horas.color || '#000000';
-    const fontSizeHoras = calcularTamanoPxCanvas(
+    let fontSizeHoras = calcularTamanoPxCanvas(
       cfg.horas.tamanoFuente || 12,
       orientacion,
       canvasW
     );
 
     ctx.font = buildCanvasFont(fontSizeHoras, fontHoras, !!cfg.horas.negrita, !!cfg.horas.cursiva);
+    let measuredHorasW = ctx.measureText(horasTexto).width;
+    if (measuredHorasW > maxHorasW && maxHorasW > 0) {
+      fontSizeHoras = Math.max(10, Math.floor(fontSizeHoras * (maxHorasW / measuredHorasW)));
+      ctx.font = buildCanvasFont(fontSizeHoras, fontHoras, !!cfg.horas.negrita, !!cfg.horas.cursiva);
+    }
+
     ctx.fillStyle = colorHoras;
     ctx.textAlign = cfg.horas.alineacion;
 
-    let horasDrawX = horasX;
-    if (cfg.horas.alineacion === 'left') {
-      horasDrawX = horasX - (maxHorasW / 2);
-    } else if (cfg.horas.alineacion === 'right') {
-      horasDrawX = horasX + (maxHorasW / 2);
+    // Alineación directa al punto de anclaje (x, y)
+    ctx.textAlign = cfg.horas.alineacion;
+    drawStyledText(ctx, horasTexto, horasX, horasY, fontSizeHoras, cfg.horas.subrayado);
+  }
+
+  // 3.1. Créditos (Variable independiente): Ancho máximo estandarizado y auto-escala
+  if (cfg.creditos?.visible && creditosTexto) {
+    const credX = (cfg.creditos.x / 100) * canvasW;
+    const credY = (cfg.creditos.y / 100) * canvasH;
+    let maxCredW = canvasW * 0.84;
+    if (cfg.creditos.anchoMaximoCm && cfg.creditos.anchoMaximoCm > 0) {
+      maxCredW = canvasW * (cfg.creditos.anchoMaximoCm / anchoA4Cm);
+    } else if (cfg.creditos.anchoMaximo) {
+      maxCredW = canvasW * (cfg.creditos.anchoMaximo / 100);
     }
 
-    drawStyledText(ctx, horasTexto, horasDrawX, horasY, fontSizeHoras, cfg.horas.subrayado);
+    const fontCred = obtenerFontFamily(cfg.creditos.fuente, '"Segoe UI", Arial, sans-serif');
+    const colorCred = cfg.creditos.color || '#000000';
+    let fontSizeCred = calcularTamanoPxCanvas(
+      cfg.creditos.tamanoFuente || 12,
+      orientacion,
+      canvasW
+    );
+
+    ctx.font = buildCanvasFont(fontSizeCred, fontCred, !!cfg.creditos.negrita, !!cfg.creditos.cursiva);
+    let measuredCredW = ctx.measureText(creditosTexto).width;
+    if (measuredCredW > maxCredW && maxCredW > 0) {
+      fontSizeCred = Math.max(10, Math.floor(fontSizeCred * (maxCredW / measuredCredW)));
+      ctx.font = buildCanvasFont(fontSizeCred, fontCred, !!cfg.creditos.negrita, !!cfg.creditos.cursiva);
+    }
+
+    ctx.fillStyle = colorCred;
+    ctx.textAlign = cfg.creditos.alineacion;
+
+    // Alineación directa al punto de anclaje (x, y)
+    ctx.textAlign = cfg.creditos.alineacion;
+    drawStyledText(ctx, creditosTexto, credX, credY, fontSizeCred, cfg.creditos.subrayado);
   }
 
   // 4. Código QR 1:1 estricto (ancho == alto)
@@ -518,7 +559,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     }
   }
 
-  // 5. Fecha de emisión con prefijo y formato puro configurable
+  // 5. Fecha de emisión con prefijo y formato puro configurable y auto-escala
   if (cfg.fecha.visible) {
     const fechaX = (cfg.fecha.x / 100) * canvasW;
     const fechaY = (cfg.fecha.y / 100) * canvasH;
@@ -529,7 +570,7 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
 
     const fontFecha = obtenerFontFamily(cfg.fecha.fuente, '"Segoe UI", Arial, sans-serif');
     const colorFecha = cfg.fecha.color || '#000000';
-    const fontSizeFecha = calcularTamanoPxCanvas(
+    let fontSizeFecha = calcularTamanoPxCanvas(
       cfg.fecha.tamanoFuente || 10,
       orientacion,
       canvasW
@@ -537,19 +578,20 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
 
     ctx.fillStyle = colorFecha;
     ctx.font = buildCanvasFont(fontSizeFecha, fontFecha, !!cfg.fecha.negrita, !!cfg.fecha.cursiva);
-    ctx.textAlign = cfg.fecha.alineacion;
-
-    let fechaDrawX = fechaX;
-    if (cfg.fecha.alineacion === 'left') {
-      fechaDrawX = fechaX - (maxFechaW / 2);
-    } else if (cfg.fecha.alineacion === 'right') {
-      fechaDrawX = fechaX + (maxFechaW / 2);
+    let measuredFechaW = ctx.measureText(fechaTextoFinal).width;
+    if (measuredFechaW > maxFechaW && maxFechaW > 0) {
+      fontSizeFecha = Math.max(9, Math.floor(fontSizeFecha * (maxFechaW / measuredFechaW)));
+      ctx.font = buildCanvasFont(fontSizeFecha, fontFecha, !!cfg.fecha.negrita, !!cfg.fecha.cursiva);
     }
 
-    drawStyledText(ctx, fechaTextoFinal, fechaDrawX, fechaY, fontSizeFecha, cfg.fecha.subrayado);
+    ctx.textAlign = cfg.fecha.alineacion;
+
+    // Alineación directa al punto de anclaje (x, y)
+    ctx.textAlign = cfg.fecha.alineacion;
+    drawStyledText(ctx, fechaTextoFinal, fechaX, fechaY, fontSizeFecha, cfg.fecha.subrayado);
   }
 
-  // 6. Código alfanumérico único: Puro texto sin fondo de color
+  // 6. Código alfanumérico único: Puro texto con auto-escala
   if (cfg.codigo.visible) {
     const codX = (cfg.codigo.x / 100) * canvasW;
     const codY = (cfg.codigo.y / 100) * canvasH;
@@ -562,11 +604,18 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     const textoCod = `${prefijoCod}${codigoCert}`;
     const fontCod = obtenerFontFamily(cfg.codigo.fuente, '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif');
     const colorCod = cfg.codigo.color || '#000000';
-    const fontSizeCod = calcularTamanoPxCanvas(
+    let fontSizeCod = calcularTamanoPxCanvas(
       cfg.codigo.tamanoFuente || 11,
       orientacion,
       canvasW
     );
+
+    ctx.font = buildCanvasFont(fontSizeCod, fontCod, !!cfg.codigo.negrita, !!cfg.codigo.cursiva);
+    let measuredCodW = ctx.measureText(textoCod).width;
+    if (measuredCodW > maxCodW && maxCodW > 0) {
+      fontSizeCod = Math.max(9, Math.floor(fontSizeCod * (maxCodW / measuredCodW)));
+      ctx.font = buildCanvasFont(fontSizeCod, fontCod, cfg.codigo.negrita !== false, !!cfg.codigo.cursiva);
+    }
 
     ctx.textAlign = cfg.codigo.alineacion;
     let codDrawX = codX;
@@ -577,7 +626,6 @@ export async function descargarCertificadoA4Pdf(data: CertificadoPdfData, nombre
     }
 
     ctx.fillStyle = colorCod;
-    ctx.font = buildCanvasFont(fontSizeCod, fontCod, cfg.codigo.negrita !== false, !!cfg.codigo.cursiva);
     drawStyledText(ctx, textoCod, codDrawX, codY, fontSizeCod, cfg.codigo.subrayado);
   }
 

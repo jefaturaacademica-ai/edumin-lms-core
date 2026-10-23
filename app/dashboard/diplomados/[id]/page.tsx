@@ -500,7 +500,7 @@ export default function ReproductorClasesPage() {
     let contadorGlobalTemas = 1;
     let contadorGlobalClases = 1;
 
-    // 1. PRIORIDAD: Usar datos de la tabla diplomados_lecciones de Supabase si existen
+    // 1. PRIORIDAD: Usar datos de la tabla lecciones de Supabase si existen
     if (leccionesTabla && leccionesTabla.length > 0) {
       const modulosDeTabla = convertirFilasAListaModulos(leccionesTabla);
 

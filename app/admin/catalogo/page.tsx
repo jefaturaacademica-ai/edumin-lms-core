@@ -45,6 +45,8 @@ export default function CatalogoAdminPage() {
   const [nuevoNumModulos, setNuevoNumModulos] = useState('3');
   const [nuevoTallerAplicable, setNuevoTallerAplicable] = useState('Ninguno');
   const [nuevoPrecio, setNuevoPrecio] = useState('150.00');
+  const [nuevaDuracion, setNuevaDuracion] = useState('325 horas académicas');
+  const [nuevosCreditos, setNuevosCreditos] = useState('13');
 
   // Estado para archivo CSV
   const [archivoImportado, setArchivoImportado] = useState<File | null>(null);
@@ -110,10 +112,10 @@ export default function CatalogoAdminPage() {
       });
       const data = await res.json();
       if (res.ok) {
-        setMensajeExito(data.message || '¡Tabla diplomados_lecciones sembrada con éxito en Supabase (20 Columnas)!');
+        setMensajeExito(data.message || '¡Tabla lecciones sembrada con éxito en Supabase (20 Columnas)!');
         setTimeout(() => setMensajeExito(null), 5000);
       } else {
-        alert(`Error al sembrar diplomados_lecciones: ${data.error || 'Verifica que la tabla esté creada en Supabase SQL Editor.'}`);
+        alert(`Error al sembrar lecciones: ${data.error || 'Verifica que la tabla esté creada en Supabase SQL Editor.'}`);
       }
     } catch (e: any) {
       alert(`Error de conexión: ${e.message}`);
@@ -180,6 +182,8 @@ export default function CatalogoAdminPage() {
           num_modulos: numModulos,
           taller_aplicable: nuevoTipo === 'diplomado' ? nuevoTallerAplicable : 'Ninguno',
           docente: nuevoDocente,
+          horas: Number(nuevaDuracion) || 30,
+          creditos: Number(nuevosCreditos) || 0,
           precio: Number(nuevoPrecio) || 150.00,
           modulos: modsProcesados
         })
@@ -219,6 +223,8 @@ export default function CatalogoAdminPage() {
           num_modulos: itemEditando.num_modulos,
           taller_aplicable: itemEditando.taller_aplicable,
           docente: itemEditando.docente,
+          horas: itemEditando.horas !== undefined ? itemEditando.horas : 30,
+          creditos: Number(itemEditando.creditos) || 0,
           precio: itemEditando.precio,
           modulos: itemEditando.modulos || []
         })
@@ -228,7 +234,7 @@ export default function CatalogoAdminPage() {
         await cargarCatalogoSupabase();
         setShowEditModal(false);
         setItemEditando(null);
-        setMensajeExito("¡Producto, temas, clases y tabla diplomados_lecciones actualizados correctamente en Supabase!");
+        setMensajeExito("¡Producto, temas, clases y tabla lecciones actualizados correctamente en Supabase!");
         setTimeout(() => setMensajeExito(null), 4000);
       } else {
         alert("No se pudo actualizar en Supabase.");
@@ -1047,7 +1053,7 @@ export default function CatalogoAdminPage() {
           num_modulos: modsSecuenciados.length
         });
 
-        // Guardar automáticamente en diplomados_lecciones si el diplomado tiene código
+        // Guardar automáticamente en lecciones si el diplomado tiene código
         if (itemEditando.codigo) {
           const filasParaTabla = convertirModulosALeccionRows(itemEditando.codigo, itemEditando.titulo, modsSecuenciados);
           fetch('/api/admin/diplomados-lecciones', {
@@ -1057,7 +1063,7 @@ export default function CatalogoAdminPage() {
               codigoDiplomado: itemEditando.codigo,
               rows: filasParaTabla
             })
-          }).catch(err => console.warn('Aviso guardando en diplomados_lecciones:', err));
+          }).catch(err => console.warn('Aviso guardando en lecciones:', err));
         }
 
         setShowBulkModulesModal(false);
@@ -1561,7 +1567,7 @@ export default function CatalogoAdminPage() {
         });
       });
 
-      // 1. Guardar primero todas las filas con sus 20 columnas en diplomados_lecciones (sobrescribe por CodigoDiplomado sin duplicar)
+      // 1. Guardar primero todas las filas con sus 20 columnas en lecciones (sobrescribe por CodigoDiplomado sin duplicar)
       if (todasLasFilasTabla.length > 0) {
         const resLecc = await fetch('/api/admin/diplomados-lecciones', {
           method: 'POST',
@@ -1572,7 +1578,7 @@ export default function CatalogoAdminPage() {
         });
         if (!resLecc.ok) {
           const errData = await resLecc.json();
-          throw new Error(errData.error || 'Error al guardar filas en diplomados_lecciones');
+          throw new Error(errData.error || 'Error al guardar filas en lecciones');
         }
       }
 
@@ -1709,10 +1715,10 @@ export default function CatalogoAdminPage() {
                 onClick={sembrarTablaLeccionesSupabase}
                 disabled={sembrandoLecciones}
                 className="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs shadow-md transition flex items-center gap-2 cursor-pointer disabled:opacity-50"
-                title="Sincronizar la tabla diplomados_lecciones con todos los temas, clases y videos de Google Drive"
+                title="Sincronizar la tabla lecciones con todos los temas, clases y videos de Google Drive"
               >
                 {sembrandoLecciones ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Table className="w-4 h-4" />}
-                Sincronizar diplomados_lecciones (20 Columnas)
+                Sincronizar lecciones (20 Columnas)
               </button>
 
               <button
@@ -1995,7 +2001,32 @@ export default function CatalogoAdminPage() {
                     type="text" 
                     required
                     value={itemEditando.titulo}
+                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
                     onChange={(e) => setItemEditando({ ...itemEditando, titulo: e.target.value.toUpperCase() })}
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Horas Académicas (Solo Número)</label>
+                  <input 
+                    type="number" 
+                    value={itemEditando.horas !== undefined && itemEditando.horas !== null ? itemEditando.horas : (itemEditando.tipo === 'diplomado' ? 325 : itemEditando.tipo === 'taller' ? 10 : 30)}
+                    onChange={(e) => {
+                      const hVal = e.target.value === '' ? '' : Number(e.target.value);
+                      setItemEditando({ ...itemEditando, horas: hVal, duracion: hVal ? hVal + ' horas' : '' });
+                    }}
+                    placeholder={itemEditando.tipo === 'diplomado' ? '325' : itemEditando.tipo === 'taller' ? '10' : '30'}
+                    className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-[10px] font-bold text-slate-700 uppercase tracking-wider mb-1">Créditos (Opcional / Vacío)</label>
+                  <input 
+                    type="number" 
+                    value={itemEditando.creditos !== undefined && itemEditando.creditos !== null ? itemEditando.creditos : ''}
+                    onChange={(e) => setItemEditando({ ...itemEditando, creditos: e.target.value === '' ? null : Number(e.target.value) })}
+                    placeholder={itemEditando.tipo === 'diplomado' ? '13' : 'Vacío'}
                     className="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-xs font-bold text-slate-900"
                   />
                 </div>
@@ -2661,6 +2692,9 @@ export default function CatalogoAdminPage() {
                     const tipo = e.target.value as any;
                     setNuevoTipo(tipo);
                     setNuevoCodigo(tipo === 'diplomado' ? `DIP-${catalogoDiplomados.length + 1}` : tipo === 'taller' ? `TAL-03` : `CUR-${catalogoCursos.length + 1}`);
+                    if (tipo === 'diplomado') { setNuevaDuracion('325'); setNuevosCreditos('13'); }
+                    else if (tipo === 'taller') { setNuevaDuracion('10'); setNuevosCreditos(''); }
+                    else { setNuevaDuracion('30'); setNuevosCreditos(''); }
                   }}
                   className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-indigo-600 text-slate-800"
                 >
@@ -2753,6 +2787,29 @@ export default function CatalogoAdminPage() {
                   </select>
                 </div>
               )}
+
+              <div className="grid grid-cols-2 gap-3 mb-3">
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Horas (Solo Número)</label>
+                  <input 
+                    type="number" 
+                    value={nuevaDuracion}
+                    onChange={(e) => setNuevaDuracion(e.target.value)}
+                    placeholder={nuevoTipo === 'diplomado' ? '325' : nuevoTipo === 'taller' ? '10' : '30'}
+                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-bold bg-slate-50 text-slate-900"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Créditos (Opcional)</label>
+                  <input 
+                    type="number" 
+                    value={nuevosCreditos}
+                    onChange={(e) => setNuevosCreditos(e.target.value)}
+                    placeholder={nuevoTipo === 'diplomado' ? '13' : 'Vacío'}
+                    className="w-full px-4 py-2.5 border border-slate-200 rounded-xl text-xs font-bold bg-slate-50 text-slate-900"
+                  />
+                </div>
+              </div>
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5">Precio de Venta (S/)</label>

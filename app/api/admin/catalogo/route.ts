@@ -153,12 +153,12 @@ function getLocalCatalogoData() {
       ano: 2026,
       titulo: c.curso.toUpperCase(),
       tipo: 'curso',
-      categoria: 'Cursos de Alta Especialización',
+      categoria: c.categoria || 'Seguridad y prevención',
       num_modulos: 1,
       taller_aplicable: 'Ninguno',
       docente: docenteAsignado,
       duracion: '40 horas',
-      imagen: '/assets/images/daem/gestion-minera.webp',
+      imagen: `/assets/images/cursos/${id}-${(c.curso || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}.jpg`,
       nivel: 'Especialización',
       precio: 150.00,
       modulos: []
@@ -218,7 +218,7 @@ async function seedInitialCatalogo(admin: any) {
     const items = local.todos;
 
     // 1. Intentar upsert completo con todas las columnas avanzadas
-    const { error: fullError } = await admin.from('cursos').upsert(items, { onConflict: 'id' });
+    const { error: fullError } = await admin.from('diplomados_y_cursos').upsert(items, { onConflict: 'id' });
 
     if (fullError) {
       console.warn('Upsert completo rechazado por Supabase (faltan columnas):', fullError.message);
@@ -234,7 +234,7 @@ async function seedInitialCatalogo(admin: any) {
         precio: i.precio
       }));
 
-      const { error: basicError } = await admin.from('cursos').upsert(basicItems, { onConflict: 'id' });
+      const { error: basicError } = await admin.from('diplomados_y_cursos').upsert(basicItems, { onConflict: 'id' });
       if (basicError) {
         console.error('Error al insertar esquema básico en Supabase:', basicError.message);
         return false;
@@ -253,7 +253,7 @@ function parseCodeNumber(code: string): number {
   return match ? parseInt(match[0], 10) : 999;
 }
 
-// Sincroniza filas de un diplomado en la tabla diplomados_lecciones de forma atómica y segura
+// Sincroniza filas de un diplomado en la tabla lecciones de forma atómica y segura
 async function syncLeccionesEnSupabase(admin: any, codigoDiplomado: string, rows: LeccionRow[]) {
   if (!codigoDiplomado || !Array.isArray(rows) || rows.length === 0) {
     console.warn('syncLeccionesEnSupabase: Omitido porque no hay filas válidas para guardar de', codigoDiplomado);
@@ -272,29 +272,29 @@ async function syncLeccionesEnSupabase(admin: any, codigoDiplomado: string, rows
 
     // 2. Eliminar lecciones anteriores de este diplomado específico
     const { error: delError } = await admin
-      .from('diplomados_lecciones')
+      .from('lecciones')
       .delete()
       .ilike('CodigoDiplomado', codigoDiplomado);
 
     if (delError) {
-      console.warn('Aviso al eliminar lecciones previas en diplomados_lecciones:', delError.message);
+      console.warn('Aviso al eliminar lecciones previas en lecciones:', delError.message);
     }
 
     // 3. Insertar nuevas lecciones en bloques seguros
     const chunkSize = 80;
     for (let i = 0; i < filasLimpias.length; i += chunkSize) {
       const batch = filasLimpias.slice(i, i + chunkSize);
-      const { error: insError } = await admin.from('diplomados_lecciones').insert(batch);
+      const { error: insError } = await admin.from('lecciones').insert(batch);
       if (insError) {
-        console.error(`Error al insertar lote ${i} en diplomados_lecciones:`, insError.message);
+        console.error(`Error al insertar lote ${i} en lecciones:`, insError.message);
       }
     }
   } catch (err: any) {
-    console.error('Error al sincronizar diplomados_lecciones:', err.message);
+    console.error('Error al sincronizar lecciones:', err.message);
   }
 }
 
-// Reconstruye diplomados con su estructura completa directamente desde las filas de diplomados_lecciones
+// Reconstruye diplomados con su estructura completa directamente desde las filas de lecciones
 // Garantiza que los 22 diplomados oficiales SIEMPRE se preserven y nunca desaparezcan del catálogo
 function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabase: any[], localDiplomados: any[]) {
   const filasPorCodigo = new Map<string, LeccionRow[]>();
@@ -370,7 +370,9 @@ function reconstruirDiplomadosDesdeLecciones(leccionesRows: any[], cursosSupabas
       num_modulos: modulos.length || cursoExistente?.num_modulos || 3,
       taller_aplicable: cursoExistente?.taller_aplicable || 'Ninguno',
       docente: docenteDiplomado,
-      duracion: cursoExistente?.duracion || localDip?.duracion || '120 horas',
+      duracion: (cursoExistente?.horas || 325) + ' horas',
+      horas: Number(cursoExistente?.horas) || 325,
+      creditos: (cursoExistente?.creditos !== null && cursoExistente?.creditos !== undefined) ? Number(cursoExistente.creditos) : 13,
       imagen: cursoExistente?.imagen || localDip?.imagen || ALL_DIPLOMADOS[idx]?.imagen || '/assets/images/daem/gestion-minera.webp',
       nivel: cursoExistente?.nivel || localDip?.nivel || 'Especialización',
       precio: cursoExistente?.precio || localDip?.precio || 150.00,
@@ -386,13 +388,13 @@ export async function GET() {
 
     // 1. Consultar cursos y talleres desde public.cursos
     let { data: cursos, error } = await admin
-      .from('cursos')
+      .from('diplomados_y_cursos')
       .select('*');
 
     // Si la tabla en Supabase tiene menos de 10 productos o dio error, sembrar automáticamente
     if (error || !cursos || cursos.length < 10) {
       await seedInitialCatalogo(admin);
-      const res = await admin.from('cursos').select('*');
+      const res = await admin.from('diplomados_y_cursos').select('*');
       if (res.data && res.data.length >= 10) {
         cursos = res.data;
       } else {
@@ -400,9 +402,9 @@ export async function GET() {
       }
     }
 
-    // 2. Consultar diplomados directamente desde public.diplomados_lecciones
+    // 2. Consultar diplomados directamente desde public.lecciones
     const { data: leccionesRows, error: leccionesError } = await admin
-      .from('diplomados_lecciones')
+      .from('lecciones')
       .select('*')
       .order('orden', { ascending: true });
 
@@ -437,7 +439,9 @@ export async function GET() {
         num_modulos: c.num_modulos || localItem?.num_modulos || 1,
         taller_aplicable: c.taller_aplicable || localItem?.taller_aplicable || 'Ninguno',
         docente: c.docente || localItem?.docente || '',
-        duracion: c.duracion || (tipo === 'taller' ? '20 horas' : '40 horas'),
+        duracion: ((c.horas !== null && c.horas !== undefined) ? c.horas : (tipo === 'taller' ? 10 : 30)) + ' horas',
+        horas: (c.horas !== null && c.horas !== undefined && c.horas !== '') ? Number(c.horas) : (tipo === 'taller' ? 10 : 30),
+        creditos: (c.creditos !== null && c.creditos !== undefined && c.creditos !== '') ? Number(c.creditos) : (tipo === 'diplomado' ? 13 : null),
         imagen: c.imagen || '/assets/images/daem/gestion-minera.webp',
         nivel: c.nivel || (tipo === 'taller' ? 'Práctico' : 'Especialización'),
         precio: c.precio || (tipo === 'taller' ? 100.00 : 150.00),
@@ -485,22 +489,22 @@ export async function POST(request: Request) {
     // Acción especial: Forzar sembrado masivo a Supabase
     if (body.action === 'seed') {
       await seedInitialCatalogo(admin);
-      const res = await admin.from('cursos').select('*');
+      const res = await admin.from('diplomados_y_cursos').select('*');
       const local = getLocalCatalogoData();
 
       const rawList = (res.data && res.data.length >= 10) ? res.data : local.todos;
 
-      // Asegurar que diplomados_lecciones también tenga datos
-      const { count: leccCount } = await admin.from('diplomados_lecciones').select('*', { count: 'exact', head: true });
+      // Asegurar que lecciones también tenga datos
+      const { count: leccCount } = await admin.from('lecciones').select('*', { count: 'exact', head: true });
       if (!leccCount || leccCount === 0) {
         const maestras = generarFilasMaestrasIniciales();
         for (let i = 0; i < maestras.length; i += 80) {
-          await admin.from('diplomados_lecciones').insert(maestras.slice(i, i + 80));
+          await admin.from('lecciones').insert(maestras.slice(i, i + 80));
         }
       }
 
-      // Reconstruir diplomados desde diplomados_lecciones
-      const { data: leccRows } = await admin.from('diplomados_lecciones').select('*').order('orden', { ascending: true });
+      // Reconstruir diplomados desde lecciones
+      const { data: leccRows } = await admin.from('lecciones').select('*').order('orden', { ascending: true });
       const diplomados = (leccRows && leccRows.length > 0)
         ? reconstruirDiplomadosDesdeLecciones(leccRows, rawList, local.diplomados)
         : local.diplomados;
@@ -569,7 +573,9 @@ export async function POST(request: Request) {
       num_modulos: Number(num_modulos) || (modulos ? modulos.length : 3),
       taller_aplicable: taller_aplicable || 'Ninguno',
       docente: docente || '',
-      duracion: tipoNormalizado === 'diplomado' ? '120 horas' : '40 horas',
+      duracion: body.duracion || (body.horas ? body.horas + ' horas' : (tipoNormalizado === 'diplomado' ? '325 horas' : tipoNormalizado === 'taller' ? '10 horas' : '30 horas')),
+      horas: (body.horas !== undefined && body.horas !== null && body.horas !== '') ? Number(body.horas) : (tipoNormalizado === 'diplomado' ? 325 : tipoNormalizado === 'taller' ? 10 : 30),
+      creditos: (body.creditos !== undefined && body.creditos !== null && body.creditos !== '') ? Number(body.creditos) : (tipoNormalizado === 'diplomado' ? 13 : null),
       imagen: '/assets/images/daem/gestion-minera.webp',
       nivel: 'Especialización',
       precio: Number(precio) || 150.00,
@@ -577,7 +583,7 @@ export async function POST(request: Request) {
     };
 
     let { data, error } = await admin
-      .from('cursos')
+      .from('diplomados_y_cursos')
       .upsert(productoData)
       .select()
       .maybeSingle();
@@ -593,7 +599,7 @@ export async function POST(request: Request) {
         nivel: productoData.nivel,
         precio: productoData.precio
       };
-      const basicRes = await admin.from('cursos').upsert(basicData).select().maybeSingle();
+      const basicRes = await admin.from('diplomados_y_cursos').upsert(basicData).select().maybeSingle();
       data = basicRes.data || productoData;
     }
 
@@ -624,7 +630,8 @@ export async function PUT(request: Request) {
     const body = await request.json();
     const { 
       id, codigo, version, ano, titulo, num_modulos, 
-      taller_aplicable, docente, precio, modulos 
+      taller_aplicable, docente, precio, modulos,
+      duracion, horas, creditos 
     } = body;
 
     if (!id) {
@@ -642,13 +649,21 @@ export async function PUT(request: Request) {
     if (taller_aplicable !== undefined) updateFields.taller_aplicable = taller_aplicable;
     if (docente !== undefined) updateFields.docente = docente;
     if (precio !== undefined) updateFields.precio = Number(precio);
+    if (duracion !== undefined) updateFields.duracion = duracion;
+    if (horas !== undefined) {
+      updateFields.horas = horas !== null && horas !== '' ? Number(horas) : null;
+      // duracion column removed
+    }
+    if (creditos !== undefined) {
+      updateFields.creditos = (creditos !== null && creditos !== '') ? Number(creditos) : null;
+    }
     if (modulos !== undefined) {
       updateFields.modulos = modulos;
       updateFields.num_modulos = modulos.length;
     }
 
     let { data, error } = await admin
-      .from('cursos')
+      .from('diplomados_y_cursos')
       .update(updateFields)
       .eq('id', id)
       .select()
@@ -660,13 +675,13 @@ export async function PUT(request: Request) {
       if (titulo !== undefined) basicFields.titulo = titulo.toUpperCase();
       if (precio !== undefined) basicFields.precio = Number(precio);
 
-      const basicRes = await admin.from('cursos').update(basicFields).eq('id', id).select().maybeSingle();
+      const basicRes = await admin.from('diplomados_y_cursos').update(basicFields).eq('id', id).select().maybeSingle();
       data = basicRes.data || { id, ...updateFields };
     }
 
-    // Si es un diplomado y se proporcionaron módulos, sincronizar la tabla diplomados_lecciones
+    // Si es un diplomado y se proporcionaron módulos, sincronizar la tabla lecciones
     if (modulos !== undefined && Array.isArray(modulos)) {
-      const { data: cursoActual } = await admin.from('cursos').select('*').eq('id', id).maybeSingle();
+      const { data: cursoActual } = await admin.from('diplomados_y_cursos').select('*').eq('id', id).maybeSingle();
       const cod = (codigo || cursoActual?.codigo || (id.startsWith('dip-') ? `DIP-${id.replace(/[^0-9]/g, '').padStart(2, '0')}` : 'DIP-99')).toUpperCase();
       const tit = (titulo || cursoActual?.titulo || 'DIPLOMADO').toUpperCase();
       const tipoProd = cursoActual?.tipo || (id.startsWith('dip-') ? 'diplomado' : 'curso');
@@ -705,7 +720,7 @@ export async function DELETE(request: Request) {
     const admin = createAdminClient();
 
     const { error } = await admin
-      .from('cursos')
+      .from('diplomados_y_cursos')
       .delete()
       .in('id', ids);
 
@@ -713,12 +728,12 @@ export async function DELETE(request: Request) {
       console.error('Error al eliminar de Supabase:', error.message);
     }
 
-    // Eliminar también lecciones asociadas en diplomados_lecciones si son diplomados
+    // Eliminar también lecciones asociadas en lecciones si son diplomados
     for (const idItem of ids) {
       if (typeof idItem === 'string' && idItem.toLowerCase().startsWith('dip-')) {
         const num = idItem.replace(/[^0-9]/g, '');
         const code = `DIP-${num.padStart(2, '0')}`;
-        await admin.from('diplomados_lecciones').delete().ilike('CodigoDiplomado', code);
+        await admin.from('lecciones').delete().ilike('CodigoDiplomado', code);
       }
     }
 

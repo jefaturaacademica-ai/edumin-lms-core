@@ -11,34 +11,62 @@ import type {
 function getSupabaseClient() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-  return createClient(url, key);
+  if (!url || !key) return null;
+  try {
+    return createClient(url, key);
+  } catch {
+    return null;
+  }
 }
 
-// Fallback local en disco
+// Mapa de bancos locales en disco
+const MAPA_BANCOS_LOCALES: Record<string, string> = {
+  'DIP-01': 'banco_preguntas_derecho_minero.json',
+  'DIP-02': 'banco_preguntas_comercio_internacional.json',
+  'DIP-03': 'banco_preguntas_geologia_minera.json',
+  'DIP-04': 'banco_preguntas_geomecanica.json',
+  'DIP-05': 'banco_preguntas_geometalurgia.json',
+  'DIP-06': 'banco_preguntas_geotecnia_minera.json',
+  'DIP-07': 'banco_preguntas_sistemas_integrados_hseq.json',
+  'DIP-08': 'banco_preguntas_gerencia_estrategica_liderazgo.json',
+  'DIP-09': 'banco_preguntas_gestion_ambiental.json',
+  'CUR-01': 'banco_preguntas_curso_01.json',
+  'CUR-02': 'banco_preguntas_curso_02.json',
+  'CUR-03': 'banco_preguntas_curso_03.json'
+};
+
 function getLocalFallbackFile(codigoDiplomado?: string): string {
-  const mapaArchivos: Record<string, string> = {
-    'DIP-01': 'banco_preguntas_derecho_minero.json',
-    'DIP-02': 'banco_preguntas_comercio_internacional.json',
-    'DIP-03': 'banco_preguntas_geologia_minera.json',
-    'DIP-04': 'banco_preguntas_geomecanica.json',
-    'DIP-05': 'banco_preguntas_geometalurgia.json',
-    'DIP-06': 'banco_preguntas_geotecnia_minera.json',
-    'DIP-07': 'banco_preguntas_sistemas_integrados_hseq.json',
-    'DIP-08': 'banco_preguntas_gerencia_estrategica_liderazgo.json',
-    'DIP-09': 'banco_preguntas_gestion_ambiental.json'
-  };
-  const fileName = (codigoDiplomado && mapaArchivos[codigoDiplomado]) || mapaArchivos['DIP-01'];
+  const fileName = (codigoDiplomado && MAPA_BANCOS_LOCALES[codigoDiplomado]) || MAPA_BANCOS_LOCALES['DIP-01'];
   return path.join(process.cwd(), 'lib', 'data', fileName);
 }
 
 function leerBancoLocal(codigoDiplomado?: string): PreguntaBanco[] {
   try {
+    if (!codigoDiplomado || codigoDiplomado === 'TODOS') {
+      const todas: PreguntaBanco[] = [];
+      for (const [dipCod, archivo] of Object.entries(MAPA_BANCOS_LOCALES)) {
+        const file = path.join(process.cwd(), 'lib', 'data', archivo);
+        if (fs.existsSync(file)) {
+          const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+          data.forEach((item: any, idx: number) => {
+            todas.push({
+              ...item,
+              codigo_diplomado: item.codigo_diplomado || dipCod,
+              id: item.id || `local-${dipCod}-${idx + 1}`
+            });
+          });
+        }
+      }
+      return todas;
+    }
+
     const file = getLocalFallbackFile(codigoDiplomado);
     if (fs.existsSync(file)) {
       const data = JSON.parse(fs.readFileSync(file, 'utf8'));
       return data.map((item: any, idx: number) => ({
         ...item,
-        id: item.id || `local-pregunta-${idx + 1}`
+        codigo_diplomado: item.codigo_diplomado || codigoDiplomado,
+        id: item.id || `local-${codigoDiplomado}-${idx + 1}`
       }));
     }
   } catch (err) {
@@ -66,35 +94,42 @@ export async function obtenerPreguntasBanco(filtros?: {
   tipo?: string;
   busqueda?: string;
   soloActivas?: boolean;
+  tipoPrograma?: string; // 'DIPLOMADOS' | 'CURSOS' | 'TODOS'
 }): Promise<PreguntaBanco[]> {
-  const sb = getSupabaseClient();
-  
   try {
-    let query = sb.from('banco_preguntas').select('*').order('created_at', { ascending: false }).limit(5000);
+    const sb = getSupabaseClient();
+    if (sb) {
+      let query = sb.from('banco_preguntas').select('*').order('created_at', { ascending: false }).limit(5000);
 
-    if (filtros?.codigoDiplomado && filtros.codigoDiplomado !== 'TODOS') {
-      query = query.eq('codigo_diplomado', filtros.codigoDiplomado);
-    }
-    if (filtros?.modulo && filtros.modulo !== 'TODOS') {
-      query = query.ilike('modulo', `%${filtros.modulo.replace('Modulo', 'Módulo')}%`);
-    }
-    if (filtros?.dificultad && filtros.dificultad !== 'TODOS') {
-      query = query.eq('dificultad', filtros.dificultad);
-    }
-    if (filtros?.tipo && filtros.tipo !== 'TODOS') {
-      query = query.eq('tipo', filtros.tipo);
-    }
-    if (filtros?.soloActivas) {
-      query = query.eq('activo', true);
-    }
-
-    const { data, error } = await query;
-    if (!error && data && data.length > 0) {
-      if (filtros?.busqueda && filtros.busqueda.trim()) {
-        const term = filtros.busqueda.toLowerCase();
-        return data.filter(p => p.pregunta.toLowerCase().includes(term));
+      if (filtros?.codigoDiplomado && filtros.codigoDiplomado !== 'TODOS') {
+        query = query.eq('codigo_diplomado', filtros.codigoDiplomado);
+      } else if (filtros?.tipoPrograma === 'DIPLOMADOS') {
+        query = query.ilike('codigo_diplomado', 'DIP-%');
+      } else if (filtros?.tipoPrograma === 'CURSOS') {
+        query = query.ilike('codigo_diplomado', 'CUR-%');
       }
-      return data;
+
+      if (filtros?.modulo && filtros.modulo !== 'TODOS') {
+        query = query.ilike('modulo', `%${filtros.modulo.replace('Modulo', 'Módulo')}%`);
+      }
+      if (filtros?.dificultad && filtros.dificultad !== 'TODOS') {
+        query = query.eq('dificultad', filtros.dificultad);
+      }
+      if (filtros?.tipo && filtros.tipo !== 'TODOS') {
+        query = query.eq('tipo', filtros.tipo);
+      }
+      if (filtros?.soloActivas) {
+        query = query.eq('activo', true);
+      }
+
+      const { data, error } = await query;
+      if (!error && data && data.length > 0) {
+        if (filtros?.busqueda && filtros.busqueda.trim()) {
+          const term = filtros.busqueda.toLowerCase();
+          return data.filter(p => p.pregunta.toLowerCase().includes(term));
+        }
+        return data;
+      }
     }
   } catch (e) {
     console.warn('Fallo consulta a Supabase banco_preguntas, usando fallback local:', e);
@@ -104,6 +139,10 @@ export async function obtenerPreguntasBanco(filtros?: {
   let locales = leerBancoLocal(filtros?.codigoDiplomado);
   if (filtros?.codigoDiplomado && filtros.codigoDiplomado !== 'TODOS') {
     locales = locales.filter(p => p.codigo_diplomado === filtros.codigoDiplomado);
+  } else if (filtros?.tipoPrograma === 'DIPLOMADOS') {
+    locales = locales.filter(p => (p.codigo_diplomado || '').startsWith('DIP-'));
+  } else if (filtros?.tipoPrograma === 'CURSOS') {
+    locales = locales.filter(p => (p.codigo_diplomado || '').startsWith('CUR-'));
   }
   if (filtros?.modulo && filtros.modulo !== 'TODOS') {
     const modNorm = filtros.modulo.toLowerCase().replace('ó', 'o');
@@ -147,12 +186,14 @@ export async function guardarPreguntaBanco(pregunta: Partial<PreguntaBanco>): Pr
   };
 
   try {
-    if (id && !id.startsWith('local-')) {
-      const { data, error } = await sb.from('banco_preguntas').update(payload).eq('id', id).select().single();
-      if (!error && data) return data;
-    } else {
-      const { data, error } = await sb.from('banco_preguntas').insert([payload]).select().single();
-      if (!error && data) return data;
+    if (sb) {
+      if (id && !id.startsWith('local-')) {
+        const { data, error } = await sb.from('banco_preguntas').update(payload).eq('id', id).select().single();
+        if (!error && data) return data;
+      } else {
+        const { data, error } = await sb.from('banco_preguntas').insert([payload]).select().single();
+        if (!error && data) return data;
+      }
     }
   } catch (err) {
     console.warn('Error en Supabase guardarPregunta, actualizando fallback local:', err);
@@ -184,7 +225,7 @@ export async function guardarPreguntaBanco(pregunta: Partial<PreguntaBanco>): Pr
 export async function eliminarPreguntaBanco(id: string): Promise<boolean> {
   const sb = getSupabaseClient();
   try {
-    if (!id.startsWith('local-')) {
+    if (sb && !id.startsWith('local-')) {
       const { error } = await sb.from('banco_preguntas').delete().eq('id', id);
       if (!error) return true;
     }
@@ -205,7 +246,7 @@ export async function eliminarPreguntaBanco(id: string): Promise<boolean> {
 export async function alternarEstadoPreguntaBanco(id: string, activo: boolean): Promise<boolean> {
   const sb = getSupabaseClient();
   try {
-    if (!id.startsWith('local-')) {
+    if (sb && !id.startsWith('local-')) {
       const { error } = await sb.from('banco_preguntas').update({ activo, updated_at: new Date().toISOString() }).eq('id', id);
       if (!error) return true;
     }
@@ -424,34 +465,36 @@ export async function calificarExamen(params: {
   // Guardar en public.notas_modulos de Supabase (sin requerir tablas extras)
   try {
     const sb = getSupabaseClient();
-    const dniLimpio = params.dni || '71234567';
-    const modNorm = params.modulo;
-    const nombreDip = todasDelModulo[0]?.diplomado || 'DIPLOMADO';
+    if (sb) {
+      const dniLimpio = params.dni || '71234567';
+      const modNorm = params.modulo;
+      const nombreDip = todasDelModulo[0]?.diplomado || 'DIPLOMADO';
 
-    const { data: existente } = await sb
-      .from('notas_modulos')
-      .select('id')
-      .eq('dni_ce', dniLimpio)
-      .eq('diplomado_numero', params.codigoDiplomado)
-      .eq('modulo_nombre', modNorm)
-      .limit(1);
+      const { data: existente } = await sb
+        .from('notas_modulos')
+        .select('id')
+        .eq('dni_ce', dniLimpio)
+        .eq('diplomado_numero', params.codigoDiplomado)
+        .eq('modulo_nombre', modNorm)
+        .limit(1);
 
-    const payloadNotas = {
-      dni_ce: dniLimpio,
-      diplomado_numero: params.codigoDiplomado,
-      diplomado_nombre: nombreDip,
-      modulo_nombre: modNorm,
-      nota: notaFinal,
-      estado: aprobado ? 'APROBADO' : 'DESAPROBADO',
-      respuestas: params.respuestasUsuario,
-      detalles_examen: detalles,
-      updated_at: new Date().toISOString()
-    };
+      const payloadNotas = {
+        dni_ce: dniLimpio,
+        diplomado_numero: params.codigoDiplomado,
+        diplomado_nombre: nombreDip,
+        modulo_nombre: modNorm,
+        nota: notaFinal,
+        estado: aprobado ? 'APROBADO' : 'DESAPROBADO',
+        respuestas: params.respuestasUsuario,
+        detalles_examen: detalles,
+        updated_at: new Date().toISOString()
+      };
 
-    if (existente && existente.length > 0) {
-      await sb.from('notas_modulos').update(payloadNotas).eq('id', existente[0].id);
-    } else {
-      await sb.from('notas_modulos').insert([payloadNotas]);
+      if (existente && existente.length > 0) {
+        await sb.from('notas_modulos').update(payloadNotas).eq('id', existente[0].id);
+      } else {
+        await sb.from('notas_modulos').insert([payloadNotas]);
+      }
     }
   } catch (err) {
     console.warn('No se pudo registrar intento en notas_modulos de Supabase:', err);
@@ -470,17 +513,19 @@ export async function obtenerIntentoNotasModulos(params: {
 }): Promise<any | null> {
   try {
     const sb = getSupabaseClient();
-    const { data } = await sb
-      .from('notas_modulos')
-      .select('*')
-      .eq('dni_ce', params.dni)
-      .eq('diplomado_numero', params.codigoDiplomado)
-      .eq('modulo_nombre', params.modulo)
-      .order('updated_at', { ascending: false })
-      .limit(1);
+    if (sb) {
+      const { data } = await sb
+        .from('notas_modulos')
+        .select('*')
+        .eq('dni_ce', params.dni)
+        .eq('diplomado_numero', params.codigoDiplomado)
+        .eq('modulo_nombre', params.modulo)
+        .order('updated_at', { ascending: false })
+        .limit(1);
 
-    if (data && data.length > 0) {
-      return data[0];
+      if (data && data.length > 0) {
+        return data[0];
+      }
     }
   } catch (e) {
     console.warn('Error al obtener intento de notas_modulos:', e);
@@ -495,18 +540,20 @@ export async function obtenerIntentoNotasModulos(params: {
 export async function obtenerModulosConExamen(codigoDiplomado: string): Promise<string[]> {
   const sb = getSupabaseClient();
   try {
-    const { data, error } = await sb
-      .from('banco_preguntas')
-      .select('modulo')
-      .eq('codigo_diplomado', codigoDiplomado)
-      .eq('activo', true);
+    if (sb) {
+      const { data, error } = await sb
+        .from('banco_preguntas')
+        .select('modulo')
+        .eq('codigo_diplomado', codigoDiplomado)
+        .eq('activo', true);
 
-    if (!error && data && data.length > 0) {
-      const set = new Set<string>();
-      data.forEach((r: any) => {
-        if (r.modulo) set.add(r.modulo);
-      });
-      return Array.from(set);
+      if (!error && data && data.length > 0) {
+        const set = new Set<string>();
+        data.forEach((r: any) => {
+          if (r.modulo) set.add(r.modulo);
+        });
+        return Array.from(set);
+      }
     }
   } catch (e) {
     console.warn('Error al consultar modulos con examen en Supabase:', e);

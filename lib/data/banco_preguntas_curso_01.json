@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco del Principio de Protección Adecuada en Seguridad y Salud en el Trabajo, ¿cuál es la característica fundamental que define su enfoque preventivo antes de que los trabajadores se expongan a las condiciones operativas?",
+    "opciones": [
+      {
+        "text": "La priorización de la entrega de equipos de protección personal sobre los controles de ingeniería.",
+        "isCorrect": false,
+        "rationale": "Los EPP representan la última barrera en la jerarquía de controles y no deben sustituir las medidas de eliminación o control en la fuente."
+      },
+      {
+        "text": "La identificación anticipada y eliminación de peligros antes de que deriven en incidentes o accidentes.",
+        "isCorrect": true,
+        "rationale": "El enfoque preventivo centra la gestión en evaluar y mitigar los factores de riesgo en el entorno laboral antes de que se manifieste un evento dañino."
+      },
+      {
+        "text": "La aplicación estricta de sanciones administrativas inmediatas a los trabajadores que omitan el uso de EPP.",
+        "isCorrect": false,
+        "rationale": "La imposición de medidas disciplinarias es una acción de fiscalización y no constituye la esencia del enfoque preventivo de la protección."
+      },
+      {
+        "text": "El reemplazo anual obligatorio de la infraestructura física sin requerir una evaluación previa de riesgos.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento e infraestructura se gestionan según su estado y evaluación continua, no mediante sustituciones arbitrarias sin diagnóstico."
+      },
+      {
+        "text": "La limitación del alcance de la protección únicamente a los riesgos de origen físico y químico.",
+        "isCorrect": false,
+        "rationale": "La protección adecuada se caracteriza por su cobertura integral, abarcando factores físicos, químicos, biológicos, ergonómicos y psicosociales."
+      }
+    ],
+    "hint": "Considere la etapa del sistema de gestión que actúa sobre la fuente del peligro antes de que ocurra la exposición.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Principio de Capacitación y Entrenamiento, ¿cuál es el requisito legal y operativo indispensable relativo a la documentación de las actividades formativas exigidas a las organizaciones?",
+    "opciones": [
+      {
+        "text": "Mantener únicamente un archivo digital no firmado de las diapositivas utilizadas en las charlas diarias de 5 minutos.",
+        "isCorrect": false,
+        "rationale": "Las charlas de cinco minutos sensibilizan, pero no reemplazan los registros formales de capacitación obligatoria exigidos por ley."
+      },
+      {
+        "text": "Consolidar un plan anual aprobado por el Comité de SST, respaldado con registros de asistencia debidamente firmados y completos.",
+        "isCorrect": true,
+        "rationale": "El marco legal exige documentar el plan anual con la aprobación formal del Comité o Supervisor de SST y evidencia firmada de cada participante."
+      },
+      {
+        "text": "Sustituir los registros de asistencia individuales por un reporte global mensual elaborado por el área de Recursos Humanos.",
+        "isCorrect": false,
+        "rationale": "Los reportes globales carecen de validez legal si no se adjuntan los registros individuales con la firma y datos identificatorios del trabajador."
+      },
+      {
+        "text": "Ejecutar las capacitaciones de manera exclusiva cuando ocurra un accidente grave o mortal en la unidad operativa.",
+        "isCorrect": false,
+        "rationale": "La capacitación debe programarse de forma regular y continua como medida preventiva, no limitarse a la reactividad ante emergencias."
+      },
+      {
+        "text": "Delegar la aprobación del programa de entrenamiento a los proveedores externos de equipos de protección personal.",
+        "isCorrect": false,
+        "rationale": "La aprobación del programa formativo es potestad exclusiva del Comité o Supervisor de SST de la entidad empleadora."
+      }
+    ],
+    "hint": "Piense en las evidencias específicas que audita SUNAFIL respecto al plan anual de capacitación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una planta industrial monitorea las vibraciones anómalas en el motor de una faja transportadora mediante sensores ultrasónicos para programar una intervención antes de que el equipo colapse. ¿A qué tipo de mantenimiento corresponde esta acción técnica?",
+    "opciones": [
+      {
+        "text": "Mantenimiento Correctivo.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento correctivo actúa una vez que la falla o avería ya se ha manifestado en el equipo."
+      },
+      {
+        "text": "Mantenimiento Predictivo.",
+        "isCorrect": true,
+        "rationale": "El uso de instrumentación y sensores para rastrear patrones de desgaste e interpretar anomalías futuras define al mantenimiento predictivo."
+      },
+      {
+        "text": "Mantenimiento Rutinario de Reemplazo.",
+        "isCorrect": false,
+        "rationale": "El reemplazo rutinario sustituye partes al cumplir un tiempo calendario fijo, sin medir parámetros físicos del motor."
+      },
+      {
+        "text": "Mantenimiento Preventivo Programado.",
+        "isCorrect": false,
+        "rationale": "Aunque es preventivo en sentido amplio, el monitoreo continuo por condición técnica específica se clasifica rigurosamente como predictivo."
+      },
+      {
+        "text": "Reemplazo por Obsolescencia Operativa.",
+        "isCorrect": false,
+        "rationale": "El reemplazo por obsolescencia ocurre al final de la vida útil del activo, no durante el monitoreo de diagnóstico técnico."
+      }
+    ],
+    "hint": "Identifique el método basado en el análisis de parámetros físicos mediante tecnología para anticipar el fallo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la inspección de seguridad en una labor minera, se detecta que un arnés de cuerpo entero presenta quemaduras químicas parciales en sus fibras textiles de poliéster. ¿Cuál es el protocolo de acción inmediato según el Principio de Mantenimiento y Reemplazo?",
+    "opciones": [
+      {
+        "text": "Aplica un mantenimiento correctivo consistente en la sutura reforzada del área afectada.",
+        "isCorrect": false,
+        "rationale": "Los elementos de protección contra caídas dañados en sus costuras o fibras estructurales no deben ser cosidos ni reparados."
+      },
+      {
+        "text": "Autorizar su uso continuado si la inspección visual de las hebillas metálicas no revela deformaciones.",
+        "isCorrect": false,
+        "rationale": "El deterioro del tejido compromete la capacidad del arnés para soportar la fuerza de detención de caída, haciendo inseguro su uso."
+      },
+      {
+        "text": "Retirar de inmediato el equipo del servicio, registrar la baja documentada y proceder a su reemplazo definitivo.",
+        "isCorrect": true,
+        "rationale": "Un EPP con daño estructural evidente pierde sus capacidades de protección y debe ser retirado del stock para evitar su reutilización accidental."
+      },
+      {
+        "text": "Reasignar el arnés dañado a tareas operativas de menor altura o riesgo moderado.",
+        "isCorrect": false,
+        "rationale": "Un EPP de protección contra caídas inoperativo no se reconvierte a tareas de menor escala, debiendo ser dado de baja totalmente."
+      },
+      {
+        "text": "Enviar el equipo a revisión predictiva al laboratorio de control de calidad del fabricante.",
+        "isCorrect": false,
+        "rationale": "El daño químico visible invalida la integridad sintética del textil, requiriendo el descarte inmediato en lugar de evaluaciones extensas."
+      }
+    ],
+    "hint": "Reflexione sobre la acción que evita la reutilización de un EPP crítico que ha perdido su resistencia estructural.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la aplicación del ciclo de mejora continua (PHVA) al sistema de gestión de SST, ¿cuál de las siguientes acciones representa la fase de 'Verificar'?",
+    "opciones": [
+      {
+        "text": "Elaborar la política institucional y la matriz IPERC base de la organización.",
+        "isCorrect": false,
+        "rationale": "La formulación de políticas y la planificación de controles forman parte de la etapa 'Planificar'."
+      },
+      {
+        "text": "Dictar las capacitaciones obligatorias e implementar las medidas de control en campo.",
+        "isCorrect": false,
+        "rationale": "La ejecución operativa del plan y la entrega de recursos corresponden a la fase 'Hacer'."
+      },
+      {
+        "text": "Auditar periódicamente el desempeño del sistema y analizar los indicadores de incidentes y enfermedades.",
+        "isCorrect": true,
+        "rationale": "La medición del cumplimiento de objetivos, la evaluación de indicadores y las auditorías integran el hito 'Verificar'."
+      },
+      {
+        "text": "Aprobar los cambios reglamentarios y realizar los reajustes presupuestales del año.",
+        "isCorrect": false,
+        "rationale": "La toma de decisiones correctivas y la reorientación estratégica integran la etapa 'Actuar'."
+      },
+      {
+        "text": "Sustituir un equipo de protección personal desgastado tras el reporte del trabajador.",
+        "isCorrect": false,
+        "rationale": "La reposición operativa inmediata es un control continuo dentro de la ejecución ('Hacer')."
+      }
+    ],
+    "hint": "Busque la etapa orientada a la medición de resultados, supervisión y auditoría de los procesos ejecutados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes opciones constituyen consecuencias o implicaciones directas del incumplimiento del Principio de Protección Activa en el entorno laboral?",
+    "opciones": [
+      {
+        "text": "Incremento de costos operativos derivados de atenciones médicas, indemnizaciones y días de trabajo perdidos.",
+        "isCorrect": true,
+        "rationale": "Los accidentes laborales generan costos directos e indirectos significativos asociados a la asistencia médica, reemplazos laborales e indemnizaciones."
+      },
+      {
+        "text": "Imposición de sanciones administrativas, multas o paralizaciones por parte de la autoridad inspectiva.",
+        "isCorrect": true,
+        "rationale": "La inobservancia de las medidas preventivas y legales configura infracciones pasibles de multas y medidas de cierre por SUNAFIL."
+      },
+      {
+        "text": "Deterioro de la reputación e imagen corporativa ante la sociedad, clientes e instituciones del sector.",
+        "isCorrect": true,
+        "rationale": "Una alta siniestralidad asociada a la falta de protección afecta el posicionamiento reputacional y el valor de marca de la empresa."
+      },
+      {
+        "text": "Exoneración automática de la responsabilidad penal de los gerentes si existe contratación de seguros privados.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad penal por inobservancia de normas de SST es personal e intransferible, sin quedar anulada por contratos de seguros."
+      },
+      {
+        "text": "Reducción obligatoria de las tasas impositivas fiscales asignadas a las empresas del sector extractivo.",
+        "isCorrect": false,
+        "rationale": "El incumplimiento de la seguridad incrementa los costos y contingencias legales; no otorga beneficios tributarios."
+      }
+    ],
+    "hint": "Seleccione los impactos negativos que afectan el ámbito legal, financiero y reputacional de la organización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Conforme a la Norma Técnica de Salud NTS N° 161-MINSA/2020/DGPS, ¿bajo qué criterios técnicos se fundamenta la selección del Equipamiento de Protección Personal (EPP) para el personal asistencial?",
+    "opciones": [
+      {
+        "text": "Únicamente en el costo de adquisición de los insumos y la disponibilidad de almacenamiento.",
+        "isCorrect": false,
+        "rationale": "La selección técnica no puede priorizar el costo comercial sobre los requerimientos de bioseguridad del personal."
+      },
+      {
+        "text": "En el grado de exposición, el mecanismo de transmisión del agente y el nivel de riesgo de la actividad.",
+        "isCorrect": true,
+        "rationale": "La NTS 161 establece expresamente que la elección del EPP depende de la forma de contagio, la severidad del agente y la tarea realizada."
+      },
+      {
+        "text": "En la preferencia estética de los profesionales de la salud y el clima estacional de la región.",
+        "isCorrect": false,
+        "rationale": "Los factores estéticos no determinan la efectividad de la barrera de protección biológica."
+      },
+      {
+        "text": "En la antigüedad del trabajador asistencial en el establecimiento de salud.",
+        "isCorrect": false,
+        "rationale": "La asignación de EPP responde al riesgo objetivo del puesto y la tarea, sin importar los años de servicio del empleado."
+      },
+      {
+        "text": "Exclusivamente en el diagnóstico definitivo confirmado por laboratorio del paciente atendido.",
+        "isCorrect": false,
+        "rationale": "El principio de precaución exige considerar los mecanismos de transmisión y la exposición aun ante sospechas o diagnósticos presuntivos."
+      }
+    ],
+    "hint": "Piense en las tres variables epidemiológicas y operativas clave estipuladas en el Artículo 6 de dicha norma.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el protocolo de bioseguridad para el retiro secuencial del EPP en zonas de alto riesgo biológico, ¿cuál es el objetivo central de realizar la higiene de manos antes y después de quitarse cada prenda?",
+    "opciones": [
+      {
+        "text": "Cumplir con un requisito puramente estético antes de ingresar al área administrativa.",
+        "isCorrect": false,
+        "rationale": "La higiene de manos es una medida crítica de control de infecciones, no un trámite formal o estético."
+      },
+      {
+        "text": "Prevenir la autocontaminación del trabajador y la transferencia de patógenos a zonas no críticas.",
+        "isCorrect": true,
+        "rationale": "El retiro de la indumentaria contaminada conlleva el riesgo de tocar agentes infecciosos; la desinfección continua interrumpe la cadena de contagio."
+      },
+      {
+        "text": "Extender la vida útil de los guantes y mascarillas descartables para su posterior reutilización.",
+        "isCorrect": false,
+        "rationale": "El lavado de manos no busca esterilizar insumos desechables, los cuales deben descartarse según el protocolo."
+      },
+      {
+        "text": "Sustituir el uso de guantes estériles en los procedimientos quirúrgicos de emergencia.",
+        "isCorrect": false,
+        "rationale": "La higiene de manos es complementaria y obligatoria, pero no elimina la necesidad de guantes en intervenciones invasivas."
+      },
+      {
+        "text": "Neutralizar la acumulación de electricidad estática acumulada en el mameluco desechable.",
+        "isCorrect": false,
+        "rationale": "La finalidad primaria en el ámbito sanitario es la eliminación de la carga biológica patógena, no el control estático."
+      }
+    ],
+    "hint": "Enfóquese en la prevención del contacto accidental del personal con los agentes patógenos depositados en la superficie externa del EPP.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Respecto a las especificaciones de protección respiratoria en el sector laboral y de salud, ¿cuáles de las siguientes aseveraciones son correctas según la normativa técnica vigente?",
+    "opciones": [
+      {
+        "text": "Las mascarillas quirúrgicas simples previenen la emisión de gotas del usuario pero no ofrecen sellado hermético contra aerosoles.",
+        "isCorrect": true,
+        "rationale": "La mascarilla quirúrgica actúa como barrera de contención hacia afuera, pero carece de un ajuste facial que hermetice la inhalación de aerosoles mínimos."
+      },
+      {
+        "text": "Los respiradores tipo N95 o KN95 cuentan con capas filtrantes certificadas para contener partículas y micropartículas en el aire.",
+        "isCorrect": true,
+        "rationale": "Dichos respiradores están probados bajo estándares de eficiencia de filtración (mínimo 95%) contra partículas en suspensión."
+      },
+      {
+        "text": "Los respiradores con filtros reutilizables de cartucho requieren procedimientos documentados de limpieza, desinfección e inspección.",
+        "isCorrect": true,
+        "rationale": "Al ser equipos de uso prolongado, requieren un mantenimiento técnico sistemático de sus válvulas, arneses y piezas faciales."
+      },
+      {
+        "text": "Una mascarilla de tela simple otorga un nivel de protección idéntico al de un respirador autofiltrante en salas UCI.",
+        "isCorrect": false,
+        "rationale": "Las mascarillas de tela no garantizan la eficiencia de filtración ni el sello hermético exigido en entornos hospitalarios de alto riesgo."
+      },
+      {
+        "text": "Es técnicamente adecuado recortar las bandas elásticas de los respiradores para evitar la presión anatómica en el rostro.",
+        "isCorrect": false,
+        "rationale": "Modificar los componentes del respirador altera la tensión de ajuste y anula la protección hermética certificada por el fabricante."
+      }
+    ],
+    "hint": "Diferencie el nivel de filtrado de las mascarillas de contención frente a los respiradores de alta eficiencia con sello facial.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "El Artículo 60 de la Ley N° 29783, modificado por la Ley N° 31246, establece un estándar más riguroso para la entrega de EPP a los trabajadores. ¿Cuál es esta exigencia legal específica?",
+    "opciones": [
+      {
+        "text": "Los EPP pueden ser financiados mediante deducciones porcentuales en las planillas mensuales de los empleados.",
+        "isCorrect": false,
+        "rationale": "La ley prohíbe de forma absoluta trasladar cualquier costo derivado de los EPP al trabajador."
+      },
+      {
+        "text": "Los EPP deben contar con calidad certificada acorde a los riesgos de la actividad y ser provistos libre de todo costo.",
+        "isCorrect": true,
+        "rationale": "La modificatoria introducida por la Ley 31246 explicita que los EPP deben poseer certificación de calidad comprobada y costo cero para el trabajador."
+      },
+      {
+        "text": "El empleador queda liberado de entregar EPP si la empresa pertenece al régimen de la micro y pequeña empresa.",
+        "isCorrect": false,
+        "rationale": "La obligación de entrega de EPP atañe a todos los regímenes laborales e industrias sin distinción del tamaño empresarial."
+      },
+      {
+        "text": "La certificación de los EPP es optativa y queda a discreción del proveedor técnico de la zona.",
+        "isCorrect": false,
+        "rationale": "La calidad certificada por autoridad competente es un requisito normativo imperativo y no una sugerencia facultativa."
+      },
+      {
+        "text": "El trabajador está obligado a comprar sus propios EPP si la rotura ocurre antes de los seis meses de uso.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento, reposición y entrega sin costo del EPP son de entera responsabilidad del empleador."
+      }
+    ],
+    "hint": "Recuerde el principio de gratuidad para el trabajador y la validez técnica que deben poseer los insumos adquiridos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué obligación impone el Artículo 61 de la Ley N° 29783 (modificado por la Ley N° 31246) al empleador cuando se detecta que un EPP o indumentaria de trabajo genera riesgos para la salud del trabajador?",
+    "opciones": [
+      {
+        "text": "Sancionar disciplinariamente al trabajador por manifestar incompatibilidad biológica o ergonómica con la prenda.",
+        "isCorrect": false,
+        "rationale": "El reporte de incomodidad o reacción adversa es un derecho del trabajador y la norma exige adaptar el EPP, no aplicar sanciones."
+      },
+      {
+        "text": "Adoptar medidas correctivas inmediatas de forma oportuna, documentada y respaldada con evidencia de resultados.",
+        "isCorrect": true,
+        "rationale": "La ley manda que ante el riesgo derivado de una prenda o EPP, se debe intervenir de inmediato, registrando la evidencia del cambio realizado."
+      },
+      {
+        "text": "Ignorar la notificación hasta que la SUNAFIL efectúe una inspección presencial en la empresa.",
+        "isCorrect": false,
+        "rationale": "El empleador debe actuar proactivamente ante la falla o riesgo detectado sin esperar un requerimiento de la autoridad."
+      },
+      {
+        "text": "Transferir al trabajador a un puesto con menor remuneración salarial.",
+        "isCorrect": false,
+        "rationale": "Las incompatibilidades con EPP requieren la sustitución del equipo por uno adecuado, sin perjudicar la categoría ni el sueldo del trabajador."
+      },
+      {
+        "text": "Exigir al fabricante una indemnización comercial sin reemplazar el equipo del trabajador afectado.",
+        "isCorrect": false,
+        "rationale": "La prioridad normativa es proteger la salud del trabajador mediante la inmediata sustitución técnica del insumo."
+      }
+    ],
+    "hint": "Enfóquese en la respuesta que exige una gestión basada en evidencias documentadas y de carácter oportuno ante el hallazgo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el Artículo 79 de la Ley N° 29783, ¿cuáles son responsabilidades directas de los trabajadores en relación con los Equipos de Protección Personal?",
+    "opciones": [
+      {
+        "text": "Usar y mantener adecuadamente los EPP asignados para el desarrollo de sus labores.",
+        "isCorrect": true,
+        "rationale": "El trabajador está normativamente obligado a dar un uso correcto y cuidar los equipos provistos por la entidad."
+      },
+      {
+        "text": "Informar inmediatamente a sus superiores de cualquier pérdida, deterioro o falla detectada en su EPP.",
+        "isCorrect": true,
+        "rationale": "El reporte oportuno de fallas en el EPP es una obligación del trabajador para posibilitar la sustitución preventiva del equipo."
+      },
+      {
+        "text": "Participar en las actividades de capacitación programadas sobre el correcto uso de los EPP.",
+        "isCorrect": true,
+        "rationale": "La asistencia y aprovechamiento de la formación sobre seguridad constituye un deber legal explícito del trabajador."
+      },
+      {
+        "text": "Adquirir por cuenta propia los repuestos o filtros de sus respiradores en caso de desgaste prematuro.",
+        "isCorrect": false,
+        "rationale": "El financiamiento de repuestos e insumos de protección recae única y exclusivamente en la empresa empleadora."
+      },
+      {
+        "text": "Modificar el diseño del casco de seguridad para adaptarle accesorios no homologados por el fabricante.",
+        "isCorrect": false,
+        "rationale": "Alterar la estructura de los EPP invalida su certificación y constituye una contravención a las normas de seguridad."
+      }
+    ],
+    "hint": "Identifique las obligaciones operativas del empleado vinculadas al cuidado, reporte oportuno y asistencia a entrenamientos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al estructurar la dotación de EPP para una cuadrilla de mantenimiento eléctrico, ¿cuál es el paso técnico previo que condiciona legal y operativamente la selección de los equipos idóneos?",
+    "opciones": [
+      {
+        "text": "La cotización comercial con al menos tres proveedores del mercado local.",
+        "isCorrect": false,
+        "rationale": "El análisis financiero es posterior a la definición técnica derivada del peligro presente en la tarea."
+      },
+      {
+        "text": "La elaboración de la matriz IPERC y la identificación de los peligros específicos del puesto.",
+        "isCorrect": true,
+        "rationale": "La matriz de evaluación de riesgos determina las características físicas y eléctricas que debe poseer la protección."
+      },
+      {
+        "text": "La votación por mayoría simple entre los trabajadores operarios de la planta.",
+        "isCorrect": false,
+        "rationale": "La elección de un EPP no es una decisión plebiscitaria, sino un dictamen técnico basado en la ingeniería de riesgos."
+      },
+      {
+        "text": "La aprobación de una orden de compra por el departamento de Logística.",
+        "isCorrect": false,
+        "rationale": "Logística ejecuta la compra en función del requerimiento técnico validado previamente por el especialista de SST."
+      },
+      {
+        "text": "La antigüedad laboral de los técnicos que conforman la cuadrilla de trabajo.",
+        "isCorrect": false,
+        "rationale": "El riesgo eléctrico afecta por igual a personal contratado recientemente o de amplia trayectoria."
+      }
+    ],
+    "hint": "Considere la herramienta fundamental del sistema de gestión que identifica peligros y evalúa riesgos por puesto de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un trabajador manifiesta incomodidad y dolor de cabeza debido a la presión excesiva del tafilete de su casco sobre las orejas al acoplar simultáneamente un protector auditivo tipo copa. ¿Qué principio de selección de EPP se está omitiendo en este escenario?",
+    "opciones": [
+      {
+        "text": "El principio de durabilidad del polímero sintético.",
+        "isCorrect": false,
+        "rationale": "El problema no radica en la caducidad del plástico sino en la interacción física entre ambos insumos de protección."
+      },
+      {
+        "text": "Los criterios de ergonomía, confort y compatibilidad inter-equipo.",
+        "isCorrect": true,
+        "rationale": "Los EPP deben ser anatómicos, confortables y compatibles entre sí para no interferir ni generar desconfort o nuevos riesgos."
+      },
+      {
+        "text": "La exigencia de certificación bajo normas europeas exclusivamente.",
+        "isCorrect": false,
+        "rationale": "La falla de acople físico y confort se presenta independientemente del origen de la norma regulatoria si no se evalúa la compatibilidad."
+      },
+      {
+        "text": "El protocolo de rotación trimestral de indumentaria.",
+        "isCorrect": false,
+        "rationale": "La compatibilidad ergonómica se evalúa durante la selección e integración inicial del equipo, no con calendarios de rotación."
+      },
+      {
+        "text": "La tasa de atenuación sonora nominal expresada en decibeles.",
+        "isCorrect": false,
+        "rationale": "El malestar se debe a la interferencia mecánica de los arneses de sujeción, no a la especificación de aislamiento acústico."
+      }
+    ],
+    "hint": "Analice la interacción entre diferentes EPP usados en forma simultánea sobre el cuerpo del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al revisar la especificación técnica de unas gafas de protección para trabajos con proyección de partículas a alta velocidad, se observa la marca ANSI Z87.1. ¿Qué garantiza el cumplimiento de este estándar internacional?",
+    "opciones": [
+      {
+        "text": "Inmunidad total frente a la exposición a radiaciones gamma y rayos X.",
+        "isCorrect": false,
+        "rationale": "La norma ANSI Z87.1 regula protección ocular contra impactos y radiación UV u óptica básica, no radiación ionizante severa."
+      },
+      {
+        "text": "Ensayos estandarizados de resistencia mecánica a impactos, cobertura facial y calidad óptica.",
+        "isCorrect": true,
+        "rationale": "La norma ANSI Z87.1 certifica que el lente resiste el impacto de proyectiles a velocidad definida sin fragmentarse."
+      },
+      {
+        "text": "Un tiempo de vida útil ilimitado independientemente del desgaste del visor.",
+        "isCorrect": false,
+        "rationale": "Ningún EPP certificado ostenta durabilidad infinita; todos están sujetos a desgaste y vida útil normada."
+      },
+      {
+        "text": "Compatibilidad dieléctrica para tensiones superiores a los 30 kV.",
+        "isCorrect": false,
+        "rationale": "Los ensayos de alto voltaje corresponden a normas específicas de aislamiento eléctrico (como las normas de calzado o cascos dieléctricos)."
+      },
+      {
+        "text": "Aislamiento contra vapores orgánicos altamente concentrados.",
+        "isCorrect": false,
+        "rationale": "La norma en mención corresponde a protección ocular/facial, no a filtración de gases respiratorios."
+      }
+    ],
+    "hint": "Identifique el tipo de prueba de desempeño físico a la que son sometidos los lentes industriales bajo dicho estándar normativo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Adquirir y dotar a los trabajadores con Equipos de Protección Personal de baja calidad o sin certificación oficial genera serias consecuencias. ¿Cuáles de los siguientes eventos son derivaciones de esta práctica?",
+    "opciones": [
+      {
+        "text": "Fallas del equipo durante momentos críticos, derivando en lesiones graves o accidentes mortales.",
+        "isCorrect": true,
+        "rationale": "La falta de resistencia probada puede provocar que el EPP colapse al momento de recibir el impacto o el agente dañino."
+      },
+      {
+        "text": "Sanciones legales y multas pecuniarias impuestas por SUNAFIL por incumplimiento de la Ley 31246.",
+        "isCorrect": true,
+        "rationale": "Suministrar EPP sin calidad certificada constituye una infracción grave según la normativa inspectiva actual."
+      },
+      {
+        "text": "Gasto operativo acumulado más alto debido a la sustitución frecuente por rotura o desgaste prematuro.",
+        "isCorrect": true,
+        "rationale": "Los insumos de mala calidad sufren una degradación acelerada, requiriendo compras repetitivas que encarecen el presupuesto."
+      },
+      {
+        "text": "Reducción garantizada de las primas de seguro complementario de trabajo de riesgo (SCTR).",
+        "isCorrect": false,
+        "rationale": "Las aseguradoras incrementan las primas ante un mayor historial de siniestralidad y uso de insumos subestándar."
+      },
+      {
+        "text": "Aumento del confort y motivación del personal debido al menor peso de los materiales no certificados.",
+        "isCorrect": false,
+        "rationale": "Los EPP subestándar suelen causar rechazo, incomodidad y desconfianza en la fuerza laboral."
+      }
+    ],
+    "hint": "Piense en las repercusiones tanto en la integridad del operario como en los aspectos legal, financiero y operativo de la empresa.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el diseño de un Plan Formativo en SST relativo al uso de EPP, ¿cuál es el orden lógico y metodológico de las fases para asegurar su eficacia?",
+    "opciones": [
+      {
+        "text": "Comprar los equipos \\rightarrow Dictar la charla \\rightarrow Evaluar costos \\rightarrow Elaborar la matriz IPERC.",
+        "isCorrect": false,
+        "rationale": "No se pueden adquirir insumos ni dictar capacitaciones sin haber identificado primero la necesidad formativa y los riesgos."
+      },
+      {
+        "text": "Diagnóstico de necesidades \\rightarrow Definición de objetivos \\rightarrow Diseño del programa \\rightarrow Selección de instructores \\rightarrow Ejecución \\rightarrow Evaluación y seguimiento.",
+        "isCorrect": true,
+        "rationale": "Sigue la secuencia técnica del proceso de instrucción: diagnosticar, planificar, diseñar, seleccionar recursos, ejecutar y medir resultados."
+      },
+      {
+        "text": "Selección de instructores \\rightarrow Evaluación final \\rightarrow Diagnóstico de necesidades \\rightarrow Contratación del servicio.",
+        "isCorrect": false,
+        "rationale": "Evaluar antes de diagnosticar o ejecutar invierte de forma errónea la lógica metodológica."
+      },
+      {
+        "text": "Aprobar el presupuesto \\rightarrow Tomar examen al personal \\rightarrow Dictar capacitaciones \\rightarrow Diseñar objetivos.",
+        "isCorrect": false,
+        "rationale": "La evaluación previa a la formación no sustituye la fase de diagnóstico ni la correcta definición de los objetivos instruccionales."
+      },
+      {
+        "text": "Ejecutar la capacitación \\rightarrow Diseñar los temas \\rightarrow Evaluar al docente \\rightarrow Identificar peligros.",
+        "isCorrect": false,
+        "rationale": "Ejecutar una capacitación antes de diseñar el programa o identificar los peligros invalida el proceso instruccional."
+      }
+    ],
+    "hint": "Visualice el ciclo de capacitación estándar que inicia con la identificación de brechas de conocimiento y concluye con la medición del aprendizaje.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En una matriz IPERC, si un peligro presenta una Probabilidad de ocurrencia con valor 3 y una Severidad de daño con valor 2 (dentro de una matriz cuantitativa 5 × 5), ¿cuál es el resultado del nivel de riesgo y la prioridad de control según la metodología de evaluación?",
+    "opciones": [
+      {
+        "text": "Nivel de riesgo 6, clasificado como riesgo moderado/importante que requiere controles específicos antes de operar.",
+        "isCorrect": true,
+        "rationale": "En el producto directo Probabilidad × Severidad = 3 × 2 = 6, lo cual sitúa al riesgo en la escala intermedia que exige controles programados."
+      },
+      {
+        "text": "Nivel de riesgo 5, catalogado como trivial sin necesidad de medidas de control.",
+        "isCorrect": false,
+        "rationale": "El cálculo aritmético de 3 × 2 equivale a 6, no a 5; además un valor 6 requiere mitigación formal."
+      },
+      {
+        "text": "Nivel de riesgo 25, calificado como intolerable requiriendo paralización inmediata.",
+        "isCorrect": false,
+        "rationale": "El valor máximo 25 deviene de una Probabilidad 5 multiplicada por Severidad 5, lo cual no coincide con los datos del enunciado."
+      },
+      {
+        "text": "Nivel de riesgo 1, considerado totalmente aceptable.",
+        "isCorrect": false,
+        "rationale": "Un valor 1 resulta de multiplicar niveles mínimos (1 × 1), incompatibles con la valoración 3 y 2 provista."
+      },
+      {
+        "text": "Nivel de riesgo 0, por cuanto el uso de EPP elimina por completo la severidad.",
+        "isCorrect": false,
+        "rationale": "El EPP no elimina la severidad intrínseca ni lleva la estimación matemática del riesgo a cero."
+      }
+    ],
+    "hint": "Aplique la fórmula estándar de estimación del riesgo (Riesgo = Probabilidad × Severidad) con los valores numéricos otorgados.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Título VII de la Ley N° 29783, ¿cuál es el objeto central de la función de vigilancia en las inspecciones de Seguridad y Salud en el Trabajo?",
+    "opciones": [
+      {
+        "text": "Recaudar fondos fiscales mediante la imposición sistemática de multas preestablecidas.",
+        "isCorrect": false,
+        "rationale": "El fin supremo de la inspección es la prevención y la tutela de los derechos laborales, no el afán de recaudación impositiva."
+      },
+      {
+        "text": "Supervisar y verificar el cumplimiento de las normas técnicas y legales de SST en los centros de labores.",
+        "isCorrect": true,
+        "rationale": "El rol de vigilancia inspectiva radica en constatar que las condiciones de trabajo se adecuen a las exigencias normativas de protección."
+      },
+      {
+        "text": "Sustituir a los profesionales del área de SST de las empresas en la elaboración de la matriz IPERC.",
+        "isCorrect": false,
+        "rationale": "La inspección fiscaliza y orienta; no asume la gestión ni la elaboración de documentos técnicos que le corresponden al empleador."
+      },
+      {
+        "text": "Aprobar el presupuesto económico asignado al SCTR de las organizaciones privadas.",
+        "isCorrect": false,
+        "rationale": "Los presupuestos comerciales de seguros son gestionados por la administración interna de la empresa."
+      },
+      {
+        "text": "Diseñar los planos arquitectónicos de las instalaciones industriales inspeccionadas.",
+        "isCorrect": false,
+        "rationale": "El diseño de infraestructura no forma parte de las funciones del inspector de trabajo fijadas en el marco legal."
+      }
+    ],
+    "hint": "Piense en el rol del Estado orientado a verificar el acatamiento de las disposiciones en materia de prevención de riesgos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia sustancial entre una Inspección Programada y una Inspección Inopinada en el marco del sistema de gestión de SST?",
+    "opciones": [
+      {
+        "text": "La inspección programada posee validez legal, mientras que la inopinada es un trámite meramente informativo sin poder sancionador.",
+        "isCorrect": false,
+        "rationale": "Ambos tipos de inspección gozan exactamente del mismo valor legal y sus hallazgos pueden derivar en medidas sancionatorias."
+      },
+      {
+        "text": "La programada se contempla en el plan anual y es notificada, mientras que la inopinada responde a contingencias, denuncias o incidentes sin aviso previo.",
+        "isCorrect": true,
+        "rationale": "Las inspecciones programadas responden a la agenda preestablecida, en tanto que las inopinadas se ejecutan de sorpresa ante denuncias u ocurrencias."
+      },
+      {
+        "text": "Las inspecciones inopinadas solo pueden ser ejecutadas por el Comité de SST, prohibiéndose la participación de SUNAFIL.",
+        "isCorrect": false,
+        "rationale": "SUNAFIL tiene plenas facultades para realizar inspecciones inopinadas en cualquier momento dentro de sus atribuciones."
+      },
+      {
+        "text": "Las inspecciones programadas prescinden del uso de listas de chequeo o formatos de verificación.",
+        "isCorrect": false,
+        "rationale": "Toda inspección técnica estructurada requiere un soporte documental o lista de chequeo para guiar la revisión."
+      },
+      {
+        "text": "Las inspecciones inopinadas se limitan de manera exclusiva a la revisión de la documentación contable de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones inopinadas abordan condiciones operativas en campo, uso de EPP e investigación de denuncias y accidentes."
+      }
+    ],
+    "hint": "Enfóquese en el criterio de notificación previa y en los desencadenantes que motivan la realización de cada inspección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De conformidad con el Artículo 96 de la Ley N° 29783, ¿qué facultades legales asisten a un inspector de trabajo en el ejercicio de sus funciones fiscalizadoras?",
+    "opciones": [
+      {
+        "text": "Entrar libremente a cualquier hora del día o de la noche en todo centro de trabajo sujeto a inspección.",
+        "isCorrect": true,
+        "rationale": "El inspector tiene libre acceso a las instalaciones operativas sin restricciones de horario para constatar la realidad laboral."
+      },
+      {
+        "text": "Proceder a practicar cualquier diligencia, investigación, examen o prueba que considere necesaria.",
+        "isCorrect": true,
+        "rationale": "Cuenta con la facultad de tomar muestras, requerir mediciones ambientales y revisar equipos para comprobar el cumplimiento normativo."
+      },
+      {
+        "text": "Interrogar, solo o ante testigos, al personal y a los ejecutivos de la empresa sobre la aplicación de las normas.",
+        "isCorrect": true,
+        "rationale": "La toma de declaraciones a trabajadores y representantes es una herramienta legal clave para el esclarecimiento de los hechos."
+      },
+      {
+        "text": "Expropiar de manera definitiva los activos inmuebles donde se detecte una infracción muy grave.",
+        "isCorrect": false,
+        "rationale": "La autoridad inspectiva aplica multas o paralización de labores, pero no posee atribuciones constitucionales de expropiación de bienes."
+      },
+      {
+        "text": "Modificar unilateralmente los contratos colectivos de trabajo pactados entre la empresa y el sindicato.",
+        "isCorrect": false,
+        "rationale": "Las convenciones colectivas corresponden a la negociación laboral y no son materia de alteración unilateral por el inspector."
+      }
+    ],
+    "hint": "Seleccione las potestades de ingreso, investigación de campo e interrogatorio técnico conferidas por ley.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el desarrollo de la metodología inspectiva en una planta de procesos, ¿cuál es la secuencia correcta de las etapas desde el inicio hasta el cierre formal del acto de fiscalización?",
+    "opciones": [
+      {
+        "text": "Emisión del informe final \\rightarrow Visita de campo \\rightarrow Notificación \\rightarrow Entrevistas.",
+        "isCorrect": false,
+        "rationale": "Emitir el informe antes de visitar las instalaciones o entrevistar a los trabajadores vicia el procedimiento inspectivo."
+      },
+      {
+        "text": "Acreditación \\rightarrow Revisión documental y planificación \\rightarrow Inspección física de campo \\rightarrow Entrevistas \\rightarrow Emisión de acta/constancia con requerimientos \\rightarrow Seguimiento.",
+        "isCorrect": true,
+        "rationale": "Constituye el flujo metodológico estandarizado que garantiza el debido proceso desde la identificación inicial hasta el monitoreo de subsanación."
+      },
+      {
+        "text": "Paralizar la planta \\rightarrow Entrevistar al gerente \\rightarrow Redactar la multa \\rightarrow Revisar los EPP.",
+        "isCorrect": false,
+        "rationale": "La paralización es una medida excepcional ante riesgo grave e inminente, no el paso inicial metodológico."
+      },
+      {
+        "text": "Tomar fotografías \\rightarrow Aplicar sanciones \\rightarrow Revisar el IPERC \\rightarrow Iniciar la inspección.",
+        "isCorrect": false,
+        "rationale": "No se pueden imponer sanciones en la etapa inicial sin haber agotado las diligencias y otorgado el derecho de descargo."
+      },
+      {
+        "text": "Entrevistar a los proveedores \\rightarrow Elaborar lista de chequeo \\rightarrow Cerrar el caso \\rightarrow Visitar la labor.",
+        "isCorrect": false,
+        "rationale": "El cierre del caso solo procede tras verificar la corrección de las no conformidades detectadas en la visita de campo."
+      }
+    ],
+    "hint": "Ordene los pasos respetando el inicio con la identificación formal del inspector, las diligencias de investigación y el cierre documental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el informe técnico derivado de una inspección de seguridad se consignan varias 'no conformidades' relacionadas con la entrega de EPP defectuosos. ¿Cuándo se considera jurídicamente cerrado el proceso inspectivo interno?",
+    "opciones": [
+      {
+        "text": "Inmediatamente después de que el inspector firma el informe de auditoría.",
+        "isCorrect": false,
+        "rationale": "La firma del reporte solo documenta el hallazgo, pero mantiene abierto el proceso de subsanación."
+      },
+      {
+        "text": "Al momento en que la empresa realiza el pago de las multas internas administrativas.",
+        "isCorrect": false,
+        "rationale": "El pago o la sanción no elimina la condición insegura si no se efectúa la corrección física o técnica del insumo."
+      },
+      {
+        "text": "Únicamente cuando se verifica la implementación de las medidas correctivas y se cierra la subsanación de las 'no conformidades'.",
+        "isCorrect": true,
+        "rationale": "El seguimiento concluye y el expediente se cierra cuando la evidencia demuestra la eliminación efectiva de la falla observada."
+      },
+      {
+        "text": "Cuando transcurre un período fiscal completo sin que se registren accidentes mortales.",
+        "isCorrect": false,
+        "rationale": "El transcurso del tiempo no sustituye la obligación de evidenciar la subsanación formal de cada punto observado."
+      },
+      {
+        "text": "Al destruirse las listas de chequeo utilizadas en la visita de campo.",
+        "isCorrect": false,
+        "rationale": "Los registros deben conservarse como evidencia del sistema de gestión y no eliminarse."
+      }
+    ],
+    "hint": "Piense en la condición técnica indispensable relacionada con la corrección real de los hallazgos advertidos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la tipificación de infracciones inspectivas en materia de SST, ¿cómo se clasifica la conducta de un empleador que no dota a los trabajadores de los Equipos de Protección Personal necesarios para realizar tareas de alto riesgo?",
+    "opciones": [
+      {
+        "text": "Infracción Leve.",
+        "isCorrect": false,
+        "rationale": "Las faltas leves atañen a formalidades documentales que no exponen de manera directa la vida o salud del trabajador."
+      },
+      {
+        "text": "Infracción Grave o Muy Grave según la cantidad de trabajadores afectados y el nivel de riesgo directo de la tarea.",
+        "isCorrect": true,
+        "rationale": "La omisión de EPP para labores de riesgo compromete de forma severa la integridad física, tipificándose como falta grave o muy grave."
+      },
+      {
+        "text": "Incorrección Formal Subsanable sin sanción.",
+        "isCorrect": false,
+        "rationale": "Dejar sin EPP al personal que ejecuta actividades peligrosas excede lo meramente formal y representa una violación sustancial."
+      },
+      {
+        "text": "Observación de carácter consultivo exclusivamente.",
+        "isCorrect": false,
+        "rationale": "Las fallas críticas de protección personal activan la potestad sancionadora e imperativa de la autoridad inspectiva."
+      },
+      {
+        "text": "Falta Administrativa Tributaria.",
+        "isCorrect": false,
+        "rationale": "No constituye una infracción de índole fiscal o impositiva, sino de tutela de la seguridad y salud en el trabajo."
+      }
+    ],
+    "hint": "Evalúe la gravedad considerando la exposición directa del trabajador a peligros que comprometen su vida o salud.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante un procedimiento sancionador promovido por SUNAFIL, ¿cuáles de las siguientes circunstancias actúan como 'atenuantes' para la graduación y reducción del monto de la multa impuesta a la empresa?",
+    "opciones": [
+      {
+        "text": "Subsanar las infracciones detectadas con anterioridad al vencimiento del plazo otorgado en la medida requerida.",
+        "isCorrect": true,
+        "rationale": "La corrección oportuna y voluntaria antes del requerimiento definitivo demuestra diligencia y reduce la sanción."
+      },
+      {
+        "text": "Acreditar la adopción proactiva de mejoras continuas en el sistema de gestión de SST en la unidad operativa.",
+        "isCorrect": true,
+        "rationale": "La implementación de estándares superiores o correcciones integrales sirve como atenuante en la graduación del valor pecuniario."
+      },
+      {
+        "text": "Prestar una colaboración efectiva y transparente con la comisión inspectora durante todas las diligencias.",
+        "isCorrect": true,
+        "rationale": "Facilitar las investigaciones y brindar la documentación sin dilaciones es reconocido como una conducta atenuante."
+      },
+      {
+        "text": "Reincidir por tercera vez consecutiva en la misma falta técnica observada en el ejercicio fiscal anterior.",
+        "isCorrect": false,
+        "rationale": "La reincidencia constituye una circunstancia agravante que incrementa de forma sustancial el cálculo de la multa."
+      },
+      {
+        "text": "Ocultar la identidad de los trabajadores involucrados en un accidente laboral grave.",
+        "isCorrect": false,
+        "rationale": "La obstrucción a la labor inspectiva es una falta muy grave sancionada de manera independiente con montos elevados."
+      }
+    ],
+    "hint": "Seleccione las conductas empresariales de colaboración, subsanación anticipada y comportamiento proactivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial del principio de protección adecuada dentro del sistema de gestión de seguridad y salud en el trabajo?",
+    "opciones": [
+      {
+        "text": "Garantizar condiciones seguras en el entorno laboral para prevenir accidentes y enfermedades ocupacionales.",
+        "isCorrect": true,
+        "rationale": "El principio de protección adecuada busca asegurar condiciones óptimas mediante medidas preventivas para proteger la vida, integridad y salud de los trabajadores."
+      },
+      {
+        "text": "Sustituir de manera definitiva la capacitación continua de los trabajadores por equipos de protección personal.",
+        "isCorrect": false,
+        "rationale": "Los EPP no reemplazan la capacitación; por el contrario, la capacitación es indispensable para asegurar el uso correcto del equipo."
+      },
+      {
+        "text": "Aumentar los costos operativos de la empresa mediante inspecciones de rutina sin evaluación previa.",
+        "isCorrect": false,
+        "rationale": "El principio busca prevenir accidentes para minimizar costos derivados de lesiones o sanciones, no incrementarlos."
+      },
+      {
+        "text": "Eliminar la necesidad de realizar evaluaciones de riesgos laborales en puestos de bajo impacto.",
+        "isCorrect": false,
+        "rationale": "La evaluación de riesgos es una estrategia fundamental dentro del principio de protección adecuada para identificar los peligros de cada puesto."
+      },
+      {
+        "text": "Transferir la responsabilidad legal de la seguridad ocupacional a los proveedores de insumos.",
+        "isCorrect": false,
+        "rationale": "La responsabilidad legal de garantizar un entorno seguro recae en el empleador, no en los proveedores de insumos."
+      }
+    ],
+    "hint": "Piensa en el fin preventivo primordial enfocado en la salud e integridad física de los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según lo establecido en la legislación peruana de SST (Ley 29783), ¿cuál es el número mínimo de capacitaciones obligatorias que debe impartir el empleador al año?",
+    "opciones": [
+      {
+        "text": "Cuatro capacitaciones al año en materia de seguridad y salud en el trabajo.",
+        "isCorrect": true,
+        "rationale": "La Ley 29783 dispone que el empleador debe garantizar como mínimo cuatro capacitaciones anuales orientadas a la prevención de riesgos."
+      },
+      {
+        "text": "Una sola capacitación al ingreso del trabajador a la empresa.",
+        "isCorrect": false,
+        "rationale": "La norma exige un mínimo de cuatro capacitaciones al año, no una única charla al momento de la contratación."
+      },
+      {
+        "text": "Doce capacitaciones obligatorias, una por cada mes del calendario laboral.",
+        "isCorrect": false,
+        "rationale": "Aunque se pueden realizar capacitaciones mensuales o charlas de 5 minutos, la exigencia legal mínima documentada es de cuatro al año."
+      },
+      {
+        "text": "Dos capacitaciones anuales exclusivas para los miembros del comité de SST.",
+        "isCorrect": false,
+        "rationale": "Las cuatro capacitaciones anuales mínimas deben incluir a todos los trabajadores de la organización."
+      },
+      {
+        "text": "Únicamente las capacitaciones que solicite la autoridad inspectiva de trabajo.",
+        "isCorrect": false,
+        "rationale": "La obligación es programada y preventiva dentro del plan anual, independientemente de si hay inspecciones o no."
+      }
+    ],
+    "hint": "Recuerda la exigencia legal anual estipulada en el artículo 27 de la Ley 29783.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué consiste la aplicación del principio de mantenimiento y reemplazo en la gestión de seguridad?",
+    "opciones": [
+      {
+        "text": "En realizar inspecciones periódicas y sustituir oportunamente equipos, herramientas y EPP desgastados o defectuosos.",
+        "isCorrect": true,
+        "rationale": "Este principio obliga a revisar preventivamente y cambiar los equipos o herramientas cuando hayan alcanzado el fin de su vida útil o presenten daños."
+      },
+      {
+        "text": "En reparar artesanalmente los cascos y arneses agrietados para extender su uso indefinidamente.",
+        "isCorrect": false,
+        "rationale": "Los EPP que sufren agrietamientos o daños estructurales pierden sus propiedades de protección y deben ser reemplazados, no reparados de forma inadecuada."
+      },
+      {
+        "text": "En adquirir equipos de protección personal únicamente cuando ocurra un accidente incapacitante.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento y reemplazo forma parte de una estrategia preventiva continua, no reactiva ante accidentes."
+      },
+      {
+        "text": "En delegar la compra y mantenimiento de herramientas críticas exclusivamente a los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Garantizar el estado seguro de los equipos y suministrar EPP sin costo es obligación del empleador."
+      },
+      {
+        "text": "En aplicar evaluaciones teóricas de conocimientos al personal de almacén cada dos años.",
+        "isCorrect": false,
+        "rationale": "Esa acción corresponde al principio de capacitación, no al de mantenimiento y reemplazo físico de los equipos."
+      }
+    ],
+    "hint": "Se enfoca en garantizar que los equipos no pierdan su capacidad protectora por deterioro o uso prolongado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de las siguientes etapas forman parte del ciclo de Deming (PHVA) aplicado al principio de mejora continua en SST?",
+    "opciones": [
+      {
+        "text": "Planificar las acciones y programas del sistema de gestión.",
+        "isCorrect": true,
+        "rationale": "Corresponde a la 'P' del ciclo PHVA, donde se establecen los objetivos y planes preventivos."
+      },
+      {
+        "text": "Hacer la ejecución de las actividades y capacitaciones programadas.",
+        "isCorrect": true,
+        "rationale": "Corresponde a la 'H' del ciclo PHVA, orientada a poner en marcha lo planificado."
+      },
+      {
+        "text": "Verificar los resultados e indicadores del sistema mediante inspecciones y auditorías.",
+        "isCorrect": true,
+        "rationale": "Corresponde a la 'V' del ciclo PHVA, donde se mide la efectividad de las medidas implementadas."
+      },
+      {
+        "text": "Actuar aplicando medidas de corrección para optimizar el sistema continuamente.",
+        "isCorrect": true,
+        "rationale": "Corresponde a la 'A' del ciclo PHVA, cerrando el ciclo con mejoras basadas en la evaluación."
+      },
+      {
+        "text": "Sancionar económicamente de forma automática a los trabajadores accidentados.",
+        "isCorrect": false,
+        "rationale": "El ciclo de mejora continua es un enfoque organizativo y correctivo del sistema de gestión, no un procedimiento punitivo para los trabajadores."
+      }
+    ],
+    "hint": "Corresponde al ciclo PHVA (o ciclo de Deming) utilizado en los sistemas de gestión.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué acción define la característica preventiva dentro del principio de protección adecuada?",
+    "opciones": [
+      {
+        "text": "Identificar los peligros y evaluar los riesgos antes de que se manifiesten en un accidente.",
+        "isCorrect": true,
+        "rationale": "El enfoque preventivo centra la gestión en la eliminación y control temprano de riesgos antes de que causen daños."
+      },
+      {
+        "text": "Investigar las causas de una fatalidad laboral una vez culminado el proceso judicial.",
+        "isCorrect": false,
+        "rationale": "La investigación post-accidente es una medida correctiva o reactiva, no propiamente preventiva primaria."
+      },
+      {
+        "text": "Proporcionar incentivos económicos a quienes no reporten incidentes peligrosos.",
+        "isCorrect": false,
+        "rationale": "Ocultar o no reportar incidentes impide la prevención y pone en peligro a los trabajadores."
+      },
+      {
+        "text": "Contratar pólizas de seguro de vida sin modificar las condiciones peligrosas de trabajo.",
+        "isCorrect": false,
+        "rationale": "Los seguros compensan el daño pero no previenen la ocurrencia de los accidentes laborales."
+      },
+      {
+        "text": "Sustituir los controles de ingeniería únicamente por avisos de señalización visual.",
+        "isCorrect": false,
+        "rationale": "Los controles de ingeniería están por encima de las señales en la jerarquía de control y ofrecen mayor protección."
+      }
+    ],
+    "hint": "Considera la acción de anticiparse a la ocurrencia de los accidentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el propósito central de implementar programas de mantenimiento preventivo en equipos y maquinarias industriales?",
+    "opciones": [
+      {
+        "text": "Anticipar posibles fallas operativas o estructurales antes de que originen accidentes laborales.",
+        "isCorrect": true,
+        "rationale": "El mantenimiento preventivo programa revisiones periódicas para evitar que los equipos fallen durante su operación y pongan en riesgo al personal."
+      },
+      {
+        "text": "Esperar a que la maquinaria quede inoperativa para evaluar el costo de reemplazo.",
+        "isCorrect": false,
+        "rationale": "Esperar a la falla corresponde al mantenimiento correctivo, el cual genera interrupciones y riesgos no controlados."
+      },
+      {
+        "text": "Cumplir únicamente con la limpieza estética de los componentes externos.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento abarca pruebas mecánicas, eléctricas y funcionales de fondo, no solo aspectos estéticos."
+      },
+      {
+        "text": "Transferir la responsabilidad del funcionamiento de las máquinas al fabricante de por vida.",
+        "isCorrect": false,
+        "rationale": "El empleador debe gestionar y ejecutar el programa de mantenimiento en el centro laboral."
+      },
+      {
+        "text": "Eliminar la necesidad de usar equipos de protección personal en trabajos mecánicos.",
+        "isCorrect": false,
+        "rationale": "El mantenimiento de equipos mejora la seguridad operativa, pero los EPP siguen siendo requeridos según la evaluación de riesgo."
+      }
+    ],
+    "hint": "Busca evitar que el fallo técnico se presente durante la operación del equipo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué principio fundamental en materia laboral establece la Constitución Política del Perú?",
+    "opciones": [
+      {
+        "text": "El derecho de toda persona a la protección de su integridad física y mental en el trabajo.",
+        "isCorrect": true,
+        "rationale": "La Carta Magna establece como pilar la protección de la vida y la integridad física y mental de los trabajadores en su entorno laboral."
+      },
+      {
+        "text": "La obligación de que los trabajadores adquieran sus propios implementos de seguridad.",
+        "isCorrect": false,
+        "rationale": "La Constitución y la ley imponen al empleador la obligación de brindar condiciones seguras sin costo para el trabajador."
+      },
+      {
+        "text": "La exoneración de responsabilidad administrativa a las empresas privadas en materia de SST.",
+        "isCorrect": false,
+        "rationale": "Todas las empresas, públicas o privadas, están sujetas al cumplimiento del marco regulatorio de SST."
+      },
+      {
+        "text": "La primacía de la productividad industrial sobre la prevención de riesgos de trabajo.",
+        "isCorrect": false,
+        "rationale": "La protección de la persona humana es el fin supremo de la sociedad y del Estado, primando sobre la productividad."
+      },
+      {
+        "text": "La facultad de los empleadores de omitir la formación en seguridad en contratos temporales.",
+        "isCorrect": false,
+        "rationale": "El derecho a la protección y capacitación aplica a todos los trabajadores independientemente de su régimen contractual."
+      }
+    ],
+    "hint": "Es la norma fundamental del Estado Peruano que protege los derechos humanos básicos en el empleo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué sector de actividad está dirigida específicamente la Norma Técnica de Salud NTS 161 del MINSA (2020)?",
+    "opciones": [
+      {
+        "text": "A las Instituciones Prestadoras de Servicios de Salud (IPRESS) públicas y privadas.",
+        "isCorrect": true,
+        "rationale": "La NTS 161 del MINSA fue emitida para normar el uso, selección y desecho de EPP en el personal del sector salud."
+      },
+      {
+        "text": "A las operaciones mineras de socavón y canteras a cielo abierto.",
+        "isCorrect": false,
+        "rationale": "El sector minero se rige por su propia norma sectorial (como el Decreto Supremo 024-2016-EM)."
+      },
+      {
+        "text": "A los proyectos de construcción civil y edificación urbana.",
+        "isCorrect": false,
+        "rationale": "La construcción se rige por el Decreto Supremo 011-2019-TR y la norma G.050."
+      },
+      {
+        "text": "A las empresas de generación y distribución de energía eléctrica.",
+        "isCorrect": false,
+        "rationale": "El sector eléctrico cuenta con el Reglamento de Seguridad y Salud en el Trabajo con Electricidad (RESESATE)."
+      },
+      {
+        "text": "A las unidades de transporte público interprovincial de pasajeros.",
+        "isCorrect": false,
+        "rationale": "El transporte interprovincial se rige por la normativa del MTC y normativas generales de trabajo."
+      }
+    ],
+    "hint": "Fue emitida por el MINSA para regular la bioseguridad en establecimientos asistenciales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el artículo 60 de la Ley 29783, modificado por la Ley 31246, ¿cuál es una exigencia obligatoria sobre los EPP entregados a los trabajadores?",
+    "opciones": [
+      {
+        "text": "Que sean de calidad certificada por autoridad competente y proporcionados sin costo alguno para el trabajador.",
+        "isCorrect": true,
+        "rationale": "La modificación legal introducida por la Ley 31246 enfatiza que los EPP deben contar con certificación de calidad y ser totalmente gratuitos."
+      },
+      {
+        "text": "Que el costo de los EPP sea descontado de manera fraccionada en la planilla de sueldo.",
+        "isCorrect": false,
+        "rationale": "La ley prohíbe de manera expresa trasladar cualquier costo de los equipos de protección al trabajador."
+      },
+      {
+        "text": "Que el trabajador los adquiera libremente en el mercado comercial y pida reembolso.",
+        "isCorrect": false,
+        "rationale": "El empleador es quien debe seleccionar, adquirir y entregar directamente los EPP adecuados."
+      },
+      {
+        "text": "Que la certificación de calidad sea firmada únicamente por el supervisor inmediato de la obra.",
+        "isCorrect": false,
+        "rationale": "La certificación debe responder a organismos oficiales o laboratorios acreditados bajo normas nacionales e internacionales."
+      },
+      {
+        "text": "Que los EPP sean compartidos entre los trabajadores de turnos rotativos para optimizar recursos.",
+        "isCorrect": false,
+        "rationale": "Los EPP son de uso personal e intransferible para garantizar la higiene, Confort y protección adecuada."
+      }
+    ],
+    "hint": "Refuerza que la adquisición de estos equipos es responsabilidad económica del empleador y exige respaldo oficial de calidad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el artículo 79 de la Ley 29783, ¿cuál es una responsabilidad directa del trabajador respecto a sus equipos de protección?",
+    "opciones": [
+      {
+        "text": "Usar correctamente los EPP asignados, cuidarlos e informar de inmediato sobre cualquier deterioro o pérdida.",
+        "isCorrect": true,
+        "rationale": "La ley establece el deber del trabajador de emplear adecuadamente los implementos de seguridad proporcionados y reportar daños."
+      },
+      {
+        "text": "Comprar repuestos con fondos propios cuando el equipo sufra un desgaste operativo normal.",
+        "isCorrect": false,
+        "rationale": "El reemplazo por desgaste operativo es responsabilidad y costo del empleador."
+      },
+      {
+        "text": "Certificar técnicamente la resistencia del casco mediante pruebas destructivas personales.",
+        "isCorrect": false,
+        "rationale": "Las pruebas de calidad y certificación son responsabilidad de los fabricantes y organismos acreditados."
+      },
+      {
+        "text": "Modificar el diseño del equipo para adaptarlo a sus preferencias estéticas personales.",
+        "isCorrect": false,
+        "rationale": "Alterar el diseño del EPP puede anular su certificación y comprometer seriamente su nivel de protección."
+      },
+      {
+        "text": "Prestar su equipo de protección respiratoria a trabajadores visitantes no capacitados.",
+        "isCorrect": false,
+        "rationale": "Los EPP de uso personal, especialmente la protección respiratoria, no deben compartirse por razones higiénicas y ergonómicas."
+      }
+    ],
+    "hint": "Abarca el deber del trabajador frente a los elementos que le son asignados para su protección personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Conforme a la Norma Técnica de Salud NTS 161-MINSA, ¿cuáles de los siguientes componentes forman parte de los EPP para la atención asistencial del sector salud?",
+    "opciones": [
+      {
+        "text": "Respiradores filtrantes (como N95 o KN95) y mascarillas quirúrgicas.",
+        "isCorrect": true,
+        "rationale": "Son EPP esenciales para la protección de la vía respiratoria contra aerosoles e infección por gotas."
+      },
+      {
+        "text": "Guantes de examen no estériles y guantes quirúrgicos estériles.",
+        "isCorrect": true,
+        "rationale": "Constituyen la barrera primaria de las manos frente a fluidos corporales y agentes biológicos."
+      },
+      {
+        "text": "Protectores oculares (gafas de seguridad) y caretas faciales.",
+        "isCorrect": true,
+        "rationale": "Protegen la mucosa ocular y facial contra salpicaduras de sangre o fluidos biológicos."
+      },
+      {
+        "text": "Cascos de seguridad dielectricos con barbiquejo tipo II.",
+        "isCorrect": false,
+        "rationale": "El casco dieléctrico se utiliza en el sector eléctrico o construcción, no en la atención clínica hospitalaria estandarizada."
+      },
+      {
+        "text": "Cinturones de posicionamiento con línea de vida de acero inoxidable.",
+        "isCorrect": false,
+        "rationale": "Son equipos para protección contra caídas en altura, ajenos al protocolo de bioseguridad asistencial."
+      }
+    ],
+    "hint": "Identifica los elementos diseñados para controlar riesgos biológicos y de fluidos corporales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la función principal de las Normas Técnicas Peruanas (NTP) en el ámbito de los EPP?",
+    "opciones": [
+      {
+        "text": "Definir los requisitos, especificaciones técnicas y métodos de ensayo mínimos para asegurar la calidad del EPP.",
+        "isCorrect": true,
+        "rationale": "Las NTP establecen el estándar estandarizado de calidad, diseño y resistencia que debe cumplir cada tipo de EPP en el país."
+      },
+      {
+        "text": "Establecer las sanciones penales para los gerentes de empresas que no utilicen guantes.",
+        "isCorrect": false,
+        "rationale": "Las sanciones penales están tipificadas en el Código Penal, no en las Normas Técnicas Peruanas."
+      },
+      {
+        "text": "Determinar los salarios mínimos de los prevencionistas de riesgos en el sector minero.",
+        "isCorrect": false,
+        "rationale": "Las NTP son normas técnicas sobre productos y procesos, no regulan aspectos salariales."
+      },
+      {
+        "text": "Reemplazar completamente el Reglamento Interno de Seguridad de las organizaciones.",
+        "isCorrect": false,
+        "rationale": "El Reglamento Interno es un documento propio de cada empresa que complementa la legislación pero no es sustituido por las NTP."
+      },
+      {
+        "text": "Autorizar la importación de insumos sin revisión de laboratorios acreditados.",
+        "isCorrect": false,
+        "rationale": "Las NTP sirven precisamente como marco técnico de verificación de la calidad de los productos antes de comercializarse."
+      }
+    ],
+    "hint": "Definen las características físicas, químicas y de resistencia de cada producto protector.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la jerarquía general de controles de riesgos en SST, ¿en qué posición se sitúa el uso de Equipos de Protección Personal (EPP)?",
+    "opciones": [
+      {
+        "text": "Como la última barrera de control frente a los peligros no eliminados o no controlados previamente.",
+        "isCorrect": true,
+        "rationale": "El EPP se aplica como última medida cuando los controles de eliminación, sustitución, ingeniería y administrativos no son suficientes."
+      },
+      {
+        "text": "Como la primera y más efectiva medida preventiva obligatoria.",
+        "isCorrect": false,
+        "rationale": "La medida más efectiva en la jerarquía es la eliminación del peligro, ubicándose el EPP en el último lugar."
+      },
+      {
+        "text": "En el mismo nivel de prioridad que la eliminación total del peligro en la fuente.",
+        "isCorrect": false,
+        "rationale": "Eliminar el peligro borra el riesgo de raíz, mientras que el EPP solo interpone una barrera sobre el trabajador expuesto."
+      },
+      {
+        "text": "Como una alternativa opcional que reemplaza a los controles administrativos.",
+        "isCorrect": false,
+        "rationale": "No es opcional ni reemplaza de forma aislada a los demás niveles de control; es complementario."
+      },
+      {
+        "text": "Como una medida requerida únicamente si la empresa no posee comité de SST.",
+        "isCorrect": false,
+        "rationale": "Su aplicación depende de la evaluación del riesgo operacional, no de la existencia de comités."
+      }
+    ],
+    "hint": "Ubica los EPP dentro del orden de prioridad para el control de riesgos laborales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el paso previo e indispensable antes de seleccionar y dotar de un determinado EPP a un trabajador?",
+    "opciones": [
+      {
+        "text": "Elaborar la Identificación de Peligros, Evaluación de Riesgos y Medidas de Control (IPERC) del puesto de trabajo.",
+        "isCorrect": true,
+        "rationale": "La elección adecuada del EPP surge directamente de los riesgos específicos identificados en la matriz IPERC para ese puesto."
+      },
+      {
+        "text": "Comprar un lote estandarizado de equipos sin analizar el tipo de labor a realizar.",
+        "isCorrect": false,
+        "rationale": "Comprar sin evaluación previa puede llevar a dotar EPP inadecuados que no protejan contra el riesgo real o generen desconfort."
+      },
+      {
+        "text": "Solicitar la aprobación del sindicato para la compra de marcas comerciales específicas.",
+        "isCorrect": false,
+        "rationale": "La selección responde a criterios técnicos de evaluación de riesgos y normatividad, no a marcas comerciales."
+      },
+      {
+        "text": "Efectuar una auditoría externa por parte del Ministerio de Trabajo.",
+        "isCorrect": false,
+        "rationale": "La evaluación de riesgo es una tarea interna permanente de la empresa y no requiere esperar una auditoría estatal previa."
+      },
+      {
+        "text": "Revisar los registros de asistencia de las capacitaciones del año anterior.",
+        "isCorrect": false,
+        "rationale": "Los registros de capacitación no definen las necesidades técnicas de protección física ante peligros presentes."
+      }
+    ],
+    "hint": "Es la herramienta base para conocer la naturaleza y nivel de exposición antes de elegir la protección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué estándar internacional de la ANSI es ampliamente reconocido para regular las especificaciones de protección ocular y facial contra impactos?",
+    "opciones": [
+      {
+        "text": "ANSI Z87.1",
+        "isCorrect": true,
+        "rationale": "La norma ANSI Z87.1 establece los requisitos de desempeño, resistencia e impacto para gafas, antiparras y caretas de protección."
+      },
+      {
+        "text": "ANSI Z89.1",
+        "isCorrect": false,
+        "rationale": "ANSI Z89.1 es la norma destinada a regular los requisitos para cascos de protección industrial."
+      },
+      {
+        "text": "ANSI Z359.1",
+        "isCorrect": false,
+        "rationale": "La serie ANSI Z359 regula los sistemas y equipos de protección personal para trabajos en altura y prevención de caídas."
+      },
+      {
+        "text": "ISO 9001",
+        "isCorrect": false,
+        "rationale": "ISO 9001 es una norma general de sistemas de gestión de la calidad, no una norma técnica de producto específico para lentes."
+      },
+      {
+        "text": "NTP 399.010",
+        "isCorrect": false,
+        "rationale": "La NTP 399.010 es la norma técnica peruana referida a señales de seguridad y colores de identificación."
+      }
+    ],
+    "hint": "Es la norma del estándar norteamericano específica para lentes y caretas de protección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes aspectos resultan fundamentales al seleccionar un EPP para asegurar el Confort y la adherencia del trabajador a su uso?",
+    "opciones": [
+      {
+        "text": "Diseño ergonómico y ajuste adecuado a la anatomía del trabajador.",
+        "isCorrect": true,
+        "rationale": "Un EPP ergonómico evita molestias excesivas y facilita que el trabajador lo use durante toda su jornada."
+      },
+      {
+        "text": "Compatibilidad entre los diferentes EPP que deba usar simultáneamente el trabajador.",
+        "isCorrect": true,
+        "rationale": "Por ejemplo, las gafas de seguridad deben poder usarse de forma compatible con el casco y la protección auditiva sin estorbarse."
+      },
+      {
+        "text": "Adecuación a las condiciones ambientales de temperatura y humedad del puesto laboral.",
+        "isCorrect": true,
+        "rationale": "Ambientes muy cálidos o fríos requieren materiales respirables o aislantes para no generar estrés térmico indeseado."
+      },
+      {
+        "text": "Color corporativo idéntico al logotipo de la empresa en todos los implementos.",
+        "isCorrect": false,
+        "rationale": "La estética o color corporativo no es un criterio técnico que defina el Confort o el nivel de protección del equipo."
+      },
+      {
+        "text": "Talla única rígida universal asignada por igual a todo el personal sin diferenciación.",
+        "isCorrect": false,
+        "rationale": "La talla única rígida suele causar desajustes y desconfort; los equipos deben seleccionarse según el percentil y talla de cada usuario."
+      }
+    ],
+    "hint": "Combina la adaptabilidad al cuerpo del usuario con el cumplimiento normativo y la resistencia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la evaluación cualitativa o cuantitativa del nivel de riesgo, ¿cuáles son las dos variables clave que se multiplican en la matriz de evaluación?",
+    "opciones": [
+      {
+        "text": "La probabilidad de que ocurra el evento y la severidad del daño que pueda causar.",
+        "isCorrect": true,
+        "rationale": "El nivel de riesgo es el producto de evaluar qué tan probable es que se materialice un peligro y cuán grave o severa sería la consecuencia."
+      },
+      {
+        "text": "El costo de adquisición del EPP y el tiempo de entrega del proveedor.",
+        "isCorrect": false,
+        "rationale": "Variables comerciales o logísticas no determinan técnicamente la magnitud de un riesgo en SST."
+      },
+      {
+        "text": "El número de capacitaciones dictadas y la cantidad de inspectores asignados.",
+        "isCorrect": false,
+        "rationale": "Esos corresponden a indicadores de gestión, no a las variables de cálculo de la matriz de riesgo."
+      },
+      {
+        "text": "La edad laboral del trabajador y el tipo de régimen contractual.",
+        "isCorrect": false,
+        "rationale": "El cálculo del nivel de riesgo depende de las condiciones de exposición y la gravedad del daño, no de la contratación."
+      },
+      {
+        "text": "La superficie del área de trabajo y la distancia a la ciudad más cercana.",
+        "isCorrect": false,
+        "rationale": "Son datos geográficos o locativos pero no constituyen la fórmula de probabilidad por severidad."
+      }
+    ],
+    "hint": "Mide qué tan posible es que ocurra el evento y qué tan grave sería el daño resultante.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué momento debe brindarse la primera formación técnica sobre el uso y ajuste adecuado de un EPP a un trabajador?",
+    "opciones": [
+      {
+        "text": "Al momento de entregarle el EPP o durante la inducción previa al inicio de sus labores.",
+        "isCorrect": true,
+        "rationale": "El trabajador debe recibir instrucción inmediata al momento de recibir el equipo para asegurar que lo use bien desde el primer día."
+      },
+      {
+        "text": "Al cumplir un año ininterrumpido dentro de la organización.",
+        "isCorrect": false,
+        "rationale": "Esperar un año implica exponer al trabajador a usar el EPP sin instrucción durante todo ese período."
+      },
+      {
+        "text": "Únicamente después de que el trabajador sufra una lesión por uso inadecuado.",
+        "isCorrect": false,
+        "rationale": "La formación es preventiva; capacitar tras la lesión refleja una falla grave en la inducción inicial."
+      },
+      {
+        "text": "Cuando el EPP haya completado su período total de vida útil.",
+        "isCorrect": false,
+        "rationale": "Al finalizar la vida útil el equipo se descarta; la instrucción debe ocurrir desde el inicio de su uso."
+      },
+      {
+        "text": "Solo cuando la autoridad inspectiva (SUNAFIL) visite la instalación.",
+        "isCorrect": false,
+        "rationale": "La capacitación no debe supeditarse a inspecciones externas, sino al plan preventivo interno."
+      }
+    ],
+    "hint": "Evita lapsos en los que el trabajador use el equipo de forma incorrecta desde el primer día.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Título VII de la Ley 29783, ¿cuál es una de las funciones centrales del sistema de inspección de trabajo en materia de SST?",
+    "opciones": [
+      {
+        "text": "Vigilar el cumplimiento de la normativa de seguridad y salud, así como orientar y asesorar técnicamente.",
+        "isCorrect": true,
+        "rationale": "La inspección tiene como función supervisar la observancia legal, promover buenas prácticas y sancionar si corresponde."
+      },
+      {
+        "text": "Aprobar el presupuesto financiero anual asignado a las compras operativas de la empresa.",
+        "isCorrect": false,
+        "rationale": "La inspección no interviene en las decisiones presupuestarias ni financieras internas de las empresas."
+      },
+      {
+        "text": "Diseñar los planos arquitectónicos de las instalaciones industriales inspeccionadas.",
+        "isCorrect": false,
+        "rationale": "El diseño de infraestructura es responsabilidad de la empresa y sus ingenieros, no de los inspectores de trabajo."
+      },
+      {
+        "text": "Reemplazar las funciones de dirección y liderazgo de la gerencia general.",
+        "isCorrect": false,
+        "rationale": "La inspección evalúa el cumplimiento pero no asume la administración directiva de la empresa."
+      },
+      {
+        "text": "Vender los equipos de protección personal certificados a las organizaciones públicas.",
+        "isCorrect": false,
+        "rationale": "Existe un conflicto de interés absoluto; la autoridad fiscalizadora no vende implementos de seguridad."
+      }
+    ],
+    "hint": "Se orienta al rol de supervisar el cumplimiento de la legislación en los centros laborales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la diferencia principal entre una inspección de SST programada y una inspección inopinada?",
+    "opciones": [
+      {
+        "text": "La programada se encuentra definida en el plan anual, mientras que la inopinada se realiza de sorpresa o tras denuncias e incidentes.",
+        "isCorrect": true,
+        "rationale": "Las inspecciones programadas responden a un cronograma previo; las inopinadas no se notifican con anticipación para evaluar la condición real."
+      },
+      {
+        "text": "La programada tiene valor legal, mientras que la inopinada carece de validez jurídica.",
+        "isCorrect": false,
+        "rationale": "Ambas modalidades poseen exactamente el mismo valor legal y sus hallazgos pueden derivar en medidas u observaciones."
+      },
+      {
+        "text": "La inspección inopinada solo puede ser ejecutada por el médico ocupacional de la empresa.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones inopinadas pueden ser llevadas a cabo por inspectores del trabajo, prevencionistas o miembros del comité."
+      },
+      {
+        "text": "La inspección programada no requiere elaborar informes ni actas de registro.",
+        "isCorrect": false,
+        "rationale": "Toda inspección, sin excepción, debe quedar debidamente documentada mediante registros e informes."
+      },
+      {
+        "text": "La inopinada solo se aplica en empresas con menos de cinco trabajadores.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones inopinadas pueden realizarse en cualquier centro de trabajo independientemente de su tamaño."
+      }
+    ],
+    "hint": "La diferencia radica en si la inspección fue agendada en el cronograma anual o surge por un hecho imprevisto.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "Conforme al artículo 96 de la Ley 29783, ¿cuáles de las siguientes constituyen facultades legales de los inspectores de trabajo durante una visita de supervisión?",
+    "opciones": [
+      {
+        "text": "Entrar libremente a cualquier hora del día o de la noche a todo centro de trabajo sujeto a inspección.",
+        "isCorrect": true,
+        "rationale": "Los inspectores tienen libre acceso garantizado por ley a las instalaciones operativas para cumplir su función."
+      },
+      {
+        "text": "Proceder a practicar cualquier diligencia, investigación, examen o prueba que considere necesaria.",
+        "isCorrect": true,
+        "rationale": "Pueden evaluar de primera mano las condiciones físicas, maquinaria e interrogatorios necesarios."
+      },
+      {
+        "text": "Tomar muestras de sustancias, tomar fotografías o medir niveles de agentes ambientales.",
+        "isCorrect": true,
+        "rationale": "Están facultados para tomar evidencias físicas o de monitoreo ambiental dentro del centro laboral."
+      },
+      {
+        "text": "Clausurar definitivamente la empresa de forma inmediata sin emitir informe o resolución previa.",
+        "isCorrect": false,
+        "rationale": "La paralización de labores o clausura requiere seguir un debido proceso fundamentado por riesgo grave e inminente."
+      },
+      {
+        "text": "Asumir la representación gerencial de la empresa ante los clientes comerciales.",
+        "isCorrect": false,
+        "rationale": "Las facultades son estrictamente de fiscalización y control administrativo de SST, no de gestión mercantil."
+      }
+    ],
+    "hint": "Son atribuciones del inspector para recabar pruebas y verificar las condiciones del centro de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué documento formal se emite al finalizar un proceso de inspección para registrar las conformidades y no conformidades encontradas?",
+    "opciones": [
+      {
+        "text": "La constancia o informe de inspección.",
+        "isCorrect": true,
+        "rationale": "El informe o constancia de inspección recopila detalladamente los hallazgos, evidencias observadas y las medidas correctivas recomendadas."
+      },
+      {
+        "text": "La orden de compra de EPP.",
+        "isCorrect": false,
+        "rationale": "Una orden de compra es un documento mercantil, no el registro del resultado de la inspección."
+      },
+      {
+        "text": "El certificado de antecedentes penales del personal.",
+        "isCorrect": false,
+        "rationale": "Documento personal que no guarda relación con el registro de condiciones operativas de seguridad."
+      },
+      {
+        "text": "El contrato individual de trabajo a tiempo indeterminado.",
+        "isCorrect": false,
+        "rationale": "El contrato es un acuerdo laboral legal, ajeno al acta técnica emitida tras una inspección."
+      },
+      {
+        "text": "La factura electrónica de pago de impuestos municipales.",
+        "isCorrect": false,
+        "rationale": "Documento tributario sin competencia en el registro de hallazgos preventivos de SST."
+      }
+    ],
+    "hint": "Es el documento escrito que formaliza los resultados observados durante la visita de inspección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué momento se da por concluido o cerrado metodológicamente el proceso de una inspección de SST?",
+    "opciones": [
+      {
+        "text": "Cuando se verifica y evidencia el subsanamiento o cierre de todas las no conformidades detectadas.",
+        "isCorrect": true,
+        "rationale": "El proceso no concluye con la entrega de la lista de hallazgos, sino cuando se demuestra el levantamiento efectivo de las observaciones."
+      },
+      {
+        "text": "Apenas el inspector se retira físicamente de las instalaciones de la empresa.",
+        "isCorrect": false,
+        "rationale": "La salida física del inspector solo cierra la etapa de visita; el expediente queda abierto hasta subsanar no conformidades."
+      },
+      {
+        "text": "Al momento de redactar la lista de chequeo en el campo de trabajo.",
+        "isCorrect": false,
+        "rationale": "La lista de chequeo es una herramienta intermedia de recolección de datos, no el cierre del proceso."
+      },
+      {
+        "text": "Cuando la empresa efectúa el pago inicial de la tasa de inspección.",
+        "isCorrect": false,
+        "rationale": "Las inspecciones oficiales no están condicionadas a tasas comerciales para cerrar sus hallazgos preventivos."
+      },
+      {
+        "text": "Al culminar el año fiscal independientemente de si se corrigieron las fallas.",
+        "isCorrect": false,
+        "rationale": "Las no conformidades no vencen voluntariamente con el fin de año; requieren subsanación y verificación formal."
+      }
+    ],
+    "hint": "Ocurre únicamente cuando ya no existen hallazgos pendientes de corrección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el régimen de fiscalización de SST, ¿cómo se clasifica la falta de entrega de EPP adecuados que exponga a los trabajadores a riesgos sustanciales?",
+    "opciones": [
+      {
+        "text": "Infracción grave.",
+        "isCorrect": true,
+        "rationale": "No entregar EPP adecuados o no certificados, o incumplir sustancialmente la protección del personal, califica como infracción grave."
+      },
+      {
+        "text": "Infracción leve.",
+        "isCorrect": false,
+        "rationale": "Las faltas leves corresponden a incumplimientos formales que no vulneran directamente la integridad física ni exponen a riesgos mayores."
+      },
+      {
+        "text": "Obsolescencia no sancionable.",
+        "isCorrect": false,
+        "rationale": "Incumplir con la dotación de EPP obligatorios es sancionable según el reglamento de la Ley General de Inspección del Trabajo."
+      },
+      {
+        "text": "Falta de carácter exclusivamente tributario.",
+        "isCorrect": false,
+        "rationale": "Corresponde al ámbito del derecho administrativo laboral y de la seguridad ocupacional, no al sector tributario."
+      },
+      {
+        "text": "Observación voluntaria de libre cumplimiento.",
+        "isCorrect": false,
+        "rationale": "La entrega de EPP es una obligación legal del empleador de cumplimiento obligatorio."
+      }
+    ],
+    "hint": "Es la categoría de infracción aplicable a incumplimientos graves que comprometen la seguridad del trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-01",
+    "diplomado": "MANEJO DE EPPS SEGÚN LA NORMA TÉCNICA PERUANA LEY 29783",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de un procedimiento sancionador administrativo, ¿qué beneficio obtiene la empresa si subsana las observaciones antes de la emisión de la resolución final?",
+    "opciones": [
+      {
+        "text": "La aplicación de un factor atenuante que reduce el monto porcentual de la multa calculada.",
+        "isCorrect": true,
+        "rationale": "La subsanación oportuna de las no conformidades dentro de los plazos otorgados actúa como un atenuante en la graduación de la sanción."
+      },
+      {
+        "text": "El incremento automático del 50% en el valor de la sanción económica.",
+        "isCorrect": false,
+        "rationale": "El incremento aplica en casos de agravantes (como reincidencia o conducta obstructiva), no al subsanar."
+      },
+      {
+        "text": "La inhabilitación definitiva de los ingenieros de la empresa por cinco años.",
+        "isCorrect": false,
+        "rationale": "Subsanar observaciones busca regularizar la situación laboral y aminorar la multa, no imponer inhabilitaciones a profesionales."
+      },
+      {
+        "text": "La exoneración de realizar capacitaciones anuales durante los siguientes tres años.",
+        "isCorrect": false,
+        "rationale": "Las capacitaciones anuales obligatorias se mantienen vigentes bajo cualquier circunstancia."
+      },
+      {
+        "text": "La clausura inmediata de la sede principal de la empresa.",
+        "isCorrect": false,
+        "rationale": "La clausura se relaciona con riesgos inminentes no subsanados, no como respuesta a la corrección de faltas."
+      }
+    ],
+    "hint": "Es una medida preventiva que recompensa la subsanación rápida de las observaciones hechas.",
+    "activo": true
+  }
+]

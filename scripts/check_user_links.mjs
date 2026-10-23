@@ -7,12 +7,12 @@ const keyMatch = env.match(/SUPABASE_SERVICE_ROLE_KEY=([^\r\n]+)/);
 const sb = createClient(urlMatch[1].trim(), keyMatch[1].trim());
 
 async function check() {
-  const { data: rows } = await sb.from('diplomados_lecciones').select('*');
-  console.log('Total diplomados_lecciones rows:', rows?.length);
+  const { data: rows } = await sb.from('lecciones').select('*');
+  console.log('Total lecciones rows:', rows?.length);
 
   // Check any Material1..8
   const withMat = rows.filter(r => r.Material1 || r.Material2 || r.Material3 || r.Material4 || r.Material5 || r.Material6 || r.Material7 || r.Material8);
-  console.log('Rows with Material1..8 in diplomados_lecciones:', withMat.length);
+  console.log('Rows with Material1..8 in lecciones:', withMat.length);
   withMat.forEach(r => {
     console.log('Material found on:', r.CodigoDiplomado, r.Diplomado, r.Modulo, r.Tema, r.Sesion);
     console.log('Mat1:', r.Material1, 'Mat2:', r.Material2, 'Mat3:', r.Material3);

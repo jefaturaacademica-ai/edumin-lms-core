@@ -5,15 +5,15 @@ import {
   FileQuestion, Search, Plus, Filter, CheckCircle2, 
   AlertCircle, Edit3, Trash2, Eye, Code, 
   RotateCcw, Sparkles, Check, X, HelpCircle, Layers,
-  Copy, BookOpen, Clock, Award, ArrowUpDown, Upload, FileText
+  Copy, BookOpen, Clock, Award, ArrowUpDown, Upload, FileText,
+  ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight, GraduationCap, BookMarked
 } from 'lucide-react';
 import AdminSidebar from '@/components/admin/admin-sidebar';
 import AdminHeader from '@/components/admin/admin-header';
 import { useTheme } from '@/context/theme-context';
 import { formatearTextoCientifico, limpiarTextoCientificoPlano } from '@/lib/utils/textoCientifico';
 import { PreguntaBanco, OpcionPregunta, TipoPregunta } from '@/lib/types/examenes';
-
-
+import CURSOS_RAW from '@/lib/data/cursos.json';
 
 // Lista oficial de 22 diplomados con nombres completos originales
 const LISTA_DIPLOMADOS_OFICIALES = [
@@ -41,18 +41,30 @@ const LISTA_DIPLOMADOS_OFICIALES = [
   { codigo: 'DIP-22', nombre: 'SUPPLY CHAIN MANAGEMENT EN INDUSTRIA Y MINERÍA' }
 ];
 
+// Lista oficial de cursos desde JSON base
+const LISTA_CURSOS_OFICIALES = (CURSOS_RAW as any[]).map((c: any, index: number) => ({
+  codigo: `CUR-${(index + 1).toString().padStart(2, '0')}`,
+  nombre: (c.curso || c.nombre || '').trim().toUpperCase()
+}));
+
 export default function AdminExamenesPage() {
   const { esOscuro } = useTheme();
 
-  // Catálogo completo de diplomados y cursos
+  // Catálogos separados de diplomados y cursos
   const [listaDiplomados, setListaDiplomados] = useState(LISTA_DIPLOMADOS_OFICIALES);
+  const [listaCursos, setListaCursos] = useState(LISTA_CURSOS_OFICIALES);
 
-  // Filtros
-  const [diplomadoSeleccionado, setDiplomadoSeleccionado] = useState('DIP-01');
-  const [moduloSeleccionado, setModuloSeleccionado] = useState('Módulo 01');
+  // Filtros de navegación
+  const [tipoPrograma, setTipoPrograma] = useState<'TODOS' | 'DIPLOMADOS' | 'CURSOS'>('TODOS');
+  const [diplomadoSeleccionado, setDiplomadoSeleccionado] = useState('TODOS');
+  const [moduloSeleccionado, setModuloSeleccionado] = useState('TODOS');
   const [filtroDificultad, setFiltroDificultad] = useState('TODOS');
   const [filtroTipo, setFiltroTipo] = useState('TODOS');
   const [busqueda, setBusqueda] = useState('');
+
+  // Paginación para no sobrecargar el visor
+  const [paginaActual, setPaginaActual] = useState(1);
+  const [porPagina, setPorPagina] = useState(10); // 10 o 20 por página
 
   // Datos
   const [preguntas, setPreguntas] = useState<PreguntaBanco[]>([]);
@@ -71,6 +83,7 @@ export default function AdminExamenesPage() {
 
   // Estados para Modal de Importación
   const [showImportModal, setShowImportModal] = useState(false);
+  const [importTipoPrograma, setImportTipoPrograma] = useState<'DIPLOMADO' | 'CURSO'>('DIPLOMADO');
   const [importDiplomado, setImportDiplomado] = useState('DIP-01');
   const [importModulo, setImportModulo] = useState('Módulo 01');
   const [importDificultad, setImportDificultad] = useState('MEDIO');
@@ -81,6 +94,12 @@ export default function AdminExamenesPage() {
 
   const DIPLOMADOS_CINCO_MODULOS = ['DIP-08', 'DIP-13', 'DIP-17'];
   const listaModulos = useMemo(() => {
+    if (diplomadoSeleccionado === 'TODOS' || !diplomadoSeleccionado) {
+      return ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05'];
+    }
+    if (diplomadoSeleccionado.startsWith('CUR-')) {
+      return ['Examen del Curso'];
+    }
     if (DIPLOMADOS_CINCO_MODULOS.includes(diplomadoSeleccionado)) {
       return ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05'];
     }
@@ -88,6 +107,9 @@ export default function AdminExamenesPage() {
   }, [diplomadoSeleccionado]);
 
   const listaModulosImport = useMemo(() => {
+    if (importDiplomado.startsWith('CUR-')) {
+      return ['Examen del Curso'];
+    }
     if (DIPLOMADOS_CINCO_MODULOS.includes(importDiplomado)) {
       return ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05'];
     }
@@ -100,31 +122,59 @@ export default function AdminExamenesPage() {
       try {
         const res = await fetch('/api/admin/catalogo');
         const data = await res.json();
-        if (data.success && Array.isArray(data.diplomados) && data.diplomados.length > 0) {
-          const dips = data.diplomados.map((d: any) => ({
-            codigo: d.codigo,
-            nombre: (d.titulo || d.diplomado || d.nombre || '').trim().toUpperCase()
-          }));
-          const cursos = Array.isArray(data.cursos) ? data.cursos.map((c: any) => ({
-            codigo: c.codigo,
-            nombre: (c.titulo || c.nombre || c.curso || '').trim().toUpperCase()
-          })) : [];
-          setListaDiplomados([...dips, ...cursos]);
+        if (data.success) {
+          if (Array.isArray(data.diplomados) && data.diplomados.length > 0) {
+            const dips = data.diplomados.map((d: any) => ({
+              codigo: d.codigo,
+              nombre: (d.titulo || d.diplomado || d.nombre || '').trim().toUpperCase()
+            }));
+            setListaDiplomados(dips);
+          }
+          if (Array.isArray(data.cursos) && data.cursos.length > 0) {
+            const cursos = data.cursos.map((c: any) => ({
+              codigo: c.codigo,
+              nombre: (c.titulo || c.nombre || c.curso || '').trim().toUpperCase()
+            }));
+            setListaCursos(cursos);
+          }
         }
       } catch {
-        // Fallback a los 22 oficiales
+        // Fallback a los catálogos oficiales ya cargados
       }
     };
     cargarCatalogoCompleto();
   }, []);
 
-  // Diplomado actual seleccionado
+  // Catálogo unificado
+  const todosLosProgramas = useMemo(() => {
+    return [...listaDiplomados, ...listaCursos];
+  }, [listaDiplomados, listaCursos]);
+
+  // Programa actual seleccionado
   const diplomadoActual = useMemo(() => {
-    return listaDiplomados.find(d => d.codigo === diplomadoSeleccionado) || {
+    if (diplomadoSeleccionado === 'TODOS') {
+      if (tipoPrograma === 'DIPLOMADOS') {
+        return {
+          codigo: 'TODOS',
+          nombre: 'Todos los Diplomados Oficiales'
+        };
+      }
+      if (tipoPrograma === 'CURSOS') {
+        return {
+          codigo: 'TODOS',
+          nombre: 'Todos los Cursos de Especialización'
+        };
+      }
+      return {
+        codigo: 'TODOS',
+        nombre: 'Todos los Diplomados y Cursos'
+      };
+    }
+    return todosLosProgramas.find(d => d.codigo === diplomadoSeleccionado) || {
       codigo: diplomadoSeleccionado,
       nombre: diplomadoSeleccionado
     };
-  }, [listaDiplomados, diplomadoSeleccionado]);
+  }, [todosLosProgramas, diplomadoSeleccionado, tipoPrograma]);
 
   // Cargar preguntas desde la API
   const cargarPreguntas = async () => {
@@ -132,8 +182,15 @@ export default function AdminExamenesPage() {
     setErrorMensaje(null);
     try {
       const params = new URLSearchParams();
-      if (diplomadoSeleccionado) params.append('codigoDiplomado', diplomadoSeleccionado);
-      if (moduloSeleccionado) params.append('modulo', moduloSeleccionado);
+      if (diplomadoSeleccionado && diplomadoSeleccionado !== 'TODOS') {
+        params.append('codigoDiplomado', diplomadoSeleccionado);
+      } else if (tipoPrograma && tipoPrograma !== 'TODOS') {
+        params.append('tipoPrograma', tipoPrograma);
+      }
+
+      if (moduloSeleccionado && moduloSeleccionado !== 'TODOS') {
+        params.append('modulo', moduloSeleccionado);
+      }
       if (filtroDificultad !== 'TODOS') params.append('dificultad', filtroDificultad);
       if (filtroTipo !== 'TODOS') params.append('tipo', filtroTipo);
       if (busqueda.trim()) params.append('busqueda', busqueda.trim());
@@ -142,6 +199,7 @@ export default function AdminExamenesPage() {
       const data = await res.json();
       if (data.success) {
         setPreguntas(data.preguntas || []);
+        setPaginaActual(1);
       } else {
         setErrorMensaje(data.error || 'Error al cargar banco');
       }
@@ -154,7 +212,7 @@ export default function AdminExamenesPage() {
 
   useEffect(() => {
     cargarPreguntas();
-  }, [diplomadoSeleccionado, moduloSeleccionado, filtroDificultad, filtroTipo]);
+  }, [diplomadoSeleccionado, tipoPrograma, moduloSeleccionado, filtroDificultad, filtroTipo]);
 
   // Búsqueda diferida
   useEffect(() => {
@@ -209,13 +267,20 @@ export default function AdminExamenesPage() {
 
   // Abrir modal de nueva pregunta
   const abrirNuevaPregunta = () => {
-    const nombreDip = listaDiplomados.find(d => d.codigo === diplomadoSeleccionado)?.nombre || 'DIPLOMADO';
+    let codDip = diplomadoSeleccionado !== 'TODOS' ? diplomadoSeleccionado : (
+      tipoPrograma === 'CURSOS' ? (listaCursos[0]?.codigo || 'CUR-01') : (listaDiplomados[0]?.codigo || 'DIP-01')
+    );
+    const dipObj = todosLosProgramas.find(d => d.codigo === codDip);
+    const nombreDip = dipObj?.nombre || codDip;
+    const esCurso = codDip.startsWith('CUR-');
+    const mod = esCurso ? 'Examen del Curso' : (moduloSeleccionado !== 'TODOS' ? moduloSeleccionado : 'Módulo 01');
+
     setPreguntaEditando({
-      codigo_diplomado: diplomadoSeleccionado,
+      codigo_diplomado: codDip,
       diplomado: nombreDip,
-      modulo: moduloSeleccionado,
-      dificultad: 'MEDIO',
-      tipo: 'multiple_choice',
+      modulo: mod,
+      dificultad: filtroDificultad !== 'TODOS' ? filtroDificultad : 'MEDIO',
+      tipo: filtroTipo !== 'TODOS' ? (filtroTipo as TipoPregunta) : 'multiple_choice',
       pregunta: '',
       hint: '',
       activo: true,
@@ -267,8 +332,13 @@ export default function AdminExamenesPage() {
 
   // Abrir modal de importación
   const abrirModalImportacion = () => {
-    setImportDiplomado(diplomadoSeleccionado);
-    setImportModulo(moduloSeleccionado);
+    let codDip = diplomadoSeleccionado !== 'TODOS' ? diplomadoSeleccionado : (
+      tipoPrograma === 'CURSOS' ? (listaCursos[0]?.codigo || 'CUR-01') : (listaDiplomados[0]?.codigo || 'DIP-01')
+    );
+    const esCurso = codDip.startsWith('CUR-');
+    setImportTipoPrograma(esCurso ? 'CURSO' : 'DIPLOMADO');
+    setImportDiplomado(codDip);
+    setImportModulo(esCurso ? 'Examen del Curso' : (moduloSeleccionado !== 'TODOS' ? moduloSeleccionado : 'Módulo 01'));
     setImportDificultad(filtroDificultad !== 'TODOS' ? filtroDificultad : 'MEDIO');
     setJsonParaImportar('');
     setArchivoCargadoNombre(null);
@@ -316,12 +386,12 @@ export default function AdminExamenesPage() {
         return;
       }
 
-      const nombreDip = listaDiplomados.find(d => d.codigo === importDiplomado)?.nombre || importDiplomado;
+      const nombreProg = todosLosProgramas.find(d => d.codigo === importDiplomado)?.nombre || importDiplomado;
 
       const itemsParaGuardar = quizList.map((q: any) => ({
         codigo_diplomado: importDiplomado,
-        diplomado: nombreDip,
-        modulo: importModulo,
+        diplomado: nombreProg,
+        modulo: importDiplomado.startsWith('CUR-') ? 'Examen del Curso' : importModulo,
         dificultad: q.difficulty || importDificultad,
         tipo: q.type === 'multiple_select' ? 'multiple_select' : 'multiple_choice',
         pregunta: limpiarTextoCientificoPlano(q.question || ''),
@@ -346,11 +416,17 @@ export default function AdminExamenesPage() {
         setArchivoCargadoNombre(null);
         setResumenPreguntasImportar(null);
 
-        // Si importó a un diplomado o módulo, sincronizar la vista activa para ver los resultados
+        // Si importó a un programa o módulo, sincronizar la vista activa para ver los resultados
         setDiplomadoSeleccionado(importDiplomado);
-        setModuloSeleccionado(importModulo);
+        if (importDiplomado.startsWith('CUR-')) {
+          setTipoPrograma('CURSOS');
+          setModuloSeleccionado('TODOS');
+        } else {
+          setTipoPrograma('DIPLOMADOS');
+          setModuloSeleccionado(importModulo);
+        }
         cargarPreguntas();
-        mostrarNotificacion(`Se importaron ${itemsParaGuardar.length} preguntas exitosamente para ${importDiplomado} - ${importModulo}`);
+        mostrarNotificacion(`Se importaron ${itemsParaGuardar.length} preguntas exitosamente para ${importDiplomado}`);
       } else {
         alert(data.error || 'Error al importar');
       }
@@ -366,10 +442,24 @@ export default function AdminExamenesPage() {
     setTimeout(() => setMensajeExito(null), 3500);
   };
 
-  // Métricas
+  // Métricas dinámicas y globales según las preguntas en vista
   const totalActivas = useMemo(() => preguntas.filter(p => p.activo).length, [preguntas]);
+  const totalPausadas = useMemo(() => preguntas.length - totalActivas, [preguntas, totalActivas]);
+  const totalMedio = useMemo(() => preguntas.filter(p => p.dificultad === 'MEDIO').length, [preguntas]);
+  const totalAlto = useMemo(() => preguntas.filter(p => p.dificultad === 'ALTO').length, [preguntas]);
+  const totalFacil = useMemo(() => preguntas.filter(p => p.dificultad === 'FACIL').length, [preguntas]);
   const totalSeleccionUnica = useMemo(() => preguntas.filter(p => p.tipo === 'multiple_choice').length, [preguntas]);
   const totalSeleccionMultiple = useMemo(() => preguntas.filter(p => p.tipo === 'multiple_select').length, [preguntas]);
+  const totalDiplomadosUnicos = useMemo(() => new Set(preguntas.map(p => p.codigo_diplomado).filter(Boolean)).size, [preguntas]);
+  const totalModulosUnicos = useMemo(() => new Set(preguntas.map(p => p.modulo).filter(Boolean)).size, [preguntas]);
+
+  // Métricas y segmentación de paginación
+  const totalPaginas = Math.max(1, Math.ceil(preguntas.length / porPagina));
+  const indiceInicio = (paginaActual - 1) * porPagina;
+  const indiceFin = Math.min(indiceInicio + porPagina, preguntas.length);
+  const preguntasPaginadas = useMemo(() => {
+    return preguntas.slice(indiceInicio, indiceFin);
+  }, [preguntas, indiceInicio, indiceFin]);
 
   return (
     <div className="min-h-screen md:h-screen md:overflow-hidden bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 flex flex-col md:flex-row font-sans relative transition-colors duration-200">
@@ -392,70 +482,24 @@ export default function AdminExamenesPage() {
             </div>
           )}
 
-          {/* Banner de Métricas y Resumen */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3.5 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-purple-500/10 dark:bg-purple-500/15 border border-purple-500/20 flex items-center justify-center text-purple-600 dark:text-purple-400 shrink-0">
-                <FileQuestion className="w-6 h-6" />
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Total en banco</p>
-                <p className="text-2xl font-black text-slate-900 dark:text-white">{preguntas.length}</p>
-                <p className="text-[11px] text-purple-600 dark:text-purple-400 font-medium">{totalActivas} activas para sorteo</p>
-              </div>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3.5 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-indigo-500/10 dark:bg-indigo-500/15 border border-indigo-500/20 flex items-center justify-center text-indigo-600 dark:text-indigo-400 shrink-0">
-                <ArrowUpDown className="w-6 h-6" />
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Regla por alumno</p>
-                <p className="text-xl font-black text-indigo-600 dark:text-indigo-300">10 preguntas</p>
-                <p className="text-[11px] text-slate-500 dark:text-slate-400">7 nivel medio · 3 nivel alto</p>
-              </div>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3.5 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shrink-0">
-                <Award className="w-6 h-6" />
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Nota aprobatoria</p>
-                <p className="text-xl font-black text-emerald-600 dark:text-emerald-400">12.00 / 20</p>
-                <p className="text-[11px] text-slate-500 dark:text-slate-400">6 aciertos mínimos</p>
-              </div>
-            </div>
-
-            <div className="p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm flex items-center gap-3.5 transition-colors">
-              <div className="w-11 h-11 rounded-xl bg-amber-500/10 dark:bg-amber-500/15 border border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400 shrink-0">
-                <Layers className="w-6 h-6" />
-              </div>
-              <div>
-                <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Composición</p>
-                <p className="text-sm font-bold text-slate-900 dark:text-slate-200">
-                  <span className="text-sky-600 dark:text-sky-400">{totalSeleccionUnica}</span> única · <span className="text-amber-600 dark:text-amber-400">{totalSeleccionMultiple}</span> múltiple
-                </p>
-                <p className="text-[11px] text-slate-500 dark:text-slate-400">Con feedback formativo</p>
-              </div>
-            </div>
-          </div>
-
           {/* Contenedor en 2 Columnas: Columna de Filtros + Columna Banco de preguntas */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
             {/* Columna Lateral: Filtro, Búsqueda y Acciones Rápidas */}
-            <aside className="lg:col-span-4 xl:col-span-3 space-y-4 lg:sticky lg:top-4">
+            <aside className="lg:col-span-4 xl:col-span-3 space-y-4 self-start">
               <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 transition-colors">
                 <div className="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-800">
                   <div className="flex items-center gap-2">
                     <Filter className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                     <h2 className="text-sm font-bold text-slate-900 dark:text-white">Filtro y búsqueda</h2>
                   </div>
-                  {(busqueda || filtroDificultad !== 'TODOS' || filtroTipo !== 'TODOS') && (
+                  {(busqueda || tipoPrograma !== 'TODOS' || diplomadoSeleccionado !== 'TODOS' || moduloSeleccionado !== 'TODOS' || filtroDificultad !== 'TODOS' || filtroTipo !== 'TODOS') && (
                     <button
                       type="button"
                       onClick={() => {
                         setBusqueda('');
+                        setTipoPrograma('TODOS');
+                        setDiplomadoSeleccionado('TODOS');
+                        setModuloSeleccionado('TODOS');
                         setFiltroDificultad('TODOS');
                         setFiltroTipo('TODOS');
                       }}
@@ -505,39 +549,186 @@ export default function AdminExamenesPage() {
                   </div>
                 </div>
 
-                {/* Selector de Diplomado */}
+                {/* 1. Selector de Tipo de Programa */}
                 <div className="space-y-1.5">
                   <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
-                    Diplomado / Curso
+                    1. Modalidad / Tipo
                   </label>
-                  <select
-                    value={diplomadoSeleccionado}
-                    onChange={(e) => setDiplomadoSeleccionado(e.target.value)}
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 cursor-pointer transition-colors"
-                  >
-                    {listaDiplomados.map(d => (
-                      <option key={d.codigo} value={d.codigo}>
-                        {d.codigo} - {d.nombre}
-                      </option>
-                    ))}
-                  </select>
+                  <div className="grid grid-cols-3 gap-1 p-1 bg-slate-100 dark:bg-slate-950/80 rounded-xl border border-slate-200 dark:border-slate-800">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setTipoPrograma('TODOS');
+                        setDiplomadoSeleccionado('TODOS');
+                        setModuloSeleccionado('TODOS');
+                      }}
+                      className={`py-1.5 px-2 text-[11px] font-bold rounded-lg transition-all text-center ${
+                        tipoPrograma === 'TODOS'
+                          ? 'bg-white dark:bg-slate-800 text-purple-600 dark:text-purple-300 shadow-xs'
+                          : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                      }`}
+                    >
+                      Todos
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setTipoPrograma('DIPLOMADOS');
+                        setDiplomadoSeleccionado('TODOS');
+                        setModuloSeleccionado('TODOS');
+                      }}
+                      className={`py-1.5 px-2 text-[11px] font-bold rounded-lg transition-all text-center flex items-center justify-center gap-1 ${
+                        tipoPrograma === 'DIPLOMADOS'
+                          ? 'bg-purple-600 text-white shadow-xs'
+                          : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                      }`}
+                    >
+                      <span>Diplomados</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setTipoPrograma('CURSOS');
+                        setDiplomadoSeleccionado('TODOS');
+                        setModuloSeleccionado('TODOS');
+                      }}
+                      className={`py-1.5 px-2 text-[11px] font-bold rounded-lg transition-all text-center flex items-center justify-center gap-1 ${
+                        tipoPrograma === 'CURSOS'
+                          ? 'bg-purple-600 text-white shadow-xs'
+                          : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                      }`}
+                    >
+                      <span>Cursos</span>
+                    </button>
+                  </div>
                 </div>
 
-                {/* Selector de Módulo */}
-                <div className="space-y-1.5">
-                  <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
-                    Módulo
-                  </label>
-                  <select
-                    value={moduloSeleccionado}
-                    onChange={(e) => setModuloSeleccionado(e.target.value)}
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 cursor-pointer transition-colors"
-                  >
-                    {listaModulos.map(m => (
-                      <option key={m} value={m}>{m}</option>
-                    ))}
-                  </select>
-                </div>
+                {/* 2. Selector según Tipo de Programa */}
+                {tipoPrograma === 'DIPLOMADOS' && (
+                  <>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
+                        2. Diplomado Oficial
+                      </label>
+                      <select
+                        value={diplomadoSeleccionado}
+                        onChange={(e) => {
+                          setDiplomadoSeleccionado(e.target.value);
+                          setModuloSeleccionado('TODOS');
+                        }}
+                        className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 cursor-pointer transition-colors"
+                      >
+                        <option value="TODOS">Todos los diplomados ({listaDiplomados.length})</option>
+                        {listaDiplomados.map(d => (
+                          <option key={d.codigo} value={d.codigo}>
+                            {d.codigo} - {d.nombre}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
+                        3. Módulo
+                      </label>
+                      <select
+                        value={moduloSeleccionado}
+                        onChange={(e) => setModuloSeleccionado(e.target.value)}
+                        className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 cursor-pointer transition-colors"
+                      >
+                        <option value="TODOS">Todos los módulos</option>
+                        {listaModulos.map(m => (
+                          <option key={m} value={m}>{m}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </>
+                )}
+
+                {tipoPrograma === 'CURSOS' && (
+                  <>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
+                        2. Curso de Especialización
+                      </label>
+                      <select
+                        value={diplomadoSeleccionado}
+                        onChange={(e) => {
+                          setDiplomadoSeleccionado(e.target.value);
+                          setModuloSeleccionado('TODOS');
+                        }}
+                        className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 cursor-pointer transition-colors"
+                      >
+                        <option value="TODOS">Todos los cursos ({listaCursos.length})</option>
+                        {listaCursos.map(c => (
+                          <option key={c.codigo} value={c.codigo}>
+                            {c.codigo} - {c.nombre}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div className="p-3 bg-blue-500/10 border border-blue-500/20 rounded-xl text-blue-800 dark:text-blue-300 space-y-1">
+                      <p className="text-[11px] font-bold flex items-center gap-1.5">
+                        <BookOpen className="w-3.5 h-3.5" />
+                        <span>Evaluación Única</span>
+                      </p>
+                      <p className="text-[11px] text-slate-600 dark:text-slate-400 leading-snug">
+                        En cursos aplica 1 solo examen por cada curso con 10 preguntas sorteadas del banco.
+                      </p>
+                    </div>
+                  </>
+                )}
+
+                {tipoPrograma === 'TODOS' && (
+                  <>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
+                        2. Programa Específico (Opcional)
+                      </label>
+                      <select
+                        value={diplomadoSeleccionado}
+                        onChange={(e) => {
+                          setDiplomadoSeleccionado(e.target.value);
+                          setModuloSeleccionado('TODOS');
+                        }}
+                        className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 cursor-pointer transition-colors"
+                      >
+                        <option value="TODOS">Todos los diplomados y cursos ({todosLosProgramas.length})</option>
+                        <optgroup label="🎓 DIPLOMADOS OFICIALES">
+                          {listaDiplomados.map(d => (
+                            <option key={d.codigo} value={d.codigo}>
+                              {d.codigo} - {d.nombre}
+                            </option>
+                          ))}
+                        </optgroup>
+                        <optgroup label="📚 CURSOS DE ESPECIALIZACIÓN">
+                          {listaCursos.map(c => (
+                            <option key={c.codigo} value={c.codigo}>
+                              {c.codigo} - {c.nombre}
+                            </option>
+                          ))}
+                        </optgroup>
+                      </select>
+                    </div>
+
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1.5 uppercase tracking-wider">
+                        3. Módulo
+                      </label>
+                      <select
+                        value={moduloSeleccionado}
+                        onChange={(e) => setModuloSeleccionado(e.target.value)}
+                        className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3.5 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 cursor-pointer transition-colors"
+                      >
+                        <option value="TODOS">Todos los módulos</option>
+                        {listaModulos.map(m => (
+                          <option key={m} value={m}>{m}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </>
+                )}
 
                 {/* Filtro Dificultad */}
                 <div className="space-y-1.5">
@@ -586,19 +777,38 @@ export default function AdminExamenesPage() {
             </aside>
 
             {/* Columna Principal: Banco de preguntas */}
-            <section className="lg:col-span-8 xl:col-span-9 space-y-4 min-w-0 w-full">
+            <section className="lg:col-span-8 xl:col-span-9 space-y-4 min-w-0 w-full self-start">
               {/* Contexto del Diplomado y Módulo seleccionado */}
               <div className="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2.5 transition-colors">
                 <div className="flex flex-wrap items-center justify-between gap-3">
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="px-3 py-1 rounded-lg bg-purple-600 text-white font-black text-xs tracking-wider shadow-sm">
-                      {diplomadoActual.codigo}
+                      {diplomadoSeleccionado === 'TODOS'
+                        ? (tipoPrograma === 'DIPLOMADOS' ? 'TODOS LOS DIPLOMADOS' : (tipoPrograma === 'CURSOS' ? 'TODOS LOS CURSOS' : 'BANCO GLOBAL'))
+                        : diplomadoActual.codigo}
                     </span>
-                    <span className="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300">
-                      {moduloSeleccionado}
-                    </span>
+                    {tipoPrograma !== 'CURSOS' && (
+                      <span className="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300">
+                        {moduloSeleccionado === 'TODOS' ? 'Todos los módulos' : moduloSeleccionado}
+                      </span>
+                    )}
+                    {tipoPrograma === 'CURSOS' && (
+                      <span className="px-3 py-1 rounded-lg bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800 text-xs font-bold text-blue-700 dark:text-blue-300">
+                        Examen del Curso
+                      </span>
+                    )}
+                    {filtroDificultad !== 'TODOS' && (
+                      <span className="px-2.5 py-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 text-xs font-bold">
+                        Nivel {filtroDificultad.toLowerCase()}
+                      </span>
+                    )}
+                    {filtroTipo !== 'TODOS' && (
+                      <span className="px-2.5 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800 text-xs font-bold">
+                        {filtroTipo === 'multiple_select' ? 'Múltiple' : 'Única'}
+                      </span>
+                    )}
                     <span className="text-xs px-2.5 py-1 rounded-lg bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800 font-extrabold">
-                      {preguntas.length} preguntas
+                      {preguntas.length} {preguntas.length === 1 ? 'pregunta' : 'preguntas'}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -619,36 +829,195 @@ export default function AdminExamenesPage() {
 
                 <div>
                   <h1 className="text-base sm:text-lg font-black text-slate-900 dark:text-white leading-snug">
-                    {diplomadoActual.nombre}
+                    {diplomadoSeleccionado === 'TODOS'
+                      ? (tipoPrograma === 'DIPLOMADOS' ? 'Banco de Preguntas - Diplomados Oficiales' : (tipoPrograma === 'CURSOS' ? 'Banco de Preguntas - Cursos de Especialización' : 'Banco Global de Preguntas'))
+                      : diplomadoActual.nombre}
                   </h1>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
-                    Banco de preguntas de {moduloSeleccionado}. Toda pregunta creada o importada se asignará a este diplomado y módulo.
+                    {diplomadoSeleccionado === 'TODOS'
+                      ? moduloSeleccionado === 'TODOS'
+                        ? 'Visualizando preguntas del repositorio general según los filtros activos.'
+                        : `Visualizando preguntas del ${moduloSeleccionado}.`
+                      : moduloSeleccionado === 'TODOS'
+                        ? `Visualizando todas las preguntas de ${diplomadoActual.nombre}.`
+                        : `Banco de preguntas de ${moduloSeleccionado} para ${diplomadoActual.nombre}.`}
                   </p>
                 </div>
+
+                {/* Métricas y KPIs Integrados Dinámicamente en la Cabecera */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5 pt-3 mt-1 border-t border-slate-100 dark:border-slate-800/80">
+                  <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800">
+                    <div className="w-8 h-8 rounded-lg bg-purple-500/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0">
+                      <FileQuestion className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                        {diplomadoSeleccionado === 'TODOS' && moduloSeleccionado === 'TODOS' ? 'En banco' : 'En vista'}
+                      </p>
+                      <p className="text-sm font-black text-slate-900 dark:text-white leading-tight">
+                        {preguntas.length}{' '}
+                        <span className="text-[10px] font-semibold text-purple-600 dark:text-purple-400">
+                          ({totalActivas} act · {totalPausadas} paus)
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800">
+                    <div className="w-8 h-8 rounded-lg bg-indigo-500/10 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400 flex items-center justify-center shrink-0">
+                      <ArrowUpDown className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Dificultad</p>
+                      <p className="text-xs font-bold text-indigo-600 dark:text-indigo-300 leading-tight">
+                        {totalMedio} medio · {totalAlto} alto
+                        {totalFacil > 0 && ` · ${totalFacil} fácil`}
+                      </p>
+                      <p className="text-[10px] text-slate-400 dark:text-slate-500">10 por examen</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+                      <Award className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Alcance</p>
+                      <p className="text-xs font-bold text-emerald-600 dark:text-emerald-400 leading-tight">
+                        {totalDiplomadosUnicos} {totalDiplomadosUnicos === 1 ? 'programa' : 'programas'}
+                      </p>
+                      <p className="text-[10px] text-slate-400 dark:text-slate-500">
+                        {totalModulosUnicos} {totalModulosUnicos === 1 ? 'módulo' : 'módulos'}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-200/80 dark:border-slate-800">
+                    <div className="w-8 h-8 rounded-lg bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                      <Layers className="w-4 h-4" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Tipo</p>
+                      <p className="text-xs font-bold text-slate-900 dark:text-slate-200 leading-tight">
+                        <span className="text-sky-600 dark:text-sky-400">{totalSeleccionUnica}</span> única ·{' '}
+                        <span className="text-amber-600 dark:text-amber-400">{totalSeleccionMultiple}</span> múltiple
+                      </p>
+                      <p className="text-[10px] text-slate-400 dark:text-slate-500">Con feedback</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              {/* Barra Superior de Paginación y Control de Densidad */}
+              {!cargando && preguntas.length > 0 && (
+                <div className="flex flex-wrap items-center justify-between gap-3 p-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xs text-xs transition-colors">
+                  <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+                    <span>Mostrando</span>
+                    <span className="font-bold text-slate-900 dark:text-white">
+                      {indiceInicio + 1} - {indiceFin}
+                    </span>
+                    <span>de</span>
+                    <span className="font-bold text-slate-900 dark:text-white">{preguntas.length}</span>
+                    <span>preguntas</span>
+                    <span className="text-[11px] text-purple-600 dark:text-purple-400 font-bold ml-1">
+                      (Página {paginaActual} de {totalPaginas})
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3 ml-auto">
+                    {/* Selector de cantidad por página: 10 o 20 */}
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-slate-500 dark:text-slate-400 text-[11px] font-semibold">Ver:</span>
+                      <div className="flex items-center gap-1 p-0.5 bg-slate-100 dark:bg-slate-800 rounded-lg">
+                        {[10, 20, 50].map((num) => (
+                          <button
+                            key={num}
+                            type="button"
+                            onClick={() => {
+                              setPorPagina(num);
+                              setPaginaActual(1);
+                            }}
+                            className={`px-2 py-0.5 rounded-md text-[11px] font-bold transition-all ${
+                              porPagina === num
+                                ? 'bg-purple-600 text-white shadow-xs'
+                                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
+                            }`}
+                          >
+                            {num}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Botones de navegación compacta */}
+                    {totalPaginas > 1 && (
+                      <div className="flex items-center gap-1">
+                        <button
+                          type="button"
+                          onClick={() => setPaginaActual(p => Math.max(1, p - 1))}
+                          disabled={paginaActual === 1}
+                          className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
+                          title="Página anterior"
+                        >
+                          <ChevronLeft className="w-3.5 h-3.5" />
+                        </button>
+                        <span className="px-2 font-bold text-[11px] text-slate-700 dark:text-slate-300">
+                          {paginaActual} / {totalPaginas}
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => setPaginaActual(p => Math.min(totalPaginas, p + 1))}
+                          disabled={paginaActual === totalPaginas}
+                          className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-800 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 transition-colors"
+                          title="Página siguiente"
+                        >
+                          <ChevronRight className="w-3.5 h-3.5" />
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
 
               {/* Listado de Preguntas */}
               <div className="space-y-3">
                 {cargando ? (
                   <div className="p-12 text-center text-slate-500 dark:text-slate-400 space-y-2">
                     <RotateCcw className="w-6 h-6 animate-spin mx-auto text-purple-600 dark:text-purple-400" />
-                    <p className="text-xs">Cargando preguntas del módulo...</p>
+                    <p className="text-xs">Cargando banco de preguntas...</p>
                   </div>
                 ) : preguntas.length === 0 ? (
                   <div className="p-12 text-center rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-500 dark:text-slate-400 space-y-3 shadow-sm">
                     <FileQuestion className="w-10 h-10 mx-auto text-slate-400 dark:text-slate-600" />
-                    <p className="text-sm font-semibold">No se encontraron preguntas para este módulo o filtro</p>
-                    <p className="text-xs text-slate-500">Puedes añadir preguntas manualmente o importar tus archivos JSON.</p>
-                    <button
-                      onClick={abrirNuevaPregunta}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-600 text-white text-xs font-bold hover:bg-purple-500 transition-all cursor-pointer shadow-md"
-                    >
-                      <Plus className="w-4 h-4" /> Crear primera pregunta
-                    </button>
+                    <p className="text-sm font-semibold">No se encontraron preguntas para los filtros seleccionados</p>
+                    <p className="text-xs text-slate-500">Puedes limpiar los filtros, añadir preguntas manualmente o importar tus archivos JSON.</p>
+                    <div className="flex items-center justify-center gap-3 pt-2">
+                      <button
+                        onClick={() => {
+                          setBusqueda('');
+                          setTipoPrograma('TODOS');
+                          setDiplomadoSeleccionado('TODOS');
+                          setModuloSeleccionado('TODOS');
+                          setFiltroDificultad('TODOS');
+                          setFiltroTipo('TODOS');
+                          setPaginaActual(1);
+                        }}
+                        className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 text-xs font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all cursor-pointer shadow-sm"
+                      >
+                        <RotateCcw className="w-3.5 h-3.5" /> Ver todo el banco
+                      </button>
+                      <button
+                        onClick={abrirNuevaPregunta}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-purple-600 text-white text-xs font-bold hover:bg-purple-500 transition-all cursor-pointer shadow-md"
+                      >
+                        <Plus className="w-4 h-4" /> Crear primera pregunta
+                      </button>
+                    </div>
                   </div>
                 ) : (
-                  preguntas.map((p, idx) => {
+                  preguntasPaginadas.map((p, idx) => {
                     const esMultiple = p.tipo === 'multiple_select';
+                    const numeroPreguntaReal = indiceInicio + idx + 1;
                     return (
                       <div 
                         key={p.id}
@@ -664,7 +1033,17 @@ export default function AdminExamenesPage() {
                             {/* Badges de Metadatos */}
                             <div className="flex flex-wrap items-center gap-2">
                               <span className="px-2.5 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-black">
-                                #{idx + 1}
+                                #{numeroPreguntaReal}
+                              </span>
+                              <span className={`px-2.5 py-0.5 rounded-lg border text-xs font-bold ${
+                                p.codigo_diplomado?.startsWith('CUR-')
+                                  ? 'bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/30'
+                                  : 'bg-purple-500/10 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 border-purple-500/30'
+                              }`} title={p.diplomado || p.codigo_diplomado}>
+                                {p.codigo_diplomado || 'DIP'}
+                              </span>
+                              <span className="px-2.5 py-0.5 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 text-xs font-semibold">
+                                {p.modulo}
                               </span>
                               <span className={`px-2.5 py-0.5 rounded-lg border text-xs font-bold ${
                                 esMultiple 
@@ -676,7 +1055,9 @@ export default function AdminExamenesPage() {
                               <span className={`px-2.5 py-0.5 rounded-lg border text-xs font-bold ${
                                 p.dificultad === 'ALTO'
                                   ? 'bg-rose-500/10 border-rose-500/30 text-rose-700 dark:text-rose-300'
-                                  : 'bg-indigo-500/10 border-indigo-500/30 text-indigo-700 dark:text-indigo-300'
+                                  : p.dificultad === 'FACIL'
+                                    ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-700 dark:text-emerald-300'
+                                    : 'bg-indigo-500/10 border-indigo-500/30 text-indigo-700 dark:text-indigo-300'
                               }`}>
                                 Nivel {p.dificultad?.toLowerCase()}
                               </span>
@@ -796,6 +1177,93 @@ export default function AdminExamenesPage() {
                   })
                 )}
               </div>
+
+              {/* Barra Inferior de Paginación Completa */}
+              {!cargando && totalPaginas > 1 && (
+                <div className="flex flex-wrap items-center justify-between gap-3 p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm text-xs mt-4 transition-colors">
+                  <p className="text-slate-500 dark:text-slate-400 text-xs">
+                    Mostrando <span className="font-bold text-slate-900 dark:text-white">{indiceInicio + 1}</span> a <span className="font-bold text-slate-900 dark:text-white">{indiceFin}</span> de <span className="font-bold text-slate-900 dark:text-white">{preguntas.length}</span> preguntas
+                  </p>
+
+                  <div className="flex items-center gap-1.5 ml-auto">
+                    <button
+                      type="button"
+                      onClick={() => setPaginaActual(1)}
+                      disabled={paginaActual === 1}
+                      className="px-2.5 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold flex items-center gap-1 transition-all"
+                      title="Primera página"
+                    >
+                      <ChevronsLeft className="w-3.5 h-3.5" />
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => setPaginaActual(p => Math.max(1, p - 1))}
+                      disabled={paginaActual === 1}
+                      className="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold flex items-center gap-1 transition-all"
+                    >
+                      <ChevronLeft className="w-3.5 h-3.5" /> Anterior
+                    </button>
+
+                    {/* Números de página */}
+                    <div className="hidden sm:flex items-center gap-1">
+                      {Array.from({ length: totalPaginas }, (_, i) => i + 1)
+                        .filter(p => p === 1 || p === totalPaginas || Math.abs(p - paginaActual) <= 2)
+                        .reduce<(number | string)[]>((acc, p, idx, arr) => {
+                          if (idx > 0 && p - (arr[idx - 1] as number) > 1) {
+                            acc.push('...');
+                          }
+                          acc.push(p);
+                          return acc;
+                        }, [])
+                        .map((item, idx) => {
+                          if (item === '...') {
+                            return (
+                              <span key={`ellipsis-${idx}`} className="px-2 text-slate-400 text-xs font-bold">
+                                ...
+                              </span>
+                            );
+                          }
+                          const num = item as number;
+                          const activo = num === paginaActual;
+                          return (
+                            <button
+                              key={num}
+                              type="button"
+                              onClick={() => setPaginaActual(num)}
+                              className={`w-8 h-8 rounded-xl text-xs font-bold transition-all ${
+                                activo
+                                  ? 'bg-purple-600 text-white shadow-md shadow-purple-600/20'
+                                  : 'text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800'
+                              }`}
+                            >
+                              {num}
+                            </button>
+                          );
+                        })}
+                    </div>
+
+                    <button
+                      type="button"
+                      onClick={() => setPaginaActual(p => Math.min(totalPaginas, p + 1))}
+                      disabled={paginaActual === totalPaginas}
+                      className="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold flex items-center gap-1 transition-all"
+                    >
+                      Siguiente <ChevronRight className="w-3.5 h-3.5" />
+                    </button>
+
+                    <button
+                      type="button"
+                      onClick={() => setPaginaActual(totalPaginas)}
+                      disabled={paginaActual === totalPaginas}
+                      className="px-2.5 py-1.5 rounded-xl border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 disabled:opacity-30 disabled:cursor-not-allowed hover:bg-slate-100 dark:hover:bg-slate-800 text-xs font-semibold flex items-center gap-1 transition-all"
+                      title="Última página"
+                    >
+                      <ChevronsRight className="w-3.5 h-3.5" />
+                    </button>
+                  </div>
+                </div>
+              )}
             </section>
           </div>
         </main>
@@ -896,37 +1364,57 @@ export default function AdminExamenesPage() {
                     value={preguntaEditando.codigo_diplomado || diplomadoSeleccionado}
                     onChange={(e) => {
                       const cod = e.target.value;
-                      const dip = listaDiplomados.find(d => d.codigo === cod);
+                      const prog = todosLosProgramas.find(d => d.codigo === cod);
+                      const esCur = cod.startsWith('CUR-');
                       setPreguntaEditando(prev => ({ 
                         ...prev!, 
                         codigo_diplomado: cod,
-                        diplomado: dip?.nombre || cod
+                        diplomado: prog?.nombre || cod,
+                        modulo: esCur ? 'Examen del Curso' : (prev?.modulo === 'Examen del Curso' ? 'Módulo 01' : (prev?.modulo || 'Módulo 01'))
                       }));
                     }}
                     className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
                   >
-                    {listaDiplomados.map(d => (
-                      <option key={d.codigo} value={d.codigo}>
-                        {d.codigo} - {d.nombre}
-                      </option>
-                    ))}
+                    <optgroup label="🎓 DIPLOMADOS OFICIALES">
+                      {listaDiplomados.map(d => (
+                        <option key={d.codigo} value={d.codigo}>
+                          {d.codigo} - {d.nombre}
+                        </option>
+                      ))}
+                    </optgroup>
+                    <optgroup label="📚 CURSOS DE ESPECIALIZACIÓN">
+                      {listaCursos.map(c => (
+                        <option key={c.codigo} value={c.codigo}>
+                          {c.codigo} - {c.nombre}
+                        </option>
+                      ))}
+                    </optgroup>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-xs font-bold text-slate-500 dark:text-slate-400 mb-1">Módulo</label>
-                  <select
-                    value={preguntaEditando.modulo || moduloSeleccionado}
-                    onChange={(e) => setPreguntaEditando(prev => ({ ...prev!, modulo: e.target.value }))}
-                    className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
-                  >
-                    {(DIPLOMADOS_CINCO_MODULOS.includes(preguntaEditando.codigo_diplomado || diplomadoSeleccionado)
-                      ? ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05']
-                      : ['Módulo 01', 'Módulo 02', 'Módulo 03']
-                    ).map(m => (
-                      <option key={m} value={m}>{m}</option>
-                    ))}
-                  </select>
+                  {(preguntaEditando.codigo_diplomado || '').startsWith('CUR-') ? (
+                    <input
+                      type="text"
+                      readOnly
+                      value="Examen del Curso"
+                      className="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-blue-600 dark:text-blue-400 cursor-not-allowed"
+                    />
+                  ) : (
+                    <select
+                      value={preguntaEditando.modulo || moduloSeleccionado}
+                      onChange={(e) => setPreguntaEditando(prev => ({ ...prev!, modulo: e.target.value }))}
+                      className="w-full bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
+                    >
+                      {(DIPLOMADOS_CINCO_MODULOS.includes(preguntaEditando.codigo_diplomado || diplomadoSeleccionado)
+                        ? ['Módulo 01', 'Módulo 02', 'Módulo 03', 'Módulo 04', 'Módulo 05']
+                        : ['Módulo 01', 'Módulo 02', 'Módulo 03']
+                      ).map(m => (
+                        <option key={m} value={m}>{m}</option>
+                      ))}
+                    </select>
+                  )}
                 </div>
 
                 <div>
@@ -1123,14 +1611,31 @@ export default function AdminExamenesPage() {
                     </label>
                     <select
                       value={importDiplomado}
-                      onChange={(e) => setImportDiplomado(e.target.value)}
+                      onChange={(e) => {
+                        const val = e.target.value;
+                        setImportDiplomado(val);
+                        if (val.startsWith('CUR-')) {
+                          setImportModulo('Examen del Curso');
+                        } else if (importModulo === 'Examen del Curso') {
+                          setImportModulo('Módulo 01');
+                        }
+                      }}
                       className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
                     >
-                      {listaDiplomados.map(d => (
-                        <option key={d.codigo} value={d.codigo}>
-                          {d.codigo} - {d.nombre}
-                        </option>
-                      ))}
+                      <optgroup label="🎓 DIPLOMADOS OFICIALES">
+                        {listaDiplomados.map(d => (
+                          <option key={d.codigo} value={d.codigo}>
+                            {d.codigo} - {d.nombre}
+                          </option>
+                        ))}
+                      </optgroup>
+                      <optgroup label="📚 CURSOS DE ESPECIALIZACIÓN">
+                        {listaCursos.map(c => (
+                          <option key={c.codigo} value={c.codigo}>
+                            {c.codigo} - {c.nombre}
+                          </option>
+                        ))}
+                      </optgroup>
                     </select>
                   </div>
 
@@ -1138,15 +1643,24 @@ export default function AdminExamenesPage() {
                     <label className="block text-[11px] font-bold text-slate-500 dark:text-slate-400 mb-1">
                       Módulo
                     </label>
-                    <select
-                      value={importModulo}
-                      onChange={(e) => setImportModulo(e.target.value)}
-                      className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
-                    >
-                      {listaModulosImport.map(m => (
-                        <option key={m} value={m}>{m}</option>
-                      ))}
-                    </select>
+                    {importDiplomado.startsWith('CUR-') ? (
+                      <input
+                        type="text"
+                        readOnly
+                        value="Examen del Curso"
+                        className="w-full bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-blue-600 dark:text-blue-400 cursor-not-allowed"
+                      />
+                    ) : (
+                      <select
+                        value={importModulo}
+                        onChange={(e) => setImportModulo(e.target.value)}
+                        className="w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl px-3 py-2 text-xs font-bold text-slate-900 dark:text-white focus:outline-none focus:border-purple-500 transition-colors"
+                      >
+                        {listaModulosImport.map(m => (
+                          <option key={m} value={m}>{m}</option>
+                        ))}
+                      </select>
+                    )}
                   </div>
 
                   <div>

@@ -9,17 +9,25 @@ import {
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const codigoDiplomado = searchParams.get('codigoDiplomado') || undefined;
-    const modulo = searchParams.get('modulo') || undefined;
-    const dificultad = searchParams.get('dificultad') || undefined;
-    const tipo = searchParams.get('tipo') || undefined;
+    const rawDip = searchParams.get('codigoDiplomado');
+    const rawMod = searchParams.get('modulo');
+    const rawDif = searchParams.get('dificultad');
+    const rawTipo = searchParams.get('tipo');
+    const rawTipoProg = searchParams.get('tipoPrograma');
     const busqueda = searchParams.get('busqueda') || undefined;
+
+    const codigoDiplomado = (rawDip && rawDip !== 'TODOS' && rawDip !== 'TODOS_DIP' && rawDip !== 'TODOS_CUR') ? rawDip : undefined;
+    const modulo = (rawMod && rawMod !== 'TODOS') ? rawMod : undefined;
+    const dificultad = (rawDif && rawDif !== 'TODOS') ? rawDif : undefined;
+    const tipo = (rawTipo && rawTipo !== 'TODOS') ? rawTipo : undefined;
+    const tipoPrograma = (rawTipoProg && rawTipoProg !== 'TODOS') ? rawTipoProg : undefined;
 
     const preguntas = await obtenerPreguntasBanco({
       codigoDiplomado,
       modulo,
       dificultad,
       tipo,
+      tipoPrograma,
       busqueda
     });
 

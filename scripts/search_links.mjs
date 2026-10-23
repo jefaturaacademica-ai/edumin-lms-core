@@ -7,8 +7,8 @@ const keyMatch = env.match(/SUPABASE_SERVICE_ROLE_KEY=([^\r\n]+)/);
 const sb = createClient(urlMatch[1].trim(), keyMatch[1].trim());
 
 async function searchLinks() {
-  console.log('--- 1. Searching diplomados_lecciones ---');
-  const { data: lecc } = await sb.from('diplomados_lecciones').select('*');
+  console.log('--- 1. Searching lecciones ---');
+  const { data: lecc } = await sb.from('lecciones').select('*');
   lecc.forEach(r => {
     // Check any field with non-empty string that is not the defaults
     const nonNulls = Object.entries(r).filter(([k, v]) => {
@@ -21,7 +21,7 @@ async function searchLinks() {
   });
 
   console.log('\n--- 2. Searching cursos table ---');
-  const { data: cur } = await sb.from('cursos').select('*');
+  const { data: cur } = await sb.from('diplomados_y_cursos').select('*');
   cur.forEach(c => {
     const raw = JSON.stringify(c);
     if (raw.includes('drive.google.com/file/d/') || raw.includes('material') || raw.includes('Resumen')) {

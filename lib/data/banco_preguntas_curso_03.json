@@ -1,0 +1,1852 @@
+[
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Un postulante presenta una hernia lumbar leve detectada durante su examen médico preocupacional para la posición de estibador. Según el criterio técnico-legal y ético expresado en la gestión de salud ocupacional, ¿cuál es la medida adecuada que debe adoptar la empresa para proteger al trabajador y evitar la discriminación?",
+    "opciones": [
+      {
+        "text": "Reubicar al trabajador en una posición o tarea que no comprometa ni agrave su condición médica, previa evaluación del médico ocupacional.",
+        "isCorrect": true,
+        "rationale": "La reubicación laboral protege la integridad física del trabajador al evitar la exposición a factores que exacerben su patología, garantizando el derecho al trabajo sin incurrir en prácticas discriminatorias."
+      },
+      {
+        "text": "Declarar al trabajador como no apto definitivo y descartar de inmediato su postulación sin evaluar alternativas de puesto.",
+        "isCorrect": false,
+        "rationale": "Descartar automáticamente al candidato sin analizar la posibilidad de adaptación o reubicación en un puesto acorde a su perfil de aptitud vulnera los principios de protección y no discriminación."
+      },
+      {
+        "text": "Permitir su ingreso en la posición de estibador bajo la condición de firmar una declaración jurada de exoneración de responsabilidad a la empresa.",
+        "isCorrect": false,
+        "rationale": "Los derechos de seguridad y salud en el trabajo son irrenunciables, por lo cual una exención firmada carece de validez legal y expone al trabajador a un riesgo severo."
+      },
+      {
+        "text": "Autorizar el desempeño en el puesto de estiba exigiendo únicamente el uso permanente de una faja lumbar durante la jornada.",
+        "isCorrect": false,
+        "rationale": "Las fajas lumbares no son consideradas equipos de protección personal eficaces para corregir o mitigar patologías discales preexistentes frente a cargas pesadas."
+      },
+      {
+        "text": "Suspender la contratación indefinidamente hasta que el trabajador financie una cirugía por su propia cuenta.",
+        "isCorrect": false,
+        "rationale": "Condicionar el empleo a intervenciones quirúrgicas asumidas por el postulante es una práctica inapropiada que ignora la gestión preventiva y adaptativa de puestos."
+      }
+    ],
+    "hint": "Considere la responsabilidad médica y legal de la empresa respecto a las aptitudes y la protección contra la agudización de dolencias preexistentes.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la normativa de ergonomía en el Perú (Resolución Ministerial N° 375-2008-TR), ¿cuál es la premisa fundamental referente al diseño de los puestos y la adaptación del trabajo?",
+    "opciones": [
+      {
+        "text": "La empresa debe adaptar el puesto de trabajo, los equipos y la organización a las características físicas y antropométricas del trabajador.",
+        "isCorrect": true,
+        "rationale": "La ergonomía busca adecuar las condiciones ambientales, herramientas y métodos de trabajo a las capacidades y limitaciones anatómicas del ser humano."
+      },
+      {
+        "text": "El trabajador debe adaptarse estrictamente a las especificaciones fijas e inalterables de la maquinaria existente en la planta.",
+        "isCorrect": false,
+        "rationale": "Obligar a las personas a amoldarse a diseños rígidos e inadecuados fomenta la aparición de fatiga y trastornos musculoesqueléticos."
+      },
+      {
+        "text": "El proceso de selección de personal debe admitir únicamente a personas que cumplan una estatura y peso corporales estandarizados.",
+        "isCorrect": false,
+        "rationale": "Restringir la contratación a un biotipo físico único es una práctica discriminatoria e inviable ante la diversidad antropométrica real de la población."
+      },
+      {
+        "text": "Las normas ergonómicas aplican exclusivamente para personal administrativo, excluyendo las actividades operativas de alta exigencia.",
+        "isCorrect": false,
+        "rationale": "La regulación ergonómica es de alcance transversal y resulta especialmente crítica en actividades de alto esfuerzo como la minería y la industria."
+      },
+      {
+        "text": "Las evaluaciones de riesgo disergonómico se deben ejecutar de forma obligatoria únicamente tras la ocurrencia de una enfermedad profesional.",
+        "isCorrect": false,
+        "rationale": "La gestión de riesgos disergonómicos es de carácter eminentemente preventivo y debe realizarse antes de que se generen padecimientos o incapacidades."
+      }
+    ],
+    "hint": "Piense en la relación de adaptación entre la persona y las exigencias de su entorno laboral.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la realización de tareas operativas como el desatado de rocas en socavón o la soldadura en espacios reducidos, ¿qué factor biomecánico incrementa principalmente el riesgo de desarrollar trastornos musculoesqueléticos (TME)?",
+    "opciones": [
+      {
+        "text": "La desviación de las articulaciones fuera de su postura neutra combinada con la aplicación de cargas estáticas o repetitivas.",
+        "isCorrect": true,
+        "rationale": "Adoptar ángulos articulares extremos e hiperflexiones genera sobrecarga articular y fatiga en la musculatura de sostén, acelerando el daño mecánico."
+      },
+      {
+        "text": "La ejecución planificada de pausas activas cada noventa minutos durante el turno de trabajo.",
+        "isCorrect": false,
+        "rationale": "Las pausas activas reducen la fatiga acumulada y previenen el desarrollo de dolencias musculoesqueléticas."
+      },
+      {
+        "text": "El mantenimiento de los codos y rodillas cerca de sus ángulos neutros de Confort durante las actividades.",
+        "isCorrect": false,
+        "rationale": "Trabajar dentro de los rangos articulares neutros minimiza la tensión biomecánica sobre ligamentos y discos intervertebrales."
+      },
+      {
+        "text": "La rotación continua de tareas entre varios operarios para limitar el tiempo individual de exposición.",
+        "isCorrect": false,
+        "rationale": "La rotación adecuada distribuye la carga física entre diferentes grupos musculares, mitigando el desgaste localizado."
+      },
+      {
+        "text": "La utilización de mandos con baja transmisión de vibración mano-brazo en la manipulación del equipo.",
+        "isCorrect": false,
+        "rationale": "Reducir la aceleración de la vibración protege los sistemas vascular y nervioso periférico del trabajador."
+      }
+    ],
+    "hint": "Considere qué ocurre con las articulaciones cuando el cuerpo trabaja fuera de su alineación natural.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el análisis de los factores de riesgo disergonómico en sectores industriales y mineros, ¿cuáles de las siguientes condiciones contribuyen directamente al desarrollo de lesiones osteomusculares? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Manipulación manual de cargas que superen los pesos máximos recomendados o requieran levantamientos desde el suelo.",
+        "isCorrect": true,
+        "rationale": "Manejar cargas elevadas o levantarlas fuera de la zona comprendida entre las rodillas y el pecho exige una fuerza excesiva sobre la zona lumbar."
+      },
+      {
+        "text": "Ejecución de movimientos repetitivos de alta frecuencia en hombros, muñecas y columna sin periodos suficientes de recuperación.",
+        "isCorrect": true,
+        "rationale": "La repetición constante sin descanso ocasiona microtraumatismos acumulativos en tendones, vainas sinoviales y articulaciones."
+      },
+      {
+        "text": "Mantenimiento prolongado de posturas forzadas, con torsión o inclinación excesiva del tronco y brazos por encima de la altura de los hombros.",
+        "isCorrect": true,
+        "rationale": "Las posturas asimétricas o por encima de la línea del hombro aumentan la tensión intradiscal y la presión en el manguito rotador."
+      },
+      {
+        "text": "Instalación de sillas ajustables de cinco puntos de apoyo con reposabrazos e inclinación regulable en puestos de control.",
+        "isCorrect": false,
+        "rationale": "Este tipo de mobiliario responde a criterios de ergonomía positiva que promueven la postura neutra y reducen la fatiga en tareas sedentarias."
+      },
+      {
+        "text": "Implementación de fajas transportadoras automatizadas para el traslado de materia prima a lo largo del proceso.",
+        "isCorrect": false,
+        "rationale": "La automatización y el uso de medios mecánicos de transporte eliminan la manipulación manual de peso por parte del personal."
+      }
+    ],
+    "hint": "Identifique las variables relacionadas con el esfuerzo físico, la repetición y las posiciones corporales desfavorables.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En la gestión preventiva en salud ocupacional, ¿por qué resulta clave efectuar una detección y diagnóstico temprano de las dolencias disergonómicas mediante las evaluaciones médicas periódicas?",
+    "opciones": [
+      {
+        "text": "Permite intervenir oportunamente los padecimientos iniciales, impidiendo su evolución hacia enfermedades profesionales y disminuyendo el ausentismo laboral.",
+        "isCorrect": true,
+        "rationale": "Un abordaje temprano detecta alteraciones incipientes en la anamnesis o examen físico, facilitando cambios ergonómicos antes del daño irreversible."
+      },
+      {
+        "text": "Garantiza la exoneración total de la empresa frente a cualquier fiscalización de las autoridades laborales.",
+        "isCorrect": false,
+        "rationale": "El diagnóstico temprano es una medida preventiva, pero no exime a la entidad de mantener actualizados sus monitoreos e inspecciones."
+      },
+      {
+        "text": "Sustituye la necesidad de elaborar la matriz de Identificación de Peligros, Evaluación de Riesgos y Medidas de Control (IPERC).",
+        "isCorrect": false,
+        "rationale": "El monitoreo médico complementa la matriz IPERC, pero no la reemplaza en la identificación y evaluación sistemática del entorno."
+      },
+      {
+        "text": "Facilita la desvinculación inmediata de los trabajadores que reporten síntomas iniciales de fatiga muscular.",
+        "isCorrect": false,
+        "rationale": "Detectar dolencias busca adecuar las condiciones de trabajo y realizar seguimiento médico, no justificar sanciones o despido."
+      },
+      {
+        "text": "Invalida la obligación de realizar monitoreos ocupacionales de los agentes físicos y ergonómicos en la planta.",
+        "isCorrect": false,
+        "rationale": "La vigilancia de la salud no reemplaza la medición objetiva de las variables ergonómicas y físicas del puesto."
+      }
+    ],
+    "hint": "Reflexione sobre el impacto que tiene intervenir antes de que una molestia incipiente se convierta en una incapacidad permanente.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al diseñar las dimensiones de una mesa o superficie de trabajo para un grupo pequeño de 10 personas, ¿qué principio de diseño antropométrico debe aplicarse para determinar la profundidad alcanzable de la mesa sin exigir sobreesfuerzos?",
+    "opciones": [
+      {
+        "text": "Aplicar el principio de diseño para extremos considerando el menor alcance de brazo del grupo.",
+        "isCorrect": true,
+        "rationale": "Dimensionar según el alcance mínimo asegura que el usuario con las extremidades más cortas pueda acceder a toda la superficie sin realizar flexiones forzadas del tronco."
+      },
+      {
+        "text": "Utilizar la media aritmética exacta de las longitudes de brazo de todos los integrantes del grupo.",
+        "isCorrect": false,
+        "rationale": "Diseñar para el promedio provocaría que la mitad de la población con alcances inferiores a la media sufra sobreesfuerzos para llegar al extremo."
+      },
+      {
+        "text": "Basar el diseño exclusivamente en el trabajador de mayor estatura y alcance para maximizar el área de la mesa.",
+        "isCorrect": false,
+        "rationale": "Elegir el alcance máximo haría que los trabajadores con extremidades más cortas adopten posturas críticas e incómodas de estiramiento."
+      },
+      {
+        "text": "Adoptar una medida estandarizada internacional fija de 1.50 metros de profundidad sin realizar mediciones locales.",
+        "isCorrect": false,
+        "rationale": "Las dimensiones estándar arbitrarias no garantizan la compatibilidad con las variables antropométricas específicas de la población usuaria."
+      },
+      {
+        "text": "Ajustar la profundidad en función del peso corporal promedio de la población operaria.",
+        "isCorrect": false,
+        "rationale": "El peso corporal no guarda una relación biomecánica directa con el rango funcional de alcance horizontal del brazo."
+      }
+    ],
+    "hint": "Considere a qué individuo del grupo se debe tomar como referencia para que ningún trabajador quede excluido de alcanzar el extremo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Al proyectar e implementar puestos de trabajo ergonómicos en áreas industriales o de oficina, ¿cuáles de las siguientes pautas técnicas corresponden a un correcto diseño de estaciones ajustables? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Evitar posturas fijas prolongadas promoviendo superficies o componentes adaptables en altura e inclinación.",
+        "isCorrect": true,
+        "rationale": "La posibilidad de alternar posiciones y regular la altura de la superficie mitiga la carga muscular estática en la columna y cuellos."
+      },
+      {
+        "text": "Disponer los controles, materiales y herramientas principales dentro del área normal o cómoda de alcance del trabajador.",
+        "isCorrect": true,
+        "rationale": "Mantener los elementos dentro de la zona de alcance normal previene extensiones forzadas del hombro y la flexión repetitiva del tronco."
+      },
+      {
+        "text": "Incorporar elementos de apoyo ajustables a los segmentos corporales, tales como apoya brazos regulables y reposapiés según la estatura del usuario.",
+        "isCorrect": true,
+        "rationale": "Los apoyos adecuados descargan la presión sobre la musculatura del cuello y los muslos, favoreciendo un retorno venoso óptimo."
+      },
+      {
+        "text": "Fijar la pantalla del monitor por encima del nivel de la vista para forzar la extensión constante de las vértebras cervicales.",
+        "isCorrect": false,
+        "rationale": "Ubicar la pantalla por encima de los ojos genera hipertensión cuello-cervical y fatiga visual severa."
+      },
+      {
+        "text": "Utilizar sillas de altura fija sin posibilidad de ajuste para reducir costos de equipamiento en áreas administrativas.",
+        "isCorrect": false,
+        "rationale": "Las sillas no regulables obligan a los usuarios de tallas extremas a adoptar posturas forzadas en extremidades e higiene vertebral."
+      }
+    ],
+    "hint": "Busque opciones que reduzcan las cargas dinámicas y estáticas y faciliten la adaptabilidad corporal del usuario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante la evaluación ergonómica de una tarea de molienda en la que se trasvasan sacos mediante levantamiento manual con torsión de tronco, la metodología bota un nivel de riesgo 'inaceptable'. ¿Qué recomendación de control de ingeniería es la más efectiva para intervenir la estación?",
+    "opciones": [
+      {
+        "text": "Implementar un sistema de manipulación por succión en vacío o una mesa elevadora hidráulica regulable.",
+        "isCorrect": true,
+        "rationale": "El uso de asistencia mecánica por vacío elimina el esfuerzo muscular de elevación y la torsión del tronco al automatizar el agarre y traslado del saco."
+      },
+      {
+        "text": "Entregar cinturones de soporte lumbar de cuero a todos los operarios manteniendo idéntico el método de levantamiento.",
+        "isCorrect": false,
+        "rationale": "Las fajas o cinturones lumbares no eliminan la carga física ni la torsión biomecánica y pueden dar una falsa sensación de seguridad."
+      },
+      {
+        "text": "Reducir el tiempo de la jornada laboral en 10 minutos sin realizar modificaciones al diseño físico de la tarea.",
+        "isCorrect": false,
+        "rationale": "Las reducciones marginales de tiempo no resuelven la causa raíz del riesgo inaceptable por levantamiento y torsión biomecánica."
+      },
+      {
+        "text": "Instruir a los operarios para que levanten dos sacos de manera simultánea a fin de disminuir la frecuencia de viajes.",
+        "isCorrect": false,
+        "rationale": "Duplicar el peso manipulado incrementa drásticamente la fuerza ejercida sobre los discos lumbares, agravando el riesgo biológico muscular."
+      },
+      {
+        "text": "Aumentar la velocidad del proceso de molienda para acelerar el ritmo de trabajo de los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Incrementar el ritmo de trabajo eleva la frecuencia de los movimientos repetitivos y la fatiga, empeorando el nivel de riesgo."
+      }
+    ],
+    "hint": "Recuerde la jerarquía de controles frente al sobreesfuerzo en la manipulación manual de cargas pesadas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la gestión organizativa del trabajo, ¿cuál es el objetivo ergonómico de implementar un esquema de rotación de tareas en una línea de empaque o ensamblaje?",
+    "opciones": [
+      {
+        "text": "Alternar las exigencias físicas y la solicitación muscular, reduciendo la fatiga localizada, la monotonía y el riesgo de microtraumatismos repetitivos.",
+        "isCorrect": true,
+        "rationale": "La rotación permite descansos musculares activos al cambiar de estructuras anatómicas involucradas, manteniendo la productividad sin sobrecargar una sola zona corporal."
+      },
+      {
+        "text": "Reducir la planilla de personal obligando a un solo operario a ejecutar todas las labores de la planta de forma simultánea.",
+        "isCorrect": false,
+        "rationale": "La rotación busca alternar puestos previniendo el desgaste, no sobrecargar de manera desproporcionada a un individuo."
+      },
+      {
+        "text": "Sustituir la necesidad de ejecutar monitoreos y evaluaciones ergonómicas periódicas en la empresa.",
+        "isCorrect": false,
+        "rationale": "La rotación es una medida organizativa complementaria que requiere evaluaciones previas para asegurar que los puestos alternados no repitan las mismas exigencias."
+      },
+      {
+        "text": "Prescindir del uso de equipos de protección personal en ambientes operativamente complejos.",
+        "isCorrect": false,
+        "rationale": "Rotar puestos de trabajo no exime de la obligación de utilizar los equipos de protección adecuados para cada riesgo específico."
+      },
+      {
+        "text": "Incrementar las horas de la jornada ordinaria de trabajo mediante el traspaso continuo de funciones.",
+        "isCorrect": false,
+        "rationale": "La rotación se diseña dentro de la jornada ordinaria para equilibrar la fatiga, sin extender el tiempo de trabajo."
+      }
+    ],
+    "hint": "Considere la variabilidad en los grupos musculares solicitados y la monotonía del trabajo repetitivo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para mitigar la carga postural en actividades de trabajo administrativo prolongado, ¿qué especificaciones técnicas debe cumplir una silla ergonómica de oficina según las buenas prácticas operativas? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Contar con una base estable provista de 5 puntos de apoyo con ruedas para evitar vuelcos y facilitar la movilidad.",
+        "isCorrect": true,
+        "rationale": "Las bases de 5 puntos otorgan la estabilidad necesaria para evitar volcaduras accidentalmente al inclinarse o desplazarse en el puesto."
+      },
+      {
+        "text": "Poseer un mecanismo de regulación de altura que permita apoyar completamente las plantas de los pies en el piso manteniéndose un ángulo fémur-tibial de 90°.",
+        "isCorrect": true,
+        "rationale": "Poder regular la altura asegura que no exista compresión en la zona poplítea del muslo y favorece la correcta alineación de las piernas."
+      },
+      {
+        "text": "Presentar un respaldar regulable con soporte lumbar adaptado a la curvatura fisiológica de la columna vertebral.",
+        "isCorrect": true,
+        "rationale": "El soporte lumbar reduce la presión sobre los discos intervertebrales lumbares al preservar la lordosis fisiológica durante la postura sedente."
+      },
+      {
+        "text": "Estar fabricada con un asiento plásticos rígido no acolchado ni transpirable para extender la vida útil del mueble.",
+        "isCorrect": false,
+        "rationale": "Las superficies rígidas no acolchadas generan puntos de alta presión isquiática y malestar térmico en periodos prolongados."
+      },
+      {
+        "text": "Contar con reposabrazos fijos no ajustables posicionados a la altura del tórax.",
+        "isCorrect": false,
+        "rationale": "Los reposabrazos fijos y demasiado elevados fuerzan la elevación sostenida de los hombros, acentuando la tensión en el trapecio."
+      }
+    ],
+    "hint": "Identifique las características que garantizan la estabilidad, la regulación vertical y el adecuado apoyo lumbar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Durante el uso prolongado de herramientas neumáticas de perforación o maquinaria pesada sin sistemas de amortiguación, los trabajadores están expuestos a vibraciones. ¿Qué patología neuro-vascular se asocia característicamente a la exposición mano-brazo?",
+    "opciones": [
+      {
+        "text": "El síndrome del dedo blanco inducido por vibraciones o fenómeno de Raynaud secundario.",
+        "isCorrect": true,
+        "rationale": "La vibración mano-brazo de alta frecuencia altera la microcirculación y la inervación periférica de los dedos, desencadenando episodios vasospásticos y palidez focal."
+      },
+      {
+        "text": "La presbiacusia profesional inducida por exposición continua a ruido elevado.",
+        "isCorrect": false,
+        "rationale": "La presbiacusia es una pérdida auditiva por envejecimiento o trauma acústico, no una respuesta patológica neuro-vascular en miembros superiores."
+      },
+      {
+        "text": "El desarrollo agudo de cataratas y pérdida de agudeza visual por radiación no ionizante.",
+        "isCorrect": false,
+        "rationale": "Las cataratas se vinculan a factores como radiaciones o químicos, no a la transmisión de vibraciones mecánicas mano-brazo."
+      },
+      {
+        "text": "La formación de hernias inguinales por compresión abdominal directa.",
+        "isCorrect": false,
+        "rationale": "Las hernias inguinales se relacionan principalmente con aumentos de presión intraabdominal por levantamiento de cargas, no por vibración focalizada."
+      },
+      {
+        "text": "La silicosis pulmonar por depósito de partículas inorgánicas en el alvéolo.",
+        "isCorrect": false,
+        "rationale": "La silicosis es una neumoconiosis originada por inhalación de sílice cristalina, sin vinculación estructural con el riesgo por vibraciones."
+      }
+    ],
+    "hint": "Piense en la afectación de los pequeños vasos sanguíneos y nervios de los dedos debida a la aceleración mecánica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al estructurar el Programa Anual de Salud Ocupacional en una unidad de producción, ¿de dónde deben extraerse prioritariamente los datos técnicos para definir las capacitaciones y campañas preventivas de salud?",
+    "opciones": [
+      {
+        "text": "De los hallazgos e indicadores del examen médico ocupacional (preocupacional/periódico) y la matriz IPERC.",
+        "isCorrect": true,
+        "rationale": "Los exámenes médicos brindan la prevalencia de dolencias preexistentes o hallazgos clínicos, mientras que el IPERC identifica la exposición a agentes específicos."
+      },
+      {
+        "text": "Únicamente de los catálogos publicitarios presentados por las empresas proveedoras de EPP.",
+        "isCorrect": false,
+        "rationale": "Los catálogos comerciales informan sobre características de insumos, pero no reflejan las condiciones epidemiológicas ni los riesgos reales de la planta."
+      },
+      {
+        "text": "Exclusivamente de las memorias financieras anuales emitidas por la gerencia de contabilidad.",
+        "isCorrect": false,
+        "rationale": "Los reportes financieros no registran variables de salud, patologías ni exposición a riesgos ocupacionales del personal."
+      },
+      {
+        "text": "De la transcripción idéntica del programa de capacitaciones de una empresa de un sector productivo ajeno.",
+        "isCorrect": false,
+        "rationale": "Copiar programas de otros rubros ignora la casuística, los peligros y la epidemiología propia de la población trabajadora específica."
+      },
+      {
+        "text": "Del registro consolidado de tardanzas y faltas administrativas del personal del último mes.",
+        "isCorrect": false,
+        "rationale": "Los datos de asistencia administrativa no aportan información sobre los diagnósticos médicos ni los niveles de riesgo en el puesto."
+      }
+    ],
+    "hint": "Piense en las fuentes primarias que registran el perfil epidemiológico de los trabajadores y la evaluación de sus puestos de trabajo.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el contexto de la evaluación médica preocupacional, si un trabajador registra un Índice de Masa Corporal (IMC) de 32.5 kg/m², ¿cuál es la clasificación médica de este indicador y qué acción preventiva le corresponde en el programa de salud?",
+    "opciones": [
+      {
+        "text": "Obesidad clase I, requiriendo seguimiento por salud ocupacional e inclusión en programas de nutrición y estilo de vida saludable.",
+        "isCorrect": true,
+        "rationale": "Un IMC entre 30 y 34.9 kg/m² corresponde a Obesidad Tipo I, lo que amerita un programa de control para evitar la progresión a comorbilidades cardiovasculares o mayor desgaste articular."
+      },
+      {
+        "text": "Rango de peso normal, sin necesidad de adoptar ninguna medida preventivas ni control médico.",
+        "isCorrect": false,
+        "rationale": "El rango de peso normal se sitúa entre 18.5 y 24.9 kg/m², por lo que un valor de 32.5 denota una patología nutricional por exceso."
+      },
+      {
+        "text": "Sobrepeso leve, el cual no genera ningún impacto sobre la capacidad aeróbica ni el rendimiento físico.",
+        "isCorrect": false,
+        "rationale": "Un IMC mayor a 30 supera la categoría de sobrepeso (25-29.9 kg/m²) e ingresa formalmente en el diagnóstico de obesidad."
+      },
+      {
+        "text": "Obesidad mórbida extrema, lo que implica una inaptitud médica absoluta e inmediata para cualquier labor.",
+        "isCorrect": false,
+        "rationale": "La obesidad mórbida requiere un IMC de 40 kg/m² o superior; un valor de 32.5 no fundamenta una inaptitud automática generalizada."
+      },
+      {
+        "text": "Cuadro de desnutrición severa, debiendo prescribirse un incremento inmediato en la ingesta de azúcares simples.",
+        "isCorrect": false,
+        "rationale": "La desnutrición se asocia a IMC inferiores a 18.5 kg/m², siendo opuesto al diagnóstico de adiposidad excesiva."
+      }
+    ],
+    "hint": "Considere las categorías de IMC y las medidas de seguimiento para prevenir comorbilidades metabólicas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con el marco regulatorio sobre la prevención de los efectos nocivos de la radiación solar (Ley N° 30102 en el Perú), ¿cuáles son las obligaciones que debe cumplir el empleador para el personal con exposición a radiación UV al aire libre? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Suministrar fotoprotectores solares con el nivel de protección adecuado y disponer puntos de aplicación en áreas operativas.",
+        "isCorrect": true,
+        "rationale": "La provisión de bloqueadores solares es una exigencia legal para proteger la piel frente a la radiación acumulativa."
+      },
+      {
+        "text": "Proveer indumentaria de protección adecuada, como sombreros de ala ancha, gorros con cobertor de cuello o prendas con filtro UV.",
+        "isCorrect": true,
+        "rationale": "El equipamiento e indumentaria especial reducen la superficie corporal directamente expuesta a los rayos ultravioleta."
+      },
+      {
+        "text": "Desarrollar capacitaciones sobre los riesgos por exposición a la radiación solar y las medidas preventivas para mitigar el daño epidérmico.",
+        "isCorrect": true,
+        "rationale": "Sensibilizar al personal promueve el uso correcto de los elementos de protección e incentiva el autocuidado preventivo."
+      },
+      {
+        "text": "Transferir al trabajador el costo total de la adquisición de sus bloqueadores y sombreros de protección.",
+        "isCorrect": false,
+        "rationale": "La ley establece que el costo de las medidas de seguridad y salud ocupacional debe ser asumido íntegramente por el empleador."
+      },
+      {
+        "text": "Prohibir totalmente la ejecución de trabajos en recintos al aire libre durante todo el año.",
+        "isCorrect": false,
+        "rationale": "La normativa exige aplicar medidas de protección y controles administrativos, no la paralización total de las operaciones en intemperie."
+      }
+    ],
+    "hint": "Piense en la provisión de insumos de protección, indumentaria adecuada y actividades formativas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "En el marco de la evaluación de riesgos psicosociales en las organizaciones, ¿cuáles de las siguientes opciones corresponden a factores de riesgo o dimensiones psicosociales evaluadas en el trabajo? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Exigencias psicológicas cuantitativas y ritmos de trabajo acelerados con plazos ajustados.",
+        "isCorrect": true,
+        "rationale": "La sobrecarga cuantitativa y la presión de tiempo imponen una alta tensión cognitiva y emocional sobre el trabajador."
+      },
+      {
+        "text": "Presencia del fenómeno de 'doble presencia' o interferencia simultánea entre las exigencias laborales y las responsabilidades domésticas/familiares.",
+        "isCorrect": true,
+        "rationale": "La imposibilidad de conciliar el entorno laboral con la esfera personal genera desgaste psicológico y estrés crónico."
+      },
+      {
+        "text": "Falta de apoyo social por parte de la supervisión, escasez de claridad de rol y bajo reconocimiento o estima profesional.",
+        "isCorrect": true,
+        "rationale": "El aislamiento laboral, la ambigüedad en las funciones y la falta de valoración minan el clima laboral y la motivación."
+      },
+      {
+        "text": "Nivel de concentración de polvo respirable medido mediante bombas de muestreo gravimétrico en la planta.",
+        "isCorrect": false,
+        "rationale": "El polvo respirable corresponde a un agente químico ambiental, no a una dimensión psicosocial organizativa."
+      },
+      {
+        "text": "Resistencia a la compresión simple de las rocas en la caja techo de una galería subterránea.",
+        "isCorrect": false,
+        "rationale": "Las características geomecánicas del terreno corresponden a variables de ingeniería de minas, ajenas a la evaluación psicosocial."
+      }
+    ],
+    "hint": "Identifique las variables relacionadas con la carga mental, la organización del tiempo, las relaciones interpersonales y la interferencia familiar.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al implementar un programa de Seguridad Basada en el Comportamiento (SBC) para reducir la accidentabilidad, ¿cuál es el pilar metodológico en el que se sustenta la intervención?",
+    "opciones": [
+      {
+        "text": "La observación sistemática de conductas claves en campo, la retroalimentación constructiva inmediata y el refuerzo positivo de actos seguros.",
+        "isCorrect": true,
+        "rationale": "La SBC modifica la conducta analizando los antecedentes y consecuencias, valorando el comportamiento seguro e incentivando la participación del personal."
+      },
+      {
+        "text": "La aplicación inmediata de amonestaciones escritas y multas económicas ante cualquier reporte de condición insegura.",
+        "isCorrect": false,
+        "rationale": "Las estrategias basadas en la punición o castigo generan ocultamiento de incidentes y destruyen la confianza organizativa."
+      },
+      {
+        "text": "La sustitución de los procedimientos de trabajo seguro por decisiones improvisadas del operario según la urgencia.",
+        "isCorrect": false,
+        "rationale": "La SBC busca garantizar el cumplimiento voluntario de los procedimientos estandarizados, no la improvisación."
+      },
+      {
+        "text": "La disolución del Comité Paritario de Seguridad y Salud para centralizar la supervisión en una sola Jefatura.",
+        "isCorrect": false,
+        "rationale": "El involucramiento activa de los trabajadores y del comité paritario es esencial para consolidar una cultura de prevención."
+      },
+      {
+        "text": "La eliminación de las inspecciones de campo para sustituirlas por encuestas telefónicas no estructuradas.",
+        "isCorrect": false,
+        "rationale": "La SBC requiere presencia física directa en el lugar de trabajo para observar de forma objetiva la conducta operativa real."
+      }
+    ],
+    "hint": "Considere cómo se aborda la conducta humana en el puesto de trabajo para lograr cambios sostenibles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "En el marco de la prevención de trastornos musculoesqueléticos, ¿cuál es el beneficio fisiológico directo de realizar pausas activas breves durante la jornada laboral?",
+    "opciones": [
+      {
+        "text": "Rompe la contracción muscular sostenida, estimula la circulación sanguínea, oxigena los tejidos y reduce la acumulación de fatiga.",
+        "isCorrect": true,
+        "rationale": "Los ejercicios de estiramiento y movilidad alternados restauran el flujo sanguíneo en músculos hipertonificados y descargan la tensión articular acumulada."
+      },
+      {
+        "text": "Extiende la duración total del turno de trabajo para compensar los minutos invertidos en los ejercicios.",
+        "isCorrect": false,
+        "rationale": "Las pausas activas forman parte de la jornada ordinaria de trabajo y están orientadas a la recuperación física, no a extender la jornada."
+      },
+      {
+        "text": "Reemplaza íntegramente la necesidad de aplicar controles de ingeniería sobre equipos que generen sobreesfuerzo.",
+        "isCorrect": false,
+        "rationale": "Las pausas activas son un control administrativo secundario y no eliminan la obligación de corregir fallas de diseño en las máquinas."
+      },
+      {
+        "text": "Exime a la organización de realizar las mediciones e informes de monitoreo de factores de riesgo disergonómico.",
+        "isCorrect": false,
+        "rationale": "Las pausas activas son una medida de control, no una justificación para dejar de monitorear cuantitativamente los riesgos del puesto."
+      },
+      {
+        "text": "Elimina la obligatoriedad legal de realizar las evaluaciones médicas ocupacionales periódicas al personal.",
+        "isCorrect": false,
+        "rationale": "La vigilancia médica periódica es un requisito legal independiente de la ejecución de programas de pausas de estiramiento."
+      }
+    ],
+    "hint": "Reflexione sobre lo que ocurre a nivel de circulación circulatoria y recuperación muscular al romper una postura estática.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el Reglamento de Seguridad y Salud Ocupacional en Minería (Decreto Supremo N° 023-2017-EM), ¿cuál es el plazo máximo para notificar un accidente mortal o un incidente peligroso a la autoridad competente?",
+    "opciones": [
+      {
+        "text": "Dentro de un plazo máximo de 24 horas de ocurrido el suceso.",
+        "isCorrect": true,
+        "rationale": "El DS 023-2017-EM exige la notificación inmediata a las autoridades (MINEM/MTPE/SUNAFIL) dentro de las primeras 24 horas para dar inicio a las acciones de fiscalización."
+      },
+      {
+        "text": "Hasta 10 días calendarios posteriores a la ocurrencia del evento fatal.",
+        "isCorrect": false,
+        "rationale": "El plazo de 10 días corresponde a la presentación del informe detallado de investigación, no a la notificación inicial del hecho."
+      },
+      {
+        "text": "Al cierre del año fiscal dentro de la memoria anual de estadísticas de seguridad.",
+        "isCorrect": false,
+        "rationale": "Esperar al informe estadístico anual para reportar un evento mortal constituye una infracción legal muy grave."
+      },
+      {
+        "text": "Dentro de los 5 días hábiles siguientes, previa aprobación del Comité de SST.",
+        "isCorrect": false,
+        "rationale": "La notificación de accidentes mortales no se supedita a la reunión del comité ni puede demorar 5 días."
+      },
+      {
+        "text": "Únicamente cuando la entidad fiscalizadora ejecute una inspección programada en la unidad minera.",
+        "isCorrect": false,
+        "rationale": "El reporte debe ser proactivo por parte del empleador dentro del lapso perentorio de 24 horas, independientemente de inspecciones previas."
+      }
+    ],
+    "hint": "Piense en la inmediatez exigida por la normativa para eventos de extrema gravedad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Al aplicar la Pirámide de Bird y el Modelo de Causalidad en la investigación de accidentes, ¿dónde se debe enfocar la gestión preventiva primaria para evitar la ocurrencia de fatalidades?",
+    "opciones": [
+      {
+        "text": "En el reporte, identificación y corrección sistemática de los actos y condiciones subestándares.",
+        "isCorrect": true,
+        "rationale": "Intervenir los miles de actos y condiciones inseguras en la base de la pirámide evita que estas desviaciones escalen hacia incidentes, lesiones leves o accidentes fatales."
+      },
+      {
+        "text": "En el recuento de los accidentes con pérdida de tiempo una vez concluidos los análisis médicos.",
+        "isCorrect": false,
+        "rationale": "Enfocarse solo cuando ya existe la pérdida de tiempo es una gestión reactiva que no evita la ocurrencia del daño."
+      },
+      {
+        "text": "En la negociación del pago de indemnizaciones económicas a los deudos de los accidentados.",
+        "isCorrect": false,
+        "rationale": "Las indemnizaciones son consecuencias legales posteriores al desastre, sin impacto preventivo directo para evitar el hecho originario."
+      },
+      {
+        "text": "En la rescisión contractual de todas las empresas contratistas inmediatamente después de un incidente leve.",
+        "isCorrect": false,
+        "rationale": "Resolver contratos sin analizar la causa raíz no corrige los fallos sistémicos de la organización ni previene futuros accidentes."
+      },
+      {
+        "text": "En la suspensión de las evaluaciones médicas preoccupacionales para acelerar el ingreso de personal.",
+        "isCorrect": false,
+        "rationale": "Omitir los exámenes médicos degrada la gestión de salud ocupacional y aumenta el riesgo de asignar trabajadores a puestos no aptos."
+      }
+    ],
+    "hint": "Considere la base de la pirámide, donde se registran las desviaciones cotidianas y las condiciones inseguras no corregidas.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "De acuerdo con la legislación sobre Seguridad y Salud en el Trabajo, ¿cuáles de las siguientes condiciones regulan la constitución y funcionamiento del Comité de SST (CSST)? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Es obligatorio para todo empleador que cuente con 20 o más trabajadores a su cargo.",
+        "isCorrect": true,
+        "rationale": "La normativa exige la conformación del CSST a partir de los 20 trabajadores; si la cantidad es menor, se elige a un Supervisor de SST."
+      },
+      {
+        "text": "Es un órgano bipartito y paritario, constituido por igual número de representantes del empleador y de los trabajadores.",
+        "isCorrect": true,
+        "rationale": "La paridad garantiza el equilibrio en las decisiones y la representación equitativa de ambas partes en la gestión de seguridad."
+      },
+      {
+        "text": "Los representantes de los trabajadores ante el CSST deben ser elegidos mediante voto secreto y directo del personal.",
+        "isCorrect": true,
+        "rationale": "El proceso de elección de los representantes de los trabajadores debe ser democrático, directo y formalizado a través del sindicato o junta de trabajadores."
+      },
+      {
+        "text": "El número de miembros del CSST debe ser siempre de 20 personas, independientemente del tamaño de la empresa.",
+        "isCorrect": false,
+        "rationale": "El número de miembros del comité varía entre un mínimo de 4 y un máximo de 12 integrantes según la escala de trabajadores de la empresa."
+      },
+      {
+        "text": "Los profesionales contratados bajo locación de servicios por terceros pueden ser elegidos miembros con voto dentro del CSST.",
+        "isCorrect": false,
+        "rationale": "Los miembros del comité deben ser trabajadores en planilla directa de la empresa o entidad contratante."
+      }
+    ],
+    "hint": "Recuerde los criterios de número de trabajadores, la paridad de representación y la forma de elección.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Tras la ocurrencia de un accidente de trabajo incapacitante en una planta industrial, ¿quiénes deben integrar la comisión o equipo investigador según los estándares del sistema de gestión de SST?",
+    "opciones": [
+      {
+        "text": "El jefe o responsable del área donde ocurrió el suceso, el especialista de SST, el médico ocupacional y los miembros del CSST.",
+        "isCorrect": true,
+        "rationale": "Un equipo multidisciplinario asegura una visión integral que analiza las fallas operativas, los aspectos médicos y las condiciones del entorno."
+      },
+      {
+        "text": "Exclusivamente el auditor financiero externo responsable de revisar el balance contable de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los auditores financieros carecen de las competencias técnicas en SST y del conocimiento operativo del evento para investigar accidentes."
+      },
+      {
+        "text": "Únicamente el trabajador afectado, quien debe redactar el informe técnico desde su centro de reposo.",
+        "isCorrect": false,
+        "rationale": "El trabajador accidentado aporta su testimonio, pero la investigación debe ser realizada por un equipo capacitado para hallar la causa raíz."
+      },
+      {
+        "text": "El representante legal de una empresa competidora sin vínculo laboral ni operativo con la organización.",
+        "isCorrect": false,
+        "rationale": "Las investigaciones son internas y deben ejecutarse por personal de la propia organización y su comité de SST."
+      },
+      {
+        "text": "Solamente los proveedores externos de insumos de oficina y papelería.",
+        "isCorrect": false,
+        "rationale": "Los proveedores de insumos ajenos al proceso no poseen rol ni competencia dentro del sistema de gestión de SST de la planta."
+      }
+    ],
+    "hint": "Piense en la necesidad de combinar el conocimiento técnico del proceso, la gestión de SST y la representación de los trabajadores.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Según el Reglamento de SST en Minería, ¿cuál es el procedimiento técnico inmediato que debe ejecutar un trabajador que presencie o sufra un incidente o accidente de trabajo?",
+    "opciones": [
+      {
+        "text": "Reportar de manera inmediata el suceso a su supervisor o jefe directo para activar los protocolos de respuesta y atención médica.",
+        "isCorrect": true,
+        "rationale": "La notificación inmediata permite brindar primeros auxilios oportunos, preservar la escena para el análisis y gatillar la cadena de emergencia."
+      },
+      {
+        "text": "Retirarse discretamente del centro de trabajo y esperar a ser contactado por el médico tratante en los días posteriores.",
+        "isCorrect": false,
+        "rationale": "Abandonar el lugar sin avisar retrasa la atención médica adecuada y constituye una transgresión de las obligaciones del trabajador."
+      },
+      {
+        "text": "Alterar o limpiar la escena del accidente antes de la llegada del equipo investigador para mantener la planta ordenada.",
+        "isCorrect": false,
+        "rationale": "Modificar la escena destruye evidencias físicas fundamentales para determinar la causa raíz del evento."
+      },
+      {
+        "text": "Ocultar el evento a los compañeros de turno para no interferir con las métricas de bonificación de producción.",
+        "isCorrect": false,
+        "rationale": "Ocultar accidentes impide la adopción de medidas correctivas y expone a otros trabajadores a sufrir el mismo evento."
+      },
+      {
+        "text": "Difundir imágenes del suceso en redes sociales personales antes de brindar auxilio al compañero lesionado.",
+        "isCorrect": false,
+        "rationale": "La prioridad absoluta ante un evento es la atención del lesionado y el reporte a los canales internos oficiales de la empresa."
+      }
+    ],
+    "hint": "Considere la cadena de reporte requerida para activar oportunamente los primeros auxilios y la respuesta a emergencias.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Durante la investigación de un accidente de trabajo para determinar las causas básicas y sistemáticas, ¿qué instrumentos y registros del sistema de gestión deben ser analizados? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "La matriz de Identificación de Peligros, Evaluación de Riesgos y Medidas de Control (IPERC) correspondiente al puesto.",
+        "isCorrect": true,
+        "rationale": "Revisar el IPERC permite verificar si el peligro que originó el accidente estaba correctamente identificado y evaluado con controles adecuados."
+      },
+      {
+        "text": "Los Procedimientos Escritos de Trabajo Seguro (PETS) e instructivos técnicos aplicables a la labor ejecutada.",
+        "isCorrect": true,
+        "rationale": "Analizar los PETS ayuda a determinar si el accidente ocurrió por falta de un estándar formal, ambigüedad en los pasos o desvío del procedimiento."
+      },
+      {
+        "text": "Los registros de capacitación, inducción, entrenamiento y entrega de EPP específicos del trabajador involucrado.",
+        "isCorrect": true,
+        "rationale": "Verificar los registros de capacitación y EPP confirma si el personal contaba con las competencias y la protección requeridas para la tarea."
+      },
+      {
+        "text": "Las facturas comerciales de venta de mineral o productos procesados emitidas en los últimos cinco años.",
+        "isCorrect": false,
+        "rationale": "Los registros comerciales de facturación carecen de relevancia preventiva y biomecánica para el análisis de un accidente de trabajo."
+      },
+      {
+        "text": "Los manuales de diseño gráfico y publicidad corporativa de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los lineamientos de diseño de marca no influyen en las condiciones operativas ni en las causas mecánicas de un accidente laboral."
+      }
+    ],
+    "hint": "Identifique las herramientas preventivas donde se documentan los riesgos, los estándares operativos y el historial formativo del operario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_choice",
+    "pregunta": "Una vez finalizada la investigación de un accidente grave y definidas las acciones correctivas en el informe, ¿cuál es la acción clave para consolidar el proceso de aprendizaje organizativo y evitar la recurrencia?",
+    "opciones": [
+      {
+        "text": "Difundir la lección aprendida en todas las áreas de la empresa y hacer el seguimiento estricto al cumplimiento de las medidas correctivas.",
+        "isCorrect": true,
+        "rationale": "La retroalimentación y difusión de la lección aprendida socializa las causas del evento para que otras áreas con riesgos similares implementen las prevenciones del caso."
+      },
+      {
+        "text": "Archivar el informe final en una carpeta confidencial sin compartir los hallazgos con el Comité de SST ni con los supervisores.",
+        "isCorrect": false,
+        "rationale": "Ocultar la investigación impide que la organización aprenda del error, manteniendo latente la causa raíz en las operaciones."
+      },
+      {
+        "text": "Reclasificar unilateralmente el accidente de trabajo como si hubiera sido una enfermedad común para no afectar las estadísticas.",
+        "isCorrect": false,
+        "rationale": "Falsificar los registros de accidentes es una infracción legal grave que enmascara las fallas del sistema de gestión."
+      },
+      {
+        "text": "Eliminar las charlas de 5 minutos al inicio del turno para recuperar el tiempo perdido durante las reuniones de investigación.",
+        "isCorrect": false,
+        "rationale": "Suprimir los espacios de coordinación diaria degrada la comunicación preventiva y aumenta el nivel de riesgo en la operación."
+      },
+      {
+        "text": "Aplicar sanciones administrativas a los testigos del hecho que brindaron testimonio a la comisión investigadora.",
+        "isCorrect": false,
+        "rationale": "Sancionar a los testigos amedrenta a la plantilla y destruye la transparencia requerida para investigar futuros sucesos."
+      }
+    ],
+    "hint": "Reflexione sobre la importancia de comunicar las lecciones aprendidas a toda la organización.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "MEDIO",
+    "tipo": "multiple_select",
+    "pregunta": "Para realizar una evaluación objetiva y periódica del bienestar y clima laboral en la empresa, ¿qué acciones estratégicas se recomienda implementar desde la gestión de recursos humanos y salud ocupacional? (Seleccione todas las que correspondan)",
+    "opciones": [
+      {
+        "text": "Aplicar encuestas periódicas de clima laboral para identificar factores de insatisfacción, sobrecarga o tensión en las distintas áreas.",
+        "isCorrect": true,
+        "rationale": "Las encuestas estandarizadas permiten medir la percepción de los trabajadores y detectar de manera temprana problemas en el entorno organizativo."
+      },
+      {
+        "text": "Fomentar canales institucionales de comunicación abierta y retroalimentación constructiva entre la supervisión y los colaboradores.",
+        "isCorrect": true,
+        "rationale": "La comunicación bidireccional reduce la incertidumbre, promueve el respeto y facilita la resolución oportuna de conflictos laborales."
+      },
+      {
+        "text": "Implementar programas de reconocimiento del desempeño, incentivos y promoción de liderazgo empático en la organización.",
+        "isCorrect": true,
+        "rationale": "Reconocer los logros fortalece el compromiso del personal y estimula un ambiente de trabajo motivante y saludable."
+      },
+      {
+        "text": "Incrementar las exigencias de la jornada laboral eliminando las pausas activas y los periodos de descanso programados.",
+        "isCorrect": false,
+        "rationale": "Aumentar arbitrariamente la presión y eliminar los descansos eleva el estrés laboral y desencadena cuadros de agotamiento o fatiga severa."
+      },
+      {
+        "text": "Desestimar las denuncias sobre acoso laboral o hostigamiento presentadas por el personal operario.",
+        "isCorrect": false,
+        "rationale": "Ignorar los casos de acoso deteriora gravemente el clima laboral, fomenta la impunidad y genera riesgos psicosociales muy altos."
+      }
+    ],
+    "hint": "Busque medidas encaminadas al diagnóstico del clima, la comunicación transparente y el reconocimiento del personal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el documento inicial de evaluación médica que sirve como antecedente preventivo para verificar la aptitud ergonómica y de salud de un trabajador al ingresar a una empresa?",
+    "opciones": [
+      {
+        "text": "Examen médico ocupacional",
+        "isCorrect": true,
+        "rationale": "Esta evaluación inicial permite verificar el perfil biológico del trabajador, detectando dolencias preexistentes o condiciones de salud antes de su incorporación al puesto."
+      },
+      {
+        "text": "Matriz de identificación de peligros y evaluación de riesgos (IPERC)",
+        "isCorrect": false,
+        "rationale": "La matriz IPERC evalúa los peligros presentes en el entorno de trabajo de manera general, pero no constituye el expediente médico individual del trabajador."
+      },
+      {
+        "text": "Plan anual de capacitaciones en seguridad",
+        "isCorrect": false,
+        "rationale": "El plan de capacitaciones programa los eventos instructivos del periodo, pero no determina la aptitud de salud individual del ingresante."
+      },
+      {
+        "text": "Informe de monitoreo de agentes físicos",
+        "isCorrect": false,
+        "rationale": "El monitoreo mide niveles ambientales de agentes como ruido o vibraciones en las instalaciones, mas no evalúa el estado físico del trabajador."
+      },
+      {
+        "text": "Reglamento interno de seguridad y salud en el trabajo",
+        "isCorrect": false,
+        "rationale": "El reglamento establece los lineamientos de conducta y deberes normativos de la empresa, no la aptitud física particular de una persona."
+      }
+    ],
+    "hint": "Se trata de un expediente clínico preventivo que evalúa las aptitudes físicas antes o durante la contratación.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué norma ministerial peruana establece la Norma Básica de Ergonomía y el procedimiento de evaluación de riesgos disergonómicos?",
+    "opciones": [
+      {
+        "text": "Resolución Ministerial 375-2008-TR",
+        "isCorrect": true,
+        "rationale": "Esta resolución reglamenta los parámetros ergonómicos aplicables a nivel nacional para la manipulación de cargas, posturas y movimientos repetitivos."
+      },
+      {
+        "text": "Decreto Supremo 005-2012-TR",
+        "isCorrect": false,
+        "rationale": "Este decreto supremo reglamenta de forma general la Ley 29783 de Seguridad y Salud en el Trabajo, pero no es la norma específica de ergonomía."
+      },
+      {
+        "text": "Ley 29783",
+        "isCorrect": false,
+        "rationale": "La Ley 29783 constituye el marco legal general de la seguridad y salud ocupacional en el país, requiriendo normas específicas para reglamentar la ergonomía."
+      },
+      {
+        "text": "Decreto Supremo 023-2017-EM",
+        "isCorrect": false,
+        "rationale": "Esta norma modifica el Reglamento de Seguridad y Salud Ocupacional en Minería, pero no es la norma técnica básica general de ergonomía."
+      },
+      {
+        "text": "Resolución Ministerial 050-2013-TR",
+        "isCorrect": false,
+        "rationale": "Esta norma aprueba los formatos referenciales para los registros obligatorios del Sistema de Gestión de SST."
+      }
+    ],
+    "hint": "Esta norma técnica ministerial aprobada en el año 2008 aborda de manera exclusiva los factores de riesgo disergonómico.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes constituyen efectos o consecuencias directas de los trastornos musculoesqueléticos no gestionados en una organización?",
+    "opciones": [
+      {
+        "text": "Incremento del ausentismo laboral por descansos médicos.",
+        "isCorrect": true,
+        "rationale": "Las lesiones acumulativas generan dolores persistentes que obligan al trabajador a suspender sus labores para recuperarse."
+      },
+      {
+        "text": "Disminución del rendimiento y de la capacidad física de los colaboradores.",
+        "isCorrect": true,
+        "rationale": "La molestia física o limitación articular afecta directamente la velocidad, precisión y eficacia del desempeño diario."
+      },
+      {
+        "text": "Aumento del descontento y sobrecarga laboral en el equipo de trabajo.",
+        "isCorrect": true,
+        "rationale": "La ausencia de compañeros lesionados obliga al resto del personal a cubrir vacantes temporales, elevando el desgaste físico y el descontento."
+      },
+      {
+        "text": "Aumento automático de la flexibilidad articular de la columna vertebral.",
+        "isCorrect": false,
+        "rationale": "Los trastornos producen rigidez, limitación del rango de movimiento e inflamación, no mayor flexibilidad."
+      },
+      {
+        "text": "Reducción inmediata de las primas de seguro pagadas por la empresa.",
+        "isCorrect": false,
+        "rationale": "Un mayor índice de lesiones y descanso médico incrementa la siniestralidad, aumentando los costos de aseguramiento."
+      }
+    ],
+    "hint": "Piense en el impacto directo sobre la asistencia, el cansancio del personal restante y el nivel de producción.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué condiciones o prácticas en el lugar de trabajo son causas reconocidas de posturas inadecuadas o forzadas?",
+    "opciones": [
+      {
+        "text": "Trabajar con equipos o mobiliario mal diseñados o no regulables.",
+        "isCorrect": true,
+        "rationale": "El mobiliario rígido obliga al usuario a adaptar su cuerpo a posiciones incómodas fuera del rango neutro."
+      },
+      {
+        "text": "Permanecer tiempo excesivo en la misma posición, sea de pie o sentado.",
+        "isCorrect": true,
+        "rationale": "La carga estática muscular derivada de posiciones fijas prolongadas reduce la circulación y genera fatiga articular."
+      },
+      {
+        "text": "Adoptar posiciones de torsión o flexión del tronco para alcanzar insumos.",
+        "isCorrect": true,
+        "rationale": "Los movimientos que desvían la columna de su postura natural neutra incrementan la presión sobre los discos intervertebrales."
+      },
+      {
+        "text": "Realizar pausas activas organizadas de manera periódica.",
+        "isCorrect": false,
+        "rationale": "Las pausas activas actúan como medida preventiva para relajar la musculatura y romper la estatización postural."
+      },
+      {
+        "text": "Utilizar sillas ergonómicas con ajuste de altura y cinco puntos de apoyo.",
+        "isCorrect": false,
+        "rationale": "Las sillas regulables facilitan una postura cómoda y adaptada a la estatura del usuario, previniendo desviaciones."
+      }
+    ],
+    "hint": "Identifique las condiciones que obligan a desviarse de la postura neutra o a mantener rigidez muscular.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A qué tipo de alteración o exposición laboral está asociado el síndrome del 'dedo blanco' (fenómeno de Raynaud inducido)?",
+    "opciones": [
+      {
+        "text": "Exposición continua a vibraciones en el sistema mano-brazo.",
+        "isCorrect": true,
+        "rationale": "El uso repetido de herramientas percutoras o rotativas transmite vibraciones que dañan los vasos sanguíneos y nervios de los dedos."
+      },
+      {
+        "text": "Iluminación insuficiente en puestos de oficina.",
+        "isCorrect": false,
+        "rationale": "La iluminación deficiente causa fatiga ocular y dolores de cabeza, pero no afecciones vasculares periféricas en los dedos."
+      },
+      {
+        "text": "Sobreesfuerzo por levantamiento manual de cargas pesadas.",
+        "isCorrect": false,
+        "rationale": "El levantamiento inadecuado afecta principalmente la zona lumbar y hombros, no desencadena este síndrome vascular de extremidades."
+      },
+      {
+        "text": "Exposición directa a radiación solar sin protección.",
+        "isCorrect": false,
+        "rationale": "La radiación solar incide en quemaduras o cáncer cutáneo, mas no en afecciones microvasculares inducidas por herramientas de vibración."
+      },
+      {
+        "text": "Presencia de agentes químicos biológicos en el ambiente.",
+        "isCorrect": false,
+        "rationale": "Los agentes biológicos causan infecciones o alergias, pero no la obstrucción sanguínea por vibración mecánica."
+      }
+    ],
+    "hint": "Considere la afección neurovascular provocada por el empleo prolongado de herramientas como martillos neumáticos o esmeriles.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cómo se define el concepto de movimiento repetitivo en el ámbito de la ergonomía laboral?",
+    "opciones": [
+      {
+        "text": "Realización continua de ciclos de trabajo cortos con movimientos idénticos o similares de extremidades.",
+        "isCorrect": true,
+        "rationale": "Esta reiteración de acciones rápidas sobre las mismas estructuras musculares o tendinosas sin descanso suficiente genera inflamación local."
+      },
+      {
+        "text": "Mantenerse de pie en una misma posición sin desplazarse durante la jornada.",
+        "isCorrect": false,
+        "rationale": "La permanencia fija describe una postura estática, no la repetición periódica de movimientos articulares."
+      },
+      {
+        "text": "Un levantamiento esporádico de un objeto pesado que supera los límites permitidos.",
+        "isCorrect": false,
+        "rationale": "Esta acción corresponde a un evento de sobreesfuerzo agudo o manipulación manual de carga, no a la repetitividad."
+      },
+      {
+        "text": "El intercambio de turnos entre la jornada diurna y nocturna.",
+        "isCorrect": false,
+        "rationale": "El cambio de turnos se refiere a la organización horaria de las jornadas, no a un factor biomecánico."
+      },
+      {
+        "text": "El traslado de materiales mediante fajas transportadoras automáticas.",
+        "isCorrect": false,
+        "rationale": "El funcionamiento del equipo es un proceso industrial automatizado, no el patrón de movimiento físico del trabajador."
+      }
+    ],
+    "hint": "Se refiere a la ejecución rápida y constante del mismo gesto mecánico durante la jornada.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué estudia fundamentalmente la antropometría cuando se aplica al diseño ergonómico de los puestos de trabajo?",
+    "opciones": [
+      {
+        "text": "Las proporciones y dimensiones cuantitativas del cuerpo humano.",
+        "isCorrect": true,
+        "rationale": "Proporciona los datos sobre medidas corporales necesarios para que los equipos y mobiliarios se me ajusten a las características del usuario."
+      },
+      {
+        "text": "El nivel de decibeles de ruido emitido por las máquinas.",
+        "isCorrect": false,
+        "rationale": "La medición del sonido corresponde a la higiene industrial en el campo de agentes físicos."
+      },
+      {
+        "text": "La concentración de gases y vapores tóxicos en áreas confinadas.",
+        "isCorrect": false,
+        "rationale": "El estudio de sustancias químicas ambientales corresponde a la evaluación de riesgos químicos."
+      },
+      {
+        "text": "La velocidad de flujo de aire en los ductos de ventilación.",
+        "isCorrect": false,
+        "rationale": "Este indicador mide el desempeño de sistemas de ventilación en ingeniería ambiental u ocupacional."
+      },
+      {
+        "text": "El grado de fatiga mental de los colaboradores tras la jornada.",
+        "isCorrect": false,
+        "rationale": "La fatiga mental forma parte de la evaluación de factores psicosociales o ergonomía cognitiva."
+      }
+    ],
+    "hint": "Esta disciplina física utiliza instrumentos para registrar estaturas, alcances de brazos y anchos corporales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Al diseñar una estación de trabajo para un grupo numeroso de personas, ¿por qué NO se recomienda utilizar únicamente el valor del 'promedio' antropométrico?",
+    "opciones": [
+      {
+        "text": "Porque excluye e incomoda a las personas situadas en los extremos de la población (las más altas o más bajas).",
+        "isCorrect": true,
+        "rationale": "Diseñar para la media deja desatendidas a las personas con medidas inferiores o superiores, generando posturas forzadas en ellas."
+      },
+      {
+        "text": "Porque el valor promedio eleva desmedidamente los costos de fabricación industrial.",
+        "isCorrect": false,
+        "rationale": "El costo suele incrementarse con diseños a medida individualizada, no por usar promedios numéricos."
+      },
+      {
+        "text": "Porque la legislación nacional prohíbe el uso de promedios en informes técnicos.",
+        "isCorrect": false,
+        "rationale": "La normativa fomenta el ajuste y la flexibilidad, sin prohibir el uso de la estadística."
+      },
+      {
+        "text": "Porque el promedio solo se puede aplicar a herramientas operadas con la mano izquierda.",
+        "isCorrect": false,
+        "rationale": "Los datos antropométricos se aplican a ambos lados y regiones del cuerpo de forma indistinta."
+      },
+      {
+        "text": "Porque invalida automáticamente las pausas activas programadas en la empresa.",
+        "isCorrect": false,
+        "rationale": "Las dimensiones del mobiliario no guardan relación con la ejecución o validez de las pausas físicas."
+      }
+    ],
+    "hint": "Piense en lo que sucede con una persona muy grande o muy pequeña si un mueble se fija exactamente a la mitad.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes elementos forman parte indispensable de una estación de trabajo de oficina ergonómicamente ajustable?",
+    "opciones": [
+      {
+        "text": "Silla ergonómica regulable en altura y con cinco puntos de apoyo.",
+        "isCorrect": true,
+        "rationale": "Brinda estabilidad y permite adaptar la base de la Silla al nivel de las rodillas del usuario."
+      },
+      {
+        "text": "Soporte o brazo regulable para posicionar la pantalla a la altura de los ojos.",
+        "isCorrect": true,
+        "rationale": "Evita la inclinación continuada del cuello manteniendo la cabeza en su posición neutra."
+      },
+      {
+        "text": "Reposapiés para usuarios que no apoyan completamente la planta del pie en el suelo.",
+        "isCorrect": true,
+        "rationale": "Alivia la presión sobre la vena poplítea en la cara posterior del muslo en personas de menor estatura."
+      },
+      {
+        "text": "Taburete rígido de madera sin respaldo ni apoyabrazos.",
+        "isCorrect": false,
+        "rationale": "Carece de soporte lumbar e incrementa la fatiga estática en los músculos de la columna."
+      },
+      {
+        "text": "Mesa de vidrio reflectante con bordes afilados e fijos.",
+        "isCorrect": false,
+        "rationale": "Los reflejos generan fatiga visual y los bordes afilados comprimen el antebrazo."
+      }
+    ],
+    "hint": "Busque dispositivos adaptables que permitan mantener ángulos de 90 grados y soporte corporal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué factores del entorno físico ambiental deben integrarse al diseñar una estación de trabajo ergonómica?",
+    "opciones": [
+      {
+        "text": "Nivel de iluminación acorde a la precisión visual que exige la tarea.",
+        "isCorrect": true,
+        "rationale": "Garantiza una visibilidad sin deslumbramientos ni exigencia excesiva sobre la vista del usuario."
+      },
+      {
+        "text": "Control de los niveles de ruido para evitar fatiga e interferencia en la concentración.",
+        "isCorrect": true,
+        "rationale": "El ruido excesivo eleva el estrés y disminuye el rendimiento en tareas que demandan atención."
+      },
+      {
+        "text": "Temperatura y ventilación adecuadas para asegurar el confort térmico del ambiente.",
+        "isCorrect": true,
+        "rationale": "Evita la somnolencia por calor excesivo o el agarrotamiento muscular por ambientes muy fríos."
+      },
+      {
+        "text": "Tipo de régimen de contratación del personal operativo.",
+        "isCorrect": false,
+        "rationale": "La condición administrativa del contrato no altera la respuesta física del cuerpo al entorno físico."
+      },
+      {
+        "text": "Antigüedad comercial de los proveedores del equipamiento.",
+        "isCorrect": false,
+        "rationale": "La marca o trayectoria del proveedor no constituye por sí misma una variable ambiental de confort."
+      }
+    ],
+    "hint": "Seleccione las variables físicas que afectan la comodidad de los sentidos y la regulación corporal.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué beneficio principal ofrece la incorporación de monitores o pantallas con filtros de luz azul en puestos informáticos?",
+    "opciones": [
+      {
+        "text": "Disminuir la fatiga visual y el cansancio ocular durante periodos prolongados.",
+        "isCorrect": true,
+        "rationale": "La atenuación de esta longitud de onda reduce la irritación ocular, sequedad y dolores de cabeza."
+      },
+      {
+        "text": "Eliminar la necesidad de adaptar la altura de la Silla de trabajo.",
+        "isCorrect": false,
+        "rationale": "La protección ocular no compensa la mala postura de las extremidades inferiores."
+      },
+      {
+        "text": "Evitar lesiones por vibración transmitida al antebrazo.",
+        "isCorrect": false,
+        "rationale": "Las vibraciones dependen del funcionamiento mecánico de las herramientas, no de la radiación luminosa."
+      },
+      {
+        "text": "Anular por completo el riesgo de tendinitis en las muñecas.",
+        "isCorrect": false,
+        "rationale": "La tendinitis se previene con el uso de ratones ergonómicos y apoyos para muñecas, no con filtros de luz."
+      },
+      {
+        "text": "Aumentar el peso soportable para el levantamiento de carga manual.",
+        "isCorrect": false,
+        "rationale": "La capacidad de carga depende de factores músculo-tendinosos y técnicas de levantamiento."
+      }
+    ],
+    "hint": "Su acción está dirigida a proteger el órgano de la vista ante la radiación de dispositivos digitales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el objetivo primordial de implementar un sistema de rotación de tareas en una línea de producción?",
+    "opciones": [
+      {
+        "text": "Alternar el uso de diferentes grupos musculares para reducir la fatiga y prevenir lesiones repetitivas.",
+        "isCorrect": true,
+        "rationale": "Al cambiar periódicamente de tarea, se otorga descanso a los tendones sobrecargados por un gesto específico."
+      },
+      {
+        "text": "Aumentar la carga de peso que debe transportar individualmente cada operario.",
+        "isCorrect": false,
+        "rationale": "La rotación no busca autorizar sobrecargas de peso que violen los límites de la norma."
+      },
+      {
+        "text": "Prescindir de la entrega de equipos de protección personal a los trabajadores.",
+        "isCorrect": false,
+        "rationale": "Los EPP se deben suministrar de forma obligatoria según los peligros del puesto, independientemente de la rotación."
+      },
+      {
+        "text": "Reducir el salario base de los colaboradores al no especializarse en una sola tarea.",
+        "isCorrect": false,
+        "rationale": "La rotación de puestos es una medida preventiva, no un mecanismo de penalización salarial."
+      },
+      {
+        "text": "Evitar la realización de evaluaciones médicas de ingreso.",
+        "isCorrect": false,
+        "rationale": "Los exámenes médicos obligatorios se deben efectuar al margen de cómo se organicen las tareas."
+      }
+    ],
+    "hint": "Busca evitar que una misma articulación o tendón trabaje sin descanso durante todas las horas laborales.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es la finalidad esencial de un programa de concientización sobre salud ocupacional en las empresas?",
+    "opciones": [
+      {
+        "text": "Informar y educar a los trabajadores para prevenir enfermedades ocupacionales y accidentes.",
+        "isCorrect": true,
+        "rationale": "Busca generar conocimientos prácticos que permitan a los colaboradores identificar riesgos y autocuidarse."
+      },
+      {
+        "text": "Reducir la cantidad de días de vacaciones anuales de los colaboradores.",
+        "isCorrect": false,
+        "rationale": "Los descansos vacacionales son un derecho laboral que no guarda relación con la concientización en salud."
+      },
+      {
+        "text": "Reemplazar las fiscalizaciones que realiza la autoridad de trabajo (SUNAFIL).",
+        "isCorrect": false,
+        "rationale": "El programa interno no sustituye la competencia fiscalizadora del Estado."
+      },
+      {
+        "text": "Aumentar la cantidad de horas extras exigidas al personal operativo.",
+        "isCorrect": false,
+        "rationale": "La gestión de salud promueve el equilibrio y control de la fatiga, no el aumento desmedido de la jornada."
+      },
+      {
+        "text": "Eliminar la presencia del Comité de Seguridad y Salud en el Trabajo.",
+        "isCorrect": false,
+        "rationale": "El Comité participa activamente en la aprobación y seguimiento de estos programas, no desaparece."
+      }
+    ],
+    "hint": "Apunta a la formación preventiva del personal para evitar daños a su bienestar físico y mental.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué documentos e insumos del Sistema de Gestión de SST nutren la elaboración de un programa de salud ocupacional?",
+    "opciones": [
+      {
+        "text": "La Matriz de Identificación de Peligros, Evaluación de Riesgos y Medidas de Control (IPERC).",
+        "isCorrect": true,
+        "rationale": "Proporciona el inventario de peligros y riesgos específicos por puesto que deben abordarse en las capacitaciones."
+      },
+      {
+        "text": "Los informes y resultados de los monitoreos ocupacionales realizados.",
+        "isCorrect": true,
+        "rationale": "Muestran si los agentes físicos, químicos o disergonómicos sobrepasan los límites permisibles en las áreas."
+      },
+      {
+        "text": "Los indicadores y estadísticas observadas en los exámenes médicos ocupacionales.",
+        "isCorrect": true,
+        "rationale": "Revelan la prevalencia de dolencias como diabetes, anemias o dorsalgias en la masa laboral."
+      },
+      {
+        "text": "Las cotizaciones de ventas de productos enviadas a los clientes.",
+        "isCorrect": false,
+        "rationale": "Los documentos comerciales de venta no contienen información sobre la salud o riesgos del personal."
+      },
+      {
+        "text": "El catálogo publicitario de servicios ofrecidos por la empresa.",
+        "isCorrect": false,
+        "rationale": "El material publicitario está orientado al mercado externo y carece de valor técnico preventivo."
+      }
+    ],
+    "hint": "Seleccione los instrumentos técnicos que registran peligros, mediciones ambientales y diagnósticos de salud.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Qué ley peruana exige de manera específica a las empresas la adopción de medidas preventivas ante la exposición a la radiación solar?",
+    "opciones": [
+      {
+        "text": "Ley 30102",
+        "isCorrect": true,
+        "rationale": "Esta ley dispone medidas preventivas como el uso de sombreros, bloqueador solar y espacios techados para trabajadores al aire libre."
+      },
+      {
+        "text": "Ley 28048",
+        "isCorrect": false,
+        "rationale": "Esta norma aborda la protección de la mujer gestante que realiza labores que pongan en riesgo su salud."
+      },
+      {
+        "text": "Ley 26842",
+        "isCorrect": false,
+        "rationale": "Es la Ley General de Salud del Perú, norma marco del sistema sanitario nacional."
+      },
+      {
+        "text": "Decreto Supremo 003-98-SA",
+        "isCorrect": false,
+        "rationale": "Norma las Normas Técnicas del Seguro Complementario de Trabajo de Riesgo (SCTR)."
+      },
+      {
+        "text": "Resolución Ministerial 050-2013-TR",
+        "isCorrect": false,
+        "rationale": "Esta norma contiene las guías para registros obligatorios del sistema de gestión de seguridad."
+      }
+    ],
+    "hint": "Es la norma legal promulgada para neutralizar los efectos nocivos de los rayos UV en jornadas a la intemperie.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes aspectos son considerados factores de riesgo psicosocial en el trabajo?",
+    "opciones": [
+      {
+        "text": "Sobrecarga cuantitativa de trabajo y plazos de entrega extremadamente ajustados.",
+        "isCorrect": true,
+        "rationale": "Generan niveles elevados de presión que desencadenan estrés laboral crónico y fatiga."
+      },
+      {
+        "text": "Situaciones de hostigamiento o acoso laboral (mobbing) en las relaciones interpersonales.",
+        "isCorrect": true,
+        "rationale": "Deterioran el bienestar emocional y la salud mental del colaborador afectado de forma directa."
+      },
+      {
+        "text": "Desequilibrio entre las exigencias laborales y la vida personal o familiar.",
+        "isCorrect": true,
+        "rationale": "Impide el descanso y la desconexión necesaria, generando conflictos en el entorno personal del trabajador."
+      },
+      {
+        "text": "Dotación de equipos de protección personal normados y certificados.",
+        "isCorrect": false,
+        "rationale": "El suministro de epp es un control técnico de seguridad que protege la integridad física."
+      },
+      {
+        "text": "Presencia de señalización de emergencia en las vías de evacuación.",
+        "isCorrect": false,
+        "rationale": "La señalética es un control de condiciones de seguridad edilicia, no una carga psicológica perjudicial."
+      }
+    ],
+    "hint": "Elija las condiciones vinculadas a la organización de tareas, ambiente social e interacción jerárquica.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿En qué se centra fundamentalmente la metodología de Seguridad Basada en el Comportamiento (SBC)?",
+    "opciones": [
+      {
+        "text": "En identificar y modificar conductas observables del personal para promover comportamientos seguros.",
+        "isCorrect": true,
+        "rationale": "Utiliza la observación directa y la retroalimentación positiva para fortalecer hábitos de trabajo seguros."
+      },
+      {
+        "text": "En sancionar económicamente de forma inmediata cada error involuntario.",
+        "isCorrect": false,
+        "rationale": "El enfoque sancionador genera ocultamiento de reportes y debilita la confianza en la cultura de seguridad."
+      },
+      {
+        "text": "En rediseñar únicamente las especificaciones mecánicas de la maquinaria.",
+        "isCorrect": false,
+        "rationale": "El rediseño mecánico corresponde a un control de ingeniería, no al análisis directo de la conducta humana."
+      },
+      {
+        "text": "En auditar exclusivamente los balances contables de la empresa.",
+        "isCorrect": false,
+        "rationale": "Los balances financieros corresponden a la gestión contable, sin relación con el comportamiento en seguridad."
+      },
+      {
+        "text": "En sustituir al personal operativo mediante robots en todas las áreas.",
+        "isCorrect": false,
+        "rationale": "La SBC trabaja directamente con el factor humano existente para elevar su cultura de prevención."
+      }
+    ],
+    "hint": "Su principio operativo descansa en el refuerzo positivo sobre las acciones cotidianas que realiza el trabajador.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es un requisito crítico de liderazgo para garantizar el éxito al implementar un programa de Seguridad Basada en el Comportamiento (SBC)?",
+    "opciones": [
+      {
+        "text": "Contar con la aprobación, compromiso activo y participación de la alta gerencia.",
+        "isCorrect": true,
+        "rationale": "Sin el respaldo explícito del liderazgo directivo, el programa carece de recursos, credibilidad y sostenibilidad."
+      },
+      {
+        "text": "Eliminar de forma definitiva la matriz IPERC de la organización.",
+        "isCorrect": false,
+        "rationale": "La matriz de peligros es legalmente obligatoria y sirve de insumo técnico al sistema de gestión."
+      },
+      {
+        "text": "Ocultar la ocurrencia de los incidentes al personal de planta.",
+        "isCorrect": false,
+        "rationale": "La transparencia y comunicación son indispensables para que los trabajadores aprendan de los eventos."
+      },
+      {
+        "text": "Aumentar las amonestaciones escritas antes de brindar capacitaciones.",
+        "isCorrect": false,
+        "rationale": "El programa prioriza el aprendizaje, la sensibilización y el refuerzo de conductas antes que la sanción."
+      },
+      {
+        "text": "Prohibir la intervención de los supervisores de campo en las observaciones.",
+        "isCorrect": false,
+        "rationale": "Los supervisores de línea son actores clave para llevar a cabo las observaciones y retroalimentaciones."
+      }
+    ],
+    "hint": "Se requiere el apoyo firme y visible de quienes dirigen la organización para respaldar los cambios de hábitos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "Según la legislación de seguridad y salud en el trabajo, ¿cómo se define un accidente de trabajo?",
+    "opciones": [
+      {
+        "text": "Todo suceso repentino por causa u ocasión del trabajo que produzca una lesión orgánica, perturbación funcional, invalidez o la muerte.",
+        "isCorrect": true,
+        "rationale": "Contempla la relación directa o indirecta con la orden laboral y la generación inmediata o posterior de un daño físico o funcional."
+      },
+      {
+        "text": "Un malestar físico producido por una enfermedad común contraída fuera del trabajo.",
+        "isCorrect": false,
+        "rationale": "Las patologías comunes no están asociadas a la ejecución de órdenes o entornos de trabajo."
+      },
+      {
+        "text": "Cualquier eventualidad sufrida por el trabajador en su domicilio durante sus días de descanso.",
+        "isCorrect": false,
+        "rationale": "Ocurre fuera del ámbito de control u órdenes del empleador, considerándose un evento privado."
+      },
+      {
+        "text": "Una parada no programada de la maquinaria que no causa daños físicos a las personas.",
+        "isCorrect": false,
+        "rationale": "La falla técnica que no causa lesión a las personas constituye una avería o incidente de proceso."
+      },
+      {
+        "text": "La molestia muscular leve generada tras realizar ejercicios en un gimnasio privado.",
+        "isCorrect": false,
+        "rationale": "Es el resultado de una actividad recreativa personal no vinculada a la jornada laboral."
+      }
+    ],
+    "hint": "Es un evento inesperado vinculado a las labores que genera un daño a la integridad del empleado.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "De acuerdo con el Reglamento de Seguridad y Salud Ocupacional en Minería (DS 023-2017-EM), ¿cuál es el propósito esencial de investigar los accidentes de trabajo?",
+    "opciones": [
+      {
+        "text": "Determinar las causas raíz del evento para aplicar medidas correctivas y prevenir su repetición.",
+        "isCorrect": true,
+        "rationale": "Busca identificar las fallas en el sistema de gestión para eliminarlas y evitar que vuelvan a lesionar a otros colaboradores."
+      },
+      {
+        "text": "Buscar culpables individuales para efectuar el despido sin analizar las condiciones del entorno.",
+        "isCorrect": false,
+        "rationale": "La investigación no debe ser un proceso persecutorio, sino de análisis de causas raíz para corregir fallas."
+      },
+      {
+        "text": "Incrementar de forma unilateral el costo de la póliza de seguros de la empresa.",
+        "isCorrect": false,
+        "rationale": "La investigación busca controlar pérdidas, no modificar acuerdos comerciales de seguros."
+      },
+      {
+        "text": "Ocultar la ocurrencia del suceso ante las fiscalizaciones de la autoridad.",
+        "isCorrect": false,
+        "rationale": "El ocultamiento constituye una infracción grave ante organismos fiscalizadores como la SUNAFIL o el OSINERGMIN."
+      },
+      {
+        "text": "Anular las funciones de supervisión del Comité de Seguridad y Salud.",
+        "isCorrect": false,
+        "rationale": "El Comité debe participar activamente en la investigación, fortaleciendo sus atribuciones de fiscalización."
+      }
+    ],
+    "hint": "Su objetivo principal no es punitivo, sino preventivo mediante la corrección de fallas del sistema.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "En la pirámide de causalidad de Frank/Bird, ¿en qué nivel inferior debe concentrarse la gestión preventiva para evitar la ocurrencia de un accidente mortal?",
+    "opciones": [
+      {
+        "text": "En la corrección masiva de los actos y condiciones subestándares.",
+        "isCorrect": true,
+        "rationale": "Al eliminar miles de desviaciones y condiciones inseguras en la base, se reduce drásticamente la probabilidad de llegar a un evento fatal."
+      },
+      {
+        "text": "En el conteo estadístico final de los accidentes graves ocurridos.",
+        "isCorrect": false,
+        "rationale": "Contar los accidentes ocurridos es una medida reactiva que no evita la ocurrencia previa del daño."
+      },
+      {
+        "text": "Únicamente en la contratación de mayor cobertura de pólizas de SCTR.",
+        "isCorrect": false,
+        "rationale": "El seguro indemniza el daño, pero no previene la causa física del accidente en el trabajo."
+      },
+      {
+        "text": "En la adquisición de más ambulancias para la atención de urgencias.",
+        "isCorrect": false,
+        "rationale": "La respuesta médica mitiga las consecuencias, pero no corrige las condiciones de riesgo en el origen."
+      },
+      {
+        "text": "En la aplicación de sanciones monetarias a la comunidad cercana.",
+        "isCorrect": false,
+        "rationale": "La población externa a la unidad no interviene en la causa interna de los accidentes de la empresa."
+      }
+    ],
+    "hint": "La base de la pirámide representa las desviaciones cotidianas que ocurren antes de desencadenar incidentes o lesiones.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿Cuál es el plazo máximo legal para notificar al Ministerio de Trabajo la ocurrencia de un accidente de trabajo mortal?",
+    "opciones": [
+      {
+        "text": "Dentro de las 24 horas de ocurrido el suceso.",
+        "isCorrect": true,
+        "rationale": "La normativa exige una comunicación inmediata dentro de este rango de tiempo para permitir la intervención de la autoridad."
+      },
+      {
+        "text": "Dentro de los 10 días hábiles posteriores al suceso.",
+        "isCorrect": false,
+        "rationale": "Los 10 días corresponden al plazo para la presentación del informe final de investigación detallado, no a la notificación inicial."
+      },
+      {
+        "text": "Al finalizar el mes calendario correspondiente.",
+        "isCorrect": false,
+        "rationale": "Un reporte mensual es demasiado tardío para la atención de una emergencia fatal."
+      },
+      {
+        "text": "A los 30 días hábiles de la ocurrencia del evento.",
+        "isCorrect": false,
+        "rationale": "Ese período supera con exceso todos los plazos estipulados para notificaciones graves."
+      },
+      {
+        "text": "No existe un plazo perentorio de notificación.",
+        "isCorrect": false,
+        "rationale": "La ley establece plazos estricto bajo sanción de multa administrativa muy grave."
+      }
+    ],
+    "hint": "Es un plazo de emergencia de notificación urgente que no supera el primer día de haber sucedido la tragedia.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_choice",
+    "pregunta": "¿A partir de cuántos trabajadores una empresa está obligada por ley a constituir un Comité de Seguridad y Salud en el Trabajo?",
+    "opciones": [
+      {
+        "text": "20 trabajadores o más.",
+        "isCorrect": true,
+        "rationale": "A partir de 20 empleados la ley exige la elección de un Comité paritario; con menos de 20 solo se elige un Supervisor de SST."
+      },
+      {
+        "text": "5 trabajadores o más.",
+        "isCorrect": false,
+        "rationale": "Con este número reducido de colaboradores la normativa exige únicamente nombrar a un Supervisor de SST."
+      },
+      {
+        "text": "50 trabajadores o más.",
+        "isCorrect": false,
+        "rationale": "El umbral legal mínimo es sustancialmente menor a esta cantidad."
+      },
+      {
+        "text": "100 trabajadores o más.",
+        "isCorrect": false,
+        "rationale": "Cien trabajadores es un umbral que influye en la cantidad de miembros del comité, pero la obligación de crearlo nace mucho antes."
+      },
+      {
+        "text": "200 trabajadores o más.",
+        "isCorrect": false,
+        "rationale": "A este nivel la obligación ya está plenamente vigente, pero el requisito inicial empieza desde una cifra más baja."
+      }
+    ],
+    "hint": "Es la cifra límite que distingue la elección entre un Supervisor individual y un órgano colegiado paritario.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Cuáles de los siguientes constituyen funciones principales de un Comité de Seguridad y Salud en el Trabajo?",
+    "opciones": [
+      {
+        "text": "Aprobar el Programa Anual de Seguridad y Salud en el Trabajo de la empresa.",
+        "isCorrect": true,
+        "rationale": "Es una de sus facultades normativas centrales para dar validez al plan preventivo del periodo."
+      },
+      {
+        "text": "Participar en la investigación de los accidentes de trabajo e incidentes peligrosos.",
+        "isCorrect": true,
+        "rationale": "Permite fiscalizar el análisis de causas e integrar la perspectiva del trabajador en las medidas de corrección."
+      },
+      {
+        "text": "Promover el cumplimiento del Reglamento Interno de SST de la organización.",
+        "isCorrect": true,
+        "rationale": "Vigila que tanto la parte empleadora como la parte trabajadora acaten las pautas preventivas estipuladas."
+      },
+      {
+        "text": "Aprobar los salarios y aumentos remunerativos del personal.",
+        "isCorrect": false,
+        "rationale": "Las decisiones de carácter salarial o laboral corresponden a la gerencia de recursos humanos o a la negociación colectiva."
+      },
+      {
+        "text": "Definir los precios de venta al mercado de los productos manufacturados.",
+        "isCorrect": false,
+        "rationale": "La fijación de precios forma parte exclusiva de la gestión comercial y financiera de la gerencia."
+      }
+    ],
+    "hint": "Elija las competencias vinculadas con la aprobación de documentos preventivos, supervisión normativa e investigación de eventos.",
+    "activo": true
+  },
+  {
+    "codigo_diplomado": "CUR-03",
+    "diplomado": "ERGONOMÍA Y SALUD OCUPACIONAL EN EL SECTOR MINERO E INDUSTRIAL",
+    "modulo": "Examen del Curso",
+    "dificultad": "FACIL",
+    "tipo": "multiple_select",
+    "pregunta": "¿Qué estrategias o acciones contribuyen directamente a mejorar el bienestar y el clima laboral en la empresa?",
+    "opciones": [
+      {
+        "text": "Fomentar la comunicación abierta, la empatía y el reconocimiento del desempeño.",
+        "isCorrect": true,
+        "rationale": "Aumenta la motivación intrínseca del personal al sentirse valorado y escuchado por la supervisión."
+      },
+      {
+        "text": "Promover la salud física mediante pausas activas, nutrición adecuada y programas deportivos.",
+        "isCorrect": true,
+        "rationale": "Ayuda a reducir la fatiga acumulada, previene el sobrepeso y disminuye el estrés biológico."
+      },
+      {
+        "text": "Implementar medidas de equilibrio entre la vida laboral y las responsabilidades familiares.",
+        "isCorrect": true,
+        "rationale": "Permite al colaborador desconectarse en sus periodos de descanso, reduciendo los riesgos psicosociales."
+      },
+      {
+        "text": "Aumentar continuamente las horas de trabajo sin otorgar periodos de descanso.",
+        "isCorrect": false,
+        "rationale": "La sobrecarga horaria genera agotamiento físico y emocional, deteriorando gravemente el clima."
+      },
+      {
+        "text": "Ocultar las quejas por hostigamiento o acoso reportadas por los empleados.",
+        "isCorrect": false,
+        "rationale": "La impunidad ante el acoso genera desprotección, desconfianza e invalida el clima organizacional."
+      }
+    ],
+    "hint": "Considere aquellas medidas orientadas al respeto mutuo, el cuidado de la salud física y el equilibrio personal.",
+    "activo": true
+  }
+]

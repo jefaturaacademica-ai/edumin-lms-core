@@ -305,7 +305,7 @@ export function obtenerRecursosConLinks(row: LeccionRow, numClase: number) {
   return recursos;
 }
 
-// Convierte las filas planas de la tabla diplomados_lecciones en la estructura de módulos que usa el LMS
+// Convierte las filas planas de la tabla lecciones en la estructura de módulos que usa el LMS
 export function convertirFilasAListaModulos(filas: LeccionRow[]) {
   const modulosMap = new Map<string, {
     codigo: string;
@@ -396,7 +396,7 @@ export function convertirFilasAListaModulos(filas: LeccionRow[]) {
   });
 }
 
-// Convierte la estructura de módulos de un diplomado en filas planas para diplomados_lecciones
+// Convierte la estructura de módulos de un diplomado en filas planas para lecciones
 export function convertirModulosALeccionRows(codigoDiplomado: string, tituloDiplomado: string, modulos: any[]): LeccionRow[] {
   const rows: LeccionRow[] = [];
   if (!Array.isArray(modulos)) return rows;

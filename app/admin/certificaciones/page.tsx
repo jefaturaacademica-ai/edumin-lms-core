@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { 
   CreditCard, ShieldCheck, Users, BookOpen, Settings, LogOut,
   Activity, Award, CheckCircle2, QrCode, FileText, Download, Layers, 
@@ -22,7 +22,10 @@ import AvanzaCertificateRenderer, {
   FUENTES_CERTIFICADO,
   TipoFuenteCertificado,
   FormatoFechaCertificado,
-  formatearFechaSegunEstilo
+  formatearFechaSegunEstilo,
+  resolverTextoHorasCreditos,
+  resolverTextoHoras,
+  resolverTextoCreditos
 } from '@/components/certificates/AvanzaCertificateRenderer';
 import { descargarCertificadoA4Pdf, optimizarImagenFondo } from '@/lib/utils/certificatePdf';
 
@@ -67,24 +70,57 @@ function ControlPasoNumero({
   precision?: number;
   ancho?: string;
 }) {
-  const decrementar = () => {
-    let nuevo = Number((valor - paso).toFixed(precision));
+  const valorRef = useRef(valor);
+  valorRef.current = valor;
+
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const detenerAccion = useCallback(() => {
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+      timerRef.current = null;
+    }
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+  }, []);
+
+  useEffect(() => {
+    return () => detenerAccion();
+  }, [detenerAccion]);
+
+  const aplicarPaso = useCallback((direccion: 1 | -1) => {
+    let nuevo = Number((valorRef.current + (direccion * paso)).toFixed(precision));
     if (min !== undefined && nuevo < min) nuevo = min;
-    alCambiar(nuevo);
-  };
-  const incrementar = () => {
-    let nuevo = Number((valor + paso).toFixed(precision));
     if (max !== undefined && nuevo > max) nuevo = max;
     alCambiar(nuevo);
-  };
+  }, [paso, precision, min, max, alCambiar]);
+
+  const iniciarAccion = useCallback((direccion: 1 | -1) => {
+    detenerAccion();
+    aplicarPaso(direccion);
+    // Tras 280ms de mantener presionado, incrementa/decrementa cada 60ms continuamente
+    timerRef.current = setTimeout(() => {
+      intervalRef.current = setInterval(() => {
+        aplicarPaso(direccion);
+      }, 60);
+    }, 280);
+  }, [detenerAccion, aplicarPaso]);
 
   return (
     <div className="inline-flex items-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-2xs hover:border-indigo-400 dark:hover:border-indigo-500 transition-colors">
       <button
         type="button"
-        onClick={decrementar}
-        className="px-2 py-1.5 flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer select-none font-bold active:scale-95"
-        title="Disminuir valor"
+        onMouseDown={() => iniciarAccion(-1)}
+        onMouseUp={detenerAccion}
+        onMouseLeave={detenerAccion}
+        onTouchStart={() => iniciarAccion(-1)}
+        onTouchEnd={detenerAccion}
+        onTouchCancel={detenerAccion}
+        className="px-2 py-1.5 flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer select-none font-bold active:scale-95 touch-none"
+        title="Disminuir valor (mantén presionado para cambio continuo)"
       >
         <ChevronDown className="w-3.5 h-3.5" />
       </button>
@@ -104,15 +140,20 @@ function ControlPasoNumero({
               alCambiar(v);
             }
           }}
-          className={`${ancho} text-center text-xs font-bold bg-transparent border-0 focus:outline-none text-slate-900 dark:text-white [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none`}
+          className={' ' + ancho + ' text-center text-xs font-bold bg-transparent border-0 focus:outline-none text-slate-900 dark:text-white [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'}
         />
         {unidad && <span className="text-[10px] font-semibold text-slate-500 select-none mr-1">{unidad}</span>}
       </div>
       <button
         type="button"
-        onClick={incrementar}
-        className="px-2 py-1.5 flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer select-none font-bold active:scale-95"
-        title="Aumentar valor"
+        onMouseDown={() => iniciarAccion(1)}
+        onMouseUp={detenerAccion}
+        onMouseLeave={detenerAccion}
+        onTouchStart={() => iniciarAccion(1)}
+        onTouchEnd={detenerAccion}
+        onTouchCancel={detenerAccion}
+        className="px-2 py-1.5 flex items-center justify-center text-slate-500 hover:text-indigo-600 hover:bg-slate-100 dark:hover:bg-slate-800 transition cursor-pointer select-none font-bold active:scale-95 touch-none"
+        title="Aumentar valor (mantén presionado para cambio continuo)"
       >
         <ChevronUp className="w-3.5 h-3.5" />
       </button>
@@ -817,7 +858,8 @@ export default function CertificacionesAdminPage() {
     const coordsVacias: DisenoCoordenadas = {
       estudiante: { ...DISENO_DEFAULT_HORIZONTAL.estudiante, visible: false },
       programa: { ...DISENO_DEFAULT_HORIZONTAL.programa, visible: false },
-      horas: { ...DISENO_DEFAULT_HORIZONTAL.horas, visible: false },
+      horas: { ...DISENO_DEFAULT_HORIZONTAL.horas, visible: false, anchoMaximoCm: undefined, anchoMaximo: undefined },
+      creditos: { ...DISENO_DEFAULT_HORIZONTAL.creditos, visible: false, anchoMaximoCm: undefined, anchoMaximo: undefined },
       fecha: { ...DISENO_DEFAULT_HORIZONTAL.fecha, visible: false },
       codigo: { ...DISENO_DEFAULT_HORIZONTAL.codigo, visible: false },
       qr: { ...DISENO_DEFAULT_HORIZONTAL.qr, visible: false }
@@ -1913,7 +1955,8 @@ export default function CertificacionesAdminPage() {
                       {[
                         { key: 'estudiante', label: 'Estudiante' },
                         { key: 'programa', label: 'Programa' },
-                        { key: 'horas', label: 'Horas / Créd.' },
+                        { key: 'horas', label: 'Horas' },
+                        { key: 'creditos', label: 'Créditos' },
                         { key: 'fecha', label: 'Fecha' },
                         { key: 'codigo', label: 'Código' },
                         { key: 'qr', label: 'Código QR' }
@@ -1949,7 +1992,7 @@ export default function CertificacionesAdminPage() {
                               }`}
                               title={estaVisible ? 'Visible en este certificado (clic para ocultar)' : 'Oculto (clic para activar)'}
                             >
-                              {estaVisible ? <Eye className="w-3.5 h-3.5 text-white" /> : <EyeOff className={`w-3.5 h-3.5 ${esSeleccionado ? 'text-white/60' : ''}`} />}
+                              {estaVisible ? <Eye className={`w-3.5 h-3.5 ${esSeleccionado ? 'text-white' : 'text-slate-600 dark:text-slate-300'}`} /> : <EyeOff className={`w-3.5 h-3.5 ${esSeleccionado ? 'text-white/60' : 'text-slate-400 dark:text-slate-500'}`} />}
                             </button>
                           </div>
                         );
@@ -2110,9 +2153,9 @@ export default function CertificacionesAdminPage() {
                                 <span className="text-[10px] font-bold text-slate-500 mr-1">Estilo:</span>
                                 <button
                                   type="button"
-                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { negrita: act.negrita !== undefined ? !act.negrita : false })}
+                                  onClick={() => actualizarPosicionElemento(elementoSeleccionado, { negrita: !act.negrita })}
                                   className={`px-2.5 py-1 rounded-lg border text-xs font-bold transition flex items-center gap-1 cursor-pointer ${
-                                    act.negrita !== false
+                                    !!act.negrita
                                       ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
                                       : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-slate-700 hover:bg-slate-200'
                                   }`}
@@ -2228,7 +2271,7 @@ export default function CertificacionesAdminPage() {
                             <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2.5">
                               <div className="flex items-center justify-between">
                                 <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
-                                  Ancho físico del título (Máx. 2 líneas):
+                                  Ancho físico del título (Máx. 2 líneas H / 3 líneas V):
                                 </span>
                                 <ControlPasoNumero
                                   valor={getAnchoCm(act, 25.5)}
@@ -2275,84 +2318,143 @@ export default function CertificacionesAdminPage() {
                             <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2.5">
                               <div>
                                 <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
-                                  Modalidad de acreditación:
+                                  Prefijo (ej: "con un total de ", "Duración: ", o dejar vacío):
                                 </label>
-                                <select
-                                  value={act.modoHorasCreditos || 'horas-y-creditos'}
-                                  onChange={(e) => actualizarPosicionElemento('horas', { modoHorasCreditos: e.target.value as any })}
-                                  className="w-full px-2.5 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
-                                >
-                                  <option value="horas-y-creditos">Horas y Créditos (Ambos juntos)</option>
-                                  <option value="solo-horas">Solo Horas académicas</option>
-                                  <option value="solo-creditos">Solo Créditos académicos</option>
-                                  <option value="personalizado">Texto libre personalizado</option>
-                                </select>
+                                <input
+                                  type="text"
+                                  value={act.textoPrefijo !== undefined ? act.textoPrefijo : ''}
+                                  onChange={(e) => actualizarPosicionElemento('horas', { textoPrefijo: e.target.value })}
+                                  placeholder='Ej: "con un total de " o dejar vacío para solo número'
+                                  className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                />
                               </div>
 
-                              {(act.modoHorasCreditos === 'horas-y-creditos' || act.modoHorasCreditos === 'solo-horas' || !act.modoHorasCreditos) && (
+                              <div className="grid grid-cols-2 gap-2 bg-slate-50/80 dark:bg-slate-800/50 p-2 rounded-xl border border-slate-100 dark:border-slate-800">
                                 <div>
                                   <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
-                                    Texto de horas:
+                                    Número de horas (ej: 325, 120):
                                   </label>
                                   <input
                                     type="text"
-                                    value={act.horasValor !== undefined ? act.horasValor : (editorTipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas')}
+                                    value={act.horasValor !== undefined ? act.horasValor : (editorTipo === 'MODULAR' ? '108' : '325')}
                                     onChange={(e) => actualizarPosicionElemento('horas', { horasValor: e.target.value })}
-                                    placeholder="Ej: 325 horas académicas o 120 horas cronológicas"
-                                    className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                    placeholder="Ej: 325 o 108"
+                                    className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
                                   />
                                 </div>
-                              )}
-
-                              {(act.modoHorasCreditos === 'horas-y-creditos' || act.modoHorasCreditos === 'solo-creditos' || !act.modoHorasCreditos) && (
                                 <div>
                                   <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
-                                    Texto de créditos:
+                                    Sufijo / Unidad (o dejar vacío):
                                   </label>
                                   <input
                                     type="text"
-                                    value={act.creditosValor !== undefined ? act.creditosValor : '13 créditos académicos'}
-                                    onChange={(e) => actualizarPosicionElemento('horas', { creditosValor: e.target.value })}
-                                    placeholder="Ej: 13 créditos académicos"
-                                    className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                    value={act.sufijo !== undefined ? act.sufijo : (act.sufijoHoras !== undefined ? act.sufijoHoras : 'horas académicas')}
+                                    onChange={(e) => actualizarPosicionElemento('horas', { sufijo: e.target.value, sufijoHoras: e.target.value })}
+                                    placeholder='Ej: "horas académicas", "hrs." o vacío'
+                                    className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
                                   />
                                 </div>
-                              )}
+                              </div>
 
-                              {act.modoHorasCreditos === 'personalizado' && (
-                                <div>
-                                  <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
-                                    Frase completa personalizada:
-                                  </label>
-                                  <input
-                                    type="text"
-                                    value={act.textoHorasPersonalizado || ''}
-                                    onChange={(e) => actualizarPosicionElemento('horas', { textoHorasPersonalizado: e.target.value })}
-                                    placeholder="Ej: con un total de 200 horas cronológicas aprobadas"
-                                    className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
-                                  />
-                                </div>
-                              )}
-
-                              <div className="pt-1.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
-                                <span className="text-[10px] font-bold text-slate-700 dark:text-slate-300">
-                                  Ancho de caja de texto:
-                                </span>
-                                <ControlPasoNumero
-                                  valor={getAnchoCm(act, 25.0)}
-                                  min={5.0}
-                                  max={anchoHojaCm}
-                                  paso={0.1}
-                                  unidad="cm"
-                                  precision={1}
-                                  ancho="w-14"
-                                  alCambiar={(cmVal) => {
-                                    actualizarPosicionElemento('horas', { 
-                                      anchoMaximoCm: cmVal,
-                                      anchoMaximo: Number(((cmVal / anchoHojaCm) * 100).toFixed(1))
-                                    });
-                                  }}
+                              <div>
+                                <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                  Texto libre personalizado (opcional - anula prefijo y sufijo si se llena):
+                                </label>
+                                <input
+                                  type="text"
+                                  value={act.textoPersonalizado !== undefined ? act.textoPersonalizado : (act.textoHorasPersonalizado || '')}
+                                  onChange={(e) => actualizarPosicionElemento('horas', { textoPersonalizado: e.target.value, textoHorasPersonalizado: e.target.value })}
+                                  placeholder="Ej: con un total de 180 horas cronológicas"
+                                  className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
                                 />
+                              </div>
+
+                              {/* Vista previa en vivo de horas */}
+                              <div className="p-2 bg-slate-50 dark:bg-slate-800/70 rounded-lg border border-slate-100 dark:border-slate-700/60 text-[11px]">
+                                <span className="text-[10px] text-slate-400 block font-bold mb-0.5">Texto resultante de Horas:</span>
+                                <span className="font-semibold text-slate-800 dark:text-slate-200">
+                                  &quot;{resolverTextoHoras(act, undefined, editorTipo === 'DIPLOMA')}&quot;
+                                </span>
+                              </div>
+
+                              <div className="pt-1.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] text-slate-500">
+                                <span>Ancho:</span>
+                                <span className="font-semibold px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-indigo-600 dark:text-indigo-400">
+                                  Automático (según contenido)
+                                </span>
+                              </div>
+                            </div>
+                          )}
+
+                          {/* Variable independiente: Créditos */}
+                          {elementoSeleccionado === 'creditos' && (
+                            <div className="p-2.5 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2.5">
+                              <div>
+                                <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                  Prefijo (ej: "y ", "Créditos: ", o dejar vacío):
+                                </label>
+                                <input
+                                  type="text"
+                                  value={act.textoPrefijo !== undefined ? act.textoPrefijo : ''}
+                                  onChange={(e) => actualizarPosicionElemento('creditos', { textoPrefijo: e.target.value })}
+                                  placeholder='Ej: "y ", "Equivalente a: ", o dejar vacío'
+                                  className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                />
+                              </div>
+
+                              <div className="grid grid-cols-2 gap-2 bg-slate-50/80 dark:bg-slate-800/50 p-2 rounded-xl border border-slate-100 dark:border-slate-800">
+                                <div>
+                                  <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                    Número de créditos (ej: 13, 4):
+                                  </label>
+                                  <input
+                                    type="text"
+                                    value={act.creditosValor !== undefined ? act.creditosValor : (editorTipo === 'MODULAR' ? '4' : '13')}
+                                    onChange={(e) => actualizarPosicionElemento('creditos', { creditosValor: e.target.value })}
+                                    placeholder="Ej: 13 o 4"
+                                    className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                  />
+                                </div>
+                                <div>
+                                  <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                    Sufijo / Unidad (o dejar vacío):
+                                  </label>
+                                  <input
+                                    type="text"
+                                    value={act.sufijo !== undefined ? act.sufijo : (act.sufijoCreditos !== undefined ? act.sufijoCreditos : 'créditos académicos')}
+                                    onChange={(e) => actualizarPosicionElemento('creditos', { sufijo: e.target.value, sufijoCreditos: e.target.value })}
+                                    placeholder='Ej: "créditos académicos", "créd." o vacío'
+                                    className="w-full px-2.5 py-1.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                  />
+                                </div>
+                              </div>
+
+                              <div>
+                                <label className="block text-[10px] font-bold text-slate-600 dark:text-slate-300 mb-1">
+                                  Texto libre personalizado (opcional - anula prefijo y sufijo si se llena):
+                                </label>
+                                <input
+                                  type="text"
+                                  value={act.textoPersonalizado !== undefined ? act.textoPersonalizado : ''}
+                                  onChange={(e) => actualizarPosicionElemento('creditos', { textoPersonalizado: e.target.value })}
+                                  placeholder="Ej: con 15 créditos académicos oficiales"
+                                  className="w-full px-3 py-1.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg text-xs font-bold text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-indigo-600"
+                                />
+                              </div>
+
+                              {/* Vista previa en vivo de créditos */}
+                              <div className="p-2 bg-slate-50 dark:bg-slate-800/70 rounded-lg border border-slate-100 dark:border-slate-700/60 text-[11px]">
+                                <span className="text-[10px] text-slate-400 block font-bold mb-0.5">Texto resultante de Créditos:</span>
+                                <span className="font-semibold text-slate-800 dark:text-slate-200">
+                                  &quot;{resolverTextoCreditos(act, undefined, editorTipo === 'DIPLOMA')}&quot;
+                                </span>
+                              </div>
+
+                              <div className="pt-1.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] text-slate-500">
+                                <span>Ancho:</span>
+                                <span className="font-semibold px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-indigo-600 dark:text-indigo-400">
+                                  Automático (según contenido)
+                                </span>
                               </div>
                             </div>
                           )}
@@ -2394,6 +2496,13 @@ export default function CertificacionesAdminPage() {
                                   &quot;{act.textoPrefijo !== undefined ? act.textoPrefijo : 'Fecha de emisión: '}{formatearFechaSegunEstilo(new Date().toISOString(), act.formatoFecha || 'larga')}&quot;
                                 </span>
                               </div>
+
+                              <div className="pt-1.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] text-slate-500">
+                                <span>Ancho:</span>
+                                <span className="font-semibold px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-indigo-600 dark:text-indigo-400">
+                                  Automático (según contenido)
+                                </span>
+                              </div>
                             </div>
                           )}
 
@@ -2416,6 +2525,13 @@ export default function CertificacionesAdminPage() {
                               <div className="p-2 bg-emerald-50 dark:bg-emerald-950/40 rounded-lg border border-emerald-200 dark:border-emerald-800 text-[10px] text-emerald-800 dark:text-emerald-300 leading-snug">
                                 <span className="font-bold block">✓ Texto puro y sin duplicados:</span>
                                 Se imprime como texto limpio sin cuadros de fondo. Los códigos se generan con algoritmo Crockford Base32 (34 mil millones de variantes) con índice UNIQUE garantizado en base de datos.
+                              </div>
+
+                              <div className="pt-1.5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[10px] text-slate-500">
+                                <span>Ancho:</span>
+                                <span className="font-semibold px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-indigo-600 dark:text-indigo-400">
+                                  Automático (según contenido)
+                                </span>
                               </div>
                             </div>
                           )}
@@ -2508,7 +2624,18 @@ export default function CertificacionesAdminPage() {
                             estudiante: nombreSimuladoPrueba || 'Quispe Ramos, Juan Carlos',
                             programa: programaParaPdf,
                             modulo: editorTipo === 'MODULAR' ? moduloSimuladoPrueba : undefined,
-                            horas: editorTipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos',
+                            horas: (() => {
+                              const itm = catalogoDiplomados.find(d => (d.titulo || d.nombre) === programaParaPdf) ||
+                                catalogoCursos.find(c => c.titulo === programaParaPdf) ||
+                                catalogoTalleres.find(t => t.titulo === programaParaPdf);
+                              return itm?.horas ? String(itm.horas) : (editorTipo === 'MODULAR' ? '108' : editorTipo === 'DIPLOMA' ? '325' : editorTipo === 'TALLER' ? '10' : '30');
+                            })(),
+                            creditos: (() => {
+                              const itm = catalogoDiplomados.find(d => (d.titulo || d.nombre) === programaParaPdf) ||
+                                catalogoCursos.find(c => c.titulo === programaParaPdf) ||
+                                catalogoTalleres.find(t => t.titulo === programaParaPdf);
+                              return itm?.creditos !== undefined && itm?.creditos !== null ? itm.creditos : (editorTipo === 'MODULAR' ? '4' : editorTipo === 'DIPLOMA' ? '13' : undefined);
+                            })(),
                             fecha: new Date().toISOString().split('T')[0],
                             codigo: 'HNYNXT2',
                             imagenFondoUrl: editorImagenFondo,
@@ -2656,19 +2783,56 @@ export default function CertificacionesAdminPage() {
                       </select>
                     </div>
 
-                    {/* Si es modular, input para probar módulo */}
+                    {/* Si es modular, selector dinámico según el diplomado de prueba elegido */}
                     {editorTipo === 'MODULAR' && (
                       <div>
                         <label className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
-                          Título del módulo de prueba:
+                          Módulo de prueba del diplomado:
                         </label>
-                        <input
-                          type="text"
-                          value={moduloSimuladoPrueba}
-                          onChange={(e) => setModuloSimuladoPrueba(e.target.value)}
-                          placeholder="Módulo 01: ..."
-                          className="w-full px-3 py-1.5 bg-slate-950 border border-slate-700 rounded-xl text-xs font-bold text-white focus:ring-2 focus:ring-indigo-500"
-                        />
+                        {(() => {
+                          const dipPrueba = catalogoDiplomados.find(d => 
+                            (d.titulo || d.nombre) === (programaSimuladoPrueba || editorRecursoEspecifico)
+                          ) || catalogoDiplomados[0];
+                          const modsDip = dipPrueba?.modulos || [];
+
+                          if (modsDip.length > 0) {
+                            return (
+                              <div className="space-y-1.5">
+                                <select
+                                  value={moduloSimuladoPrueba}
+                                  onChange={(e) => setModuloSimuladoPrueba(e.target.value)}
+                                  className="w-full px-3 py-1.5 bg-slate-950 border border-indigo-500/50 rounded-xl text-xs font-bold text-white focus:ring-2 focus:ring-indigo-500 cursor-pointer"
+                                >
+                                  {modsDip.map((m: any, mIdx: number) => {
+                                    const mNombre = m.nombre || m.titulo || `Módulo 0${mIdx + 1}`;
+                                    return (
+                                      <option key={mIdx} value={mNombre}>
+                                        {mNombre}
+                                      </option>
+                                    );
+                                  })}
+                                </select>
+                                <input
+                                  type="text"
+                                  value={moduloSimuladoPrueba}
+                                  onChange={(e) => setModuloSimuladoPrueba(e.target.value)}
+                                  placeholder="O escribe un título personalizado para probar..."
+                                  className="w-full px-2.5 py-1 bg-slate-900 border border-slate-800 rounded-lg text-[11px] text-slate-300 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+                                />
+                              </div>
+                            );
+                          }
+
+                          return (
+                            <input
+                              type="text"
+                              value={moduloSimuladoPrueba}
+                              onChange={(e) => setModuloSimuladoPrueba(e.target.value)}
+                              placeholder="Módulo 01: Marco Legal y Fundamentos"
+                              className="w-full px-3 py-1.5 bg-slate-950 border border-slate-700 rounded-xl text-xs font-bold text-white focus:ring-2 focus:ring-indigo-500"
+                            />
+                          );
+                        })()}
                       </div>
                     )}
                   </div>
@@ -2688,15 +2852,31 @@ export default function CertificacionesAdminPage() {
                     );
                     return (
                       <div className={`w-full flex items-center justify-center ${editorOrientacion === 'vertical' ? 'max-w-sm' : 'max-w-xl'}`}>
-                        <AvanzaCertificateRenderer
-                          tipo={editorTipo}
-                          orientacion={editorOrientacion}
-                          estudiante={nombreSimuladoPrueba || 'Quispe Ramos, Juan Carlos'}
-                          programa={programaParaLienzo}
-                          modulo={editorTipo === 'MODULAR' ? moduloSimuladoPrueba : undefined}
-                          horas={editorTipo === 'MODULAR' ? '108 horas académicas' : '325 horas académicas y 13 créditos académicos'}
-                          fecha={new Date().toISOString().split('T')[0]}
-                          codigo="HNYNXT2"
+                        {(() => {
+                          // Extraer horas y créditos reales y dinámicos del programa seleccionado
+                          const itemProg = (
+                            catalogoDiplomados.find(d => (d.titulo || d.nombre) === programaParaLienzo) ||
+                            catalogoCursos.find(c => c.titulo === programaParaLienzo) ||
+                            catalogoTalleres.find(t => t.titulo === programaParaLienzo)
+                          );
+                          const horasDin = itemProg?.horas 
+                            ? String(itemProg.horas) 
+                            : (editorTipo === 'MODULAR' ? '108' : editorTipo === 'DIPLOMA' ? '325' : editorTipo === 'TALLER' ? '10' : '30');
+                          const credsDin = itemProg?.creditos !== undefined && itemProg?.creditos !== null
+                            ? itemProg.creditos
+                            : (editorTipo === 'MODULAR' ? '4' : editorTipo === 'DIPLOMA' ? '13' : undefined);
+
+                          return (
+                            <AvanzaCertificateRenderer
+                              tipo={editorTipo}
+                              orientacion={editorOrientacion}
+                              estudiante={nombreSimuladoPrueba || 'Quispe Ramos, Juan Carlos'}
+                              programa={programaParaLienzo}
+                              modulo={editorTipo === 'MODULAR' ? moduloSimuladoPrueba : undefined}
+                              horas={horasDin}
+                              creditos={credsDin}
+                              fecha={new Date().toISOString().split('T')[0]}
+                              codigo="HNYNXT2"
                           imagenFondoUrl={editorImagenFondo}
                           incluyeQr={editorDisenoCoordenadas.qr.visible}
                           diseno={editorDisenoCoordenadas}
@@ -2704,7 +2884,9 @@ export default function CertificacionesAdminPage() {
                           modoArrastrable={true}
                           onMoverElemento={(campo, x, y) => actualizarPosicionElemento(campo, { x, y })}
                           onSeleccionarElemento={(campo) => setElementoSeleccionado(campo)}
-                        />
+                            />
+                          );
+                        })()}
                       </div>
                     );
                   })()}
@@ -3300,10 +3482,15 @@ export default function CertificacionesAdminPage() {
                         onChange={(e) => {
                           const p = e.target.value;
                           setProgramaManual(p);
+                          const dip = catalogoDiplomados.find(d => (d.titulo || d.nombre) === p);
                           if (tipoManual === 'MODULAR') {
-                            const dip = catalogoDiplomados.find(d => (d.titulo || d.nombre) === p);
                             const modNombre = dip?.modulos?.[0]?.nombre || dip?.modulos?.[0]?.titulo || 'Módulo 01: Marco Legal y Fundamentos';
                             setModuloManual(modNombre);
+                            setHorasManual('108 horas académicas');
+                          } else {
+                            const h = dip?.horas || dip?.duracion || '325 horas académicas';
+                            const c = dip?.creditos ? ` y ${dip.creditos} créditos académicos` : (h.includes('crédito') ? '' : ' y 13 créditos académicos');
+                            setHorasManual(`${h}${c}`);
                           }
                         }}
                         className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer truncate"
@@ -3317,7 +3504,14 @@ export default function CertificacionesAdminPage() {
                     ) : tipoManual === 'CURSO' && catalogoCursos.length > 0 ? (
                       <select
                         value={programaManual}
-                        onChange={(e) => setProgramaManual(e.target.value)}
+                        onChange={(e) => {
+                          const p = e.target.value;
+                          setProgramaManual(p);
+                          const cur = catalogoCursos.find(c => (c.titulo || c.nombre) === p);
+                          const h = cur?.horas || cur?.duracion || '40 horas';
+                          const c = cur?.creditos ? ` y ${cur.creditos} créditos académicos` : '';
+                          setHorasManual(`${h}${c}`);
+                        }}
                         className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer truncate"
                       >
                         {catalogoCursos.map((c, i) => (
@@ -3329,7 +3523,14 @@ export default function CertificacionesAdminPage() {
                     ) : tipoManual === 'TALLER' && catalogoTalleres.length > 0 ? (
                       <select
                         value={programaManual}
-                        onChange={(e) => setProgramaManual(e.target.value)}
+                        onChange={(e) => {
+                          const p = e.target.value;
+                          setProgramaManual(p);
+                          const tal = catalogoTalleres.find(t => (t.titulo || t.nombre) === p);
+                          const h = tal?.horas || tal?.duracion || '20 horas';
+                          const c = tal?.creditos ? ` y ${tal.creditos} créditos académicos` : '';
+                          setHorasManual(`${h}${c}`);
+                        }}
                         className="w-full px-3 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl font-medium text-slate-800 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-600 cursor-pointer truncate"
                       >
                         {catalogoTalleres.map((t, i) => (

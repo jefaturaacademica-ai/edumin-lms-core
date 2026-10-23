@@ -10,7 +10,7 @@ export async function GET() {
     // 2. Pagos
     const { data: pagos } = await admin.from('pagos').select('*');
     // 3. Cursos
-    const { data: cursos } = await admin.from('cursos').select('*');
+    const { data: cursos } = await admin.from('diplomados_y_cursos').select('*');
 
     const listaProfiles = profiles || [];
     const listaPagos = pagos || [];

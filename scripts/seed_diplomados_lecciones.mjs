@@ -12,7 +12,7 @@ const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY || 'eyJhbGciOiJIUzI
 const admin = createClient(url, serviceRoleKey);
 
 async function main() {
-  console.log('--- POBLANDO PUBLIC.DIPLOMADOS_LECCIONES EN SUPABASE ---');
+  console.log('--- POBLANDO PUBLIC.LECCIONES EN SUPABASE ---');
 
   // Cargar datos
   const diplomadosPath = path.join(__dirname, '..', 'lib', 'data', 'diplomados_todos.json');
@@ -144,12 +144,12 @@ async function main() {
     });
   });
 
-  console.log(`Generadas ${rows.length} filas para insertar en public.diplomados_lecciones.`);
+  console.log(`Generadas ${rows.length} filas para insertar en public.lecciones.`);
 
   // Probar si la tabla existe en Supabase
-  const testRes = await admin.from('diplomados_lecciones').select('id').limit(1);
+  const testRes = await admin.from('lecciones').select('id').limit(1);
   if (testRes.error) {
-    console.error('⚠️ La tabla public.diplomados_lecciones aún no existe en Supabase o dio error:');
+    console.error('⚠️ La tabla public.lecciones aún no existe en Supabase o dio error:');
     console.error(testRes.error.message);
     console.log('\nPor favor ejecuta la migración en el editor SQL de Supabase:');
     console.log('Archivo: supabase/migrations/20261013000000_create_diplomados_lecciones_table.sql\n');
@@ -160,7 +160,7 @@ async function main() {
   const batchSize = 100;
   for (let i = 0; i < rows.length; i += batchSize) {
     const batch = rows.slice(i, i + batchSize);
-    const { error } = await admin.from('diplomados_lecciones').insert(batch);
+    const { error } = await admin.from('lecciones').insert(batch);
     if (error) {
       console.error(`Error en lote ${i}:`, error.message);
       break;

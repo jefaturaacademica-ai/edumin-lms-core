@@ -36,7 +36,7 @@ export async function GET(request: Request) {
 
     if (admin) {
       let query = admin
-        .from('diplomados_lecciones')
+        .from('lecciones')
         .select('*')
         .order('orden', { ascending: true });
 
@@ -88,7 +88,7 @@ export async function GET(request: Request) {
       tablaCreada: false,
       total: filtradas.length,
       filas: filtradas,
-      aviso: 'Mostrando datos base. Si creaste la tabla diplomados_lecciones en Supabase, pulsa "Sincronizar Tabla" para guardar los registros permanentemente.'
+      aviso: 'Mostrando datos base. Si creaste la tabla lecciones en Supabase, pulsa "Sincronizar Tabla" para guardar los registros permanentemente.'
     });
   } catch (err: any) {
     console.error('Error en GET /api/admin/diplomados-lecciones:', err);
@@ -111,7 +111,7 @@ export async function POST(request: Request) {
 
       // Limpiar filas anteriores si se solicita reemplazo total
       if (body.replace) {
-        await admin.from('diplomados_lecciones').delete().neq('id', '00000000-0000-0000-0000-000000000000');
+        await admin.from('lecciones').delete().neq('id', '00000000-0000-0000-0000-000000000000');
       }
 
       // Insertar por lotes de 100 para no sobrecargar el payload
@@ -120,7 +120,7 @@ export async function POST(request: Request) {
 
       for (let i = 0; i < filasMaestras.length; i += batchSize) {
         const batch = filasMaestras.slice(i, i + batchSize);
-        const { error } = await admin.from('diplomados_lecciones').insert(batch);
+        const { error } = await admin.from('lecciones').insert(batch);
         if (error) {
           throw new Error(`Error al sembrar lote ${i}: ${error.message}`);
         }
@@ -129,7 +129,7 @@ export async function POST(request: Request) {
 
       return NextResponse.json({
         success: true,
-        message: `¡Se sembraron exitosamente ${insertados} lecciones en public.diplomados_lecciones de Supabase!`,
+        message: `¡Se sembraron exitosamente ${insertados} lecciones en public.lecciones de Supabase!`,
         total: insertados
       });
     }
@@ -159,7 +159,7 @@ export async function POST(request: Request) {
 
     // Eliminar las filas previas de esos diplomados específicos para SOBREESCRIBIR garantizando 0 duplicados
     for (const cod of codigosAEliminar) {
-      await admin.from('diplomados_lecciones').delete().ilike('CodigoDiplomado', cod);
+      await admin.from('lecciones').delete().ilike('CodigoDiplomado', cod);
     }
 
     // Insertar por lotes
@@ -168,7 +168,7 @@ export async function POST(request: Request) {
 
     for (let i = 0; i < filasNormalizadas.length; i += batchSize) {
       const batch = filasNormalizadas.slice(i, i + batchSize);
-      const { error } = await admin.from('diplomados_lecciones').insert(batch);
+      const { error } = await admin.from('lecciones').insert(batch);
       if (error) {
         throw new Error(`Error al insertar en Supabase: ${error.message}`);
       }
@@ -200,7 +200,7 @@ export async function PUT(request: Request) {
     const norm = normalizeLeccionRow(row);
 
     const { data, error } = await admin
-      .from('diplomados_lecciones')
+      .from('lecciones')
       .update(norm)
       .eq('id', targetId)
       .select()
@@ -225,13 +225,13 @@ export async function DELETE(request: Request) {
     const admin = createAdminClient();
 
     if (idParam) {
-      const { error } = await admin.from('diplomados_lecciones').delete().eq('id', idParam);
+      const { error } = await admin.from('lecciones').delete().eq('id', idParam);
       if (error) throw error;
       return NextResponse.json({ success: true, message: `Lección ${idParam} eliminada.` });
     }
 
     if (codigoParam) {
-      const { error } = await admin.from('diplomados_lecciones').delete().eq('CodigoDiplomado', codigoParam);
+      const { error } = await admin.from('lecciones').delete().eq('CodigoDiplomado', codigoParam);
       if (error) throw error;
       return NextResponse.json({ success: true, message: `Todas las lecciones de ${codigoParam} eliminadas.` });
     }

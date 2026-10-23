@@ -49,7 +49,7 @@ async function main() {
     };
 
     const { error } = await admin
-      .from('cursos')
+      .from('diplomados_y_cursos')
       .upsert(recordData, { onConflict: 'id' });
 
     if (error) {

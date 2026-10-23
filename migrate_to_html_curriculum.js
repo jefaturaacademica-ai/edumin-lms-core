@@ -187,8 +187,8 @@ const CODE_TO_SLUG = {
 };
 
 async function runMigration() {
-  console.log('--- 1. Fetching current rows from Supabase diplomados_lecciones ---');
-  const { data: currentRows, error: fetchErr } = await supabase.from('diplomados_lecciones').select('*').order('orden');
+  console.log('--- 1. Fetching current rows from Supabase lecciones ---');
+  const { data: currentRows, error: fetchErr } = await supabase.from('lecciones').select('*').order('orden');
   if (fetchErr) {
     console.error('Fetch error:', fetchErr);
     process.exit(1);
@@ -394,20 +394,20 @@ async function runMigration() {
   console.log(`\nTotal new rows generated: ${newLeccionRows.length}`);
 
   // Delete existing rows in Supabase and insert new rows
-  console.log('\n--- 4. Updating Supabase diplomados_lecciones table ---');
+  console.log('\n--- 4. Updating Supabase lecciones table ---');
   // First, delete all rows
-  const { error: delErr } = await supabase.from('diplomados_lecciones').delete().neq('CodigoDiplomado', 'IMPOSSIBLE');
+  const { error: delErr } = await supabase.from('lecciones').delete().neq('CodigoDiplomado', 'IMPOSSIBLE');
   if (delErr) {
     console.error('Delete error:', delErr);
     process.exit(1);
   }
-  console.log('Successfully cleared old rows from diplomados_lecciones.');
+  console.log('Successfully cleared old rows from lecciones.');
 
   // Insert in batches of 50
   const batchSize = 50;
   for (let i = 0; i < newLeccionRows.length; i += batchSize) {
     const chunk = newLeccionRows.slice(i, i + batchSize);
-    const { error: insErr } = await supabase.from('diplomados_lecciones').insert(chunk);
+    const { error: insErr } = await supabase.from('lecciones').insert(chunk);
     if (insErr) {
       console.error(`Error inserting batch ${i} to ${i + chunk.length}:`, insErr);
       process.exit(1);
